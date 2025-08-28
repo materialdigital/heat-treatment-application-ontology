@@ -1,0 +1,11 @@
+term
+https://creativecommons.org/licenses/unspecified
+https://orcid.org/0000-0002-9014-2920
+https://orcid.org/0000-0003-1649-6832
+http://purl.org/dc/terms/contributor
+https://w3id.org/pmd/ao/HTO_0000000
+http://purl.org/dc/terms/license
+http://purl.org/dc/terms/description
+https://w3id.org/pmd/ao/hto.owl
+http://purl.org/dc/terms/title
+http://purl.org/dc/terms/creator
