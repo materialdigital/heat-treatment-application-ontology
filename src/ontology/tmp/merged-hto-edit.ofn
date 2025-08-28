@@ -9,6 +9,8 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<https://w3id.org/pmd/ao/hto.owl>
+Annotation(dcterms:contributor <https://orcid.org/0000-0002-9014-2920>)
+Annotation(dcterms:creator <https://orcid.org/0000-0003-1649-6832>)
 Annotation(dcterms:description "None")
 Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en)
@@ -120,6 +122,8 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000055>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000039>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/OBI_0001938>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0001937>))
+Declaration(AnnotationProperty(dcterms:contributor))
+Declaration(AnnotationProperty(dcterms:creator))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
