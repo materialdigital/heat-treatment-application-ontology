@@ -8,6 +8,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/pmd/ao/hto.owl">
         <owl:versionIRI rdf:resource="https://w3id.org/pmd/ao/hto/releases/2025-08-28/hto.owl"/>
@@ -80,6 +81,24 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -88,6 +107,238 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000054 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000054">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="en">has realization</rdfs:label>
+        <skos:definition xml:lang="en">b has realization c =Def c realizes b</skos:definition>
+        <skos:example xml:lang="en">As for realizes</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000055 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000055">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:label xml:lang="en">realizes</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d &amp; for all t, if b has participant d then c exists &amp; the type instantiated by b is correlated with the type instantiated by c</skos:definition>
+        <skos:example xml:lang="en">A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000056 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000056">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                            <owl:Class>
+                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+                            </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="en">participates in</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) participates in holds between some b that is either a specifically dependent continuant or generically dependent continuant or independent continuant that is not a spatial region &amp; some process p such that b participates in p some way</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000057 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000057">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                            <owl:Class>
+                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+                            </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has participant</rdfs:label>
+        <skos:definition xml:lang="en">p has participant c =Def c participates in p</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000176 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000176">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:label xml:lang="en">continuant part of</rdfs:label>
+        <skos:definition xml:lang="en">b continuant part of c =Def b and c are continuants &amp; there is some time t such that b and c exist at t &amp; b continuant part of c at t</skos:definition>
+        <skos:example xml:lang="en">Milk teeth continuant part of human; surgically removed tumour continuant part of organism</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000178 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000178">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:label xml:lang="en">has continuant part</rdfs:label>
+        <skos:definition xml:lang="en">b has continuant part c =Def c continuant part of b</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000194 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000194">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000195"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                            <owl:Class>
+                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+                            </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:label xml:lang="en">specifically depended on by</rdfs:label>
+        <skos:definition xml:lang="en">b specifically depended on by c =Def c specifically depends on b</skos:definition>
+        <skos:example xml:lang="en">Coloured object specifically depended on by colour</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000195 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000195">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                            <owl:Class>
+                                <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+                            </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">specifically depends on</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) specifically depends on is a relation between a specifically dependent continuant b and specifically dependent continuant or independent continuant that is not a spatial region c such that b and c share no parts in common &amp; b is of a nature such that at all times t it cannot exist unless c exists &amp; b is not a boundary of c</skos:definition>
+        <skos:example xml:lang="en">A shape specifically depends on the shaped object; hue, saturation and brightness of a colour sample specifically depends on each other</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000196 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000196">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000194"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:label xml:lang="en">bearer of</rdfs:label>
+        <skos:definition xml:lang="en">b bearer of c =Def c inheres in b</skos:definition>
+        <skos:example xml:lang="en">A patch of ink is the bearer of a colour quality; an organism is the bearer of a temperature quality</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000197 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000197">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000195"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">inheres in</rdfs:label>
+        <skos:definition xml:lang="en">b inheres in c =Def b is a specifically dependent continuant &amp; c is an independent continuant that is not a spatial region &amp; b specifically depends on c</skos:definition>
+        <skos:example xml:lang="en">A shape inheres in a shaped object; a mass inheres in a material entity</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000199 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000199">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000035"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdfs:label xml:lang="en">occupies temporal region</rdfs:label>
+        <skos:definition xml:lang="en">p occupies temporal region t =Def p is a process or process boundary &amp; the spatiotemporal region occupied by p temporally projects onto t</skos:definition>
+        <skos:example xml:lang="en">The Second World War occupies the temporal region September 1, 1939 - September 2, 1945</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000039 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000039"/>
     
 
 
@@ -102,11 +353,88 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0001938 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0001938"/>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0000004 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0000004">
         <rdfs:label xml:lang="en">is subject of</rdfs:label>
+        <skos:definition xml:lang="en">Inverse of &apos;is about&apos;.</skos:definition>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000015 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0000015">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+        <rdfs:label xml:lang="en">has input</rdfs:label>
+        <skos:definition>relation from a process to someone or something physical or digital (continuant) that is a necessary precondition for the process to start</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000016 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0000016">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+        <rdfs:label xml:lang="en">has output</rdfs:label>
+        <skos:definition>relation from a process to someone or something physical or digital (continuant) that participates in the process such that it is generated or modified during the process, and that it exists at the end of the process</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0001028 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0001028">
+        <owl:inverseOf rdf:resource="https://w3id.org/pmd/co/PMD_0001029"/>
+        <rdfs:label xml:lang="en">in response to</rdfs:label>
+        <skos:definition xml:lang="en">inverse of responds with</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0001029 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0001029">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:range rdf:resource="https://w3id.org/pmd/co/PMD_0000915"/>
+        <rdfs:label xml:lang="en">responds with</rdfs:label>
+        <skos:definition>The realizable entity must be &quot;stimulated&quot; by some Stimulus in order to respond with the Response. The bearer of the realizable entity must participate in Stimulation as well as in Response.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0001030 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0001030">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+        <rdfs:range rdf:resource="https://w3id.org/pmd/co/PMD_0000950"/>
+        <rdfs:label xml:lang="en">stimulated by</rdfs:label>
+        <skos:definition xml:lang="en">inverse of stimulates</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001937 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0001937"/>
     
 
 
@@ -125,6 +453,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000001">
         <rdfs:label xml:lang="en">entity</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) An entity is anything that exists or has existed or will exist</skos:definition>
+        <skos:example xml:lang="en">Julius Caesar; the Second World War; your body mass index; Verdi&apos;s Requiem</skos:example>
     </owl:Class>
     
 
@@ -133,8 +463,206 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
         <obo:IAO_0000115 xml:lang="en">An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">continuant</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity</skos:definition>
+        <skos:example xml:lang="en">A human being; a tennis ball; a cave; a region of space; someone&apos;s temperature</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label xml:lang="en">occurrent</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) An occurrent is an entity that unfolds itself in time or it is the start or end of such an entity or it is a temporal or spatiotemporal region</skos:definition>
+        <skos:example xml:lang="en">As for process, history, process boundary, spatiotemporal region, zero-dimensional temporal region, one-dimensional temporal region, temporal interval, temporal instant.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:label xml:lang="en">independent continuant</rdfs:label>
+        <skos:definition xml:lang="en">b is an independent continuant =Def b is a continuant &amp; there is no c such that b specifically depends on c or b generically depends on c</skos:definition>
+        <skos:example xml:lang="en">An atom; a molecule; an organism; a heart; a chair; the bottom right portion of a human torso; a leg; the interior of your mouth; a spatial region; an orchestra</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">spatial region</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A spatial region is a continuant entity that is a continuant part of the spatial projection of a portion of spacetime at a given time</skos:definition>
+        <skos:example xml:lang="en">As for zero-dimensional spatial region, one-dimensional spatial region, two-dimensional spatial region, three-dimensional spatial region</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:label xml:lang="en">temporal region</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A temporal region is an occurrent over which processes can unfold</skos:definition>
+        <skos:example xml:lang="en">As for zero-dimensional temporal region and one-dimensional temporal region</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:label xml:lang="en">spatiotemporal region</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A spatiotemporal region is an occurrent that is an occurrent part of spacetime</skos:definition>
+        <skos:example xml:lang="en">The spatiotemporal region occupied by the development of a cancer tumour; the spatiotemporal region occupied by an orbiting satellite</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:label xml:lang="en">process</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant</skos:definition>
+        <skos:example xml:lang="en">An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:label xml:lang="en">disposition</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A disposition b is a realizable entity such that if b ceases to exist then its bearer is physically changed &amp; b&apos;s realization occurs when and because this bearer is in some special physical circumstances &amp; this realization occurs in virtue of the bearer&apos;s physical make-up</skos:definition>
+        <skos:example xml:lang="en">An atom of element X has the disposition to decay to an atom of element Y; the cell wall is disposed to transport cellular material through endocytosis and exocytosis; certain people have a predisposition to colon cancer; children are innately disposed to categorize objects in certain ways</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115 xml:lang="en">A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">realizable entity</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A realizable entity is a specifically dependent continuant that inheres in some independent continuant which is not a spatial region &amp; which is of a type some instances of which are realized in processes of a correlated type</skos:definition>
+        <skos:example xml:lang="en">The role of being a doctor; the role of this boundary to delineate where Utah and Colorado meet; the function of your reproductive organs; the disposition of your blood to coagulate; the disposition of this piece of metal to conduct electricity</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:label xml:lang="en">quality</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized</skos:definition>
+        <skos:example xml:lang="en">The colour of a tomato; the ambient temperature of this portion of air; the length of the circumference of your waist; the shape of your nose; the shape of your nostril; the mass of this piece of gold</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
+        <skos:definition xml:lang="en">b is a specifically dependent continuant =Def b is a continuant &amp; there is some independent continuant c which is not a spatial region &amp; which is such that b specifically depends on c</skos:definition>
+        <skos:example xml:lang="en">(with multiple bearers) John&apos;s love for Mary; the ownership relation between John and this statue; the relation of authority between John and his subordinates</skos:example>
+        <skos:example xml:lang="en">(with one bearer) The mass of this tomato; the pink colour of a medium rare piece of grilled filet mignon at its centre; the smell of this portion of mozzarella; the disposition of this fish to decay; the role of being a doctor; the function of this heart to pump blood; the shape of this hole</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <obo:IAO_0000115 xml:lang="en">A realizable entity  the manifestation of which brings about some result or end that is not essential to a continuant  in virtue of the kind of thing that it is but that can be served or participated in by that kind of continuant  in some kinds of natural, social or institutional contexts.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">role</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A role b is a realizable entity such that b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be &amp; b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed</skos:definition>
+        <skos:example xml:lang="en">The priest role; the student role; the role of subject in a clinical trial; the role of a stone in marking a property boundary; the role of a boundary to demarcate two neighbouring administrative territories; the role of a building in serving as a military target</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000029"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000029"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000140"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">site</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A site is a three-dimensional immaterial entity whose boundaries either (partially or wholly) coincide with the boundaries of one or more material entities or have locations determined in relation to some material entity</skos:definition>
+        <skos:example xml:lang="en">A hole in a portion of cheese; a rabbit hole; the Grand Canyon; the Piazza San Marco; the kangaroo-joey-containing hole of a kangaroo pouch; your left nostril (a fiat part - the opening - of your left nasal cavity); the lumen of your gut; the hold of a ship; the interior of the trunk of your car; hole in an engineered floor joist</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:label xml:lang="en">object</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) An object is a material entity which manifests causal unity &amp; is of a type instances of which are maximal relative to the sort of causal unity manifested</skos:definition>
+        <skos:example xml:lang="en">An organism; a fish tank; a planet; a laptop; a valve; a block of marble; an ice cube</skos:example>
     </owl:Class>
     
 
@@ -144,6 +672,132 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:label xml:lang="en">generically dependent continuant</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A generically dependent continuant is an entity that exists in virtue of the fact that there is at least one of what may be multiple copies which is the content or the pattern that multiple copies would share</skos:definition>
+        <skos:example xml:lang="en">The pdf file on your laptop; the pdf file that is a copy thereof on my laptop; the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule; the content that is shared by a string of dots and dashes written on a page and the transmitted Morse code signal; the content of a sentence; an engineering blueprint</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label xml:lang="en">function</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A function is a disposition that exists in virtue of its bearer&apos;s physical make-up &amp; this physical make-up is something the bearer possesses because it came into being either through evolution (in the case of natural biological entities) or through intentional design (in the case of artefacts) in order to realize processes of a certain sort</skos:definition>
+        <skos:example xml:lang="en">The function of a hammer to drive in nails; the function of a heart pacemaker to regulate the beating of a heart through electricity</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:label xml:lang="en">process boundary</rdfs:label>
+        <skos:definition xml:lang="en">p is a process boundary =Def p is a temporal part of a process &amp; p has no proper temporal parts</skos:definition>
+        <skos:example xml:lang="en">The boundary between the 2nd and 3rd year of your life</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdfs:label xml:lang="en">one-dimensional temporal region</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A one-dimensional temporal region is a temporal region that is a whole that has a temporal interval and zero or more temporal intervals and temporal instants as parts</skos:definition>
+        <skos:example xml:lang="en">The temporal region during which a process occurs</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000029"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000140"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <rdfs:label xml:lang="en">material entity</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part</skos:definition>
+        <skos:example xml:lang="en">A human being; the undetached arm of a human being; an aggregate of human beings</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000140 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000140">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">continuant fiat boundary</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A continuant fiat boundary b is an immaterial entity that is of zero, one or two dimensions &amp; such that there is no time t when b has a spatial region as continuant part &amp; whose location is determined in relation to some material entity</skos:definition>
+        <skos:example xml:lang="en">As for fiat point, fiat line, fiat surface</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000141 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000141">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:label xml:lang="en">immaterial entity</rdfs:label>
+        <skos:definition xml:lang="en">b is an immaterial entity =Def b is an independent continuant which is such that there is no time t when it has a material entity as continuant part</skos:definition>
+        <skos:example xml:lang="en">As for fiat point, fiat line, fiat surface, site</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000202 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000202">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <rdfs:label xml:lang="en">temporal interval</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) A temporal interval is a one-dimensional temporal region that is continuous, thus without gaps or breaks</skos:definition>
+        <skos:example xml:lang="en">The year 2018.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <obo:IAO_0000115 xml:lang="en">A directive information entity that describes an intended process endpoint. When part of a plan specification the concretization is realized in a planned process in which the bearer tries to effect the world so that the process endpoint is achieved.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">objective specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <obo:IAO_0000115 xml:lang="en">A directive information entity that describes an action the bearer will take.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">action specification</rdfs:label>
     </owl:Class>
     
 
@@ -170,6 +824,22 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A generically dependent continuant that is about some thing.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">information content entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An information content entity whose concretizations indicate to their bearer how to realize them in a process.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">directive information entity</rdfs:label>
     </owl:Class>
     
 
@@ -205,6 +875,16 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <obo:IAO_0000115 xml:lang="en">Data about an ontology part is a data item about a part of an ontology, for example a term</obo:IAO_0000115>
         <rdfs:label xml:lang="en">data about an ontology part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000109">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115 xml:lang="en">A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">measurement datum</rdfs:label>
     </owl:Class>
     
 
@@ -250,10 +930,1339 @@
     
 
 
-    <!-- https://w3id.org/pmd/ao/HTO_0000000 -->
+    <!-- http://purl.obolibrary.org/obo/IAO_0000582 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/HTO_0000000">
-        <rdfs:label xml:lang="en">root node</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000582">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000379 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000379">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <obo:IAO_0000115 xml:lang="en">A mechanical function is a function that is realised via mechanical work (through an certain amount of energy transferred by some force).</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">mechanical function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://qudt.org/vocab/unit/DEG_C -->
+
+    <owl:Class rdf:about="http://qudt.org/vocab/unit/DEG_C"/>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/AccelleratedCooling -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/AccelleratedCooling">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000781"/>
+        <rdfs:comment xml:lang="en">Achieved via convection only.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Status of the cooling method active e.g., at the end of the nitriding process</skos:definition>
+        <skos:prefLabel xml:lang="en">Accellerated Cooling</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/AcquisitionDate -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/AcquisitionDate">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000582"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">The point in time a Process Node was commissioned (e.g., the purchase date, first day of use), represented in IEEE 1003 &apos;Seconds since Epoch&apos;. </skos:definition>
+        <skos:prefLabel xml:lang="en">Acquisition Date</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Annealing -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Annealing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HeattreatmentScope"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Heatteratment process with the scope to change the properties or microstructure of a sample or part. Typically no hardening is performed with this process.</skos:definition>
+        <skos:prefLabel xml:lang="en">Annealing</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Atmosphere -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Atmosphere">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/Medium"/>
+        <skos:definition>A surrounding influence or environment</skos:definition>
+        <skos:prefLabel xml:lang="en">Atmosphere</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/AtmospherePressure -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/AtmospherePressure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000896"/>
+        <rdfs:comment xml:lang="en">Effective atmosphere preasure in chamber to keep process save (must be 2-3 mbar above ambient prssure)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Parameter usually slightly higher than ambient pressure for open process to environment to prevent/reduce diffusion of oxygen into the furnace, e.g. by leckage, to avoid explosive or dangerous atmopheres, could be bar, mbar or Pa</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Parameter describing the intended atmosphere pressure inside a chamber. </skos:definition>
+        <skos:prefLabel xml:lang="en">Atmosphere Pressure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/BelowAmbientPressure -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/BelowAmbientPressure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">status of atmosphere: reduced pressure below ambient pressure </skos:definition>
+        <skos:prefLabel xml:lang="en">Below Ambient Pressure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/CarbonPotential -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/CarbonPotential">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <rdfs:comment xml:lang="de">Nitrocarburieren mit Kohlenstoffträger, aus Messwerten abgeleitet KC</rdfs:comment>
+        <rdfs:comment xml:lang="en">See standard DIN 1310</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Carbon content of a specimen of pure iron in equilibrium with a carbourizing medium under specific conditions.</skos:definition>
+        <skos:prefLabel xml:lang="en">Carbon Potential</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Carburizing -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Carburizing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060008"/>
+        <rdfs:comment xml:lang="de">Potentiell ableitbar mit bestimmten Fluss-Schwellenwerten</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Heattreatment process with the scope to transfer carbon from the atmosphere to the component surface.</skos:definition>
+        <skos:definition xml:lang="de">Prozessschritt, während dessen Kohlenstoff aus der Atmosphäre an der Bauteiloberfläche übertragen wird</skos:definition>
+        <skos:prefLabel xml:lang="de">Aufkohlen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Carburizing</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Chamber -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Chamber">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:comment xml:lang="de">unklare Zuordnung innerhalb der &quot;spec. dep. continuants&quot;. Eine Kammer existiert nur als Teil eines Gerätes (Device), könnte aber selbst noch einmal als independent continuant definiert werden, da sich in der Kammer Chargen, Gestelle, Thermoelemente etc. befinden.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Systemboundary of a distinct Heattreatment Process. Typically includes media (e.g., Helium or Vaccum).</skos:definition>
+        <skos:prefLabel xml:lang="en">Chamber</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/ChamberPressure -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/ChamberPressure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000896"/>
+        <rdfs:comment xml:lang="en">measured atmophere pressure in retort, measured using the vacuum sensor </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">designated pressure in retort during evacuation phase pre to nitriding process or during low pressure nitriding process </skos:definition>
+        <skos:prefLabel xml:lang="en">Chamber Pressure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/ChamberScope -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/ChamberScope">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:comment xml:lang="de">Sollte mit Unit-Volume (m^3) verbunden sein</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Functional furnace chamber.</skos:definition>
+        <skos:definition xml:lang="de">Funktionale Ofenkammer.</skos:definition>
+        <skos:definition xml:lang="en">Position of the batch in a multi-chamber furnace
+A specialization of hasProcessNodeComponent representing distinguishable heat treatment chambers of a furnaces.
+can be: heating chamber / cooling chamber</skos:definition>
+        <skos:prefLabel xml:lang="en">ChamberScope</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Wärmebehandlungsofenkammer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/CollectionInterfaceHint -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/CollectionInterfaceHint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000017"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">A label in support of identifying a network interface and/or address used by a process node to provide primary data stored in ontologies </skos:definition>
+        <skos:prefLabel xml:lang="en">Collection Interface Hint</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/ConcentrationH2 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/ConcentrationH2">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/FurnaceAtmosphere"/>
+        <rdfs:comment xml:lang="en">Ammonia is usually intenionally induced;</rdfs:comment>
+        <rdfs:comment xml:lang="de">Einzelne Werte durch auf das Molekül spezifizierte Messsonden.</rdfs:comment>
+        <rdfs:comment>Hydrogen can be formed during decomposition of e.g. ammonia, acetylene or can be intenionally induced e.g. in forming gas.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Might be calculated from model or measurement.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Oxygen concentration in process gas composition, oxygen can be formed during decomposition of e.g. carbon monoxide or dioxide or can be intenionally induced e.g. as air, synthetic air or water or enters the furnace via leckage.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Water concentration in process gas composition, if nominal water is intenionally induced; units could be e.g. mol/m³ or °C; signal could be in mA or mV or in vol.-% or °C (dew point)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Concentration in process gas composition; units could be e.g. mol/m³; signal could be in mA or mV or in vol.-%</skos:definition>
+        <skos:prefLabel xml:lang="en">Concentration</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Controlled -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Controlled">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">This Scope expresses that a :ValueObject is actively controlled during the process, e.g. a heating process where the temperature change is done in controlled intervals until the desired temperature is reached while an uncontrolled heating process would reach the desired temperature as fast as the furnace allows it to.</skos:definition>
+        <skos:prefLabel xml:lang="en">Controlled</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Convection -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Convection">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">konvection during heating, heating in atmosphere, not in vacuum </skos:definition>
+        <skos:prefLabel xml:lang="en">Convection</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/CoolingFlag -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/CoolingFlag">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">represents whether a sequence (of a process recipe) is for cooling to nominal temperature or not, takes value 0 or 1 </skos:definition>
+        <skos:prefLabel xml:lang="en">Cooling Flag</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/CoolingProcess -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/CoolingProcess">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000549"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">A process in which the temperature is lowered from a higher to a lower level.</skos:definition>
+        <skos:definition xml:lang="de">Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird.</skos:definition>
+        <skos:definition xml:lang="en">process description during cooling process, e.g. fast cooling, free furnace cooling, controled cooling</skos:definition>
+        <skos:prefLabel xml:lang="de">Abkühlprozess</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Cooling Process</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/DewPoint -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/DewPoint">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">dew point of the atmosphere, measured during process or calculated from lambda / oxygen probe signal </skos:definition>
+        <skos:prefLabel xml:lang="en">Dew Point</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000880"/>
+        <rdfs:comment xml:lang="de">Erwärmdauer = Heizzeit + Durchwärmdauer</rdfs:comment>
+        <rdfs:comment xml:lang="de">Maß für die tatsächliche Dauer eines Erwärmvorgangs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Measurement representing the actual duration of a heating procedure.</skos:definition>
+        <skos:prefLabel xml:lang="en">Duration Till Target Temperature</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Erwärmdauer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000880"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Parameter representing a derived duration of a heat up segment (in hours, minutes or seconds) </skos:definition>
+        <skos:prefLabel xml:lang="en">Duration To Reach Target Temperature</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Fan -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Fan">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000602"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/FanStateFast -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/FanStateFast">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/Rotation"/>
+        <rdfs:label xml:lang="en">Fan State Fast</rdfs:label>
+        <skos:definition xml:lang="en">Boolean parameter representing a fast fan speed setting in contrast to the default speed setting.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/FastCooling -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/FastCooling">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HeattreatmentMethod"/>
+        <rdfs:comment xml:lang="de">Anlagenbedingt.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Schnellkühlung kann z.B. durch erhöhten Kühlwasserdurchfluss erfolgen.
+Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
+        <skos:definition xml:lang="de">Schnellkühlung</skos:definition>
+        <skos:definition xml:lang="de">Stark beschleunigte Abkühlung ohne Abschreckmedium.</skos:definition>
+        <skos:prefLabel xml:lang="en">Fast Cooling</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/FineVacuum -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/FineVacuum">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">status of the atmosphere, evacuation step without nitriding potential </skos:definition>
+        <skos:prefLabel xml:lang="en">Fine Vacuum</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/FlowRate -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/FlowRate">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/MediaMovement"/>
+        <rdfs:comment xml:lang="en">Effective flow rate might be generated by the system with a manual input in Percent.</rdfs:comment>
+        <rdfs:comment>Use Scope.Medium and pmdoc:relatesTo chemical element from chebi; units could be l/min, l/h, m³/h, ...</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Parameter representing the intended induced flow rate of a medium, e.g. Oil, Gases, Fluids in general.</skos:definition>
+        <skos:example>ex:flowrateH2 a :FlowRate ;
+                       co:relatesTo chebie:Hydrogen ;
+                      co:unit qudt:Mol-per-litre .</skos:example>
+        <skos:prefLabel xml:lang="en">Flow Rate</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/FlowRateTotal -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/FlowRateTotal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/MediaMovement"/>
+        <rdfs:comment>Units could be l/min, l/h, m³/h, ... </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Measured value for the total flow rate of all process media</skos:definition>
+        <skos:prefLabel xml:lang="en">Flow Rate Total</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Fluid -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Fluid">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/Medium"/>
+        <skos:definition>A substance (such as a liquid or gas) tending to flow or conform to the outline of its container</skos:definition>
+        <skos:prefLabel xml:lang="en">Fluid</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/FurnaceAtmosphere -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/FurnaceAtmosphere">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">atmosphere type present in retort (vacuum, nitriding, neutral, carburizing)</skos:definition>
+        <skos:prefLabel xml:lang="en">Furnace Atmosphere</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/FurnaceCooling -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/FurnaceCooling">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HeattreatmentMethod"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">free cooling with deactivated heating unit and no additonal cooling by e.g. agitade nitrogene -&gt; furnace cool </skos:definition>
+        <skos:prefLabel xml:lang="en">Furnace Cooling</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/GasIngressFrontState -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/GasIngressFrontState">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:label xml:lang="en">Gas Ingress Front State</rdfs:label>
+        <skos:definition xml:lang="en">Boolean parameter that opens a magnetic-controlled valve to induce frontsited gas ingress (if set to true) into the heating chamber. Choice of ingress can have an effect on the effective gas flow direction into or through the batch and can impact in homogeneties </skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/HTO_0000000 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000000">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000833"/>
+        <rdfs:label xml:lang="en">heat treatment process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Hardening -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Hardening">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HeattreatmentScope"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Heat treatment process with the aim of achieving an increase in strength and hardness of the material.</skos:definition>
+        <skos:definition xml:lang="de">Wärmebehandlungprozess mit dem Ziel eine Festigkeitssteigerung zu erreichen.</skos:definition>
+        <skos:example>Randschichthärten
+
+Einsatzhärten
+
+Nitrierhärten
+
+verwendet Randschichttiefe</skos:example>
+        <skos:prefLabel xml:lang="en">Hardening</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Härten</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/HeaterRole -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HeaterRole">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:comment>todo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Heating -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Heating">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000549"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0001938"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
+                                                <owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
+                                            </owl:Restriction>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0001937"/>
+                                                <owl:someValuesFrom>
+                                                    <rdfs:Datatype>
+                                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                                        <owl:withRestrictions rdf:parseType="Collection">
+                                                            <rdf:Description>
+                                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</xsd:minInclusive>
+                                                            </rdf:Description>
+                                                        </owl:withRestrictions>
+                                                    </rdfs:Datatype>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/ao/hto/"/>
+        <skos:definition xml:lang="en">A process in which the temperature is increased from a lower to a higher level.</skos:definition>
+        <skos:definition xml:lang="de">Ein Prozess, bei dem die Temperatur von einem niedrigem auf ein höheres Niveau gesteigert wird.</skos:definition>
+        <skos:definition xml:lang="en">type of heating process, e.g. fast uncontrolled heating, heating ramp controlled etc. </skos:definition>
+        <skos:prefLabel xml:lang="de">Erwärmprozess</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Heating Process</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/HeatingChamber -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HeatingChamber">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/ChamberScope"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Distinguishable chamber of a heat treatment furnace with a heater.</skos:definition>
+        <skos:prefLabel xml:lang="en">Heating Chamber</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Heizkammer</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Ofenkammer mit einer Heizung.</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/HeatingKammerRolle -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HeatingKammerRolle">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:comment>todo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/HeatingTime -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HeatingTime">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000880"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="de">Dauer bis zum Erreichen der Zieltemperatur im Ofen.</skos:definition>
+        <skos:definition xml:lang="en">Duration until the target temperature is reached in the furnace.</skos:definition>
+        <skos:prefLabel xml:lang="de">Erwärmdauer</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Heating Time</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/HeattreatmentMethod -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HeattreatmentMethod">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/HeattreatmentScope -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HeattreatmentScope">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">This class specifices the scope of the specific heattreatment process.</skos:definition>
+        <skos:prefLabel xml:lang="en">HeattreatmentScope</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Holding -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Holding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
+        <rdfs:comment xml:lang="de">Die HoldingTime ist stets mit einer vorhergehende SoakingTime verbunden.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Process step without temperature change in the furnace after the designated temperature was homogeneously reached within the part.</skos:definition>
+        <skos:definition xml:lang="de">Prozessschritt ohne Temperaturänderung im Ofen.</skos:definition>
+        <skos:prefLabel xml:lang="de">Halten</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Holding</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/HoldingCooling -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HoldingCooling">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="de">Unterbrechung des Kühlprozesses zwecks Temperaturausgleich </skos:definition>
+        <skos:definition xml:lang="en">represents whether a sequence (of a process recipe) is for waiting until nominal temperature is reached during cooling or not, takes value 0 or 1 </skos:definition>
+        <skos:prefLabel xml:lang="en">Holding Cooling</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/HoldingHeating -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HoldingHeating">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">isothermal holding step during heating </skos:definition>
+        <skos:definition xml:lang="en">represents whether a sequence (of a process recipe) is for waiting until nominal temperature is reached during heating or not, takes value 0 or 1 </skos:definition>
+        <skos:prefLabel xml:lang="en">Holding Heating</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/HydrogeneSensorSignal -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HydrogeneSensorSignal">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <rdfs:comment xml:lang="en">nominal pre-set value of control system for hydrogen probe </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">measured hydrogen value of  hydrogen probe measured in milli volt </skos:definition>
+        <skos:prefLabel xml:lang="en">Hydrogene Sensor Signal</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/LambdaProbeSignal -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/LambdaProbeSignal">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">measured lambda probe signal in exhaust gas </skos:definition>
+        <skos:definition xml:lang="en">measured signal of the lambda-probe in millivolt, representing the atmospheres redox-potential </skos:definition>
+        <skos:prefLabel xml:lang="en">Lambda Probe Signal</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/LeakageCheck -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/LeakageCheck">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000880"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">leakage test duration, where the change of pressure after evacuation is rated according to leakages present </skos:definition>
+        <skos:definition xml:lang="en">stands for the dwell time during which the pressure increase is evaluated to check tighness of furnace after evacuation initially at process begin </skos:definition>
+        <skos:prefLabel xml:lang="en">Leakage Check</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/LeakageFlag -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/LeakageFlag">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:comment xml:lang="en">boolean result of leakage test </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">represents whether a sequence of a process recipe is a safety leakage check of furnace or not, takes value 0 or 1 </skos:definition>
+        <skos:prefLabel xml:lang="en">Leakage Flag</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/LeakageInterval -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/LeakageInterval">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <rdfs:comment xml:lang="en">Stands for the measurement interval for recording sensor signals (pressure, temperature) and instrument settings (rotational speed, flow rate of MFC), unit as time stamp hh:mm:ss </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">effective leakage measuring duration </skos:definition>
+        <skos:prefLabel xml:lang="en">Leakage Interval</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Manufacturer -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Manufacturer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000879"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en"> Process Node&apos;s manufacturer name, e.g.: &quot;Ipsen&quot; or &quot;UPC&quot; </skos:definition>
+        <skos:prefLabel xml:lang="en">manufacturer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/MediaMovement -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/MediaMovement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Medium -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Medium">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <skos:definition>A surrounding or enveloping substance</skos:definition>
+        <skos:prefLabel xml:lang="en">Medium</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Nitriding -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Nitriding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HeattreatmentScope"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">heat treatment process with the scope to increase the nitrogen content in the surface near area of a sample or part</skos:definition>
+        <skos:prefLabel xml:lang="en">Nitriding</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/NitridingDepth -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/NitridingDepth">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000005"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en"> designated nitriding depth or measured nitriding depth </skos:definition>
+        <skos:prefLabel xml:lang="en">Nitriding Depth</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/NitridingFlag -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/NitridingFlag">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en"> status of the atmosphere, nitriding step with nitriding potential present in the atmosphere </skos:definition>
+        <skos:prefLabel xml:lang="en">Nitriding Flag</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/NitridingPotential -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/NitridingPotential">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:comment xml:lang="en">The nitriding potential is a key indicator how intensive the nitriding process is, the higher the value the stronger the nitriding conditions, unit is bar^-3/2</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">calculated nitriding potential, generated out of H2 / NH3 atmosphere content measurement</skos:definition>
+        <skos:definition xml:lang="en">nitriding potential of atmosphere calculated from H2 probe signal and ammonia flow rate </skos:definition>
+        <skos:prefLabel xml:lang="en">Nitriding Potential</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/OilQuenchingDuration -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/OilQuenchingDuration">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000880"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Dwell time of the components in the quenching medium.</skos:definition>
+        <skos:definition xml:lang="en">Parameter indicating the duration of the conducted quenching action </skos:definition>
+        <skos:definition xml:lang="de">Verweildauer der Bauteile im Abschreckmedium.</skos:definition>
+        <skos:prefLabel xml:lang="de">Abschreckdauer</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Oil Quenching Duration</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/OverPressure -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/OverPressure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000896"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en"> Parameter also for liquid or gaseous media for quenching condition of inductive heat treatments, e.g. water pressure or nitrogen pressure in mbar or bar </skos:definition>
+        <skos:definition xml:lang="en">Parameter describing a significant higher pressure than ambient pressure, e.g. during a high pressure gas quenching process step, could be mbar or bar </skos:definition>
+        <skos:prefLabel xml:lang="en">Over Pressure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/OxygenProbeSignal -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/OxygenProbeSignal">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en"> measured oxygen probe signal in retort atmosphere </skos:definition>
+        <skos:prefLabel xml:lang="en">Oxygen Probe Signal</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/PartialPressure -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/PartialPressure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000896"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en"> Paramenter describing the intended pressure inside a chamber targeted in a factor relative to one bar (using a vakuum cooling or an atmosphere flow). The complement to vacuum-heating as it allows for active vacuum pump during atmosphere flow. Should be set to zero, if vacuum-heating is true. </skos:definition>
+        <skos:definition xml:lang="en">Describing the intended pressure inside a chamber targeted in a factor relative to one bar (using a vakuum cooling or an atmosphere flow).</skos:definition>
+        <skos:definition xml:lang="en">Parameter describing the amount of a specific gas species in a mixture, could be mbar </skos:definition>
+        <skos:definition xml:lang="en">The complement to vacuum-heating as it allows for active vacuum pump during atmosphere flow. Should be set to zero, if vacuum-heating is true.</skos:definition>
+        <skos:definition xml:lang="en">nominal pressure of a specific atmosphere component thermochemical steps </skos:definition>
+        <skos:definition xml:lang="en">nominal pressure of thermochemical heat treatment pressure during thermochemical steps </skos:definition>
+        <skos:prefLabel xml:lang="en">Partial Pressure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Quenching -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Quenching">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HeattreatmentMethod"/>
+        <skos:definition>Abkühlungsvorgang, der unter Verwendung eines Mediums erfolgt, das in direktem Kontakt mit dem steht, mit dem Ziel die Wärme des Bauteils aufzunehmen.</skos:definition>
+        <skos:definition xml:lang="en">Process with significantly increased cooling rate, aimed at preventing diffusion based transformations.</skos:definition>
+        <skos:definition xml:lang="de">Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen.</skos:definition>
+        <skos:prefLabel xml:lang="de">Abschreckprozess</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Quenching</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Quenching Process</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/QuenchingChamber -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/QuenchingChamber">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/ChamberScope"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Chamber of a heat treatment furnace that is designed to quench objects.</skos:definition>
+        <skos:definition xml:lang="de">Kammer eines Wärmebehandlungsofens, die zum Abschrecken von Gegenständen bestimmt ist.</skos:definition>
+        <skos:prefLabel xml:lang="de">Abschreckkammer</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Quenching Chamber</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/QuenchingLeadtime -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/QuenchingLeadtime">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="de">Dauer zwischen Verlassen der Heizkammer und Beginn der effektiven Abschreckung. Gilt für Zweikammeröfen.</skos:definition>
+        <skos:definition xml:lang="en">Duration between leaving the heating chamber and the start of effective quenching. Applies to two-chamber furnaces.</skos:definition>
+        <skos:definition xml:lang="en">Parameter indicatin the duration right before the quenching  process </skos:definition>
+        <skos:prefLabel xml:lang="de">Abschreckvorlaufzeit</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Quenching Leadtime</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/RecordingInterval -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/RecordingInterval">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
+        <rdfs:comment xml:lang="en">stands for the measurement interval for recording sensor signals (pressure, temperature) and instrument settings (rotational speed, flow rate of MFC), unit as time stamp hh:mm:ss </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en"> effective data aquisition and saving interval for documentation </skos:definition>
+        <skos:prefLabel xml:lang="en">Recording Interval</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Rotation -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Rotation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000379"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en"> Parameter describing the intended rotational speed of a device as e.g. an fan or turbine, unit revolution per minute. </skos:definition>
+        <skos:definition xml:lang="en">rotation speed of the atmosphere agitation device </skos:definition>
+        <skos:prefLabel xml:lang="en">Rotation Speed</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/SequenceDescriptor -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/SequenceDescriptor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000017"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Label of a given process step within a process recipe.</skos:definition>
+        <skos:prefLabel xml:lang="en">Sequence Descriptor</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/SequenceDuration -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/SequenceDuration">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000880"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Duration of a sequence for which certain furnace settings and process parameters can be defined.</skos:definition>
+        <skos:definition xml:lang="en">Duration of the current heat treatment recipe sequence.</skos:definition>
+        <skos:prefLabel xml:lang="en">Sequence Duration</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/SequenceNumber -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/SequenceNumber">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000017"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en"> An identifier indicating a process-number in a Workflow represented via consecutive integers </skos:definition>
+        <skos:definition xml:lang="en">number of process step of heat treatment recipe </skos:definition>
+        <skos:definition xml:lang="en">ongoing number for labeling the process steps within a process recipe </skos:definition>
+        <skos:prefLabel xml:lang="en">Sequence Number</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/SlowCooling -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/SlowCooling">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HeattreatmentMethod"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="de">Langsame Abkühlung unter gleichgewichtsnahen Bedingungen, um ein gleichgewichtsnahes Gefüge zu erzeugen.</skos:definition>
+        <skos:definition xml:lang="en">Slow cooling with equilibrium near conditions, to foster an equilibrium near micro structure.</skos:definition>
+        <skos:prefLabel xml:lang="de">Langsame Gleichgewichtsnahabkühlung</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Slow Cooling</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/SoakingDuration -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/SoakingDuration">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000880"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="de">Dauer bis zum Erreichen der homogenen Temperatur im Bauteil.</skos:definition>
+        <skos:definition xml:lang="en">Duration at isothermal temperatur step.</skos:definition>
+        <skos:definition xml:lang="en">Duration to achieve a homogenous temperature distribution in the part</skos:definition>
+        <skos:prefLabel xml:lang="de">Durchwärmzeit</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Soaking Duration</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/SoakingProcess -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/SoakingProcess">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
+        <rdfs:comment>Durchwärmen des Bauteils, sodass Temperaturhomogenität erreicht wird. Anschließend kann ein Halten auf der Zieltemperatur erfolgen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. </skos:definition>
+        <skos:definition xml:lang="en">Process step during which temperature homogenization is achieved in the component.</skos:definition>
+        <skos:definition xml:lang="de">Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird.</skos:definition>
+        <skos:prefLabel xml:lang="de">Durchwärmprozess</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Soaking Process</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Standard -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Standard">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en"> standard method for cooling of furnace to RT </skos:definition>
+        <skos:prefLabel xml:lang="en">Standard</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000582"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="de"> Extrahierte Systemzeit für das Diagram geniert </skos:definition>
+        <skos:definition xml:lang="en">time stamp for measuring data aquisition time and diagram generation / data syncing </skos:definition>
+        <skos:prefLabel xml:lang="en">System Time For Diagram Generation</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/TemperatureChangingProcess -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/TemperatureChangingProcess">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000549"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/co"/>
+        <skos:definition xml:lang="en">A conditioning process which is run to increase or decrease the temperature of an object or a space. Usually, this involves heating or cooling devices such as furnaces or cooling media.</skos:definition>
+        <skos:prefLabel xml:lang="en">Temperature Change Process</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">Temperaturänderungsprozess</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/Tempering -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Tempering">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HeattreatmentScope"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">A heat treatment process to transform the hardening structure into the direction or equilibrium structure.</skos:definition>
+        <skos:definition xml:lang="de">Ein Wärmebehandlungsprozess, um das Härtungsgefüge in die Richtung oder in ein Gleichgewichtsgefüge umzuwandeln.</skos:definition>
+        <skos:definition xml:lang="en">Tempering</skos:definition>
+        <skos:definition xml:lang="en">heat treatement process with the scope to reduce the hardness of a prior hardened sample or part</skos:definition>
+        <skos:prefLabel xml:lang="de">Anlassen</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Tempering Process</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/TypeDescription -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/TypeDescription">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000017"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Description for Process Node&apos;s utility, e.g. &quot;Rear Vacuum Furnace Oil Quenching&quot;.</skos:definition>
+        <skos:prefLabel xml:lang="de">Typbeschreibung</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Type Description</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/VacuumHeating -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/VacuumHeating">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Parameter that sets the activity of the vacuum pump. If true, no atmosphere flow is possible (even if set). Effectively, the same mechanics as vacuum-cooling (this is for humans) </skos:definition>
+        <skos:prefLabel xml:lang="en">Vacuum Heating</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/VacuumHeatingPressure -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/VacuumHeatingPressure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000896"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Pressure of the vaccum heating pump.</skos:definition>
+        <skos:prefLabel xml:lang="en">Vacuum Heating Pressure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/VacuumPressure -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/VacuumPressure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000896"/>
+        <rdfs:comment xml:lang="en"> in retort measured value of vakuum sensor </rdfs:comment>
+        <rdfs:comment xml:lang="en"> pre-set gas pressure at vacuum sequence </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en"> Paramenter describing the measured pressure inside a chamber; units could be mbar, bar </skos:definition>
+        <skos:definition xml:lang="en"> Parameter describing the intended vacuum pressure inside a chamber. </skos:definition>
+        <skos:prefLabel xml:lang="en">Vacuum Pressure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/WithGasPurging -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/WithGasPurging">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:comment xml:lang="en">Indicates a constant supply of athmospheric gas during a heat treatment process.
+
+Without this flag there will be no additional gas supllied except the set pressure drops.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en"> Furnace atmosphere control and oxygen deminishing steps with nitrogen gas flow </skos:definition>
+        <skos:prefLabel xml:lang="en">With Gas Purging</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:comment xml:lang="en">During nitriding there can be an exchange of the atmosphere gas without removing the gas beforehand.
+This is a relevant information because it indicates a process step in between two processes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <skos:definition xml:lang="en">Neglect any intermediate evacuation process </skos:definition>
+        <skos:prefLabel xml:lang="en">Without Intermediate Evacuation</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:comment>todo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000000 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000000">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000001"/>
+        <rdfs:label xml:lang="de">Material</rdfs:label>
+        <rdfs:label xml:lang="en">material</rdfs:label>
+        <skos:definition xml:lang="en">A Material is a Portion Of Matter that may participate in some Manifacturing Process and whose shape is not relevant for its participation in the Manifacuring Process.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000001 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:label xml:lang="en">portion of matter</rdfs:label>
+        <skos:definition xml:lang="en">A material entity that is not demarcated by any physical discontinuities. At some finer level of granularity it is an object aggregate, at some coarser level of granularity it is a fiat object part,but at this level of granularity it is neither.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000003 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">plan specification</rdfs:label>
+        <skos:definition>A directive information entity with action specifications and objective specifications as parts, and that may be concretized as a realizable entity that, if realized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000005 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000915"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000199"/>
+                                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000950"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000199"/>
+                                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0001029"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000915"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0001030"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000950"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">behavioral material property</rdfs:label>
+        <skos:definition xml:lang="en">A property is a material trait in terms of the kind and magnitude of response to a specific imposed stimulus. Generally, definitions of properties are made independent of material shape and size.
+
+(Callister, W.D., Rethwisch, D.G., Materials Science and Engineering, Wiley, 2014)
+
+We only deal with intensive (system-size independent) materrial properties. Extensive properties that depend on the testpiece/specimen/probe size should be found in the respective testing method modules.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000008 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <rdfs:label xml:lang="en">process characteristic</rdfs:label>
+        <skos:definition xml:lang="en">A process characteristic is a dependent occurrent that existentially depends on a process.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000014 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:label xml:lang="en">plan</rdfs:label>
+        <skos:definition>A plan is a realizable entity that is the inheres in a bearer who is committed to realizing it as a planned process.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000017 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
+        <skos:definition>An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000549 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000549">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="en">change of temperature</rdfs:label>
+        <skos:definition xml:lang="en">A change of temperature is a process describing the variation in thermal energy within a material or system over time or due to external influences.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000550 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000550">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000833"/>
+        <rdfs:label xml:lang="de">Stoffeigenschaft Ändern</rdfs:label>
+        <rdfs:label xml:lang="en">changing properties of material</rdfs:label>
+        <skos:definition xml:lang="en">A manufacturing process that modifies the characteristics of the material from which a workpiece is made, including by processes at the submicroscopic or atomic scale, such as atomic diffusion, dislocation formation and movement in the atomic lattice or chemical reactions, whereby the resulting shape changes are not characteristic of these processes.</skos:definition>
+        <skos:definition xml:lang="de">Ein Herstellungsprozess, der die Merkmale des Materials, aus dem ein Werkstück gefertigt ist, modifiziert, was unter anderem durch Vorgänge im submikroskopischen oder atomaren Bereich erfolgt, wie etwa durch Atomdiffusion, die Versetzungsentstehung und -bewegung im Atomgitter oder durch chemische Reaktionen, wobei die dabei auftretenden Formveränderungen nicht charakteristisch für diese Verfahren sind.</skos:definition>
+        <skos:example xml:lang="en">Heat Treatment</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000602 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000602">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <rdfs:label xml:lang="de">Gerät</rdfs:label>
+        <rdfs:label xml:lang="en">device</rdfs:label>
+        <skos:definition xml:lang="en">A physical or virtual entity used to perform a specific function or task, often involving measurement, manipulation, or analysis of materials.</skos:definition>
+        <skos:definition xml:lang="de">Ein physisches oder virtuelles Objekt, das verwendet wird, um eine bestimmte Funktion oder Aufgabe auszuführen, häufig im Zusammenhang mit der Messung, Manipulation oder Analyse von Materialien.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000779 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000779">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000550"/>
+        <rdfs:label xml:lang="de">Wärmebehandlung</rdfs:label>
+        <rdfs:label xml:lang="en">heat treatment</rdfs:label>
+        <skos:definition xml:lang="en">A Changing Properties of Materials process in which a solid (ferrous) product is fully or partially exposed to specific time-temperature sequences through a series of process steps with the aim of modifying its properties and/or its internal structure.</skos:definition>
+        <skos:definition xml:lang="de">Ein Stoffeigenschaft Ändern Prozess, bei dem durch eine Reihe von Verfahrensschritten ein festes (Eisen-)Produkt ganz oder teilweise bestimmten Zeit-Temperatur-Abfolgen ausgesetzt wird, mit dem Ziel, seine Eigenschaften und/oder seine innere Struktur zu modifizieren.</skos:definition>
+        <skos:example xml:lang="en">Annealing, Ageing, Hardening</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000781 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000781">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <rdfs:label xml:lang="de">Wärmebehandlungsfunktion</rdfs:label>
+        <rdfs:label xml:lang="en">heat treatment function</rdfs:label>
+        <skos:definition xml:lang="en">A function performed to alter the properties of materials through controlled heating and cooling processes.</skos:definition>
+        <skos:definition xml:lang="de">Eine Funktion, die durchgeführt wird, um die Eigenschaften von Materialien durch kontrollierte Wärme- und Abkühlungsprozesse zu verändern.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000833 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000833">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000015"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000016"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000014"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000015"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000016"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Herstellungsprozess</rdfs:label>
+        <rdfs:label xml:lang="en">manufacturing process</rdfs:label>
+        <skos:definition xml:lang="en">A planned process that is driven by the primary intent to transform objects
+A manufacturing process is always a transformative process.</skos:definition>
+        <skos:definition xml:lang="de">Ein geplannter Prozess, der von der primären Absicht angetrieben wird, Objekte zu transformieren. Ein Herstellungsprozess ist immer ein Transformationsprozess.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000879 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000879">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:label xml:lang="en">organization</rdfs:label>
+        <skos:definition xml:lang="en">An organization is an immaterial entity that has the organisation role and there exists some sort of legal framework that recognises the entity and its continued existence.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000880 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000880">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="en">passing of time</rdfs:label>
+        <skos:definition xml:lang="en">Passing of time is a process that describes the progression of time, which can influence material aging and property changes.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000896 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000896">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020131"/>
+        <rdfs:label xml:lang="en">pressure</rdfs:label>
+        <skos:definition xml:lang="en">The pressure is a thermodynamic quality describing the force exerted per unit area on a material.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000915 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000915">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/pmd/co/PMD_0000950"/>
+        <rdfs:label xml:lang="en">responding process</rdfs:label>
+        <skos:definition xml:lang="en">The responding process is a process describing the reaction of a material or system to an applied stimulus.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000950 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000950">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:label xml:lang="en">stimulating process</rdfs:label>
+        <skos:definition xml:lang="en">The stimulating process is a process describing the application of an external influence, such as force, heat, or radiation, to study material response.</skos:definition>
     </owl:Class>
     
 
@@ -276,6 +2285,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020098"/>
         <rdfs:label xml:lang="en">metallic grain structures</rdfs:label>
+        <skos:definition xml:lang="en">Metallic grain structures are descriptors for the morphology of polycrystalline metallic materials. Polycrystalline metallic materials will typically form their grain structures as one of those categories or a transition or mixture state of those.</skos:definition>
     </owl:Class>
     
 
@@ -285,6 +2295,8 @@
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020098">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
         <rdfs:label xml:lang="en">nature constant</rdfs:label>
+        <skos:definition xml:lang="en">A nature constant is a generically dependent continuant whose value, magintude or configuration is determined by nature including physics and mathematics.</skos:definition>
+        <skos:example xml:lang="en">Examples of nature constants are the speed of light, pi, and the 14 Bravais lattices.</skos:example>
     </owl:Class>
     
 
@@ -314,6 +2326,11 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020098"/>
         <rdfs:label xml:lang="en">bravais lattice (3d)</rdfs:label>
+        <skos:definition xml:lang="en">The Bravais Lattice is a nature constant that describes the possible geometric arrangement of lattice points in a crystal. The present descriptor is limited to the 14 possible three-dimensional arrangements. 
+
+TODO: possibly extend for 2D (Graphene etc)
+
+More elaborate crystal descriptions may be found in http://emmo.info/domain-crystallography/crystallography or https://purls.helmholtz-metadaten.de/disos/cso</skos:definition>
     </owl:Class>
     
 
@@ -338,6 +2355,27 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020098"/>
         <rdfs:label xml:lang="en">aggregate state value</rdfs:label>
+        <skos:definition xml:lang="en">The aggregate state type is a nature constant that concretizes the aggregatge state quality.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0020131 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020131">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:label xml:lang="en">intensive quality</rdfs:label>
+        <skos:definition xml:lang="en">An intensive quality is a qualty that inheres in only portion of matter and thus is independent of the bearers (system-) size.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0060008 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0060008">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000003"/>
+        <rdfs:label xml:lang="en">recipe</rdfs:label>
+        <skos:definition>A plan specification that outlines the ingredients, proportions, and procedural steps required to prepare a specific product, typically in cooking, manufacturing, or chemical processes.</skos:definition>
     </owl:Class>
     
 
@@ -681,6 +2719,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0020117">
         <rdfs:label xml:lang="en">aggregate state solid</rdfs:label>
+        <skos:definition xml:lang="en">A state where the bonds between entites trasmit shear forces.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -689,6 +2728,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0020118">
         <rdfs:label xml:lang="en">aggregate state liquid</rdfs:label>
+        <skos:definition xml:lang="en">A state where the bonds of the entites transmit no shear force.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -697,6 +2737,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0020119">
         <rdfs:label xml:lang="en">aggregate state gasous</rdfs:label>
+        <skos:definition xml:lang="en">A state where the entities have no bonding.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -705,6 +2746,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0020120">
         <rdfs:label xml:lang="en">aggregate state plasma</rdfs:label>
+        <skos:definition xml:lang="en">An aggregate state where the entites are atom nuclei and have no bonds.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -713,6 +2755,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0020121">
         <rdfs:label xml:lang="en">aggregate state atom gas</rdfs:label>
+        <skos:definition xml:lang="en">A gaseous state where the gas entities are atoms.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -721,6 +2764,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0020122">
         <rdfs:label xml:lang="en">aggregate state supercritical fluid</rdfs:label>
+        <skos:definition xml:lang="en">A state with strong bindings between entites that do not transmit shear force.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -729,6 +2773,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0020123">
         <rdfs:label xml:lang="en">aggregate state mesomorphic</rdfs:label>
+        <skos:definition xml:lang="en">A state where some bonds transmit shear stresses and some do not.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -737,6 +2782,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0020124">
         <rdfs:label xml:lang="en">aggregate state suprafluid</rdfs:label>
+        <skos:definition xml:lang="en">A state with frictionless binding that transmits no shear force between entites.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -745,6 +2791,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0020125">
         <rdfs:label xml:lang="en">aggregate state suprasolid</rdfs:label>
+        <skos:definition xml:lang="en">A state that exhibits suprafluid and solid properties.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -757,6 +2804,31 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000006"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000029"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000140"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000008"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000011"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000035"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
