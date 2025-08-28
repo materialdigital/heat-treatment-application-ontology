@@ -17,8 +17,6 @@ Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en)
 
 Declaration(Class(<https://w3id.org/pmd/ao/HTO_0000000>))
-Declaration(AnnotationProperty(dcterms:contributor))
-Declaration(AnnotationProperty(dcterms:creator))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
