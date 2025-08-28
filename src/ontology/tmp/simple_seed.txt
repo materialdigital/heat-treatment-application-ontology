@@ -1,8 +1,13 @@
 cls
+http://purl.obolibrary.org/obo/BFO_0000051
+http://purl.obolibrary.org/obo/BFO_0000055
+http://purl.obolibrary.org/obo/IAO_0000039
+http://purl.obolibrary.org/obo/OBI_0001938
 http://purl.org/dc/terms/description
 http://purl.org/dc/terms/license
 http://purl.org/dc/terms/title
-https://w3id.org/pmd/ao/HTO_0000000
-term
+http://www.w3.org/2004/02/skos/core#definition
+http://www.w3.org/2004/02/skos/core#example
+http://www.w3.org/2004/02/skos/core#prefLabel
 http://www.geneontology.org/formats/oboInOwl#SubsetProperty
 http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty
