@@ -1,2 +1,0 @@
-term
-https://w3id.org/pmd/ao/HTO_0000000

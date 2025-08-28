@@ -13,7 +13,7 @@
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <dcterms:description>None</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
-        <dcterms:title>My Application Ontology</dcterms:title>
+        <dcterms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</dcterms:title>
         <owl:versionInfo>2025-08-28</owl:versionInfo>
     </owl:Ontology>
     
@@ -51,25 +51,6 @@
     <!-- http://purl.org/dc/terms/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/pmd/ao/HTO_0000000 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/HTO_0000000">
-        <rdfs:label xml:lang="en">root node</rdfs:label>
-    </owl:Class>
 </rdf:RDF>
 
 
