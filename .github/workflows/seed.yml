@@ -68,22 +68,30 @@ jobs:
           
           echo "Original seed-template.yaml content:"
           cat "$CONFIG_FILE"
-          
+
           # Replace id value
           sed -i "s/^id:.*/id: ${{ github.event.inputs.ontology_id }}/" "$CONFIG_FILE"
-          
+
+          # Replace uribase value
+          sed -i "s|^uribase:.*|uribase: https://w3id.org/pmd/ao|" "$CONFIG_FILE"
+
           # Replace uribase_suffix value
           sed -i "s/^uribase_suffix:.*/uribase_suffix: ${{ github.event.inputs.uribase_suffix }}/" "$CONFIG_FILE"
-          
-          # Replace uribase value
-          sed -i "s/^uribase_suffix:.*/uribase_suffix: https://w3id.org/pmd/ao/${{ github.event.inputs.uribase_suffix }}/" "$CONFIG_FILE"
-          
+
           # Replace github_org value
           sed -i "s/^github_org:.*/github_org: $GITHUB_ORG/" "$CONFIG_FILE"
-          
+
           # Replace repo value
           sed -i "s/^repo:.*/repo: $GITHUB_REPO/" "$CONFIG_FILE"
-          
+
+          # Set namespaces block automatically
+          NS="https://w3id.org/pmd/ao/${{ github.event.inputs.uribase_suffix }}/"
+          if grep -q "^namespaces:" "$CONFIG_FILE"; then
+            sed -i "s|^namespaces:.*|namespaces:\n  - $NS|" "$CONFIG_FILE"
+          else
+            echo -e "\nnamespaces:\n  - $NS" >> "$CONFIG_FILE"
+          fi
+
           echo "Updated seed-template.yaml content:"
           cat "$CONFIG_FILE"
 
@@ -142,3 +150,4 @@ jobs:
             - **ODK Tag**: `${{ github.event.inputs.odk_tag || 'latest' }}`
             
             This PR contains the generated ontology files from ODK seed.
+
