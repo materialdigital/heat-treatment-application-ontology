@@ -9,9 +9,15 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<https://w3id.org/pmd/ao/hto.owl>
+<<<<<<< HEAD
 Annotation(dcterms:contributor <https://orcid.org/0000-0003-1649-6832>)
 Annotation(dcterms:creator <https://orcid.org/0000-0002-9014-2920>)
 Annotation(dcterms:description "A platform material digital application ontology for heat treatments")
+=======
+Annotation(dcterms:contributer <https://orcid.org/0000-0003-1649-6832>)
+Annotation(dcterms:creator <https://orcid.org/0000-0002-9014-2920>)
+Annotation(dcterms:description "None")
+>>>>>>> origin/main
 Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en)
 
@@ -122,7 +128,11 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000055>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000039>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/OBI_0001938>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0001937>))
+<<<<<<< HEAD
 Declaration(AnnotationProperty(dcterms:contributor))
+=======
+Declaration(AnnotationProperty(dcterms:contributer))
+>>>>>>> origin/main
 Declaration(AnnotationProperty(dcterms:creator))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
@@ -808,7 +818,11 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation> <https://
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> "todo")
 SubClassOf(<https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
 
+<<<<<<< HEAD
 # Class: <https://w3id.org/pmd/co/PMD_0000602> (<https://w3id.org/pmd/co/PMD_0000602>)
+=======
+# Class: <https://w3id.org/pmd/co/PMD_0000602> (device)
+>>>>>>> origin/main
 
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000602> <http://purl.obolibrary.org/obo/BFO_0000030>)
 
