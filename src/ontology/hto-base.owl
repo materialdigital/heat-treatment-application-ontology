@@ -9,16 +9,6 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/pmd/ao/hto/hto-base.owl">
-<<<<<<< HEAD
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/ao/hto/releases/2025-08-28/hto-base.owl"/>
-        <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
-        <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
-        <dcterms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
-        <dcterms:description>A platform material digital application ontology for heat treatments</dcterms:description>
-        <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
-        <dcterms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</dcterms:title>
-        <owl:versionInfo>2025-08-28</owl:versionInfo>
-=======
         <owl:versionIRI rdf:resource="https://w3id.org/pmd/ao/hto/releases/2025-08-29/hto-base.owl"/>
         <dce:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <dcterms:contributer rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
@@ -27,7 +17,6 @@
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <dcterms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</dcterms:title>
         <owl:versionInfo>2025-08-29</owl:versionInfo>
->>>>>>> origin/main
     </owl:Ontology>
     
 
@@ -49,15 +38,9 @@
     
 
 
-<<<<<<< HEAD
-    <!-- http://purl.org/dc/terms/contributor -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
-=======
     <!-- http://purl.org/dc/terms/contributer -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributer"/>
->>>>>>> origin/main
     
 
 

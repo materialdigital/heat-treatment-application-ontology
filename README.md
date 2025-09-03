@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-![Build Status](https://github.com/materialdigital/app-ontology-template/actions/workflows/qc.yml/badge.svg)
-=======
 ![Build Status](https://github.com/materialdigital/heat-treatment-application-ontology/actions/workflows/qc.yml/badge.svg)
->>>>>>> origin/main
 # My Application Ontology
 
 Description: None
@@ -26,16 +22,8 @@ Editors of this ontology should use the edit version, [src/ontology/hto-edit.owl
 
 ## Contact
 
-<<<<<<< HEAD
-Please use this GitHub repository's [Issue tracker](https://github.com/materialdigital/app-ontology-template/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
-
-## Acknowledgements
-
-This ontology repository was created using the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit).
-=======
 Please use this GitHub repository's [Issue tracker](https://github.com/materialdigital/heat-treatment-application-ontology/issues) to request new terms/classes or report errors or specific concerns related to the ontology.
 
 ## Acknowledgements
 
 This ontology repository was created using the [Ontology Development Kit (ODK)](https://github.com/INCATools/ontology-development-kit).
->>>>>>> origin/main

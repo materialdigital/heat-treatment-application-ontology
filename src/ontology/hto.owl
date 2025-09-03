@@ -1,10 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/pmd/ao/hto.owl#"
      xml:base="https://w3id.org/pmd/ao/hto.owl"
-<<<<<<< HEAD
-=======
      xmlns:co="https://w3id.org/pmd/co/"
->>>>>>> origin/main
      xmlns:dce="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -13,17 +10,6 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-<<<<<<< HEAD
-     xmlns:dcterms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://w3id.org/pmd/ao/hto.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/ao/hto/releases/2025-08-28/hto.owl"/>
-        <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
-        <dcterms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
-        <dcterms:description>A platform material digital application ontology for heat treatments</dcterms:description>
-        <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
-        <dcterms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</dcterms:title>
-        <owl:versionInfo>2025-08-28</owl:versionInfo>
-=======
      xmlns:chebi="http://purl.obolibrary.org/obo/chebi#3"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
@@ -36,7 +22,6 @@
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <dcterms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</dcterms:title>
         <owl:versionInfo>2025-08-29</owl:versionInfo>
->>>>>>> origin/main
     </owl:Ontology>
     
 
@@ -52,8 +37,6 @@
     
 
 
-<<<<<<< HEAD
-=======
     <!-- http://protege.stanford.edu/plugins/owl/protege#defaultLanguage -->
 
     <owl:AnnotationProperty rdf:about="http://protege.stanford.edu/plugins/owl/protege#defaultLanguage"/>
@@ -94,15 +77,12 @@
     
 
 
->>>>>>> origin/main
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
@@ -213,15 +193,12 @@
     
 
 
->>>>>>> origin/main
     <!-- http://purl.org/dc/elements/1.1/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- http://purl.org/dc/elements/1.1/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
@@ -240,22 +217,18 @@
     
 
 
->>>>>>> origin/main
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- http://purl.org/dc/terms/created -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
     
 
 
->>>>>>> origin/main
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
@@ -278,15 +251,12 @@
     
 
 
-<<<<<<< HEAD
-=======
     <!-- http://purl.org/dc/terms/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
     
 
 
->>>>>>> origin/main
     <!-- http://purl.org/dc/terms/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
@@ -295,8 +265,6 @@
     
 
 
-<<<<<<< HEAD
-=======
     <!-- http://www.geneontology.org/formats/oboInOwl#SubsetProperty -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
@@ -333,7 +301,6 @@
     
 
 
->>>>>>> origin/main
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
@@ -352,8 +319,6 @@
     
 
 
-<<<<<<< HEAD
-=======
     <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
@@ -371,7 +336,6 @@
     
 
 
->>>>>>> origin/main
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -395,13 +359,9 @@
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">has realization</rdfs:label>
-=======
         <dce:identifier>206-BFO</dce:identifier>
         <rdfs:label xml:lang="en">has realization</rdfs:label>
         <skos:altLabel xml:lang="en">realized in</skos:altLabel>
->>>>>>> origin/main
         <skos:definition xml:lang="en">b has realization c =Def c realizes b</skos:definition>
         <skos:example xml:lang="en">As for realizes</skos:example>
     </owl:ObjectProperty>
@@ -413,17 +373,11 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000055">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">realizes</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d &amp; for all t, if b has participant d then c exists &amp; the type instantiated by b is correlated with the type instantiated by c</skos:definition>
-        <skos:example xml:lang="en">A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart</skos:example>
-=======
         <dce:identifier>059-BFO</dce:identifier>
         <rdfs:label xml:lang="en">realizes</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d &amp; for all t, if b has participant d then c exists &amp; the type instantiated by b is correlated with the type instantiated by c</skos:definition>
         <skos:example xml:lang="en">A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart</skos:example>
         <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
->>>>>>> origin/main
     </owl:ObjectProperty>
     
 
@@ -449,15 +403,10 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">participates in</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) participates in holds between some b that is either a specifically dependent continuant or generically dependent continuant or independent continuant that is not a spatial region &amp; some process p such that b participates in p some way</skos:definition>
-=======
         <dce:identifier>250-BFO</dce:identifier>
         <rdfs:label xml:lang="en">participates in</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) participates in holds between some b that is either a specifically dependent continuant or generically dependent continuant or independent continuant that is not a spatial region &amp; some process p such that b participates in p some way</skos:definition>
         <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
->>>>>>> origin/main
     </owl:ObjectProperty>
     
 
@@ -482,10 +431,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">has participant</rdfs:label>
-        <skos:definition xml:lang="en">p has participant c =Def c participates in p</skos:definition>
-=======
         <dce:identifier>248-BFO</dce:identifier>
         <rdfs:label xml:lang="en">has participant</rdfs:label>
         <skos:definition xml:lang="en">p has participant c =Def c participates in p</skos:definition>
@@ -829,7 +774,6 @@
         <rdfs:label xml:lang="en">located in</rdfs:label>
         <skos:definition xml:lang="en">b located in c =Def b is an independent continuant &amp; c is an independent &amp; neither is a spatial region &amp; there is some time t such that the spatial region which b occupies at t is continuant part of the spatial region which c occupies at t</skos:definition>
         <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
->>>>>>> origin/main
     </owl:ObjectProperty>
     
 
@@ -840,17 +784,11 @@
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">continuant part of</rdfs:label>
-        <skos:definition xml:lang="en">b continuant part of c =Def b and c are continuants &amp; there is some time t such that b and c exist at t &amp; b continuant part of c at t</skos:definition>
-        <skos:example xml:lang="en">Milk teeth continuant part of human; surgically removed tumour continuant part of organism</skos:example>
-=======
         <dce:identifier>221-BFO</dce:identifier>
         <rdfs:label xml:lang="en">continuant part of</rdfs:label>
         <skos:definition xml:lang="en">b continuant part of c =Def b and c are continuants &amp; there is some time t such that b and c exist at t &amp; b continuant part of c at t</skos:definition>
         <skos:example xml:lang="en">Milk teeth continuant part of human; surgically removed tumour continuant part of organism</skos:example>
         <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
->>>>>>> origin/main
     </owl:ObjectProperty>
     
 
@@ -860,10 +798,6 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000178">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">has continuant part</rdfs:label>
-        <skos:definition xml:lang="en">b has continuant part c =Def c continuant part of b</skos:definition>
-=======
         <dce:identifier>271-BFO</dce:identifier>
         <rdfs:label xml:lang="en">has continuant part</rdfs:label>
         <skos:definition xml:lang="en">b has continuant part c =Def c continuant part of b</skos:definition>
@@ -925,7 +859,6 @@
         <rdfs:label xml:lang="en">has history</rdfs:label>
         <skos:definition xml:lang="en">b has history c =Def c history of b</skos:definition>
         <skos:example xml:lang="en">This organism has history this life</skos:example>
->>>>>>> origin/main
     </owl:ObjectProperty>
     
 
@@ -950,13 +883,9 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">specifically depended on by</rdfs:label>
-=======
         <dce:identifier>260-BFO</dce:identifier>
         <rdfs:label xml:lang="en">specifically depended on by</rdfs:label>
         <skos:altLabel xml:lang="en">s-depended on by</skos:altLabel>
->>>>>>> origin/main
         <skos:definition xml:lang="en">b specifically depended on by c =Def c specifically depends on b</skos:definition>
         <skos:example xml:lang="en">Coloured object specifically depended on by colour</skos:example>
     </owl:ObjectProperty>
@@ -982,18 +911,12 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">specifically depends on</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) specifically depends on is a relation between a specifically dependent continuant b and specifically dependent continuant or independent continuant that is not a spatial region c such that b and c share no parts in common &amp; b is of a nature such that at all times t it cannot exist unless c exists &amp; b is not a boundary of c</skos:definition>
-        <skos:example xml:lang="en">A shape specifically depends on the shaped object; hue, saturation and brightness of a colour sample specifically depends on each other</skos:example>
-=======
         <dce:identifier>012-BFO</dce:identifier>
         <rdfs:label xml:lang="en">specifically depends on</rdfs:label>
         <skos:altLabel xml:lang="en">s-depends on</skos:altLabel>
         <skos:definition xml:lang="en">(Elucidation) specifically depends on is a relation between a specifically dependent continuant b and specifically dependent continuant or independent continuant that is not a spatial region c such that b and c share no parts in common &amp; b is of a nature such that at all times t it cannot exist unless c exists &amp; b is not a boundary of c</skos:definition>
         <skos:example xml:lang="en">A shape specifically depends on the shaped object; hue, saturation and brightness of a colour sample specifically depends on each other</skos:example>
         <skos:scopeNote xml:lang="en">The analogue of specifically depends on for occurrents is has participant.</skos:scopeNote>
->>>>>>> origin/main
     </owl:ObjectProperty>
     
 
@@ -1014,10 +937,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-<<<<<<< HEAD
-=======
         <dce:identifier>053-BFO</dce:identifier>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">bearer of</rdfs:label>
         <skos:definition xml:lang="en">b bearer of c =Def c inheres in b</skos:definition>
         <skos:example xml:lang="en">A patch of ink is the bearer of a colour quality; an organism is the bearer of a temperature quality</skos:example>
@@ -1040,10 +960,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
-<<<<<<< HEAD
-=======
         <dce:identifier>051-BFO</dce:identifier>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">inheres in</rdfs:label>
         <skos:definition xml:lang="en">b inheres in c =Def b is a specifically dependent continuant &amp; c is an independent continuant that is not a spatial region &amp; b specifically depends on c</skos:definition>
         <skos:example xml:lang="en">A shape inheres in a shaped object; a mass inheres in a material entity</skos:example>
@@ -1064,10 +981,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-<<<<<<< HEAD
-=======
         <dce:identifier>132-BFO</dce:identifier>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">occupies temporal region</rdfs:label>
         <skos:definition xml:lang="en">p occupies temporal region t =Def p is a process or process boundary &amp; the spatiotemporal region occupied by p temporally projects onto t</skos:definition>
         <skos:example xml:lang="en">The Second World War occupies the temporal region September 1, 1939 - September 2, 1945</skos:example>
@@ -1075,8 +989,6 @@
     
 
 
-<<<<<<< HEAD
-=======
     <!-- http://purl.obolibrary.org/obo/BFO_0000200 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000200">
@@ -1202,7 +1114,6 @@
     
 
 
->>>>>>> origin/main
     <!-- http://purl.obolibrary.org/obo/IAO_0000039 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000039"/>
@@ -1214,9 +1125,6 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136">
         <owl:inverseOf rdf:resource="https://w3id.org/pmd/co/PMD_0000004"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">A (currently) primitive relation that relates an information artifact to an entity.</obo:IAO_0000115>
-=======
         <obo:IAO_0000112 xml:lang="en">This document is about information artifacts and their representations</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">A (currently) primitive relation that relates an information artifact to an entity.</obo:IAO_0000115>
@@ -1227,14 +1135,11 @@ We will try to build it back up by elaborating the various subproperties that ar
 Some currently missing phenomena that should be considered &quot;about&quot; are predications - &quot;The only person who knows the answer is sitting beside me&quot; , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">person:Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">Smith, Ceusters, Ruttenberg, 2000 years of philosophy</obo:IAO_0000119>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">is about</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- http://purl.obolibrary.org/obo/IAO_0000219 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000219">
@@ -1332,7 +1237,6 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     
 
 
->>>>>>> origin/main
     <!-- http://purl.obolibrary.org/obo/OBI_0001938 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0001938"/>
@@ -1348,8 +1252,6 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000009 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0000009">
@@ -1361,7 +1263,6 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0000015 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0000015">
@@ -1382,8 +1283,6 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000020 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0000020">
@@ -1411,7 +1310,6 @@ As a sub-property of &quot;has continuant part&quot;, this property indicates th
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0001028 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0001028">
@@ -1445,8 +1343,6 @@ As a sub-property of &quot;has continuant part&quot;, this property indicates th
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0001031 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0001031">
@@ -1599,7 +1495,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
     
 
 
->>>>>>> origin/main
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1617,8 +1512,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000006 -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/pmd/co/PMD_0000006">
@@ -1629,7 +1522,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
     
 
 
->>>>>>> origin/main
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1644,8 +1536,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
     <!-- http://purl.obolibrary.org/obo/BFO_0000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000001">
-<<<<<<< HEAD
-=======
         <obo:BFO_0000179>entity</obo:BFO_0000179>
         <obo:BFO_0000180>Entity</obo:BFO_0000180>
         <obo:IAO_0000112 xml:lang="en">Julius Caesar</obo:IAO_0000112>
@@ -1657,13 +1547,10 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <obo:IAO_0000600 xml:lang="en">An entity is anything that exists or has existed or will exist. (axiom label in BFO2 Reference: [001-001])</obo:IAO_0000600>
         <dce:identifier>001-BFO</dce:identifier>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">entity</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) An entity is anything that exists or has existed or will exist</skos:definition>
         <skos:example xml:lang="en">Julius Caesar; the Second World War; your body mass index; Verdi&apos;s Requiem</skos:example>
     </owl:Class>
-<<<<<<< HEAD
-=======
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
@@ -1678,7 +1565,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <owl:annotatedTarget xml:lang="en">An entity is anything that exists or has existed or will exist. (axiom label in BFO2 Reference: [001-001])</owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/001-001"/>
     </owl:Axiom>
->>>>>>> origin/main
     
 
 
@@ -1693,9 +1579,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts.</obo:IAO_0000115>
-=======
         <obo:BFO_0000179>continuant</obo:BFO_0000179>
         <obo:BFO_0000180>Continuant</obo:BFO_0000180>
         <obo:IAO_0000115 xml:lang="en">An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts.</obo:IAO_0000115>
@@ -1711,13 +1594,10 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <obo:IAO_0000602>(forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002] </obo:IAO_0000602>
         <dce:identifier>008-BFO</dce:identifier>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">continuant</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity</skos:definition>
         <skos:example xml:lang="en">A human being; a tennis ball; a cave; a region of space; someone&apos;s temperature</skos:example>
     </owl:Class>
-<<<<<<< HEAD
-=======
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
@@ -1772,7 +1652,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <owl:annotatedTarget>(forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/011-002"/>
     </owl:Axiom>
->>>>>>> origin/main
     
 
 
@@ -1780,10 +1659,7 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
-<<<<<<< HEAD
-=======
         <dce:identifier>077-BFO</dce:identifier>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">occurrent</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) An occurrent is an entity that unfolds itself in time or it is the start or end of such an entity or it is a temporal or spatiotemporal region</skos:definition>
         <skos:example xml:lang="en">As for process, history, process boundary, spatiotemporal region, zero-dimensional temporal region, one-dimensional temporal region, temporal interval, temporal instant.</skos:example>
@@ -1803,8 +1679,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-<<<<<<< HEAD
-=======
         <obo:BFO_0000179>ic</obo:BFO_0000179>
         <obo:BFO_0000180>IndependentContinuant</obo:BFO_0000180>
         <obo:IAO_0000112 xml:lang="en">a chair</obo:IAO_0000112>
@@ -1826,13 +1700,10 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <dce:identifier>017-BFO</dce:identifier>
         <rdfs:comment xml:lang="en">A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">independent continuant</rdfs:label>
         <skos:definition xml:lang="en">b is an independent continuant =Def b is a continuant &amp; there is no c such that b specifically depends on c or b generically depends on c</skos:definition>
         <skos:example xml:lang="en">An atom; a molecule; an organism; a heart; a chair; the bottom right portion of a human torso; a leg; the interior of your mouth; a spatial region; an orchestra</skos:example>
     </owl:Class>
-<<<<<<< HEAD
-=======
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -1869,7 +1740,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <owl:annotatedTarget>(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/017-002"/>
     </owl:Axiom>
->>>>>>> origin/main
     
 
 
@@ -1883,10 +1753,7 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
         <dce:identifier>035-BFO</dce:identifier>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">spatial region</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A spatial region is a continuant entity that is a continuant part of the spatial projection of a portion of spacetime at a given time</skos:definition>
         <skos:example xml:lang="en">As for zero-dimensional spatial region, one-dimensional spatial region, two-dimensional spatial region, three-dimensional spatial region</skos:example>
@@ -1898,8 +1765,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-<<<<<<< HEAD
-=======
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000132"/>
@@ -1913,7 +1778,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dce:identifier>100-BFO</dce:identifier>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">temporal region</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A temporal region is an occurrent over which processes can unfold</skos:definition>
         <skos:example xml:lang="en">As for zero-dimensional temporal region and one-dimensional temporal region</skos:example>
@@ -1921,8 +1785,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- http://purl.obolibrary.org/obo/BFO_0000009 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000009">
@@ -1949,16 +1811,10 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
     
 
 
->>>>>>> origin/main
     <!-- http://purl.obolibrary.org/obo/BFO_0000011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">spatiotemporal region</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A spatiotemporal region is an occurrent that is an occurrent part of spacetime</skos:definition>
-        <skos:example xml:lang="en">The spatiotemporal region occupied by the development of a cancer tumour; the spatiotemporal region occupied by an orbiting satellite</skos:example>
-=======
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000132"/>
@@ -1976,7 +1832,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <skos:definition xml:lang="en">(Elucidation) A spatiotemporal region is an occurrent that is an occurrent part of spacetime</skos:definition>
         <skos:example xml:lang="en">The spatiotemporal region occupied by the development of a cancer tumour; the spatiotemporal region occupied by an orbiting satellite</skos:example>
         <skos:scopeNote xml:lang="en">&apos;Spacetime&apos; here refers to the maximal instance of the universal spatiotemporal region.</skos:scopeNote>
->>>>>>> origin/main
     </owl:Class>
     
 
@@ -1985,9 +1840,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">process</rdfs:label>
-=======
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
@@ -2016,7 +1868,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <dce:identifier>083-BFO</dce:identifier>
         <rdfs:label xml:lang="en">process</rdfs:label>
         <skos:altLabel xml:lang="en">event</skos:altLabel>
->>>>>>> origin/main
         <skos:definition xml:lang="en">(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant</skos:definition>
         <skos:example xml:lang="en">An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer</skos:example>
     </owl:Class>
@@ -2028,12 +1879,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">disposition</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A disposition b is a realizable entity such that if b ceases to exist then its bearer is physically changed &amp; b&apos;s realization occurs when and because this bearer is in some special physical circumstances &amp; this realization occurs in virtue of the bearer&apos;s physical make-up</skos:definition>
-        <skos:example xml:lang="en">An atom of element X has the disposition to decay to an atom of element Y; the cell wall is disposed to transport cellular material through endocytosis and exocytosis; certain people have a predisposition to colon cancer; children are innately disposed to categorize objects in certain ways</skos:example>
-    </owl:Class>
-=======
         <obo:BFO_0000179>disposition</obo:BFO_0000179>
         <obo:BFO_0000180>Disposition</obo:BFO_0000180>
         <obo:IAO_0000112 xml:lang="en">an atom of element X has the disposition to decay to an atom of element Y</obo:IAO_0000112>
@@ -2076,7 +1921,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <owl:annotatedTarget>(forall (x) (if (Disposition x) (and (RealizableEntity x) (exists (y) (and (MaterialEntity y) (bearerOfAt x y t)))))) // axiom label in BFO2 CLIF: [062-002] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/062-002"/>
     </owl:Axiom>
->>>>>>> origin/main
     
 
 
@@ -2085,9 +1929,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances.</obo:IAO_0000115>
-=======
         <obo:BFO_0000179>realizable</obo:BFO_0000179>
         <obo:BFO_0000180>RealizableEntity</obo:BFO_0000180>
         <obo:IAO_0000112 xml:lang="en">the disposition of this piece of metal to conduct electricity.</obo:IAO_0000112>
@@ -2102,13 +1943,10 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <obo:IAO_0000602>(forall (x) (if (RealizableEntity x) (and (SpecificallyDependentContinuant x) (exists (y) (and (IndependentContinuant y) (not (SpatialRegion y)) (inheresIn x y)))))) // axiom label in BFO2 CLIF: [058-002] </obo:IAO_0000602>
         <dce:identifier>058-BFO</dce:identifier>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">realizable entity</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A realizable entity is a specifically dependent continuant that inheres in some independent continuant which is not a spatial region &amp; which is of a type some instances of which are realized in processes of a correlated type</skos:definition>
         <skos:example xml:lang="en">The role of being a doctor; the role of this boundary to delineate where Utah and Colorado meet; the function of your reproductive organs; the disposition of your blood to coagulate; the disposition of this piece of metal to conduct electricity</skos:example>
     </owl:Class>
-<<<<<<< HEAD
-=======
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000600"/>
@@ -2151,7 +1989,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <skos:definition xml:lang="en">(Elucidation) A zero-dimensional spatial region is one or a collection of more than one spatially disjoint points in space</skos:definition>
         <skos:example xml:lang="en">The spatial region occupied at some time instant by the North Pole</skos:example>
     </owl:Class>
->>>>>>> origin/main
     
 
 
@@ -2159,8 +1996,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-<<<<<<< HEAD
-=======
         <obo:BFO_0000179>quality</obo:BFO_0000179>
         <obo:BFO_0000180>Quality</obo:BFO_0000180>
         <obo:IAO_0000112 xml:lang="en">the ambient temperature of this portion of air</obo:IAO_0000112>
@@ -2175,13 +2010,10 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <obo:IAO_0000602>(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] </obo:IAO_0000602>
         <dce:identifier>055-BFO</dce:identifier>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">quality</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized</skos:definition>
         <skos:example xml:lang="en">The colour of a tomato; the ambient temperature of this portion of air; the length of the circumference of your waist; the shape of your nose; the shape of your nostril; the mass of this piece of gold</skos:example>
     </owl:Class>
-<<<<<<< HEAD
-=======
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000600"/>
@@ -2206,7 +2038,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <owl:annotatedTarget>(forall (x) (if (exists (t) (and (existsAt x t) (Quality x))) (forall (t_1) (if (existsAt x t_1) (Quality x))))) // axiom label in BFO2 CLIF: [105-001] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/105-001"/>
     </owl:Axiom>
->>>>>>> origin/main
     
 
 
@@ -2215,8 +2046,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-<<<<<<< HEAD
-=======
         <obo:BFO_0000179>sdc</obo:BFO_0000179>
         <obo:BFO_0000180>SpecificallyDependentContinuant</obo:BFO_0000180>
         <obo:IAO_0000112 xml:lang="en">Reciprocal specifically dependent continuants: the function of this key to open this lock and the mutually dependent disposition of this lock: to be opened by this key</obo:IAO_0000112>
@@ -2239,14 +2068,11 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <dce:identifier>050-BFO</dce:identifier>
         <rdfs:comment xml:lang="en">A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
         <skos:definition xml:lang="en">b is a specifically dependent continuant =Def b is a continuant &amp; there is some independent continuant c which is not a spatial region &amp; which is such that b specifically depends on c</skos:definition>
         <skos:example xml:lang="en">(with multiple bearers) John&apos;s love for Mary; the ownership relation between John and this statue; the relation of authority between John and his subordinates</skos:example>
         <skos:example xml:lang="en">(with one bearer) The mass of this tomato; the pink colour of a medium rare piece of grilled filet mignon at its centre; the smell of this portion of mozzarella; the disposition of this fish to decay; the role of being a doctor; the function of this heart to pump blood; the shape of this hole</skos:example>
     </owl:Class>
-<<<<<<< HEAD
-=======
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -2278,7 +2104,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <owl:annotatedTarget>(iff (SpecificallyDependentContinuant a) (and (Continuant a) (forall (t) (if (existsAt a t) (exists (b) (and (IndependentContinuant b) (not (SpatialRegion b)) (specificallyDependsOnAt a b t))))))) // axiom label in BFO2 CLIF: [050-003] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/050-003"/>
     </owl:Axiom>
->>>>>>> origin/main
     
 
 
@@ -2286,13 +2111,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">A realizable entity  the manifestation of which brings about some result or end that is not essential to a continuant  in virtue of the kind of thing that it is but that can be served or participated in by that kind of continuant  in some kinds of natural, social or institutional contexts.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">role</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A role b is a realizable entity such that b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be &amp; b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed</skos:definition>
-        <skos:example xml:lang="en">The priest role; the student role; the role of subject in a clinical trial; the role of a stone in marking a property boundary; the role of a boundary to demarcate two neighbouring administrative territories; the role of a building in serving as a military target</skos:example>
-    </owl:Class>
-=======
         <obo:BFO_0000179>role</obo:BFO_0000179>
         <obo:BFO_0000180>Role</obo:BFO_0000180>
         <obo:IAO_0000112 xml:lang="en">John’s role of husband to Mary is dependent on Mary’s role of wife to John, and both are dependent on the object aggregate comprising John and Mary as member parts joined together through the relational quality of being married.</obo:IAO_0000112>
@@ -2394,7 +2212,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <skos:definition xml:lang="en">(Elucidation) A three-dimensional spatial region is a whole consisting of a spatial volume together with zero or more spatial volumes which may have spatial regions of lower dimension as parts</skos:definition>
         <skos:example xml:lang="en">A cube-shaped region of space; a sphere-shaped region of space; the region of space occupied by all and only the planets in the solar system at some point in time</skos:example>
     </owl:Class>
->>>>>>> origin/main
     
 
 
@@ -2428,8 +2245,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000210"/>
@@ -2437,7 +2252,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dce:identifier>034-BFO</dce:identifier>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">site</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A site is a three-dimensional immaterial entity whose boundaries either (partially or wholly) coincide with the boundaries of one or more material entities or have locations determined in relation to some material entity</skos:definition>
         <skos:example xml:lang="en">A hole in a portion of cheese; a rabbit hole; the Grand Canyon; the Piazza San Marco; the kangaroo-joey-containing hole of a kangaroo pouch; your left nostril (a fiat part - the opening - of your left nasal cavity); the lumen of your gut; the hold of a ship; the interior of the trunk of your car; hole in an engineered floor joist</skos:example>
@@ -2449,17 +2263,11 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000030">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">object</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) An object is a material entity which manifests causal unity &amp; is of a type instances of which are maximal relative to the sort of causal unity manifested</skos:definition>
-        <skos:example xml:lang="en">An organism; a fish tank; a planet; a laptop; a valve; a block of marble; an ice cube</skos:example>
-=======
         <dce:identifier>024-BFO</dce:identifier>
         <rdfs:label xml:lang="en">object</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) An object is a material entity which manifests causal unity &amp; is of a type instances of which are maximal relative to the sort of causal unity manifested</skos:definition>
         <skos:example xml:lang="en">An organism; a fish tank; a planet; a laptop; a valve; a block of marble; an ice cube</skos:example>
         <skos:scopeNote xml:lang="en">A description of three primary sorts of causal unity is provided in Basic Formal Ontology 2.0. Specification and User Guide</skos:scopeNote>
->>>>>>> origin/main
     </owl:Class>
     
 
@@ -2468,12 +2276,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">generically dependent continuant</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A generically dependent continuant is an entity that exists in virtue of the fact that there is at least one of what may be multiple copies which is the content or the pattern that multiple copies would share</skos:definition>
-        <skos:example xml:lang="en">The pdf file on your laptop; the pdf file that is a copy thereof on my laptop; the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule; the content that is shared by a string of dots and dashes written on a page and the transmitted Morse code signal; the content of a sentence; an engineering blueprint</skos:example>
-    </owl:Class>
-=======
         <obo:BFO_0000179>gdc</obo:BFO_0000179>
         <obo:BFO_0000180>GenericallyDependentContinuant</obo:BFO_0000180>
         <obo:IAO_0000112 xml:lang="en">The entries in your database are patterns instantiated as quality instances in your hard drive. The database itself is an aggregate of such patterns. When you create the database you create a particular instance of the generically dependent continuant type database. Each entry in the database is an instance of the generically dependent continuant type IAO: information content entity.</obo:IAO_0000112>
@@ -2501,7 +2303,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <owl:annotatedTarget>(iff (GenericallyDependentContinuant a) (and (Continuant a) (exists (b t) (genericallyDependsOnAt a b t)))) // axiom label in BFO2 CLIF: [074-001] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/074-001"/>
     </owl:Axiom>
->>>>>>> origin/main
     
 
 
@@ -2509,8 +2310,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000034">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
-<<<<<<< HEAD
-=======
         <obo:BFO_0000179>function</obo:BFO_0000179>
         <obo:BFO_0000180>Function</obo:BFO_0000180>
         <obo:IAO_0000112 xml:lang="en">the function of a hammer to drive in nails</obo:IAO_0000112>
@@ -2521,13 +2320,10 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <obo:IAO_0000602>(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] </obo:IAO_0000602>
         <dce:identifier>064-BFO</dce:identifier>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">function</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A function is a disposition that exists in virtue of its bearer&apos;s physical make-up &amp; this physical make-up is something the bearer possesses because it came into being either through evolution (in the case of natural biological entities) or through intentional design (in the case of artefacts) in order to realize processes of a certain sort</skos:definition>
         <skos:example xml:lang="en">The function of a hammer to drive in nails; the function of a heart pacemaker to regulate the beating of a heart through electricity</skos:example>
     </owl:Class>
-<<<<<<< HEAD
-=======
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000600"/>
@@ -2540,7 +2336,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <owl:annotatedTarget>(forall (x) (if (Function x) (Disposition x))) // axiom label in BFO2 CLIF: [064-001] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/064-001"/>
     </owl:Axiom>
->>>>>>> origin/main
     
 
 
@@ -2548,8 +2343,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000035">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-<<<<<<< HEAD
-=======
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
@@ -2589,7 +2382,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dce:identifier>084-BFO</dce:identifier>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">process boundary</rdfs:label>
         <skos:definition xml:lang="en">p is a process boundary =Def p is a temporal part of a process &amp; p has no proper temporal parts</skos:definition>
         <skos:example xml:lang="en">The boundary between the 2nd and 3rd year of your life</skos:example>
@@ -2601,8 +2393,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000038">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-<<<<<<< HEAD
-=======
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000121"/>
@@ -2624,7 +2414,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
         <dce:identifier>103-BFO</dce:identifier>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">one-dimensional temporal region</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A one-dimensional temporal region is a temporal region that is a whole that has a temporal interval and zero or more temporal intervals and temporal instants as parts</skos:definition>
         <skos:example xml:lang="en">The temporal region during which a process occurs</skos:example>
@@ -2657,10 +2446,7 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
-<<<<<<< HEAD
-=======
         <dce:identifier>019-BFO</dce:identifier>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">material entity</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part</skos:definition>
         <skos:example xml:lang="en">A human being; the undetached arm of a human being; an aggregate of human beings</skos:example>
@@ -2674,23 +2460,17 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-<<<<<<< HEAD
-=======
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000124"/>
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
->>>>>>> origin/main
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
         <dce:identifier>029-BFO</dce:identifier>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">continuant fiat boundary</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A continuant fiat boundary b is an immaterial entity that is of zero, one or two dimensions &amp; such that there is no time t when b has a spatial region as continuant part &amp; whose location is determined in relation to some material entity</skos:definition>
         <skos:example xml:lang="en">As for fiat point, fiat line, fiat surface</skos:example>
@@ -2702,10 +2482,7 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000141">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
-<<<<<<< HEAD
-=======
         <dce:identifier>028-BFO</dce:identifier>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">immaterial entity</rdfs:label>
         <skos:definition xml:lang="en">b is an immaterial entity =Def b is an independent continuant which is such that there is no time t when it has a material entity as continuant part</skos:definition>
         <skos:example xml:lang="en">As for fiat point, fiat line, fiat surface, site</skos:example>
@@ -2713,8 +2490,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- http://purl.obolibrary.org/obo/BFO_0000142 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000142">
@@ -2818,16 +2593,10 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
     
 
 
->>>>>>> origin/main
     <!-- http://purl.obolibrary.org/obo/BFO_0000202 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000202">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">temporal interval</rdfs:label>
-        <skos:definition xml:lang="en">(Elucidation) A temporal interval is a one-dimensional temporal region that is continuous, thus without gaps or breaks</skos:definition>
-        <skos:example xml:lang="en">The year 2018.</skos:example>
-=======
         <dce:identifier>155-BFO</dce:identifier>
         <rdfs:label xml:lang="en">temporal interval</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) A temporal interval is a one-dimensional temporal region that is continuous, thus without gaps or breaks</skos:definition>
@@ -4540,7 +4309,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <oboInOwl:id>CHEBI:49957</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/chebi#3_STAR"/>
         <rdfs:label>xenon atom</rdfs:label>
->>>>>>> origin/main
     </owl:Class>
     
 
@@ -4549,9 +4317,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">A directive information entity that describes an intended process endpoint. When part of a plan specification the concretization is realized in a planned process in which the bearer tries to effect the world so that the process endpoint is achieved.</obo:IAO_0000115>
-=======
         <obo:IAO_0000111 xml:lang="en">objective specification</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">In the protocol of a ChIP assay the objective specification says to identify protein and DNA interaction.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -4566,7 +4331,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <obo:IAO_0000118 xml:lang="en">goal specification</obo:IAO_0000118>
         <obo:IAO_0000119 xml:lang="en">OBI Plan and Planned Process/Roles Branch</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">OBI_0000217</obo:IAO_0000119>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">objective specification</rdfs:label>
     </owl:Class>
     
@@ -4576,15 +4340,11 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">A directive information entity that describes an action the bearer will take.</obo:IAO_0000115>
-=======
         <obo:IAO_0000112 xml:lang="en">Pour the contents of flask 1 into flask 2</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115 xml:lang="en">A directive information entity that describes an action the bearer will take.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">OBI Plan and Planned Process branch</obo:IAO_0000119>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">action specification</rdfs:label>
     </owl:Class>
     
@@ -4594,9 +4354,6 @@ O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000027">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.</obo:IAO_0000115>
-=======
         <obo:IAO_0000111 xml:lang="en">data item</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">Data items include counts of things, analyte concentrations, and statistical summaries.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
@@ -4616,7 +4373,6 @@ JAR: A data item is an approximately justified approximately true approximate be
         <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Jonathan Rees</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">data</obo:IAO_0000118>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">data item</rdfs:label>
     </owl:Class>
     
@@ -4632,9 +4388,6 @@ JAR: A data item is an approximately justified approximately true approximate be
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">A generically dependent continuant that is about some thing.</obo:IAO_0000115>
-=======
         <obo:IAO_0000111 xml:lang="en">information content entity</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">Examples of information content entites include journal articles, data, graphical layouts, and graphs.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -4647,7 +4400,6 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000119 xml:lang="en">OBI_0000142</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">information content entity</rdfs:label>
     </owl:Class>
     
@@ -4663,9 +4415,6 @@ Previous. An information content entity is a non-realizable information entity t
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">An information content entity whose concretizations indicate to their bearer how to realize them in a process.</obo:IAO_0000115>
-=======
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115 xml:lang="en">An information content entity whose concretizations indicate to their bearer how to realize them in a process.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">2009-03-16: provenance: a term realizable information entity was proposed for OBI (OBI_0000337) , edited by the PlanAndPlannedProcess branch. Original definition was  &quot;is the specification of a process that can be concretized and realized by an actor&quot; with alternative term  &quot;instruction&quot;.It has been subsequently moved to IAO where the objective for which the original term was defined was satisfied with the definitionof this, different, term.</obo:IAO_0000116>
@@ -4674,7 +4423,6 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000116 xml:lang="en">Werner pushed back on calling it realizable information entity as it isn&apos;t realizable. However this name isn&apos;t right either. An example would be a recipe. The realizable entity would be a plan, but the information entity isn&apos;t about the plan, it, once concretized, *is* the plan. -Alan</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Bjoern Peters</obo:IAO_0000117>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">directive information entity</rdfs:label>
     </owl:Class>
     
@@ -4699,9 +4447,6 @@ Previous. An information content entity is a non-realizable information entity t
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000102"/>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value.</obo:IAO_0000115>
-=======
         <obo:IAO_0000111 xml:lang="en">curation status specification</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value.</obo:IAO_0000115>
@@ -4709,7 +4454,6 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000117 xml:lang="en">PERSON:Bill Bug</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">OBI_0000266</obo:IAO_0000119>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">curation status specification</rdfs:label>
     </owl:Class>
     
@@ -4719,13 +4463,9 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000102">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">Data about an ontology part is a data item about a part of an ontology, for example a term</obo:IAO_0000115>
-=======
         <obo:IAO_0000111 xml:lang="en">data about an ontology part</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Data about an ontology part is a data item about a part of an ontology, for example a term</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">data about an ontology part</rdfs:label>
     </owl:Class>
     
@@ -4735,9 +4475,6 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000109">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">A measurement datum is an information content entity that is a recording of the output of a measurement such as produced by a device.</obo:IAO_0000115>
-=======
         <obo:IAO_0000111 xml:lang="en">measurement datum</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">Examples of measurement data are the recoding of the weight of a mouse as {40,mass,&quot;grams&quot;}, the recording of an observation of the behavior of the mouse {,process,&quot;agitated&quot;}, the recording of the expression level of a gene as measured through the process of microarray experiment {3.4,luminosity,}.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
@@ -4746,7 +4483,6 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000117 xml:lang="en">person:Chris Stoeckert</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">OBI_0000305</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">measurement datum</rdfs:label>
     </owl:Class>
     
@@ -4768,16 +4504,12 @@ Previous. An information content entity is a non-realizable information entity t
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000102"/>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">The reason for which a term has been deprecated. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value.</obo:IAO_0000115>
-=======
         <obo:IAO_0000111 xml:lang="en">obsolescence reason specification</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">The reason for which a term has been deprecated. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">The creation of this class has been inspired in part by Werner Ceusters&apos; paper, Applying evolutionary terminology auditing to the Gene Ontology.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">obsolescence reason specification</rdfs:label>
     </owl:Class>
     
@@ -4796,15 +4528,11 @@ Previous. An information content entity is a non-realizable information entity t
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000102"/>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">A denotator type indicates how a term should be interpreted from an ontological perspective.</obo:IAO_0000115>
-=======
         <obo:IAO_0000111 xml:lang="en">denotator type</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">The Basic Formal Ontology ontology makes a distinction between Universals and defined classes, where the formal are &quot;natural kinds&quot; and the latter arbitrary collections of entities.</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">A denotator type indicates how a term should be interpreted from an ontological perspective.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">Barry Smith, Werner Ceusters</obo:IAO_0000119>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">denotator type</rdfs:label>
     </owl:Class>
     
@@ -4822,9 +4550,6 @@ Previous. An information content entity is a non-realizable information entity t
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000379">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">A mechanical function is a function that is realised via mechanical work (through an certain amount of energy transferred by some force).</obo:IAO_0000115>
-=======
         <obo:IAO_0000111 xml:lang="en">mechanical function</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">A mechanical function is a function that is realised via mechanical work (through an certain amount of energy transferred by some force).</obo:IAO_0000115>
         <obo:IAO_0000117>Bill Bug</obo:IAO_0000117>
@@ -4832,14 +4557,11 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000117>Frank Gibson</obo:IAO_0000117>
         <obo:IAO_0000117>Melanie Courtot</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">http://en.wikipedia.org/wiki/Mechanical_work</obo:IAO_0000119>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">mechanical function</rdfs:label>
     </owl:Class>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- http://purl.obolibrary.org/obo/OBI_0001930 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001930">
@@ -4866,7 +4588,6 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
->>>>>>> origin/main
     <!-- http://qudt.org/vocab/unit/DEG_C -->
 
     <owl:Class rdf:about="http://qudt.org/vocab/unit/DEG_C"/>
@@ -5884,16 +5605,11 @@ This is a relevant information because it indicates a process step in between tw
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000000">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000001"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="de">Material</rdfs:label>
-        <rdfs:label xml:lang="en">material</rdfs:label>
-=======
         <rdfs:comment xml:lang="en">Instances of Portions Of Matter whose shape is relevant for their dispostion to participate in a Manufacturing Process may be SemiFinishedProdcuts.</rdfs:comment>
         <rdfs:comment xml:lang="en">The sum of portions of matter of the same type form a portion of matter of that type.</rdfs:comment>
         <rdfs:label xml:lang="de">Material</rdfs:label>
         <rdfs:label xml:lang="en">material</rdfs:label>
         <skos:altLabel xml:lang="en">Portion of Material</skos:altLabel>
->>>>>>> origin/main
         <skos:definition xml:lang="en">A Material is a Portion Of Matter that may participate in some Manifacturing Process and whose shape is not relevant for its participation in the Manifacuring Process.</skos:definition>
     </owl:Class>
     
@@ -5903,22 +5619,17 @@ This is a relevant information because it indicates a process step in between tw
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-<<<<<<< HEAD
-=======
         <rdfs:comment xml:lang="en">It is also representing a distinct physical or conceptual part of a material or substance.
 
 The open energy ontology OEO defines portion of matter as a subclass of object aggregate, which implies countability. Our portion is not (precisely) countable and thus bearer of intensive properties.</rdfs:comment>
         <rdfs:comment xml:lang="en">Lome explanation for portion of matter: &quot;What is a molecule cluster at the cellular level? Contrary to the molecular level, at the cellular level of granularity the boundary of each molecule is outside of the level of granular focus. What forms a discontinuous cluster of countable individual molecules and thus bona fide objects at the molecular level, is a continuous and non-countable molecular substance at coarser levels of
 granularity. At these coarser levels, the individual molecules cannot be differentiated and demarcated anymore and the cluster as a whole possesses only fiat inner boundaries.&quot;</rdfs:comment>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">portion of matter</rdfs:label>
         <skos:definition xml:lang="en">A material entity that is not demarcated by any physical discontinuities. At some finer level of granularity it is an object aggregate, at some coarser level of granularity it is a fiat object part,but at this level of granularity it is neither.</skos:definition>
     </owl:Class>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000002 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000002">
@@ -5930,7 +5641,6 @@ granularity. At these coarser levels, the individual molecules cannot be differe
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0000003 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000003">
@@ -5947,10 +5657,7 @@ granularity. At these coarser levels, the individual molecules cannot be differe
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">plan specification</rdfs:label>
         <skos:definition>A directive information entity with action specifications and objective specifications as parts, and that may be concretized as a realizable entity that, if realized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified.</skos:definition>
     </owl:Class>
@@ -6019,12 +5726,9 @@ granularity. At these coarser levels, the individual molecules cannot be differe
                 <owl:allValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD
-=======
         <rdfs:comment xml:lang="en">Technical materials are complex object aggregates. The properties that are determined for those object aggregates are intrinsically associated with the methodologies employed in the measurement process. This is in contrast to typical &apos;physical&apos; properties, which like e.g. mass that can be determined to high accuracy independently of the measurement process. 
 As a consequence, the behavoiral material properties in the ontology are differeciated according to their measurement method, e.g. Brinell hardness and Vickers hardness are different types of indentation hardness rather than different measures/quantification (GDC) of the materials property &apos;indentation hardness&apos;.
  The &apos;unit idenifieres&apos; of such properties (e.g. &quot;HV1&quot;, &quot;HV10&quot;, &quot;HBW&quot;) are strictly speaking not units but rather references to the measurement methodology used to determine a numeric value that quantifies the property.</rdfs:comment>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">behavioral material property</rdfs:label>
         <skos:definition xml:lang="en">A property is a material trait in terms of the kind and magnitude of response to a specific imposed stimulus. Generally, definitions of properties are made independent of material shape and size.
 
@@ -6039,10 +5743,7 @@ We only deal with intensive (system-size independent) materrial properties. Exte
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-<<<<<<< HEAD
-=======
         <obo:IAO_0000116>an attribute of a process</obo:IAO_0000116>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">process characteristic</rdfs:label>
         <skos:definition xml:lang="en">A process characteristic is a dependent occurrent that existentially depends on a process.</skos:definition>
     </owl:Class>
@@ -6053,10 +5754,7 @@ We only deal with intensive (system-size independent) materrial properties. Exte
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-<<<<<<< HEAD
-=======
         <rdfs:isDefinedBy>http://purl.obolibrary.org/obo/OBI_0000260</rdfs:isDefinedBy>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">plan</rdfs:label>
         <skos:definition>A plan is a realizable entity that is the inheres in a bearer who is committed to realizing it as a planned process.</skos:definition>
     </owl:Class>
@@ -6067,18 +5765,13 @@ We only deal with intensive (system-size independent) materrial properties. Exte
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000017">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-<<<<<<< HEAD
-=======
         <rdfs:isDefinedBy>http://purl.obolibrary.org/obo/IAO_0020000</rdfs:isDefinedBy>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">identifier</rdfs:label>
         <skos:definition>An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.</skos:definition>
     </owl:Class>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000022 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000022">
@@ -6802,7 +6495,6 @@ TODO: should move to &quot;process characteristic&quot;</skos:definition>
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0000549 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000549">
@@ -6817,10 +6509,6 @@ TODO: should move to &quot;process characteristic&quot;</skos:definition>
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000550">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000833"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="de">Stoffeigenschaft Ändern</rdfs:label>
-        <rdfs:label xml:lang="en">changing properties of material</rdfs:label>
-=======
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000117>PMDco Team</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">Official definition can be found in: DIN 8580:2003-9 Fertigungsverfahren, Page 5, 3.1.6 Stoffeigenschaften ändern - Definition</obo:IAO_0000119>
@@ -6829,7 +6517,6 @@ TODO: should move to &quot;process characteristic&quot;</skos:definition>
         <rdfs:label xml:lang="en">changing properties of material</rdfs:label>
         <skos:altLabel xml:lang="en">Changing Of Material  Properties</skos:altLabel>
         <skos:altLabel xml:lang="en">Property Alteration</skos:altLabel>
->>>>>>> origin/main
         <skos:definition xml:lang="en">A manufacturing process that modifies the characteristics of the material from which a workpiece is made, including by processes at the submicroscopic or atomic scale, such as atomic diffusion, dislocation formation and movement in the atomic lattice or chemical reactions, whereby the resulting shape changes are not characteristic of these processes.</skos:definition>
         <skos:definition xml:lang="de">Ein Herstellungsprozess, der die Merkmale des Materials, aus dem ein Werkstück gefertigt ist, modifiziert, was unter anderem durch Vorgänge im submikroskopischen oder atomaren Bereich erfolgt, wie etwa durch Atomdiffusion, die Versetzungsentstehung und -bewegung im Atomgitter oder durch chemische Reaktionen, wobei die dabei auftretenden Formveränderungen nicht charakteristisch für diese Verfahren sind.</skos:definition>
         <skos:example xml:lang="en">Heat Treatment</skos:example>
@@ -6837,8 +6524,6 @@ TODO: should move to &quot;process characteristic&quot;</skos:definition>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000551 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000551">
@@ -7569,15 +7254,11 @@ Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0000602 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000602">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
-<<<<<<< HEAD
-=======
         <obo:IAO_0000117>PMDco Team</obo:IAO_0000117>
->>>>>>> origin/main
         <rdfs:label xml:lang="de">Gerät</rdfs:label>
         <rdfs:label xml:lang="en">device</rdfs:label>
         <skos:definition xml:lang="en">A physical or virtual entity used to perform a specific function or task, often involving measurement, manipulation, or analysis of materials.</skos:definition>
@@ -7586,8 +7267,6 @@ Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000603 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000603">
@@ -8625,15 +8304,10 @@ Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0000779 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000779">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000550"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="de">Wärmebehandlung</rdfs:label>
-        <rdfs:label xml:lang="en">heat treatment</rdfs:label>
-=======
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000117>PMDco Team</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">Official definition can be found in: DIN EN ISO 4885:2018 Wärmebehandlung Page 21, 3.108 Wärmebehandlung - Definition</obo:IAO_0000119>
@@ -8641,7 +8315,6 @@ Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine
         <rdfs:label xml:lang="de">Wärmebehandlung</rdfs:label>
         <rdfs:label xml:lang="en">heat treatment</rdfs:label>
         <skos:altLabel xml:lang="de">Wärmebehandeln</skos:altLabel>
->>>>>>> origin/main
         <skos:definition xml:lang="en">A Changing Properties of Materials process in which a solid (ferrous) product is fully or partially exposed to specific time-temperature sequences through a series of process steps with the aim of modifying its properties and/or its internal structure.</skos:definition>
         <skos:definition xml:lang="de">Ein Stoffeigenschaft Ändern Prozess, bei dem durch eine Reihe von Verfahrensschritten ein festes (Eisen-)Produkt ganz oder teilweise bestimmten Zeit-Temperatur-Abfolgen ausgesetzt wird, mit dem Ziel, seine Eigenschaften und/oder seine innere Struktur zu modifizieren.</skos:definition>
         <skos:example xml:lang="en">Annealing, Ageing, Hardening</skos:example>
@@ -8649,8 +8322,6 @@ Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000780 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000780">
@@ -8664,15 +8335,11 @@ Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0000781 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000781">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
-<<<<<<< HEAD
-=======
         <obo:IAO_0000117>PMDco Team</obo:IAO_0000117>
->>>>>>> origin/main
         <rdfs:label xml:lang="de">Wärmebehandlungsfunktion</rdfs:label>
         <rdfs:label xml:lang="en">heat treatment function</rdfs:label>
         <skos:definition xml:lang="en">A function performed to alter the properties of materials through controlled heating and cooling processes.</skos:definition>
@@ -8681,8 +8348,6 @@ Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000782 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000782">
@@ -9392,7 +9057,6 @@ Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0000833 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000833">
@@ -9443,8 +9107,6 @@ A manufacturing process is always a transformative process.</skos:definition>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000834 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000834">
@@ -9865,20 +9527,14 @@ TODO: Check general class axiom and defintion altogether !!!</skos:definition>
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0000879 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000879">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-<<<<<<< HEAD
-        <rdfs:label xml:lang="en">organization</rdfs:label>
-        <skos:definition xml:lang="en">An organization is an immaterial entity that has the organisation role and there exists some sort of legal framework that recognises the entity and its continued existence.</skos:definition>
-=======
         <obo:IAO_0000119 rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00030022"/>
         <rdfs:label xml:lang="en">organization</rdfs:label>
         <skos:definition xml:lang="en">An organization is an immaterial entity that has the organisation role and there exists some sort of legal framework that recognises the entity and its continued existence.</skos:definition>
         <co:PMD_0001032>issue: https://github.com/materialdigital/core-ontology/issues/101</co:PMD_0001032>
->>>>>>> origin/main
     </owl:Class>
     
 
@@ -9893,8 +9549,6 @@ TODO: Check general class axiom and defintion altogether !!!</skos:definition>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000881 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000881">
@@ -10110,24 +9764,18 @@ TODO: Check general class axiom and defintion altogether !!!</skos:definition>
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0000896 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000896">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020131"/>
-<<<<<<< HEAD
-=======
         <owl:disjointWith rdf:resource="https://w3id.org/pmd/co/PMD_0000967"/>
         <rdfs:comment xml:lang="en">The pressure is commonly measured in Pascals.</rdfs:comment>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">pressure</rdfs:label>
         <skos:definition xml:lang="en">The pressure is a thermodynamic quality describing the force exerted per unit area on a material.</skos:definition>
     </owl:Class>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000898 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000898">
@@ -10369,7 +10017,6 @@ TODO: Check general class axiom and defintion altogether !!!</skos:definition>
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0000915 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000915">
@@ -10381,8 +10028,6 @@ TODO: Check general class axiom and defintion altogether !!!</skos:definition>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000916 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000916">
@@ -10831,7 +10476,6 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0000950 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000950">
@@ -10842,8 +10486,6 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000951 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000951">
@@ -11841,7 +11483,6 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0020023 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020023">
@@ -11865,8 +11506,6 @@ NOTE: The wording used in EN 10021 was generalized.</obo:IAO_0000116>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0020024 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020024">
@@ -13426,7 +13065,6 @@ In contrast, salt water &apos;consists of&apos; a portion of pure water and a po
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0020098 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020098">
@@ -13472,8 +13110,6 @@ More elaborate crystal descriptions may be found in http://emmo.info/domain-crys
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0020101 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020101">
@@ -13570,7 +13206,6 @@ The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 202
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0020116 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020116">
@@ -13596,8 +13231,6 @@ The molar ratio of carbon dioxide to average atmosphere air is 420 ppm as of 202
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0020126 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020126">
@@ -13632,23 +13265,17 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0020131 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020131">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <rdfs:label xml:lang="en">intensive quality</rdfs:label>
-<<<<<<< HEAD
-=======
         <skos:altLabel xml:lang="en">Point property</skos:altLabel>
->>>>>>> origin/main
         <skos:definition xml:lang="en">An intensive quality is a qualty that inheres in only portion of matter and thus is independent of the bearers (system-) size.</skos:definition>
     </owl:Class>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0020132 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0020132">
@@ -15455,7 +15082,6 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0060008 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0060008">
@@ -15466,8 +15092,6 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0060009 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0060009">
@@ -15478,7 +15102,6 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     
 
 
->>>>>>> origin/main
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -15493,10 +15116,7 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000002 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000002">
-<<<<<<< HEAD
-=======
         <obo:IAO_0000111 xml:lang="en">example to be eventually removed</obo:IAO_0000111>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">example to be eventually removed</rdfs:label>
     </owl:NamedIndividual>
     
@@ -15505,13 +15125,9 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000103 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000103">
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">The term was used in an attempt to structure part of the ontology but in retrospect failed to do a good job</obo:IAO_0000115>
-=======
         <obo:IAO_0000111 xml:lang="en">failed exploratory term</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">The term was used in an attempt to structure part of the ontology but in retrospect failed to do a good job</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">failed exploratory term</rdfs:label>
     </owl:NamedIndividual>
     
@@ -15520,10 +15136,7 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000120 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000120">
-<<<<<<< HEAD
-=======
         <obo:IAO_0000111 xml:lang="en">metadata complete</obo:IAO_0000111>
->>>>>>> origin/main
         <obo:IAO_0000115 xml:lang="en">Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">metadata complete</rdfs:label>
     </owl:NamedIndividual>
@@ -15533,10 +15146,7 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000121 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000121">
-<<<<<<< HEAD
-=======
         <obo:IAO_0000111 xml:lang="en">organizational term</obo:IAO_0000111>
->>>>>>> origin/main
         <obo:IAO_0000115 xml:lang="en">Term created to ease viewing/sort terms for development purpose, and will not be included in a release</obo:IAO_0000115>
         <rdfs:label xml:lang="en">organizational term</rdfs:label>
     </owl:NamedIndividual>
@@ -15546,10 +15156,7 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000122 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000122">
-<<<<<<< HEAD
-=======
         <obo:IAO_0000111 xml:lang="en">ready for release</obo:IAO_0000111>
->>>>>>> origin/main
         <obo:IAO_0000115 xml:lang="en">Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking &quot;ready_for_release&quot; should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed &quot;ready_for_release&quot; will also derived from a chain of ancestor classes that are also &quot;ready_for_release.&quot;</obo:IAO_0000115>
         <rdfs:label xml:lang="en">ready for release</rdfs:label>
     </owl:NamedIndividual>
@@ -15559,10 +15166,7 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000123 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000123">
-<<<<<<< HEAD
-=======
         <obo:IAO_0000111 xml:lang="en">metadata incomplete</obo:IAO_0000111>
->>>>>>> origin/main
         <obo:IAO_0000115 xml:lang="en">Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">metadata incomplete</rdfs:label>
     </owl:NamedIndividual>
@@ -15572,10 +15176,7 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000124 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000124">
-<<<<<<< HEAD
-=======
         <obo:IAO_0000111 xml:lang="en">uncurated</obo:IAO_0000111>
->>>>>>> origin/main
         <obo:IAO_0000115 xml:lang="en">Nothing done yet beyond assigning a unique class ID and proposing a preferred term.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">uncurated</rdfs:label>
     </owl:NamedIndividual>
@@ -15585,10 +15186,7 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000125 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000125">
-<<<<<<< HEAD
-=======
         <obo:IAO_0000111 xml:lang="en">pending final vetting</obo:IAO_0000111>
->>>>>>> origin/main
         <obo:IAO_0000115 xml:lang="en">All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the term editor.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">pending final vetting</rdfs:label>
     </owl:NamedIndividual>
@@ -15598,10 +15196,7 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000226 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000226">
-<<<<<<< HEAD
-=======
         <obo:IAO_0000111 xml:lang="en">placeholder removed</obo:IAO_0000111>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">placeholder removed</rdfs:label>
     </owl:NamedIndividual>
     
@@ -15610,11 +15205,8 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000227 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000227">
-<<<<<<< HEAD
-=======
         <obo:IAO_0000111 xml:lang="en">terms merged</obo:IAO_0000111>
         <obo:IAO_0000116 xml:lang="en">An editor note should explain what were the merged terms and the reason for the merge.</obo:IAO_0000116>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">terms merged</rdfs:label>
     </owl:NamedIndividual>
     
@@ -15623,11 +15215,8 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000228 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000228">
-<<<<<<< HEAD
-=======
         <obo:IAO_0000111 xml:lang="en">term imported</obo:IAO_0000111>
         <obo:IAO_0000116 xml:lang="en">This is to be used when the original term has been replaced by a term imported from an other ontology. An editor note should indicate what is the URI of the new term to use.</obo:IAO_0000116>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">term imported</rdfs:label>
     </owl:NamedIndividual>
     
@@ -15636,11 +15225,8 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000229 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000229">
-<<<<<<< HEAD
-=======
         <obo:IAO_0000111 xml:lang="en">term split</obo:IAO_0000111>
         <obo:IAO_0000116 xml:lang="en">This is to be used when a term has been split in two or more new terms. An editor note should indicate the reason for the split and indicate the URIs of the new terms created.</obo:IAO_0000116>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">term split</rdfs:label>
     </owl:NamedIndividual>
     
@@ -15649,13 +15235,10 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000410 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000410">
-<<<<<<< HEAD
-=======
         <obo:IAO_0000111 xml:lang="en">universal</obo:IAO_0000111>
         <obo:IAO_0000116 xml:lang="en">Hard to give a definition for. Intuitively a &quot;natural kind&quot; rather than a collection of any old things, which a class is able to be, formally. At the meta level, universals are defined as positives, are disjoint with their siblings, have single asserted parents.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">A Formal Theory of Substances, Qualities, and Universals, http://ontology.buffalo.edu/bfo/SQU.pdf</obo:IAO_0000119>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">universal</rdfs:label>
     </owl:NamedIndividual>
     
@@ -15664,14 +15247,10 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000420 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000420">
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">A defined class is a class that is defined by a set of logically necessary and sufficient conditions but is not a universal</obo:IAO_0000115>
-=======
         <obo:IAO_0000111 xml:lang="en">defined class</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">A defined class is a class that is defined by a set of logically necessary and sufficient conditions but is not a universal</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">&quot;definitions&quot;, in some readings, always are given by necessary and sufficient conditions. So one must be careful (and this is difficult sometimes) to distinguish between defined classes and universal.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">defined class</rdfs:label>
     </owl:NamedIndividual>
     
@@ -15680,14 +15259,10 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000421 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000421">
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">A named class expression is a logical expression that is given a name. The name can be used in place of the expression.</obo:IAO_0000115>
-=======
         <obo:IAO_0000111 xml:lang="en">named class expression</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">A named class expression is a logical expression that is given a name. The name can be used in place of the expression.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">named class expressions are used in order to have more concise logical definition but their extensions may not be interesting classes on their own. In languages such as OWL, with no provisions for macros, these show up as actuall classes. Tools may with to not show them as such, and to replace uses of the macros with their expansions</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">named class expression</rdfs:label>
     </owl:NamedIndividual>
     
@@ -15696,14 +15271,10 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000423 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000423">
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">Terms with this status should eventually replaced with a term from another ontology.</obo:IAO_0000115>
-=======
         <obo:IAO_0000111 xml:lang="en">to be replaced with external ontology term</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Terms with this status should eventually replaced with a term from another ontology.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">to be replaced with external ontology term</rdfs:label>
     </owl:NamedIndividual>
     
@@ -15712,14 +15283,10 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- http://purl.obolibrary.org/obo/IAO_0000428 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000428">
-<<<<<<< HEAD
-        <obo:IAO_0000115 xml:lang="en">A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues.</obo:IAO_0000115>
-=======
         <obo:IAO_0000111 xml:lang="en">requires discussion</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
->>>>>>> origin/main
         <rdfs:label xml:lang="en">requires discussion</rdfs:label>
     </owl:NamedIndividual>
     
@@ -15729,27 +15296,21 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OMO_0001000">
         <obo:IAO_0000115 xml:lang="en">The term was added to the ontology on the assumption it was in scope, but it turned out later that it was not.</obo:IAO_0000115>
-<<<<<<< HEAD
-=======
         <obo:IAO_0000116 xml:lang="en">This obsolesence reason should be used conservatively. Typical valid examples are: un-necessary grouping classes in disease ontologies, a phenotype term added on the assumption it was a disease.</obo:IAO_0000116>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <obo:IAO_0000233>https://github.com/information-artifact-ontology/ontology-metadata/issues/77</obo:IAO_0000233>
         <obo:IAO_0000234>https://orcid.org/0000-0001-5208-3432</obo:IAO_0000234>
->>>>>>> origin/main
         <rdfs:label>out of scope</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-<<<<<<< HEAD
-=======
     <!-- https://w3id.org/pmd/co/PMD_0000912 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0000912"/>
     
 
 
->>>>>>> origin/main
     <!-- https://w3id.org/pmd/co/PMD_0020006 -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/pmd/co/PMD_0020006">
@@ -16002,8 +15563,6 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-<<<<<<< HEAD
-=======
     // Annotations
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -16051,14 +15610,11 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
->>>>>>> origin/main
     // General axioms
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-<<<<<<< HEAD
-=======
     <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000773"/>
@@ -16066,7 +15622,6 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
         </owl:unionOf>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000848"/>
     </owl:Class>
->>>>>>> origin/main
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
@@ -16093,8 +15648,6 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
         </owl:members>
     </rdf:Description>
     <rdf:Description>
-<<<<<<< HEAD
-=======
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000009"/>
@@ -16190,7 +15743,6 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
         </owl:members>
     </rdf:Description>
     <rdf:Description>
->>>>>>> origin/main
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020006"/>
