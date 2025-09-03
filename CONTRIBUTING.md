@@ -24,7 +24,11 @@ changes to this document in a pull request.
 
 ### Reporting problems with the ontology
 
+<<<<<<< HEAD
+Please use our [Issue Tracker](https://github.com/materialdigital/app-ontology-template/issues/) for reporting problems with the ontology. 
+=======
 Please use our [Issue Tracker](https://github.com/materialdigital/heat-treatment-application-ontology/issues/) for reporting problems with the ontology. 
+>>>>>>> origin/main
 To learn how to write a good issue [see here](#great-issues).
 
 <a id="requesting-terms"></a>
@@ -48,10 +52,17 @@ community resource, it is often necessary to do at least some of the work of add
 
 #### How to write a new term request
 
+<<<<<<< HEAD
+Request a new term _via_ the GitHub [Issue Tracker](https://github.com/materialdigital/app-ontology-template/issues/).
+
+It is important to remember that it takes a lot of time for curators to process issues submitted to the tracker.
+To make this work easier, please always use issue templates if they are available (https://github.com/materialdigital/app-ontology-template/issues/new/choose).
+=======
 Request a new term _via_ the GitHub [Issue Tracker](https://github.com/materialdigital/heat-treatment-application-ontology/issues/).
 
 It is important to remember that it takes a lot of time for curators to process issues submitted to the tracker.
 To make this work easier, please always use issue templates if they are available (https://github.com/materialdigital/heat-treatment-application-ontology/issues/new/choose).
+>>>>>>> origin/main
 
 For how to write a good term request, please read the [best practices carefully](#great-issues).
 

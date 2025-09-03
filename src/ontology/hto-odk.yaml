@@ -1,8 +1,15 @@
 id: hto
+<<<<<<< HEAD
+title: "Heat Treatment Ontology"
+github_org: materialdigital
+git_main_branch: main
+repo: app-ontology-template
+=======
 title: "My Application Ontology"
 github_org: materialdigital
 git_main_branch: main
 repo: heat-treatment-application-ontology
+>>>>>>> origin/main
 uribase: https://w3id.org/pmd/ao
 uribase_suffix: hto
 
@@ -16,8 +23,16 @@ export_formats:
   - ttl
 remove_owl_nothing: true
 
+<<<<<<< HEAD
+#maybe raw link needed to explizit version
+import_group:
+  products:
+    - id: pmdco
+      mirror_from: https://w3id.org/pmd/co
+=======
 import_group:
   products:
   - id: pmdco
     mirror_from: https://materialdigital.github.io/core-ontology/ontology.owl
     module_type: mirror
+>>>>>>> origin/main

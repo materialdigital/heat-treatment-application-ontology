@@ -9,6 +9,16 @@
 @base <https://w3id.org/pmd/ao/hto/hto-base.ttl> .
 
 <https://w3id.org/pmd/ao/hto/hto-base.ttl> rdf:type owl:Ontology ;
+<<<<<<< HEAD
+                                            owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-08-28/hto-base.ttl> ;
+                                            dce:type <http://purl.obolibrary.org/obo/IAO_8000001> ;
+                                            dcterms:contributor <https://orcid.org/0000-0003-1649-6832> ;
+                                            dcterms:creator <https://orcid.org/0000-0002-9014-2920> ;
+                                            dcterms:description "A platform material digital application ontology for heat treatments" ;
+                                            dcterms:license <https://creativecommons.org/licenses/unspecified> ;
+                                            dcterms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
+                                            owl:versionInfo "2025-08-28" .
+=======
                                             owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-08-29/hto-base.ttl> ;
                                             dce:type <http://purl.obolibrary.org/obo/IAO_8000001> ;
                                             dcterms:contributer <https://orcid.org/0000-0003-1649-6832> ;
@@ -17,6 +27,7 @@
                                             dcterms:license <https://creativecommons.org/licenses/unspecified> ;
                                             dcterms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
                                             owl:versionInfo "2025-08-29" .
+>>>>>>> origin/main
 
 #################################################################
 #    Annotation properties
@@ -26,8 +37,13 @@
 dce:type rdf:type owl:AnnotationProperty .
 
 
+<<<<<<< HEAD
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+=======
 ###  http://purl.org/dc/terms/contributer
 dcterms:contributer rdf:type owl:AnnotationProperty .
+>>>>>>> origin/main
 
 
 ###  http://purl.org/dc/terms/creator

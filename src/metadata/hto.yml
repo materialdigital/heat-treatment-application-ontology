@@ -4,8 +4,13 @@ idspace: HTO
 base_url: /obo/hto
 
 products:
+<<<<<<< HEAD
+- hto.owl: https://raw.githubusercontent.com/materialdigital/app-ontology-template/main/hto.owl
+- hto.obo: https://raw.githubusercontent.com/materialdigital/app-ontology-template/main/hto.obo
+=======
 - hto.owl: https://raw.githubusercontent.com/materialdigital/heat-treatment-application-ontology/main/hto.owl
 - hto.obo: https://raw.githubusercontent.com/materialdigital/heat-treatment-application-ontology/main/hto.obo
+>>>>>>> origin/main
 
 term_browser: ontobee
 example_terms:
@@ -14,15 +19,26 @@ example_terms:
 entries:
 
 - prefix: /releases/
+<<<<<<< HEAD
+  replacement: https://raw.githubusercontent.com/materialdigital/app-ontology-template/v
+
+- prefix: /tracker/
+  replacement: https://github.com/materialdigital/app-ontology-template/issues
+=======
   replacement: https://raw.githubusercontent.com/materialdigital/heat-treatment-application-ontology/v
 
 - prefix: /tracker/
   replacement: https://github.com/materialdigital/heat-treatment-application-ontology/issues
+>>>>>>> origin/main
 
 - prefix: /about/
   replacement: http://www.ontobee.org/ontology/HTO?iri=http://purl.obolibrary.org/obo/
 
 ## generic fall-through, serve direct from github by default
 - prefix: /
+<<<<<<< HEAD
+  replacement: https://raw.githubusercontent.com/materialdigital/app-ontology-template/main/
+=======
   replacement: https://raw.githubusercontent.com/materialdigital/heat-treatment-application-ontology/main/
+>>>>>>> origin/main
 

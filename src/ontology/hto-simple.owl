@@ -1,13 +1,27 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/pmd/ao/hto/hto-simple.owl#"
      xml:base="https://w3id.org/pmd/ao/hto/hto-simple.owl"
+<<<<<<< HEAD
+=======
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+>>>>>>> origin/main
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+<<<<<<< HEAD
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/pmd/ao/hto/hto-simple.owl">
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/ao/hto/releases/2025-08-28/hto-simple.owl"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
+        <terms:description>A platform material digital application ontology for heat treatments</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
+        <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
+        <owl:versionInfo>2025-08-28</owl:versionInfo>
+=======
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/ao/hto/hto-simple.owl">
@@ -18,6 +32,7 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
         <owl:versionInfo>2025-08-29</owl:versionInfo>
+>>>>>>> origin/main
     </owl:Ontology>
     
 
@@ -33,6 +48,11 @@
     
 
 
+<<<<<<< HEAD
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+=======
     <!-- http://purl.org/dc/elements/1.1/identifier -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
@@ -42,6 +62,7 @@
     <!-- http://purl.org/dc/terms/contributer -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributer"/>
+>>>>>>> origin/main
     
 
 
@@ -75,12 +96,15 @@
     
 
 
+<<<<<<< HEAD
+=======
     <!-- http://www.geneontology.org/formats/oboInOwl#SubsetProperty -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     
 
 
+>>>>>>> origin/main
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
@@ -99,12 +123,15 @@
     
 
 
+<<<<<<< HEAD
+=======
     <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
     
 
 
+>>>>>>> origin/main
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -125,11 +152,17 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000055 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000055">
+<<<<<<< HEAD
+        <rdfs:label xml:lang="en">realizes</rdfs:label>
+        <skos:definition xml:lang="en">(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d &amp; for all t, if b has participant d then c exists &amp; the type instantiated by b is correlated with the type instantiated by c</skos:definition>
+        <skos:example xml:lang="en">A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart</skos:example>
+=======
         <dc:identifier>059-BFO</dc:identifier>
         <rdfs:label xml:lang="en">realizes</rdfs:label>
         <skos:definition xml:lang="en">(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d &amp; for all t, if b has participant d then c exists &amp; the type instantiated by b is correlated with the type instantiated by c</skos:definition>
         <skos:example xml:lang="en">A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart</skos:example>
         <skos:scopeNote xml:lang="en">Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: &lt;Link&gt;</skos:scopeNote>
+>>>>>>> origin/main
     </owl:ObjectProperty>
     
 

@@ -1,5 +1,8 @@
 @prefix : <https://w3id.org/pmd/ao/hto.ttl#> .
+<<<<<<< HEAD
+=======
 @prefix co: <https://w3id.org/pmd/co/> .
+>>>>>>> origin/main
 @prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -7,11 +10,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+<<<<<<< HEAD
+@prefix dcterms: <http://purl.org/dc/terms/> .
+=======
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix chebi: <http://purl.obolibrary.org/obo/chebi#3> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+>>>>>>> origin/main
 @base <https://w3id.org/pmd/ao/hto.ttl> .
 
 <https://w3id.org/pmd/ao/hto.ttl> rdf:type owl:Ontology ;
@@ -25,6 +32,8 @@
 #    Annotation properties
 #################################################################
 
+<<<<<<< HEAD
+=======
 ###  http://protege.stanford.edu/plugins/owl/protege#defaultLanguage
 protege:defaultLanguage rdf:type owl:AnnotationProperty .
 
@@ -52,10 +61,13 @@ obo:IAO_0000114 rdf:type owl:AnnotationProperty ;
                            "Hat Kurationsstatus"@de .
 
 
+>>>>>>> origin/main
 ###  http://purl.obolibrary.org/obo/IAO_0000115
 obo:IAO_0000115 rdf:type owl:AnnotationProperty .
 
 
+<<<<<<< HEAD
+=======
 ###  http://purl.obolibrary.org/obo/IAO_0000116
 obo:IAO_0000116 rdf:type owl:AnnotationProperty .
 
@@ -130,10 +142,13 @@ dce:identifier rdf:type owl:AnnotationProperty .
 dce:license rdf:type owl:AnnotationProperty .
 
 
+>>>>>>> origin/main
 ###  http://purl.org/dc/elements/1.1/source
 dce:source rdf:type owl:AnnotationProperty .
 
 
+<<<<<<< HEAD
+=======
 ###  http://purl.org/dc/elements/1.1/title
 dce:title rdf:type owl:AnnotationProperty .
 
@@ -154,6 +169,7 @@ dcterms:created rdf:type owl:AnnotationProperty .
 dcterms:creator rdf:type owl:AnnotationProperty .
 
 
+>>>>>>> origin/main
 ###  http://purl.org/dc/terms/description
 dcterms:description rdf:type owl:AnnotationProperty ;
                     rdfs:label "description" .
@@ -164,15 +180,20 @@ dcterms:license rdf:type owl:AnnotationProperty ;
                 rdfs:label "license" .
 
 
+<<<<<<< HEAD
+=======
 ###  http://purl.org/dc/terms/source
 dcterms:source rdf:type owl:AnnotationProperty .
 
 
+>>>>>>> origin/main
 ###  http://purl.org/dc/terms/title
 dcterms:title rdf:type owl:AnnotationProperty ;
               rdfs:label "title" .
 
 
+<<<<<<< HEAD
+=======
 ###  http://www.geneontology.org/formats/oboInOwl#SubsetProperty
 oboInOwl:SubsetProperty rdf:type owl:AnnotationProperty .
 
@@ -221,10 +242,24 @@ co:PMD_0001032 rdf:type owl:AnnotationProperty ;
                rdfs:subPropertyOf obo:IAO_0000116 .
 
 
+>>>>>>> origin/main
 #################################################################
 #    Object Properties
 #################################################################
 
+<<<<<<< HEAD
+###  http://purl.obolibrary.org/obo/IAO_0000136
+obo:IAO_0000136 rdf:type owl:ObjectProperty ;
+                owl:inverseOf <https://w3id.org/pmd/co/PMD_0000004> ;
+                rdfs:domain obo:IAO_0000030 ;
+                obo:IAO_0000115 "A (currently) primitive relation that relates an information artifact to an entity."@en ;
+                rdfs:label "is about"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000004
+<https://w3id.org/pmd/co/PMD_0000004> rdf:type owl:ObjectProperty ;
+                                      rdfs:label "is subject of"@en .
+=======
 ###  http://purl.obolibrary.org/obo/BFO_0000054
 obo:BFO_0000054 rdf:type owl:ObjectProperty ;
                 owl:inverseOf obo:BFO_0000055 ;
@@ -246,6 +281,7 @@ co:PMD_0000006 rdf:type owl:DatatypeProperty ;
                rdfs:domain obo:IAO_0000030 ;
                rdfs:label "has value"@en ;
                skos:definition "data property that relates an information content entity to a literal"@en .
+>>>>>>> origin/main
 
 
 #################################################################
@@ -254,6 +290,9 @@ co:PMD_0000006 rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.obolibrary.org/obo/BFO_0000001
 obo:BFO_0000001 rdf:type owl:Class ;
+<<<<<<< HEAD
+                rdfs:label "entity"@en .
+=======
                 obo:BFO_0000179 "entity" ;
                 obo:BFO_0000180 "Entity" ;
                 obo:IAO_0000112 "Julius Caesar"@en ,
@@ -276,10 +315,16 @@ obo:BFO_0000001 rdf:type owl:Class ;
    owl:annotatedTarget "An entity is anything that exists or has existed or will exist. (axiom label in BFO2 Reference: [001-001])"@en ;
    obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/001-001>
  ] .
+>>>>>>> origin/main
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000002
 obo:BFO_0000002 rdf:type owl:Class ;
+<<<<<<< HEAD
+                rdfs:subClassOf obo:BFO_0000001 ;
+                obo:IAO_0000115 "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts."@en ;
+                rdfs:label "continuant"@en .
+=======
                 rdfs:subClassOf obo:BFO_0000001 ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000176 ;
@@ -899,11 +944,15 @@ obo:BFO_0000030 rdf:type owl:Class ;
                 skos:definition "(Elucidation) An object is a material entity which manifests causal unity & is of a type instances of which are maximal relative to the sort of causal unity manifested"@en ;
                 skos:example "An organism; a fish tank; a planet; a laptop; a valve; a block of marble; an ice cube"@en ;
                 skos:scopeNote "A description of three primary sorts of causal unity is provided in Basic Formal Ontology 2.0. Specification and User Guide"@en .
+>>>>>>> origin/main
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000031
 obo:BFO_0000031 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000002 ;
+<<<<<<< HEAD
+                rdfs:label "generically dependent continuant"@en .
+=======
                 obo:BFO_0000179 "gdc" ;
                 obo:BFO_0000180 "GenericallyDependentContinuant" ;
                 obo:IAO_0000112 "The entries in your database are patterns instantiated as quality instances in your hard drive. The database itself is an aggregate of such patterns. When you create the database you create a particular instance of the generically dependent continuant type database. Each entry in the database is an instance of the generically dependent continuant type IAO: information content entity."@en ,
@@ -2503,11 +2552,15 @@ obo:IAO_0000007 rdf:type owl:Class ;
                 obo:IAO_0000117 "Alan Ruttenberg"@en ;
                 obo:IAO_0000119 "OBI Plan and Planned Process branch"@en ;
                 rdfs:label "action specification"@en .
+>>>>>>> origin/main
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000027
 obo:IAO_0000027 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000030 ;
+<<<<<<< HEAD
+                obo:IAO_0000115 "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en ;
+=======
                 obo:IAO_0000111 "data item"@en ;
                 obo:IAO_0000112 "Data items include counts of things, analyte concentrations, and statistical summaries."@en ;
                 obo:IAO_0000114 obo:IAO_0000125 ;
@@ -2527,6 +2580,7 @@ JAR: A data item is an approximately justified approximately true approximate be
                                 "PERSON: Chris Stoeckert"@en ,
                                 "PERSON: Jonathan Rees"@en ;
                 obo:IAO_0000118 "data"@en ;
+>>>>>>> origin/main
                 rdfs:label "data item"@en .
 
 
@@ -2537,6 +2591,12 @@ obo:IAO_0000030 rdf:type owl:Class ;
                                   owl:onProperty obo:IAO_0000136 ;
                                   owl:someValuesFrom obo:BFO_0000001
                                 ] ;
+<<<<<<< HEAD
+                obo:IAO_0000115 "A generically dependent continuant that is about some thing."@en ;
+                rdfs:label "information content entity"@en .
+
+
+=======
                 obo:IAO_0000111 "information content entity"@en ;
                 obo:IAO_0000112 "Examples of information content entites include journal articles, data, graphical layouts, and graphs."@en ;
                 obo:IAO_0000114 obo:IAO_0000122 ;
@@ -2570,6 +2630,7 @@ obo:IAO_0000033 rdf:type owl:Class ;
                 rdfs:label "directive information entity"@en .
 
 
+>>>>>>> origin/main
 ###  http://purl.obolibrary.org/obo/IAO_0000078
 obo:IAO_0000078 rdf:type owl:Class ;
                 owl:equivalentClass [ rdf:type owl:Class ;
@@ -2585,6 +2646,9 @@ obo:IAO_0000078 rdf:type owl:Class ;
                                                 )
                                     ] ;
                 rdfs:subClassOf obo:IAO_0000102 ;
+<<<<<<< HEAD
+                obo:IAO_0000115 "The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value."@en ;
+=======
                 obo:IAO_0000111 "curation status specification"@en ;
                 obo:IAO_0000114 obo:IAO_0000125 ;
                 obo:IAO_0000115 "The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value."@en ;
@@ -2592,12 +2656,19 @@ obo:IAO_0000078 rdf:type owl:Class ;
                 obo:IAO_0000117 "PERSON:Bill Bug"@en ;
                 obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ,
                                 "OBI_0000266"@en ;
+>>>>>>> origin/main
                 rdfs:label "curation status specification"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000102
 obo:IAO_0000102 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000027 ;
+<<<<<<< HEAD
+                obo:IAO_0000115 "Data about an ontology part is a data item about a part of an ontology, for example a term"@en ;
+                rdfs:label "data about an ontology part"@en .
+
+
+=======
                 obo:IAO_0000111 "data about an ontology part"@en ;
                 obo:IAO_0000115 "Data about an ontology part is a data item about a part of an ontology, for example a term"@en ;
                 obo:IAO_0000117 "Person:Alan Ruttenberg"@en ;
@@ -2618,6 +2689,7 @@ obo:IAO_0000109 rdf:type owl:Class ;
                 rdfs:label "measurement datum"@en .
 
 
+>>>>>>> origin/main
 ###  http://purl.obolibrary.org/obo/IAO_0000225
 obo:IAO_0000225 rdf:type owl:Class ;
                 owl:equivalentClass [ rdf:type owl:Class ;
@@ -2630,12 +2702,16 @@ obo:IAO_0000225 rdf:type owl:Class ;
                                                 )
                                     ] ;
                 rdfs:subClassOf obo:IAO_0000102 ;
+<<<<<<< HEAD
+                obo:IAO_0000115 "The reason for which a term has been deprecated. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value."@en ;
+=======
                 obo:IAO_0000111 "obsolescence reason specification"@en ;
                 obo:IAO_0000114 obo:IAO_0000125 ;
                 obo:IAO_0000115 "The reason for which a term has been deprecated. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value."@en ;
                 obo:IAO_0000116 "The creation of this class has been inspired in part by Werner Ceusters' paper, Applying evolutionary terminology auditing to the Gene Ontology."@en ;
                 obo:IAO_0000117 "PERSON: Alan Ruttenberg"@en ,
                                 "PERSON: Melanie Courtot"@en ;
+>>>>>>> origin/main
                 rdfs:label "obsolescence reason specification"@en .
 
 
@@ -2648,6 +2724,12 @@ obo:IAO_0000409 rdf:type owl:Class ;
                                                 )
                                     ] ;
                 rdfs:subClassOf obo:IAO_0000102 ;
+<<<<<<< HEAD
+                obo:IAO_0000115 "A denotator type indicates how a term should be interpreted from an ontological perspective."@en ;
+                rdfs:label "denotator type"@en .
+
+
+=======
                 obo:IAO_0000111 "denotator type"@en ;
                 obo:IAO_0000112 "The Basic Formal Ontology ontology makes a distinction between Universals and defined classes, where the formal are \"natural kinds\" and the latter arbitrary collections of entities."@en ;
                 obo:IAO_0000115 "A denotator type indicates how a term should be interpreted from an ontological perspective."@en ;
@@ -2689,11 +2771,75 @@ obo:OBI_0001933 rdf:type owl:Class ;
                 rdfs:label "value specification" .
 
 
+>>>>>>> origin/main
 ###  https://w3id.org/pmd/ao/HTO_0000000
 <https://w3id.org/pmd/ao/HTO_0000000> rdf:type owl:Class ;
                                       rdfs:label "root node"@en .
 
 
+<<<<<<< HEAD
+###  https://w3id.org/pmd/co/PMD_0020023
+<https://w3id.org/pmd/co/PMD_0020023> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Class ;
+                                                            owl:oneOf ( <https://w3id.org/pmd/co/PMD_0020027>
+                                                                        <https://w3id.org/pmd/co/PMD_0020097>
+                                                                        <https://w3id.org/pmd/co/PMD_0020100>
+                                                                        <https://w3id.org/pmd/co/PMD_0020107>
+                                                                        <https://w3id.org/pmd/co/PMD_0020109>
+                                                                        <https://w3id.org/pmd/co/PMD_0020110>
+                                                                        <https://w3id.org/pmd/co/PMD_0020111>
+                                                                      )
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020098> ;
+                                      rdfs:label "metallic grain structures"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020098
+<https://w3id.org/pmd/co/PMD_0020098> rdf:type owl:Class ;
+                                      rdfs:subClassOf obo:BFO_0000031 ;
+                                      rdfs:label "nature constant"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020099
+<https://w3id.org/pmd/co/PMD_0020099> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Class ;
+                                                            owl:oneOf ( <https://w3id.org/pmd/co/PMD_0020006>
+                                                                        <https://w3id.org/pmd/co/PMD_0020007>
+                                                                        <https://w3id.org/pmd/co/PMD_0020008>
+                                                                        <https://w3id.org/pmd/co/PMD_0020009>
+                                                                        <https://w3id.org/pmd/co/PMD_0020010>
+                                                                        <https://w3id.org/pmd/co/PMD_0020011>
+                                                                        <https://w3id.org/pmd/co/PMD_0020012>
+                                                                        <https://w3id.org/pmd/co/PMD_0020013>
+                                                                        <https://w3id.org/pmd/co/PMD_0020014>
+                                                                        <https://w3id.org/pmd/co/PMD_0020015>
+                                                                        <https://w3id.org/pmd/co/PMD_0020016>
+                                                                        <https://w3id.org/pmd/co/PMD_0020017>
+                                                                        <https://w3id.org/pmd/co/PMD_0020018>
+                                                                        <https://w3id.org/pmd/co/PMD_0020019>
+                                                                      )
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020098> ;
+                                      rdfs:label "bravais lattice (3d)"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020116
+<https://w3id.org/pmd/co/PMD_0020116> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Class ;
+                                                            owl:oneOf ( <https://w3id.org/pmd/co/PMD_0020117>
+                                                                        <https://w3id.org/pmd/co/PMD_0020118>
+                                                                        <https://w3id.org/pmd/co/PMD_0020119>
+                                                                        <https://w3id.org/pmd/co/PMD_0020120>
+                                                                        <https://w3id.org/pmd/co/PMD_0020121>
+                                                                        <https://w3id.org/pmd/co/PMD_0020122>
+                                                                        <https://w3id.org/pmd/co/PMD_0020123>
+                                                                        <https://w3id.org/pmd/co/PMD_0020124>
+                                                                        <https://w3id.org/pmd/co/PMD_0020125>
+                                                                      )
+                                                          ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020098> ;
+                                      rdfs:label "aggregate state value"@en .
+=======
 ###  https://w3id.org/pmd/co/PMD_0000000
 co:PMD_0000000 rdf:type owl:Class ;
                rdfs:subClassOf co:PMD_0000001 ;
@@ -9750,6 +9896,7 @@ co:PMD_0060009 rdf:type owl:Class ;
                rdfs:subClassOf obo:IAO_0000027 ;
                rdfs:label "specification datum"@en ;
                skos:definition "A data item that provides specification for entities" .
+>>>>>>> origin/main
 
 
 #################################################################
@@ -9758,135 +9905,344 @@ co:PMD_0060009 rdf:type owl:Class ;
 
 ###  http://purl.obolibrary.org/obo/IAO_0000002
 obo:IAO_0000002 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+=======
                 obo:IAO_0000111 "example to be eventually removed"@en ;
+>>>>>>> origin/main
                 rdfs:label "example to be eventually removed"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000103
 obo:IAO_0000103 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+                obo:IAO_0000115 "The term was used in an attempt to structure part of the ontology but in retrospect failed to do a good job"@en ;
+=======
                 obo:IAO_0000111 "failed exploratory term"@en ;
                 obo:IAO_0000115 "The term was used in an attempt to structure part of the ontology but in retrospect failed to do a good job"@en ;
                 obo:IAO_0000117 "Person:Alan Ruttenberg"@en ;
+>>>>>>> origin/main
                 rdfs:label "failed exploratory term"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000120
 obo:IAO_0000120 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+=======
                 obo:IAO_0000111 "metadata complete"@en ;
+>>>>>>> origin/main
                 obo:IAO_0000115 "Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete."@en ;
                 rdfs:label "metadata complete"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000121
 obo:IAO_0000121 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+=======
                 obo:IAO_0000111 "organizational term"@en ;
+>>>>>>> origin/main
                 obo:IAO_0000115 "Term created to ease viewing/sort terms for development purpose, and will not be included in a release"@en ;
                 rdfs:label "organizational term"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000122
 obo:IAO_0000122 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+=======
                 obo:IAO_0000111 "ready for release"@en ;
+>>>>>>> origin/main
                 obo:IAO_0000115 "Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking \"ready_for_release\" should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed \"ready_for_release\" will also derived from a chain of ancestor classes that are also \"ready_for_release.\""@en ;
                 rdfs:label "ready for release"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000123
 obo:IAO_0000123 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+=======
                 obo:IAO_0000111 "metadata incomplete"@en ;
+>>>>>>> origin/main
                 obo:IAO_0000115 "Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors."@en ;
                 rdfs:label "metadata incomplete"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000124
 obo:IAO_0000124 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+=======
                 obo:IAO_0000111 "uncurated"@en ;
+>>>>>>> origin/main
                 obo:IAO_0000115 "Nothing done yet beyond assigning a unique class ID and proposing a preferred term."@en ;
                 rdfs:label "uncurated"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000125
 obo:IAO_0000125 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+=======
                 obo:IAO_0000111 "pending final vetting"@en ;
+>>>>>>> origin/main
                 obo:IAO_0000115 "All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the term editor."@en ;
                 rdfs:label "pending final vetting"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000226
 obo:IAO_0000226 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+=======
                 obo:IAO_0000111 "placeholder removed"@en ;
+>>>>>>> origin/main
                 rdfs:label "placeholder removed"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000227
 obo:IAO_0000227 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+=======
                 obo:IAO_0000111 "terms merged"@en ;
                 obo:IAO_0000116 "An editor note should explain what were the merged terms and the reason for the merge."@en ;
+>>>>>>> origin/main
                 rdfs:label "terms merged"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000228
 obo:IAO_0000228 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+=======
                 obo:IAO_0000111 "term imported"@en ;
                 obo:IAO_0000116 "This is to be used when the original term has been replaced by a term imported from an other ontology. An editor note should indicate what is the URI of the new term to use."@en ;
+>>>>>>> origin/main
                 rdfs:label "term imported"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000229
 obo:IAO_0000229 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+=======
                 obo:IAO_0000111 "term split"@en ;
                 obo:IAO_0000116 "This is to be used when a term has been split in two or more new terms. An editor note should indicate the reason for the split and indicate the URIs of the new terms created."@en ;
+>>>>>>> origin/main
                 rdfs:label "term split"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000410
 obo:IAO_0000410 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+=======
                 obo:IAO_0000111 "universal"@en ;
                 obo:IAO_0000116 "Hard to give a definition for. Intuitively a \"natural kind\" rather than a collection of any old things, which a class is able to be, formally. At the meta level, universals are defined as positives, are disjoint with their siblings, have single asserted parents."@en ;
                 obo:IAO_0000117 "Alan Ruttenberg"@en ;
                 obo:IAO_0000119 "A Formal Theory of Substances, Qualities, and Universals, http://ontology.buffalo.edu/bfo/SQU.pdf"@en ;
+>>>>>>> origin/main
                 rdfs:label "universal"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000420
 obo:IAO_0000420 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+                obo:IAO_0000115 "A defined class is a class that is defined by a set of logically necessary and sufficient conditions but is not a universal"@en ;
+=======
                 obo:IAO_0000111 "defined class"@en ;
                 obo:IAO_0000115 "A defined class is a class that is defined by a set of logically necessary and sufficient conditions but is not a universal"@en ;
                 obo:IAO_0000116 "\"definitions\", in some readings, always are given by necessary and sufficient conditions. So one must be careful (and this is difficult sometimes) to distinguish between defined classes and universal."@en ;
                 obo:IAO_0000117 "Alan Ruttenberg"@en ;
+>>>>>>> origin/main
                 rdfs:label "defined class"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000421
 obo:IAO_0000421 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+                obo:IAO_0000115 "A named class expression is a logical expression that is given a name. The name can be used in place of the expression."@en ;
+=======
                 obo:IAO_0000111 "named class expression"@en ;
                 obo:IAO_0000115 "A named class expression is a logical expression that is given a name. The name can be used in place of the expression."@en ;
                 obo:IAO_0000116 "named class expressions are used in order to have more concise logical definition but their extensions may not be interesting classes on their own. In languages such as OWL, with no provisions for macros, these show up as actuall classes. Tools may with to not show them as such, and to replace uses of the macros with their expansions"@en ;
                 obo:IAO_0000117 "Alan Ruttenberg"@en ;
+>>>>>>> origin/main
                 rdfs:label "named class expression"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000423
 obo:IAO_0000423 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+                obo:IAO_0000115 "Terms with this status should eventually replaced with a term from another ontology."@en ;
+=======
                 obo:IAO_0000111 "to be replaced with external ontology term"@en ;
                 obo:IAO_0000115 "Terms with this status should eventually replaced with a term from another ontology."@en ;
                 obo:IAO_0000117 "Alan Ruttenberg"@en ;
                 obo:IAO_0000119 "group:OBI"@en ;
+>>>>>>> origin/main
                 rdfs:label "to be replaced with external ontology term"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000428
 obo:IAO_0000428 rdf:type owl:NamedIndividual ;
+<<<<<<< HEAD
+                obo:IAO_0000115 "A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues."@en ;
+=======
                 obo:IAO_0000111 "requires discussion"@en ;
                 obo:IAO_0000115 "A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues."@en ;
                 obo:IAO_0000117 "Alan Ruttenberg"@en ;
                 obo:IAO_0000119 "group:OBI"@en ;
+>>>>>>> origin/main
                 rdfs:label "requires discussion"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OMO_0001000
 obo:OMO_0001000 rdf:type owl:NamedIndividual ;
                 obo:IAO_0000115 "The term was added to the ontology on the assumption it was in scope, but it turned out later that it was not."@en ;
+<<<<<<< HEAD
+                rdfs:label "out of scope" .
+
+
+###  https://w3id.org/pmd/co/PMD_0020006
+<https://w3id.org/pmd/co/PMD_0020006> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice triclinic primitve"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020007
+<https://w3id.org/pmd/co/PMD_0020007> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice monoclinic primitive"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020008
+<https://w3id.org/pmd/co/PMD_0020008> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice monoclinic base-centered"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020009
+<https://w3id.org/pmd/co/PMD_0020009> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice orthorombic primitive"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020010
+<https://w3id.org/pmd/co/PMD_0020010> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice orthorhombic base-centered"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020011
+<https://w3id.org/pmd/co/PMD_0020011> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice orthorhombic body-centered"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020012
+<https://w3id.org/pmd/co/PMD_0020012> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice orthorhombic face-centered"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020013
+<https://w3id.org/pmd/co/PMD_0020013> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice tetragonal primitive"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020014
+<https://w3id.org/pmd/co/PMD_0020014> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice tetragonal body-centered"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020015
+<https://w3id.org/pmd/co/PMD_0020015> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice hexagonal rhombohedral primitive"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020016
+<https://w3id.org/pmd/co/PMD_0020016> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice hexagonal hexagonal primitive"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020017
+<https://w3id.org/pmd/co/PMD_0020017> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice cubic primitive"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020018
+<https://w3id.org/pmd/co/PMD_0020018> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice cubic body-centered"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020019
+<https://w3id.org/pmd/co/PMD_0020019> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bravais lattice cubic face-centered"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020027
+<https://w3id.org/pmd/co/PMD_0020027> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "bainite"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020097
+<https://w3id.org/pmd/co/PMD_0020097> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "austenite"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020100
+<https://w3id.org/pmd/co/PMD_0020100> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "ferrite"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020107
+<https://w3id.org/pmd/co/PMD_0020107> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "ledeburite"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020109
+<https://w3id.org/pmd/co/PMD_0020109> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "pearlite"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020110
+<https://w3id.org/pmd/co/PMD_0020110> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "widmanstatten structure"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020111
+<https://w3id.org/pmd/co/PMD_0020111> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "martensite"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020117
+<https://w3id.org/pmd/co/PMD_0020117> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state solid"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020118
+<https://w3id.org/pmd/co/PMD_0020118> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state liquid"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020119
+<https://w3id.org/pmd/co/PMD_0020119> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state gasous"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020120
+<https://w3id.org/pmd/co/PMD_0020120> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state plasma"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020121
+<https://w3id.org/pmd/co/PMD_0020121> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state atom gas"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020122
+<https://w3id.org/pmd/co/PMD_0020122> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state supercritical fluid"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020123
+<https://w3id.org/pmd/co/PMD_0020123> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state mesomorphic"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020124
+<https://w3id.org/pmd/co/PMD_0020124> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state suprafluid"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0020125
+<https://w3id.org/pmd/co/PMD_0020125> rdf:type owl:NamedIndividual ;
+                                      rdfs:label "aggregate state suprasolid"@en .
+=======
                 obo:IAO_0000116 "This obsolesence reason should be used conservatively. Typical valid examples are: un-necessary grouping classes in disease ontologies, a phenotype term added on the assumption it was a disease."@en ;
                 obo:IAO_0000117 <http://orcid.org/0000-0001-5208-3432> ;
                 obo:IAO_0000233 "https://github.com/information-artifact-ontology/ontology-metadata/issues/77" ;
@@ -9932,12 +10288,30 @@ obo:OMO_0001000 rdf:type owl:NamedIndividual ;
 
 
 <https://orcid.org/0000-0003-4971-3645> rdfs:label "Philipp von Hartrott" .
+>>>>>>> origin/main
 
 
 #################################################################
 #    General axioms
 #################################################################
 
+<<<<<<< HEAD
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <https://w3id.org/pmd/co/PMD_0020006>
+                        <https://w3id.org/pmd/co/PMD_0020007>
+                        <https://w3id.org/pmd/co/PMD_0020008>
+                        <https://w3id.org/pmd/co/PMD_0020009>
+                        <https://w3id.org/pmd/co/PMD_0020010>
+                        <https://w3id.org/pmd/co/PMD_0020011>
+                        <https://w3id.org/pmd/co/PMD_0020012>
+                        <https://w3id.org/pmd/co/PMD_0020013>
+                        <https://w3id.org/pmd/co/PMD_0020014>
+                        <https://w3id.org/pmd/co/PMD_0020015>
+                        <https://w3id.org/pmd/co/PMD_0020016>
+                        <https://w3id.org/pmd/co/PMD_0020017>
+                        <https://w3id.org/pmd/co/PMD_0020018>
+                        <https://w3id.org/pmd/co/PMD_0020019>
+=======
 [ rdf:type owl:Class ;
   owl:unionOf ( co:PMD_0000773
                 co:PMD_0000952
@@ -10081,11 +10455,23 @@ obo:OMO_0001000 rdf:type owl:NamedIndividual ;
                         co:PMD_0020017
                         co:PMD_0020018
                         co:PMD_0020019
+>>>>>>> origin/main
                       )
 ] .
 
 
 [ rdf:type owl:AllDifferent ;
+<<<<<<< HEAD
+  owl:distinctMembers ( <https://w3id.org/pmd/co/PMD_0020117>
+                        <https://w3id.org/pmd/co/PMD_0020118>
+                        <https://w3id.org/pmd/co/PMD_0020119>
+                        <https://w3id.org/pmd/co/PMD_0020120>
+                        <https://w3id.org/pmd/co/PMD_0020121>
+                        <https://w3id.org/pmd/co/PMD_0020122>
+                        <https://w3id.org/pmd/co/PMD_0020123>
+                        <https://w3id.org/pmd/co/PMD_0020124>
+                        <https://w3id.org/pmd/co/PMD_0020125>
+=======
   owl:distinctMembers ( co:PMD_0020117
                         co:PMD_0020118
                         co:PMD_0020119
@@ -10095,6 +10481,7 @@ obo:OMO_0001000 rdf:type owl:NamedIndividual ;
                         co:PMD_0020123
                         co:PMD_0020124
                         co:PMD_0020125
+>>>>>>> origin/main
                       )
 ] .
 

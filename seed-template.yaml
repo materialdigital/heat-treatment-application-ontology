@@ -2,8 +2,13 @@ id: hto
 title: "My Application Ontology"
 github_org: materialdigital
 git_main_branch: main
+<<<<<<< HEAD
+repo: app-ontology-template
+uribase: https://w3id.org/pmd/ao
+=======
 repo: heat-treatment-application-ontology
 uribase: https://w3id.org/pmd/ao/hto
+>>>>>>> origin/main
 uribase_suffix: hto
 
 release_artefacts:
