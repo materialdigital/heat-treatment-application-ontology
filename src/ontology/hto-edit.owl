@@ -9,14 +9,11 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
 Ontology(<https://w3id.org/pmd/ao/hto.owl>
-
 Import(<https://w3id.org/pmd/ao/hto/imports/pmdco_import.owl>)
-
-
-Annotation(dcterms:description "None")
-Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en)
-Annotation(dcterms:contributer <https://orcid.org/0000-0003-1649-6832>)
+Annotation(dcterms:description "A platform material digital application ontology for heat treatments")
+Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
+Annotation(dcterms:contributor <https://orcid.org/0000-0003-1649-6832>)
 Annotation(dcterms:creator <https://orcid.org/0000-0002-9014-2920>)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000582>))
@@ -793,6 +790,5 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> <http://purl.obolib
 # Class: <https://w3id.org/pmd/co/PMD_0000602> (Device)
 
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000602> <http://purl.obolibrary.org/obo/BFO_0000030>)
-
 
 )
