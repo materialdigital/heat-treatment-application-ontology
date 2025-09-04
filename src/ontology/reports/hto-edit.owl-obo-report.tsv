@@ -4,24 +4,21 @@ ERROR	missing_label	https://w3id.org/pmd/ao/hto/AcquisitionDate	rdfs:label
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Annealing	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Atmosphere	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/AtmospherePressure	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/BelowAmbientPressure	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/CarbonPotential	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Carburizing	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/Chamber	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/ChamberPressure	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/ChamberScope	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/CollectionInterfaceHint	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/ConcentrationH2	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Controlled	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Convection	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/CoolingFlag	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/CoolingProcess	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/DewPoint	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Fan	rdfs:label	
+ERROR	missing_label	https://w3id.org/pmd/ao/hto/FanStateFast	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/FastCooling	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/FineVacuum	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/FlowRate	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/FlowRateTotal	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Fluid	rdfs:label	
@@ -78,16 +75,16 @@ ERROR	missing_label	https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation	rd
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole	rdfs:label	
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/AcquisitionDate	skos:definition	The point in time a Process Node was commissioned (e.g., the purchase date, first day of use), represented in IEEE 1003 'Seconds since Epoch'. @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/AtmospherePressure	skos:definition	Parameter describing the intended atmosphere pressure inside a chamber. @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/BelowAmbientPressure	skos:definition	status of atmosphere: reduced pressure below ambient pressure @en
+WARN	annotation_whitespace	below ambient pressure	skos:definition	status of atmosphere: reduced pressure below ambient pressure @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/ChamberPressure	skos:definition	designated pressure in retort during evacuation phase pre to nitriding process or during low pressure nitriding process @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/CollectionInterfaceHint	skos:definition	A label in support of identifying a network interface and/or address used by a process node to provide primary data stored in ontologies @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/Convection	skos:definition	konvection during heating, heating in atmosphere, not in vacuum @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/CoolingFlag	skos:definition	represents whether a sequence (of a process recipe) is for cooling to nominal temperature or not, takes value 0 or 1 @en
+WARN	annotation_whitespace	cooling flag	skos:definition	represents whether a sequence (of a process recipe) is for cooling to nominal temperature or not, takes value 0 or 1 @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/DewPoint	skos:definition	dew point of the atmosphere, measured during process or calculated from lambda / oxygen probe signal @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature	skos:definition	Parameter representing a derived duration of a heat up segment (in hours, minutes or seconds) @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/FineVacuum	skos:definition	status of the atmosphere, evacuation step without nitriding potential @en
+WARN	annotation_whitespace	fine vacuum	skos:definition	status of the atmosphere, evacuation step without nitriding potential @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/FurnaceCooling	skos:definition	free cooling with deactivated heating unit and no additonal cooling by e.g. agitade nitrogene -> furnace cool @en
-WARN	annotation_whitespace	Gas Ingress Front State	skos:definition	Boolean parameter that opens a magnetic-controlled valve to induce frontsited gas ingress (if set to true) into the heating chamber. Choice of ingress can have an effect on the effective gas flow direction into or through the batch and can impact in homogeneties @en
+WARN	annotation_whitespace	gas ingress front state	skos:definition	Boolean parameter that opens a magnetic-controlled valve to induce frontsited gas ingress (if set to true) into the heating chamber. Choice of ingress can have an effect on the effective gas flow direction into or through the batch and can impact in homogeneties @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/Heating	skos:definition	type of heating process, e.g. fast uncontrolled heating, heating ramp controlled etc. @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/HoldingCooling	skos:definition	Unterbrechung des Kühlprozesses zwecks Temperaturausgleich @de
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/HoldingCooling	skos:definition	represents whether a sequence (of a process recipe) is for waiting until nominal temperature is reached during cooling or not, takes value 0 or 1 @en
@@ -113,7 +110,6 @@ WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/PartialPressure	skos:defi
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/PartialPressure	skos:definition	nominal pressure of a specific atmosphere component thermochemical steps @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/PartialPressure	skos:definition	nominal pressure of thermochemical heat treatment pressure during thermochemical steps @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/QuenchingLeadtime	skos:definition	Parameter indicatin the duration right before the quenching  process @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/RecordingInterval	skos:definition	 effective data aquisition and saving interval for documentation @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/Rotation	skos:definition	 Parameter describing the intended rotational speed of a device as e.g. an fan or turbine, unit revolution per minute. @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/Rotation	skos:definition	rotation speed of the atmosphere agitation device @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/SequenceNumber	skos:definition	 An identifier indicating a process-number in a Workflow represented via consecutive integers @en
@@ -133,31 +129,31 @@ WARN	missing_definition	https://w3id.org/pmd/ao/hto/AcquisitionDate	IAO:0000115
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Annealing	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Atmosphere	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/AtmospherePressure	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/BelowAmbientPressure	IAO:0000115	
+WARN	missing_definition	below ambient pressure	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/CarbonPotential	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Carburizing	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/Chamber	IAO:0000115	
+WARN	missing_definition	chamber	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/ChamberPressure	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/ChamberScope	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/CollectionInterfaceHint	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/ConcentrationH2	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Controlled	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Convection	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/CoolingFlag	IAO:0000115	
+WARN	missing_definition	cooling flag	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/CoolingProcess	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/DewPoint	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Fan	IAO:0000115	
-WARN	missing_definition	Fan State Fast	IAO:0000115	
+WARN	missing_definition	https://w3id.org/pmd/ao/hto/FanStateFast	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/FastCooling	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/FineVacuum	IAO:0000115	
+WARN	missing_definition	fine vacuum	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/FlowRate	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/FlowRateTotal	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Fluid	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/FurnaceAtmosphere	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/FurnaceCooling	IAO:0000115	
-WARN	missing_definition	Gas Ingress Front State	IAO:0000115	
+WARN	missing_definition	gas ingress front state	IAO:0000115	
 WARN	missing_definition	heat treatment process	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Hardening	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/HeaterRole	IAO:0000115	
