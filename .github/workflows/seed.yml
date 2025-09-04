@@ -87,11 +87,12 @@ jobs:
           # Set namespaces block automatically
           NS="https://w3id.org/pmd/ao/${{ github.event.inputs.uribase_suffix }}/"
           if grep -q "^namespaces:" "$CONFIG_FILE"; then
-            sed -i "s|^namespaces:.*|namespaces:\n  - $NS|" "$CONFIG_FILE"
+            sed -i "/^namespaces:/,+1c\\
+          namespaces:\\
+            - $NS" "$CONFIG_FILE"
           else
             echo -e "\nnamespaces:\n  - $NS" >> "$CONFIG_FILE"
           fi
-
           echo "Updated seed-template.yaml content:"
           cat "$CONFIG_FILE"
 
@@ -150,4 +151,5 @@ jobs:
             - **ODK Tag**: `${{ github.event.inputs.odk_tag || 'latest' }}`
             
             This PR contains the generated ontology files from ODK seed.
+
 
