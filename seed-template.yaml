@@ -20,4 +20,4 @@ import_group:
   products:
   - id: pmdco
     mirror_from: https://materialdigital.github.io/core-ontology/ontology.owl
-    module_type: mirror
+    module_type: filtered
