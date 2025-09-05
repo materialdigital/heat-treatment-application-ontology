@@ -91,7 +91,7 @@ jobs:
           namespaces:\\
             - $NS" "$CONFIG_FILE"
           else
-            echo -e "\nnamespaces:\n  - $NS" >> "$CONFIG_FILE"
+            echo "\nnamespaces:\n  - $NS" >> "$CONFIG_FILE"
           fi
           echo "Updated seed-template.yaml content:"
           cat "$CONFIG_FILE"
@@ -151,5 +151,6 @@ jobs:
             - **ODK Tag**: `${{ github.event.inputs.odk_tag || 'latest' }}`
             
             This PR contains the generated ontology files from ODK seed.
+
 
 
