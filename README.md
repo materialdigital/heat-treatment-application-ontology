@@ -1,8 +1,8 @@
 
 ![Build Status](https://github.com/materialdigital/heat-treatment-application-ontology/actions/workflows/qc.yml/badge.svg)
-# Heat Treatment Ontology
+# Heat Treatment Ontology (HTO)
 
-The Heat Treatment Ontology (HTO) is developed based upon priciples of pmd core ontology (pmdco) to describe processes regarding heat treatment with a focus on metals.
+The Heat Treatment Ontology is developed as an application ontology of the PMD core ontology (PMDco) to model heat treatment processes with a focus on metals.
 
 More information can be found at http://obofoundry.org/ontology/hto
 
@@ -14,7 +14,7 @@ The latest version of the ontology can always be found at:
 
 https://w3id.org/pmd/ao/hto.owl
 
-(note this will not show up until the request has been approved by obofoundry.org)
+(note: hto will not show up until the request has been approved by obofoundry.org)
 
 ### Editors' version
 
