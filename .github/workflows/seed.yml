@@ -97,7 +97,7 @@ jobs:
           cat "$CONFIG_FILE"
           # append the idranges block line by line
           ONT_ID_UPPER="${{ github.event.inputs.ontology_id }}" 
-          ONT_ID_UPPER=${ONT_ID_UPPER^^}  # bash uppercase
+          ONT_ID_UPPER=$(echo "${{ github.event.inputs.ontology_id }}" | tr '[:lower:]' '[:upper:]')
 
           echo "" >> "$CONFIG_FILE"
           echo "idranges:" >> "$CONFIG_FILE"
@@ -162,6 +162,7 @@ jobs:
             - **ODK Tag**: `${{ github.event.inputs.odk_tag || 'latest' }}`
             
             This PR contains the generated ontology files from ODK seed.
+
 
 
 
