@@ -95,17 +95,21 @@ jobs:
           fi
           echo "Updated seed-template.yaml content:"
           cat "$CONFIG_FILE"
-          # append the idranges block line by line
-          ONT_ID_UPPER="${{ github.event.inputs.ontology_id }}" 
-          ONT_ID_UPPER=$(echo "${{ github.event.inputs.ontology_id }}" | tr '[:lower:]' '[:upper:]')
+      - name: Append idranges block
+        run: |
+          CONFIG_FILE="${{ github.event.inputs.config_file || 'seed-template.yaml' }}"
+          ONT_ID="${{ github.event.inputs.ontology_id }}"
+          ONT_ID_UPPER=$(echo "$ONT_ID" | tr '[:lower:]' '[:upper:]')
 
           echo "" >> "$CONFIG_FILE"
           echo "idranges:" >> "$CONFIG_FILE"
-          echo "  - idsfor: ${{ github.event.inputs.ontology_id }}" >> "$CONFIG_FILE"
+          echo "  - idsfor: $ONT_ID" >> "$CONFIG_FILE"
           echo "    idprefix: https://w3id.org/pmd/ao/${{ github.event.inputs.uribase_suffix }}/$ONT_ID_UPPER_" >> "$CONFIG_FILE"
           echo "    iddigits: 7" >> "$CONFIG_FILE"
+
           echo "Updated $CONFIG_FILE content:"
           cat "$CONFIG_FILE"
+
 
       - name: Run ODK seed
         env:
@@ -162,6 +166,7 @@ jobs:
             - **ODK Tag**: `${{ github.event.inputs.odk_tag || 'latest' }}`
             
             This PR contains the generated ontology files from ODK seed.
+
 
 
 
