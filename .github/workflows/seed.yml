@@ -99,12 +99,15 @@ jobs:
         run: |
           CONFIG_FILE="${{ github.event.inputs.config_file || 'seed-template.yaml' }}"
           ONT_ID="${{ github.event.inputs.ontology_id }}"
+          URIBASE_SUFFIX="${{ github.event.inputs.uribase_suffix }}"
+          
+          # Uppercase ontology id
           ONT_ID_UPPER=$(echo "$ONT_ID" | tr '[:lower:]' '[:upper:]')
 
           echo "" >> "$CONFIG_FILE"
           echo "idranges:" >> "$CONFIG_FILE"
           echo "  - idsfor: $ONT_ID" >> "$CONFIG_FILE"
-          echo "    idprefix: https://w3id.org/pmd/ao/${{ github.event.inputs.uribase_suffix }}/$ONT_ID_UPPER_" >> "$CONFIG_FILE"
+          echo "    idprefix: https://w3id.org/pmd/ao/$URIBASE_SUFFIX/${ONT_ID_UPPER}_" >> "$CONFIG_FILE"
           echo "    iddigits: 7" >> "$CONFIG_FILE"
 
           echo "Updated $CONFIG_FILE content:"
