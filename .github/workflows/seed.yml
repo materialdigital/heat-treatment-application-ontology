@@ -150,6 +150,21 @@ jobs:
           echo "Removing target directory to avoid git conflicts..."
           rm -rf target/
           git status
+      - name: Fix idranges.owl idprefix
+        run: |
+          # locate the generated idranges.owl file
+          IDRANGES_FILE=$(find . -name "*-idranges.owl" | head -n1)
+          echo "Fixing idprefix in $IDRANGES_FILE"
+
+          # lowercase uribase_suffix from workflow input
+          URIBASE_SUFFIX="${{ github.event.inputs.uribase_suffix }}"
+
+          # replace idprefix line using sed: insert uribase_suffix after /ao/
+          sed -i "s|idprefix: \"https://w3id.org/pmd/ao/\(.*\)_\"|idprefix: \"https://w3id.org/pmd/ao/${URIBASE_SUFFIX}/\1_\"|" "$IDRANGES_FILE"
+
+          echo "Updated idranges.owl:"
+          head -n 20 "$IDRANGES_FILE"
+
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
@@ -169,6 +184,7 @@ jobs:
             - **ODK Tag**: `${{ github.event.inputs.odk_tag || 'latest' }}`
             
             This PR contains the generated ontology files from ODK seed.
+
 
 
 
