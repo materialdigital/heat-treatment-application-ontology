@@ -10,15 +10,10 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 Ontology(<https://w3id.org/pmd/ao/hto>
 Import(<https://w3id.org/pmd/ao/hto/imports/pmdco_import.owl>)
+Annotation(dcterms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en)
 Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en)
-Annotation(dcterms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en)
-############################
-#   Declaration of Annotation Properties
-############################
 
-Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000582>))
-Declaration(Class(<http://qudt.org/vocab/unit/DEG_C>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/AccelleratedCooling>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/AcquisitionDate>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/Annealing>))
@@ -90,7 +85,6 @@ Declaration(Class(<https://w3id.org/pmd/ao/hto/SoakingDuration>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/SoakingProcess>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/Standard>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration>))
-Declaration(Class(<https://w3id.org/pmd/ao/hto/TemperatureChangingProcess>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/Tempering>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/TypeDescription>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/VacuumHeating>))
@@ -134,13 +128,11 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/IAO_0000582> (<http://purl.obolibrary.org/obo/IAO_0000582>)
-
-SubClassOf(<http://purl.obolibrary.org/obo/IAO_0000582> <http://purl.obolibrary.org/obo/IAO_0000109>)
-
 # Class: <https://w3id.org/pmd/ao/hto/AccelleratedCooling> (<https://w3id.org/pmd/ao/hto/AccelleratedCooling>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/AccelleratedCooling> "needs work")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/AccelleratedCooling> "Achieved via convection only."@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/AccelleratedCooling> "so convection cooling is a function of a device, it could be realized in a cooling process. definatl needs a better name like acllerated convection cooling function, to be specific")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/AccelleratedCooling> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/AccelleratedCooling> "Status of the cooling method active e.g., at the end of the nitriding process"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/AccelleratedCooling> "Accellerated Cooling"@en)
@@ -148,10 +140,12 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/AccelleratedCooling> <https://w3id.org/p
 
 # Class: <https://w3id.org/pmd/ao/hto/AcquisitionDate> (<https://w3id.org/pmd/ao/hto/AcquisitionDate>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/AcquisitionDate> "needs work")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/AcquisitionDate> "is a temperal instant!")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/AcquisitionDate> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/AcquisitionDate> "The point in time a Process Node was commissioned (e.g., the purchase date, first day of use), represented in IEEE 1003 'Seconds since Epoch'. "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/AcquisitionDate> "Acquisition Date"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/AcquisitionDate> <http://purl.obolibrary.org/obo/IAO_0000582>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/AcquisitionDate> <http://purl.obolibrary.org/obo/IAO_0000109>)
 
 # Class: <https://w3id.org/pmd/ao/hto/Annealing> (<https://w3id.org/pmd/ao/hto/Annealing>)
 
@@ -180,7 +174,7 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/AtmospherePressure> <https://w3id.org/pm
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/BelowAmbientPressure> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/BelowAmbientPressure> "status of atmosphere: reduced pressure below ambient pressure "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/BelowAmbientPressure> "Below Ambient Pressure"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/BelowAmbientPressure> <https://w3id.org/pmd/co/PMD_0000008>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/BelowAmbientPressure> <http://purl.obolibrary.org/obo/BFO_0000145>)
 
 # Class: <https://w3id.org/pmd/ao/hto/CarbonPotential> (<https://w3id.org/pmd/ao/hto/CarbonPotential>)
 
@@ -189,7 +183,7 @@ AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/CarbonPotential> "
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/CarbonPotential> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/CarbonPotential> "Carbon content of a specimen of pure iron in equilibrium with a carbourizing medium under specific conditions."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/CarbonPotential> "Carbon Potential"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/CarbonPotential> <http://purl.obolibrary.org/obo/IAO_0000109>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/CarbonPotential> <http://purl.obolibrary.org/obo/BFO_0000145>)
 
 # Class: <https://w3id.org/pmd/ao/hto/Carburizing> (<https://w3id.org/pmd/ao/hto/Carburizing>)
 
@@ -203,11 +197,13 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/Carburizing> <https://w3id.org/pmd/co/PM
 
 # Class: <https://w3id.org/pmd/ao/hto/Chamber> (<https://w3id.org/pmd/ao/hto/Chamber>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/Chamber> "needs work")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/Chamber> "unklare Zuordnung innerhalb der \"spec. dep. continuants\". Eine Kammer existiert nur als Teil eines Gerätes (Device), könnte aber selbst noch einmal als independent continuant definiert werden, da sich in der Kammer Chargen, Gestelle, Thermoelemente etc. befinden."@de)
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/Chamber> "moved to fiat object part. correct if every furnace has a chamber")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/Chamber> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Chamber> "Systemboundary of a distinct Heattreatment Process. Typically includes media (e.g., Helium or Vaccum)."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Chamber> "Chamber"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/Chamber> <http://purl.obolibrary.org/obo/BFO_0000020>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/Chamber> <http://purl.obolibrary.org/obo/BFO_0000024>)
 
 # Class: <https://w3id.org/pmd/ao/hto/ChamberPressure> (<https://w3id.org/pmd/ao/hto/ChamberPressure>)
 
@@ -215,11 +211,13 @@ AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/ChamberPressure> "
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/ChamberPressure> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/ChamberPressure> "designated pressure in retort during evacuation phase pre to nitriding process or during low pressure nitriding process "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/ChamberPressure> "Chamber Pressure"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/ChamberPressure> <https://w3id.org/pmd/co/PMD_0000896>)
+EquivalentClasses(<https://w3id.org/pmd/ao/hto/ChamberPressure> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000896> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://w3id.org/pmd/ao/hto/Chamber>)))
 
 # Class: <https://w3id.org/pmd/ao/hto/ChamberScope> (<https://w3id.org/pmd/ao/hto/ChamberScope>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/ChamberScope> "needs work")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/ChamberScope> "Sollte mit Unit-Volume (m^3) verbunden sein"@de)
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/ChamberScope> "competly dont get that one")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/ChamberScope> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/ChamberScope> "Functional furnace chamber."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/ChamberScope> "Funktionale Ofenkammer."@de)
@@ -252,20 +250,24 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/ConcentrationH2> <https://w3id.org/pmd/a
 
 # Class: <https://w3id.org/pmd/ao/hto/Controlled> (<https://w3id.org/pmd/ao/hto/Controlled>)
 
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/Controlled> "definition is not enough, what is controlled?")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/Controlled> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Controlled> "This Scope expresses that a :ValueObject is actively controlled during the process, e.g. a heating process where the temperature change is done in controlled intervals until the desired temperature is reached while an uncontrolled heating process would reach the desired temperature as fast as the furnace allows it to."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Controlled> "Controlled"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/Controlled> <http://purl.obolibrary.org/obo/IAO_0000027>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/Controlled> <https://w3id.org/pmd/co/PMD_0060006>)
 
 # Class: <https://w3id.org/pmd/ao/hto/Convection> (<https://w3id.org/pmd/ao/hto/Convection>)
 
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/Convection> "if its a device specification to run a heat up process by some spefiic mode of action, then pls change the definition")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/Convection> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Convection> "konvection during heating, heating in atmosphere, not in vacuum "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Convection> "Convection"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/Convection> <http://purl.obolibrary.org/obo/IAO_0000027>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/Convection> <https://w3id.org/pmd/co/PMD_0060006>)
 
 # Class: <https://w3id.org/pmd/ao/hto/CoolingFlag> (<https://w3id.org/pmd/ao/hto/CoolingFlag>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/CoolingFlag> "marked for deletion")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/CoolingFlag> "definatly not a process charateristic, some kind of very abstract information content entity that is about something that should be expressed as axiom")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/CoolingFlag> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/CoolingFlag> "represents whether a sequence (of a process recipe) is for cooling to nominal temperature or not, takes value 0 or 1 "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/CoolingFlag> "Cooling Flag"@en)
@@ -279,14 +281,14 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/CoolingProcess> "process description during cooling process, e.g. fast cooling, free furnace cooling, controled cooling"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/CoolingProcess> "Abkühlprozess"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/CoolingProcess> "Cooling Process"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/CoolingProcess> <https://w3id.org/pmd/co/PMD_0000549>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/CoolingProcess> <https://w3id.org/pmd/ao/hto/HTO_0000000>)
 
 # Class: <https://w3id.org/pmd/ao/hto/DewPoint> (<https://w3id.org/pmd/ao/hto/DewPoint>)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/DewPoint> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/DewPoint> "dew point of the atmosphere, measured during process or calculated from lambda / oxygen probe signal "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/DewPoint> "Dew Point"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/DewPoint> <http://purl.obolibrary.org/obo/IAO_0000027>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/DewPoint> <http://purl.obolibrary.org/obo/IAO_0000109>)
 
 # Class: <https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature> (<https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature>)
 
@@ -296,24 +298,26 @@ AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/DurationTillTa
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature> "Measurement representing the actual duration of a heating procedure."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature> "Duration Till Target Temperature"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature> "Erwärmdauer"@de)
-SubClassOf(<https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature> <https://w3id.org/pmd/co/PMD_0000880>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature> <http://purl.obolibrary.org/obo/BFO_0000202>)
 
 # Class: <https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature> (<https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature>)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature> "Parameter representing a derived duration of a heat up segment (in hours, minutes or seconds) "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature> "Duration To Reach Target Temperature"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature> <https://w3id.org/pmd/co/PMD_0000880>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature> <http://purl.obolibrary.org/obo/BFO_0000202>)
 
 # Class: <https://w3id.org/pmd/ao/hto/Fan> (<https://w3id.org/pmd/ao/hto/Fan>)
 
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/Fan> "not properly defined")
 SubClassOf(<https://w3id.org/pmd/ao/hto/Fan> <https://w3id.org/pmd/co/PMD_0000602>)
 
 # Class: <https://w3id.org/pmd/ao/hto/FanStateFast> (Fan State Fast)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/FanStateFast> "needs work")
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/FanStateFast> "Fan State Fast"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/FanStateFast> "Boolean parameter representing a fast fan speed setting in contrast to the default speed setting."@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/FanStateFast> <https://w3id.org/pmd/ao/hto/Rotation>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/FanStateFast> <https://w3id.org/pmd/co/PMD_0060006>)
 
 # Class: <https://w3id.org/pmd/ao/hto/FastCooling> (<https://w3id.org/pmd/ao/hto/FastCooling>)
 
@@ -327,6 +331,8 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/FastCooling> <https://w3id.org/pmd/ao/ht
 
 # Class: <https://w3id.org/pmd/ao/hto/FineVacuum> (<https://w3id.org/pmd/ao/hto/FineVacuum>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/FineVacuum> "needs work")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/FineVacuum> "some kind of vacuum category, is a quality of a chamber that has some axiom on how goo it has to be to some other quality.")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/FineVacuum> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/FineVacuum> "status of the atmosphere, evacuation step without nitriding potential "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/FineVacuum> "Fine Vacuum"@en)
@@ -363,7 +369,7 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/Fluid> <https://w3id.org/pmd/ao/hto/Medi
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/FurnaceAtmosphere> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/FurnaceAtmosphere> "atmosphere type present in retort (vacuum, nitriding, neutral, carburizing)"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/FurnaceAtmosphere> "Furnace Atmosphere"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/FurnaceAtmosphere> <http://purl.obolibrary.org/obo/IAO_0000027>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/FurnaceAtmosphere> <http://purl.obolibrary.org/obo/IAO_0000005>)
 
 # Class: <https://w3id.org/pmd/ao/hto/FurnaceCooling> (<https://w3id.org/pmd/ao/hto/FurnaceCooling>)
 
@@ -374,6 +380,7 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/FurnaceCooling> <https://w3id.org/pmd/ao
 
 # Class: <https://w3id.org/pmd/ao/hto/GasIngressFrontState> (Gas Ingress Front State)
 
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/GasIngressFrontState> "again a boolian gdc not a charakteristic")
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/GasIngressFrontState> "Gas Ingress Front State"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/GasIngressFrontState> "Boolean parameter that opens a magnetic-controlled valve to induce frontsited gas ingress (if set to true) into the heating chamber. Choice of ingress can have an effect on the effective gas flow direction into or through the batch and can impact in homogeneties "@en)
 SubClassOf(<https://w3id.org/pmd/ao/hto/GasIngressFrontState> <https://w3id.org/pmd/co/PMD_0000008>)
@@ -412,8 +419,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Heating> "type of heating process, e.g. fast uncontrolled heating, heating ramp controlled etc. "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Heating> "Erwärmprozess"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Heating> "Heating Process"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/Heating> <https://w3id.org/pmd/co/PMD_0000549>)
-SubClassOf(<https://w3id.org/pmd/ao/hto/Heating> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0001938> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000039> <http://qudt.org/vocab/unit/DEG_C>) DataSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0001937> DatatypeRestriction(xsd:double xsd:minInclusive "100.0"^^xsd:double)))))))
+SubClassOf(<https://w3id.org/pmd/ao/hto/Heating> <https://w3id.org/pmd/ao/hto/HTO_0000000>)
 
 # Class: <https://w3id.org/pmd/ao/hto/HeatingChamber> (<https://w3id.org/pmd/ao/hto/HeatingChamber>)
 
@@ -436,14 +442,18 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/HeatingTime> "Duration until the target temperature is reached in the furnace."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/HeatingTime> "Erwärmdauer"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/HeatingTime> "Heating Time"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/HeatingTime> <https://w3id.org/pmd/co/PMD_0000880>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/HeatingTime> <http://purl.obolibrary.org/obo/BFO_0000202>)
 
 # Class: <https://w3id.org/pmd/ao/hto/HeattreatmentMethod> (<https://w3id.org/pmd/ao/hto/HeattreatmentMethod>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/HeattreatmentMethod> "needs work")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/HeattreatmentMethod> "all childs are only categories of processes and definatly not roles! what makes a fats cooling? al colling process with some process charateristic on temperature with 100K/min?")
 SubClassOf(<https://w3id.org/pmd/ao/hto/HeattreatmentMethod> <http://purl.obolibrary.org/obo/BFO_0000023>)
 
 # Class: <https://w3id.org/pmd/ao/hto/HeattreatmentScope> (<https://w3id.org/pmd/ao/hto/HeattreatmentScope>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/HeattreatmentScope> "needs work")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/HeattreatmentScope> "childs are processes that realize a certain goal as realizabale")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/HeattreatmentScope> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/HeattreatmentScope> "This class specifices the scope of the specific heattreatment process."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/HeattreatmentScope> "HeattreatmentScope"@en)
@@ -497,7 +507,7 @@ AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/LeakageCheck> 
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/LeakageCheck> "leakage test duration, where the change of pressure after evacuation is rated according to leakages present "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/LeakageCheck> "stands for the dwell time during which the pressure increase is evaluated to check tighness of furnace after evacuation initially at process begin "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/LeakageCheck> "Leakage Check"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/LeakageCheck> <https://w3id.org/pmd/co/PMD_0000880>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/LeakageCheck> <http://purl.obolibrary.org/obo/BFO_0000202>)
 
 # Class: <https://w3id.org/pmd/ao/hto/LeakageFlag> (<https://w3id.org/pmd/ao/hto/LeakageFlag>)
 
@@ -517,9 +527,11 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/LeakageInterval> <http://purl.obolibrary
 
 # Class: <https://w3id.org/pmd/ao/hto/Manufacturer> (<https://w3id.org/pmd/ao/hto/Manufacturer>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/Manufacturer> "marked for delete")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/Manufacturer> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Manufacturer> " Process Node's manufacturer name, e.g.: \"Ipsen\" or \"UPC\" "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Manufacturer> "manufacturer"@en)
+EquivalentClasses(<https://w3id.org/pmd/ao/hto/Manufacturer> <https://w3id.org/pmd/co/PMD_0000830>)
 SubClassOf(<https://w3id.org/pmd/ao/hto/Manufacturer> <https://w3id.org/pmd/co/PMD_0000879>)
 
 # Class: <https://w3id.org/pmd/ao/hto/MediaMovement> (<https://w3id.org/pmd/ao/hto/MediaMovement>)
@@ -528,9 +540,11 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/MediaMovement> <https://w3id.org/pmd/co/
 
 # Class: <https://w3id.org/pmd/ao/hto/Medium> (<https://w3id.org/pmd/ao/hto/Medium>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/Medium> "needs work")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/Medium> "no set to be a device specification what to use, but that is not good. medium is a special material entity that has a certain role")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Medium> "A surrounding or enveloping substance")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Medium> "Medium"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/Medium> <http://purl.obolibrary.org/obo/IAO_0000027>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/Medium> <http://purl.obolibrary.org/obo/BFO_0000030>)
 
 # Class: <https://w3id.org/pmd/ao/hto/Nitriding> (<https://w3id.org/pmd/ao/hto/Nitriding>)
 
@@ -541,6 +555,7 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/Nitriding> <https://w3id.org/pmd/ao/hto/
 
 # Class: <https://w3id.org/pmd/ao/hto/NitridingDepth> (<https://w3id.org/pmd/ao/hto/NitridingDepth>)
 
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/NitridingDepth> "propably some thicknes quality on some special fiat continuent part, diffusion layer having nitrid or something")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/NitridingDepth> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/NitridingDepth> " designated nitriding depth or measured nitriding depth "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/NitridingDepth> "Nitriding Depth"@en)
@@ -560,7 +575,7 @@ AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/NitridingPoten
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/NitridingPotential> "calculated nitriding potential, generated out of H2 / NH3 atmosphere content measurement"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/NitridingPotential> "nitriding potential of atmosphere calculated from H2 probe signal and ammonia flow rate "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/NitridingPotential> "Nitriding Potential"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/NitridingPotential> <http://purl.obolibrary.org/obo/IAO_0000027>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/NitridingPotential> <http://purl.obolibrary.org/obo/BFO_0000145>)
 
 # Class: <https://w3id.org/pmd/ao/hto/OilQuenchingDuration> (<https://w3id.org/pmd/ao/hto/OilQuenchingDuration>)
 
@@ -570,10 +585,11 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/OilQuenchingDuration> "Verweildauer der Bauteile im Abschreckmedium."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/OilQuenchingDuration> "Abschreckdauer"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/OilQuenchingDuration> "Oil Quenching Duration"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/OilQuenchingDuration> <https://w3id.org/pmd/co/PMD_0000880>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/OilQuenchingDuration> <http://purl.obolibrary.org/obo/BFO_0000202>)
 
 # Class: <https://w3id.org/pmd/ao/hto/OverPressure> (<https://w3id.org/pmd/ao/hto/OverPressure>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/OverPressure> "needs work")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/OverPressure> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/OverPressure> " Parameter also for liquid or gaseous media for quenching condition of inductive heat treatments, e.g. water pressure or nitrogen pressure in mbar or bar "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/OverPressure> "Parameter describing a significant higher pressure than ambient pressure, e.g. during a high pressure gas quenching process step, could be mbar or bar "@en)
@@ -597,7 +613,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/PartialPressure> "nominal pressure of a specific atmosphere component thermochemical steps "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/PartialPressure> "nominal pressure of thermochemical heat treatment pressure during thermochemical steps "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/PartialPressure> "Partial Pressure"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/PartialPressure> <https://w3id.org/pmd/co/PMD_0000896>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/PartialPressure> <http://purl.obolibrary.org/obo/BFO_0000145>)
 
 # Class: <https://w3id.org/pmd/ao/hto/Quenching> (<https://w3id.org/pmd/ao/hto/Quenching>)
 
@@ -626,7 +642,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/QuenchingLeadtime> "Parameter indicatin the duration right before the quenching  process "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/QuenchingLeadtime> "Abschreckvorlaufzeit"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/QuenchingLeadtime> "Quenching Leadtime"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/QuenchingLeadtime> <http://purl.obolibrary.org/obo/BFO_0000019>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/QuenchingLeadtime> <http://purl.obolibrary.org/obo/BFO_0000202>)
 
 # Class: <https://w3id.org/pmd/ao/hto/RecordingInterval> (<https://w3id.org/pmd/ao/hto/RecordingInterval>)
 
@@ -638,11 +654,13 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/RecordingInterval> <http://purl.obolibra
 
 # Class: <https://w3id.org/pmd/ao/hto/Rotation> (<https://w3id.org/pmd/ao/hto/Rotation>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/Rotation> "needs work")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/Rotation> "seam to be a device specification pinting to a process charateristic of type speed")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/Rotation> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Rotation> " Parameter describing the intended rotational speed of a device as e.g. an fan or turbine, unit revolution per minute. "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Rotation> "rotation speed of the atmosphere agitation device "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Rotation> "Rotation Speed"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/Rotation> <http://purl.obolibrary.org/obo/OBI_0000379>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/Rotation> <https://w3id.org/pmd/co/PMD_0060006>)
 
 # Class: <https://w3id.org/pmd/ao/hto/SequenceDescriptor> (<https://w3id.org/pmd/ao/hto/SequenceDescriptor>)
 
@@ -657,7 +675,7 @@ AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/SequenceDurati
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/SequenceDuration> "Duration of a sequence for which certain furnace settings and process parameters can be defined."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/SequenceDuration> "Duration of the current heat treatment recipe sequence."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/SequenceDuration> "Sequence Duration"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/SequenceDuration> <https://w3id.org/pmd/co/PMD_0000880>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/SequenceDuration> <http://purl.obolibrary.org/obo/BFO_0000202>)
 
 # Class: <https://w3id.org/pmd/ao/hto/SequenceNumber> (<https://w3id.org/pmd/ao/hto/SequenceNumber>)
 
@@ -685,7 +703,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/SoakingDuration> "Duration to achieve a homogenous temperature distribution in the part"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/SoakingDuration> "Durchwärmzeit"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/SoakingDuration> "Soaking Duration"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/SoakingDuration> <https://w3id.org/pmd/co/PMD_0000880>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/SoakingDuration> <http://purl.obolibrary.org/obo/BFO_0000202>)
 
 # Class: <https://w3id.org/pmd/ao/hto/SoakingProcess> (<https://w3id.org/pmd/ao/hto/SoakingProcess>)
 
@@ -703,23 +721,17 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/SoakingProcess> <https://w3id.org/pmd/co
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/Standard> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Standard> " standard method for cooling of furnace to RT "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Standard> "Standard"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/Standard> <http://purl.obolibrary.org/obo/IAO_0000027>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/Standard> <https://w3id.org/pmd/co/PMD_0000003>)
 
 # Class: <https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration> (<https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration> "needs work")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration> "usualy a diagram is created out of a process, and it exists then")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration> " Extrahierte Systemzeit für das Diagram geniert "@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration> "time stamp for measuring data aquisition time and diagram generation / data syncing "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration> "System Time For Diagram Generation"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration> <http://purl.obolibrary.org/obo/IAO_0000582>)
-
-# Class: <https://w3id.org/pmd/ao/hto/TemperatureChangingProcess> (<https://w3id.org/pmd/ao/hto/TemperatureChangingProcess>)
-
-AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/TemperatureChangingProcess> <https://w3id.org/pmd/co>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/TemperatureChangingProcess> "A conditioning process which is run to increase or decrease the temperature of an object or a space. Usually, this involves heating or cooling devices such as furnaces or cooling media."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/TemperatureChangingProcess> "Temperature Change Process"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/TemperatureChangingProcess> "Temperaturänderungsprozess"@de)
-SubClassOf(<https://w3id.org/pmd/ao/hto/TemperatureChangingProcess> <https://w3id.org/pmd/co/PMD_0000549>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration> <http://purl.obolibrary.org/obo/IAO_0000109>)
 
 # Class: <https://w3id.org/pmd/ao/hto/Tempering> (<https://w3id.org/pmd/ao/hto/Tempering>)
 
@@ -734,6 +746,8 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/Tempering> <https://w3id.org/pmd/ao/hto/
 
 # Class: <https://w3id.org/pmd/ao/hto/TypeDescription> (<https://w3id.org/pmd/ao/hto/TypeDescription>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/TypeDescription> "marked to remove")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/TypeDescription> "makes no sense to me, if its a decription, create a dc:decription on that individual or class")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/TypeDescription> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/TypeDescription> "Description for Process Node's utility, e.g. \"Rear Vacuum Furnace Oil Quenching\"."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/TypeDescription> "Typbeschreibung"@de)
@@ -749,6 +763,8 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/VacuumHeating> <https://w3id.org/pmd/co/
 
 # Class: <https://w3id.org/pmd/ao/hto/VacuumHeatingPressure> (<https://w3id.org/pmd/ao/hto/VacuumHeatingPressure>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/VacuumHeatingPressure> "needs work")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/VacuumHeatingPressure> "should be defined as pressur that inheres in a vacum heating pump. Add vacuum heating pump to devices")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/VacuumHeatingPressure> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/VacuumHeatingPressure> "Pressure of the vaccum heating pump."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/VacuumHeatingPressure> "Vacuum Heating Pressure"@en)
@@ -758,6 +774,7 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/VacuumHeatingPressure> <https://w3id.org
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/VacuumPressure> " in retort measured value of vakuum sensor "@en)
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/VacuumPressure> " pre-set gas pressure at vacuum sequence "@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/VacuumPressure> "should be defined in conjuntion to some device or role")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/VacuumPressure> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/VacuumPressure> " Paramenter describing the measured pressure inside a chamber; units could be mbar, bar "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/VacuumPressure> " Parameter describing the intended vacuum pressure inside a chamber. "@en)
@@ -787,10 +804,6 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation> <https://
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> "todo")
 SubClassOf(<https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
-
-# Class: <https://w3id.org/pmd/co/PMD_0000602> (Device)
-
-SubClassOf(<https://w3id.org/pmd/co/PMD_0000602> <http://purl.obolibrary.org/obo/BFO_0000030>)
 
 
 )
