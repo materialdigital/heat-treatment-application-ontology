@@ -1,5 +1,6 @@
 @prefix : <https://w3id.org/pmd/ao/hto/hto-base.ttl#> .
 @prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -11,7 +12,7 @@
 
 <https://w3id.org/pmd/ao/hto/hto-base.ttl> rdf:type owl:Ontology ;
                                             owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-09-15/hto-base.ttl> ;
-                                            dce:type <http://purl.obolibrary.org/obo/IAO_8000001> ;
+                                            dce:type obo:IAO_8000001 ;
                                             dcterms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                             dcterms:license <https://creativecommons.org/licenses/unspecified> ;
                                             dcterms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
@@ -20,6 +21,10 @@
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000114
+obo:IAO_0000114 rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/elements/1.1/type
 dce:type rdf:type owl:AnnotationProperty .
@@ -53,74 +58,48 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://purl.obolibrary.org/obo/BFO_0000051
-<http://purl.obolibrary.org/obo/BFO_0000051> rdf:type owl:ObjectProperty .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000055
-<http://purl.obolibrary.org/obo/BFO_0000055> rdf:type owl:ObjectProperty .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000039
-<http://purl.obolibrary.org/obo/IAO_0000039> rdf:type owl:ObjectProperty .
-
-
-###  http://purl.obolibrary.org/obo/OBI_0001938
-<http://purl.obolibrary.org/obo/OBI_0001938> rdf:type owl:ObjectProperty .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://purl.obolibrary.org/obo/OBI_0001937
-<http://purl.obolibrary.org/obo/OBI_0001937> rdf:type owl:DatatypeProperty .
+###  http://purl.obolibrary.org/obo/BFO_0000197
+obo:BFO_0000197 rdf:type owl:ObjectProperty .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://purl.obolibrary.org/obo/BFO_0000019
-<http://purl.obolibrary.org/obo/BFO_0000019> rdf:type owl:Class .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000020
-<http://purl.obolibrary.org/obo/BFO_0000020> rdf:type owl:Class .
-
-
 ###  http://purl.obolibrary.org/obo/BFO_0000023
-<http://purl.obolibrary.org/obo/BFO_0000023> rdf:type owl:Class .
+obo:BFO_0000023 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000024
+obo:BFO_0000024 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000030
+obo:BFO_0000030 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000145
+obo:BFO_0000145 rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000202
-<http://purl.obolibrary.org/obo/BFO_0000202> rdf:type owl:Class .
+obo:BFO_0000202 rdf:type owl:Class .
 
 
-###  http://purl.obolibrary.org/obo/IAO_0000027
-<http://purl.obolibrary.org/obo/IAO_0000027> rdf:type owl:Class .
+###  http://purl.obolibrary.org/obo/IAO_0000005
+obo:IAO_0000005 rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000109
-<http://purl.obolibrary.org/obo/IAO_0000109> rdf:type owl:Class .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000582
-<http://purl.obolibrary.org/obo/IAO_0000582> rdf:type owl:Class .
-
-
-###  http://purl.obolibrary.org/obo/OBI_0000379
-<http://purl.obolibrary.org/obo/OBI_0000379> rdf:type owl:Class .
-
-
-###  http://qudt.org/vocab/unit/DEG_C
-<http://qudt.org/vocab/unit/DEG_C> rdf:type owl:Class .
+obo:IAO_0000109 rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/ao/hto/AccelleratedCooling
 <https://w3id.org/pmd/ao/hto/AccelleratedCooling> rdf:type owl:Class ;
                                                   rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000781> ;
-                                                  rdfs:comment "Achieved via convection only."@en ;
+                                                  obo:IAO_0000114 "needs work" ;
+                                                  rdfs:comment "Achieved via convection only."@en ,
+                                                               "so convection cooling is a function of a device, it could be realized in a cooling process. definatl needs a better name like acllerated convection cooling function, to be specific" ;
                                                   rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                   skos:definition "Status of the cooling method active e.g., at the end of the nitriding process"@en ;
                                                   skos:prefLabel "Accellerated Cooling"@en .
@@ -128,7 +107,9 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/pmd/ao/hto/AcquisitionDate
 <https://w3id.org/pmd/ao/hto/AcquisitionDate> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000582> ;
+                                              rdfs:subClassOf obo:IAO_0000109 ;
+                                              obo:IAO_0000114 "needs work" ;
+                                              rdfs:comment "is a temperal instant!" ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                               skos:definition "The point in time a Process Node was commissioned (e.g., the purchase date, first day of use), represented in IEEE 1003 'Seconds since Epoch'. "@en ;
                                               skos:prefLabel "Acquisition Date"@en .
@@ -161,7 +142,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/pmd/ao/hto/BelowAmbientPressure
 <https://w3id.org/pmd/ao/hto/BelowAmbientPressure> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
+                                                   rdfs:subClassOf obo:BFO_0000145 ;
                                                    rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                    skos:definition "status of atmosphere: reduced pressure below ambient pressure "@en ;
                                                    skos:prefLabel "Below Ambient Pressure"@en .
@@ -169,7 +150,7 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/pmd/ao/hto/CarbonPotential
 <https://w3id.org/pmd/ao/hto/CarbonPotential> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000109> ;
+                                              rdfs:subClassOf obo:BFO_0000145 ;
                                               rdfs:comment "Nitrocarburieren mit Kohlenstoffträger, aus Messwerten abgeleitet KC"@de ,
                                                            "See standard DIN 1310"@en ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
@@ -190,8 +171,10 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/pmd/ao/hto/Chamber
 <https://w3id.org/pmd/ao/hto/Chamber> rdf:type owl:Class ;
-                                      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000020> ;
-                                      rdfs:comment "unklare Zuordnung innerhalb der \"spec. dep. continuants\". Eine Kammer existiert nur als Teil eines Gerätes (Device), könnte aber selbst noch einmal als independent continuant definiert werden, da sich in der Kammer Chargen, Gestelle, Thermoelemente etc. befinden."@de ;
+                                      rdfs:subClassOf obo:BFO_0000024 ;
+                                      obo:IAO_0000114 "needs work" ;
+                                      rdfs:comment "moved to fiat object part. correct if every furnace has a chamber" ,
+                                                   "unklare Zuordnung innerhalb der \"spec. dep. continuants\". Eine Kammer existiert nur als Teil eines Gerätes (Device), könnte aber selbst noch einmal als independent continuant definiert werden, da sich in der Kammer Chargen, Gestelle, Thermoelemente etc. befinden."@de ;
                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                       skos:definition "Systemboundary of a distinct Heattreatment Process. Typically includes media (e.g., Helium or Vaccum)."@en ;
                                       skos:prefLabel "Chamber"@en .
@@ -199,7 +182,19 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/pmd/ao/hto/ChamberPressure
 <https://w3id.org/pmd/ao/hto/ChamberPressure> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000896> ;
+                                              owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0000896>
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty obo:BFO_0000197 ;
+                                                                                           owl:someValuesFrom <https://w3id.org/pmd/ao/hto/Chamber>
+                                                                                         ]
+                                                                                       ) ;
+                                                                    rdf:type owl:Class
+                                                                  ] ;
+                                              rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000896> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty obo:BFO_0000197 ;
+                                                                owl:someValuesFrom <https://w3id.org/pmd/ao/hto/Chamber>
+                                                              ] ;
                                               rdfs:comment "measured atmophere pressure in retort, measured using the vacuum sensor "@en ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                               skos:definition "designated pressure in retort during evacuation phase pre to nitriding process or during low pressure nitriding process "@en ;
@@ -208,8 +203,10 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/pmd/ao/hto/ChamberScope
 <https://w3id.org/pmd/ao/hto/ChamberScope> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
-                                           rdfs:comment "Sollte mit Unit-Volume (m^3) verbunden sein"@de ;
+                                           rdfs:subClassOf obo:BFO_0000023 ;
+                                           obo:IAO_0000114 "needs work" ;
+                                           rdfs:comment "Sollte mit Unit-Volume (m^3) verbunden sein"@de ,
+                                                        "competly dont get that one" ;
                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                            skos:definition "Functional furnace chamber."@en ,
                                                            "Funktionale Ofenkammer."@de ,
@@ -244,7 +241,8 @@ can be: heating chamber / cooling chamber"""@en ;
 
 ###  https://w3id.org/pmd/ao/hto/Controlled
 <https://w3id.org/pmd/ao/hto/Controlled> rdf:type owl:Class ;
-                                         rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
+                                         rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060006> ;
+                                         rdfs:comment "definition is not enough, what is controlled?" ;
                                          rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                          skos:definition "This Scope expresses that a :ValueObject is actively controlled during the process, e.g. a heating process where the temperature change is done in controlled intervals until the desired temperature is reached while an uncontrolled heating process would reach the desired temperature as fast as the furnace allows it to."@en ;
                                          skos:prefLabel "Controlled"@en .
@@ -252,7 +250,8 @@ can be: heating chamber / cooling chamber"""@en ;
 
 ###  https://w3id.org/pmd/ao/hto/Convection
 <https://w3id.org/pmd/ao/hto/Convection> rdf:type owl:Class ;
-                                         rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
+                                         rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060006> ;
+                                         rdfs:comment "if its a device specification to run a heat up process by some spefiic mode of action, then pls change the definition" ;
                                          rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                          skos:definition "konvection during heating, heating in atmosphere, not in vacuum "@en ;
                                          skos:prefLabel "Convection"@en .
@@ -261,6 +260,8 @@ can be: heating chamber / cooling chamber"""@en ;
 ###  https://w3id.org/pmd/ao/hto/CoolingFlag
 <https://w3id.org/pmd/ao/hto/CoolingFlag> rdf:type owl:Class ;
                                           rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
+                                          obo:IAO_0000114 "marked for deletion" ;
+                                          rdfs:comment "definatly not a process charateristic, some kind of very abstract information content entity that is about something that should be expressed as axiom" ;
                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                           skos:definition "represents whether a sequence (of a process recipe) is for cooling to nominal temperature or not, takes value 0 or 1 "@en ;
                                           skos:prefLabel "Cooling Flag"@en .
@@ -268,7 +269,7 @@ can be: heating chamber / cooling chamber"""@en ;
 
 ###  https://w3id.org/pmd/ao/hto/CoolingProcess
 <https://w3id.org/pmd/ao/hto/CoolingProcess> rdf:type owl:Class ;
-                                             rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000549> ;
+                                             rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
                                              rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                              skos:definition "A process in which the temperature is lowered from a higher to a lower level."@en ,
                                                              "Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird."@de ,
@@ -279,7 +280,7 @@ can be: heating chamber / cooling chamber"""@en ;
 
 ###  https://w3id.org/pmd/ao/hto/DewPoint
 <https://w3id.org/pmd/ao/hto/DewPoint> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
+                                       rdfs:subClassOf obo:IAO_0000109 ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                        skos:definition "dew point of the atmosphere, measured during process or calculated from lambda / oxygen probe signal "@en ;
                                        skos:prefLabel "Dew Point"@en .
@@ -287,7 +288,7 @@ can be: heating chamber / cooling chamber"""@en ;
 
 ###  https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature
 <https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature> rdf:type owl:Class ;
-                                                            rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000880> ;
+                                                            rdfs:subClassOf obo:BFO_0000202 ;
                                                             rdfs:comment "Erwärmdauer = Heizzeit + Durchwärmdauer"@de ,
                                                                          "Maß für die tatsächliche Dauer eines Erwärmvorgangs."@de ;
                                                             rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
@@ -298,7 +299,7 @@ can be: heating chamber / cooling chamber"""@en ;
 
 ###  https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature
 <https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature> rdf:type owl:Class ;
-                                                               rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000880> ;
+                                                               rdfs:subClassOf obo:BFO_0000202 ;
                                                                rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                                skos:definition "Parameter representing a derived duration of a heat up segment (in hours, minutes or seconds) "@en ;
                                                                skos:prefLabel "Duration To Reach Target Temperature"@en .
@@ -306,12 +307,14 @@ can be: heating chamber / cooling chamber"""@en ;
 
 ###  https://w3id.org/pmd/ao/hto/Fan
 <https://w3id.org/pmd/ao/hto/Fan> rdf:type owl:Class ;
-                                  rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> .
+                                  rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
+                                  rdfs:comment "not properly defined" .
 
 
 ###  https://w3id.org/pmd/ao/hto/FanStateFast
 <https://w3id.org/pmd/ao/hto/FanStateFast> rdf:type owl:Class ;
-                                           rdfs:subClassOf <https://w3id.org/pmd/ao/hto/Rotation> ;
+                                           rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060006> ;
+                                           obo:IAO_0000114 "needs work" ;
                                            rdfs:label "Fan State Fast"@en ;
                                            skos:definition "Boolean parameter representing a fast fan speed setting in contrast to the default speed setting."@en .
 
@@ -330,6 +333,8 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
 ###  https://w3id.org/pmd/ao/hto/FineVacuum
 <https://w3id.org/pmd/ao/hto/FineVacuum> rdf:type owl:Class ;
                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
+                                         obo:IAO_0000114 "needs work" ;
+                                         rdfs:comment "some kind of vacuum category, is a quality of a chamber that has some axiom on how goo it has to be to some other quality." ;
                                          rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                          skos:definition "status of the atmosphere, evacuation step without nitriding potential "@en ;
                                          skos:prefLabel "Fine Vacuum"@en .
@@ -366,7 +371,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
 
 ###  https://w3id.org/pmd/ao/hto/FurnaceAtmosphere
 <https://w3id.org/pmd/ao/hto/FurnaceAtmosphere> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
+                                                rdfs:subClassOf obo:IAO_0000005 ;
                                                 rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                 skos:definition "atmosphere type present in retort (vacuum, nitriding, neutral, carburizing)"@en ;
                                                 skos:prefLabel "Furnace Atmosphere"@en .
@@ -383,6 +388,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
 ###  https://w3id.org/pmd/ao/hto/GasIngressFrontState
 <https://w3id.org/pmd/ao/hto/GasIngressFrontState> rdf:type owl:Class ;
                                                    rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
+                                                   rdfs:comment "again a boolian gdc not a charakteristic" ;
                                                    rdfs:label "Gas Ingress Front State"@en ;
                                                    skos:definition "Boolean parameter that opens a magnetic-controlled valve to induce frontsited gas ingress (if set to true) into the heating chamber. Choice of ingress can have an effect on the effective gas flow direction into or through the batch and can impact in homogeneties "@en .
 
@@ -412,38 +418,13 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/HeaterRole
 <https://w3id.org/pmd/ao/hto/HeaterRole> rdf:type owl:Class ;
-                                         rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                         rdfs:subClassOf obo:BFO_0000023 ;
                                          rdfs:comment "todo" .
 
 
 ###  https://w3id.org/pmd/ao/hto/Heating
 <https://w3id.org/pmd/ao/hto/Heating> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000549> ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000055> ;
-                                                        owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                                                  owl:onProperty <http://purl.obolibrary.org/obo/OBI_0001938> ;
-                                                                                                  owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                                                                              owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000039> ;
-                                                                                                                                              owl:someValuesFrom <http://qudt.org/vocab/unit/DEG_C>
-                                                                                                                                            ]
-                                                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                                                              owl:onProperty <http://purl.obolibrary.org/obo/OBI_0001937> ;
-                                                                                                                                              owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                                                                                                   owl:onDatatype xsd:double ;
-                                                                                                                                                                   owl:withRestrictions ( [ xsd:minInclusive "100.0"^^xsd:double
-                                                                                                                                                                                          ]
-                                                                                                                                                                                        )
-                                                                                                                                                                 ]
-                                                                                                                                            ]
-                                                                                                                                          ) ;
-                                                                                                                       rdf:type owl:Class
-                                                                                                                     ]
-                                                                                                ]
-                                                                           ]
-                                                      ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
                                       rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/> ;
                                       skos:definition "A process in which the temperature is increased from a lower to a higher level."@en ,
                                                       "Ein Prozess, bei dem die Temperatur von einem niedrigem auf ein höheres Niveau gesteigert wird."@de ,
@@ -464,13 +445,13 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/HeatingKammerRolle
 <https://w3id.org/pmd/ao/hto/HeatingKammerRolle> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                 rdfs:subClassOf obo:BFO_0000023 ;
                                                  rdfs:comment "todo" .
 
 
 ###  https://w3id.org/pmd/ao/hto/HeatingTime
 <https://w3id.org/pmd/ao/hto/HeatingTime> rdf:type owl:Class ;
-                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000880> ;
+                                          rdfs:subClassOf obo:BFO_0000202 ;
                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                           skos:definition "Dauer bis zum Erreichen der Zieltemperatur im Ofen."@de ,
                                                           "Duration until the target temperature is reached in the furnace."@en ;
@@ -480,12 +461,16 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/HeattreatmentMethod
 <https://w3id.org/pmd/ao/hto/HeattreatmentMethod> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+                                                  rdfs:subClassOf obo:BFO_0000023 ;
+                                                  obo:IAO_0000114 "needs work" ;
+                                                  rdfs:comment "all childs are only categories of processes and definatly not roles! what makes a fats cooling? al colling process with some process charateristic on temperature with 100K/min?" .
 
 
 ###  https://w3id.org/pmd/ao/hto/HeattreatmentScope
 <https://w3id.org/pmd/ao/hto/HeattreatmentScope> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                 rdfs:subClassOf obo:BFO_0000023 ;
+                                                 obo:IAO_0000114 "needs work" ;
+                                                 rdfs:comment "childs are processes that realize a certain goal as realizabale" ;
                                                  rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                  skos:definition "This class specifices the scope of the specific heattreatment process."@en ;
                                                  skos:prefLabel "HeattreatmentScope"@en .
@@ -522,7 +507,7 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/HydrogeneSensorSignal
 <https://w3id.org/pmd/ao/hto/HydrogeneSensorSignal> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000109> ;
+                                                    rdfs:subClassOf obo:IAO_0000109 ;
                                                     rdfs:comment "nominal pre-set value of control system for hydrogen probe "@en ;
                                                     rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                     skos:definition "measured hydrogen value of  hydrogen probe measured in milli volt "@en ;
@@ -531,7 +516,7 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/LambdaProbeSignal
 <https://w3id.org/pmd/ao/hto/LambdaProbeSignal> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000109> ;
+                                                rdfs:subClassOf obo:IAO_0000109 ;
                                                 rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                 skos:definition "measured lambda probe signal in exhaust gas "@en ,
                                                                 "measured signal of the lambda-probe in millivolt, representing the atmospheres redox-potential "@en ;
@@ -540,7 +525,7 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/LeakageCheck
 <https://w3id.org/pmd/ao/hto/LeakageCheck> rdf:type owl:Class ;
-                                           rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000880> ;
+                                           rdfs:subClassOf obo:BFO_0000202 ;
                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                            skos:definition "leakage test duration, where the change of pressure after evacuation is rated according to leakages present "@en ,
                                                            "stands for the dwell time during which the pressure increase is evaluated to check tighness of furnace after evacuation initially at process begin "@en ;
@@ -558,7 +543,7 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/LeakageInterval
 <https://w3id.org/pmd/ao/hto/LeakageInterval> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> ;
+                                              rdfs:subClassOf obo:BFO_0000202 ;
                                               rdfs:comment "Stands for the measurement interval for recording sensor signals (pressure, temperature) and instrument settings (rotational speed, flow rate of MFC), unit as time stamp hh:mm:ss "@en ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                               skos:definition "effective leakage measuring duration "@en ;
@@ -567,7 +552,9 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/Manufacturer
 <https://w3id.org/pmd/ao/hto/Manufacturer> rdf:type owl:Class ;
+                                           owl:equivalentClass <https://w3id.org/pmd/co/PMD_0000830> ;
                                            rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000879> ;
+                                           obo:IAO_0000114 "marked for delete" ;
                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                            skos:definition " Process Node's manufacturer name, e.g.: \"Ipsen\" or \"UPC\" "@en ;
                                            skos:prefLabel "manufacturer"@en .
@@ -580,7 +567,9 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/Medium
 <https://w3id.org/pmd/ao/hto/Medium> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
+                                     rdfs:subClassOf obo:BFO_0000030 ;
+                                     obo:IAO_0000114 "needs work" ;
+                                     rdfs:comment "no set to be a device specification what to use, but that is not good. medium is a special material entity that has a certain role" ;
                                      skos:definition "A surrounding or enveloping substance" ;
                                      skos:prefLabel "Medium"@en .
 
@@ -596,6 +585,7 @@ verwendet Randschichttiefe""" ;
 ###  https://w3id.org/pmd/ao/hto/NitridingDepth
 <https://w3id.org/pmd/ao/hto/NitridingDepth> rdf:type owl:Class ;
                                              rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000005> ;
+                                             rdfs:comment "propably some thicknes quality on some special fiat continuent part, diffusion layer having nitrid or something" ;
                                              rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                              skos:definition " designated nitriding depth or measured nitriding depth "@en ;
                                              skos:prefLabel "Nitriding Depth"@en .
@@ -611,7 +601,7 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/NitridingPotential
 <https://w3id.org/pmd/ao/hto/NitridingPotential> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
+                                                 rdfs:subClassOf obo:BFO_0000145 ;
                                                  rdfs:comment "The nitriding potential is a key indicator how intensive the nitriding process is, the higher the value the stronger the nitriding conditions, unit is bar^-3/2"@en ;
                                                  rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                  skos:definition "calculated nitriding potential, generated out of H2 / NH3 atmosphere content measurement"@en ,
@@ -621,7 +611,7 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/OilQuenchingDuration
 <https://w3id.org/pmd/ao/hto/OilQuenchingDuration> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000880> ;
+                                                   rdfs:subClassOf obo:BFO_0000202 ;
                                                    rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                    skos:definition "Dwell time of the components in the quenching medium."@en ,
                                                                    "Parameter indicating the duration of the conducted quenching action "@en ,
@@ -633,6 +623,7 @@ verwendet Randschichttiefe""" ;
 ###  https://w3id.org/pmd/ao/hto/OverPressure
 <https://w3id.org/pmd/ao/hto/OverPressure> rdf:type owl:Class ;
                                            rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000896> ;
+                                           obo:IAO_0000114 "needs work" ;
                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                            skos:definition " Parameter also for liquid or gaseous media for quenching condition of inductive heat treatments, e.g. water pressure or nitrogen pressure in mbar or bar "@en ,
                                                            "Parameter describing a significant higher pressure than ambient pressure, e.g. during a high pressure gas quenching process step, could be mbar or bar "@en ;
@@ -641,7 +632,7 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/OxygenProbeSignal
 <https://w3id.org/pmd/ao/hto/OxygenProbeSignal> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000109> ;
+                                                rdfs:subClassOf obo:IAO_0000109 ;
                                                 rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                 skos:definition " measured oxygen probe signal in retort atmosphere "@en ;
                                                 skos:prefLabel "Oxygen Probe Signal"@en .
@@ -649,7 +640,7 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/PartialPressure
 <https://w3id.org/pmd/ao/hto/PartialPressure> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000896> ;
+                                              rdfs:subClassOf obo:BFO_0000145 ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                               skos:definition " Paramenter describing the intended pressure inside a chamber targeted in a factor relative to one bar (using a vakuum cooling or an atmosphere flow). The complement to vacuum-heating as it allows for active vacuum pump during atmosphere flow. Should be set to zero, if vacuum-heating is true. "@en ,
                                                               "Describing the intended pressure inside a chamber targeted in a factor relative to one bar (using a vakuum cooling or an atmosphere flow)."@en ,
@@ -683,7 +674,7 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/QuenchingLeadtime
 <https://w3id.org/pmd/ao/hto/QuenchingLeadtime> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+                                                rdfs:subClassOf obo:BFO_0000202 ;
                                                 rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                 skos:definition "Dauer zwischen Verlassen der Heizkammer und Beginn der effektiven Abschreckung. Gilt für Zweikammeröfen."@de ,
                                                                 "Duration between leaving the heating chamber and the start of effective quenching. Applies to two-chamber furnaces."@en ,
@@ -694,7 +685,7 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/RecordingInterval
 <https://w3id.org/pmd/ao/hto/RecordingInterval> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> ;
+                                                rdfs:subClassOf obo:BFO_0000202 ;
                                                 rdfs:comment "stands for the measurement interval for recording sensor signals (pressure, temperature) and instrument settings (rotational speed, flow rate of MFC), unit as time stamp hh:mm:ss "@en ;
                                                 rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                 skos:definition " effective data aquisition and saving interval for documentation "@en ;
@@ -703,7 +694,9 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/Rotation
 <https://w3id.org/pmd/ao/hto/Rotation> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000379> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060006> ;
+                                       obo:IAO_0000114 "needs work" ;
+                                       rdfs:comment "seam to be a device specification pinting to a process charateristic of type speed" ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                        skos:definition " Parameter describing the intended rotational speed of a device as e.g. an fan or turbine, unit revolution per minute. "@en ,
                                                        "rotation speed of the atmosphere agitation device "@en ;
@@ -720,7 +713,7 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/SequenceDuration
 <https://w3id.org/pmd/ao/hto/SequenceDuration> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000880> ;
+                                               rdfs:subClassOf obo:BFO_0000202 ;
                                                rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                skos:definition "Duration of a sequence for which certain furnace settings and process parameters can be defined."@en ,
                                                                "Duration of the current heat treatment recipe sequence."@en ;
@@ -749,7 +742,7 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/SoakingDuration
 <https://w3id.org/pmd/ao/hto/SoakingDuration> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000880> ;
+                                              rdfs:subClassOf obo:BFO_0000202 ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                               skos:definition "Dauer bis zum Erreichen der homogenen Temperatur im Bauteil."@de ,
                                                               "Duration at isothermal temperatur step."@en ,
@@ -772,7 +765,7 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/Standard
 <https://w3id.org/pmd/ao/hto/Standard> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000003> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                        skos:definition " standard method for cooling of furnace to RT "@en ;
                                        skos:prefLabel "Standard"@en .
@@ -780,20 +773,13 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration
 <https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration> rdf:type owl:Class ;
-                                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000582> ;
+                                                             rdfs:subClassOf obo:IAO_0000109 ;
+                                                             obo:IAO_0000114 "needs work" ;
+                                                             rdfs:comment "usualy a diagram is created out of a process, and it exists then" ;
                                                              rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                              skos:definition " Extrahierte Systemzeit für das Diagram geniert "@de ,
                                                                              "time stamp for measuring data aquisition time and diagram generation / data syncing "@en ;
                                                              skos:prefLabel "System Time For Diagram Generation"@en .
-
-
-###  https://w3id.org/pmd/ao/hto/TemperatureChangingProcess
-<https://w3id.org/pmd/ao/hto/TemperatureChangingProcess> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000549> ;
-                                                         rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
-                                                         skos:definition "A conditioning process which is run to increase or decrease the temperature of an object or a space. Usually, this involves heating or cooling devices such as furnaces or cooling media."@en ;
-                                                         skos:prefLabel "Temperature Change Process"@en ,
-                                                                        "Temperaturänderungsprozess"@de .
 
 
 ###  https://w3id.org/pmd/ao/hto/Tempering
@@ -811,6 +797,8 @@ verwendet Randschichttiefe""" ;
 ###  https://w3id.org/pmd/ao/hto/TypeDescription
 <https://w3id.org/pmd/ao/hto/TypeDescription> rdf:type owl:Class ;
                                               rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000017> ;
+                                              obo:IAO_0000114 "marked to remove" ;
+                                              rdfs:comment "makes no sense to me, if its a decription, create a dc:decription on that individual or class" ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                               skos:definition "Description for Process Node's utility, e.g. \"Rear Vacuum Furnace Oil Quenching\"."@en ;
                                               skos:prefLabel "Typbeschreibung"@de ,
@@ -828,6 +816,8 @@ verwendet Randschichttiefe""" ;
 ###  https://w3id.org/pmd/ao/hto/VacuumHeatingPressure
 <https://w3id.org/pmd/ao/hto/VacuumHeatingPressure> rdf:type owl:Class ;
                                                     rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000896> ;
+                                                    obo:IAO_0000114 "needs work" ;
+                                                    rdfs:comment "should be defined as pressur that inheres in a vacum heating pump. Add vacuum heating pump to devices" ;
                                                     rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                     skos:definition "Pressure of the vaccum heating pump."@en ;
                                                     skos:prefLabel "Vacuum Heating Pressure"@en .
@@ -837,7 +827,8 @@ verwendet Randschichttiefe""" ;
 <https://w3id.org/pmd/ao/hto/VacuumPressure> rdf:type owl:Class ;
                                              rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000896> ;
                                              rdfs:comment " in retort measured value of vakuum sensor "@en ,
-                                                          " pre-set gas pressure at vacuum sequence "@en ;
+                                                          " pre-set gas pressure at vacuum sequence "@en ,
+                                                          "should be defined in conjuntion to some device or role" ;
                                              rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                              skos:definition " Paramenter describing the measured pressure inside a chamber; units could be mbar, bar "@en ,
                                                              " Parameter describing the intended vacuum pressure inside a chamber. "@en ;
@@ -867,8 +858,12 @@ This is a relevant information because it indicates a process step in between tw
 
 ###  https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole
 <https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                  rdfs:subClassOf obo:BFO_0000023 ;
                                                   rdfs:comment "todo" .
+
+
+###  https://w3id.org/pmd/co/PMD_0000003
+<https://w3id.org/pmd/co/PMD_0000003> rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000005
@@ -883,10 +878,6 @@ This is a relevant information because it indicates a process step in between tw
 <https://w3id.org/pmd/co/PMD_0000017> rdf:type owl:Class .
 
 
-###  https://w3id.org/pmd/co/PMD_0000549
-<https://w3id.org/pmd/co/PMD_0000549> rdf:type owl:Class .
-
-
 ###  https://w3id.org/pmd/co/PMD_0000602
 <https://w3id.org/pmd/co/PMD_0000602> rdf:type owl:Class .
 
@@ -899,6 +890,10 @@ This is a relevant information because it indicates a process step in between tw
 <https://w3id.org/pmd/co/PMD_0000781> rdf:type owl:Class .
 
 
+###  https://w3id.org/pmd/co/PMD_0000830
+<https://w3id.org/pmd/co/PMD_0000830> rdf:type owl:Class .
+
+
 ###  https://w3id.org/pmd/co/PMD_0000833
 <https://w3id.org/pmd/co/PMD_0000833> rdf:type owl:Class .
 
@@ -907,12 +902,12 @@ This is a relevant information because it indicates a process step in between tw
 <https://w3id.org/pmd/co/PMD_0000879> rdf:type owl:Class .
 
 
-###  https://w3id.org/pmd/co/PMD_0000880
-<https://w3id.org/pmd/co/PMD_0000880> rdf:type owl:Class .
-
-
 ###  https://w3id.org/pmd/co/PMD_0000896
 <https://w3id.org/pmd/co/PMD_0000896> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/PMD_0060006
+<https://w3id.org/pmd/co/PMD_0060006> rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/co/PMD_0060008

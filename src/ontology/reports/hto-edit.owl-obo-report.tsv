@@ -67,7 +67,6 @@ ERROR	missing_label	https://w3id.org/pmd/ao/hto/SoakingDuration	rdfs:label
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/SoakingProcess	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Standard	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/TemperatureChangingProcess	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Tempering	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/TypeDescription	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/VacuumHeating	rdfs:label	
@@ -128,6 +127,7 @@ WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/VacuumPressure	skos:defin
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/VacuumPressure	skos:definition	 Parameter describing the intended vacuum pressure inside a chamber. @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/WithGasPurging	skos:definition	 Furnace atmosphere control and oxygen deminishing steps with nitrogen gas flow @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation	skos:definition	Neglect any intermediate evacuation process @en
+WARN	equivalent_pair	https://w3id.org/pmd/ao/hto/Manufacturer	owl:equivalentClass	https://w3id.org/pmd/co/PMD_0000830
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/AccelleratedCooling	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/AcquisitionDate	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Annealing	IAO:0000115	
@@ -199,7 +199,6 @@ WARN	missing_definition	https://w3id.org/pmd/ao/hto/SoakingDuration	IAO:0000115
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/SoakingProcess	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Standard	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/TemperatureChangingProcess	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Tempering	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/TypeDescription	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/VacuumHeating	IAO:0000115	
@@ -208,3 +207,4 @@ WARN	missing_definition	https://w3id.org/pmd/ao/hto/VacuumPressure	IAO:0000115
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/WithGasPurging	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole	IAO:0000115	
+INFO	missing_superclass	https://w3id.org/pmd/ao/hto/ChamberPressure	rdfs:subClassOf	
