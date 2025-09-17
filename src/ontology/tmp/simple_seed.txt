@@ -26,8 +26,8 @@ https://w3id.org/pmd/ao/hto/CollectionInterfaceHint
 https://w3id.org/pmd/ao/hto/ConcentrationH2
 https://w3id.org/pmd/ao/hto/Controlled
 https://w3id.org/pmd/ao/hto/Convection
+https://w3id.org/pmd/ao/hto/Cooling
 https://w3id.org/pmd/ao/hto/CoolingFlag
-https://w3id.org/pmd/ao/hto/CoolingProcess
 https://w3id.org/pmd/ao/hto/DewPoint
 https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature
 https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature
@@ -78,8 +78,8 @@ https://w3id.org/pmd/ao/hto/SequenceDescriptor
 https://w3id.org/pmd/ao/hto/SequenceDuration
 https://w3id.org/pmd/ao/hto/SequenceNumber
 https://w3id.org/pmd/ao/hto/SlowCooling
+https://w3id.org/pmd/ao/hto/Soaking
 https://w3id.org/pmd/ao/hto/SoakingDuration
-https://w3id.org/pmd/ao/hto/SoakingProcess
 https://w3id.org/pmd/ao/hto/Standard
 https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration
 https://w3id.org/pmd/ao/hto/Tempering

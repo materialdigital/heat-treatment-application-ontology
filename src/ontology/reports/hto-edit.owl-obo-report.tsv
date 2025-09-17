@@ -14,8 +14,8 @@ ERROR	missing_label	https://w3id.org/pmd/ao/hto/CollectionInterfaceHint	rdfs:lab
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/ConcentrationH2	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Controlled	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Convection	rdfs:label	
+ERROR	missing_label	https://w3id.org/pmd/ao/hto/Cooling	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/CoolingFlag	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/CoolingProcess	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/DewPoint	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature	rdfs:label	
@@ -63,8 +63,8 @@ ERROR	missing_label	https://w3id.org/pmd/ao/hto/SequenceDescriptor	rdfs:label
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/SequenceDuration	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/SequenceNumber	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/SlowCooling	rdfs:label	
+ERROR	missing_label	https://w3id.org/pmd/ao/hto/Soaking	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/SoakingDuration	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/SoakingProcess	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Standard	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Tempering	rdfs:label	
@@ -118,7 +118,7 @@ WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/Rotation	skos:definition	
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/SequenceNumber	skos:definition	 An identifier indicating a process-number in a Workflow represented via consecutive integers @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/SequenceNumber	skos:definition	number of process step of heat treatment recipe @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/SequenceNumber	skos:definition	ongoing number for labeling the process steps within a process recipe @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/SoakingProcess	skos:definition	Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. @en
+WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/Soaking	skos:definition	Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/Standard	skos:definition	 standard method for cooling of furnace to RT @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration	skos:definition	 Extrahierte Systemzeit für das Diagram geniert @de
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration	skos:definition	time stamp for measuring data aquisition time and diagram generation / data syncing @en
@@ -143,8 +143,8 @@ WARN	missing_definition	https://w3id.org/pmd/ao/hto/CollectionInterfaceHint	IAO:
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/ConcentrationH2	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Controlled	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Convection	IAO:0000115	
+WARN	missing_definition	https://w3id.org/pmd/ao/hto/Cooling	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/CoolingFlag	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/CoolingProcess	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/DewPoint	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature	IAO:0000115	
@@ -195,8 +195,8 @@ WARN	missing_definition	https://w3id.org/pmd/ao/hto/SequenceDescriptor	IAO:00001
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/SequenceDuration	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/SequenceNumber	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/SlowCooling	IAO:0000115	
+WARN	missing_definition	https://w3id.org/pmd/ao/hto/Soaking	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/SoakingDuration	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/SoakingProcess	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Standard	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Tempering	IAO:0000115	

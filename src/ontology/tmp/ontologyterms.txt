@@ -1,13 +1,13 @@
 term
+https://w3id.org/pmd/ao/hto/Chamber
+https://w3id.org/pmd/ao/hto/HTO_0000000
 https://w3id.org/pmd/ao/hto/FurnaceAtmosphere
 https://w3id.org/pmd/ao/hto/HeattreatmentScope
 https://w3id.org/pmd/ao/hto/HeattreatmentMethod
 https://w3id.org/pmd/ao/hto/MediaMovement
-https://w3id.org/pmd/ao/hto/Chamber
 https://w3id.org/pmd/ao/hto/Medium
 https://w3id.org/pmd/ao/hto/ChamberScope
 https://w3id.org/pmd/ao/hto/
-https://w3id.org/pmd/ao/hto/HTO_0000000
 https://w3id.org/pmd/ao/hto/Carburizing
 https://w3id.org/pmd/ao/hto/AtmospherePressure
 https://w3id.org/pmd/ao/hto/Holding
@@ -30,6 +30,7 @@ https://w3id.org/pmd/ao/hto/NitridingPotential
 https://w3id.org/pmd/ao/hto/SequenceNumber
 https://w3id.org/pmd/ao/hto/LambdaProbeSignal
 https://w3id.org/pmd/ao/hto/BelowAmbientPressure
+https://w3id.org/pmd/ao/hto/Soaking
 https://w3id.org/pmd/ao/hto/VacuumPressure
 https://w3id.org/pmd/ao/hto/FlowRateTotal
 https://w3id.org/pmd/ao/hto/SequenceDescriptor
@@ -47,6 +48,7 @@ https://w3id.org/pmd/ao/hto/Quenching
 https://w3id.org/pmd/ao/hto/HeatingTime
 https://w3id.org/pmd/ao/hto/AcquisitionDate
 https://w3id.org/pmd/ao/hto/DewPoint
+https://w3id.org/pmd/ao/hto/Cooling
 https://w3id.org/pmd/ao/hto/CollectionInterfaceHint
 https://w3id.org/pmd/ao/hto/CarbonPotential
 https://w3id.org/pmd/ao/hto/NitridingFlag
@@ -67,12 +69,10 @@ https://w3id.org/pmd/ao/hto/Heating
 https://w3id.org/pmd/ao/hto/HeatingKammerRolle
 https://w3id.org/pmd/ao/hto/FanStateFast
 https://w3id.org/pmd/ao/hto/SequenceDuration
-https://w3id.org/pmd/ao/hto/QuenchingChamber
 https://w3id.org/pmd/ao/hto/ChamberPressure
-https://w3id.org/pmd/ao/hto/CoolingProcess
+https://w3id.org/pmd/ao/hto/QuenchingChamber
 https://w3id.org/pmd/ao/hto/NitridingDepth
 https://w3id.org/pmd/ao/hto/OilQuenchingDuration
-https://w3id.org/pmd/ao/hto/SoakingProcess
 https://w3id.org/pmd/ao/hto/SlowCooling
 https://w3id.org/pmd/ao/hto/FlowRate
 https://w3id.org/pmd/ao/hto/OverPressure

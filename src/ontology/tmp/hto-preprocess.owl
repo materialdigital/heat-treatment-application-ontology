@@ -29,8 +29,8 @@ Declaration(Class(<https://w3id.org/pmd/ao/hto/CollectionInterfaceHint>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/ConcentrationH2>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/Controlled>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/Convection>))
+Declaration(Class(<https://w3id.org/pmd/ao/hto/Cooling>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/CoolingFlag>))
-Declaration(Class(<https://w3id.org/pmd/ao/hto/CoolingProcess>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/DewPoint>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature>))
@@ -81,8 +81,8 @@ Declaration(Class(<https://w3id.org/pmd/ao/hto/SequenceDescriptor>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/SequenceDuration>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/SequenceNumber>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/SlowCooling>))
+Declaration(Class(<https://w3id.org/pmd/ao/hto/Soaking>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/SoakingDuration>))
-Declaration(Class(<https://w3id.org/pmd/ao/hto/SoakingProcess>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/Standard>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/Tempering>))
@@ -150,7 +150,7 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/AcquisitionDate> <http://purl.obolibrary
 # Class: <https://w3id.org/pmd/ao/hto/Annealing> (<https://w3id.org/pmd/ao/hto/Annealing>)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/Annealing> <https://w3id.org/pmd/hto/>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Annealing> "Heatteratment process with the scope to change the properties or microstructure of a sample or part. Typically no hardening is performed with this process."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Annealing> "Heat treatment process with the scope to change the properties or microstructure of a sample or part. Typically no hardening is performed with this process."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Annealing> "Annealing"@en)
 SubClassOf(<https://w3id.org/pmd/ao/hto/Annealing> <https://w3id.org/pmd/ao/hto/HeattreatmentScope>)
 
@@ -264,6 +264,16 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Convection> "Convection"@en)
 SubClassOf(<https://w3id.org/pmd/ao/hto/Convection> <https://w3id.org/pmd/co/PMD_0060006>)
 
+# Class: <https://w3id.org/pmd/ao/hto/Cooling> (<https://w3id.org/pmd/ao/hto/Cooling>)
+
+AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/Cooling> <https://w3id.org/pmd/hto/>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Cooling> "A process in which the temperature is lowered from a higher to a lower level."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Cooling> "Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Cooling> "process description during cooling process, e.g. fast cooling, free furnace cooling, controled cooling"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Cooling> "Abkühlprozess"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Cooling> "Cooling Process"@en)
+SubClassOf(<https://w3id.org/pmd/ao/hto/Cooling> <https://w3id.org/pmd/ao/hto/HTO_0000000>)
+
 # Class: <https://w3id.org/pmd/ao/hto/CoolingFlag> (<https://w3id.org/pmd/ao/hto/CoolingFlag>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/CoolingFlag> "marked for deletion")
@@ -272,16 +282,6 @@ AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/CoolingFlag> <
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/CoolingFlag> "represents whether a sequence (of a process recipe) is for cooling to nominal temperature or not, takes value 0 or 1 "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/CoolingFlag> "Cooling Flag"@en)
 SubClassOf(<https://w3id.org/pmd/ao/hto/CoolingFlag> <https://w3id.org/pmd/co/PMD_0000008>)
-
-# Class: <https://w3id.org/pmd/ao/hto/CoolingProcess> (<https://w3id.org/pmd/ao/hto/CoolingProcess>)
-
-AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/CoolingProcess> <https://w3id.org/pmd/hto/>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/CoolingProcess> "A process in which the temperature is lowered from a higher to a lower level."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/CoolingProcess> "Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird."@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/CoolingProcess> "process description during cooling process, e.g. fast cooling, free furnace cooling, controled cooling"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/CoolingProcess> "Abkühlprozess"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/CoolingProcess> "Cooling Process"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/CoolingProcess> <https://w3id.org/pmd/ao/hto/HTO_0000000>)
 
 # Class: <https://w3id.org/pmd/ao/hto/DewPoint> (<https://w3id.org/pmd/ao/hto/DewPoint>)
 
@@ -467,7 +467,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Holding> "Prozessschritt ohne Temperaturänderung im Ofen."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Holding> "Halten"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Holding> "Holding"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/Holding> <https://w3id.org/pmd/co/PMD_0000779>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/Holding> <https://w3id.org/pmd/ao/hto/HTO_0000000>)
 
 # Class: <https://w3id.org/pmd/ao/hto/HoldingCooling> (<https://w3id.org/pmd/ao/hto/HoldingCooling>)
 
@@ -511,6 +511,7 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/LeakageCheck> <http://purl.obolibrary.or
 
 # Class: <https://w3id.org/pmd/ao/hto/LeakageFlag> (<https://w3id.org/pmd/ao/hto/LeakageFlag>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/LeakageFlag> "marked for deletion")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/LeakageFlag> "boolean result of leakage test "@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/LeakageFlag> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/LeakageFlag> "represents whether a sequence of a process recipe is a safety leakage check of furnace or not, takes value 0 or 1 "@en)
@@ -563,6 +564,7 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/NitridingDepth> <https://w3id.org/pmd/co
 
 # Class: <https://w3id.org/pmd/ao/hto/NitridingFlag> (<https://w3id.org/pmd/ao/hto/NitridingFlag>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/NitridingFlag> "marked for deletion")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/NitridingFlag> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/NitridingFlag> " status of the atmosphere, nitriding step with nitriding potential present in the atmosphere "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/NitridingFlag> "Nitriding Flag"@en)
@@ -623,7 +625,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Quenching> "Abschreckprozess"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Quenching> "Quenching"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Quenching> "Quenching Process"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/Quenching> <https://w3id.org/pmd/ao/hto/HeattreatmentMethod>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/Quenching> <https://w3id.org/pmd/ao/hto/HTO_0000000>)
 
 # Class: <https://w3id.org/pmd/ao/hto/QuenchingChamber> (<https://w3id.org/pmd/ao/hto/QuenchingChamber>)
 
@@ -695,6 +697,17 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3i
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/SlowCooling> "Slow Cooling"@en)
 SubClassOf(<https://w3id.org/pmd/ao/hto/SlowCooling> <https://w3id.org/pmd/ao/hto/HeattreatmentMethod>)
 
+# Class: <https://w3id.org/pmd/ao/hto/Soaking> (<https://w3id.org/pmd/ao/hto/Soaking>)
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/Soaking> "Durchwärmen des Bauteils, sodass Temperaturhomogenität erreicht wird. Anschließend kann ein Halten auf der Zieltemperatur erfolgen.")
+AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/Soaking> <https://w3id.org/pmd/hto/>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Soaking> "Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. "@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Soaking> "Process step during which temperature homogenization is achieved in the component."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Soaking> "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Soaking> "Durchwärmprozess"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/Soaking> "Soaking Process"@en)
+SubClassOf(<https://w3id.org/pmd/ao/hto/Soaking> <https://w3id.org/pmd/ao/hto/HTO_0000000>)
+
 # Class: <https://w3id.org/pmd/ao/hto/SoakingDuration> (<https://w3id.org/pmd/ao/hto/SoakingDuration>)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/SoakingDuration> <https://w3id.org/pmd/hto/>)
@@ -704,17 +717,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/SoakingDuration> "Durchwärmzeit"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/SoakingDuration> "Soaking Duration"@en)
 SubClassOf(<https://w3id.org/pmd/ao/hto/SoakingDuration> <http://purl.obolibrary.org/obo/BFO_0000202>)
-
-# Class: <https://w3id.org/pmd/ao/hto/SoakingProcess> (<https://w3id.org/pmd/ao/hto/SoakingProcess>)
-
-AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/SoakingProcess> "Durchwärmen des Bauteils, sodass Temperaturhomogenität erreicht wird. Anschließend kann ein Halten auf der Zieltemperatur erfolgen.")
-AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/SoakingProcess> <https://w3id.org/pmd/hto/>)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/SoakingProcess> "Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. "@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/SoakingProcess> "Process step during which temperature homogenization is achieved in the component."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/SoakingProcess> "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/SoakingProcess> "Durchwärmprozess"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/ao/hto/SoakingProcess> "Soaking Process"@en)
-SubClassOf(<https://w3id.org/pmd/ao/hto/SoakingProcess> <https://w3id.org/pmd/co/PMD_0000779>)
 
 # Class: <https://w3id.org/pmd/ao/hto/Standard> (<https://w3id.org/pmd/ao/hto/Standard>)
 
@@ -783,6 +785,7 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/VacuumPressure> <https://w3id.org/pmd/co
 
 # Class: <https://w3id.org/pmd/ao/hto/WithGasPurging> (<https://w3id.org/pmd/ao/hto/WithGasPurging>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/WithGasPurging> "marked for deletion")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/WithGasPurging> "Indicates a constant supply of athmospheric gas during a heat treatment process.
 
 Without this flag there will be no additional gas supllied except the set pressure drops."@en)
@@ -793,6 +796,7 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/WithGasPurging> <https://w3id.org/pmd/co
 
 # Class: <https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation> (<https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation> "marked for deletion")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation> "During nitriding there can be an exchange of the atmosphere gas without removing the gas beforehand.
 This is a relevant information because it indicates a process step in between two processes."@en)
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation> <https://w3id.org/pmd/hto/>)
@@ -802,6 +806,7 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation> <https://
 
 # Class: <https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> (<https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole>)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> "needs work")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> "todo")
 SubClassOf(<https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
 
