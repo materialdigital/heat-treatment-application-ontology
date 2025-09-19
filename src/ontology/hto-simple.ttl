@@ -12,11 +12,11 @@
 @base <https://w3id.org/pmd/ao/hto/hto-simple.ttl> .
 
 <https://w3id.org/pmd/ao/hto/hto-simple.ttl> rdf:type owl:Ontology ;
-                                              owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-09-18/hto-simple.ttl> ;
+                                              owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-09-19/hto-simple.ttl> ;
                                               terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                               terms:license <https://creativecommons.org/licenses/unspecified> ;
                                               terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                              owl:versionInfo "2025-09-18" .
+                                              owl:versionInfo "2025-09-19" .
 
 #################################################################
 #    Annotation properties
