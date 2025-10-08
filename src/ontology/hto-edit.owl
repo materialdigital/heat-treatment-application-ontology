@@ -296,28 +296,13 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
 
 ###  https://w3id.org/pmd/ao/hto/HTO_0000004
 <https://w3id.org/pmd/ao/hto/HTO_0000004> rdf:type owl:Class ;
-                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ,
-                                                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
-                                                                                   owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000006>
-                                                                                 ]
-                                                                                 [ rdf:type owl:Restriction ;
-                                                                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
-                                                                                   owl:someValuesFrom <https://w3id.org/pmd/ao/hto/heating>
-                                                                                 ]
-                                                                               ) ;
-                                                            rdf:type owl:Class
-                                                          ] ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
                                           rdfs:label "heating recipe"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/HTO_0000005
 <https://w3id.org/pmd/ao/hto/HTO_0000005> rdf:type owl:Class ;
-                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                            owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000549>
-                                                          ] ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
                                           rdfs:label "temperature change rate"@en .
 
 
@@ -684,18 +669,7 @@ verwendet Randschichttiefe""" ;
 
 ###  https://w3id.org/pmd/ao/hto/heating
 <https://w3id.org/pmd/ao/hto/heating> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ,
-                                                      [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                               owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
-                                                                               owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000005>
-                                                                             ]
-                                                                             [ rdf:type owl:Restriction ;
-                                                                               owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
-                                                                               owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000006>
-                                                                             ]
-                                                                           ) ;
-                                                        rdf:type owl:Class
-                                                      ] ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
                                       rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/> ;
                                       rdfs:label "Erwärmen"@de ,
                                                  "heating"@en ;
