@@ -6,7 +6,6 @@ ERROR	missing_label	https://w3id.org/pmd/ao/hto/Atmosphere	rdfs:label
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/AtmospherePressure	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/BelowAmbientPressure	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/CarbonPotential	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/Carburizing	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Chamber	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/ChamberPressure	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/ChamberScope	rdfs:label	
@@ -14,94 +13,73 @@ ERROR	missing_label	https://w3id.org/pmd/ao/hto/CollectionInterfaceHint	rdfs:lab
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/ConcentrationH2	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Controlled	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Convection	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/Cooling	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/CoolingFlag	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/DewPoint	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Fan	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/FastCooling	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/FineVacuum	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/FlowRate	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/FlowRateTotal	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Fluid	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/FurnaceAtmosphere	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/FurnaceCooling	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Hardening	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/HeaterRole	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/Heating	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/HeatingChamber	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/HeatingKammerRolle	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/HeatingTime	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/HeattreatmentMethod	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/HeattreatmentScope	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/Holding	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/HoldingCooling	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/HoldingHeating	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/HydrogeneSensorSignal	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/LambdaProbeSignal	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/LeakageCheck	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/LeakageFlag	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/LeakageInterval	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Manufacturer	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/MediaMovement	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Medium	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Nitriding	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/NitridingDepth	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/NitridingFlag	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/NitridingPotential	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/OilQuenchingDuration	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/OverPressure	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/OxygenProbeSignal	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/PartialPressure	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/Quenching	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/QuenchingChamber	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/QuenchingLeadtime	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/RecordingInterval	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Rotation	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/SequenceDescriptor	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/SequenceDuration	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/SequenceNumber	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/SlowCooling	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/Soaking	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/SoakingDuration	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Standard	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Tempering	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/TypeDescription	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/VacuumHeating	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/VacuumHeatingPressure	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/VacuumPressure	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/WithGasPurging	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation	rdfs:label	
+ERROR	missing_label	https://w3id.org/pmd/ao/hto/cooling	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole	rdfs:label	
+ERROR	multiple_labels	Erwärmen	rdfs:label	Erwärmen@de
+ERROR	multiple_labels	Erwärmen	rdfs:label	heating@en
+ERROR	multiple_labels	Halten	rdfs:label	Halten@de
+ERROR	multiple_labels	Halten	rdfs:label	holding@en
+ERROR	multiple_labels	quenching	rdfs:label	Abschrecken@de
+ERROR	multiple_labels	quenching	rdfs:label	quenching@en
+ERROR	multiple_labels	soaking	rdfs:label	Durchwärmen@de
+ERROR	multiple_labels	soaking	rdfs:label	soaking@en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/AcquisitionDate	skos:definition	The point in time a Process Node was commissioned (e.g., the purchase date, first day of use), represented in IEEE 1003 'Seconds since Epoch'. @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/AtmospherePressure	skos:definition	Parameter describing the intended atmosphere pressure inside a chamber. @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/BelowAmbientPressure	skos:definition	status of atmosphere: reduced pressure below ambient pressure @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/ChamberPressure	skos:definition	designated pressure in retort during evacuation phase pre to nitriding process or during low pressure nitriding process @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/CollectionInterfaceHint	skos:definition	A label in support of identifying a network interface and/or address used by a process node to provide primary data stored in ontologies @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/Convection	skos:definition	konvection during heating, heating in atmosphere, not in vacuum @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/CoolingFlag	skos:definition	represents whether a sequence (of a process recipe) is for cooling to nominal temperature or not, takes value 0 or 1 @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/DewPoint	skos:definition	dew point of the atmosphere, measured during process or calculated from lambda / oxygen probe signal @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature	skos:definition	Parameter representing a derived duration of a heat up segment (in hours, minutes or seconds) @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/FineVacuum	skos:definition	status of the atmosphere, evacuation step without nitriding potential @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/FurnaceCooling	skos:definition	free cooling with deactivated heating unit and no additonal cooling by e.g. agitade nitrogene -> furnace cool @en
-WARN	annotation_whitespace	Gas Ingress Front State	skos:definition	Boolean parameter that opens a magnetic-controlled valve to induce frontsited gas ingress (if set to true) into the heating chamber. Choice of ingress can have an effect on the effective gas flow direction into or through the batch and can impact in homogeneties @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/Heating	skos:definition	type of heating process, e.g. fast uncontrolled heating, heating ramp controlled etc. @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/HoldingCooling	skos:definition	Unterbrechung des Kühlprozesses zwecks Temperaturausgleich @de
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/HoldingCooling	skos:definition	represents whether a sequence (of a process recipe) is for waiting until nominal temperature is reached during cooling or not, takes value 0 or 1 @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/HoldingHeating	skos:definition	isothermal holding step during heating @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/HoldingHeating	skos:definition	represents whether a sequence (of a process recipe) is for waiting until nominal temperature is reached during heating or not, takes value 0 or 1 @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/HydrogeneSensorSignal	skos:definition	measured hydrogen value of  hydrogen probe measured in milli volt @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/LambdaProbeSignal	skos:definition	measured lambda probe signal in exhaust gas @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/LambdaProbeSignal	skos:definition	measured signal of the lambda-probe in millivolt, representing the atmospheres redox-potential @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/LeakageCheck	skos:definition	leakage test duration, where the change of pressure after evacuation is rated according to leakages present @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/LeakageCheck	skos:definition	stands for the dwell time during which the pressure increase is evaluated to check tighness of furnace after evacuation initially at process begin @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/LeakageFlag	skos:definition	represents whether a sequence of a process recipe is a safety leakage check of furnace or not, takes value 0 or 1 @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/LeakageInterval	skos:definition	effective leakage measuring duration @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/Manufacturer	skos:definition	" Process Node's manufacturer name, e.g.: \""Ipsen\"" or \""UPC\"" @en"
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/NitridingDepth	skos:definition	 designated nitriding depth or measured nitriding depth @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/NitridingFlag	skos:definition	 status of the atmosphere, nitriding step with nitriding potential present in the atmosphere @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/NitridingPotential	skos:definition	nitriding potential of atmosphere calculated from H2 probe signal and ammonia flow rate @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/OilQuenchingDuration	skos:definition	Parameter indicating the duration of the conducted quenching action @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/OverPressure	skos:definition	 Parameter also for liquid or gaseous media for quenching condition of inductive heat treatments, e.g. water pressure or nitrogen pressure in mbar or bar @en
@@ -112,21 +90,19 @@ WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/PartialPressure	skos:defi
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/PartialPressure	skos:definition	nominal pressure of a specific atmosphere component thermochemical steps @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/PartialPressure	skos:definition	nominal pressure of thermochemical heat treatment pressure during thermochemical steps @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/QuenchingLeadtime	skos:definition	Parameter indicatin the duration right before the quenching  process @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/RecordingInterval	skos:definition	 effective data aquisition and saving interval for documentation @en
+WARN	annotation_whitespace	recording interval	skos:definition	 effective data aquisition and saving interval for documentation @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/Rotation	skos:definition	 Parameter describing the intended rotational speed of a device as e.g. an fan or turbine, unit revolution per minute. @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/Rotation	skos:definition	rotation speed of the atmosphere agitation device @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/SequenceNumber	skos:definition	 An identifier indicating a process-number in a Workflow represented via consecutive integers @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/SequenceNumber	skos:definition	number of process step of heat treatment recipe @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/SequenceNumber	skos:definition	ongoing number for labeling the process steps within a process recipe @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/Soaking	skos:definition	Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/Standard	skos:definition	 standard method for cooling of furnace to RT @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration	skos:definition	 Extrahierte Systemzeit für das Diagram geniert @de
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration	skos:definition	time stamp for measuring data aquisition time and diagram generation / data syncing @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/VacuumHeating	skos:definition	Parameter that sets the activity of the vacuum pump. If true, no atmosphere flow is possible (even if set). Effectively, the same mechanics as vacuum-cooling (this is for humans) @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/VacuumPressure	skos:definition	 Paramenter describing the measured pressure inside a chamber; units could be mbar, bar @en
 WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/VacuumPressure	skos:definition	 Parameter describing the intended vacuum pressure inside a chamber. @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/WithGasPurging	skos:definition	 Furnace atmosphere control and oxygen deminishing steps with nitrogen gas flow @en
-WARN	annotation_whitespace	https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation	skos:definition	Neglect any intermediate evacuation process @en
+WARN	annotation_whitespace	Erwärmen	skos:definition	type of heating process, e.g. fast uncontrolled heating, heating ramp controlled etc. @en
+WARN	annotation_whitespace	soaking	skos:definition	Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. @en
 WARN	equivalent_pair	https://w3id.org/pmd/ao/hto/Manufacturer	owl:equivalentClass	https://w3id.org/pmd/co/PMD_0000830
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/AccelleratedCooling	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/AcquisitionDate	IAO:0000115	
@@ -135,7 +111,7 @@ WARN	missing_definition	https://w3id.org/pmd/ao/hto/Atmosphere	IAO:0000115
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/AtmospherePressure	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/BelowAmbientPressure	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/CarbonPotential	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/Carburizing	IAO:0000115	
+WARN	missing_definition	carburizing recipe	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Chamber	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/ChamberPressure	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/ChamberScope	IAO:0000115	
@@ -143,68 +119,58 @@ WARN	missing_definition	https://w3id.org/pmd/ao/hto/CollectionInterfaceHint	IAO:
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/ConcentrationH2	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Controlled	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Convection	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/Cooling	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/CoolingFlag	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/DewPoint	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Fan	IAO:0000115	
 WARN	missing_definition	Fan State Fast	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/FastCooling	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/FineVacuum	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/FlowRate	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/FlowRateTotal	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Fluid	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/FurnaceAtmosphere	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/FurnaceCooling	IAO:0000115	
-WARN	missing_definition	Gas Ingress Front State	IAO:0000115	
 WARN	missing_definition	heat treatment process	IAO:0000115	
+WARN	missing_definition	heating recipe	IAO:0000115	
+WARN	missing_definition	temperature change rate	IAO:0000115	
+WARN	missing_definition	target temperature	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Hardening	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/HeaterRole	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/Heating	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/HeatingChamber	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/HeatingKammerRolle	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/HeatingTime	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/HeattreatmentMethod	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/HeattreatmentScope	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/Holding	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/HoldingCooling	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/HoldingHeating	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/HydrogeneSensorSignal	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/LambdaProbeSignal	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/LeakageCheck	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/LeakageFlag	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/LeakageInterval	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Manufacturer	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/MediaMovement	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Medium	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Nitriding	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/NitridingDepth	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/NitridingFlag	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/NitridingPotential	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/OilQuenchingDuration	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/OverPressure	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/OxygenProbeSignal	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/PartialPressure	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/Quenching	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/QuenchingChamber	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/QuenchingLeadtime	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/RecordingInterval	IAO:0000115	
+WARN	missing_definition	recording interval	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Rotation	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/SequenceDescriptor	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/SequenceDuration	IAO:0000115	
+WARN	missing_definition	sequence duration	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/SequenceNumber	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/SlowCooling	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/Soaking	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/SoakingDuration	IAO:0000115	
+WARN	missing_definition	soaking duration	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Standard	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/Tempering	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/TypeDescription	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/VacuumHeating	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/VacuumHeatingPressure	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/VacuumPressure	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/WithGasPurging	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation	IAO:0000115	
+WARN	missing_definition	https://w3id.org/pmd/ao/hto/cooling	IAO:0000115	
+WARN	missing_definition	Erwärmen	IAO:0000115	
+WARN	missing_definition	Halten	IAO:0000115	
+WARN	missing_definition	quenching	IAO:0000115	
+WARN	missing_definition	soaking	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole	IAO:0000115	
 INFO	missing_superclass	https://w3id.org/pmd/ao/hto/ChamberPressure	rdfs:subClassOf	

@@ -1,5 +1,5 @@
 @prefix : <https://w3id.org/pmd/ao/hto/hto-base.ttl#> .
-@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,16 +7,16 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix terms: <http://purl.org/dc/terms/> .
 @base <https://w3id.org/pmd/ao/hto/hto-base.ttl> .
 
 <https://w3id.org/pmd/ao/hto/hto-base.ttl> rdf:type owl:Ontology ;
-                                            owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-09-19/hto-base.ttl> ;
-                                            dce:type obo:IAO_8000001 ;
-                                            dcterms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
-                                            dcterms:license <https://creativecommons.org/licenses/unspecified> ;
-                                            dcterms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                            owl:versionInfo "2025-09-19" .
+                                            owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-10-08/hto-base.ttl> ;
+                                            dc:type obo:IAO_8000001 ;
+                                            terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
+                                            terms:license <https://creativecommons.org/licenses/unspecified> ;
+                                            terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
+                                            owl:versionInfo "2025-10-08" .
 
 #################################################################
 #    Annotation properties
@@ -27,19 +27,19 @@ obo:IAO_0000114 rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/type
-dce:type rdf:type owl:AnnotationProperty .
+dc:type rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/description
-dcterms:description rdf:type owl:AnnotationProperty .
+terms:description rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
-dcterms:license rdf:type owl:AnnotationProperty .
+terms:license rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
-dcterms:title rdf:type owl:AnnotationProperty .
+terms:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#definition
@@ -163,10 +163,10 @@ obo:IAO_0000109 rdf:type owl:Class .
                                           rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
                                           rdfs:comment "Potentiell ableitbar mit bestimmten Fluss-Schwellenwerten"@de ;
                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
+                                          rdfs:label "carburizing recipe"@en ;
                                           skos:definition "Heattreatment process with the scope to transfer carbon from the atmosphere to the component surface."@en ,
                                                           "Prozessschritt, während dessen Kohlenstoff aus der Atmosphäre an der Bauteiloberfläche übertragen wird"@de ;
-                                          skos:prefLabel "Aufkohlen"@de ,
-                                                         "Carburizing"@en .
+                                          skos:prefLabel "Aufkohlen"@de .
 
 
 ###  https://w3id.org/pmd/ao/hto/Chamber
@@ -257,27 +257,6 @@ can be: heating chamber / cooling chamber"""@en ;
                                          skos:prefLabel "Convection"@en .
 
 
-###  https://w3id.org/pmd/ao/hto/Cooling
-<https://w3id.org/pmd/ao/hto/Cooling> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
-                                      rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                      skos:definition "A process in which the temperature is lowered from a higher to a lower level."@en ,
-                                                      "Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird."@de ,
-                                                      "process description during cooling process, e.g. fast cooling, free furnace cooling, controled cooling"@en ;
-                                      skos:prefLabel "Abkühlprozess"@de ,
-                                                     "Cooling Process"@en .
-
-
-###  https://w3id.org/pmd/ao/hto/CoolingFlag
-<https://w3id.org/pmd/ao/hto/CoolingFlag> rdf:type owl:Class ;
-                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
-                                          obo:IAO_0000114 "marked for deletion" ;
-                                          rdfs:comment "definatly not a process charateristic, some kind of very abstract information content entity that is about something that should be expressed as axiom" ;
-                                          rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                          skos:definition "represents whether a sequence (of a process recipe) is for cooling to nominal temperature or not, takes value 0 or 1 "@en ;
-                                          skos:prefLabel "Cooling Flag"@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/DewPoint
 <https://w3id.org/pmd/ao/hto/DewPoint> rdf:type owl:Class ;
                                        rdfs:subClassOf obo:IAO_0000109 ;
@@ -330,38 +309,6 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
                                           skos:prefLabel "Fast Cooling"@en .
 
 
-###  https://w3id.org/pmd/ao/hto/FineVacuum
-<https://w3id.org/pmd/ao/hto/FineVacuum> rdf:type owl:Class ;
-                                         rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
-                                         obo:IAO_0000114 "needs work" ;
-                                         rdfs:comment "some kind of vacuum category, is a quality of a chamber that has some axiom on how goo it has to be to some other quality." ;
-                                         rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                         skos:definition "status of the atmosphere, evacuation step without nitriding potential "@en ;
-                                         skos:prefLabel "Fine Vacuum"@en .
-
-
-###  https://w3id.org/pmd/ao/hto/FlowRate
-<https://w3id.org/pmd/ao/hto/FlowRate> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/ao/hto/MediaMovement> ;
-                                       rdfs:comment "Effective flow rate might be generated by the system with a manual input in Percent."@en ,
-                                                    "Use Scope.Medium and pmdoc:relatesTo chemical element from chebi; units could be l/min, l/h, m³/h, ..." ;
-                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                       skos:definition "Parameter representing the intended induced flow rate of a medium, e.g. Oil, Gases, Fluids in general."@en ;
-                                       skos:example """ex:flowrateH2 a :FlowRate ;
-                       co:relatesTo chebie:Hydrogen ;
-                      co:unit qudt:Mol-per-litre .""" ;
-                                       skos:prefLabel "Flow Rate"@en .
-
-
-###  https://w3id.org/pmd/ao/hto/FlowRateTotal
-<https://w3id.org/pmd/ao/hto/FlowRateTotal> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://w3id.org/pmd/ao/hto/MediaMovement> ;
-                                            rdfs:comment "Units could be l/min, l/h, m³/h, ... " ;
-                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                            skos:definition "Measured value for the total flow rate of all process media"@en ;
-                                            skos:prefLabel "Flow Rate Total"@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/Fluid
 <https://w3id.org/pmd/ao/hto/Fluid> rdf:type owl:Class ;
                                     rdfs:subClassOf <https://w3id.org/pmd/ao/hto/Medium> ;
@@ -385,18 +332,29 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
                                              skos:prefLabel "Furnace Cooling"@en .
 
 
-###  https://w3id.org/pmd/ao/hto/GasIngressFrontState
-<https://w3id.org/pmd/ao/hto/GasIngressFrontState> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
-                                                   rdfs:comment "again a boolian gdc not a charakteristic" ;
-                                                   rdfs:label "Gas Ingress Front State"@en ;
-                                                   skos:definition "Boolean parameter that opens a magnetic-controlled valve to induce frontsited gas ingress (if set to true) into the heating chamber. Choice of ingress can have an effect on the effective gas flow direction into or through the batch and can impact in homogeneties "@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/HTO_0000000
 <https://w3id.org/pmd/ao/hto/HTO_0000000> rdf:type owl:Class ;
                                           rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000833> ;
                                           rdfs:label "heat treatment process"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000004
+<https://w3id.org/pmd/ao/hto/HTO_0000004> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
+                                          rdfs:label "heating recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000005
+<https://w3id.org/pmd/ao/hto/HTO_0000005> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
+                                          rdfs:label "temperature change rate"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000006
+<https://w3id.org/pmd/ao/hto/HTO_0000006> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
+                                          rdfs:label "target temperature"@en ;
+                                          skos:definition "Process characteristic defining the temperature that is to be reached within a process that involves a defined change of temperature."@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/Hardening
@@ -420,17 +378,6 @@ verwendet Randschichttiefe""" ;
 <https://w3id.org/pmd/ao/hto/HeaterRole> rdf:type owl:Class ;
                                          rdfs:subClassOf obo:BFO_0000023 ;
                                          rdfs:comment "todo" .
-
-
-###  https://w3id.org/pmd/ao/hto/Heating
-<https://w3id.org/pmd/ao/hto/Heating> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
-                                      rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/> ;
-                                      skos:definition "A process in which the temperature is increased from a lower to a higher level."@en ,
-                                                      "Ein Prozess, bei dem die Temperatur von einem niedrigem auf ein höheres Niveau gesteigert wird."@de ,
-                                                      "type of heating process, e.g. fast uncontrolled heating, heating ramp controlled etc. "@en ;
-                                      skos:prefLabel "Erwärmprozess"@de ,
-                                                     "Heating Process"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/HeatingChamber
@@ -476,35 +423,6 @@ verwendet Randschichttiefe""" ;
                                                  skos:prefLabel "HeattreatmentScope"@en .
 
 
-###  https://w3id.org/pmd/ao/hto/Holding
-<https://w3id.org/pmd/ao/hto/Holding> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
-                                      rdfs:comment "Die HoldingTime ist stets mit einer vorhergehende SoakingTime verbunden."@de ;
-                                      rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                      skos:definition "Process step without temperature change in the furnace after the designated temperature was homogeneously reached within the part."@en ,
-                                                      "Prozessschritt ohne Temperaturänderung im Ofen."@de ;
-                                      skos:prefLabel "Halten"@de ,
-                                                     "Holding"@en .
-
-
-###  https://w3id.org/pmd/ao/hto/HoldingCooling
-<https://w3id.org/pmd/ao/hto/HoldingCooling> rdf:type owl:Class ;
-                                             rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
-                                             rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                             skos:definition "Unterbrechung des Kühlprozesses zwecks Temperaturausgleich "@de ,
-                                                             "represents whether a sequence (of a process recipe) is for waiting until nominal temperature is reached during cooling or not, takes value 0 or 1 "@en ;
-                                             skos:prefLabel "Holding Cooling"@en .
-
-
-###  https://w3id.org/pmd/ao/hto/HoldingHeating
-<https://w3id.org/pmd/ao/hto/HoldingHeating> rdf:type owl:Class ;
-                                             rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
-                                             rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                             skos:definition "isothermal holding step during heating "@en ,
-                                                             "represents whether a sequence (of a process recipe) is for waiting until nominal temperature is reached during heating or not, takes value 0 or 1 "@en ;
-                                             skos:prefLabel "Holding Heating"@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/HydrogeneSensorSignal
 <https://w3id.org/pmd/ao/hto/HydrogeneSensorSignal> rdf:type owl:Class ;
                                                     rdfs:subClassOf obo:IAO_0000109 ;
@@ -532,16 +450,6 @@ verwendet Randschichttiefe""" ;
                                            skos:prefLabel "Leakage Check"@en .
 
 
-###  https://w3id.org/pmd/ao/hto/LeakageFlag
-<https://w3id.org/pmd/ao/hto/LeakageFlag> rdf:type owl:Class ;
-                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
-                                          obo:IAO_0000114 "marked for deletion" ;
-                                          rdfs:comment "boolean result of leakage test "@en ;
-                                          rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                          skos:definition "represents whether a sequence of a process recipe is a safety leakage check of furnace or not, takes value 0 or 1 "@en ;
-                                          skos:prefLabel "Leakage Flag"@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/LeakageInterval
 <https://w3id.org/pmd/ao/hto/LeakageInterval> rdf:type owl:Class ;
                                               rdfs:subClassOf obo:BFO_0000202 ;
@@ -559,11 +467,6 @@ verwendet Randschichttiefe""" ;
                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                            skos:definition " Process Node's manufacturer name, e.g.: \"Ipsen\" or \"UPC\" "@en ;
                                            skos:prefLabel "manufacturer"@en .
-
-
-###  https://w3id.org/pmd/ao/hto/MediaMovement
-<https://w3id.org/pmd/ao/hto/MediaMovement> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> .
 
 
 ###  https://w3id.org/pmd/ao/hto/Medium
@@ -590,15 +493,6 @@ verwendet Randschichttiefe""" ;
                                              rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                              skos:definition " designated nitriding depth or measured nitriding depth "@en ;
                                              skos:prefLabel "Nitriding Depth"@en .
-
-
-###  https://w3id.org/pmd/ao/hto/NitridingFlag
-<https://w3id.org/pmd/ao/hto/NitridingFlag> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
-                                            obo:IAO_0000114 "marked for deletion" ;
-                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                            skos:definition " status of the atmosphere, nitriding step with nitriding potential present in the atmosphere "@en ;
-                                            skos:prefLabel "Nitriding Flag"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/NitridingPotential
@@ -653,17 +547,6 @@ verwendet Randschichttiefe""" ;
                                               skos:prefLabel "Partial Pressure"@en .
 
 
-###  https://w3id.org/pmd/ao/hto/Quenching
-<https://w3id.org/pmd/ao/hto/Quenching> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
-                                        skos:definition "Abkühlungsvorgang, der unter Verwendung eines Mediums erfolgt, das in direktem Kontakt mit dem steht, mit dem Ziel die Wärme des Bauteils aufzunehmen." ,
-                                                        "Process with significantly increased cooling rate, aimed at preventing diffusion based transformations."@en ,
-                                                        "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de ;
-                                        skos:prefLabel "Abschreckprozess"@de ,
-                                                       "Quenching"@en ,
-                                                       "Quenching Process"@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/QuenchingChamber
 <https://w3id.org/pmd/ao/hto/QuenchingChamber> rdf:type owl:Class ;
                                                rdfs:subClassOf <https://w3id.org/pmd/ao/hto/ChamberScope> ;
@@ -690,8 +573,8 @@ verwendet Randschichttiefe""" ;
                                                 rdfs:subClassOf obo:BFO_0000202 ;
                                                 rdfs:comment "stands for the measurement interval for recording sensor signals (pressure, temperature) and instrument settings (rotational speed, flow rate of MFC), unit as time stamp hh:mm:ss "@en ;
                                                 rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                                skos:definition " effective data aquisition and saving interval for documentation "@en ;
-                                                skos:prefLabel "Recording Interval"@en .
+                                                rdfs:label "recording interval"@en ;
+                                                skos:definition " effective data aquisition and saving interval for documentation "@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/Rotation
@@ -717,9 +600,9 @@ verwendet Randschichttiefe""" ;
 <https://w3id.org/pmd/ao/hto/SequenceDuration> rdf:type owl:Class ;
                                                rdfs:subClassOf obo:BFO_0000202 ;
                                                rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
+                                               rdfs:label "sequence duration"@en ;
                                                skos:definition "Duration of a sequence for which certain furnace settings and process parameters can be defined."@en ,
-                                                               "Duration of the current heat treatment recipe sequence."@en ;
-                                               skos:prefLabel "Sequence Duration"@en .
+                                                               "Duration of the current heat treatment recipe sequence."@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/SequenceNumber
@@ -742,27 +625,15 @@ verwendet Randschichttiefe""" ;
                                                          "Slow Cooling"@en .
 
 
-###  https://w3id.org/pmd/ao/hto/Soaking
-<https://w3id.org/pmd/ao/hto/Soaking> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
-                                      rdfs:comment "Durchwärmen des Bauteils, sodass Temperaturhomogenität erreicht wird. Anschließend kann ein Halten auf der Zieltemperatur erfolgen." ;
-                                      rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                      skos:definition "Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. "@en ,
-                                                      "Process step during which temperature homogenization is achieved in the component."@en ,
-                                                      "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de ;
-                                      skos:prefLabel "Durchwärmprozess"@de ,
-                                                     "Soaking Process"@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/SoakingDuration
 <https://w3id.org/pmd/ao/hto/SoakingDuration> rdf:type owl:Class ;
                                               rdfs:subClassOf obo:BFO_0000202 ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
+                                              rdfs:label "soaking duration"@en ;
                                               skos:definition "Dauer bis zum Erreichen der homogenen Temperatur im Bauteil."@de ,
                                                               "Duration at isothermal temperatur step."@en ,
                                                               "Duration to achieve a homogenous temperature distribution in the part"@en ;
-                                              skos:prefLabel "Durchwärmzeit"@de ,
-                                                             "Soaking Duration"@en .
+                                              skos:prefLabel "Durchwärmzeit"@de .
 
 
 ###  https://w3id.org/pmd/ao/hto/Standard
@@ -807,14 +678,6 @@ verwendet Randschichttiefe""" ;
                                                              "Type Description"@en .
 
 
-###  https://w3id.org/pmd/ao/hto/VacuumHeating
-<https://w3id.org/pmd/ao/hto/VacuumHeating> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
-                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                            skos:definition "Parameter that sets the activity of the vacuum pump. If true, no atmosphere flow is possible (even if set). Effectively, the same mechanics as vacuum-cooling (this is for humans) "@en ;
-                                            skos:prefLabel "Vacuum Heating"@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/VacuumHeatingPressure
 <https://w3id.org/pmd/ao/hto/VacuumHeatingPressure> rdf:type owl:Class ;
                                                     rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000896> ;
@@ -837,27 +700,59 @@ verwendet Randschichttiefe""" ;
                                              skos:prefLabel "Vacuum Pressure"@en .
 
 
-###  https://w3id.org/pmd/ao/hto/WithGasPurging
-<https://w3id.org/pmd/ao/hto/WithGasPurging> rdf:type owl:Class ;
-                                             rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
-                                             obo:IAO_0000114 "marked for deletion" ;
-                                             rdfs:comment """Indicates a constant supply of athmospheric gas during a heat treatment process.
+###  https://w3id.org/pmd/ao/hto/cooling
+<https://w3id.org/pmd/ao/hto/cooling> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
+                                      rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
+                                      skos:definition "A process in which the temperature is lowered from a higher to a lower level."@en ,
+                                                      "Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird."@de ,
+                                                      "process description during cooling process, e.g. fast cooling, free furnace cooling, controled cooling"@en ;
+                                      skos:prefLabel "Abkühlprozess"@de ,
+                                                     "cooling"@en .
 
-Without this flag there will be no additional gas supllied except the set pressure drops."""@en ;
-                                             rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                             skos:definition " Furnace atmosphere control and oxygen deminishing steps with nitrogen gas flow "@en ;
-                                             skos:prefLabel "With Gas Purging"@en .
+
+###  https://w3id.org/pmd/ao/hto/heating
+<https://w3id.org/pmd/ao/hto/heating> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
+                                      rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/> ;
+                                      rdfs:label "Erwärmen"@de ,
+                                                 "heating"@en ;
+                                      skos:definition "A process in which the temperature is increased from a lower to a higher level."@en ,
+                                                      "Ein Prozess, bei dem die Temperatur von einem niedrigem auf ein höheres Niveau gesteigert wird."@de ,
+                                                      "type of heating process, e.g. fast uncontrolled heating, heating ramp controlled etc. "@en .
 
 
-###  https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation
-<https://w3id.org/pmd/ao/hto/WithoutIntermediateEvacuation> rdf:type owl:Class ;
-                                                            rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
-                                                            obo:IAO_0000114 "marked for deletion" ;
-                                                            rdfs:comment """During nitriding there can be an exchange of the atmosphere gas without removing the gas beforehand.
-This is a relevant information because it indicates a process step in between two processes."""@en ;
-                                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                                            skos:definition "Neglect any intermediate evacuation process "@en ;
-                                                            skos:prefLabel "Without Intermediate Evacuation"@en .
+###  https://w3id.org/pmd/ao/hto/holding
+<https://w3id.org/pmd/ao/hto/holding> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
+                                      rdfs:comment "Die HoldingTime ist stets mit einer vorhergehende SoakingTime verbunden."@de ;
+                                      rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
+                                      rdfs:label "Halten"@de ,
+                                                 "holding"@en ;
+                                      skos:definition "Process step without temperature change in the furnace after the designated temperature was homogeneously reached within the part."@en ,
+                                                      "Prozessschritt ohne Temperaturänderung im Ofen."@de .
+
+
+###  https://w3id.org/pmd/ao/hto/quenching
+<https://w3id.org/pmd/ao/hto/quenching> rdf:type owl:Class ;
+                                        rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
+                                        rdfs:label "Abschrecken"@de ,
+                                                   "quenching"@en ;
+                                        skos:definition "Abkühlungsvorgang, der unter Verwendung eines Mediums erfolgt, das in direktem Kontakt mit dem steht, mit dem Ziel die Wärme des Bauteils aufzunehmen." ,
+                                                        "Process with significantly increased cooling rate, aimed at preventing diffusion based transformations."@en ,
+                                                        "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de .
+
+
+###  https://w3id.org/pmd/ao/hto/soaking
+<https://w3id.org/pmd/ao/hto/soaking> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
+                                      rdfs:comment "Durchwärmen des Bauteils, sodass Temperaturhomogenität erreicht wird. Anschließend kann ein Halten auf der Zieltemperatur erfolgen." ;
+                                      rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
+                                      rdfs:label "Durchwärmen"@de ,
+                                                 "soaking"@en ;
+                                      skos:definition "Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. "@en ,
+                                                      "Process step during which temperature homogenization is achieved in the component."@en ,
+                                                      "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de .
 
 
 ###  https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole
