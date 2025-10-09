@@ -47,7 +47,6 @@ https://w3id.org/pmd/ao/hto/HydrogeneSensorSignal
 https://w3id.org/pmd/ao/hto/LambdaProbeSignal
 https://w3id.org/pmd/ao/hto/LeakageCheck
 https://w3id.org/pmd/ao/hto/LeakageInterval
-https://w3id.org/pmd/ao/hto/Manufacturer
 https://w3id.org/pmd/ao/hto/Medium
 https://w3id.org/pmd/ao/hto/Nitriding
 https://w3id.org/pmd/ao/hto/NitridingDepth
@@ -65,7 +64,6 @@ https://w3id.org/pmd/ao/hto/SequenceDuration
 https://w3id.org/pmd/ao/hto/SequenceNumber
 https://w3id.org/pmd/ao/hto/SlowCooling
 https://w3id.org/pmd/ao/hto/SoakingDuration
-https://w3id.org/pmd/ao/hto/Standard
 https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration
 https://w3id.org/pmd/ao/hto/Tempering
 https://w3id.org/pmd/ao/hto/TypeDescription

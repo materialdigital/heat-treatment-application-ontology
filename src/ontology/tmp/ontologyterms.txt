@@ -4,9 +4,10 @@ https://w3id.org/pmd/ao/hto/FurnaceAtmosphere
 https://w3id.org/pmd/ao/hto/HeattreatmentScope
 https://w3id.org/pmd/ao/hto/HeattreatmentMethod
 https://w3id.org/pmd/ao/hto/
+https://w3id.org/pmd/ao/hto/Chamber
 https://w3id.org/pmd/ao/hto/Medium
 https://w3id.org/pmd/ao/hto/ChamberScope
-https://w3id.org/pmd/ao/hto/Chamber
+https://w3id.org/pmd/ao/hto/Carburizing
 https://w3id.org/pmd/ao/hto/cooling
 https://w3id.org/pmd/ao/hto/AtmospherePressure
 https://w3id.org/pmd/ao/hto/HydrogeneSensorSignal
@@ -30,7 +31,6 @@ https://w3id.org/pmd/ao/hto/VacuumPressure
 https://w3id.org/pmd/ao/hto/SequenceDescriptor
 https://w3id.org/pmd/ao/hto/SoakingDuration
 https://w3id.org/pmd/ao/hto/HTO_0000006
-https://w3id.org/pmd/ao/hto/Standard
 https://w3id.org/pmd/ao/hto/LeakageInterval
 https://w3id.org/pmd/ao/hto/LeakageCheck
 https://w3id.org/pmd/ao/hto/FastCooling
@@ -46,7 +46,6 @@ https://w3id.org/pmd/ao/hto/Tempering
 https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature
 https://w3id.org/pmd/ao/hto/Rotation
 https://w3id.org/pmd/ao/hto/AccelleratedCooling
-https://w3id.org/pmd/ao/hto/Manufacturer
 https://w3id.org/pmd/ao/hto/Nitriding
 https://w3id.org/pmd/ao/hto/Atmosphere
 https://w3id.org/pmd/ao/hto/Fluid
@@ -68,4 +67,3 @@ https://w3id.org/pmd/ao/hto/OverPressure
 https://w3id.org/pmd/ao/hto/Convection
 https://w3id.org/pmd/ao/hto/RecordingInterval
 https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature
-https://w3id.org/pmd/ao/hto/Carburizing

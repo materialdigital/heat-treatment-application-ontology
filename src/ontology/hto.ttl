@@ -17,11 +17,11 @@
 @base <https://w3id.org/pmd/ao/hto.ttl> .
 
 <https://w3id.org/pmd/ao/hto.ttl> rdf:type owl:Ontology ;
-                                   owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-10-08/hto.ttl> ;
+                                   owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-10-09/hto.ttl> ;
                                    terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                    terms:license <https://creativecommons.org/licenses/unspecified> ;
                                    terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                   owl:versionInfo "2025-10-08" .
+                                   owl:versionInfo "2025-10-09" .
 
 #################################################################
 #    Annotation properties
@@ -4477,16 +4477,6 @@ verwendet Randschichttiefe""" ;
                                               skos:prefLabel "Leakage Interval"@en .
 
 
-###  https://w3id.org/pmd/ao/hto/Manufacturer
-<https://w3id.org/pmd/ao/hto/Manufacturer> rdf:type owl:Class ;
-                                           owl:equivalentClass co:PMD_0000830 ;
-                                           rdfs:subClassOf co:PMD_0000879 ;
-                                           obo:IAO_0000114 "marked for delete" ;
-                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                           skos:definition " Process Node's manufacturer name, e.g.: \"Ipsen\" or \"UPC\" "@en ;
-                                           skos:prefLabel "manufacturer"@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/Medium
 <https://w3id.org/pmd/ao/hto/Medium> rdf:type owl:Class ;
                                      rdfs:subClassOf obo:BFO_0000030 ;
@@ -4654,14 +4644,6 @@ verwendet Randschichttiefe""" ;
                                               skos:prefLabel "Durchwärmzeit"@de .
 
 
-###  https://w3id.org/pmd/ao/hto/Standard
-<https://w3id.org/pmd/ao/hto/Standard> rdf:type owl:Class ;
-                                       rdfs:subClassOf co:PMD_0000003 ;
-                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                       skos:definition " standard method for cooling of furnace to RT "@en ;
-                                       skos:prefLabel "Standard"@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration
 <https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration> rdf:type owl:Class ;
                                                              rdfs:subClassOf obo:IAO_0000109 ;
@@ -4812,10 +4794,6 @@ co:PMD_0000002 rdf:type owl:Class ;
                rdfs:label "engineered material"@en ;
                skos:definition "An Engineered Material is a Material that is output of a Manufacturing Process."@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
-
-
-###  https://w3id.org/pmd/co/PMD_0000003
-co:PMD_0000003 rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000005
@@ -7397,11 +7375,6 @@ co:PMD_0000829 rdf:type owl:Class ;
                                "Eine Analyse, die die magnetischen und elektrischen Eigenschaften von Materialien untersucht, einschließlich Leitfähigkeit, Widerstand, Permittivität, Permeabilität und Magnetisierung."@de .
 
 
-###  https://w3id.org/pmd/co/PMD_0000830
-co:PMD_0000830 rdf:type owl:Class ;
-               rdfs:subClassOf co:PMD_0000879 .
-
-
 ###  https://w3id.org/pmd/co/PMD_0000832
 co:PMD_0000832 rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000034 ;
@@ -7779,10 +7752,6 @@ co:PMD_0000878 rdf:type owl:Class ;
                           "optical property analyzing process"@en ;
                skos:definition "An assay that assesses the optical characteristics of materials, such as refractive index, absorption, transmission, reflectivity, and luminescence."@en ,
                                "Eine Analyse, die die optischen Eigenschaften von Materialien bewertet, wie z.B. Brechungsindex, Absorption, Transmission, Reflexion und Lumineszenz."@de .
-
-
-###  https://w3id.org/pmd/co/PMD_0000879
-co:PMD_0000879 rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000880

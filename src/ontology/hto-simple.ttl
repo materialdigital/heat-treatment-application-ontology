@@ -12,11 +12,11 @@
 @base <https://w3id.org/pmd/ao/hto/hto-simple.ttl> .
 
 <https://w3id.org/pmd/ao/hto/hto-simple.ttl> rdf:type owl:Ontology ;
-                                              owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-10-08/hto-simple.ttl> ;
+                                              owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-10-09/hto-simple.ttl> ;
                                               terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                               terms:license <https://creativecommons.org/licenses/unspecified> ;
                                               terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                              owl:versionInfo "2025-10-08" .
+                                              owl:versionInfo "2025-10-09" .
 
 #################################################################
 #    Annotation properties
@@ -409,14 +409,6 @@ verwendet Randschichttiefe""" ;
                                               skos:prefLabel "Leakage Interval"@en .
 
 
-###  https://w3id.org/pmd/ao/hto/Manufacturer
-<https://w3id.org/pmd/ao/hto/Manufacturer> rdf:type owl:Class ;
-                                           obo:IAO_0000114 "marked for delete" ;
-                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                           skos:definition " Process Node's manufacturer name, e.g.: \"Ipsen\" or \"UPC\" "@en ;
-                                           skos:prefLabel "manufacturer"@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/Medium
 <https://w3id.org/pmd/ao/hto/Medium> rdf:type owl:Class ;
                                      obo:IAO_0000114 "needs work" ;
@@ -568,13 +560,6 @@ verwendet Randschichttiefe""" ;
                                                               "Duration at isothermal temperatur step."@en ,
                                                               "Duration to achieve a homogenous temperature distribution in the part"@en ;
                                               skos:prefLabel "Durchwärmzeit"@de .
-
-
-###  https://w3id.org/pmd/ao/hto/Standard
-<https://w3id.org/pmd/ao/hto/Standard> rdf:type owl:Class ;
-                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                       skos:definition " standard method for cooling of furnace to RT "@en ;
-                                       skos:prefLabel "Standard"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration

@@ -17,11 +17,11 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/ao/hto.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/ao/hto/releases/2025-10-08/hto.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/ao/hto/releases/2025-10-09/hto.owl"/>
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2025-10-08</owl:versionInfo>
+        <owl:versionInfo>2025-10-09</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -5672,19 +5672,6 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Manufacturer -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Manufacturer">
-        <owl:equivalentClass rdf:resource="https://w3id.org/pmd/co/PMD_0000830"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000879"/>
-        <obo:IAO_0000114>marked for delete</obo:IAO_0000114>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
-        <skos:definition xml:lang="en"> Process Node&apos;s manufacturer name, e.g.: &quot;Ipsen&quot; or &quot;UPC&quot; </skos:definition>
-        <skos:prefLabel xml:lang="en">manufacturer</skos:prefLabel>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/ao/hto/Medium -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Medium">
@@ -5903,17 +5890,6 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Standard -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Standard">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000003"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
-        <skos:definition xml:lang="en"> standard method for cooling of furnace to RT </skos:definition>
-        <skos:prefLabel xml:lang="en">Standard</skos:prefLabel>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration">
@@ -6105,12 +6081,6 @@ granularity. At these coarser levels, the individual molecules cannot be differe
         <skos:definition xml:lang="en">An Engineered Material is a Material that is output of a Manufacturing Process.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0000003 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000003"/>
     
 
 
@@ -9473,14 +9443,6 @@ Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine
     
 
 
-    <!-- https://w3id.org/pmd/co/PMD_0000830 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000830">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000879"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/co/PMD_0000832 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000832">
@@ -9979,12 +9941,6 @@ TODO: Check general class axiom and defintion altogether !!!</skos:definition>
         <skos:definition xml:lang="en">An assay that assesses the optical characteristics of materials, such as refractive index, absorption, transmission, reflectivity, and luminescence.</skos:definition>
         <skos:definition xml:lang="de">Eine Analyse, die die optischen Eigenschaften von Materialien bewertet, wie z.B. Brechungsindex, Absorption, Transmission, Reflexion und Lumineszenz.</skos:definition>
     </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0000879 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000879"/>
     
 
 

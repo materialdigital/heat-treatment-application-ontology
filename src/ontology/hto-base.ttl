@@ -11,12 +11,12 @@
 @base <https://w3id.org/pmd/ao/hto/hto-base.ttl> .
 
 <https://w3id.org/pmd/ao/hto/hto-base.ttl> rdf:type owl:Ontology ;
-                                            owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-10-08/hto-base.ttl> ;
+                                            owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-10-09/hto-base.ttl> ;
                                             dc:type obo:IAO_8000001 ;
                                             terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                             terms:license <https://creativecommons.org/licenses/unspecified> ;
                                             terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                            owl:versionInfo "2025-10-08" .
+                                            owl:versionInfo "2025-10-09" .
 
 #################################################################
 #    Annotation properties
@@ -459,16 +459,6 @@ verwendet Randschichttiefe""" ;
                                               skos:prefLabel "Leakage Interval"@en .
 
 
-###  https://w3id.org/pmd/ao/hto/Manufacturer
-<https://w3id.org/pmd/ao/hto/Manufacturer> rdf:type owl:Class ;
-                                           owl:equivalentClass <https://w3id.org/pmd/co/PMD_0000830> ;
-                                           rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000879> ;
-                                           obo:IAO_0000114 "marked for delete" ;
-                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                           skos:definition " Process Node's manufacturer name, e.g.: \"Ipsen\" or \"UPC\" "@en ;
-                                           skos:prefLabel "manufacturer"@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/Medium
 <https://w3id.org/pmd/ao/hto/Medium> rdf:type owl:Class ;
                                      rdfs:subClassOf obo:BFO_0000030 ;
@@ -636,14 +626,6 @@ verwendet Randschichttiefe""" ;
                                               skos:prefLabel "Durchwärmzeit"@de .
 
 
-###  https://w3id.org/pmd/ao/hto/Standard
-<https://w3id.org/pmd/ao/hto/Standard> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000003> ;
-                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                       skos:definition " standard method for cooling of furnace to RT "@en ;
-                                       skos:prefLabel "Standard"@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration
 <https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration> rdf:type owl:Class ;
                                                              rdfs:subClassOf obo:IAO_0000109 ;
@@ -762,10 +744,6 @@ verwendet Randschichttiefe""" ;
                                                   rdfs:comment "todo" .
 
 
-###  https://w3id.org/pmd/co/PMD_0000003
-<https://w3id.org/pmd/co/PMD_0000003> rdf:type owl:Class .
-
-
 ###  https://w3id.org/pmd/co/PMD_0000005
 <https://w3id.org/pmd/co/PMD_0000005> rdf:type owl:Class .
 
@@ -786,16 +764,8 @@ verwendet Randschichttiefe""" ;
 <https://w3id.org/pmd/co/PMD_0000781> rdf:type owl:Class .
 
 
-###  https://w3id.org/pmd/co/PMD_0000830
-<https://w3id.org/pmd/co/PMD_0000830> rdf:type owl:Class .
-
-
 ###  https://w3id.org/pmd/co/PMD_0000833
 <https://w3id.org/pmd/co/PMD_0000833> rdf:type owl:Class .
-
-
-###  https://w3id.org/pmd/co/PMD_0000879
-<https://w3id.org/pmd/co/PMD_0000879> rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000896
