@@ -5,5 +5,7 @@ http://www.w3.org/2004/02/skos/core#definition
 http://purl.org/dc/terms/title
 http://purl.org/dc/terms/license
 http://purl.org/dc/terms/description
+http://purl.org/dc/terms/creator
+http://purl.org/dc/terms/contributor
 http://purl.obolibrary.org/obo/IAO_0000114
 http://purl.obolibrary.org/obo/BFO_0000197
