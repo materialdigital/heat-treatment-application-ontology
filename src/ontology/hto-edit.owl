@@ -4,7 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/pmd/ao/hto> .
+@base <https://w3id.org/pmd/ao/hto#> .
 
 <https://w3id.org/pmd/ao/hto> rdf:type owl:Ontology ;
                                owl:imports <https://w3id.org/pmd/ao/hto/imports/pmdco_import.owl> ;
@@ -134,8 +134,8 @@
 <https://w3id.org/pmd/ao/hto/Chamber> rdf:type owl:Class ;
                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ;
                                       <http://purl.obolibrary.org/obo/IAO_0000114> "needs work" ;
-                                      rdfs:comment "moved to fiat object part. correct if every furnace has a chamber" ,
-                                                   "unklare Zuordnung innerhalb der \"spec. dep. continuants\". Eine Kammer existiert nur als Teil eines Gerätes (Device), könnte aber selbst noch einmal als independent continuant definiert werden, da sich in der Kammer Chargen, Gestelle, Thermoelemente etc. befinden."@de ;
+                                      rdfs:comment "unklare Zuordnung innerhalb der \"spec. dep. continuants\". Eine Kammer existiert nur als Teil eines Gerätes (Device), könnte aber selbst noch einmal als independent continuant definiert werden, da sich in der Kammer Chargen, Gestelle, Thermoelemente etc. befinden."@de ,
+                                                   "moved to fiat object part. correct if every furnace has a chamber" ;
                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                       <http://www.w3.org/2004/02/skos/core#definition> "Systemboundary of a distinct Heattreatment Process. Typically includes media (e.g., Helium or Vaccum)."@en ;
                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Chamber"@en .
@@ -186,10 +186,10 @@ can be: heating chamber / cooling chamber"""@en ;
                                               rdfs:subClassOf <https://w3id.org/pmd/ao/hto/FurnaceAtmosphere> ;
                                               rdfs:comment "Ammonia is usually intenionally induced;"@en ,
                                                            "Einzelne Werte durch auf das Molekül spezifizierte Messsonden."@de ,
-                                                           "Hydrogen can be formed during decomposition of e.g. ammonia, acetylene or can be intenionally induced e.g. in forming gas." ,
                                                            "Might be calculated from model or measurement."@en ,
                                                            "Oxygen concentration in process gas composition, oxygen can be formed during decomposition of e.g. carbon monoxide or dioxide or can be intenionally induced e.g. as air, synthetic air or water or enters the furnace via leckage."@en ,
-                                                           "Water concentration in process gas composition, if nominal water is intenionally induced; units could be e.g. mol/m³ or °C; signal could be in mA or mV or in vol.-% or °C (dew point)"@en ;
+                                                           "Water concentration in process gas composition, if nominal water is intenionally induced; units could be e.g. mol/m³ or °C; signal could be in mA or mV or in vol.-% or °C (dew point)"@en ,
+                                                           "Hydrogen can be formed during decomposition of e.g. ammonia, acetylene or can be intenionally induced e.g. in forming gas." ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                               <http://www.w3.org/2004/02/skos/core#definition> "Concentration in process gas composition; units could be e.g. mol/m³; signal could be in mA or mV or in vol.-%"@en ;
                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Concentration"@en .
@@ -415,16 +415,6 @@ verwendet Randschichttiefe""" ;
                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Leakage Interval"@en .
 
 
-###  https://w3id.org/pmd/ao/hto/Manufacturer
-<https://w3id.org/pmd/ao/hto/Manufacturer> rdf:type owl:Class ;
-                                           owl:equivalentClass <https://w3id.org/pmd/co/PMD_0000830> ;
-                                           rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000879> ;
-                                           <http://purl.obolibrary.org/obo/IAO_0000114> "marked for delete" ;
-                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> " Process Node's manufacturer name, e.g.: \"Ipsen\" or \"UPC\" "@en ;
-                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "manufacturer"@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/Medium
 <https://w3id.org/pmd/ao/hto/Medium> rdf:type owl:Class ;
                                      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> ;
@@ -592,14 +582,6 @@ verwendet Randschichttiefe""" ;
                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Durchwärmzeit"@de .
 
 
-###  https://w3id.org/pmd/ao/hto/Standard
-<https://w3id.org/pmd/ao/hto/Standard> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000003> ;
-                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                       <http://www.w3.org/2004/02/skos/core#definition> " standard method for cooling of furnace to RT "@en ;
-                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard"@en .
-
-
 ###  https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration
 <https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration> rdf:type owl:Class ;
                                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000109> ;
@@ -694,9 +676,9 @@ verwendet Randschichttiefe""" ;
                                         rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
                                         rdfs:label "Abschrecken"@de ,
                                                    "quenching"@en ;
-                                        <http://www.w3.org/2004/02/skos/core#definition> "Abkühlungsvorgang, der unter Verwendung eines Mediums erfolgt, das in direktem Kontakt mit dem steht, mit dem Ziel die Wärme des Bauteils aufzunehmen." ,
-                                                                                         "Process with significantly increased cooling rate, aimed at preventing diffusion based transformations."@en ,
-                                                                                         "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de .
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Process with significantly increased cooling rate, aimed at preventing diffusion based transformations."@en ,
+                                                                                         "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de ,
+                                                                                         "Abkühlungsvorgang, der unter Verwendung eines Mediums erfolgt, das in direktem Kontakt mit dem steht, mit dem Ziel die Wärme des Bauteils aufzunehmen." .
 
 
 ###  https://w3id.org/pmd/ao/hto/soaking
