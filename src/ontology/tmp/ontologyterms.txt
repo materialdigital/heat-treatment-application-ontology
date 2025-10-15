@@ -3,8 +3,8 @@ https://w3id.org/pmd/ao/hto/HTO_0000000
 https://w3id.org/pmd/ao/hto/FurnaceAtmosphere
 https://w3id.org/pmd/ao/hto/HeattreatmentScope
 https://w3id.org/pmd/ao/hto/HeattreatmentMethod
-https://w3id.org/pmd/ao/hto/
 https://w3id.org/pmd/ao/hto/Chamber
+https://w3id.org/pmd/ao/hto/
 https://w3id.org/pmd/ao/hto/Medium
 https://w3id.org/pmd/ao/hto/ChamberScope
 https://w3id.org/pmd/ao/hto/Carburizing

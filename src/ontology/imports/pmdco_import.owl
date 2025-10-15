@@ -17,9 +17,9 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<https://w3id.org/pmd/ao/hto/imports/pmdco_import.owl>
-<https://w3id.org/pmd/ao/hto/releases/2025-10-09/imports/pmdco_import.owl>
+<https://w3id.org/pmd/ao/hto/releases/2025-10-15/imports/pmdco_import.owl>
 Annotation(dc:source <https://w3id.org/pmd/co/3.0.0-alpha3>)
-Annotation(owl:versionInfo "2025-10-09")
+Annotation(owl:versionInfo "2025-10-15")
 
 Declaration(Class(obo:BFO_0000001))
 Declaration(Class(obo:BFO_0000002))
@@ -4192,7 +4192,7 @@ AnnotationAssertion(skos:example co:PMD_0000053 "The process of melting aluminum
 SubClassOf(co:PMD_0000053 co:PMD_0000833)
 SubClassOf(co:PMD_0000053 ObjectIntersectionOf(obo:BFO_0000015 ObjectSomeValuesFrom(obo:OBI_0000293 obo:BFO_0000040) ObjectSomeValuesFrom(obo:OBI_0000299 co:PMD_0020139)))
 
-# Class: co:PMD_0000054 (Heizfunktion)
+# Class: co:PMD_0000054 (heating function)
 
 AnnotationAssertion(rdfs:label co:PMD_0000054 "Heizfunktion"@de)
 AnnotationAssertion(rdfs:label co:PMD_0000054 "heating function"@en)
@@ -4219,7 +4219,7 @@ AnnotationAssertion(skos:definition co:PMD_0000056 "A melting furnace is a devic
 AnnotationAssertion(skos:definition co:PMD_0000056 "Ein Schmelzofen ist ein Gerät, das eine Schmelzfunktion hat und in der Regel dazu dient, die Temperatur eines festen Materials zu erhöhen, um seine Umwandlung in eine Schmelze einzuleiten und aufrechtzuerhalten."@de)
 SubClassOf(co:PMD_0000056 ObjectIntersectionOf(co:PMD_0000655 ObjectSomeValuesFrom(obo:RO_0000085 co:PMD_0000057)))
 
-# Class: co:PMD_0000057 (Schmelzfunktion)
+# Class: co:PMD_0000057 (melting function)
 
 AnnotationAssertion(rdfs:label co:PMD_0000057 "Schmelzfunktion"@de)
 AnnotationAssertion(rdfs:label co:PMD_0000057 "melting function"@en)
@@ -4451,7 +4451,7 @@ AnnotationAssertion(skos:definition co:PMD_0000530 "Ein Mechanische Eigenschafte
 AnnotationAssertion(skos:example co:PMD_0000530 "Testing the flexural strength of a plastic beam to ensure it can withstand the required load in an engineering application."@en)
 SubClassOf(co:PMD_0000530 co:PMD_0000849)
 
-# Class: co:PMD_0000531 (biocompatibility analyzing process)
+# Class: co:PMD_0000531 (Analyseverfahren der Biokompatibilität)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000531 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000531 "Analyseverfahren der Biokompatibilität"@de)
@@ -5549,7 +5549,7 @@ SubClassOf(co:PMD_0000654 co:PMD_0000002)
 SubClassOf(co:PMD_0000654 ObjectIntersectionOf(co:PMD_0000002 ObjectSomeValuesFrom(ObjectInverseOf(co:PMD_0020005) ObjectIntersectionOf(obo:BFO_0000030 ObjectSomeValuesFrom(obo:RO_0000085 obo:BFO_0000034)))))
 SubClassOf(co:PMD_0000654 ObjectSomeValuesFrom(ObjectInverseOf(co:PMD_0020005) ObjectIntersectionOf(obo:BFO_0000030 ObjectSomeValuesFrom(obo:RO_0000085 obo:BFO_0000034))))
 
-# Class: co:PMD_0000655 (Ofen)
+# Class: co:PMD_0000655 (furnace)
 
 AnnotationAssertion(obo:IAO_0000114 co:PMD_0000655 obo:IAO_0000428)
 AnnotationAssertion(obo:IAO_0000119 co:PMD_0000655 "“Furnace.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/furnace. Accessed 13 Jan. 2023."@en)
@@ -6027,7 +6027,7 @@ AnnotationAssertion(skos:definition co:PMD_0000807 "Ein Fügeverfahren, bei dem 
 AnnotationAssertion(skos:example co:PMD_0000807 "Pouring, Embedding, Encasing"@en)
 SubClassOf(co:PMD_0000807 co:PMD_0000806)
 
-# Class: co:PMD_0000808 (joining by shaping)
+# Class: co:PMD_0000808 (Fügen Durch Umformen)
 
 AnnotationAssertion(obo:IAO_0000114 co:PMD_0000808 obo:IAO_0000122)
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000808 "PMDco Team")
@@ -6520,7 +6520,7 @@ AnnotationAssertion(skos:definition co:PMD_0000875 "A Microscopy Process that us
 AnnotationAssertion(skos:example co:PMD_0000875 "An example is Light Microscopy."@en)
 SubClassOf(co:PMD_0000875 co:PMD_0000856)
 
-# Class: co:PMD_0000876 (optical profilometer)
+# Class: co:PMD_0000876 (Optisches Profilometer)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000876 "PMDco Team"@en)
 AnnotationAssertion(rdfs:label co:PMD_0000876 "Optisches Profilometer"@de)
@@ -6803,7 +6803,7 @@ AnnotationAssertion(skos:definition co:PMD_0000908 "Ein Urformprozess, der das F
 AnnotationAssertion(skos:example co:PMD_0000908 "Pottery"@en)
 SubClassOf(co:PMD_0000908 co:PMD_0000899)
 
-# Class: co:PMD_0000909 (project)
+# Class: co:PMD_0000909 (Projekt)
 
 AnnotationAssertion(rdfs:label co:PMD_0000909 "Projekt"@de)
 AnnotationAssertion(rdfs:label co:PMD_0000909 "project"@en)
@@ -7094,7 +7094,7 @@ AnnotationAssertion(skos:definition co:PMD_0000942 "The specific surface area is
 AnnotationAssertion(co:PMD_0000060 co:PMD_0000942 "true"^^xsd:boolean)
 SubClassOf(co:PMD_0000942 co:PMD_0020131)
 
-# Class: co:PMD_0000944 (Spektrometer)
+# Class: co:PMD_0000944 (spectrometer)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000944 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000944 "Spektrometer"@de)
@@ -7186,7 +7186,7 @@ AnnotationAssertion(skos:definition co:PMD_0000956 "Ein Simulationsprozess, der 
 AnnotationAssertion(skos:example co:PMD_0000956 "Optimizing the atomic structure of a catalyst to enhance its performance."@en)
 SubClassOf(co:PMD_0000956 co:PMD_0000933)
 
-# Class: co:PMD_0000957 (structural property analyzing process)
+# Class: co:PMD_0000957 (Struktur Eigenschaften Analyseverfahren)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000957 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000957 "Struktur Eigenschaften Analyseverfahren"@de)
