@@ -317,6 +317,21 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "Process characteristic defining the temperature that is to be reached within a process that involves a defined change of temperature."@en .
 
 
+###  https://w3id.org/pmd/ao/hto/HTO_0000007
+<https://w3id.org/pmd/ao/hto/HTO_0000007> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
+                                          rdfs:label "melting temperature"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "disposition of a material at which a phase transformation between liquid and solid state takes place" .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000011
+<https://w3id.org/pmd/ao/hto/HTO_0000011> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
+                                          rdfs:comment "needs more work; austenitic phase can be reached from at least two temperatures for any given material (from liquid or from ferrite)" ;
+                                          rdfs:label "austenitizing temperature"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "disposition of material which marks the phase change to austenite" .
+
+
 ###  https://w3id.org/pmd/ao/hto/Hardening
 <https://w3id.org/pmd/ao/hto/Hardening> rdf:type owl:Class ;
                                         rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HeattreatmentScope> ;
