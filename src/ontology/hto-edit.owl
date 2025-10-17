@@ -67,7 +67,7 @@
                                                                "so convection cooling is a function of a device, it could be realized in a cooling process. definatl needs a better name like acllerated convection cooling function, to be specific" ;
                                                   rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                   <http://www.w3.org/2004/02/skos/core#definition> "Status of the cooling method active e.g., at the end of the nitriding process"@en ;
-                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Accellerated Cooling"@en .
+                                                  rdfs:label "Accellerated Cooling"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/AcquisitionDate
@@ -77,7 +77,7 @@
                                               rdfs:comment "is a temperal instant!" ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                               <http://www.w3.org/2004/02/skos/core#definition> "The point in time a Process Node was commissioned (e.g., the purchase date, first day of use), represented in IEEE 1003 'Seconds since Epoch'. "@en ;
-                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Acquisition Date"@en .
+                                              rdfs:label "Acquisition Date"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/Annealing
@@ -85,14 +85,14 @@
                                         rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HeattreatmentScope> ;
                                         rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                         <http://www.w3.org/2004/02/skos/core#definition> "Heat treatment process with the scope to change the properties or microstructure of a sample or part. Typically no hardening is performed with this process."@en ;
-                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Annealing"@en .
+                                        rdfs:label "Annealing"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/Atmosphere
 <https://w3id.org/pmd/ao/hto/Atmosphere> rdf:type owl:Class ;
                                          rdfs:subClassOf <https://w3id.org/pmd/ao/hto/Medium> ;
                                          <http://www.w3.org/2004/02/skos/core#definition> "A surrounding influence or environment" ;
-                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Atmosphere"@en .
+                                         rdfs:label "Atmosphere"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/AtmospherePressure
@@ -102,7 +102,7 @@
                                                               "Parameter usually slightly higher than ambient pressure for open process to environment to prevent/reduce diffusion of oxygen into the furnace, e.g. by leckage, to avoid explosive or dangerous atmopheres, could be bar, mbar or Pa"@en ;
                                                  rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                  <http://www.w3.org/2004/02/skos/core#definition> "Parameter describing the intended atmosphere pressure inside a chamber. "@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Atmosphere Pressure"@en .
+                                                 rdfs:label "Atmosphere Pressure"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/BelowAmbientPressure
@@ -110,7 +110,7 @@
                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000145> ;
                                                    rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                    <http://www.w3.org/2004/02/skos/core#definition> "status of atmosphere: reduced pressure below ambient pressure "@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Below Ambient Pressure"@en .
+                                                   rdfs:label "Below Ambient Pressure"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/CarbonPotential
@@ -120,7 +120,7 @@
                                                            "See standard DIN 1310"@en ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                               <http://www.w3.org/2004/02/skos/core#definition> "Carbon content of a specimen of pure iron in equilibrium with a carbourizing medium under specific conditions."@en ;
-                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Carbon Potential"@en .
+                                              rdfs:label "Carbon Potential"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/Carburizing
@@ -131,7 +131,7 @@
                                           rdfs:label "carburizing recipe"@en ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "Heattreatment process with the scope to transfer carbon from the atmosphere to the component surface."@en ,
                                                                                            "Prozessschritt, während dessen Kohlenstoff aus der Atmosphäre an der Bauteiloberfläche übertragen wird"@de ;
-                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Aufkohlen"@de .
+                                          rdfs:label "Aufkohlen"@de .
 
 
 ###  https://w3id.org/pmd/ao/hto/Chamber
@@ -142,7 +142,7 @@
                                                    "moved to fiat object part. correct if every furnace has a chamber" ;
                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                       <http://www.w3.org/2004/02/skos/core#definition> "Systemboundary of a distinct Heattreatment Process. Typically includes media (e.g., Helium or Vaccum)."@en ;
-                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Chamber"@en .
+                                      rdfs:label "Chamber"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/ChamberPressure
@@ -158,7 +158,7 @@
                                               rdfs:comment "measured atmophere pressure in retort, measured using the vacuum sensor "@en ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                               <http://www.w3.org/2004/02/skos/core#definition> "designated pressure in retort during evacuation phase pre to nitriding process or during low pressure nitriding process "@en ;
-                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Chamber Pressure"@en .
+                                              rdfs:label "Chamber Pressure"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/ChamberScope
@@ -173,7 +173,7 @@
                                                                                             """Position of the batch in a multi-chamber furnace
 A specialization of hasProcessNodeComponent representing distinguishable heat treatment chambers of a furnaces.
 can be: heating chamber / cooling chamber"""@en ;
-                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "ChamberScope"@en ,
+                                           rdfs:label "ChamberScope"@en ,
                                                                                            "Wärmebehandlungsofenkammer"@de .
 
 
@@ -182,7 +182,7 @@ can be: heating chamber / cooling chamber"""@en ;
                                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000017> ;
                                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                       <http://www.w3.org/2004/02/skos/core#definition> "A label in support of identifying a network interface and/or address used by a process node to provide primary data stored in ontologies "@en ;
-                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Collection Interface Hint"@en .
+                                                      rdfs:label "Collection Interface Hint"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/ConcentrationH2
@@ -196,7 +196,7 @@ can be: heating chamber / cooling chamber"""@en ;
                                                            "Hydrogen can be formed during decomposition of e.g. ammonia, acetylene or can be intenionally induced e.g. in forming gas." ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                               <http://www.w3.org/2004/02/skos/core#definition> "Concentration in process gas composition; units could be e.g. mol/m³; signal could be in mA or mV or in vol.-%"@en ;
-                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Concentration"@en .
+                                              rdfs:label "Concentration"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/Controlled
@@ -205,7 +205,7 @@ can be: heating chamber / cooling chamber"""@en ;
                                          rdfs:comment "definition is not enough, what is controlled?" ;
                                          rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                          <http://www.w3.org/2004/02/skos/core#definition> "This Scope expresses that a :ValueObject is actively controlled during the process, e.g. a heating process where the temperature change is done in controlled intervals until the desired temperature is reached while an uncontrolled heating process would reach the desired temperature as fast as the furnace allows it to."@en ;
-                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Controlled"@en .
+                                         rdfs:label "Controlled"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/Convection
@@ -214,7 +214,7 @@ can be: heating chamber / cooling chamber"""@en ;
                                          rdfs:comment "if its a device specification to run a heat up process by some spefiic mode of action, then pls change the definition" ;
                                          rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                          <http://www.w3.org/2004/02/skos/core#definition> "konvection during heating, heating in atmosphere, not in vacuum "@en ;
-                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Convection"@en .
+                                         rdfs:label "Convection"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/DewPoint
@@ -222,7 +222,7 @@ can be: heating chamber / cooling chamber"""@en ;
                                        rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000109> ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "dew point of the atmosphere, measured during process or calculated from lambda / oxygen probe signal "@en ;
-                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Dew Point"@en .
+                                       rdfs:label "Dew Point"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature
@@ -232,7 +232,7 @@ can be: heating chamber / cooling chamber"""@en ;
                                                                          "Maß für die tatsächliche Dauer eines Erwärmvorgangs."@de ;
                                                             rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                             <http://www.w3.org/2004/02/skos/core#definition> "Measurement representing the actual duration of a heating procedure."@en ;
-                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Duration Till Target Temperature"@en ,
+                                                            rdfs:label "Duration Till Target Temperature"@en ,
                                                                                                             "Erwärmdauer"@de .
 
 
@@ -241,7 +241,7 @@ can be: heating chamber / cooling chamber"""@en ;
                                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000202> ;
                                                                rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                                <http://www.w3.org/2004/02/skos/core#definition> "Parameter representing a derived duration of a heat up segment (in hours, minutes or seconds) "@en ;
-                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Duration To Reach Target Temperature"@en .
+                                                               rdfs:label "Duration To Reach Target Temperature"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/Fan
@@ -266,14 +266,14 @@ can be: heating chamber / cooling chamber"""@en ;
 Auch erhöhte Gaskühlung durch ventilation."""@de ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "Schnellkühlung"@de ,
                                                                                            "Stark beschleunigte Abkühlung ohne Abschreckmedium."@de ;
-                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Fast Cooling"@en .
+                                          rdfs:label "Fast Cooling"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/Fluid
 <https://w3id.org/pmd/ao/hto/Fluid> rdf:type owl:Class ;
                                     rdfs:subClassOf <https://w3id.org/pmd/ao/hto/Medium> ;
                                     <http://www.w3.org/2004/02/skos/core#definition> "A substance (such as a liquid or gas) tending to flow or conform to the outline of its container" ;
-                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Fluid"@en .
+                                    rdfs:label "Fluid"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/FurnaceAtmosphere
@@ -281,7 +281,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000005> ;
                                                 rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                 <http://www.w3.org/2004/02/skos/core#definition> "atmosphere type present in retort (vacuum, nitriding, neutral, carburizing)"@en ;
-                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Furnace Atmosphere"@en .
+                                                rdfs:label "Furnace Atmosphere"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/FurnaceCooling
@@ -289,7 +289,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
                                              rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HeattreatmentMethod> ;
                                              rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                              <http://www.w3.org/2004/02/skos/core#definition> "free cooling with deactivated heating unit and no additonal cooling by e.g. agitade nitrogene -> furnace cool "@en ;
-                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Furnace Cooling"@en .
+                                             rdfs:label "Furnace Cooling"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/HTO_0000000
@@ -345,7 +345,7 @@ Einsatzhärten
 Nitrierhärten
 
 verwendet Randschichttiefe""" ;
-                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Hardening"@en ,
+                                        rdfs:label "Hardening"@en ,
                                                                                         "Härten"@de .
 
 
@@ -360,7 +360,7 @@ verwendet Randschichttiefe""" ;
                                              rdfs:subClassOf <https://w3id.org/pmd/ao/hto/ChamberScope> ;
                                              rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                              <http://www.w3.org/2004/02/skos/core#definition> "Distinguishable chamber of a heat treatment furnace with a heater."@en ;
-                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Heating Chamber"@en ,
+                                             rdfs:label "Heating Chamber"@en ,
                                                                                              "Heizkammer"@de ,
                                                                                              "Ofenkammer mit einer Heizung."@de .
 
@@ -377,7 +377,7 @@ verwendet Randschichttiefe""" ;
                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "Dauer bis zum Erreichen der Zieltemperatur im Ofen."@de ,
                                                                                            "Duration until the target temperature is reached in the furnace."@en ;
-                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Erwärmdauer"@de ,
+                                          rdfs:label "Erwärmdauer"@de ,
                                                                                           "Heating Time"@en .
 
 
@@ -395,7 +395,7 @@ verwendet Randschichttiefe""" ;
                                                  rdfs:comment "childs are processes that realize a certain goal as realizabale" ;
                                                  rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                  <http://www.w3.org/2004/02/skos/core#definition> "This class specifices the scope of the specific heattreatment process."@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "HeattreatmentScope"@en .
+                                                 rdfs:label "HeattreatmentScope"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/HydrogeneSensorSignal
@@ -404,7 +404,7 @@ verwendet Randschichttiefe""" ;
                                                     rdfs:comment "nominal pre-set value of control system for hydrogen probe "@en ;
                                                     rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                     <http://www.w3.org/2004/02/skos/core#definition> "measured hydrogen value of  hydrogen probe measured in milli volt "@en ;
-                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Hydrogene Sensor Signal"@en .
+                                                    rdfs:label "Hydrogene Sensor Signal"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/LambdaProbeSignal
@@ -413,7 +413,7 @@ verwendet Randschichttiefe""" ;
                                                 rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                 <http://www.w3.org/2004/02/skos/core#definition> "measured lambda probe signal in exhaust gas "@en ,
                                                                                                  "measured signal of the lambda-probe in millivolt, representing the atmospheres redox-potential "@en ;
-                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Lambda Probe Signal"@en .
+                                                rdfs:label "Lambda Probe Signal"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/LeakageCheck
@@ -422,7 +422,7 @@ verwendet Randschichttiefe""" ;
                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "leakage test duration, where the change of pressure after evacuation is rated according to leakages present "@en ,
                                                                                             "stands for the dwell time during which the pressure increase is evaluated to check tighness of furnace after evacuation initially at process begin "@en ;
-                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Leakage Check"@en .
+                                           rdfs:label "Leakage Check"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/LeakageInterval
@@ -431,7 +431,7 @@ verwendet Randschichttiefe""" ;
                                               rdfs:comment "Stands for the measurement interval for recording sensor signals (pressure, temperature) and instrument settings (rotational speed, flow rate of MFC), unit as time stamp hh:mm:ss "@en ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                               <http://www.w3.org/2004/02/skos/core#definition> "effective leakage measuring duration "@en ;
-                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Leakage Interval"@en .
+                                              rdfs:label "Leakage Interval"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/Medium
@@ -440,7 +440,7 @@ verwendet Randschichttiefe""" ;
                                      <http://purl.obolibrary.org/obo/IAO_0000114> "needs work" ;
                                      rdfs:comment "no set to be a device specification what to use, but that is not good. medium is a special material entity that has a certain role" ;
                                      <http://www.w3.org/2004/02/skos/core#definition> "A surrounding or enveloping substance" ;
-                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Medium"@en .
+                                     rdfs:label "Medium"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/Nitriding
@@ -448,7 +448,7 @@ verwendet Randschichttiefe""" ;
                                         rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HeattreatmentScope> ;
                                         rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                         <http://www.w3.org/2004/02/skos/core#definition> "heat treatment process with the scope to increase the nitrogen content in the surface near area of a sample or part"@en ;
-                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Nitriding"@en .
+                                        rdfs:label "Nitriding"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/NitridingDepth
@@ -457,7 +457,7 @@ verwendet Randschichttiefe""" ;
                                              rdfs:comment "propably some thicknes quality on some special fiat continuent part, diffusion layer having nitrid or something" ;
                                              rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                              <http://www.w3.org/2004/02/skos/core#definition> " designated nitriding depth or measured nitriding depth "@en ;
-                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Nitriding Depth"@en .
+                                             rdfs:label "Nitriding Depth"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/NitridingPotential
@@ -467,7 +467,7 @@ verwendet Randschichttiefe""" ;
                                                  rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                  <http://www.w3.org/2004/02/skos/core#definition> "calculated nitriding potential, generated out of H2 / NH3 atmosphere content measurement"@en ,
                                                                                                   "nitriding potential of atmosphere calculated from H2 probe signal and ammonia flow rate "@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Nitriding Potential"@en .
+                                                 rdfs:label "Nitriding Potential"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/OilQuenchingDuration
@@ -477,7 +477,7 @@ verwendet Randschichttiefe""" ;
                                                    <http://www.w3.org/2004/02/skos/core#definition> "Dwell time of the components in the quenching medium."@en ,
                                                                                                     "Parameter indicating the duration of the conducted quenching action "@en ,
                                                                                                     "Verweildauer der Bauteile im Abschreckmedium."@de ;
-                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Abschreckdauer"@de ,
+                                                   rdfs:label "Abschreckdauer"@de ,
                                                                                                    "Oil Quenching Duration"@en .
 
 
@@ -488,7 +488,7 @@ verwendet Randschichttiefe""" ;
                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                            <http://www.w3.org/2004/02/skos/core#definition> " Parameter also for liquid or gaseous media for quenching condition of inductive heat treatments, e.g. water pressure or nitrogen pressure in mbar or bar "@en ,
                                                                                             "Parameter describing a significant higher pressure than ambient pressure, e.g. during a high pressure gas quenching process step, could be mbar or bar "@en ;
-                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Over Pressure"@en .
+                                           rdfs:label "Over Pressure"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/OxygenProbeSignal
@@ -496,7 +496,7 @@ verwendet Randschichttiefe""" ;
                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000109> ;
                                                 rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                 <http://www.w3.org/2004/02/skos/core#definition> " measured oxygen probe signal in retort atmosphere "@en ;
-                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Oxygen Probe Signal"@en .
+                                                rdfs:label "Oxygen Probe Signal"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/PartialPressure
@@ -509,7 +509,7 @@ verwendet Randschichttiefe""" ;
                                                                                                "The complement to vacuum-heating as it allows for active vacuum pump during atmosphere flow. Should be set to zero, if vacuum-heating is true."@en ,
                                                                                                "nominal pressure of a specific atmosphere component thermochemical steps "@en ,
                                                                                                "nominal pressure of thermochemical heat treatment pressure during thermochemical steps "@en ;
-                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Partial Pressure"@en .
+                                              rdfs:label "Partial Pressure"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/QuenchingChamber
@@ -518,7 +518,7 @@ verwendet Randschichttiefe""" ;
                                                rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                <http://www.w3.org/2004/02/skos/core#definition> "Chamber of a heat treatment furnace that is designed to quench objects."@en ,
                                                                                                 "Kammer eines Wärmebehandlungsofens, die zum Abschrecken von Gegenständen bestimmt ist."@de ;
-                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Abschreckkammer"@de ,
+                                               rdfs:label "Abschreckkammer"@de ,
                                                                                                "Quenching Chamber"@en .
 
 
@@ -529,7 +529,7 @@ verwendet Randschichttiefe""" ;
                                                 <http://www.w3.org/2004/02/skos/core#definition> "Dauer zwischen Verlassen der Heizkammer und Beginn der effektiven Abschreckung. Gilt für Zweikammeröfen."@de ,
                                                                                                  "Duration between leaving the heating chamber and the start of effective quenching. Applies to two-chamber furnaces."@en ,
                                                                                                  "Parameter indicatin the duration right before the quenching  process "@en ;
-                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Abschreckvorlaufzeit"@de ,
+                                                rdfs:label "Abschreckvorlaufzeit"@de ,
                                                                                                 "Quenching Leadtime"@en .
 
 
@@ -550,7 +550,7 @@ verwendet Randschichttiefe""" ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                        <http://www.w3.org/2004/02/skos/core#definition> " Parameter describing the intended rotational speed of a device as e.g. an fan or turbine, unit revolution per minute. "@en ,
                                                                                         "rotation speed of the atmosphere agitation device "@en ;
-                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Rotation Speed"@en .
+                                       rdfs:label "Rotation Speed"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/SequenceDescriptor
@@ -558,7 +558,7 @@ verwendet Randschichttiefe""" ;
                                                  rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000017> ;
                                                  rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                  <http://www.w3.org/2004/02/skos/core#definition> "Label of a given process step within a process recipe."@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Sequence Descriptor"@en .
+                                                 rdfs:label "Sequence Descriptor"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/SequenceDuration
@@ -577,7 +577,7 @@ verwendet Randschichttiefe""" ;
                                              <http://www.w3.org/2004/02/skos/core#definition> " An identifier indicating a process-number in a Workflow represented via consecutive integers "@en ,
                                                                                               "number of process step of heat treatment recipe "@en ,
                                                                                               "ongoing number for labeling the process steps within a process recipe "@en ;
-                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Sequence Number"@en .
+                                             rdfs:label "Sequence Number"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/SlowCooling
@@ -586,7 +586,7 @@ verwendet Randschichttiefe""" ;
                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "Langsame Abkühlung unter gleichgewichtsnahen Bedingungen, um ein gleichgewichtsnahes Gefüge zu erzeugen."@de ,
                                                                                            "Slow cooling with equilibrium near conditions, to foster an equilibrium near micro structure."@en ;
-                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Langsame Gleichgewichtsnahabkühlung"@de ,
+                                          rdfs:label "Langsame Gleichgewichtsnahabkühlung"@de ,
                                                                                           "Slow Cooling"@en .
 
 
@@ -598,7 +598,7 @@ verwendet Randschichttiefe""" ;
                                               <http://www.w3.org/2004/02/skos/core#definition> "Dauer bis zum Erreichen der homogenen Temperatur im Bauteil."@de ,
                                                                                                "Duration at isothermal temperatur step."@en ,
                                                                                                "Duration to achieve a homogenous temperature distribution in the part"@en ;
-                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Durchwärmzeit"@de .
+                                              rdfs:label "Durchwärmzeit"@de .
 
 
 ###  https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration
@@ -609,7 +609,7 @@ verwendet Randschichttiefe""" ;
                                                              rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                              <http://www.w3.org/2004/02/skos/core#definition> " Extrahierte Systemzeit für das Diagram geniert "@de ,
                                                                                                               "time stamp for measuring data aquisition time and diagram generation / data syncing "@en ;
-                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "System Time For Diagram Generation"@en .
+                                                             rdfs:label "System Time For Diagram Generation"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/Tempering
@@ -620,7 +620,7 @@ verwendet Randschichttiefe""" ;
                                                                                          "Ein Wärmebehandlungsprozess, um das Härtungsgefüge in die Richtung oder in ein Gleichgewichtsgefüge umzuwandeln."@de ,
                                                                                          "Tempering"@en ,
                                                                                          "heat treatement process with the scope to reduce the hardness of a prior hardened sample or part"@en ;
-                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Anlassen"@de ,
+                                        rdfs:label "Anlassen"@de ,
                                                                                         "Tempering Process"@en .
 
 
@@ -631,7 +631,7 @@ verwendet Randschichttiefe""" ;
                                               rdfs:comment "makes no sense to me, if its a decription, create a dc:decription on that individual or class" ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                               <http://www.w3.org/2004/02/skos/core#definition> "Description for Process Node's utility, e.g. \"Rear Vacuum Furnace Oil Quenching\"."@en ;
-                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Typbeschreibung"@de ,
+                                              rdfs:label "Typbeschreibung"@de ,
                                                                                               "Type Description"@en .
 
 
@@ -642,7 +642,7 @@ verwendet Randschichttiefe""" ;
                                                     rdfs:comment "should be defined as pressur that inheres in a vacum heating pump. Add vacuum heating pump to devices" ;
                                                     rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                                     <http://www.w3.org/2004/02/skos/core#definition> "Pressure of the vaccum heating pump."@en ;
-                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Vacuum Heating Pressure"@en .
+                                                    rdfs:label "Vacuum Heating Pressure"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/VacuumPressure
@@ -654,7 +654,7 @@ verwendet Randschichttiefe""" ;
                                              rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                              <http://www.w3.org/2004/02/skos/core#definition> " Paramenter describing the measured pressure inside a chamber; units could be mbar, bar "@en ,
                                                                                               " Parameter describing the intended vacuum pressure inside a chamber. "@en ;
-                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Vacuum Pressure"@en .
+                                             rdfs:label "Vacuum Pressure"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/cooling
@@ -664,7 +664,7 @@ verwendet Randschichttiefe""" ;
                                       <http://www.w3.org/2004/02/skos/core#definition> "A process in which the temperature is lowered from a higher to a lower level."@en ,
                                                                                        "Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird."@de ,
                                                                                        "process description during cooling process, e.g. fast cooling, free furnace cooling, controled cooling"@en ;
-                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Abkühlprozess"@de ,
+                                      rdfs:label "Abkühlprozess"@de ,
                                                                                       "cooling"@en .
 
 
