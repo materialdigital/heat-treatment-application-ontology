@@ -4217,7 +4217,6 @@ AnnotationAssertion(rdfs:label co:PMD_0000056 "Schmelzofen"@de)
 AnnotationAssertion(rdfs:label co:PMD_0000056 "melting furnace"@en)
 AnnotationAssertion(skos:definition co:PMD_0000056 "A melting furnace is a device that bears a melting function, typically designed to raise the temperature of a solid material to initiate and sustain its transformation into a melt."@en)
 AnnotationAssertion(skos:definition co:PMD_0000056 "Ein Schmelzofen ist ein Gerät, das eine Schmelzfunktion hat und in der Regel dazu dient, die Temperatur eines festen Materials zu erhöhen, um seine Umwandlung in eine Schmelze einzuleiten und aufrechtzuerhalten."@de)
-SubClassOf(co:PMD_0000056 ObjectIntersectionOf(co:PMD_0000655 ObjectSomeValuesFrom(obo:RO_0000085 co:PMD_0000057)))
 
 # Class: co:PMD_0000057 (melting function)
 
@@ -4451,7 +4450,7 @@ AnnotationAssertion(skos:definition co:PMD_0000530 "Ein Mechanische Eigenschafte
 AnnotationAssertion(skos:example co:PMD_0000530 "Testing the flexural strength of a plastic beam to ensure it can withstand the required load in an engineering application."@en)
 SubClassOf(co:PMD_0000530 co:PMD_0000849)
 
-# Class: co:PMD_0000531 (Analyseverfahren der Biokompatibilität)
+# Class: co:PMD_0000531 (biocompatibility analyzing process)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000531 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000531 "Analyseverfahren der Biokompatibilität"@de)
@@ -4747,7 +4746,7 @@ AnnotationAssertion(skos:definition co:PMD_0000564 "Eine Unterfunktion der Besch
 AnnotationAssertion(co:PMD_0000060 co:PMD_0000564 "true"^^xsd:boolean)
 SubClassOf(co:PMD_0000564 co:PMD_0000575)
 
-# Class: co:PMD_0000565 (coating by soldering)
+# Class: co:PMD_0000565 (Beschichten Durch Löten)
 
 AnnotationAssertion(obo:IAO_0000114 co:PMD_0000565 obo:IAO_0000122)
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000565 "PMDco Team")
@@ -5110,7 +5109,7 @@ AnnotationAssertion(co:PMD_0000060 co:PMD_0000604 "true"^^xsd:boolean)
 SubClassOf(co:PMD_0000604 co:PMD_0000621)
 DisjointClasses(co:PMD_0000604 co:PMD_0000620)
 
-# Class: co:PMD_0000605 (differential scanning calorimeter)
+# Class: co:PMD_0000605 (Differential-Scanning-Kalorimeter)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000605 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000605 "Differential-Scanning-Kalorimeter"@de)
@@ -5549,7 +5548,7 @@ SubClassOf(co:PMD_0000654 co:PMD_0000002)
 SubClassOf(co:PMD_0000654 ObjectIntersectionOf(co:PMD_0000002 ObjectSomeValuesFrom(ObjectInverseOf(co:PMD_0020005) ObjectIntersectionOf(obo:BFO_0000030 ObjectSomeValuesFrom(obo:RO_0000085 obo:BFO_0000034)))))
 SubClassOf(co:PMD_0000654 ObjectSomeValuesFrom(ObjectInverseOf(co:PMD_0020005) ObjectIntersectionOf(obo:BFO_0000030 ObjectSomeValuesFrom(obo:RO_0000085 obo:BFO_0000034))))
 
-# Class: co:PMD_0000655 (furnace)
+# Class: co:PMD_0000655 (Ofen)
 
 AnnotationAssertion(obo:IAO_0000114 co:PMD_0000655 obo:IAO_0000428)
 AnnotationAssertion(obo:IAO_0000119 co:PMD_0000655 "“Furnace.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/furnace. Accessed 13 Jan. 2023."@en)
@@ -5578,7 +5577,7 @@ AnnotationAssertion(skos:definition co:PMD_0000657 "A device used for separating
 AnnotationAssertion(skos:definition co:PMD_0000657 "Ein Gerät zur Trennung und Analyse von Verbindungen in einem Gasgemisch unter Verwendung einer chromatographischen Säule."@de)
 SubClassOf(co:PMD_0000657 co:PMD_0000557)
 
-# Class: co:PMD_0000658 (Gel-Permeations-Chromatographie Verfahren)
+# Class: co:PMD_0000658 (gel permeation chromatography process)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000658 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000658 "Gel-Permeations-Chromatographie Verfahren"@de)
@@ -5954,7 +5953,7 @@ AnnotationAssertion(skos:definition co:PMD_0000799 "A device used for analyzing 
 AnnotationAssertion(skos:definition co:PMD_0000799 "Ein Gerät zur Analyse von Ionen in einer Probe zur Bestimmung ihrer Zusammensetzung und Konzentration."@de)
 SubClassOf(co:PMD_0000799 co:PMD_0000602)
 
-# Class: co:PMD_0000800 (Ionenspektroskopie)
+# Class: co:PMD_0000800 (ion spectroscopy)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000800 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000800 "Ionenspektroskopie"@de)
@@ -6510,7 +6509,7 @@ AnnotationAssertion(skos:definition co:PMD_0000874 "A microscope that uses visib
 AnnotationAssertion(skos:definition co:PMD_0000874 "Ein Mikroskop, das sichtbares Licht und Linsen verwendet, um kleine Objekte oder Details zu vergrößern und zu betrachten."@de)
 SubClassOf(co:PMD_0000874 co:PMD_0000855)
 
-# Class: co:PMD_0000875 (Optische Mikroskopie)
+# Class: co:PMD_0000875 (optical microscopy)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000875 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000875 "Ein Mikroskopieverfahren, das sichtbares Licht und Linsen verwendet, um eine Probe zu vergrößern und abzubilden, und weit verbreitet zur Untersuchung der Mikrostruktur und Morphologie von Materialien ist."@de)
@@ -6520,7 +6519,7 @@ AnnotationAssertion(skos:definition co:PMD_0000875 "A Microscopy Process that us
 AnnotationAssertion(skos:example co:PMD_0000875 "An example is Light Microscopy."@en)
 SubClassOf(co:PMD_0000875 co:PMD_0000856)
 
-# Class: co:PMD_0000876 (Optisches Profilometer)
+# Class: co:PMD_0000876 (optical profilometer)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000876 "PMDco Team"@en)
 AnnotationAssertion(rdfs:label co:PMD_0000876 "Optisches Profilometer"@de)
@@ -6704,7 +6703,7 @@ AnnotationAssertion(skos:definition co:PMD_0000899 "Ein Herstellungsprozess, der
 AnnotationAssertion(skos:example co:PMD_0000899 "Casting, Sintering"@en)
 SubClassOf(co:PMD_0000899 co:PMD_0000833)
 
-# Class: co:PMD_0000900 (primary shaping by additive manufacturing)
+# Class: co:PMD_0000900 (Urformen Durch Additive Fertigung)
 
 AnnotationAssertion(obo:IAO_0000114 co:PMD_0000900 obo:IAO_0000122)
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000900 "PMDco Team")
@@ -7392,7 +7391,7 @@ AnnotationAssertion(skos:definition co:PMD_0000979 "Ein Thermische Eigenschaften
 AnnotationAssertion(skos:example co:PMD_0000979 "Measuring the thermal conductivity of a composite material used in aerospace applications to ensure efficient heat dissipation."@en)
 SubClassOf(co:PMD_0000979 co:PMD_0000982)
 
-# Class: co:PMD_0000980 (thermal conductivity measuring function)
+# Class: co:PMD_0000980 (Wärmeleitfähigkeitsmessfunktion)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000980 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000980 "Wärmeleitfähigkeitsmessfunktion"@de)
@@ -10144,10 +10143,10 @@ DifferentIndividuals(co:PMD_0020117 co:PMD_0020118 co:PMD_0020119 co:PMD_0020120
 SubObjectPropertyOf(ObjectPropertyChain(obo:BFO_0000050 obo:BFO_0000066) obo:BFO_0000066)
 SubObjectPropertyOf(ObjectPropertyChain(obo:BFO_0000066 obo:BFO_0000050) obo:BFO_0000066)
 SubObjectPropertyOf(ObjectPropertyChain(co:PMD_0020005 obo:BFO_0000196) co:PMD_0020022)
-DLSafeRule(Body(ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(obo:BFO_0000016 Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000091 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
-DLSafeRule(Body(ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(obo:BFO_0000019 Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000086 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
-DLSafeRule(Body(ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(obo:BFO_0000023 Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000087 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
-DLSafeRule(Body(ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(obo:BFO_0000034 Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000085 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
+DLSafeRule(Body(ClassAtom(obo:BFO_0000016 Variable(<urn:swrl:var#d>)) ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000091 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
+DLSafeRule(Body(ClassAtom(obo:BFO_0000019 Variable(<urn:swrl:var#d>)) ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000086 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
+DLSafeRule(Body(ClassAtom(obo:BFO_0000023 Variable(<urn:swrl:var#d>)) ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000087 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
+DLSafeRule(Body(ClassAtom(obo:BFO_0000034 Variable(<urn:swrl:var#d>)) ObjectPropertyAtom(obo:RO_0000053 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(obo:RO_0000085 Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-6772-1943> "Martin Glauer")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0001-7192-7143> "Jörg Waitelonis")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-1058-3102> "Fabian Neuhaus")
