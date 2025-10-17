@@ -1,6 +1,7 @@
 cls
 http://purl.obolibrary.org/obo/BFO_0000197
 http://purl.obolibrary.org/obo/IAO_0000114
+http://purl.obolibrary.org/obo/RO_0000085
 http://purl.org/dc/terms/contributor
 http://purl.org/dc/terms/creator
 http://purl.org/dc/terms/description
@@ -38,6 +39,8 @@ https://w3id.org/pmd/ao/hto/HTO_0000000
 https://w3id.org/pmd/ao/hto/HTO_0000004
 https://w3id.org/pmd/ao/hto/HTO_0000005
 https://w3id.org/pmd/ao/hto/HTO_0000006
+https://w3id.org/pmd/ao/hto/HTO_0000007
+https://w3id.org/pmd/ao/hto/HTO_0000011
 https://w3id.org/pmd/ao/hto/Hardening
 https://w3id.org/pmd/ao/hto/HeaterRole
 https://w3id.org/pmd/ao/hto/HeatingChamber
