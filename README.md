@@ -4,7 +4,7 @@ template repository for starting a PMDCo application ontology. iT comes preconfi
 
 ## How to use
 
-1. Fork this repository
+1. Click use as Template Repository
 2. Documentation of the application ontology is created via widoco and GitHub Pages when the docs workflow runs.
 
    To enable the documentation, you have to activate GitHub Pages in the repository settings. Set it to GitHub Actions instead of branch; the doc action will upload      the artifacts needed after each push to the repository. 
