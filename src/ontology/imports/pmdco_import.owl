@@ -4192,7 +4192,7 @@ AnnotationAssertion(skos:example co:PMD_0000053 "The process of melting aluminum
 SubClassOf(co:PMD_0000053 co:PMD_0000833)
 SubClassOf(co:PMD_0000053 ObjectIntersectionOf(obo:BFO_0000015 ObjectSomeValuesFrom(obo:OBI_0000293 obo:BFO_0000040) ObjectSomeValuesFrom(obo:OBI_0000299 co:PMD_0020139)))
 
-# Class: co:PMD_0000054 (heating function)
+# Class: co:PMD_0000054 (Heizfunktion)
 
 AnnotationAssertion(rdfs:label co:PMD_0000054 "Heizfunktion"@de)
 AnnotationAssertion(rdfs:label co:PMD_0000054 "heating function"@en)
@@ -4451,7 +4451,7 @@ AnnotationAssertion(skos:definition co:PMD_0000530 "Ein Mechanische Eigenschafte
 AnnotationAssertion(skos:example co:PMD_0000530 "Testing the flexural strength of a plastic beam to ensure it can withstand the required load in an engineering application."@en)
 SubClassOf(co:PMD_0000530 co:PMD_0000849)
 
-# Class: co:PMD_0000531 (Analyseverfahren der Biokompatibilität)
+# Class: co:PMD_0000531 (biocompatibility analyzing process)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000531 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000531 "Analyseverfahren der Biokompatibilität"@de)
@@ -4747,7 +4747,7 @@ AnnotationAssertion(skos:definition co:PMD_0000564 "Eine Unterfunktion der Besch
 AnnotationAssertion(co:PMD_0000060 co:PMD_0000564 "true"^^xsd:boolean)
 SubClassOf(co:PMD_0000564 co:PMD_0000575)
 
-# Class: co:PMD_0000565 (Beschichten Durch Löten)
+# Class: co:PMD_0000565 (coating by soldering)
 
 AnnotationAssertion(obo:IAO_0000114 co:PMD_0000565 obo:IAO_0000122)
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000565 "PMDco Team")
@@ -4966,7 +4966,7 @@ AnnotationAssertion(skos:definition co:PMD_0000587 "The crack growth is an evolu
 AnnotationAssertion(co:PMD_0000060 co:PMD_0000587 "true"^^xsd:boolean)
 SubClassOf(co:PMD_0000587 co:PMD_0000635)
 
-# Class: co:PMD_0000588 (creep testing machine)
+# Class: co:PMD_0000588 (Kriechprüfmaschine)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000588 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000588 "Kriechprüfmaschine"@de)
@@ -5110,7 +5110,7 @@ AnnotationAssertion(co:PMD_0000060 co:PMD_0000604 "true"^^xsd:boolean)
 SubClassOf(co:PMD_0000604 co:PMD_0000621)
 DisjointClasses(co:PMD_0000604 co:PMD_0000620)
 
-# Class: co:PMD_0000605 (differential scanning calorimeter)
+# Class: co:PMD_0000605 (Differential-Scanning-Kalorimeter)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000605 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000605 "Differential-Scanning-Kalorimeter"@de)
@@ -5578,7 +5578,7 @@ AnnotationAssertion(skos:definition co:PMD_0000657 "A device used for separating
 AnnotationAssertion(skos:definition co:PMD_0000657 "Ein Gerät zur Trennung und Analyse von Verbindungen in einem Gasgemisch unter Verwendung einer chromatographischen Säule."@de)
 SubClassOf(co:PMD_0000657 co:PMD_0000557)
 
-# Class: co:PMD_0000658 (Gel-Permeations-Chromatographie Verfahren)
+# Class: co:PMD_0000658 (gel permeation chromatography process)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000658 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000658 "Gel-Permeations-Chromatographie Verfahren"@de)
@@ -6027,7 +6027,7 @@ AnnotationAssertion(skos:definition co:PMD_0000807 "Ein Fügeverfahren, bei dem 
 AnnotationAssertion(skos:example co:PMD_0000807 "Pouring, Embedding, Encasing"@en)
 SubClassOf(co:PMD_0000807 co:PMD_0000806)
 
-# Class: co:PMD_0000808 (joining by shaping)
+# Class: co:PMD_0000808 (Fügen Durch Umformen)
 
 AnnotationAssertion(obo:IAO_0000114 co:PMD_0000808 obo:IAO_0000122)
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000808 "PMDco Team")
@@ -6264,7 +6264,6 @@ A manufacturing process is always a transformative process."@en)
 AnnotationAssertion(skos:definition co:PMD_0000833 "Ein geplannter Prozess, der von der primären Absicht angetrieben wird, Objekte zu transformieren. Ein Herstellungsprozess ist immer ein Transformationsprozess."@de)
 AnnotationAssertion(co:PMD_0000060 co:PMD_0000833 "true"^^xsd:boolean)
 EquivalentClasses(co:PMD_0000833 ObjectIntersectionOf(obo:BFO_0000015 ObjectSomeValuesFrom(obo:OBI_0000293 obo:BFO_0000040) ObjectSomeValuesFrom(obo:OBI_0000299 obo:BFO_0000040)))
-SubClassOf(co:PMD_0000833 obo:OBI_0000011)
 SubClassOf(co:PMD_0000833 ObjectIntersectionOf(obo:BFO_0000015 ObjectSomeValuesFrom(obo:BFO_0000055 co:PMD_0000014)))
 SubClassOf(co:PMD_0000833 ObjectSomeValuesFrom(obo:OBI_0000293 obo:BFO_0000040))
 SubClassOf(co:PMD_0000833 ObjectSomeValuesFrom(obo:OBI_0000299 obo:BFO_0000040))
@@ -6322,7 +6321,7 @@ AnnotationAssertion(co:PMD_0000060 co:PMD_0000848 "true"^^xsd:boolean)
 SubClassOf(co:PMD_0000848 co:PMD_0000005)
 SubClassOf(co:PMD_0000848 ObjectSomeValuesFrom(co:PMD_0001030 co:PMD_0000522))
 
-# Class: co:PMD_0000849 (mechanical property analyzing process)
+# Class: co:PMD_0000849 (Mechanische Eigenschaften Analyseverfahren)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000849 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000849 "Mechanische Eigenschaften Analyseverfahren"@de)
@@ -6520,7 +6519,7 @@ AnnotationAssertion(skos:definition co:PMD_0000875 "A Microscopy Process that us
 AnnotationAssertion(skos:example co:PMD_0000875 "An example is Light Microscopy."@en)
 SubClassOf(co:PMD_0000875 co:PMD_0000856)
 
-# Class: co:PMD_0000876 (optical profilometer)
+# Class: co:PMD_0000876 (Optisches Profilometer)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000876 "PMDco Team"@en)
 AnnotationAssertion(rdfs:label co:PMD_0000876 "Optisches Profilometer"@de)
@@ -6704,7 +6703,7 @@ AnnotationAssertion(skos:definition co:PMD_0000899 "Ein Herstellungsprozess, der
 AnnotationAssertion(skos:example co:PMD_0000899 "Casting, Sintering"@en)
 SubClassOf(co:PMD_0000899 co:PMD_0000833)
 
-# Class: co:PMD_0000900 (primary shaping by additive manufacturing)
+# Class: co:PMD_0000900 (Urformen Durch Additive Fertigung)
 
 AnnotationAssertion(obo:IAO_0000114 co:PMD_0000900 obo:IAO_0000122)
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000900 "PMDco Team")
@@ -7094,7 +7093,7 @@ AnnotationAssertion(skos:definition co:PMD_0000942 "The specific surface area is
 AnnotationAssertion(co:PMD_0000060 co:PMD_0000942 "true"^^xsd:boolean)
 SubClassOf(co:PMD_0000942 co:PMD_0020131)
 
-# Class: co:PMD_0000944 (Spektrometer)
+# Class: co:PMD_0000944 (spectrometer)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000944 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000944 "Spektrometer"@de)
@@ -7221,7 +7220,7 @@ AnnotationAssertion(skos:definition co:PMD_0000961 "The sublimation point is a p
 AnnotationAssertion(co:PMD_0000060 co:PMD_0000961 "true"^^xsd:boolean)
 SubClassOf(co:PMD_0000961 co:PMD_0000882)
 
-# Class: co:PMD_0000962 (supercritical fluid chromatography process)
+# Class: co:PMD_0000962 (Überkritische Fluidchromatographie Verfahren)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000962 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000962 "supercritical fluid chromatography process"@en)
@@ -7392,7 +7391,7 @@ AnnotationAssertion(skos:definition co:PMD_0000979 "Ein Thermische Eigenschaften
 AnnotationAssertion(skos:example co:PMD_0000979 "Measuring the thermal conductivity of a composite material used in aerospace applications to ensure efficient heat dissipation."@en)
 SubClassOf(co:PMD_0000979 co:PMD_0000982)
 
-# Class: co:PMD_0000980 (thermal conductivity measuring function)
+# Class: co:PMD_0000980 (Wärmeleitfähigkeitsmessfunktion)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000980 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000980 "Wärmeleitfähigkeitsmessfunktion"@de)
