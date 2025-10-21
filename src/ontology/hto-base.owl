@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/pmd/ao/hto/hto-base.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/ao/hto/releases/2025-10-17/hto-base.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/ao/hto/releases/2025-10-21/hto-base.owl"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator>https://orcid.org/0000-0002-9014-2920</terms:creator>
@@ -20,7 +20,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2025-10-17</owl:versionInfo>
+        <owl:versionInfo>2025-10-21</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -104,6 +104,12 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000197 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000197"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000009 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0000009"/>
     
 
 
@@ -274,7 +280,7 @@
         <rdfs:comment xml:lang="de">unklare Zuordnung innerhalb der &quot;spec. dep. continuants&quot;. Eine Kammer existiert nur als Teil eines Gerätes (Device), könnte aber selbst noch einmal als independent continuant definiert werden, da sich in der Kammer Chargen, Gestelle, Thermoelemente etc. befinden.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">chamber</rdfs:label>
-        <skos:definition xml:lang="en">Systemboundary of a distinct Heattreatment Process. Typically includes media (e.g., Helium or Vaccum).</skos:definition>
+        <skos:definition xml:lang="en">Systemboundary of a distinct Heattreatment Process. Typically includes medium (e.g., Helium or Vacuum).</skos:definition>
     </owl:Class>
     
 
@@ -490,6 +496,18 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/pmd/ao/hto/HTO_0000001 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000001">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000055"/>
+        <rdfs:label xml:lang="en">quenching function</rdfs:label>
+        <skos:definition xml:lang="en">A quenching function is a (realizable) function that, when realized, enables a system to lower the temparature of a material fast enough, that it hinders diffusion processes and thus produces metastable material states.</skos:definition>
+        <skos:definition xml:lang="de">Eine Abschreckfunktion ist eine (realisierbare) Funktion, die es einem System ermöglicht die Temperatur eines Material schnell genug abzusenken, sodass Diffusionsprozesse behindert und dadurch metastabile Materialzustände erzeugt werden.</skos:definition>
+        <skos:example xml:lang="en">The function of a oil bath to quench steel after austenitisation so the material transforms into martensite.</skos:example>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/ao/hto/HTO_0000004 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000004">
@@ -539,6 +557,17 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/pmd/ao/hto/HTO_0000012 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000012">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000781"/>
+        <rdfs:label xml:lang="en">holding function</rdfs:label>
+        <skos:definition xml:lang="en">A holding function is a (realizable) function that, when realized, enables a system or device to hold the thermal energy of a material, typically to facilitate diffusion and phase transformation processes within the material.</skos:definition>
+        <skos:example>function of a furnace to hold its temperature at a specified temperature</skos:example>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/ao/hto/Hardening -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Hardening">
@@ -559,15 +588,6 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HeaterRole -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HeaterRole">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <rdfs:comment>todo</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/ao/hto/HeatingChamber -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HeatingChamber">
@@ -577,15 +597,6 @@ verwendet Randschichttiefe</skos:example>
         <rdfs:label xml:lang="de">Ofenkammer mit einer Heizung.</rdfs:label>
         <rdfs:label xml:lang="en">heating chamber</rdfs:label>
         <skos:definition xml:lang="en">Distinguishable chamber of a heat treatment furnace with a heater.</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/ao/hto/HeatingKammerRolle -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HeatingKammerRolle">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <rdfs:comment>todo</rdfs:comment>
     </owl:Class>
     
 
@@ -967,6 +978,12 @@ verwendet Randschichttiefe</skos:example>
 
     <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/cooling">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000009"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Abkühlprozess</rdfs:label>
         <rdfs:label xml:lang="en">cooling</rdfs:label>
@@ -981,6 +998,12 @@ verwendet Randschichttiefe</skos:example>
 
     <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/heating">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000009"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/ao/hto/"/>
         <rdfs:label xml:lang="de">Erwärmen</rdfs:label>
         <rdfs:label xml:lang="en">heating</rdfs:label>
@@ -1008,7 +1031,7 @@ verwendet Randschichttiefe</skos:example>
     <!-- https://w3id.org/pmd/ao/hto/quenching -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/quenching">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000000"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/cooling"/>
         <rdfs:label xml:lang="de">Abschrecken</rdfs:label>
         <rdfs:label xml:lang="en">quenching</rdfs:label>
         <skos:definition>Abkühlungsvorgang, der unter Verwendung eines Mediums erfolgt, das in direktem Kontakt mit dem steht, mit dem Ziel die Wärme des Bauteils aufzunehmen.</skos:definition>
@@ -1033,16 +1056,6 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
-        <obo:IAO_0000114>needs work</obo:IAO_0000114>
-        <rdfs:comment>todo</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/co/PMD_0000005 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000005"/>
@@ -1058,6 +1071,12 @@ verwendet Randschichttiefe</skos:example>
     <!-- https://w3id.org/pmd/co/PMD_0000017 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000017"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000055 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000055"/>
     
 
 

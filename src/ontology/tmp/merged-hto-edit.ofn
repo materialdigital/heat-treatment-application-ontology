@@ -19,6 +19,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000016>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000023>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000024>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000030>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000145>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000202>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000005>))
@@ -48,15 +49,15 @@ Declaration(Class(<https://w3id.org/pmd/ao/hto/Fluid>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/FurnaceAtmosphere>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/FurnaceCooling>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/HTO_0000000>))
+Declaration(Class(<https://w3id.org/pmd/ao/hto/HTO_0000001>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/HTO_0000004>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/HTO_0000005>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/HTO_0000006>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/HTO_0000007>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/HTO_0000011>))
+Declaration(Class(<https://w3id.org/pmd/ao/hto/HTO_0000012>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/Hardening>))
-Declaration(Class(<https://w3id.org/pmd/ao/hto/HeaterRole>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/HeatingChamber>))
-Declaration(Class(<https://w3id.org/pmd/ao/hto/HeatingKammerRolle>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/HeatingTime>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/HeattreatmentMethod>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/HeattreatmentScope>))
@@ -91,11 +92,11 @@ Declaration(Class(<https://w3id.org/pmd/ao/hto/heating>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/holding>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/quenching>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/soaking>))
-Declaration(Class(<https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000005>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000008>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000017>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000054>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000055>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000056>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000057>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000602>))
@@ -105,8 +106,11 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0000833>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000896>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0060006>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0060008>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000197>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000057>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000085>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000009>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0001937>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000114>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
@@ -215,7 +219,7 @@ AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/Chamber> "moved to
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/Chamber> "unklare Zuordnung innerhalb der \"spec. dep. continuants\". Eine Kammer existiert nur als Teil eines Gerätes (Device), könnte aber selbst noch einmal als independent continuant definiert werden, da sich in der Kammer Chargen, Gestelle, Thermoelemente etc. befinden."@de)
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/Chamber> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/Chamber> "chamber"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Chamber> "Systemboundary of a distinct Heattreatment Process. Typically includes media (e.g., Helium or Vaccum)."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/Chamber> "Systemboundary of a distinct Heattreatment Process. Typically includes medium (e.g., Helium or Vacuum)."@en)
 SubClassOf(<https://w3id.org/pmd/ao/hto/Chamber> <http://purl.obolibrary.org/obo/BFO_0000024>)
 
 # Class: <https://w3id.org/pmd/ao/hto/ChamberPressure> (chamber pressure)
@@ -348,6 +352,14 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/FurnaceCooling> <https://w3id.org/pmd/ao
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/HTO_0000000> "heat treatment process"@en)
 SubClassOf(<https://w3id.org/pmd/ao/hto/HTO_0000000> <https://w3id.org/pmd/co/PMD_0000833>)
 
+# Class: <https://w3id.org/pmd/ao/hto/HTO_0000001> (quenching function)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/HTO_0000001> "quenching function"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/HTO_0000001> "A quenching function is a (realizable) function that, when realized, enables a system to lower the temparature of a material fast enough, that it hinders diffusion processes and thus produces metastable material states."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/HTO_0000001> "Eine Abschreckfunktion ist eine (realisierbare) Funktion, die es einem System ermöglicht die Temperatur eines Material schnell genug abzusenken, sodass Diffusionsprozesse behindert und dadurch metastabile Materialzustände erzeugt werden."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/ao/hto/HTO_0000001> "The function of a oil bath to quench steel after austenitisation so the material transforms into martensite."@en)
+SubClassOf(<https://w3id.org/pmd/ao/hto/HTO_0000001> <https://w3id.org/pmd/co/PMD_0000055>)
+
 # Class: <https://w3id.org/pmd/ao/hto/HTO_0000004> (heating recipe)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/HTO_0000004> "heating recipe"@en)
@@ -377,6 +389,13 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/HTO_0000011> "austen
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/HTO_0000011> "disposition of material which marks the phase change to austenite")
 SubClassOf(<https://w3id.org/pmd/ao/hto/HTO_0000011> <http://purl.obolibrary.org/obo/BFO_0000016>)
 
+# Class: <https://w3id.org/pmd/ao/hto/HTO_0000012> (holding function)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/HTO_0000012> "holding function"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/HTO_0000012> "A holding function is a (realizable) function that, when realized, enables a system or device to hold the thermal energy of a material, typically to facilitate diffusion and phase transformation processes within the material."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/ao/hto/HTO_0000012> "function of a furnace to hold its temperature at a specified temperature")
+SubClassOf(<https://w3id.org/pmd/ao/hto/HTO_0000012> <https://w3id.org/pmd/co/PMD_0000781>)
+
 # Class: <https://w3id.org/pmd/ao/hto/Hardening> (hardening)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/Hardening> <https://w3id.org/pmd/hto/>)
@@ -393,11 +412,6 @@ Nitrierhärten
 verwendet Randschichttiefe")
 SubClassOf(<https://w3id.org/pmd/ao/hto/Hardening> <https://w3id.org/pmd/ao/hto/HeattreatmentScope>)
 
-# Class: <https://w3id.org/pmd/ao/hto/HeaterRole> (<https://w3id.org/pmd/ao/hto/HeaterRole>)
-
-AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/HeaterRole> "todo")
-SubClassOf(<https://w3id.org/pmd/ao/hto/HeaterRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
-
 # Class: <https://w3id.org/pmd/ao/hto/HeatingChamber> (Heizkammer)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/HeatingChamber> <https://w3id.org/pmd/hto/>)
@@ -406,11 +420,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/HeatingChamber> "Ofe
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/HeatingChamber> "heating chamber"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/HeatingChamber> "Distinguishable chamber of a heat treatment furnace with a heater."@en)
 SubClassOf(<https://w3id.org/pmd/ao/hto/HeatingChamber> <https://w3id.org/pmd/ao/hto/ChamberScope>)
-
-# Class: <https://w3id.org/pmd/ao/hto/HeatingKammerRolle> (<https://w3id.org/pmd/ao/hto/HeatingKammerRolle>)
-
-AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/HeatingKammerRolle> "todo")
-SubClassOf(<https://w3id.org/pmd/ao/hto/HeatingKammerRolle> <http://purl.obolibrary.org/obo/BFO_0000023>)
 
 # Class: <https://w3id.org/pmd/ao/hto/HeatingTime> (Heating Time)
 
@@ -678,6 +687,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/cooling> "Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/cooling> "process description during cooling process, e.g. fast cooling, free furnace cooling, controled cooling"@en)
 SubClassOf(<https://w3id.org/pmd/ao/hto/cooling> <https://w3id.org/pmd/ao/hto/HTO_0000000>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/cooling> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000009> <https://w3id.org/pmd/ao/hto/HTO_0000005>))
 
 # Class: <https://w3id.org/pmd/ao/hto/heating> (Erwärmen)
 
@@ -688,6 +698,8 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/heating> "Ein Prozess, bei dem die Temperatur von einem niedrigem auf ein höheres Niveau gesteigert wird."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/heating> "type of heating process, e.g. fast uncontrolled heating, heating ramp controlled etc. "@en)
 SubClassOf(<https://w3id.org/pmd/ao/hto/heating> <https://w3id.org/pmd/ao/hto/HTO_0000000>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/heating> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/BFO_0000040>))
+SubClassOf(<https://w3id.org/pmd/ao/hto/heating> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000009> <https://w3id.org/pmd/ao/hto/HTO_0000006>))
 
 # Class: <https://w3id.org/pmd/ao/hto/holding> (Halten)
 
@@ -706,7 +718,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/quenching> "quenchin
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/quenching> "Abkühlungsvorgang, der unter Verwendung eines Mediums erfolgt, das in direktem Kontakt mit dem steht, mit dem Ziel die Wärme des Bauteils aufzunehmen.")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/quenching> "Process with significantly increased cooling rate, aimed at preventing diffusion based transformations."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/quenching> "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de)
-SubClassOf(<https://w3id.org/pmd/ao/hto/quenching> <https://w3id.org/pmd/ao/hto/HTO_0000000>)
+SubClassOf(<https://w3id.org/pmd/ao/hto/quenching> <https://w3id.org/pmd/ao/hto/cooling>)
 
 # Class: <https://w3id.org/pmd/ao/hto/soaking> (soaking)
 
@@ -719,18 +731,13 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/soaking> "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de)
 SubClassOf(<https://w3id.org/pmd/ao/hto/soaking> <https://w3id.org/pmd/ao/hto/HTO_0000000>)
 
-# Class: <https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> (<https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole>)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> "needs work")
-AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> "todo")
-SubClassOf(<https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> <http://purl.obolibrary.org/obo/BFO_0000023>)
-
 # Class: <https://w3id.org/pmd/co/PMD_0000056> (melting furnace)
 
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000057>)))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000655> (furnace)
+# Class: <https://w3id.org/pmd/co/PMD_0000655> (Ofen)
 
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/ao/hto/Chamber>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))
 
 

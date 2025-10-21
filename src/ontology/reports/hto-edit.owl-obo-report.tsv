@@ -2,10 +2,7 @@ Level	Rule Name	Subject	Property	Value
 ERROR	duplicate_label	Erwärmdauer	rdfs:label	Erwärmdauer@de
 ERROR	duplicate_label	Heating Time	rdfs:label	Erwärmdauer@de
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/Fan	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/HeaterRole	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/HeatingKammerRolle	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/ao/hto/HeattreatmentMethod	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole	rdfs:label	
 ERROR	multiple_labels	carburizing recipe	rdfs:label	Aufkohlen@de
 ERROR	multiple_labels	carburizing recipe	rdfs:label	carburizing recipe@en
 ERROR	multiple_labels	Wärmebehandlungsofenkammer	rdfs:label	Wärmebehandlungsofenkammer@de
@@ -106,15 +103,15 @@ WARN	missing_definition	fluid	IAO:0000115
 WARN	missing_definition	furnace atmosphere	IAO:0000115	
 WARN	missing_definition	furnace cooling	IAO:0000115	
 WARN	missing_definition	heat treatment process	IAO:0000115	
+WARN	missing_definition	quenching function	IAO:0000115	
 WARN	missing_definition	heating recipe	IAO:0000115	
 WARN	missing_definition	temperature change rate	IAO:0000115	
 WARN	missing_definition	target temperature	IAO:0000115	
 WARN	missing_definition	melting temperature	IAO:0000115	
 WARN	missing_definition	austenitizing temperature	IAO:0000115	
+WARN	missing_definition	holding function	IAO:0000115	
 WARN	missing_definition	hardening	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/HeaterRole	IAO:0000115	
 WARN	missing_definition	Heizkammer	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/HeatingKammerRolle	IAO:0000115	
 WARN	missing_definition	Heating Time	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/ao/hto/HeattreatmentMethod	IAO:0000115	
 WARN	missing_definition	heattreatmentscope	IAO:0000115	
@@ -149,5 +146,4 @@ WARN	missing_definition	Erwärmen	IAO:0000115
 WARN	missing_definition	Halten	IAO:0000115	
 WARN	missing_definition	quenching	IAO:0000115	
 WARN	missing_definition	soaking	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole	IAO:0000115	
 INFO	missing_superclass	chamber pressure	rdfs:subClassOf	

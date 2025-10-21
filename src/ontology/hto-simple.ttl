@@ -12,7 +12,7 @@
 @base <https://w3id.org/pmd/ao/hto/hto-simple.ttl> .
 
 <https://w3id.org/pmd/ao/hto/hto-simple.ttl> rdf:type owl:Ontology ;
-                                              owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-10-17/hto-simple.ttl> ;
+                                              owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-10-21/hto-simple.ttl> ;
                                               terms:contributor "Jannis Grundmann" ;
                                               terms:creator "https://orcid.org/0000-0002-9014-2920" ,
                                                             "https://orcid.org/0000-0003-1649-6832" ,
@@ -20,11 +20,15 @@
                                               terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                               terms:license <https://creativecommons.org/licenses/unspecified> ;
                                               terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                              owl:versionInfo "2025-10-17" .
+                                              owl:versionInfo "2025-10-21" .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000111
+obo:IAO_0000111 rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.obolibrary.org/obo/IAO_0000112
 obo:IAO_0000112 rdf:type owl:AnnotationProperty .
@@ -74,6 +78,10 @@ terms:license rdf:type owl:AnnotationProperty ;
                          "license" .
 
 
+###  http://purl.org/dc/terms/source
+terms:source rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/title
 terms:title rdf:type owl:AnnotationProperty ;
             rdfs:label "title" .
@@ -99,12 +107,42 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://purl.obolibrary.org/obo/BFO_0000051
+obo:BFO_0000051 rdf:type owl:ObjectProperty ,
+                         owl:TransitiveProperty ;
+                obo:IAO_0000111 "has part"@en ;
+                obo:IAO_0000112 "my body has part my brain (continuant parthood, two material entities)"@en ,
+                                "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)"@en ,
+                                "this year has part this day (occurrent parthood)"@en ;
+                obo:IAO_0000115 "a core relation that holds between a whole and its part"@en ;
+                obo:IAO_0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."@en ,
+                                "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en ,
+                                """Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
+
+A continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'."""@en ;
+                obo:IAO_0000118 "has_part"@en ;
+                rdfs:label "has part"@en .
+
+
 ###  http://purl.obolibrary.org/obo/BFO_0000197
 obo:BFO_0000197 rdf:type owl:ObjectProperty ;
                 dc:identifier "051-BFO" ;
                 rdfs:label "inheres in"@en ;
                 skos:definition "b inheres in c =Def b is a specifically dependent continuant & c is an independent continuant that is not a spatial region & b specifically depends on c"@en ;
                 skos:example "A shape inheres in a shaped object; a mass inheres in a material entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000057
+obo:RO_0000057 rdf:type owl:ObjectProperty ;
+               obo:IAO_0000111 "has participant"@en ;
+               obo:IAO_0000112 "this blood coagulation has participant this blood clot"@en ,
+                               "this investigation has participant this investigator"@en ,
+                               "this process has participant this input material (or this output material)"@en ;
+               obo:IAO_0000115 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en ;
+               obo:IAO_0000116 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time."@en ;
+               obo:IAO_0000118 "has_participant"@en ;
+               terms:source "http://www.obofoundry.org/ro/#OBO_REL:has_participant" ;
+               rdfs:label "has participant"@en .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000085
@@ -114,6 +152,12 @@ obo:RO_0000085 rdf:type owl:ObjectProperty ;
                obo:IAO_0000116 "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists."@en ;
                obo:IAO_0000118 "has_function"@en ;
                rdfs:label "has function"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000009
+<https://w3id.org/pmd/co/PMD_0000009> rdf:type owl:ObjectProperty ;
+                                      rdfs:label "has process characteristic"@de ;
+                                      skos:definition "A relation between a process and a process characteristic that depends on it."@en .
 
 
 #################################################################
@@ -196,7 +240,7 @@ obo:RO_0000085 rdf:type owl:ObjectProperty ;
                                                    "unklare Zuordnung innerhalb der \"spec. dep. continuants\". Eine Kammer existiert nur als Teil eines Gerätes (Device), könnte aber selbst noch einmal als independent continuant definiert werden, da sich in der Kammer Chargen, Gestelle, Thermoelemente etc. befinden."@de ;
                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                       rdfs:label "chamber"@en ;
-                                      skos:definition "Systemboundary of a distinct Heattreatment Process. Typically includes media (e.g., Helium or Vaccum)."@en .
+                                      skos:definition "Systemboundary of a distinct Heattreatment Process. Typically includes medium (e.g., Helium or Vacuum)."@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/ChamberPressure
@@ -337,6 +381,14 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
                                           rdfs:label "heat treatment process"@en .
 
 
+###  https://w3id.org/pmd/ao/hto/HTO_0000001
+<https://w3id.org/pmd/ao/hto/HTO_0000001> rdf:type owl:Class ;
+                                          rdfs:label "quenching function"@en ;
+                                          skos:definition "A quenching function is a (realizable) function that, when realized, enables a system to lower the temparature of a material fast enough, that it hinders diffusion processes and thus produces metastable material states."@en ,
+                                                          "Eine Abschreckfunktion ist eine (realisierbare) Funktion, die es einem System ermöglicht die Temperatur eines Material schnell genug abzusenken, sodass Diffusionsprozesse behindert und dadurch metastabile Materialzustände erzeugt werden."@de ;
+                                          skos:example "The function of a oil bath to quench steel after austenitisation so the material transforms into martensite."@en .
+
+
 ###  https://w3id.org/pmd/ao/hto/HTO_0000004
 <https://w3id.org/pmd/ao/hto/HTO_0000004> rdf:type owl:Class ;
                                           rdfs:label "heating recipe"@en .
@@ -366,6 +418,13 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
                                           skos:definition "disposition of material which marks the phase change to austenite" .
 
 
+###  https://w3id.org/pmd/ao/hto/HTO_0000012
+<https://w3id.org/pmd/ao/hto/HTO_0000012> rdf:type owl:Class ;
+                                          rdfs:label "holding function"@en ;
+                                          skos:definition "A holding function is a (realizable) function that, when realized, enables a system or device to hold the thermal energy of a material, typically to facilitate diffusion and phase transformation processes within the material."@en ;
+                                          skos:example "function of a furnace to hold its temperature at a specified temperature" .
+
+
 ###  https://w3id.org/pmd/ao/hto/Hardening
 <https://w3id.org/pmd/ao/hto/Hardening> rdf:type owl:Class ;
                                         rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HeattreatmentScope> ;
@@ -383,11 +442,6 @@ Nitrierhärten
 verwendet Randschichttiefe""" .
 
 
-###  https://w3id.org/pmd/ao/hto/HeaterRole
-<https://w3id.org/pmd/ao/hto/HeaterRole> rdf:type owl:Class ;
-                                         rdfs:comment "todo" .
-
-
 ###  https://w3id.org/pmd/ao/hto/HeatingChamber
 <https://w3id.org/pmd/ao/hto/HeatingChamber> rdf:type owl:Class ;
                                              rdfs:subClassOf <https://w3id.org/pmd/ao/hto/ChamberScope> ;
@@ -396,11 +450,6 @@ verwendet Randschichttiefe""" .
                                                         "Ofenkammer mit einer Heizung."@de ,
                                                         "heating chamber"@en ;
                                              skos:definition "Distinguishable chamber of a heat treatment furnace with a heater."@en .
-
-
-###  https://w3id.org/pmd/ao/hto/HeatingKammerRolle
-<https://w3id.org/pmd/ao/hto/HeatingKammerRolle> rdf:type owl:Class ;
-                                                 rdfs:comment "todo" .
 
 
 ###  https://w3id.org/pmd/ao/hto/HeatingTime
@@ -666,7 +715,11 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/ao/hto/cooling
 <https://w3id.org/pmd/ao/hto/cooling> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000005>
+                                                      ] ;
                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                       rdfs:label "Abkühlprozess"@de ,
                                                  "cooling"@en ;
@@ -677,7 +730,11 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/ao/hto/heating
 <https://w3id.org/pmd/ao/hto/heating> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
+                                                        owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000006>
+                                                      ] ;
                                       rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/> ;
                                       rdfs:label "Erwärmen"@de ,
                                                  "heating"@en ;
@@ -699,7 +756,7 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/ao/hto/quenching
 <https://w3id.org/pmd/ao/hto/quenching> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000000> ;
+                                        rdfs:subClassOf <https://w3id.org/pmd/ao/hto/cooling> ;
                                         rdfs:label "Abschrecken"@de ,
                                                    "quenching"@en ;
                                         skos:definition "Abkühlungsvorgang, der unter Verwendung eines Mediums erfolgt, das in direktem Kontakt mit dem steht, mit dem Ziel die Wärme des Bauteils aufzunehmen." ,
@@ -717,12 +774,6 @@ verwendet Randschichttiefe""" .
                                       skos:definition "Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. "@en ,
                                                       "Process step during which temperature homogenization is achieved in the component."@en ,
                                                       "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de .
-
-
-###  https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole
-<https://w3id.org/pmd/ao/hto/toBeHeatTreatedRole> rdf:type owl:Class ;
-                                                  obo:IAO_0000114 "needs work" ;
-                                                  rdfs:comment "todo" .
 
 
 ###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi
