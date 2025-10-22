@@ -12521,6 +12521,9 @@ co:PMD_0020125 rdf:type owl:NamedIndividual ;
 <https://orcid.org/0000-0003-4971-3645> rdfs:label "Philipp von Hartrott" .
 
 
+<https://orcid.org/0009-0004-4787-4685> rdfs:label "Felix Thonagel" .
+
+
 #################################################################
 #    General axioms
 #################################################################

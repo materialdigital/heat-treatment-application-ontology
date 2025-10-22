@@ -4219,7 +4219,7 @@ AnnotationAssertion(skos:definition co:PMD_0000056 "A melting furnace is a devic
 AnnotationAssertion(skos:definition co:PMD_0000056 "Ein Schmelzofen ist ein Gerät, das eine Schmelzfunktion hat und in der Regel dazu dient, die Temperatur eines festen Materials zu erhöhen, um seine Umwandlung in eine Schmelze einzuleiten und aufrechtzuerhalten."@de)
 SubClassOf(co:PMD_0000056 ObjectIntersectionOf(co:PMD_0000655 ObjectSomeValuesFrom(obo:RO_0000085 co:PMD_0000057)))
 
-# Class: co:PMD_0000057 (melting function)
+# Class: co:PMD_0000057 (Schmelzfunktion)
 
 AnnotationAssertion(rdfs:label co:PMD_0000057 "Schmelzfunktion"@de)
 AnnotationAssertion(rdfs:label co:PMD_0000057 "melting function"@en)
@@ -4966,7 +4966,7 @@ AnnotationAssertion(skos:definition co:PMD_0000587 "The crack growth is an evolu
 AnnotationAssertion(co:PMD_0000060 co:PMD_0000587 "true"^^xsd:boolean)
 SubClassOf(co:PMD_0000587 co:PMD_0000635)
 
-# Class: co:PMD_0000588 (Kriechprüfmaschine)
+# Class: co:PMD_0000588 (creep testing machine)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000588 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000588 "Kriechprüfmaschine"@de)
@@ -5490,7 +5490,7 @@ AnnotationAssertion(skos:definition co:PMD_0000649 "Ein Umform Prozess, bei dem 
 AnnotationAssertion(skos:example co:PMD_0000649 "Stripping, Deep Drawing, Spinning"@en)
 SubClassOf(co:PMD_0000649 co:PMD_0000646)
 
-# Class: co:PMD_0000650 (forming under compressive conditions)
+# Class: co:PMD_0000650 (Druckumformen)
 
 AnnotationAssertion(obo:IAO_0000114 co:PMD_0000650 obo:IAO_0000122)
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000650 "PMDco Team")
@@ -5549,7 +5549,7 @@ SubClassOf(co:PMD_0000654 co:PMD_0000002)
 SubClassOf(co:PMD_0000654 ObjectIntersectionOf(co:PMD_0000002 ObjectSomeValuesFrom(ObjectInverseOf(co:PMD_0020005) ObjectIntersectionOf(obo:BFO_0000030 ObjectSomeValuesFrom(obo:RO_0000085 obo:BFO_0000034)))))
 SubClassOf(co:PMD_0000654 ObjectSomeValuesFrom(ObjectInverseOf(co:PMD_0020005) ObjectIntersectionOf(obo:BFO_0000030 ObjectSomeValuesFrom(obo:RO_0000085 obo:BFO_0000034))))
 
-# Class: co:PMD_0000655 (Ofen)
+# Class: co:PMD_0000655 (furnace)
 
 AnnotationAssertion(obo:IAO_0000114 co:PMD_0000655 obo:IAO_0000428)
 AnnotationAssertion(obo:IAO_0000119 co:PMD_0000655 "“Furnace.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/furnace. Accessed 13 Jan. 2023."@en)
@@ -5578,7 +5578,7 @@ AnnotationAssertion(skos:definition co:PMD_0000657 "A device used for separating
 AnnotationAssertion(skos:definition co:PMD_0000657 "Ein Gerät zur Trennung und Analyse von Verbindungen in einem Gasgemisch unter Verwendung einer chromatographischen Säule."@de)
 SubClassOf(co:PMD_0000657 co:PMD_0000557)
 
-# Class: co:PMD_0000658 (Gel-Permeations-Chromatographie Verfahren)
+# Class: co:PMD_0000658 (gel permeation chromatography process)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000658 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000658 "Gel-Permeations-Chromatographie Verfahren"@de)
@@ -6322,7 +6322,7 @@ AnnotationAssertion(co:PMD_0000060 co:PMD_0000848 "true"^^xsd:boolean)
 SubClassOf(co:PMD_0000848 co:PMD_0000005)
 SubClassOf(co:PMD_0000848 ObjectSomeValuesFrom(co:PMD_0001030 co:PMD_0000522))
 
-# Class: co:PMD_0000849 (mechanical property analyzing process)
+# Class: co:PMD_0000849 (Mechanische Eigenschaften Analyseverfahren)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000849 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000849 "Mechanische Eigenschaften Analyseverfahren"@de)
@@ -6510,7 +6510,7 @@ AnnotationAssertion(skos:definition co:PMD_0000874 "A microscope that uses visib
 AnnotationAssertion(skos:definition co:PMD_0000874 "Ein Mikroskop, das sichtbares Licht und Linsen verwendet, um kleine Objekte oder Details zu vergrößern und zu betrachten."@de)
 SubClassOf(co:PMD_0000874 co:PMD_0000855)
 
-# Class: co:PMD_0000875 (Optische Mikroskopie)
+# Class: co:PMD_0000875 (optical microscopy)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000875 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000875 "Ein Mikroskopieverfahren, das sichtbares Licht und Linsen verwendet, um eine Probe zu vergrößern und abzubilden, und weit verbreitet zur Untersuchung der Mikrostruktur und Morphologie von Materialien ist."@de)
@@ -6704,7 +6704,7 @@ AnnotationAssertion(skos:definition co:PMD_0000899 "Ein Herstellungsprozess, der
 AnnotationAssertion(skos:example co:PMD_0000899 "Casting, Sintering"@en)
 SubClassOf(co:PMD_0000899 co:PMD_0000833)
 
-# Class: co:PMD_0000900 (Urformen Durch Additive Fertigung)
+# Class: co:PMD_0000900 (primary shaping by additive manufacturing)
 
 AnnotationAssertion(obo:IAO_0000114 co:PMD_0000900 obo:IAO_0000122)
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000900 "PMDco Team")
@@ -6803,7 +6803,7 @@ AnnotationAssertion(skos:definition co:PMD_0000908 "Ein Urformprozess, der das F
 AnnotationAssertion(skos:example co:PMD_0000908 "Pottery"@en)
 SubClassOf(co:PMD_0000908 co:PMD_0000899)
 
-# Class: co:PMD_0000909 (project)
+# Class: co:PMD_0000909 (Projekt)
 
 AnnotationAssertion(rdfs:label co:PMD_0000909 "Projekt"@de)
 AnnotationAssertion(rdfs:label co:PMD_0000909 "project"@en)
@@ -7094,7 +7094,7 @@ AnnotationAssertion(skos:definition co:PMD_0000942 "The specific surface area is
 AnnotationAssertion(co:PMD_0000060 co:PMD_0000942 "true"^^xsd:boolean)
 SubClassOf(co:PMD_0000942 co:PMD_0020131)
 
-# Class: co:PMD_0000944 (spectrometer)
+# Class: co:PMD_0000944 (Spektrometer)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000944 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000944 "Spektrometer"@de)
@@ -7221,7 +7221,7 @@ AnnotationAssertion(skos:definition co:PMD_0000961 "The sublimation point is a p
 AnnotationAssertion(co:PMD_0000060 co:PMD_0000961 "true"^^xsd:boolean)
 SubClassOf(co:PMD_0000961 co:PMD_0000882)
 
-# Class: co:PMD_0000962 (Überkritische Fluidchromatographie Verfahren)
+# Class: co:PMD_0000962 (supercritical fluid chromatography process)
 
 AnnotationAssertion(obo:IAO_0000117 co:PMD_0000962 "PMDco Team")
 AnnotationAssertion(rdfs:label co:PMD_0000962 "supercritical fluid chromatography process"@en)

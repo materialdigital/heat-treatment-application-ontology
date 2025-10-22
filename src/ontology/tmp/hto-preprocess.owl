@@ -712,4 +712,7 @@ SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://pu
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))
 
 
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-9014-2920> "Henk Birkholz")
+AnnotationAssertion(rdfs:label <https://orcid.org/0000-0003-1649-6832> "Thomas Hanke")
+AnnotationAssertion(rdfs:label <https://orcid.org/0009-0004-4787-4685> "Felix Thonagel")
 )

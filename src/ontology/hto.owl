@@ -16389,6 +16389,9 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
     <rdf:Description rdf:about="https://orcid.org/0000-0003-4971-3645">
         <rdfs:label>Philipp von Hartrott</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="https://orcid.org/0009-0004-4787-4685">
+        <rdfs:label>Felix Thonagel</rdfs:label>
+    </rdf:Description>
     
 
 
