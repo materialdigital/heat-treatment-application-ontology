@@ -17,7 +17,7 @@
 @base <https://w3id.org/pmd/ao/hto/hto-full.ttl> .
 
 <https://w3id.org/pmd/ao/hto/hto-full.ttl> rdf:type owl:Ontology ;
-                                            owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-10-22/hto-full.ttl> ;
+                                            owl:versionIRI <https://w3id.org/pmd/ao/hto/releases/2025-10-30/hto-full.ttl> ;
                                             terms:contributor "Jannis Grundmann" ;
                                             terms:creator <https://orcid.org/0000-0002-9014-2920> ,
                                                           <https://orcid.org/0000-0003-1649-6832> ,
@@ -25,7 +25,7 @@
                                             terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                             terms:license <https://creativecommons.org/licenses/unspecified> ;
                                             terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                            owl:versionInfo "2025-10-22" .
+                                            owl:versionInfo "2025-10-30" .
 
 #################################################################
 #    Annotation properties
@@ -56,7 +56,30 @@ obo:IAO_0000114 rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000115
-obo:IAO_0000115 rdf:type owl:AnnotationProperty .
+obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "The official definition, explaining the meaning of a class or property. Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions."@en ;
+                obo:IAO_0000116 """2012-04-05: 
+Barry Smith
+
+The official OBI definition, explaining the meaning of a class or property: 'Shall be Aristotelian, formalized and normalized. Can be augmented with colloquial definitions'  is terrible.
+
+Can you fix to something like:
+
+A statement of necessary and sufficient conditions explaining the meaning of an expression referring to a class or property.
+
+Alan Ruttenberg
+
+Your proposed definition is a reasonable candidate, except that it is very common that necessary and sufficient conditions are not given. Mostly they are necessary, occasionally they are necessary and sufficient or just sufficient. Often they use terms that are not themselves defined and so they effectively can't be evaluated by those criteria. 
+
+On the specifics of the proposed definition:
+
+We don't have definitions of 'meaning' or 'expression' or 'property'. For 'reference' in the intended sense I think we use the term 'denotation'. For 'expression', I think we you mean symbol, or identifier. For 'meaning' it differs for class and property. For class we want documentation that let's the intended reader determine whether an entity is instance of the class, or not. For property we want documentation that let's the intended reader determine, given a pair of potential relata, whether the assertion that the relation holds is true. The 'intended reader' part suggests that we also specify who, we expect, would be able to understand the definition, and also generalizes over human and computer reader to include textual and logical definition. 
+
+Personally, I am more comfortable weakening definition to documentation, with instructions as to what is desirable. 
+
+We also have the outstanding issue of how to aim different definitions to different audiences. A clinical audience reading chebi wants a different sort of definition documentation/definition from a chemistry trained audience, and similarly there is a need for a definition that is adequate for an ontologist to work with.  """@en ;
+                obo:IAO_0000119 "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
+                rdfs:label "definition"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000116
@@ -77,8 +100,12 @@ obo:IAO_0000118 rdf:type owl:AnnotationProperty .
 ###  http://purl.obolibrary.org/obo/IAO_0000119
 obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
                 obo:IAO_0000114 obo:IAO_0000428 ;
+                obo:IAO_0000115 "formal citation, e.g. identifier in external database to indicate / attribute source(s) for the definition. Free text indicate / attribute source(s) for the definition. EXAMPLE: Author Name, URI, MeSH Term C04, PUBMED ID, Wiki uri on 31.01.2007"@en ;
+                obo:IAO_0000119 "Discussion on obo-discuss mailing-list, see http://bit.ly/hgm99w" ,
+                                "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en ;
                 rdfs:label "Definition Source"@en ,
-                           "Definitionsquelle"@de .
+                           "Definitionsquelle"@de ,
+                           "definition source"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000232
@@ -210,7 +237,8 @@ oboInOwl:inSubset rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2000/01/rdf-schema#label
 rdfs:label rdf:type owl:AnnotationProperty ;
-           rdfs:label "label" .
+           rdfs:label "label" ,
+                      "label"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
@@ -1095,6 +1123,16 @@ obo:RO_0002351 rdf:type owl:ObjectProperty ;
                rdfs:label "has member"@en .
 
 
+###  http://purl.obolibrary.org/obo/STATO_0000102
+obo:STATO_0000102 rdf:type owl:ObjectProperty ;
+                  owl:propertyChainAxiom ( obo:BFO_0000055
+                                           obo:RO_0000059
+                                         ) ;
+                  obo:IAO_0000115 "relationship between a planned process and the plan specification that it carries out; it is defined as equivalent to the composed relationship (realizes o concretizes)"@en ;
+                  obo:IAO_0000119 "AGB" ;
+                  rdfs:label "executes" .
+
+
 ###  https://w3id.org/pmd/co/PMD_0000004
 co:PMD_0000004 rdf:type owl:ObjectProperty ;
                rdfs:label "is subject of"@en ;
@@ -1217,7 +1255,8 @@ O -consists of-> PM -bearer of-> Q"""@en ;
 
 ###  https://w3id.org/pmd/co/PMD_0060000
 co:PMD_0060000 rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf obo:BFO_0000051 ;
+               rdfs:subPropertyOf obo:BFO_0000051 ,
+                                  obo:RO_0000057 ;
                obo:IAO_0000119 "http://purl.obolibrary.org/obo/OBI_0001938" ;
                rdfs:label "has value specification"@en ;
                skos:definition "A relation between an information content entity and a value specification that specifies its value." .
@@ -1691,20 +1730,6 @@ obo:BFO_0000016 rdf:type owl:Class ;
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource obo:BFO_0000016 ;
-   owl:annotatedProperty obo:IAO_0000602 ;
-   owl:annotatedTarget "(forall (x) (if (Disposition x) (and (RealizableEntity x) (exists (y) (and (MaterialEntity y) (bearerOfAt x y t)))))) // axiom label in BFO2 CLIF: [062-002] " ;
-   obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/062-002>
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource obo:BFO_0000016 ;
-   owl:annotatedProperty obo:IAO_0000600 ;
-   owl:annotatedTarget "b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])"@en ;
-   obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/062-002>
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource obo:BFO_0000016 ;
    owl:annotatedProperty obo:IAO_0000601 ;
    owl:annotatedTarget "If b is a realizable entity then for all t at which b exists, b s-depends_on some material entity at t. (axiom label in BFO2 Reference: [063-002])"@en ;
    obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/063-002>
@@ -1715,6 +1740,20 @@ obo:BFO_0000016 rdf:type owl:Class ;
    owl:annotatedProperty obo:IAO_0000602 ;
    owl:annotatedTarget "(forall (x t) (if (and (RealizableEntity x) (existsAt x t)) (exists (y) (and (MaterialEntity y) (specificallyDepends x y t))))) // axiom label in BFO2 CLIF: [063-002] " ;
    obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/063-002>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:BFO_0000016 ;
+   owl:annotatedProperty obo:IAO_0000602 ;
+   owl:annotatedTarget "(forall (x) (if (Disposition x) (and (RealizableEntity x) (exists (y) (and (MaterialEntity y) (bearerOfAt x y t)))))) // axiom label in BFO2 CLIF: [062-002] " ;
+   obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/062-002>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource obo:BFO_0000016 ;
+   owl:annotatedProperty obo:IAO_0000600 ;
+   owl:annotatedTarget "b is a disposition means: b is a realizable entity & b’s bearer is some material entity & b is such that if it ceases to exist, then its bearer is physically changed, & b’s realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer’s physical make-up. (axiom label in BFO2 Reference: [062-002])"@en ;
+   obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/062-002>
  ] .
 
 
@@ -4139,7 +4178,7 @@ obo:UO_0000003 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/ao/hto/Annealing
 <https://w3id.org/pmd/ao/hto/Annealing> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HeattreatmentScope> ;
+                                        rdfs:subClassOf co:PMD_0000779 ;
                                         rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                         rdfs:label "annealing"@en ;
                                         skos:definition "Heat treatment process with the scope to change the properties or microstructure of a sample or part. Typically no hardening is performed with this process."@en .
@@ -4357,7 +4396,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
 ###  https://w3id.org/pmd/ao/hto/HTO_0000000
 <https://w3id.org/pmd/ao/hto/HTO_0000000> rdf:type owl:Class ;
                                           rdfs:subClassOf co:PMD_0000833 ;
-                                          rdfs:label "heat treatment process"@en .
+                                          rdfs:label "heat treatment elementals"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/HTO_0000001
@@ -4411,9 +4450,142 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
                                           skos:example "function of a furnace to hold its temperature at a specified temperature" .
 
 
+###  https://w3id.org/pmd/ao/hto/HTO_0000013
+<https://w3id.org/pmd/ao/hto/HTO_0000013> rdf:type owl:Class ;
+                                          rdfs:subClassOf co:PMD_0060008 ,
+                                                          [ owl:intersectionOf ( [ owl:intersectionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                                 owl:onProperty obo:BFO_0000063 ;
+                                                                                                                                 owl:someValuesFrom <https://w3id.org/pmd/ao/hto/quenching>
+                                                                                                                               ]
+                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                 owl:onProperty [ owl:inverseOf obo:STATO_0000102
+                                                                                                                                                ] ;
+                                                                                                                                 owl:allValuesFrom <https://w3id.org/pmd/ao/hto/heating>
+                                                                                                                               ]
+                                                                                                                             ) ;
+                                                                                                          rdf:type owl:Class
+                                                                                                        ]
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty obo:BFO_0000051 ;
+                                                                                                          owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000004>
+                                                                                                        ]
+                                                                                                      ) ;
+                                                                                   rdf:type owl:Class
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty obo:BFO_0000051 ;
+                                                                                   owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000016>
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:BFO_0000051 ;
+                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000004>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:BFO_0000051 ;
+                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000016>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:BFO_0000063 ;
+                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/quenching>
+                                                          ] ;
+                                          rdfs:label "hardening recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000014
+<https://w3id.org/pmd/ao/hto/HTO_0000014> rdf:type owl:Class ;
+                                          rdfs:subClassOf co:PMD_0060008 ;
+                                          rdfs:label "holding recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000015
+<https://w3id.org/pmd/ao/hto/HTO_0000015> rdf:type owl:Class ;
+                                          rdfs:subClassOf co:PMD_0060008 ;
+                                          rdfs:label "soaking recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000016
+<https://w3id.org/pmd/ao/hto/HTO_0000016> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000017> ;
+                                          rdfs:label "quenching recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000017
+<https://w3id.org/pmd/ao/hto/HTO_0000017> rdf:type owl:Class ;
+                                          rdfs:subClassOf co:PMD_0060008 ;
+                                          rdfs:label "cooling recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000018
+<https://w3id.org/pmd/ao/hto/HTO_0000018> rdf:type owl:Class ;
+                                          rdfs:subClassOf co:PMD_0060008 ;
+                                          rdfs:label "nitriding recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000019
+<https://w3id.org/pmd/ao/hto/HTO_0000019> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/ao/hto/Hardening> ;
+                                          rdfs:label "surface hardening"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000020
+<https://w3id.org/pmd/ao/hto/HTO_0000020> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/ao/hto/Hardening> ;
+                                          rdfs:label "through hardening"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000021
+<https://w3id.org/pmd/ao/hto/HTO_0000021> rdf:type owl:Class ;
+                                          owl:equivalentClass [ owl:intersectionOf ( co:PMD_0060008
+                                                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty obo:BFO_0000051 ;
+                                                                                                              owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000013>
+                                                                                                            ]
+                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty obo:BFO_0000051 ;
+                                                                                                              owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000023>
+                                                                                                            ]
+                                                                                                          ) ;
+                                                                                       rdf:type owl:Class
+                                                                                     ]
+                                                                                   ) ;
+                                                                rdf:type owl:Class
+                                                              ] ;
+                                          rdfs:subClassOf co:PMD_0060008 ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:BFO_0000051 ;
+                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000013>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:BFO_0000051 ;
+                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000023>
+                                                          ] ;
+                                          rdfs:label "QT recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000022
+<https://w3id.org/pmd/ao/hto/HTO_0000022> rdf:type owl:Class ;
+                                          rdfs:subClassOf co:PMD_0000779 ;
+                                          rdfs:label "quenching and tempering"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000023
+<https://w3id.org/pmd/ao/hto/HTO_0000023> rdf:type owl:Class ;
+                                          rdfs:subClassOf co:PMD_0060008 ;
+                                          rdfs:label "tempering recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000025
+<https://w3id.org/pmd/ao/hto/HTO_0000025> rdf:type owl:Class ;
+                                          rdfs:subClassOf co:PMD_0000779 ;
+                                          rdfs:label "carburizing"@en .
+
+
 ###  https://w3id.org/pmd/ao/hto/Hardening
 <https://w3id.org/pmd/ao/hto/Hardening> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HeattreatmentScope> ;
+                                        rdfs:subClassOf co:PMD_0000779 ;
                                         rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                         rdfs:label "Härten"@de ,
                                                    "hardening"@en ;
@@ -4512,7 +4684,7 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/ao/hto/Nitriding
 <https://w3id.org/pmd/ao/hto/Nitriding> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HeattreatmentScope> ;
+                                        rdfs:subClassOf co:PMD_0000779 ;
                                         rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                         rdfs:label "nitriding"@en ;
                                         skos:definition "heat treatment process with the scope to increase the nitrogen content in the surface near area of a sample or part"@en .
@@ -4681,10 +4853,11 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/ao/hto/Tempering
 <https://w3id.org/pmd/ao/hto/Tempering> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HeattreatmentScope> ;
+                                        rdfs:subClassOf co:PMD_0000779 ;
+                                        obo:IAO_0000114 "needs work"@en ;
                                         rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                         rdfs:label "Anlassen"@de ,
-                                                   "Tempering Process"@en ;
+                                                   "tempering"@en ;
                                         skos:definition "A heat treatment process to transform the hardening structure into the direction or equilibrium structure."@en ,
                                                         "Ein Wärmebehandlungsprozess, um das Härtungsgefüge in die Richtung oder in ein Gleichgewichtsgefüge umzuwandeln."@de ,
                                                         "Tempering"@en ,
@@ -7232,7 +7405,7 @@ co:PMD_0000813 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/co/PMD_0000814
 co:PMD_0000814 rdf:type owl:Class ;
-               owl:equivalentClass _:genid334 ;
+               owl:equivalentClass _:genid363 ;
                rdfs:subClassOf obo:BFO_0000029 ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty obo:RO_0000087 ;
@@ -7244,7 +7417,7 @@ co:PMD_0000814 rdf:type owl:Class ;
                skos:definition "A place equipped for experimental study in a science or for testing and analysis."@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
 
-_:genid334 owl:intersectionOf ( obo:BFO_0000029
+_:genid363 owl:intersectionOf ( obo:BFO_0000029
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty obo:RO_0000087 ;
                                    owl:someValuesFrom co:PMD_0000815
@@ -7255,7 +7428,7 @@ _:genid334 owl:intersectionOf ( obo:BFO_0000029
 [ rdf:type owl:Axiom ;
    owl:annotatedSource co:PMD_0000814 ;
    owl:annotatedProperty owl:equivalentClass ;
-   owl:annotatedTarget _:genid334 ;
+   owl:annotatedTarget _:genid363 ;
    co:PMD_0001032 "issue: https://github.com/materialdigital/core-ontology/issues/101"
  ] .
 

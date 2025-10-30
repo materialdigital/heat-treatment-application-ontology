@@ -26,8 +26,8 @@ ERROR	multiple_labels	Slow Cooling	rdfs:label	Langsame Gleichgewichtsnahabkühlu
 ERROR	multiple_labels	Slow Cooling	rdfs:label	Slow Cooling@en
 ERROR	multiple_labels	Durchwärmzeit	rdfs:label	Durchwärmzeit@de
 ERROR	multiple_labels	Durchwärmzeit	rdfs:label	soaking duration@en
-ERROR	multiple_labels	Tempering Process	rdfs:label	Anlassen@de
-ERROR	multiple_labels	Tempering Process	rdfs:label	Tempering Process@en
+ERROR	multiple_labels	tempering	rdfs:label	Anlassen@de
+ERROR	multiple_labels	tempering	rdfs:label	tempering@en
 ERROR	multiple_labels	Typbeschreibung	rdfs:label	Typbeschreibung@de
 ERROR	multiple_labels	Typbeschreibung	rdfs:label	Type Description@en
 ERROR	multiple_labels	cooling	rdfs:label	Abkühlprozess@de
@@ -102,7 +102,7 @@ WARN	missing_definition	fast cooling	IAO:0000115
 WARN	missing_definition	fluid	IAO:0000115	
 WARN	missing_definition	furnace atmosphere	IAO:0000115	
 WARN	missing_definition	furnace cooling	IAO:0000115	
-WARN	missing_definition	heat treatment process	IAO:0000115	
+WARN	missing_definition	heat treatment elementals	IAO:0000115	
 WARN	missing_definition	quenching function	IAO:0000115	
 WARN	missing_definition	heating recipe	IAO:0000115	
 WARN	missing_definition	temperature change rate	IAO:0000115	
@@ -110,6 +110,18 @@ WARN	missing_definition	target temperature	IAO:0000115
 WARN	missing_definition	melting temperature	IAO:0000115	
 WARN	missing_definition	austenitizing temperature	IAO:0000115	
 WARN	missing_definition	holding function	IAO:0000115	
+WARN	missing_definition	hardening recipe	IAO:0000115	
+WARN	missing_definition	holding recipe	IAO:0000115	
+WARN	missing_definition	soaking recipe	IAO:0000115	
+WARN	missing_definition	quenching recipe	IAO:0000115	
+WARN	missing_definition	cooling recipe	IAO:0000115	
+WARN	missing_definition	nitriding recipe	IAO:0000115	
+WARN	missing_definition	surface hardening	IAO:0000115	
+WARN	missing_definition	through hardening	IAO:0000115	
+WARN	missing_definition	QT recipe	IAO:0000115	
+WARN	missing_definition	quenching and tempering	IAO:0000115	
+WARN	missing_definition	tempering recipe	IAO:0000115	
+WARN	missing_definition	carburizing	IAO:0000115	
 WARN	missing_definition	hardening	IAO:0000115	
 WARN	missing_definition	Heizkammer	IAO:0000115	
 WARN	missing_definition	Heating Time	IAO:0000115	
@@ -137,7 +149,7 @@ WARN	missing_definition	sequence number	IAO:0000115
 WARN	missing_definition	Slow Cooling	IAO:0000115	
 WARN	missing_definition	Durchwärmzeit	IAO:0000115	
 WARN	missing_definition	system time for diagram generation	IAO:0000115	
-WARN	missing_definition	Tempering Process	IAO:0000115	
+WARN	missing_definition	tempering	IAO:0000115	
 WARN	missing_definition	Typbeschreibung	IAO:0000115	
 WARN	missing_definition	vacuum heating pressure	IAO:0000115	
 WARN	missing_definition	vacuum pressure	IAO:0000115	
@@ -147,3 +159,4 @@ WARN	missing_definition	Halten	IAO:0000115
 WARN	missing_definition	quenching	IAO:0000115	
 WARN	missing_definition	soaking	IAO:0000115	
 INFO	missing_superclass	chamber pressure	rdfs:subClassOf	
+INFO	missing_superclass	QT recipe	rdfs:subClassOf	
