@@ -7,7 +7,8 @@
 @base <https://w3id.org/pmd/ao/hto#> .
 
 <https://w3id.org/pmd/ao/hto> rdf:type owl:Ontology ;
-                               owl:imports <https://w3id.org/pmd/ao/hto/imports/pmdco_import.owl> ;
+                               owl:imports <https://w3id.org/pmd/ao/hto/imports/pmdco_import.owl> ,
+                                           <https://w3id.org/pmd/co/releases/2025-10-28/imports/stato_import.owl> ;
                                <http://purl.org/dc/terms/contributor> "Jannis Grundmann" ;
                                <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-9014-2920> ,
                                                                   <https://orcid.org/0000-0003-1649-6832> ,
@@ -15,19 +16,6 @@
                                <http://purl.org/dc/terms/description> "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/unspecified> ;
                                <http://purl.org/dc/terms/title> "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en .
-
-#################################################################
-#    Annotations
-#################################################################
-
-
-<https://orcid.org/0000-0002-9014-2920> rdfs:label "Henk Birkholz" .
-
-
-<https://orcid.org/0000-0003-1649-6832> rdfs:label "Thomas Hanke" .
-
-
-<https://orcid.org/0009-0004-4787-4685> rdfs:label "Felix Thonagel" .
 
 #################################################################
 #    Annotation properties
@@ -58,6 +46,14 @@
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 <http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/pmd/co/PMD_0060000
+<https://w3id.org/pmd/co/PMD_0060000> rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000057> .
 
 
 #################################################################
@@ -95,7 +91,7 @@
 
 ###  https://w3id.org/pmd/ao/hto/Annealing
 <https://w3id.org/pmd/ao/hto/Annealing> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HeattreatmentScope> ;
+                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000779> ;
                                         rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                         rdfs:label "annealing"@en ;
                                         <http://www.w3.org/2004/02/skos/core#definition> "Heat treatment process with the scope to change the properties or microstructure of a sample or part. Typically no hardening is performed with this process."@en .
@@ -308,7 +304,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
 ###  https://w3id.org/pmd/ao/hto/HTO_0000000
 <https://w3id.org/pmd/ao/hto/HTO_0000000> rdf:type owl:Class ;
                                           rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000833> ;
-                                          rdfs:label "heat treatment process"@en .
+                                          rdfs:label "heat treatment elementals"@en .
 
 
 ###  https://w3id.org/pmd/ao/hto/HTO_0000001
@@ -362,9 +358,121 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
                                           <http://www.w3.org/2004/02/skos/core#example> "function of a furnace to hold its temperature at a specified temperature" .
 
 
+###  https://w3id.org/pmd/ao/hto/HTO_0000013
+<https://w3id.org/pmd/ao/hto/HTO_0000013> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ,
+                                                          [ owl:intersectionOf ( [ owl:intersectionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000063> ;
+                                                                                                                                 owl:someValuesFrom <https://w3id.org/pmd/ao/hto/quenching>
+                                                                                                                               ]
+                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                 owl:onProperty [ owl:inverseOf <http://purl.obolibrary.org/obo/STATO_0000102>
+                                                                                                                                                ] ;
+                                                                                                                                 owl:allValuesFrom <https://w3id.org/pmd/ao/hto/heating>
+                                                                                                                               ]
+                                                                                                                             ) ;
+                                                                                                          rdf:type owl:Class
+                                                                                                        ]
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                                                                                          owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000004>
+                                                                                                        ]
+                                                                                                      ) ;
+                                                                                   rdf:type owl:Class
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                                                                   owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000016>
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                          rdfs:label "hardening recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000014
+<https://w3id.org/pmd/ao/hto/HTO_0000014> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
+                                          rdfs:label "holding recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000015
+<https://w3id.org/pmd/ao/hto/HTO_0000015> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
+                                          rdfs:label "soaking recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000016
+<https://w3id.org/pmd/ao/hto/HTO_0000016> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HTO_0000017> ;
+                                          rdfs:label "quenching recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000017
+<https://w3id.org/pmd/ao/hto/HTO_0000017> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
+                                          rdfs:label "cooling recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000018
+<https://w3id.org/pmd/ao/hto/HTO_0000018> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
+                                          rdfs:label "nitriding recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000019
+<https://w3id.org/pmd/ao/hto/HTO_0000019> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/ao/hto/Hardening> ;
+                                          rdfs:label "surface hardening"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000020
+<https://w3id.org/pmd/ao/hto/HTO_0000020> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/ao/hto/Hardening> ;
+                                          rdfs:label "through hardening"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000021
+<https://w3id.org/pmd/ao/hto/HTO_0000021> rdf:type owl:Class ;
+                                          owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0060008>
+                                                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                                                                                              owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000013>
+                                                                                                            ]
+                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                                                                                              owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000023>
+                                                                                                            ]
+                                                                                                          ) ;
+                                                                                       rdf:type owl:Class
+                                                                                     ]
+                                                                                   ) ;
+                                                                rdf:type owl:Class
+                                                              ] ;
+                                          rdfs:label "QT recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000022
+<https://w3id.org/pmd/ao/hto/HTO_0000022> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000779> ;
+                                          rdfs:label "quenching and tempering"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000023
+<https://w3id.org/pmd/ao/hto/HTO_0000023> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
+                                          rdfs:label "tempering recipe"@en .
+
+
+###  https://w3id.org/pmd/ao/hto/HTO_0000025
+<https://w3id.org/pmd/ao/hto/HTO_0000025> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000779> ;
+                                          rdfs:label "carburizing"@en .
+
+
 ###  https://w3id.org/pmd/ao/hto/Hardening
 <https://w3id.org/pmd/ao/hto/Hardening> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HeattreatmentScope> ;
+                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000779> ;
                                         rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                         rdfs:label "Härten"@de ,
                                                    "hardening"@en ;
@@ -463,7 +571,7 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/ao/hto/Nitriding
 <https://w3id.org/pmd/ao/hto/Nitriding> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HeattreatmentScope> ;
+                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000779> ;
                                         rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                         rdfs:label "nitriding"@en ;
                                         <http://www.w3.org/2004/02/skos/core#definition> "heat treatment process with the scope to increase the nitrogen content in the surface near area of a sample or part"@en .
@@ -632,10 +740,11 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/ao/hto/Tempering
 <https://w3id.org/pmd/ao/hto/Tempering> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/pmd/ao/hto/HeattreatmentScope> ;
+                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000779> ;
+                                        <http://purl.obolibrary.org/obo/IAO_0000114> "needs work"@en ;
                                         rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                         rdfs:label "Anlassen"@de ,
-                                                   "Tempering Process"@en ;
+                                                   "tempering"@en ;
                                         <http://www.w3.org/2004/02/skos/core#definition> "A heat treatment process to transform the hardening structure into the direction or equilibrium structure."@en ,
                                                                                          "Ein Wärmebehandlungsprozess, um das Härtungsgefüge in die Richtung oder in ein Gleichgewichtsgefüge umzuwandeln."@de ,
                                                                                          "Tempering"@en ,
@@ -768,5 +877,17 @@ verwendet Randschichttiefe""" .
                                                       ] .
 
 
-###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+#################################################################
+#    Annotations
+#################################################################
 
+<https://orcid.org/0000-0002-9014-2920> rdfs:label "Henk Birkholz" .
+
+
+<https://orcid.org/0000-0003-1649-6832> rdfs:label "Thomas Hanke" .
+
+
+<https://orcid.org/0009-0004-4787-4685> rdfs:label "Felix Thonagel" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
