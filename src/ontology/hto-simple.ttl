@@ -107,10 +107,6 @@ skos:example rdf:type owl:AnnotationProperty .
 skos:prefLabel rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#scopeNote
-skos:scopeNote rdf:type owl:AnnotationProperty .
-
-
 #################################################################
 #    Object Properties
 #################################################################
@@ -130,17 +126,6 @@ obo:BFO_0000051 rdf:type owl:ObjectProperty ,
 A continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'."""@en ;
                 obo:IAO_0000118 "has_part"@en ;
                 rdfs:label "has part"@en .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000063
-obo:BFO_0000063 rdf:type owl:ObjectProperty ,
-                         owl:TransitiveProperty ;
-                dc:identifier "270-BFO" ;
-                rdfs:label "precedes"@en ;
-                skos:definition "(Elucidation) precedes is a relation between occurrents o, o' such that if t is the temporal extent of o & t' is the temporal extent of o' then either the last instant of o is before the first instant of o' or the last instant of o is the first instant of o' & neither o nor o' are temporal instants"@en ;
-                skos:example "The temporal region occupied by Mary's birth precedes the temporal region occupied by Mary's death."@en ;
-                skos:scopeNote "Each temporal region is its own temporal extent. The temporal extent of a spatiotemporal region is the temporal region it temporally projects onto. The temporal extent of a process or process boundary that occupies temporal region t is t." ,
-                               "Precedes defines a strict partial order on occurrents." .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000197
@@ -171,13 +156,6 @@ obo:RO_0000085 rdf:type owl:ObjectProperty ;
                obo:IAO_0000116 "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists."@en ;
                obo:IAO_0000118 "has_function"@en ;
                rdfs:label "has function"@en .
-
-
-###  http://purl.obolibrary.org/obo/STATO_0000102
-obo:STATO_0000102 rdf:type owl:ObjectProperty ;
-                  obo:IAO_0000115 "relationship between a planned process and the plan specification that it carries out; it is defined as equivalent to the composed relationship (realizes o concretizes)"@en ;
-                  obo:IAO_0000119 "AGB" ;
-                  rdfs:label "executes" .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000009
@@ -461,44 +439,23 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
 
 ###  https://w3id.org/pmd/ao/hto/HTO_0000013
 <https://w3id.org/pmd/ao/hto/HTO_0000013> rdf:type owl:Class ;
-                                          rdfs:subClassOf [ owl:intersectionOf ( [ owl:intersectionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                                                                 owl:onProperty obo:BFO_0000063 ;
-                                                                                                                                 owl:someValuesFrom <https://w3id.org/pmd/ao/hto/quenching>
-                                                                                                                               ]
-                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                 owl:onProperty [ owl:inverseOf obo:STATO_0000102
-                                                                                                                                                ] ;
-                                                                                                                                 owl:allValuesFrom <https://w3id.org/pmd/ao/hto/heating>
-                                                                                                                               ]
-                                                                                                                             ) ;
-                                                                                                          rdf:type owl:Class
-                                                                                                        ]
-                                                                                                        [ rdf:type owl:Restriction ;
-                                                                                                          owl:onProperty obo:BFO_0000051 ;
-                                                                                                          owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000004>
-                                                                                                        ]
-                                                                                                      ) ;
-                                                                                   rdf:type owl:Class
-                                                                                 ]
-                                                                                 [ rdf:type owl:Restriction ;
-                                                                                   owl:onProperty obo:BFO_0000051 ;
-                                                                                   owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000016>
-                                                                                 ]
-                                                                               ) ;
-                                                            rdf:type owl:Class
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
+                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                             owl:onProperty obo:BFO_0000051 ;
                                                             owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000004>
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty obo:BFO_0000051 ;
-                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000016>
+                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000014>
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
-                                                            owl:onProperty obo:BFO_0000063 ;
-                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/quenching>
+                                                            owl:onProperty obo:BFO_0000051 ;
+                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000015>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:BFO_0000051 ;
+                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000016>
                                                           ] ;
+                                          rdfs:comment "add target temperature in axioms, combine it with austenitisation temperature" ;
                                           rdfs:label "hardening recipe"@en .
 
 
@@ -560,6 +517,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
 
 ###  https://w3id.org/pmd/ao/hto/HTO_0000023
 <https://w3id.org/pmd/ao/hto/HTO_0000023> rdf:type owl:Class ;
+                                          rdfs:comment "add target temperature in axioms" ;
                                           rdfs:label "tempering recipe"@en .
 
 

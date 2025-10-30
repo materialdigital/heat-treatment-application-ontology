@@ -107,21 +107,9 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000063 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000063"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000197 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000197"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/STATO_0000102 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/STATO_0000102"/>
     
 
 
@@ -593,33 +581,24 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000063"/>
-                                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/quenching"/>
-                                    </owl:Restriction>
-                                    <owl:Restriction>
-                                        <owl:onProperty>
-                                            <rdf:Description>
-                                                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000102"/>
-                                            </rdf:Description>
-                                        </owl:onProperty>
-                                        <owl:allValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/heating"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000004"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0060008"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000016"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000014"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000015"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000004"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000016"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -633,15 +612,22 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000016"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000014"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000063"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/quenching"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>add target temperature in axioms, combine it with austenitisation temperature</rdfs:comment>
         <rdfs:label xml:lang="en">hardening recipe</rdfs:label>
     </owl:Class>
     
@@ -763,6 +749,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000023">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060008"/>
+        <rdfs:comment>add target temperature in axioms</rdfs:comment>
         <rdfs:label xml:lang="en">tempering recipe</rdfs:label>
     </owl:Class>
     

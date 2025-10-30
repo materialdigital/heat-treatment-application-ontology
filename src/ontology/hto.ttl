@@ -4453,28 +4453,24 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
 ###  https://w3id.org/pmd/ao/hto/HTO_0000013
 <https://w3id.org/pmd/ao/hto/HTO_0000013> rdf:type owl:Class ;
                                           rdfs:subClassOf co:PMD_0060008 ,
-                                                          [ owl:intersectionOf ( [ owl:intersectionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                                                                 owl:onProperty obo:BFO_0000063 ;
-                                                                                                                                 owl:someValuesFrom <https://w3id.org/pmd/ao/hto/quenching>
-                                                                                                                               ]
-                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                 owl:onProperty [ owl:inverseOf obo:STATO_0000102
-                                                                                                                                                ] ;
-                                                                                                                                 owl:allValuesFrom <https://w3id.org/pmd/ao/hto/heating>
-                                                                                                                               ]
-                                                                                                                             ) ;
-                                                                                                          rdf:type owl:Class
-                                                                                                        ]
-                                                                                                        [ rdf:type owl:Restriction ;
-                                                                                                          owl:onProperty obo:BFO_0000051 ;
-                                                                                                          owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000004>
-                                                                                                        ]
-                                                                                                      ) ;
-                                                                                   rdf:type owl:Class
+                                                          [ owl:intersectionOf ( co:PMD_0060008
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty obo:BFO_0000051 ;
+                                                                                   owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000014>
                                                                                  ]
                                                                                  [ rdf:type owl:Restriction ;
                                                                                    owl:onProperty obo:BFO_0000051 ;
-                                                                                   owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000016>
+                                                                                   owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000015>
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty obo:BFO_0000051 ;
+                                                                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass <https://w3id.org/pmd/ao/hto/HTO_0000004>
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty obo:BFO_0000051 ;
+                                                                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass <https://w3id.org/pmd/ao/hto/HTO_0000016>
                                                                                  ]
                                                                                ) ;
                                                             rdf:type owl:Class
@@ -4485,12 +4481,17 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty obo:BFO_0000051 ;
-                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000016>
+                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000014>
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
-                                                            owl:onProperty obo:BFO_0000063 ;
-                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/quenching>
+                                                            owl:onProperty obo:BFO_0000051 ;
+                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000015>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:BFO_0000051 ;
+                                                            owl:someValuesFrom <https://w3id.org/pmd/ao/hto/HTO_0000016>
                                                           ] ;
+                                          rdfs:comment "add target temperature in axioms, combine it with austenitisation temperature" ;
                                           rdfs:label "hardening recipe"@en .
 
 
@@ -4574,6 +4575,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
 ###  https://w3id.org/pmd/ao/hto/HTO_0000023
 <https://w3id.org/pmd/ao/hto/HTO_0000023> rdf:type owl:Class ;
                                           rdfs:subClassOf co:PMD_0060008 ;
+                                          rdfs:comment "add target temperature in axioms" ;
                                           rdfs:label "tempering recipe"@en .
 
 
@@ -7405,7 +7407,7 @@ co:PMD_0000813 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/co/PMD_0000814
 co:PMD_0000814 rdf:type owl:Class ;
-               owl:equivalentClass _:genid363 ;
+               owl:equivalentClass _:genid360 ;
                rdfs:subClassOf obo:BFO_0000029 ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty obo:RO_0000087 ;
@@ -7417,7 +7419,7 @@ co:PMD_0000814 rdf:type owl:Class ;
                skos:definition "A place equipped for experimental study in a science or for testing and analysis."@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
 
-_:genid363 owl:intersectionOf ( obo:BFO_0000029
+_:genid360 owl:intersectionOf ( obo:BFO_0000029
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty obo:RO_0000087 ;
                                    owl:someValuesFrom co:PMD_0000815
@@ -7428,7 +7430,7 @@ _:genid363 owl:intersectionOf ( obo:BFO_0000029
 [ rdf:type owl:Axiom ;
    owl:annotatedSource co:PMD_0000814 ;
    owl:annotatedProperty owl:equivalentClass ;
-   owl:annotatedTarget _:genid363 ;
+   owl:annotatedTarget _:genid360 ;
    co:PMD_0001032 "issue: https://github.com/materialdigital/core-ontology/issues/101"
  ] .
 

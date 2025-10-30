@@ -1,11 +1,9 @@
 cls
 http://purl.obolibrary.org/obo/BFO_0000051
-http://purl.obolibrary.org/obo/BFO_0000063
 http://purl.obolibrary.org/obo/BFO_0000197
 http://purl.obolibrary.org/obo/IAO_0000114
 http://purl.obolibrary.org/obo/RO_0000057
 http://purl.obolibrary.org/obo/RO_0000085
-http://purl.obolibrary.org/obo/STATO_0000102
 http://purl.org/dc/terms/contributor
 http://purl.org/dc/terms/creator
 http://purl.org/dc/terms/description
