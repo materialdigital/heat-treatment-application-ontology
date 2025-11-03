@@ -792,8 +792,7 @@ verwendet Randschichttiefe""" .
                                       rdfs:label "Abkühlprozess"@de ,
                                                  "cooling"@en ;
                                       <http://www.w3.org/2004/02/skos/core#definition> "A process in which the temperature is lowered from a higher to a lower level."@en ,
-                                                                                       "Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird."@de ,
-                                                                                       "process description during cooling process, e.g. fast cooling, free furnace cooling, controled cooling"@en .
+                                                                                       "Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird."@de .
 
 
 ###  https://w3id.org/pmd/ao/hto/heating
@@ -811,8 +810,7 @@ verwendet Randschichttiefe""" .
                                       rdfs:label "Erwärmen"@de ,
                                                  "heating"@en ;
                                       <http://www.w3.org/2004/02/skos/core#definition> "A process in which the temperature is increased from a lower to a higher level."@en ,
-                                                                                       "Ein Prozess, bei dem die Temperatur von einem niedrigem auf ein höheres Niveau gesteigert wird."@de ,
-                                                                                       "type of heating process, e.g. fast uncontrolled heating, heating ramp controlled etc. "@en .
+                                                                                       "Ein Prozess, bei dem die Temperatur von einem niedrigem auf ein höheres Niveau gesteigert wird."@de .
 
 
 ###  https://w3id.org/pmd/ao/hto/holding
@@ -832,8 +830,7 @@ verwendet Randschichttiefe""" .
                                         rdfs:label "Abschrecken"@de ,
                                                    "quenching"@en ;
                                         <http://www.w3.org/2004/02/skos/core#definition> "Process with significantly increased cooling rate, aimed at preventing diffusion based transformations."@en ,
-                                                                                         "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de ,
-                                                                                         "Abkühlungsvorgang, der unter Verwendung eines Mediums erfolgt, das in direktem Kontakt mit dem steht, mit dem Ziel die Wärme des Bauteils aufzunehmen." .
+                                                                                         "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de .
 
 
 ###  https://w3id.org/pmd/ao/hto/soaking
@@ -843,8 +840,7 @@ verwendet Randschichttiefe""" .
                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                       rdfs:label "Durchwärmen"@de ,
                                                  "soaking"@en ;
-                                      <http://www.w3.org/2004/02/skos/core#definition> "Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. "@en ,
-                                                                                       "Process step during which temperature homogenization is achieved in the component."@en ,
+                                      <http://www.w3.org/2004/02/skos/core#definition> "Process step during which temperature homogenization is achieved in the component."@en ,
                                                                                        "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de .
 
 
