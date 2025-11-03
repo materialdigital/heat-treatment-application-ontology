@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/pmd/ao/hto/hto-base.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/ao/hto/releases/2025-10-30/hto-base.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/ao/hto/releases/2025-11-03/hto-base.owl"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
@@ -20,7 +20,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2025-10-30</owl:versionInfo>
+        <owl:versionInfo>2025-11-03</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1186,7 +1186,6 @@ verwendet Randschichttiefe</skos:example>
         <rdfs:label xml:lang="en">cooling</rdfs:label>
         <skos:definition xml:lang="en">A process in which the temperature is lowered from a higher to a lower level.</skos:definition>
         <skos:definition xml:lang="de">Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird.</skos:definition>
-        <skos:definition xml:lang="en">process description during cooling process, e.g. fast cooling, free furnace cooling, controled cooling</skos:definition>
     </owl:Class>
     
 
@@ -1206,7 +1205,6 @@ verwendet Randschichttiefe</skos:example>
         <rdfs:label xml:lang="en">heating</rdfs:label>
         <skos:definition xml:lang="en">A process in which the temperature is increased from a lower to a higher level.</skos:definition>
         <skos:definition xml:lang="de">Ein Prozess, bei dem die Temperatur von einem niedrigem auf ein höheres Niveau gesteigert wird.</skos:definition>
-        <skos:definition xml:lang="en">type of heating process, e.g. fast uncontrolled heating, heating ramp controlled etc. </skos:definition>
     </owl:Class>
     
 
@@ -1231,7 +1229,6 @@ verwendet Randschichttiefe</skos:example>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/cooling"/>
         <rdfs:label xml:lang="de">Abschrecken</rdfs:label>
         <rdfs:label xml:lang="en">quenching</rdfs:label>
-        <skos:definition>Abkühlungsvorgang, der unter Verwendung eines Mediums erfolgt, das in direktem Kontakt mit dem steht, mit dem Ziel die Wärme des Bauteils aufzunehmen.</skos:definition>
         <skos:definition xml:lang="en">Process with significantly increased cooling rate, aimed at preventing diffusion based transformations.</skos:definition>
         <skos:definition xml:lang="de">Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen.</skos:definition>
     </owl:Class>
@@ -1246,7 +1243,6 @@ verwendet Randschichttiefe</skos:example>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Durchwärmen</rdfs:label>
         <rdfs:label xml:lang="en">soaking</rdfs:label>
-        <skos:definition xml:lang="en">Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. </skos:definition>
         <skos:definition xml:lang="en">Process step during which temperature homogenization is achieved in the component.</skos:definition>
         <skos:definition xml:lang="de">Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird.</skos:definition>
     </owl:Class>

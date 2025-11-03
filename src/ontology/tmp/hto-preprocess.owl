@@ -97,8 +97,11 @@ Declaration(Class(<https://w3id.org/pmd/ao/hto/heating>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/holding>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/quenching>))
 Declaration(Class(<https://w3id.org/pmd/ao/hto/soaking>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000017>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000602>))
+Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0060000>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0001937>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000114>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
@@ -126,7 +129,7 @@ AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/title> "title")
 #   Object Properties
 ############################
 
-# Object Property: <https://w3id.org/pmd/co/PMD_0060000> (has value specification)
+# Object Property: <https://w3id.org/pmd/co/PMD_0060000> (<https://w3id.org/pmd/co/PMD_0060000>)
 
 SubObjectPropertyOf(<https://w3id.org/pmd/co/PMD_0060000> <http://purl.obolibrary.org/obo/RO_0000057>)
 
@@ -740,7 +743,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/cooling> "Abkühlpro
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/cooling> "cooling"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/cooling> "A process in which the temperature is lowered from a higher to a lower level."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/cooling> "Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird."@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/cooling> "process description during cooling process, e.g. fast cooling, free furnace cooling, controled cooling"@en)
 SubClassOf(<https://w3id.org/pmd/ao/hto/cooling> <https://w3id.org/pmd/ao/hto/HTO_0000000>)
 SubClassOf(<https://w3id.org/pmd/ao/hto/cooling> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000009> <https://w3id.org/pmd/ao/hto/HTO_0000005>))
 
@@ -751,7 +753,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/heating> "Erwärmen"
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/heating> "heating"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/heating> "A process in which the temperature is increased from a lower to a higher level."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/heating> "Ein Prozess, bei dem die Temperatur von einem niedrigem auf ein höheres Niveau gesteigert wird."@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/heating> "type of heating process, e.g. fast uncontrolled heating, heating ramp controlled etc. "@en)
 SubClassOf(<https://w3id.org/pmd/ao/hto/heating> <https://w3id.org/pmd/ao/hto/HTO_0000000>)
 SubClassOf(<https://w3id.org/pmd/ao/hto/heating> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/BFO_0000040>))
 SubClassOf(<https://w3id.org/pmd/ao/hto/heating> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000009> <https://w3id.org/pmd/ao/hto/HTO_0000006>))
@@ -772,7 +773,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/quenching> "Abschrec
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/quenching> "quenching"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/quenching> "Process with significantly increased cooling rate, aimed at preventing diffusion based transformations."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/quenching> "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/quenching> "Abkühlungsvorgang, der unter Verwendung eines Mediums erfolgt, das in direktem Kontakt mit dem steht, mit dem Ziel die Wärme des Bauteils aufzunehmen.")
 SubClassOf(<https://w3id.org/pmd/ao/hto/quenching> <https://w3id.org/pmd/ao/hto/cooling>)
 
 # Class: <https://w3id.org/pmd/ao/hto/soaking> (soaking)
@@ -781,7 +781,6 @@ AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/ao/hto/soaking> "Durchwä
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/ao/hto/soaking> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/soaking> "Durchwärmen"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/ao/hto/soaking> "soaking"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/soaking> "Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. "@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/soaking> "Process step during which temperature homogenization is achieved in the component."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/ao/hto/soaking> "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de)
 SubClassOf(<https://w3id.org/pmd/ao/hto/soaking> <https://w3id.org/pmd/ao/hto/HTO_0000000>)
@@ -790,7 +789,7 @@ SubClassOf(<https://w3id.org/pmd/ao/hto/soaking> <https://w3id.org/pmd/ao/hto/HT
 
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000057>)))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000655> (Ofen)
+# Class: <https://w3id.org/pmd/co/PMD_0000655> (furnace)
 
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/ao/hto/Chamber>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))

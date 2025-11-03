@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/pmd/ao/hto/hto-simple.owl#"
      xml:base="https://w3id.org/pmd/ao/hto/hto-simple.owl"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,10 +8,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/pmd/ao/hto/hto-simple.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/ao/hto/releases/2025-10-30/hto-simple.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/ao/hto/releases/2025-11-03/hto-simple.owl"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
@@ -20,7 +18,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2025-10-30</owl:versionInfo>
+        <owl:versionInfo>2025-11-03</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -33,12 +31,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
     
 
 
@@ -66,30 +58,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/identifier -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
-    
-
-
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
@@ -113,16 +81,9 @@
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
-        <obo:IAO_0000117>Mark Miller</obo:IAO_0000117>
         <rdfs:label>dcterms:license</rdfs:label>
         <rdfs:label>license</rdfs:label>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/source -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
     
 
 
@@ -131,12 +92,6 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
         <rdfs:label>title</rdfs:label>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#SubsetProperty -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     
 
 
@@ -173,7 +128,6 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <obo:IAO_0000111 xml:lang="en">has part</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">my body has part my brain (continuant parthood, two material entities)</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">this year has part this day (occurrent parthood)</obo:IAO_0000112>
@@ -183,7 +137,6 @@
         <obo:IAO_0000116 xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
 
 A continuant cannot have an occurrent as part: use &apos;participates in&apos;. An occurrent cannot have a continuant as part: use &apos;has participant&apos;. An immaterial entity cannot have a material entity as part: use &apos;location of&apos;. An independent continuant cannot have a specifically dependent continuant as part: use &apos;bearer of&apos;. A specifically dependent continuant cannot have an independent continuant as part: use &apos;inheres in&apos;.</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">has_part</obo:IAO_0000118>
         <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
     
@@ -192,7 +145,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/BFO_0000197 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000197">
-        <dc:identifier>051-BFO</dc:identifier>
         <rdfs:label xml:lang="en">inheres in</rdfs:label>
         <skos:definition xml:lang="en">b inheres in c =Def b is a specifically dependent continuant &amp; c is an independent continuant that is not a spatial region &amp; b specifically depends on c</skos:definition>
         <skos:example xml:lang="en">A shape inheres in a shaped object; a mass inheres in a material entity</skos:example>
@@ -203,14 +155,15 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/RO_0000057 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000057">
-        <obo:IAO_0000111 xml:lang="en">has participant</obo:IAO_0000111>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0000057"/>
+        </owl:propertyChainAxiom>
         <obo:IAO_0000112 xml:lang="en">this blood coagulation has participant this blood clot</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">this investigation has participant this investigator</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">this process has participant this input material (or this output material)</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">a relation between a process and a continuant, in which the continuant is somehow involved in the process</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time.</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">has_participant</obo:IAO_0000118>
-        <terms:source>http://www.obofoundry.org/ro/#OBO_REL:has_participant</terms:source>
         <rdfs:label xml:lang="en">has participant</rdfs:label>
     </owl:ObjectProperty>
     
@@ -222,7 +175,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000112 xml:lang="en">this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists.</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">has_function</obo:IAO_0000118>
         <rdfs:label xml:lang="en">has function</rdfs:label>
     </owl:ObjectProperty>
     
@@ -231,8 +183,10 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- https://w3id.org/pmd/co/PMD_0000009 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0000009">
-        <rdfs:label xml:lang="de">has process characteristic</rdfs:label>
-        <skos:definition xml:lang="en">A relation between a process and a process characteristic that depends on it.</skos:definition>
+        <rdfs:label xml:lang="de">has process attribute</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">has process attribute from OEO https://openenergyplatform.org/ontology/oeo/OEO_00000500</rdfs:seeAlso>
+        <skos:definition xml:lang="en">A relation between a process and a process attribute that depends on it.</skos:definition>
+        <skos:example xml:lang="en">Tensile testing process has process attribute tensile rate</skos:example>
     </owl:ObjectProperty>
     
 
@@ -240,11 +194,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- https://w3id.org/pmd/co/PMD_0060000 -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0060000">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-        <obo:IAO_0000119>http://purl.obolibrary.org/obo/OBI_0001938</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">has value specification</rdfs:label>
-        <skos:definition>A relation between an information content entity and a value specification that specifies its value.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -1149,7 +1099,6 @@ verwendet Randschichttiefe</skos:example>
         <rdfs:label xml:lang="en">cooling</rdfs:label>
         <skos:definition xml:lang="en">A process in which the temperature is lowered from a higher to a lower level.</skos:definition>
         <skos:definition xml:lang="de">Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird.</skos:definition>
-        <skos:definition xml:lang="en">process description during cooling process, e.g. fast cooling, free furnace cooling, controled cooling</skos:definition>
     </owl:Class>
     
 
@@ -1169,7 +1118,6 @@ verwendet Randschichttiefe</skos:example>
         <rdfs:label xml:lang="en">heating</rdfs:label>
         <skos:definition xml:lang="en">A process in which the temperature is increased from a lower to a higher level.</skos:definition>
         <skos:definition xml:lang="de">Ein Prozess, bei dem die Temperatur von einem niedrigem auf ein höheres Niveau gesteigert wird.</skos:definition>
-        <skos:definition xml:lang="en">type of heating process, e.g. fast uncontrolled heating, heating ramp controlled etc. </skos:definition>
     </owl:Class>
     
 
@@ -1194,7 +1142,6 @@ verwendet Randschichttiefe</skos:example>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/cooling"/>
         <rdfs:label xml:lang="de">Abschrecken</rdfs:label>
         <rdfs:label xml:lang="en">quenching</rdfs:label>
-        <skos:definition>Abkühlungsvorgang, der unter Verwendung eines Mediums erfolgt, das in direktem Kontakt mit dem steht, mit dem Ziel die Wärme des Bauteils aufzunehmen.</skos:definition>
         <skos:definition xml:lang="en">Process with significantly increased cooling rate, aimed at preventing diffusion based transformations.</skos:definition>
         <skos:definition xml:lang="de">Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen.</skos:definition>
     </owl:Class>
@@ -1209,7 +1156,6 @@ verwendet Randschichttiefe</skos:example>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Durchwärmen</rdfs:label>
         <rdfs:label xml:lang="en">soaking</rdfs:label>
-        <skos:definition xml:lang="en">Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. </skos:definition>
         <skos:definition xml:lang="en">Process step during which temperature homogenization is achieved in the component.</skos:definition>
         <skos:definition xml:lang="de">Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird.</skos:definition>
     </owl:Class>

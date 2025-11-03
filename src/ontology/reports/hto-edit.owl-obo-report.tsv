@@ -76,8 +76,6 @@ WARN	annotation_whitespace	system time for diagram generation	skos:definition	 E
 WARN	annotation_whitespace	system time for diagram generation	skos:definition	time stamp for measuring data aquisition time and diagram generation / data syncing @en
 WARN	annotation_whitespace	vacuum pressure	skos:definition	 Paramenter describing the measured pressure inside a chamber; units could be mbar, bar @en
 WARN	annotation_whitespace	vacuum pressure	skos:definition	 Parameter describing the intended vacuum pressure inside a chamber. @en
-WARN	annotation_whitespace	Erwärmen	skos:definition	type of heating process, e.g. fast uncontrolled heating, heating ramp controlled etc. @en
-WARN	annotation_whitespace	soaking	skos:definition	Process description during soaking steps, e.g. nitriding with controlled nitriding potential etc. @en
 WARN	missing_definition	accellerated cooling	IAO:0000115	
 WARN	missing_definition	acquisition date	IAO:0000115	
 WARN	missing_definition	annealing	IAO:0000115	
