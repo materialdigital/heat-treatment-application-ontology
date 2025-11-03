@@ -7,8 +7,7 @@
 @base <https://w3id.org/pmd/ao/hto#> .
 
 <https://w3id.org/pmd/ao/hto> rdf:type owl:Ontology ;
-                               owl:imports <https://w3id.org/pmd/ao/hto/imports/pmdco_import.owl> ,
-                                           <https://w3id.org/pmd/co/releases/2025-10-28/imports/stato_import.owl> ;
+                               owl:imports <https://w3id.org/pmd/ao/hto/imports/pmdco_import.owl> ;
                                <http://purl.org/dc/terms/contributor> "Jannis Grundmann" ;
                                <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-9014-2920> ,
                                                                   <https://orcid.org/0000-0003-1649-6832> ,
@@ -20,6 +19,10 @@
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000114
+<http://purl.obolibrary.org/obo/IAO_0000114> rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty ;
@@ -53,7 +56,8 @@
 #################################################################
 
 ###  https://w3id.org/pmd/co/PMD_0060000
-<https://w3id.org/pmd/co/PMD_0060000> rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000057> .
+<https://w3id.org/pmd/co/PMD_0060000> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000057> .
 
 
 #################################################################
@@ -842,6 +846,10 @@ verwendet Randschichttiefe""" .
                                                  "soaking"@en ;
                                       <http://www.w3.org/2004/02/skos/core#definition> "Process step during which temperature homogenization is achieved in the component."@en ,
                                                                                        "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de .
+
+
+###  https://w3id.org/pmd/co/PMD_0000017
+<https://w3id.org/pmd/co/PMD_0000017> rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000056
