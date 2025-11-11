@@ -16,6 +16,8 @@ Annotation(<http://purl.org/dc/terms/description> "This ontology module is part 
 Annotation(<http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/unspecified>)
 Annotation(<http://purl.org/dc/terms/title> "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en)
 
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000017>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0000602>))
 Declaration(Class(<https://w3id.org/pmd/hto/AccelleratedCooling>))
 Declaration(Class(<https://w3id.org/pmd/hto/AcquisitionDate>))
 Declaration(Class(<https://w3id.org/pmd/hto/Annealing>))
@@ -96,8 +98,6 @@ Declaration(Class(<https://w3id.org/pmd/hto/heating>))
 Declaration(Class(<https://w3id.org/pmd/hto/holding>))
 Declaration(Class(<https://w3id.org/pmd/hto/quenching>))
 Declaration(Class(<https://w3id.org/pmd/hto/soaking>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0000017>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0000602>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0060000>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0001937>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000114>))
@@ -138,6 +138,15 @@ SubObjectPropertyOf(<https://w3id.org/pmd/co/PMD_0060000> <http://purl.obolibrar
 ############################
 #   Classes
 ############################
+
+# Class: <https://w3id.org/pmd/co/PMD_0000056> (melting furnace)
+
+EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000057>)))
+
+# Class: <https://w3id.org/pmd/co/PMD_0000655> (furnace)
+
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Chamber>))
+SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))
 
 # Class: <https://w3id.org/pmd/hto/AccelleratedCooling> (accellerated cooling)
 
@@ -196,7 +205,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/CarbonPotential> "carbo
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/CarbonPotential> "Carbon content of a specimen of pure iron in equilibrium with a carbourizing medium under specific conditions."@en)
 SubClassOf(<https://w3id.org/pmd/hto/CarbonPotential> <http://purl.obolibrary.org/obo/BFO_0000145>)
 
-# Class: <https://w3id.org/pmd/hto/Carburizing> (carburizing recipe)
+# Class: <https://w3id.org/pmd/hto/Carburizing> (Aufkohlen)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/Carburizing> "Potentiell ableitbar mit bestimmten Fluss-Schwellenwerten"@de)
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/Carburizing> <https://w3id.org/pmd/hto/>)
@@ -224,7 +233,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/ChamberPressure> "chamb
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/ChamberPressure> "designated pressure in retort during evacuation phase pre to nitriding process or during low pressure nitriding process "@en)
 EquivalentClasses(<https://w3id.org/pmd/hto/ChamberPressure> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000896> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://w3id.org/pmd/hto/Chamber>)))
 
-# Class: <https://w3id.org/pmd/hto/ChamberScope> (Wärmebehandlungsofenkammer)
+# Class: <https://w3id.org/pmd/hto/ChamberScope> (chamberscope)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/hto/ChamberScope> "needs work")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/ChamberScope> "Sollte mit Unit-Volume (m^3) verbunden sein"@de)
@@ -468,7 +477,7 @@ Nitrierhärten
 verwendet Randschichttiefe")
 SubClassOf(<https://w3id.org/pmd/hto/Hardening> <https://w3id.org/pmd/co/PMD_0000779>)
 
-# Class: <https://w3id.org/pmd/hto/HeatingChamber> (Heizkammer)
+# Class: <https://w3id.org/pmd/hto/HeatingChamber> (Ofenkammer mit einer Heizung.)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/HeatingChamber> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HeatingChamber> "Heizkammer"@de)
@@ -565,7 +574,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/NitridingPotential> "nitriding potential of atmosphere calculated from H2 probe signal and ammonia flow rate "@en)
 SubClassOf(<https://w3id.org/pmd/hto/NitridingPotential> <http://purl.obolibrary.org/obo/BFO_0000145>)
 
-# Class: <https://w3id.org/pmd/hto/OilQuenchingDuration> (Oil Quenching Duration)
+# Class: <https://w3id.org/pmd/hto/OilQuenchingDuration> (Abschreckdauer)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/OilQuenchingDuration> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/OilQuenchingDuration> "Abschreckdauer"@de)
@@ -673,7 +682,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/SlowCooling> "Slow cooling with equilibrium near conditions, to foster an equilibrium near micro structure."@en)
 SubClassOf(<https://w3id.org/pmd/hto/SlowCooling> <https://w3id.org/pmd/hto/HeattreatmentMethod>)
 
-# Class: <https://w3id.org/pmd/hto/SoakingDuration> (Durchwärmzeit)
+# Class: <https://w3id.org/pmd/hto/SoakingDuration> (soaking duration)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/SoakingDuration> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/SoakingDuration> "Durchwärmzeit"@de)
@@ -745,7 +754,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 SubClassOf(<https://w3id.org/pmd/hto/cooling> <https://w3id.org/pmd/hto/HTO_0000000>)
 SubClassOf(<https://w3id.org/pmd/hto/cooling> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000009> <https://w3id.org/pmd/hto/HTO_0000005>))
 
-# Class: <https://w3id.org/pmd/hto/heating> (Erwärmen)
+# Class: <https://w3id.org/pmd/hto/heating> (heating)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/heating> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/heating> "Erwärmen"@de)
@@ -756,7 +765,7 @@ SubClassOf(<https://w3id.org/pmd/hto/heating> <https://w3id.org/pmd/hto/HTO_0000
 SubClassOf(<https://w3id.org/pmd/hto/heating> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/BFO_0000040>))
 SubClassOf(<https://w3id.org/pmd/hto/heating> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000009> <https://w3id.org/pmd/hto/HTO_0000006>))
 
-# Class: <https://w3id.org/pmd/hto/holding> (Halten)
+# Class: <https://w3id.org/pmd/hto/holding> (holding)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/holding> "Die HoldingTime ist stets mit einer vorhergehende SoakingTime verbunden."@de)
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/holding> <https://w3id.org/pmd/hto/>)
@@ -766,7 +775,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/holding> "Prozessschritt ohne Temperaturänderung im Ofen."@de)
 SubClassOf(<https://w3id.org/pmd/hto/holding> <https://w3id.org/pmd/hto/HTO_0000000>)
 
-# Class: <https://w3id.org/pmd/hto/quenching> (quenching)
+# Class: <https://w3id.org/pmd/hto/quenching> (Abschrecken)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/quenching> "Abschrecken"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/quenching> "quenching"@en)
@@ -774,7 +783,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/quenching> "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de)
 SubClassOf(<https://w3id.org/pmd/hto/quenching> <https://w3id.org/pmd/hto/cooling>)
 
-# Class: <https://w3id.org/pmd/hto/soaking> (soaking)
+# Class: <https://w3id.org/pmd/hto/soaking> (Durchwärmen)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/soaking> "Durchwärmen des Bauteils, sodass Temperaturhomogenität erreicht wird. Anschließend kann ein Halten auf der Zieltemperatur erfolgen.")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/soaking> <https://w3id.org/pmd/hto/>)
@@ -783,15 +792,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/soaking> "soaking"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/soaking> "Process step during which temperature homogenization is achieved in the component."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/soaking> "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de)
 SubClassOf(<https://w3id.org/pmd/hto/soaking> <https://w3id.org/pmd/hto/HTO_0000000>)
-
-# Class: <https://w3id.org/pmd/co/PMD_0000056> (melting furnace)
-
-EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000057>)))
-
-# Class: <https://w3id.org/pmd/co/PMD_0000655> (furnace)
-
-SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Chamber>))
-SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))
 
 
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-9014-2920> "Henk Birkholz")

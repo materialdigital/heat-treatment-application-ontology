@@ -3,43 +3,43 @@ ERROR	duplicate_label	Erwärmdauer	rdfs:label	Erwärmdauer@de
 ERROR	duplicate_label	Heating Time	rdfs:label	Erwärmdauer@de
 ERROR	missing_label	https://w3id.org/pmd/hto/Fan	rdfs:label	
 ERROR	missing_label	https://w3id.org/pmd/hto/HeattreatmentMethod	rdfs:label	
-ERROR	multiple_labels	carburizing recipe	rdfs:label	Aufkohlen@de
-ERROR	multiple_labels	carburizing recipe	rdfs:label	carburizing recipe@en
-ERROR	multiple_labels	Wärmebehandlungsofenkammer	rdfs:label	Wärmebehandlungsofenkammer@de
-ERROR	multiple_labels	Wärmebehandlungsofenkammer	rdfs:label	chamberscope@en
+ERROR	multiple_labels	Aufkohlen	rdfs:label	Aufkohlen@de
+ERROR	multiple_labels	Aufkohlen	rdfs:label	carburizing recipe@en
+ERROR	multiple_labels	chamberscope	rdfs:label	Wärmebehandlungsofenkammer@de
+ERROR	multiple_labels	chamberscope	rdfs:label	chamberscope@en
 ERROR	multiple_labels	Erwärmdauer	rdfs:label	Erwärmdauer@de
 ERROR	multiple_labels	Erwärmdauer	rdfs:label	duration till target temperature@en
 ERROR	multiple_labels	hardening	rdfs:label	Härten@de
 ERROR	multiple_labels	hardening	rdfs:label	hardening@en
-ERROR	multiple_labels	Heizkammer	rdfs:label	Heizkammer@de
-ERROR	multiple_labels	Heizkammer	rdfs:label	Ofenkammer mit einer Heizung.@de
-ERROR	multiple_labels	Heizkammer	rdfs:label	heating chamber@en
+ERROR	multiple_labels	Ofenkammer mit einer Heizung.	rdfs:label	Heizkammer@de
+ERROR	multiple_labels	Ofenkammer mit einer Heizung.	rdfs:label	Ofenkammer mit einer Heizung.@de
+ERROR	multiple_labels	Ofenkammer mit einer Heizung.	rdfs:label	heating chamber@en
 ERROR	multiple_labels	Heating Time	rdfs:label	Erwärmdauer@de
 ERROR	multiple_labels	Heating Time	rdfs:label	Heating Time@en
-ERROR	multiple_labels	Oil Quenching Duration	rdfs:label	Abschreckdauer@de
-ERROR	multiple_labels	Oil Quenching Duration	rdfs:label	Oil Quenching Duration@en
+ERROR	multiple_labels	Abschreckdauer	rdfs:label	Abschreckdauer@de
+ERROR	multiple_labels	Abschreckdauer	rdfs:label	Oil Quenching Duration@en
 ERROR	multiple_labels	Abschreckkammer	rdfs:label	Abschreckkammer@de
 ERROR	multiple_labels	Abschreckkammer	rdfs:label	Quenching Chamber@en
 ERROR	multiple_labels	Abschreckvorlaufzeit	rdfs:label	Abschreckvorlaufzeit@de
 ERROR	multiple_labels	Abschreckvorlaufzeit	rdfs:label	Quenching Leadtime@en
 ERROR	multiple_labels	Slow Cooling	rdfs:label	Langsame Gleichgewichtsnahabkühlung@de
 ERROR	multiple_labels	Slow Cooling	rdfs:label	Slow Cooling@en
-ERROR	multiple_labels	Durchwärmzeit	rdfs:label	Durchwärmzeit@de
-ERROR	multiple_labels	Durchwärmzeit	rdfs:label	soaking duration@en
+ERROR	multiple_labels	soaking duration	rdfs:label	Durchwärmzeit@de
+ERROR	multiple_labels	soaking duration	rdfs:label	soaking duration@en
 ERROR	multiple_labels	tempering	rdfs:label	Anlassen@de
 ERROR	multiple_labels	tempering	rdfs:label	tempering@en
 ERROR	multiple_labels	Typbeschreibung	rdfs:label	Typbeschreibung@de
 ERROR	multiple_labels	Typbeschreibung	rdfs:label	Type Description@en
 ERROR	multiple_labels	cooling	rdfs:label	Abkühlprozess@de
 ERROR	multiple_labels	cooling	rdfs:label	cooling@en
-ERROR	multiple_labels	Erwärmen	rdfs:label	Erwärmen@de
-ERROR	multiple_labels	Erwärmen	rdfs:label	heating@en
-ERROR	multiple_labels	Halten	rdfs:label	Halten@de
-ERROR	multiple_labels	Halten	rdfs:label	holding@en
-ERROR	multiple_labels	quenching	rdfs:label	Abschrecken@de
-ERROR	multiple_labels	quenching	rdfs:label	quenching@en
-ERROR	multiple_labels	soaking	rdfs:label	Durchwärmen@de
-ERROR	multiple_labels	soaking	rdfs:label	soaking@en
+ERROR	multiple_labels	heating	rdfs:label	Erwärmen@de
+ERROR	multiple_labels	heating	rdfs:label	heating@en
+ERROR	multiple_labels	holding	rdfs:label	Halten@de
+ERROR	multiple_labels	holding	rdfs:label	holding@en
+ERROR	multiple_labels	Abschrecken	rdfs:label	Abschrecken@de
+ERROR	multiple_labels	Abschrecken	rdfs:label	quenching@en
+ERROR	multiple_labels	Durchwärmen	rdfs:label	Durchwärmen@de
+ERROR	multiple_labels	Durchwärmen	rdfs:label	soaking@en
 WARN	annotation_whitespace	acquisition date	skos:definition	The point in time a Process Node was commissioned (e.g., the purchase date, first day of use), represented in IEEE 1003 'Seconds since Epoch'. @en
 WARN	annotation_whitespace	atmosphere pressure	skos:definition	Parameter describing the intended atmosphere pressure inside a chamber. @en
 WARN	annotation_whitespace	below ambient pressure	skos:definition	status of atmosphere: reduced pressure below ambient pressure @en
@@ -57,7 +57,7 @@ WARN	annotation_whitespace	leakage check	skos:definition	stands for the dwell ti
 WARN	annotation_whitespace	leakage interval	skos:definition	effective leakage measuring duration @en
 WARN	annotation_whitespace	nitriding depth	skos:definition	 designated nitriding depth or measured nitriding depth @en
 WARN	annotation_whitespace	nitriding potential	skos:definition	nitriding potential of atmosphere calculated from H2 probe signal and ammonia flow rate @en
-WARN	annotation_whitespace	Oil Quenching Duration	skos:definition	Parameter indicating the duration of the conducted quenching action @en
+WARN	annotation_whitespace	Abschreckdauer	skos:definition	Parameter indicating the duration of the conducted quenching action @en
 WARN	annotation_whitespace	over pressure	skos:definition	 Parameter also for liquid or gaseous media for quenching condition of inductive heat treatments, e.g. water pressure or nitrogen pressure in mbar or bar @en
 WARN	annotation_whitespace	over pressure	skos:definition	Parameter describing a significant higher pressure than ambient pressure, e.g. during a high pressure gas quenching process step, could be mbar or bar @en
 WARN	annotation_whitespace	oxygen probe signal	skos:definition	 measured oxygen probe signal in retort atmosphere @en
@@ -83,10 +83,10 @@ WARN	missing_definition	atmosphere	IAO:0000115
 WARN	missing_definition	atmosphere pressure	IAO:0000115	
 WARN	missing_definition	below ambient pressure	IAO:0000115	
 WARN	missing_definition	carbon potential	IAO:0000115	
-WARN	missing_definition	carburizing recipe	IAO:0000115	
+WARN	missing_definition	Aufkohlen	IAO:0000115	
 WARN	missing_definition	chamber	IAO:0000115	
 WARN	missing_definition	chamber pressure	IAO:0000115	
-WARN	missing_definition	Wärmebehandlungsofenkammer	IAO:0000115	
+WARN	missing_definition	chamberscope	IAO:0000115	
 WARN	missing_definition	collection interface hint	IAO:0000115	
 WARN	missing_definition	concentration	IAO:0000115	
 WARN	missing_definition	controlled	IAO:0000115	
@@ -121,7 +121,7 @@ WARN	missing_definition	quenching and tempering	IAO:0000115
 WARN	missing_definition	tempering recipe	IAO:0000115	
 WARN	missing_definition	carburizing	IAO:0000115	
 WARN	missing_definition	hardening	IAO:0000115	
-WARN	missing_definition	Heizkammer	IAO:0000115	
+WARN	missing_definition	Ofenkammer mit einer Heizung.	IAO:0000115	
 WARN	missing_definition	Heating Time	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/hto/HeattreatmentMethod	IAO:0000115	
 WARN	missing_definition	heattreatmentscope	IAO:0000115	
@@ -133,7 +133,7 @@ WARN	missing_definition	medium	IAO:0000115
 WARN	missing_definition	nitriding	IAO:0000115	
 WARN	missing_definition	nitriding depth	IAO:0000115	
 WARN	missing_definition	nitriding potential	IAO:0000115	
-WARN	missing_definition	Oil Quenching Duration	IAO:0000115	
+WARN	missing_definition	Abschreckdauer	IAO:0000115	
 WARN	missing_definition	over pressure	IAO:0000115	
 WARN	missing_definition	oxygen probe signal	IAO:0000115	
 WARN	missing_definition	partial pressure	IAO:0000115	
@@ -145,16 +145,16 @@ WARN	missing_definition	sequence descriptor	IAO:0000115
 WARN	missing_definition	sequence duration	IAO:0000115	
 WARN	missing_definition	sequence number	IAO:0000115	
 WARN	missing_definition	Slow Cooling	IAO:0000115	
-WARN	missing_definition	Durchwärmzeit	IAO:0000115	
+WARN	missing_definition	soaking duration	IAO:0000115	
 WARN	missing_definition	system time for diagram generation	IAO:0000115	
 WARN	missing_definition	tempering	IAO:0000115	
 WARN	missing_definition	Typbeschreibung	IAO:0000115	
 WARN	missing_definition	vacuum heating pressure	IAO:0000115	
 WARN	missing_definition	vacuum pressure	IAO:0000115	
 WARN	missing_definition	cooling	IAO:0000115	
-WARN	missing_definition	Erwärmen	IAO:0000115	
-WARN	missing_definition	Halten	IAO:0000115	
-WARN	missing_definition	quenching	IAO:0000115	
-WARN	missing_definition	soaking	IAO:0000115	
+WARN	missing_definition	heating	IAO:0000115	
+WARN	missing_definition	holding	IAO:0000115	
+WARN	missing_definition	Abschrecken	IAO:0000115	
+WARN	missing_definition	Durchwärmen	IAO:0000115	
 INFO	missing_superclass	chamber pressure	rdfs:subClassOf	
 INFO	missing_superclass	QT recipe	rdfs:subClassOf	

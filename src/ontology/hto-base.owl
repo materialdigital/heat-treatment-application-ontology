@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto/hto-base.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-11-03/hto-base.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-11-11/hto-base.owl"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
@@ -20,7 +20,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2025-11-03</owl:versionInfo>
+        <owl:versionInfo>2025-11-11</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -175,6 +175,72 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000109 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000109"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000005 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000005"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000008 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000008"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000017 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000017"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000055 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000055"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000602 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000602"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000779 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000779"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000781 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000781"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000833 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000833"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000896 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000896"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0060006 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0060006"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0060008 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0060008"/>
     
 
 
@@ -1246,72 +1312,6 @@ verwendet Randschichttiefe</skos:example>
         <skos:definition xml:lang="en">Process step during which temperature homogenization is achieved in the component.</skos:definition>
         <skos:definition xml:lang="de">Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird.</skos:definition>
     </owl:Class>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0000005 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000005"/>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0000008 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000008"/>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0000017 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000017"/>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0000055 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000055"/>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0000602 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000602"/>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0000779 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000779"/>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0000781 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000781"/>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0000833 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000833"/>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0000896 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000896"/>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0060006 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0060006"/>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0060008 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0060008"/>
 </rdf:RDF>
 
 

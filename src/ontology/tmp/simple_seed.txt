@@ -12,6 +12,8 @@ http://purl.org/dc/terms/title
 http://www.w3.org/2004/02/skos/core#definition
 http://www.w3.org/2004/02/skos/core#example
 http://www.w3.org/2004/02/skos/core#prefLabel
+https://w3id.org/pmd/co/PMD_0000009
+https://w3id.org/pmd/co/PMD_0060000
 https://w3id.org/pmd/hto/
 https://w3id.org/pmd/hto/AccelleratedCooling
 https://w3id.org/pmd/hto/AcquisitionDate
@@ -93,8 +95,6 @@ https://w3id.org/pmd/hto/heating
 https://w3id.org/pmd/hto/holding
 https://w3id.org/pmd/hto/quenching
 https://w3id.org/pmd/hto/soaking
-https://w3id.org/pmd/co/PMD_0000009
-https://w3id.org/pmd/co/PMD_0060000
 term
 http://www.geneontology.org/formats/oboInOwl#SubsetProperty
 http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty
