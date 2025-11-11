@@ -25,9 +25,9 @@ import_group:
         - https://w3id.org/pmd/co/
 
 namespaces:
-  - https://w3id.org/pmd/ao/hto/
+  - https://w3id.org/pmd/hto/
 
 idranges:
   - idsfor: hto
-    idprefix: https://w3id.org/pmd/ao/hto/HTO_
+    idprefix: https://w3id.org/pmd/hto/HTO_
     iddigits: 7

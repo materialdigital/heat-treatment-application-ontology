@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/pmd/ao/hto.owl#"
-     xml:base="https://w3id.org/pmd/ao/hto.owl"
+<rdf:RDF xmlns="https://w3id.org/pmd/hto.owl#"
+     xml:base="https://w3id.org/pmd/hto.owl"
      xmlns:co="https://w3id.org/pmd/co/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -13,8 +13,8 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://w3id.org/pmd/ao/hto.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/ao/hto/releases/2025-11-03/hto.owl"/>
+    <owl:Ontology rdf:about="https://w3id.org/pmd/hto.owl">
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-11-03/hto.owl"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
@@ -4348,9 +4348,9 @@ for now.</obo:IAO_0000116>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/AccelleratedCooling -->
+    <!-- https://w3id.org/pmd/hto/AccelleratedCooling -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/AccelleratedCooling">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/AccelleratedCooling">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000781"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:comment xml:lang="en">Achieved via convection only.</rdfs:comment>
@@ -4362,9 +4362,9 @@ for now.</obo:IAO_0000116>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/AcquisitionDate -->
+    <!-- https://w3id.org/pmd/hto/AcquisitionDate -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/AcquisitionDate">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/AcquisitionDate">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:comment>is a temperal instant!</rdfs:comment>
@@ -4375,9 +4375,9 @@ for now.</obo:IAO_0000116>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Annealing -->
+    <!-- https://w3id.org/pmd/hto/Annealing -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Annealing">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/Annealing">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">annealing</rdfs:label>
@@ -4386,19 +4386,19 @@ for now.</obo:IAO_0000116>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Atmosphere -->
+    <!-- https://w3id.org/pmd/hto/Atmosphere -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Atmosphere">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/Medium"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/Atmosphere">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/Medium"/>
         <rdfs:label xml:lang="en">atmosphere</rdfs:label>
         <skos:definition>A surrounding influence or environment</skos:definition>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/AtmospherePressure -->
+    <!-- https://w3id.org/pmd/hto/AtmospherePressure -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/AtmospherePressure">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/AtmospherePressure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000896"/>
         <rdfs:comment xml:lang="en">Effective atmosphere preasure in chamber to keep process save (must be 2-3 mbar above ambient prssure)</rdfs:comment>
         <rdfs:comment xml:lang="en">Parameter usually slightly higher than ambient pressure for open process to environment to prevent/reduce diffusion of oxygen into the furnace, e.g. by leckage, to avoid explosive or dangerous atmopheres, could be bar, mbar or Pa</rdfs:comment>
@@ -4409,9 +4409,9 @@ for now.</obo:IAO_0000116>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/BelowAmbientPressure -->
+    <!-- https://w3id.org/pmd/hto/BelowAmbientPressure -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/BelowAmbientPressure">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/BelowAmbientPressure">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">below ambient pressure</rdfs:label>
@@ -4420,9 +4420,9 @@ for now.</obo:IAO_0000116>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/CarbonPotential -->
+    <!-- https://w3id.org/pmd/hto/CarbonPotential -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/CarbonPotential">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/CarbonPotential">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
         <rdfs:comment xml:lang="de">Nitrocarburieren mit Kohlenstoffträger, aus Messwerten abgeleitet KC</rdfs:comment>
         <rdfs:comment xml:lang="en">See standard DIN 1310</rdfs:comment>
@@ -4433,9 +4433,9 @@ for now.</obo:IAO_0000116>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Carburizing -->
+    <!-- https://w3id.org/pmd/hto/Carburizing -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Carburizing">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/Carburizing">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060008"/>
         <rdfs:comment xml:lang="de">Potentiell ableitbar mit bestimmten Fluss-Schwellenwerten</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
@@ -4447,9 +4447,9 @@ for now.</obo:IAO_0000116>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Chamber -->
+    <!-- https://w3id.org/pmd/hto/Chamber -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Chamber">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/Chamber">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:comment>moved to fiat object part. correct if every furnace has a chamber</rdfs:comment>
@@ -4461,16 +4461,16 @@ for now.</obo:IAO_0000116>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/ChamberPressure -->
+    <!-- https://w3id.org/pmd/hto/ChamberPressure -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/ChamberPressure">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/ChamberPressure">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000896"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/Chamber"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/Chamber"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -4479,7 +4479,7 @@ for now.</obo:IAO_0000116>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/Chamber"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/Chamber"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">measured atmophere pressure in retort, measured using the vacuum sensor </rdfs:comment>
@@ -4490,9 +4490,9 @@ for now.</obo:IAO_0000116>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/ChamberScope -->
+    <!-- https://w3id.org/pmd/hto/ChamberScope -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/ChamberScope">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/ChamberScope">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:comment xml:lang="de">Sollte mit Unit-Volume (m^3) verbunden sein</rdfs:comment>
@@ -4509,9 +4509,9 @@ can be: heating chamber / cooling chamber</skos:definition>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/CollectionInterfaceHint -->
+    <!-- https://w3id.org/pmd/hto/CollectionInterfaceHint -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/CollectionInterfaceHint">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/CollectionInterfaceHint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000017"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">collection interface hint</rdfs:label>
@@ -4520,10 +4520,10 @@ can be: heating chamber / cooling chamber</skos:definition>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/ConcentrationH2 -->
+    <!-- https://w3id.org/pmd/hto/ConcentrationH2 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/ConcentrationH2">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/FurnaceAtmosphere"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/ConcentrationH2">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/FurnaceAtmosphere"/>
         <rdfs:comment xml:lang="en">Ammonia is usually intenionally induced;</rdfs:comment>
         <rdfs:comment xml:lang="de">Einzelne Werte durch auf das Molekül spezifizierte Messsonden.</rdfs:comment>
         <rdfs:comment>Hydrogen can be formed during decomposition of e.g. ammonia, acetylene or can be intenionally induced e.g. in forming gas.</rdfs:comment>
@@ -4537,9 +4537,9 @@ can be: heating chamber / cooling chamber</skos:definition>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Controlled -->
+    <!-- https://w3id.org/pmd/hto/Controlled -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Controlled">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/Controlled">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060006"/>
         <rdfs:comment>definition is not enough, what is controlled?</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
@@ -4549,9 +4549,9 @@ can be: heating chamber / cooling chamber</skos:definition>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Convection -->
+    <!-- https://w3id.org/pmd/hto/Convection -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Convection">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/Convection">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060006"/>
         <rdfs:comment>if its a device specification to run a heat up process by some spefiic mode of action, then pls change the definition</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
@@ -4561,9 +4561,9 @@ can be: heating chamber / cooling chamber</skos:definition>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/DewPoint -->
+    <!-- https://w3id.org/pmd/hto/DewPoint -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/DewPoint">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/DewPoint">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">dew point</rdfs:label>
@@ -4572,9 +4572,9 @@ can be: heating chamber / cooling chamber</skos:definition>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature -->
+    <!-- https://w3id.org/pmd/hto/DurationTillTargetTemperature -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/DurationTillTargetTemperature">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/DurationTillTargetTemperature">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
         <rdfs:comment xml:lang="de">Erwärmdauer = Heizzeit + Durchwärmdauer</rdfs:comment>
         <rdfs:comment xml:lang="de">Maß für die tatsächliche Dauer eines Erwärmvorgangs.</rdfs:comment>
@@ -4586,9 +4586,9 @@ can be: heating chamber / cooling chamber</skos:definition>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature -->
+    <!-- https://w3id.org/pmd/hto/DurationToReachTargetTemperature -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/DurationToReachTargetTemperature">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/DurationToReachTargetTemperature">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">duration to reach target temperature</rdfs:label>
@@ -4597,18 +4597,18 @@ can be: heating chamber / cooling chamber</skos:definition>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Fan -->
+    <!-- https://w3id.org/pmd/hto/Fan -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Fan">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/Fan">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000602"/>
         <rdfs:comment>not properly defined</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/FanStateFast -->
+    <!-- https://w3id.org/pmd/hto/FanStateFast -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/FanStateFast">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/FanStateFast">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060006"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:label xml:lang="en">fan state fast</rdfs:label>
@@ -4617,10 +4617,10 @@ can be: heating chamber / cooling chamber</skos:definition>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/FastCooling -->
+    <!-- https://w3id.org/pmd/hto/FastCooling -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/FastCooling">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HeattreatmentMethod"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/FastCooling">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HeattreatmentMethod"/>
         <rdfs:comment xml:lang="de">Anlagenbedingt.</rdfs:comment>
         <rdfs:comment xml:lang="de">Schnellkühlung kann z.B. durch erhöhten Kühlwasserdurchfluss erfolgen.
 Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
@@ -4631,19 +4631,19 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Fluid -->
+    <!-- https://w3id.org/pmd/hto/Fluid -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Fluid">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/Medium"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/Fluid">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/Medium"/>
         <rdfs:label xml:lang="en">fluid</rdfs:label>
         <skos:definition>A substance (such as a liquid or gas) tending to flow or conform to the outline of its container</skos:definition>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/FurnaceAtmosphere -->
+    <!-- https://w3id.org/pmd/hto/FurnaceAtmosphere -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/FurnaceAtmosphere">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/FurnaceAtmosphere">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000005"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">furnace atmosphere</rdfs:label>
@@ -4652,10 +4652,10 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/FurnaceCooling -->
+    <!-- https://w3id.org/pmd/hto/FurnaceCooling -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/FurnaceCooling">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HeattreatmentMethod"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/FurnaceCooling">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HeattreatmentMethod"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">furnace cooling</rdfs:label>
         <skos:definition xml:lang="en">free cooling with deactivated heating unit and no additonal cooling by e.g. agitade nitrogene -&gt; furnace cool </skos:definition>
@@ -4663,18 +4663,18 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000000 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000000 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000000">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000000">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000833"/>
         <rdfs:label xml:lang="en">heat treatment elementals</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000001 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000001 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000001">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000001">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000055"/>
         <rdfs:label xml:lang="en">quenching function</rdfs:label>
         <skos:definition xml:lang="en">A quenching function is a (realizable) function that, when realized, enables a system to lower the temparature of a material fast enough, that it hinders diffusion processes and thus produces metastable material states.</skos:definition>
@@ -4684,27 +4684,27 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000004 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000004 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000004">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000004">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060008"/>
         <rdfs:label xml:lang="en">heating recipe</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000005 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000005 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000005">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000005">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
         <rdfs:label xml:lang="en">temperature change rate</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000006 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000006 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000006">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000006">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
         <rdfs:label xml:lang="en">target temperature</rdfs:label>
         <skos:definition xml:lang="en">Process characteristic defining the temperature that is to be reached within a process that involves a defined change of temperature.</skos:definition>
@@ -4712,9 +4712,9 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000007 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000007 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000007">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
         <rdfs:label xml:lang="en">melting temperature</rdfs:label>
         <skos:definition>disposition of a material at which a phase transformation between liquid and solid state takes place</skos:definition>
@@ -4722,9 +4722,9 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000011 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000011 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000011">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
         <rdfs:comment>needs more work; austenitic phase can be reached from at least two temperatures for any given material (from liquid or from ferrite)</rdfs:comment>
         <rdfs:label xml:lang="en">austenitizing temperature</rdfs:label>
@@ -4733,9 +4733,9 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000012 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000012 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000012">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000012">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000781"/>
         <rdfs:label xml:lang="en">holding function</rdfs:label>
         <skos:definition xml:lang="en">A holding function is a (realizable) function that, when realized, enables a system or device to hold the thermal energy of a material, typically to facilitate diffusion and phase transformation processes within the material.</skos:definition>
@@ -4744,9 +4744,9 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000013 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000013 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000013">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000013">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060008"/>
         <rdfs:subClassOf>
             <owl:Class>
@@ -4754,21 +4754,21 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
                     <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0060008"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000014"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000014"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000015"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000004"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000015"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000016"/>
+                        <owl:onClass rdf:resource="https://w3id.org/pmd/hto/HTO_0000004"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://w3id.org/pmd/hto/HTO_0000016"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -4776,25 +4776,25 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000004"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000004"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000014"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000014"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000015"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000016"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000016"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>add target temperature in axioms, combine it with austenitisation temperature</rdfs:comment>
@@ -4803,72 +4803,72 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000014 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000014 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000014">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000014">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060008"/>
         <rdfs:label xml:lang="en">holding recipe</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000015 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000015 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000015">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000015">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060008"/>
         <rdfs:label xml:lang="en">soaking recipe</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000016 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000016 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000016">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000017"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000016">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000017"/>
         <rdfs:label xml:lang="en">quenching recipe</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000017 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000017 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000017">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000017">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060008"/>
         <rdfs:label xml:lang="en">cooling recipe</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000018 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000018 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000018">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000018">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060008"/>
         <rdfs:label xml:lang="en">nitriding recipe</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000019 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000019 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000019">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/Hardening"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000019">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/Hardening"/>
         <rdfs:label xml:lang="en">surface hardening</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000020 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000020 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000020">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/Hardening"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000020">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/Hardening"/>
         <rdfs:label xml:lang="en">through hardening</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000021 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000021 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000021">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000021">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -4877,11 +4877,11 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000013"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000013"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000023"/>
+                                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000023"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -4892,13 +4892,13 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000013"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000023"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000023"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">QT recipe</rdfs:label>
@@ -4906,18 +4906,18 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000022 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000022 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000022">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000022">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
         <rdfs:label xml:lang="en">quenching and tempering</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000023 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000023 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000023">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000023">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060008"/>
         <rdfs:comment>add target temperature in axioms</rdfs:comment>
         <rdfs:label xml:lang="en">tempering recipe</rdfs:label>
@@ -4925,18 +4925,18 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HTO_0000025 -->
+    <!-- https://w3id.org/pmd/hto/HTO_0000025 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HTO_0000025">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000025">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
         <rdfs:label xml:lang="en">carburizing</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Hardening -->
+    <!-- https://w3id.org/pmd/hto/Hardening -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Hardening">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/Hardening">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Härten</rdfs:label>
@@ -4954,10 +4954,10 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HeatingChamber -->
+    <!-- https://w3id.org/pmd/hto/HeatingChamber -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HeatingChamber">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/ChamberScope"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HeatingChamber">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/ChamberScope"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Heizkammer</rdfs:label>
         <rdfs:label xml:lang="de">Ofenkammer mit einer Heizung.</rdfs:label>
@@ -4967,9 +4967,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HeatingTime -->
+    <!-- https://w3id.org/pmd/hto/HeatingTime -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HeatingTime">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HeatingTime">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Erwärmdauer</rdfs:label>
@@ -4980,9 +4980,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HeattreatmentMethod -->
+    <!-- https://w3id.org/pmd/hto/HeattreatmentMethod -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HeattreatmentMethod">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HeattreatmentMethod">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:comment>all childs are only categories of processes and definatly not roles! what makes a fats cooling? al colling process with some process charateristic on temperature with 100K/min?</rdfs:comment>
@@ -4990,9 +4990,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HeattreatmentScope -->
+    <!-- https://w3id.org/pmd/hto/HeattreatmentScope -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HeattreatmentScope">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HeattreatmentScope">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:comment>childs are processes that realize a certain goal as realizabale</rdfs:comment>
@@ -5003,9 +5003,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/HydrogeneSensorSignal -->
+    <!-- https://w3id.org/pmd/hto/HydrogeneSensorSignal -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/HydrogeneSensorSignal">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HydrogeneSensorSignal">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
         <rdfs:comment xml:lang="en">nominal pre-set value of control system for hydrogen probe </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
@@ -5015,9 +5015,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/LambdaProbeSignal -->
+    <!-- https://w3id.org/pmd/hto/LambdaProbeSignal -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/LambdaProbeSignal">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/LambdaProbeSignal">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">lambda probe signal</rdfs:label>
@@ -5027,9 +5027,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/LeakageCheck -->
+    <!-- https://w3id.org/pmd/hto/LeakageCheck -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/LeakageCheck">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/LeakageCheck">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">leakage check</rdfs:label>
@@ -5039,9 +5039,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/LeakageInterval -->
+    <!-- https://w3id.org/pmd/hto/LeakageInterval -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/LeakageInterval">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/LeakageInterval">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
         <rdfs:comment xml:lang="en">Stands for the measurement interval for recording sensor signals (pressure, temperature) and instrument settings (rotational speed, flow rate of MFC), unit as time stamp hh:mm:ss </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
@@ -5051,9 +5051,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Medium -->
+    <!-- https://w3id.org/pmd/hto/Medium -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Medium">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/Medium">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:comment>no set to be a device specification what to use, but that is not good. medium is a special material entity that has a certain role</rdfs:comment>
@@ -5063,9 +5063,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Nitriding -->
+    <!-- https://w3id.org/pmd/hto/Nitriding -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Nitriding">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/Nitriding">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">nitriding</rdfs:label>
@@ -5074,9 +5074,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/NitridingDepth -->
+    <!-- https://w3id.org/pmd/hto/NitridingDepth -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/NitridingDepth">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/NitridingDepth">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000005"/>
         <rdfs:comment>propably some thicknes quality on some special fiat continuent part, diffusion layer having nitrid or something</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
@@ -5086,9 +5086,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/NitridingPotential -->
+    <!-- https://w3id.org/pmd/hto/NitridingPotential -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/NitridingPotential">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/NitridingPotential">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
         <rdfs:comment xml:lang="en">The nitriding potential is a key indicator how intensive the nitriding process is, the higher the value the stronger the nitriding conditions, unit is bar^-3/2</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
@@ -5099,9 +5099,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/OilQuenchingDuration -->
+    <!-- https://w3id.org/pmd/hto/OilQuenchingDuration -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/OilQuenchingDuration">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/OilQuenchingDuration">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Abschreckdauer</rdfs:label>
@@ -5113,9 +5113,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/OverPressure -->
+    <!-- https://w3id.org/pmd/hto/OverPressure -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/OverPressure">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/OverPressure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000896"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
@@ -5126,9 +5126,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/OxygenProbeSignal -->
+    <!-- https://w3id.org/pmd/hto/OxygenProbeSignal -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/OxygenProbeSignal">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/OxygenProbeSignal">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">oxygen probe signal</rdfs:label>
@@ -5137,9 +5137,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/PartialPressure -->
+    <!-- https://w3id.org/pmd/hto/PartialPressure -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/PartialPressure">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/PartialPressure">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">partial pressure</rdfs:label>
@@ -5153,10 +5153,10 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/QuenchingChamber -->
+    <!-- https://w3id.org/pmd/hto/QuenchingChamber -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/QuenchingChamber">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/ChamberScope"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/QuenchingChamber">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/ChamberScope"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Abschreckkammer</rdfs:label>
         <rdfs:label xml:lang="en">Quenching Chamber</rdfs:label>
@@ -5166,9 +5166,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/QuenchingLeadtime -->
+    <!-- https://w3id.org/pmd/hto/QuenchingLeadtime -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/QuenchingLeadtime">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/QuenchingLeadtime">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Abschreckvorlaufzeit</rdfs:label>
@@ -5180,9 +5180,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/RecordingInterval -->
+    <!-- https://w3id.org/pmd/hto/RecordingInterval -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/RecordingInterval">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/RecordingInterval">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
         <rdfs:comment xml:lang="en">stands for the measurement interval for recording sensor signals (pressure, temperature) and instrument settings (rotational speed, flow rate of MFC), unit as time stamp hh:mm:ss </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
@@ -5192,9 +5192,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Rotation -->
+    <!-- https://w3id.org/pmd/hto/Rotation -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Rotation">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/Rotation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060006"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:comment>seam to be a device specification pinting to a process charateristic of type speed</rdfs:comment>
@@ -5206,9 +5206,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/SequenceDescriptor -->
+    <!-- https://w3id.org/pmd/hto/SequenceDescriptor -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/SequenceDescriptor">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/SequenceDescriptor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000017"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">sequence descriptor</rdfs:label>
@@ -5217,9 +5217,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/SequenceDuration -->
+    <!-- https://w3id.org/pmd/hto/SequenceDuration -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/SequenceDuration">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/SequenceDuration">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">sequence duration</rdfs:label>
@@ -5229,9 +5229,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/SequenceNumber -->
+    <!-- https://w3id.org/pmd/hto/SequenceNumber -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/SequenceNumber">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/SequenceNumber">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000017"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">sequence number</rdfs:label>
@@ -5242,10 +5242,10 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/SlowCooling -->
+    <!-- https://w3id.org/pmd/hto/SlowCooling -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/SlowCooling">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HeattreatmentMethod"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/SlowCooling">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HeattreatmentMethod"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Langsame Gleichgewichtsnahabkühlung</rdfs:label>
         <rdfs:label xml:lang="en">Slow Cooling</rdfs:label>
@@ -5255,9 +5255,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/SoakingDuration -->
+    <!-- https://w3id.org/pmd/hto/SoakingDuration -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/SoakingDuration">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/SoakingDuration">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000202"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Durchwärmzeit</rdfs:label>
@@ -5269,9 +5269,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration -->
+    <!-- https://w3id.org/pmd/hto/SystemTimeForDiagramGeneration -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/SystemTimeForDiagramGeneration">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/SystemTimeForDiagramGeneration">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:comment>usualy a diagram is created out of a process, and it exists then</rdfs:comment>
@@ -5283,9 +5283,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/Tempering -->
+    <!-- https://w3id.org/pmd/hto/Tempering -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/Tempering">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/Tempering">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
         <obo:IAO_0000114 xml:lang="en">needs work</obo:IAO_0000114>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
@@ -5299,9 +5299,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/TypeDescription -->
+    <!-- https://w3id.org/pmd/hto/TypeDescription -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/TypeDescription">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/TypeDescription">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000017"/>
         <obo:IAO_0000114>marked to remove</obo:IAO_0000114>
         <rdfs:comment>makes no sense to me, if its a decription, create a dc:decription on that individual or class</rdfs:comment>
@@ -5313,9 +5313,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/VacuumHeatingPressure -->
+    <!-- https://w3id.org/pmd/hto/VacuumHeatingPressure -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/VacuumHeatingPressure">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/VacuumHeatingPressure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000896"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:comment>should be defined as pressur that inheres in a vacum heating pump. Add vacuum heating pump to devices</rdfs:comment>
@@ -5326,9 +5326,9 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/VacuumPressure -->
+    <!-- https://w3id.org/pmd/hto/VacuumPressure -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/VacuumPressure">
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/VacuumPressure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000896"/>
         <rdfs:comment xml:lang="en"> in retort measured value of vakuum sensor </rdfs:comment>
         <rdfs:comment xml:lang="en"> pre-set gas pressure at vacuum sequence </rdfs:comment>
@@ -5341,14 +5341,14 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/cooling -->
+    <!-- https://w3id.org/pmd/hto/cooling -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/cooling">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000000"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/cooling">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000000"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000009"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000005"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000005"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
@@ -5360,17 +5360,17 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/heating -->
+    <!-- https://w3id.org/pmd/hto/heating -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/heating">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000000"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/heating">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000000"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000009"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000006"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000006"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/ao/hto/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Erwärmen</rdfs:label>
         <rdfs:label xml:lang="en">heating</rdfs:label>
         <skos:definition xml:lang="en">A process in which the temperature is increased from a lower to a higher level.</skos:definition>
@@ -5379,10 +5379,10 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/holding -->
+    <!-- https://w3id.org/pmd/hto/holding -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/holding">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000000"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/holding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000000"/>
         <rdfs:comment xml:lang="de">Die HoldingTime ist stets mit einer vorhergehende SoakingTime verbunden.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Halten</rdfs:label>
@@ -5393,10 +5393,10 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/quenching -->
+    <!-- https://w3id.org/pmd/hto/quenching -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/quenching">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/cooling"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/quenching">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/cooling"/>
         <rdfs:label xml:lang="de">Abschrecken</rdfs:label>
         <rdfs:label xml:lang="en">quenching</rdfs:label>
         <skos:definition xml:lang="en">Process with significantly increased cooling rate, aimed at preventing diffusion based transformations.</skos:definition>
@@ -5405,10 +5405,10 @@ verwendet Randschichttiefe</skos:example>
     
 
 
-    <!-- https://w3id.org/pmd/ao/hto/soaking -->
+    <!-- https://w3id.org/pmd/hto/soaking -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/ao/hto/soaking">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/ao/hto/HTO_0000000"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/soaking">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000000"/>
         <rdfs:comment>Durchwärmen des Bauteils, sodass Temperaturhomogenität erreicht wird. Anschließend kann ein Halten auf der Zieltemperatur erfolgen.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Durchwärmen</rdfs:label>
@@ -7798,7 +7798,7 @@ Ein Rechenknoten kann virtuell (bspw. ein Container oder eine virtuelle Maschine
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/ao/hto/Chamber"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/Chamber"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

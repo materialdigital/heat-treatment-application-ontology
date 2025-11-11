@@ -4,15 +4,13 @@
 
 The Heat Treatment Ontology is developed as an application ontology of the PMD core ontology (PMDco) to model heat treatment processes with a focus on metals.
 
-More information can be found at http://obofoundry.org/ontology/hto
-
 ## Versions
 
 ### Stable release versions
 
 The latest version of the ontology can always be found at:
 
-https://w3id.org/pmd/ao/hto.owl
+https://w3id.org/pmd/hto/hto.owl
 
 (note this will not show up until the request has been approved by obofoundry.org)
 

@@ -2,6 +2,6 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="https://w3id.org/pmd/co/releases/2025-10-28/imports/stato_import.owl" uri="imports/stato_import.owl"/>
     <group id="odk-managed-catalog" prefer="public">
-        <uri name="https://w3id.org/pmd/ao/hto/imports/pmdco_import.owl" uri="imports/pmdco_import.owl"/>
+        <uri name="https://w3id.org/pmd/hto/imports/pmdco_import.owl" uri="imports/pmdco_import.owl"/>
     </group>
 </catalog>

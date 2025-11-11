@@ -11,12 +11,12 @@ Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: idrange: <http://purl.obolibrary.org/obo/ro/idrange/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 
-Ontology: <https://w3id.org/pmd/ao/hto/hto-idranges.owl>
+Ontology: <https://w3id.org/pmd/hto/hto-idranges.owl>
 
 
 Annotations: 
     idsfor: "HTO",
-    idprefix: "https://w3id.org/pmd/ao/hto/HTO_",
+    idprefix: "https://w3id.org/pmd/hto/HTO_",
     iddigits: 7
 
 AnnotationProperty: idprefix:

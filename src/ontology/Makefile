@@ -21,7 +21,7 @@ CONFIG_HASH=                c1ff456b7c1ccd8972badcafa0835cc75d4ffbc1077607098d71
 OBOBASE=                    http://purl.obolibrary.org/obo
 URIBASE=                    https://w3id.org/pmd/ao
 ONT=                        hto
-ONTBASE=                    https://w3id.org/pmd/ao/hto
+ONTBASE=                    https://w3id.org/pmd/hto
 EDIT_FORMAT=                owl
 SRC =                       $(ONT)-edit.$(EDIT_FORMAT)
 MAKE_FAST=                  $(MAKE) IMP=false PAT=false COMP=false MIR=false
@@ -273,10 +273,10 @@ endif
 # ----------------------------------------
 
 $(REPORTDIR)/$(SRC)-obo-report.tsv: $(SRCMERGED) | $(REPORTDIR)
-	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --base-iri https://w3id.org/pmd/ao/hto/ --print 5 -o $@
+	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --base-iri https://w3id.org/pmd/hto/ --print 5 -o $@
 
 $(REPORTDIR)/%-obo-report.tsv: % | $(REPORTDIR)
-	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --base-iri https://w3id.org/pmd/ao/hto/ --print 5 -o $@
+	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --base-iri https://w3id.org/pmd/hto/ --print 5 -o $@
 
 check_for_robot_updates:
 	echo "You are not using a custom profile, so you are getting the joy of the latest ROBOT report!"
@@ -550,7 +550,7 @@ $(ONT)-base.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 	reason --reasoner $(REASONER) --equivalent-classes-allowed asserted-only --exclude-tautologies structural --annotate-inferred-axioms false \
 	relax $(RELAX_OPTIONS) \
 	reduce -r $(REASONER) $(REDUCE_OPTIONS) \
-	remove --base-iri https://w3id.org/pmd/ao/hto/ --axioms external --preserve-structure false --trim false \
+	remove --base-iri https://w3id.org/pmd/hto/ --axioms external --preserve-structure false --trim false \
 	$(SHARED_ROBOT_COMMANDS) \
 	annotate --link-annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
 		--ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \

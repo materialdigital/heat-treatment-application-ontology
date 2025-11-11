@@ -1,8 +1,8 @@
 Level	Rule Name	Subject	Property	Value
 ERROR	duplicate_label	Erwärmdauer	rdfs:label	Erwärmdauer@de
 ERROR	duplicate_label	Heating Time	rdfs:label	Erwärmdauer@de
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/Fan	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/ao/hto/HeattreatmentMethod	rdfs:label	
+ERROR	missing_label	https://w3id.org/pmd/hto/Fan	rdfs:label	
+ERROR	missing_label	https://w3id.org/pmd/hto/HeattreatmentMethod	rdfs:label	
 ERROR	multiple_labels	carburizing recipe	rdfs:label	Aufkohlen@de
 ERROR	multiple_labels	carburizing recipe	rdfs:label	carburizing recipe@en
 ERROR	multiple_labels	Wärmebehandlungsofenkammer	rdfs:label	Wärmebehandlungsofenkammer@de
@@ -94,7 +94,7 @@ WARN	missing_definition	convection	IAO:0000115
 WARN	missing_definition	dew point	IAO:0000115	
 WARN	missing_definition	Erwärmdauer	IAO:0000115	
 WARN	missing_definition	duration to reach target temperature	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/Fan	IAO:0000115	
+WARN	missing_definition	https://w3id.org/pmd/hto/Fan	IAO:0000115	
 WARN	missing_definition	fan state fast	IAO:0000115	
 WARN	missing_definition	fast cooling	IAO:0000115	
 WARN	missing_definition	fluid	IAO:0000115	
@@ -123,7 +123,7 @@ WARN	missing_definition	carburizing	IAO:0000115
 WARN	missing_definition	hardening	IAO:0000115	
 WARN	missing_definition	Heizkammer	IAO:0000115	
 WARN	missing_definition	Heating Time	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/ao/hto/HeattreatmentMethod	IAO:0000115	
+WARN	missing_definition	https://w3id.org/pmd/hto/HeattreatmentMethod	IAO:0000115	
 WARN	missing_definition	heattreatmentscope	IAO:0000115	
 WARN	missing_definition	hydrogene sensor signal	IAO:0000115	
 WARN	missing_definition	lambda probe signal	IAO:0000115	
