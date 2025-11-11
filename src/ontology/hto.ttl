@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/pmd/ao/hto.ttl#> .
+@prefix : <https://w3id.org/pmd/hto.ttl#> .
 @prefix co: <https://w3id.org/pmd/co/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
@@ -11,9 +11,9 @@
 @prefix swrl: <http://www.w3.org/2003/11/swrl#> .
 @prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
 @prefix terms: <http://purl.org/dc/terms/> .
-@base <https://w3id.org/pmd/ao/hto.ttl> .
+@base <https://w3id.org/pmd/hto.ttl> .
 
-<https://w3id.org/pmd/ao/hto.ttl> rdf:type owl:Ontology ;
+<https://w3id.org/pmd/hto.ttl> rdf:type owl:Ontology ;
                                    owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-11-11/hto.ttl> ;
                                    terms:contributor "Jannis Grundmann" ;
                                    terms:creator <https://orcid.org/0000-0002-9014-2920> ,

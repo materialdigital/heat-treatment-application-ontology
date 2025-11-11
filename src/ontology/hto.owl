@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/pmd/ao/hto.owl#"
-     xml:base="https://w3id.org/pmd/ao/hto.owl"
+<rdf:RDF xmlns="https://w3id.org/pmd/hto.owl#"
+     xml:base="https://w3id.org/pmd/hto.owl"
      xmlns:co="https://w3id.org/pmd/co/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
@@ -13,7 +13,7 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://w3id.org/pmd/ao/hto.owl">
+    <owl:Ontology rdf:about="https://w3id.org/pmd/hto.owl">
         <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-11-11/hto.owl"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
