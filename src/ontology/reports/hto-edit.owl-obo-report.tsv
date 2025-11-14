@@ -1,12 +1,22 @@
 Level	Rule Name	Subject	Property	Value
+ERROR	deprecated_class_reference	obsolete Wärmebehandlungsofenkammer	rdfs:subClassOf	BFO:0000023
+ERROR	deprecated_class_reference	obsolete Wärmebehandlungsofenkammer	rdfs:subClassOf	Ofenkammer mit einer Heizung.
+ERROR	deprecated_class_reference	obsolete Wärmebehandlungsofenkammer	rdfs:subClassOf	Abschreckkammer
+ERROR	deprecated_class_reference	fast cooling	rdfs:subClassOf	https://w3id.org/pmd/hto/HeattreatmentMethod
+ERROR	deprecated_class_reference	furnace cooling	rdfs:subClassOf	https://w3id.org/pmd/hto/HeattreatmentMethod
+ERROR	deprecated_class_reference	https://w3id.org/pmd/hto/HeattreatmentMethod	rdfs:subClassOf	BFO:0000023
+ERROR	deprecated_class_reference	https://w3id.org/pmd/hto/HeattreatmentMethod	rdfs:subClassOf	fast cooling
+ERROR	deprecated_class_reference	https://w3id.org/pmd/hto/HeattreatmentMethod	rdfs:subClassOf	furnace cooling
+ERROR	deprecated_class_reference	https://w3id.org/pmd/hto/HeattreatmentMethod	rdfs:subClassOf	Slow Cooling
+ERROR	deprecated_class_reference	heattreatmentscope	rdfs:subClassOf	BFO:0000023
+ERROR	deprecated_class_reference	Slow Cooling	rdfs:subClassOf	https://w3id.org/pmd/hto/HeattreatmentMethod
+ERROR	deprecated_class_reference	obsolete vacuum heating pressure	rdfs:subClassOf	https://w3id.org/pmd/co/PMD_0000896
+ERROR	deprecated_class_reference	obsolete vacuum pressure	rdfs:subClassOf	https://w3id.org/pmd/co/PMD_0000896
 ERROR	duplicate_label	Erwärmdauer	rdfs:label	Erwärmdauer@de
 ERROR	duplicate_label	Heating Time	rdfs:label	Erwärmdauer@de
 ERROR	missing_label	https://w3id.org/pmd/hto/Fan	rdfs:label	
-ERROR	missing_label	https://w3id.org/pmd/hto/HeattreatmentMethod	rdfs:label	
 ERROR	multiple_labels	Aufkohlen	rdfs:label	Aufkohlen@de
 ERROR	multiple_labels	Aufkohlen	rdfs:label	carburizing recipe@en
-ERROR	multiple_labels	chamberscope	rdfs:label	Wärmebehandlungsofenkammer@de
-ERROR	multiple_labels	chamberscope	rdfs:label	chamberscope@en
 ERROR	multiple_labels	Erwärmdauer	rdfs:label	Erwärmdauer@de
 ERROR	multiple_labels	Erwärmdauer	rdfs:label	duration till target temperature@en
 ERROR	multiple_labels	hardening	rdfs:label	Härten@de
@@ -22,8 +32,6 @@ ERROR	multiple_labels	Abschreckkammer	rdfs:label	Abschreckkammer@de
 ERROR	multiple_labels	Abschreckkammer	rdfs:label	Quenching Chamber@en
 ERROR	multiple_labels	Abschreckvorlaufzeit	rdfs:label	Abschreckvorlaufzeit@de
 ERROR	multiple_labels	Abschreckvorlaufzeit	rdfs:label	Quenching Leadtime@en
-ERROR	multiple_labels	Slow Cooling	rdfs:label	Langsame Gleichgewichtsnahabkühlung@de
-ERROR	multiple_labels	Slow Cooling	rdfs:label	Slow Cooling@en
 ERROR	multiple_labels	soaking duration	rdfs:label	Durchwärmzeit@de
 ERROR	multiple_labels	soaking duration	rdfs:label	soaking duration@en
 ERROR	multiple_labels	tempering	rdfs:label	Anlassen@de
@@ -74,8 +82,7 @@ WARN	annotation_whitespace	sequence number	skos:definition	number of process ste
 WARN	annotation_whitespace	sequence number	skos:definition	ongoing number for labeling the process steps within a process recipe @en
 WARN	annotation_whitespace	system time for diagram generation	skos:definition	 Extrahierte Systemzeit für das Diagram geniert @de
 WARN	annotation_whitespace	system time for diagram generation	skos:definition	time stamp for measuring data aquisition time and diagram generation / data syncing @en
-WARN	annotation_whitespace	vacuum pressure	skos:definition	 Paramenter describing the measured pressure inside a chamber; units could be mbar, bar @en
-WARN	annotation_whitespace	vacuum pressure	skos:definition	 Parameter describing the intended vacuum pressure inside a chamber. @en
+WARN	annotation_whitespace	obsolete vacuum pressure	skos:definition	 Parameter describing the intended vacuum pressure inside a chamber. @en
 WARN	missing_definition	accellerated cooling	IAO:0000115	
 WARN	missing_definition	acquisition date	IAO:0000115	
 WARN	missing_definition	annealing	IAO:0000115	
@@ -86,7 +93,6 @@ WARN	missing_definition	carbon potential	IAO:0000115
 WARN	missing_definition	Aufkohlen	IAO:0000115	
 WARN	missing_definition	chamber	IAO:0000115	
 WARN	missing_definition	chamber pressure	IAO:0000115	
-WARN	missing_definition	chamberscope	IAO:0000115	
 WARN	missing_definition	collection interface hint	IAO:0000115	
 WARN	missing_definition	concentration	IAO:0000115	
 WARN	missing_definition	controlled	IAO:0000115	
@@ -96,10 +102,8 @@ WARN	missing_definition	Erwärmdauer	IAO:0000115
 WARN	missing_definition	duration to reach target temperature	IAO:0000115	
 WARN	missing_definition	https://w3id.org/pmd/hto/Fan	IAO:0000115	
 WARN	missing_definition	fan state fast	IAO:0000115	
-WARN	missing_definition	fast cooling	IAO:0000115	
 WARN	missing_definition	fluid	IAO:0000115	
 WARN	missing_definition	furnace atmosphere	IAO:0000115	
-WARN	missing_definition	furnace cooling	IAO:0000115	
 WARN	missing_definition	heat treatment elementals	IAO:0000115	
 WARN	missing_definition	quenching function	IAO:0000115	
 WARN	missing_definition	heating recipe	IAO:0000115	
@@ -123,8 +127,6 @@ WARN	missing_definition	carburizing	IAO:0000115
 WARN	missing_definition	hardening	IAO:0000115	
 WARN	missing_definition	Ofenkammer mit einer Heizung.	IAO:0000115	
 WARN	missing_definition	Heating Time	IAO:0000115	
-WARN	missing_definition	https://w3id.org/pmd/hto/HeattreatmentMethod	IAO:0000115	
-WARN	missing_definition	heattreatmentscope	IAO:0000115	
 WARN	missing_definition	hydrogene sensor signal	IAO:0000115	
 WARN	missing_definition	lambda probe signal	IAO:0000115	
 WARN	missing_definition	leakage check	IAO:0000115	
@@ -144,17 +146,19 @@ WARN	missing_definition	rotation speed	IAO:0000115
 WARN	missing_definition	sequence descriptor	IAO:0000115	
 WARN	missing_definition	sequence duration	IAO:0000115	
 WARN	missing_definition	sequence number	IAO:0000115	
-WARN	missing_definition	Slow Cooling	IAO:0000115	
 WARN	missing_definition	soaking duration	IAO:0000115	
 WARN	missing_definition	system time for diagram generation	IAO:0000115	
 WARN	missing_definition	tempering	IAO:0000115	
 WARN	missing_definition	Typbeschreibung	IAO:0000115	
-WARN	missing_definition	vacuum heating pressure	IAO:0000115	
-WARN	missing_definition	vacuum pressure	IAO:0000115	
 WARN	missing_definition	cooling	IAO:0000115	
 WARN	missing_definition	heating	IAO:0000115	
 WARN	missing_definition	holding	IAO:0000115	
 WARN	missing_definition	Abschrecken	IAO:0000115	
 WARN	missing_definition	Durchwärmen	IAO:0000115	
+WARN	missing_obsolete_label	fast cooling	rdfs:label	fast cooling@en
+WARN	missing_obsolete_label	furnace cooling	rdfs:label	furnace cooling@en
+WARN	missing_obsolete_label	heattreatmentscope	rdfs:label	heattreatmentscope@en
+WARN	missing_obsolete_label	Slow Cooling	rdfs:label	Langsame Gleichgewichtsnahabkühlung@de
+WARN	missing_obsolete_label	Slow Cooling	rdfs:label	Slow Cooling@en
 INFO	missing_superclass	chamber pressure	rdfs:subClassOf	
 INFO	missing_superclass	QT recipe	rdfs:subClassOf	

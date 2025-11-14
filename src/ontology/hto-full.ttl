@@ -14,7 +14,7 @@
 @base <https://w3id.org/pmd/hto/hto-full.ttl> .
 
 <https://w3id.org/pmd/hto/hto-full.ttl> rdf:type owl:Ontology ;
-                                         owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-11-11/hto-full.ttl> ;
+                                         owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-11-14/hto-full.ttl> ;
                                          terms:contributor "Jannis Grundmann" ;
                                          terms:creator <https://orcid.org/0000-0002-9014-2920> ,
                                                        <https://orcid.org/0000-0003-1649-6832> ,
@@ -22,7 +22,7 @@
                                          terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                          terms:license <https://creativecommons.org/licenses/unspecified> ;
                                          terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                         owl:versionInfo "2025-11-11" .
+                                         owl:versionInfo "2025-11-14" .
 
 #################################################################
 #    Annotation properties
@@ -1272,11 +1272,6 @@ co:PMD_0020141 rdf:type owl:ObjectProperty ;
                skos:definition """Integral bearer of is a property chain linking an object or object aggregate O that consits of a portion of matter PM to a SDC Q that inheres in 'portions of matter' only:
 O -consists of-> PM -bearer of-> Q"""@en ;
                skos:example "Talking colloquially about Intensive thermodynamic properties of an object requires this property."@en .
-
-
-###  https://w3id.org/pmd/co/PMD_0060000
-co:PMD_0060000 rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf obo:RO_0000057 .
 
 
 #################################################################
@@ -3297,7 +3292,8 @@ co:PMD_0000014 rdf:type owl:Class ;
 
 
 ###  https://w3id.org/pmd/co/PMD_0000017
-co:PMD_0000017 rdf:type owl:Class .
+co:PMD_0000017 rdf:type owl:Class ;
+               owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000051
@@ -10426,13 +10422,15 @@ co:PMD_0200001 rdf:type owl:Class ;
                                         rdfs:subClassOf obo:BFO_0000023 ;
                                         obo:IAO_0000114 "needs work" ;
                                         rdfs:comment "Sollte mit Unit-Volume (m^3) verbunden sein"@de ,
+                                                     "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent." ,
                                                      "competly dont get that one" ;
                                         rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                        rdfs:label "Wärmebehandlungsofenkammer"@de ,
-                                                   "chamberscope"@en ;
-                                        skos:definition "Functional furnace chamber."@en ,
-                                                        "Funktionale Ofenkammer."@de ,
-                                                        """Position of the batch in a multi-chamber furnace
+                                        rdfs:label "obsolete Wärmebehandlungsofenkammer"@de ,
+                                                   "obsolete chamberscope"@en ;
+                                        owl:deprecated "true"^^xsd:boolean ;
+                                        skos:definition "Funktionale Ofenkammer."@de ,
+                                                        "OBSOLETE. Functional furnace chamber."@en ,
+                                                        """OBSOLETE. Position of the batch in a multi-chamber furnace
 A specialization of hasProcessNodeComponent representing distinguishable heat treatment chambers of a furnaces.
 can be: heating chamber / cooling chamber"""@en .
 
@@ -10523,8 +10521,10 @@ can be: heating chamber / cooling chamber"""@en .
                                        rdfs:subClassOf <https://w3id.org/pmd/hto/HeattreatmentMethod> ;
                                        rdfs:comment "Anlagenbedingt."@de ,
                                                     """Schnellkühlung kann z.B. durch erhöhten Kühlwasserdurchfluss erfolgen.
-Auch erhöhte Gaskühlung durch ventilation."""@de ;
+Auch erhöhte Gaskühlung durch ventilation."""@de ,
+                                                    "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent." ;
                                        rdfs:label "fast cooling"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
                                        skos:definition "Schnellkühlung"@de ,
                                                        "Stark beschleunigte Abkühlung ohne Abschreckmedium."@de .
 
@@ -10549,6 +10549,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ;
                                           rdfs:subClassOf <https://w3id.org/pmd/hto/HeattreatmentMethod> ;
                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                           rdfs:label "furnace cooling"@en ;
+                                          owl:deprecated "true"^^xsd:boolean ;
                                           skos:definition "free cooling with deactivated heating unit and no additonal cooling by e.g. agitade nitrogene -> furnace cool "@en .
 
 
@@ -10785,7 +10786,9 @@ verwendet Randschichttiefe""" .
 <https://w3id.org/pmd/hto/HeattreatmentMethod> rdf:type owl:Class ;
                                                rdfs:subClassOf obo:BFO_0000023 ;
                                                obo:IAO_0000114 "needs work" ;
-                                               rdfs:comment "all childs are only categories of processes and definatly not roles! what makes a fats cooling? al colling process with some process charateristic on temperature with 100K/min?" .
+                                               rdfs:comment "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent." ,
+                                                            "all childs are only categories of processes and definatly not roles! what makes a fats cooling? al colling process with some process charateristic on temperature with 100K/min?" ;
+                                               owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/pmd/hto/HeattreatmentScope
@@ -10795,6 +10798,7 @@ verwendet Randschichttiefe""" .
                                               rdfs:comment "childs are processes that realize a certain goal as realizabale" ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                               rdfs:label "heattreatmentscope"@en ;
+                                              owl:deprecated "true"^^xsd:boolean ;
                                               skos:definition "This class specifices the scope of the specific heattreatment process."@en .
 
 
@@ -10986,6 +10990,7 @@ verwendet Randschichttiefe""" .
                                        rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                        rdfs:label "Langsame Gleichgewichtsnahabkühlung"@de ,
                                                   "Slow Cooling"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
                                        skos:definition "Langsame Abkühlung unter gleichgewichtsnahen Bedingungen, um ein gleichgewichtsnahes Gefüge zu erzeugen."@de ,
                                                        "Slow cooling with equilibrium near conditions, to foster an equilibrium near micro structure."@en .
 
@@ -11040,10 +11045,12 @@ verwendet Randschichttiefe""" .
 <https://w3id.org/pmd/hto/VacuumHeatingPressure> rdf:type owl:Class ;
                                                  rdfs:subClassOf co:PMD_0000896 ;
                                                  obo:IAO_0000114 "needs work" ;
-                                                 rdfs:comment "should be defined as pressur that inheres in a vacum heating pump. Add vacuum heating pump to devices" ;
+                                                 rdfs:comment "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent." ,
+                                                              "should be defined as pressur that inheres in a vacum heating pump. Add vacuum heating pump to devices" ;
                                                  rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                                 rdfs:label "vacuum heating pressure"@en ;
-                                                 skos:definition "Pressure of the vaccum heating pump."@en .
+                                                 rdfs:label "obsolete vacuum heating pressure"@en ;
+                                                 owl:deprecated "true"^^xsd:boolean ;
+                                                 skos:definition "OBSOLETE. Pressure of the vaccum heating pump."@en .
 
 
 ###  https://w3id.org/pmd/hto/VacuumPressure
@@ -11051,11 +11058,13 @@ verwendet Randschichttiefe""" .
                                           rdfs:subClassOf co:PMD_0000896 ;
                                           rdfs:comment " in retort measured value of vakuum sensor "@en ,
                                                        " pre-set gas pressure at vacuum sequence "@en ,
+                                                       "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent." ,
                                                        "should be defined in conjuntion to some device or role" ;
                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                          rdfs:label "vacuum pressure"@en ;
-                                          skos:definition " Paramenter describing the measured pressure inside a chamber; units could be mbar, bar "@en ,
-                                                          " Parameter describing the intended vacuum pressure inside a chamber. "@en .
+                                          rdfs:label "obsolete vacuum pressure"@en ;
+                                          owl:deprecated "true"^^xsd:boolean ;
+                                          skos:definition " Parameter describing the intended vacuum pressure inside a chamber. "@en ,
+                                                          "OBSOLETE. Paramenter describing the measured pressure inside a chamber; units could be mbar, bar"@en .
 
 
 ###  https://w3id.org/pmd/hto/cooling

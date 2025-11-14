@@ -124,7 +124,6 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000197>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000057>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000085>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000009>))
-Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0060000>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0001937>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000114>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
@@ -143,7 +142,7 @@ Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#prefLabel>))
 
 AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/description> "description")
 
-# Annotation Property: <http://purl.org/dc/terms/license> (license)
+# Annotation Property: <http://purl.org/dc/terms/license> (dcterms:license)
 
 AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/license> "license")
 
@@ -152,20 +151,16 @@ AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/license> "license")
 AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/title> "title")
 
 
-############################
-#   Object Properties
-############################
-
-# Object Property: <https://w3id.org/pmd/co/PMD_0060000> (<https://w3id.org/pmd/co/PMD_0060000>)
-
-SubObjectPropertyOf(<https://w3id.org/pmd/co/PMD_0060000> <http://purl.obolibrary.org/obo/RO_0000057>)
-
 
 
 
 ############################
 #   Classes
 ############################
+
+# Class: <https://w3id.org/pmd/co/PMD_0000017> (<https://w3id.org/pmd/co/PMD_0000017>)
+
+AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/co/PMD_0000017> "true"^^xsd:boolean)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000056> (melting furnace)
 
@@ -261,17 +256,19 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/ChamberPressure> "chamb
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/ChamberPressure> "designated pressure in retort during evacuation phase pre to nitriding process or during low pressure nitriding process "@en)
 EquivalentClasses(<https://w3id.org/pmd/hto/ChamberPressure> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000896> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://w3id.org/pmd/hto/Chamber>)))
 
-# Class: <https://w3id.org/pmd/hto/ChamberScope> (chamberscope)
+# Class: <https://w3id.org/pmd/hto/ChamberScope> (obsolete Wärmebehandlungsofenkammer)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/hto/ChamberScope> "needs work")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/ChamberScope> "Sollte mit Unit-Volume (m^3) verbunden sein"@de)
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/ChamberScope> "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent.")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/ChamberScope> "competly dont get that one")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/ChamberScope> <https://w3id.org/pmd/hto/>)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/ChamberScope> "Wärmebehandlungsofenkammer"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/ChamberScope> "chamberscope"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/ChamberScope> "Functional furnace chamber."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/ChamberScope> "obsolete Wärmebehandlungsofenkammer"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/ChamberScope> "obsolete chamberscope"@en)
+AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/ChamberScope> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/ChamberScope> "Funktionale Ofenkammer."@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/ChamberScope> "Position of the batch in a multi-chamber furnace
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/ChamberScope> "OBSOLETE. Functional furnace chamber."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/ChamberScope> "OBSOLETE. Position of the batch in a multi-chamber furnace
 A specialization of hasProcessNodeComponent representing distinguishable heat treatment chambers of a furnaces.
 can be: heating chamber / cooling chamber"@en)
 SubClassOf(<https://w3id.org/pmd/hto/ChamberScope> <http://purl.obolibrary.org/obo/BFO_0000023>)
@@ -353,7 +350,9 @@ SubClassOf(<https://w3id.org/pmd/hto/FanStateFast> <https://w3id.org/pmd/co/PMD_
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/FastCooling> "Anlagenbedingt."@de)
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/FastCooling> "Schnellkühlung kann z.B. durch erhöhten Kühlwasserdurchfluss erfolgen.
 Auch erhöhte Gaskühlung durch ventilation."@de)
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/FastCooling> "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent.")
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/FastCooling> "fast cooling"@en)
+AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/FastCooling> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/FastCooling> "Schnellkühlung"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/FastCooling> "Stark beschleunigte Abkühlung ohne Abschreckmedium."@de)
 SubClassOf(<https://w3id.org/pmd/hto/FastCooling> <https://w3id.org/pmd/hto/HeattreatmentMethod>)
@@ -375,6 +374,7 @@ SubClassOf(<https://w3id.org/pmd/hto/FurnaceAtmosphere> <http://purl.obolibrary.
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/FurnaceCooling> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/FurnaceCooling> "furnace cooling"@en)
+AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/FurnaceCooling> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/FurnaceCooling> "free cooling with deactivated heating unit and no additonal cooling by e.g. agitade nitrogene -> furnace cool "@en)
 SubClassOf(<https://w3id.org/pmd/hto/FurnaceCooling> <https://w3id.org/pmd/hto/HeattreatmentMethod>)
 
@@ -526,7 +526,9 @@ SubClassOf(<https://w3id.org/pmd/hto/HeatingTime> <http://purl.obolibrary.org/ob
 # Class: <https://w3id.org/pmd/hto/HeattreatmentMethod> (<https://w3id.org/pmd/hto/HeattreatmentMethod>)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/hto/HeattreatmentMethod> "needs work")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/HeattreatmentMethod> "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent.")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/HeattreatmentMethod> "all childs are only categories of processes and definatly not roles! what makes a fats cooling? al colling process with some process charateristic on temperature with 100K/min?")
+AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/HeattreatmentMethod> "true"^^xsd:boolean)
 SubClassOf(<https://w3id.org/pmd/hto/HeattreatmentMethod> <http://purl.obolibrary.org/obo/BFO_0000023>)
 
 # Class: <https://w3id.org/pmd/hto/HeattreatmentScope> (heattreatmentscope)
@@ -535,6 +537,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.o
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/HeattreatmentScope> "childs are processes that realize a certain goal as realizabale")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/HeattreatmentScope> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HeattreatmentScope> "heattreatmentscope"@en)
+AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/HeattreatmentScope> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HeattreatmentScope> "This class specifices the scope of the specific heattreatment process."@en)
 SubClassOf(<https://w3id.org/pmd/hto/HeattreatmentScope> <http://purl.obolibrary.org/obo/BFO_0000023>)
 
@@ -706,6 +709,7 @@ SubClassOf(<https://w3id.org/pmd/hto/SequenceNumber> <https://w3id.org/pmd/co/PM
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/SlowCooling> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/SlowCooling> "Langsame Gleichgewichtsnahabkühlung"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/SlowCooling> "Slow Cooling"@en)
+AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/SlowCooling> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/SlowCooling> "Langsame Abkühlung unter gleichgewichtsnahen Bedingungen, um ein gleichgewichtsnahes Gefüge zu erzeugen."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/SlowCooling> "Slow cooling with equilibrium near conditions, to foster an equilibrium near micro structure."@en)
 SubClassOf(<https://w3id.org/pmd/hto/SlowCooling> <https://w3id.org/pmd/hto/HeattreatmentMethod>)
@@ -752,24 +756,28 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/TypeDescription> "Type 
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/TypeDescription> "Description for Process Node's utility, e.g. \"Rear Vacuum Furnace Oil Quenching\"."@en)
 SubClassOf(<https://w3id.org/pmd/hto/TypeDescription> <https://w3id.org/pmd/co/PMD_0000017>)
 
-# Class: <https://w3id.org/pmd/hto/VacuumHeatingPressure> (vacuum heating pressure)
+# Class: <https://w3id.org/pmd/hto/VacuumHeatingPressure> (obsolete vacuum heating pressure)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/hto/VacuumHeatingPressure> "needs work")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/VacuumHeatingPressure> "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent.")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/VacuumHeatingPressure> "should be defined as pressur that inheres in a vacum heating pump. Add vacuum heating pump to devices")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/VacuumHeatingPressure> <https://w3id.org/pmd/hto/>)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/VacuumHeatingPressure> "vacuum heating pressure"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/VacuumHeatingPressure> "Pressure of the vaccum heating pump."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/VacuumHeatingPressure> "obsolete vacuum heating pressure"@en)
+AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/VacuumHeatingPressure> "true"^^xsd:boolean)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/VacuumHeatingPressure> "OBSOLETE. Pressure of the vaccum heating pump."@en)
 SubClassOf(<https://w3id.org/pmd/hto/VacuumHeatingPressure> <https://w3id.org/pmd/co/PMD_0000896>)
 
-# Class: <https://w3id.org/pmd/hto/VacuumPressure> (vacuum pressure)
+# Class: <https://w3id.org/pmd/hto/VacuumPressure> (obsolete vacuum pressure)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/VacuumPressure> " in retort measured value of vakuum sensor "@en)
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/VacuumPressure> " pre-set gas pressure at vacuum sequence "@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/VacuumPressure> "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent.")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/VacuumPressure> "should be defined in conjuntion to some device or role")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/VacuumPressure> <https://w3id.org/pmd/hto/>)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/VacuumPressure> "vacuum pressure"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/VacuumPressure> " Paramenter describing the measured pressure inside a chamber; units could be mbar, bar "@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/VacuumPressure> "obsolete vacuum pressure"@en)
+AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/VacuumPressure> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/VacuumPressure> " Parameter describing the intended vacuum pressure inside a chamber. "@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/VacuumPressure> "OBSOLETE. Paramenter describing the measured pressure inside a chamber; units could be mbar, bar"@en)
 SubClassOf(<https://w3id.org/pmd/hto/VacuumPressure> <https://w3id.org/pmd/co/PMD_0000896>)
 
 # Class: <https://w3id.org/pmd/hto/cooling> (cooling)

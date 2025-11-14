@@ -13,7 +13,6 @@ http://www.w3.org/2004/02/skos/core#definition
 http://www.w3.org/2004/02/skos/core#example
 http://www.w3.org/2004/02/skos/core#prefLabel
 https://w3id.org/pmd/co/PMD_0000009
-https://w3id.org/pmd/co/PMD_0060000
 https://w3id.org/pmd/hto/
 https://w3id.org/pmd/hto/AccelleratedCooling
 https://w3id.org/pmd/hto/AcquisitionDate

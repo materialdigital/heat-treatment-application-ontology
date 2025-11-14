@@ -14,7 +14,7 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-11-11/hto.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-11-14/hto.owl"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
@@ -22,7 +22,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2025-11-11</owl:versionInfo>
+        <owl:versionInfo>2025-11-14</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1684,14 +1684,6 @@ An example of such case can be &quot;Temperature of during the annealing process
         <skos:definition xml:lang="en">Integral bearer of is a property chain linking an object or object aggregate O that consits of a portion of matter PM to a SDC Q that inheres in &apos;portions of matter&apos; only:
 O -consists of-&gt; PM -bearer of-&gt; Q</skos:definition>
         <skos:example xml:lang="en">Talking colloquially about Intensive thermodynamic properties of an object requires this property.</skos:example>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/pmd/co/PMD_0060000 -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0060000">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
     </owl:ObjectProperty>
     
 
@@ -4511,7 +4503,9 @@ Specific rates, e.g., tensile rate, cooling rate, etc. should be added as  subcl
 
     <!-- https://w3id.org/pmd/co/PMD_0000017 -->
 
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000017"/>
+    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000017">
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
     
 
 
@@ -14107,13 +14101,15 @@ Depending of the interconnectedness of the pores the foam is open- or closed-cel
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:comment xml:lang="de">Sollte mit Unit-Volume (m^3) verbunden sein</rdfs:comment>
+        <rdfs:comment>The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent.</rdfs:comment>
         <rdfs:comment>competly dont get that one</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
-        <rdfs:label xml:lang="de">Wärmebehandlungsofenkammer</rdfs:label>
-        <rdfs:label xml:lang="en">chamberscope</rdfs:label>
-        <skos:definition xml:lang="en">Functional furnace chamber.</skos:definition>
+        <rdfs:label xml:lang="de">obsolete Wärmebehandlungsofenkammer</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete chamberscope</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:definition xml:lang="de">Funktionale Ofenkammer.</skos:definition>
-        <skos:definition xml:lang="en">Position of the batch in a multi-chamber furnace
+        <skos:definition xml:lang="en">OBSOLETE. Functional furnace chamber.</skos:definition>
+        <skos:definition xml:lang="en">OBSOLETE. Position of the batch in a multi-chamber furnace
 A specialization of hasProcessNodeComponent representing distinguishable heat treatment chambers of a furnaces.
 can be: heating chamber / cooling chamber</skos:definition>
     </owl:Class>
@@ -14235,7 +14231,9 @@ can be: heating chamber / cooling chamber</skos:definition>
         <rdfs:comment xml:lang="de">Anlagenbedingt.</rdfs:comment>
         <rdfs:comment xml:lang="de">Schnellkühlung kann z.B. durch erhöhten Kühlwasserdurchfluss erfolgen.
 Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
+        <rdfs:comment>The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent.</rdfs:comment>
         <rdfs:label xml:lang="en">fast cooling</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:definition xml:lang="de">Schnellkühlung</skos:definition>
         <skos:definition xml:lang="de">Stark beschleunigte Abkühlung ohne Abschreckmedium.</skos:definition>
     </owl:Class>
@@ -14269,6 +14267,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HeattreatmentMethod"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">furnace cooling</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:definition xml:lang="en">free cooling with deactivated heating unit and no additonal cooling by e.g. agitade nitrogene -&gt; furnace cool </skos:definition>
     </owl:Class>
     
@@ -14596,7 +14595,9 @@ verwendet Randschichttiefe</skos:example>
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HeattreatmentMethod">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
+        <rdfs:comment>The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent.</rdfs:comment>
         <rdfs:comment>all childs are only categories of processes and definatly not roles! what makes a fats cooling? al colling process with some process charateristic on temperature with 100K/min?</rdfs:comment>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -14609,6 +14610,7 @@ verwendet Randschichttiefe</skos:example>
         <rdfs:comment>childs are processes that realize a certain goal as realizabale</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">heattreatmentscope</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:definition xml:lang="en">This class specifices the scope of the specific heattreatment process.</skos:definition>
     </owl:Class>
     
@@ -14860,6 +14862,7 @@ verwendet Randschichttiefe</skos:example>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Langsame Gleichgewichtsnahabkühlung</rdfs:label>
         <rdfs:label xml:lang="en">Slow Cooling</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:definition xml:lang="de">Langsame Abkühlung unter gleichgewichtsnahen Bedingungen, um ein gleichgewichtsnahes Gefüge zu erzeugen.</skos:definition>
         <skos:definition xml:lang="en">Slow cooling with equilibrium near conditions, to foster an equilibrium near micro structure.</skos:definition>
     </owl:Class>
@@ -14929,10 +14932,12 @@ verwendet Randschichttiefe</skos:example>
     <owl:Class rdf:about="https://w3id.org/pmd/hto/VacuumHeatingPressure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000896"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
+        <rdfs:comment>The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent.</rdfs:comment>
         <rdfs:comment>should be defined as pressur that inheres in a vacum heating pump. Add vacuum heating pump to devices</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
-        <rdfs:label xml:lang="en">vacuum heating pressure</rdfs:label>
-        <skos:definition xml:lang="en">Pressure of the vaccum heating pump.</skos:definition>
+        <rdfs:label xml:lang="en">obsolete vacuum heating pressure</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:definition xml:lang="en">OBSOLETE. Pressure of the vaccum heating pump.</skos:definition>
     </owl:Class>
     
 
@@ -14943,11 +14948,13 @@ verwendet Randschichttiefe</skos:example>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000896"/>
         <rdfs:comment xml:lang="en"> in retort measured value of vakuum sensor </rdfs:comment>
         <rdfs:comment xml:lang="en"> pre-set gas pressure at vacuum sequence </rdfs:comment>
+        <rdfs:comment>The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent.</rdfs:comment>
         <rdfs:comment>should be defined in conjuntion to some device or role</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
-        <rdfs:label xml:lang="en">vacuum pressure</rdfs:label>
-        <skos:definition xml:lang="en"> Paramenter describing the measured pressure inside a chamber; units could be mbar, bar </skos:definition>
+        <rdfs:label xml:lang="en">obsolete vacuum pressure</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:definition xml:lang="en"> Parameter describing the intended vacuum pressure inside a chamber. </skos:definition>
+        <skos:definition xml:lang="en">OBSOLETE. Paramenter describing the measured pressure inside a chamber; units could be mbar, bar</skos:definition>
     </owl:Class>
     
 
