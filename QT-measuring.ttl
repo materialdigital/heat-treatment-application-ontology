@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/pmd/ao/hto/> .
+@prefix : <https://w3id.org/pmd/hto/> .
 @prefix co: <https://w3id.org/pmd/co/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mod: <https://w3id.org/mod#> .
@@ -7,63 +7,6 @@
 @prefix qudt: <http://qudt.org/3.1.2/vocab/unit/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-obo:BFO_0000051 a owl:ObjectProperty ;
-    rdfs:label "b f o_0000051" .
-
-obo:BFO_0000055 a owl:ObjectProperty ;
-    rdfs:label "b f o_0000055" .
-
-obo:BFO_0000063 a owl:ObjectProperty ;
-    rdfs:label "b f o_0000063" .
-
-obo:IAO_0000136 a owl:ObjectProperty ;
-    rdfs:label "i a o_0000136" .
-
-obo:IAO_0000219 a owl:ObjectProperty ;
-    rdfs:label "i a o_0000219" .
-
-obo:IAO_0000417 a owl:ObjectProperty ;
-    rdfs:label "i a o_0000417" .
-
-obo:OBI_0000295 a owl:ObjectProperty ;
-    rdfs:label "o b i_0000295" .
-
-obo:OBI_0000299 a owl:ObjectProperty ;
-    rdfs:label "o b i_0000299" .
-
-obo:OBI_0001937 a owl:DatatypeProperty ;
-    rdfs:label "o b i_0001937" .
-
-obo:OBI_0001938 a owl:ObjectProperty ;
-    rdfs:label "o b i_0001938" .
-
-obo:RO_0000057 a owl:ObjectProperty ;
-    rdfs:label "r o_0000057" .
-
-obo:RO_0000058 a owl:ObjectProperty ;
-    rdfs:label "r o_0000058" .
-
-obo:RO_0000059 a owl:ObjectProperty ;
-    rdfs:label "r o_0000059" .
-
-obo:RO_0000085 a owl:ObjectProperty ;
-    rdfs:label "r o_0000085" .
-
-obo:RO_0000086 a owl:ObjectProperty ;
-    rdfs:label "r o_0000086" .
-
-obo:RO_0000087 a owl:ObjectProperty ;
-    rdfs:label "r o_0000087" .
-
-obo:RO_0000091 a owl:ObjectProperty ;
-    rdfs:label "r o_0000091" .
-
-obo:RO_0002234 a owl:ObjectProperty ;
-    rdfs:label "r o_0002234" .
-
-obo:STATO_0000102 a owl:ObjectProperty ;
-    rdfs:label "s t a t o_0000102" .
 
 dcterms:contributor a owl:AnnotationProperty .
 
@@ -130,21 +73,6 @@ dcterms:title a owl:AnnotationProperty .
         :HeatingProcess4,
         :HoldingProcess2 .
 
-co:BFO_0000051 a owl:ObjectProperty ;
-    rdfs:label "b f o_0000051" .
-
-co:PMD_0000006 a owl:DatatypeProperty ;
-    rdfs:label "p m d_0000006" .
-
-co:PMD_0000009 a owl:ObjectProperty ;
-    rdfs:label "p m d_0000009" .
-
-co:PMD_0060000 a owl:ObjectProperty ;
-    rdfs:label "p m d_0060000" .
-
-co:PMD_0060001 a owl:ObjectProperty ;
-    rdfs:label "p m d_0060001" .
-
 qudt:DEG_C a obo:IAO_0000003,
         owl:NamedIndividual .
 
@@ -193,28 +121,7 @@ qudt:MilliBAR a obo:IAO_0000003,
 :Furnace2_ID_VS a obo:IAO_0020000,
         owl:NamedIndividual ;
     co:PMD_0000006 "Nabertherm Anlassofen"^^xsd:string .
-
-:HTO_0000001 a owl:Class ;
-    rdfs:label "H T O_0000001" .
-
-:HTO_0000004 a owl:Class ;
-    rdfs:label "H T O_0000004" .
-
-:HTO_0000005 a owl:Class ;
-    rdfs:label "H T O_0000005" .
-
-:HTO_0000006 a owl:Class ;
-    rdfs:label "H T O_0000006" .
-
-:HTO_0000011 a owl:Class ;
-    rdfs:label "H T O_0000011" .
-
-:HTO_0000014 a owl:Class ;
-    rdfs:label "H T O_0000014" .
-
-:HTO_0000027 a owl:Class ;
-    rdfs:label "H T O_0000027" .
-
+    
 :HeatingRate1DevSpec1 a owl:NamedIndividual,
         co:PMD_0060006 ;
     obo:BFO_0000051 :HeatingRate1SpecDatum1 ;
@@ -278,34 +185,7 @@ qudt:MilliBAR a obo:IAO_0000003,
     obo:BFO_0000051 :CoolingRecipe2,
         :HeatingRecipe4,
         :HoldingRecipe2 .
-
-:cooling a owl:Class ;
-    rdfs:label "cooling" .
-
-:hardening a owl:Class ;
-    rdfs:label "hardening" .
-
-:holding a owl:Class ;
-    rdfs:label "holding" .
-
-:quenching a owl:Class ;
-    rdfs:label "quenching" .
-
-:tempering a owl:Class ;
-    rdfs:label "tempering" .
-
-co:PMD_0000602 a owl:Class ;
-    rdfs:label "P M D_0000602" .
-
-co:PMD_0000603 a owl:Class ;
-    rdfs:label "P M D_0000603" .
-
-co:PMD_0000896 a owl:Class ;
-    rdfs:label "P M D_0000896" .
-
-co:PMD_0000971 a owl:Class ;
-    rdfs:label "P M D_0000971" .
-
+        
 :CoolingFunction1 a owl:NamedIndividual,
         co:PMD_0000055 .
 
@@ -332,9 +212,6 @@ co:PMD_0000971 a owl:Class ;
         :Medium ;
     obo:RO_0000086 :Atmosphere_Pressure,
         :Atmosphere_Temp .
-
-:HTO_0000012 a owl:Class ;
-    rdfs:label "H T O_0000012" .
 
 :HardeningRecipe1 a owl:NamedIndividual,
         co:PMD_0060008 ;
@@ -374,9 +251,6 @@ co:PMD_0000971 a owl:Class ;
 
 :MeasurementDevRole a owl:NamedIndividual,
         co:PMD_0000603 .
-
-:Medium a owl:Class ;
-    rdfs:label "Medium" .
 
 :QuenchingFunction1 a owl:NamedIndividual,
         :HTO_0000001 .
@@ -424,37 +298,8 @@ co:PMD_0000971 a owl:Class ;
 :measured_QOil_Temp a obo:IAO_0000109,
         owl:NamedIndividual .
 
-co:PMD_0000054 a owl:Class ;
-    rdfs:label "P M D_0000054" .
-
-co:PMD_0000055 a owl:Class ;
-    rdfs:label "P M D_0000055" .
-
-co:PMD_0000655 a owl:Class ;
-    rdfs:label "P M D_0000655" .
-
-co:PMD_0000967 a owl:Class ;
-    rdfs:label "P M D_0000967" .
-
-co:PMD_0000983 a owl:Class ;
-    rdfs:label "P M D_0000983" .
-
-obo:IAO_0000003 a owl:Class,
-        owl:ObjectProperty ;
-    rdfs:label "I A O_0000003",
-        "i a o_0000003" .
-
-obo:IAO_0000109 a owl:Class ;
-    rdfs:label "I A O_0000109" .
-
-obo:OBI_0001931 a owl:Class ;
-    rdfs:label "O B I_0001931" .
-
 :AustenitizingTemperature a owl:NamedIndividual,
         :HTO_0000011 .
-
-:Chamber a owl:Class ;
-    rdfs:label "Chamber" .
 
 :CoolingProcess1 a owl:NamedIndividual,
         :soaking ;
@@ -468,9 +313,6 @@ obo:OBI_0001931 a owl:Class ;
     obo:BFO_0000055 :CoolingFunction2 ;
     obo:RO_0000057 :HotBearingWorkpiece2 ;
     obo:STATO_0000102 :CoolingRecipe2 .
-
-:HTO_0000015 a owl:Class ;
-    rdfs:label "H T O_0000015" .
 
 :HeatingFunction1 a owl:NamedIndividual,
         co:PMD_0000054 .
@@ -540,15 +382,6 @@ obo:OBI_0001931 a owl:Class ;
 :TempMeasureFct a owl:NamedIndividual,
         co:PMD_0000971 .
 
-:heating a owl:Class ;
-    rdfs:label "heating" .
-
-co:PMD_0060006 a owl:Class ;
-    rdfs:label "P M D_0060006" .
-
-co:PMD_0060009 a owl:Class ;
-    rdfs:label "P M D_0060009" .
-
 :HeatingProcess4 a owl:NamedIndividual,
         :heating ;
     obo:BFO_0000055 :HeatingFunction2 ;
@@ -566,20 +399,7 @@ co:PMD_0060009 a owl:Class ;
     obo:RO_0002234 :QuenchedBearingWorkpiece1 ;
     obo:STATO_0000102 :QuenchingRecipe1 .
 
-:soaking a owl:Class ;
-    rdfs:label "soaking" .
-
-co:PMD_0020096 a owl:Class ;
-    rdfs:label "P M D_0020096" .
-
-obo:IAO_0020000 a owl:Class ;
-    rdfs:label "I A O_0020000" .
-
 :HotBearingWorkpiece1 a owl:NamedIndividual,
         co:PMD_0020096 ;
     obo:OBI_0000295 :QuenchingProcess1 ;
     obo:RO_0000091 :AustenitizingTemperature .
-
-co:PMD_0060008 a owl:Class ;
-    rdfs:label "P M D_0060008" .
-
