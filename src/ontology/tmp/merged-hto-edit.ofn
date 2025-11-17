@@ -83,6 +83,7 @@ Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000021>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000022>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000023>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000025>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000027>))
 Declaration(Class(<https://w3id.org/pmd/hto/Hardening>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingChamber>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingTime>))
@@ -126,6 +127,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000085>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000009>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0001937>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000114>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/creator>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
@@ -399,12 +401,14 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000004> <https://w3id.org/pmd/co/PMD_0
 # Class: <https://w3id.org/pmd/hto/HTO_0000005> (temperature change rate)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000005> "temperature change rate"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/hto/HTO_0000005> "temperature change rate")
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000005> <https://w3id.org/pmd/co/PMD_0000008>)
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000006> (target temperature)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000006> "target temperature"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000006> "Process characteristic defining the temperature that is to be reached within a process that involves a defined change of temperature."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/hto/HTO_0000006> "target temperature"@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000006> <https://w3id.org/pmd/co/PMD_0000008>)
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000007> (melting temperature)
@@ -488,6 +492,13 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000023> <https://w3id.org/pmd/co/PMD_0
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000025> "carburizing"@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000025> <https://w3id.org/pmd/co/PMD_0000779>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000027> (target pressure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/pmd/hto/HTO_0000027> "A process attribute. Describes the pressure set point for a given process."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000027> "target pressure"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/hto/HTO_0000027> "target pressure"@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000027> <https://w3id.org/pmd/co/PMD_0000008>)
 
 # Class: <https://w3id.org/pmd/hto/Hardening> (hardening)
 

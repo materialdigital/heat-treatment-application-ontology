@@ -2,6 +2,7 @@ cls
 http://purl.obolibrary.org/obo/BFO_0000051
 http://purl.obolibrary.org/obo/BFO_0000197
 http://purl.obolibrary.org/obo/IAO_0000114
+http://purl.obolibrary.org/obo/IAO_0000115
 http://purl.obolibrary.org/obo/RO_0000057
 http://purl.obolibrary.org/obo/RO_0000085
 http://purl.org/dc/terms/contributor
@@ -58,6 +59,7 @@ https://w3id.org/pmd/hto/HTO_0000021
 https://w3id.org/pmd/hto/HTO_0000022
 https://w3id.org/pmd/hto/HTO_0000023
 https://w3id.org/pmd/hto/HTO_0000025
+https://w3id.org/pmd/hto/HTO_0000027
 https://w3id.org/pmd/hto/Hardening
 https://w3id.org/pmd/hto/HeatingChamber
 https://w3id.org/pmd/hto/HeatingTime
