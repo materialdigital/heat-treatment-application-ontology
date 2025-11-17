@@ -1,0 +1,585 @@
+@prefix : <https://w3id.org/pmd/ao/hto/> .
+@prefix co: <https://w3id.org/pmd/co/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/3.1.2/vocab/unit/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+obo:BFO_0000051 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000051" .
+
+obo:BFO_0000055 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000055" .
+
+obo:BFO_0000063 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000063" .
+
+obo:IAO_0000136 a owl:ObjectProperty ;
+    rdfs:label "i a o_0000136" .
+
+obo:IAO_0000219 a owl:ObjectProperty ;
+    rdfs:label "i a o_0000219" .
+
+obo:IAO_0000417 a owl:ObjectProperty ;
+    rdfs:label "i a o_0000417" .
+
+obo:OBI_0000295 a owl:ObjectProperty ;
+    rdfs:label "o b i_0000295" .
+
+obo:OBI_0000299 a owl:ObjectProperty ;
+    rdfs:label "o b i_0000299" .
+
+obo:OBI_0001937 a owl:DatatypeProperty ;
+    rdfs:label "o b i_0001937" .
+
+obo:OBI_0001938 a owl:ObjectProperty ;
+    rdfs:label "o b i_0001938" .
+
+obo:RO_0000057 a owl:ObjectProperty ;
+    rdfs:label "r o_0000057" .
+
+obo:RO_0000058 a owl:ObjectProperty ;
+    rdfs:label "r o_0000058" .
+
+obo:RO_0000059 a owl:ObjectProperty ;
+    rdfs:label "r o_0000059" .
+
+obo:RO_0000085 a owl:ObjectProperty ;
+    rdfs:label "r o_0000085" .
+
+obo:RO_0000086 a owl:ObjectProperty ;
+    rdfs:label "r o_0000086" .
+
+obo:RO_0000087 a owl:ObjectProperty ;
+    rdfs:label "r o_0000087" .
+
+obo:RO_0000091 a owl:ObjectProperty ;
+    rdfs:label "r o_0000091" .
+
+obo:RO_0002234 a owl:ObjectProperty ;
+    rdfs:label "r o_0002234" .
+
+obo:STATO_0000102 a owl:ObjectProperty ;
+    rdfs:label "s t a t o_0000102" .
+
+dcterms:contributor a owl:AnnotationProperty .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+: a owl:Ontology ;
+    dcterms:contributor <https://w3id.org/people#AContributorURI> ;
+    dcterms:created "2025-09-16"^^xsd:date ;
+    dcterms:creator <https://w3id.org/people#AuthorURI> ;
+    dcterms:description "The Heat Treatment Ontology is developed as an application ontology of the PMD core ontology (PMDco) to model heat treatment processes with a focus on metals."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:title "Heat Treatment Ontology"@en ;
+    owl:imports obo:,
+        co: ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+:Furnace1_ID a obo:IAO_0020000,
+        owl:NamedIndividual ;
+    obo:IAO_0000219 :Furnace1 ;
+    obo:OBI_0001938 :Furnace1_ID_VS .
+
+:Furnace2_ID a obo:IAO_0020000,
+        owl:NamedIndividual ;
+    obo:IAO_0000219 :Furnace2 ;
+    obo:OBI_0001938 :Furnace2_ID_VS .
+
+:HardeningProcess1 a owl:NamedIndividual,
+        :hardening ;
+    obo:BFO_0000051 :CoolingProcess1,
+        :HeatingProcess1,
+        :HeatingProcess2,
+        :QuenchingProcess1,
+        :SoakingProcess1,
+        :SoakingProcess2,
+        :SoakingProcess3 ;
+    obo:BFO_0000055 :MeasurementDevRole,
+        :TempMeasureFct ;
+    obo:OBI_0000299 :measured_Atmo_Pressure,
+        :measured_Atmo_Temp,
+        :measured_QOil_Temp ;
+    obo:RO_0000059 :HardeningRecipe1 .
+
+:PT500_ID a obo:IAO_0020000,
+        owl:NamedIndividual ;
+    obo:IAO_0000219 :PT500 ;
+    obo:OBI_0001938 :PT500_VS .
+
+:QT_Recipe1 a owl:NamedIndividual,
+        co:PMD_0060008 ;
+    co:BFO_0000051 :HardeningRecipe1,
+        :TemperingRecipe1 .
+
+:TemperingProcess1 a owl:NamedIndividual,
+        :tempering ;
+    obo:BFO_0000051 :CoolingProcess2,
+        :HeatingProcess4,
+        :HoldingProcess2 .
+
+co:BFO_0000051 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000051" .
+
+co:PMD_0000006 a owl:DatatypeProperty ;
+    rdfs:label "p m d_0000006" .
+
+co:PMD_0000009 a owl:ObjectProperty ;
+    rdfs:label "p m d_0000009" .
+
+co:PMD_0060000 a owl:ObjectProperty ;
+    rdfs:label "p m d_0060000" .
+
+co:PMD_0060001 a owl:ObjectProperty ;
+    rdfs:label "p m d_0060001" .
+
+qudt:DEG_C a obo:IAO_0000003,
+        owl:NamedIndividual .
+
+qudt:K-PER-MIN a obo:IAO_0000003,
+        owl:NamedIndividual .
+
+qudt:MilliBAR a obo:IAO_0000003,
+        owl:NamedIndividual .
+
+:Atmosphere_Pressure a owl:NamedIndividual,
+        co:PMD_0000896 ;
+    obo:IAO_0000417 :measured_Atmo_Pressure .
+
+:Atmosphere_Temp a owl:NamedIndividual,
+        co:PMD_0000967 ;
+    obo:IAO_0000417 :measured_Atmo_Temp .
+
+:BearingWorkpiece1 a owl:NamedIndividual,
+        co:PMD_0020096 ;
+    obo:OBI_0000295 :HeatingProcess1 ;
+    obo:RO_0000091 :AustenitizingTemperature .
+
+:Furnace1_HeatingChamber a owl:NamedIndividual,
+        :Chamber ;
+    obo:BFO_0000051 :HK_Atmosphere .
+
+:Furnace1_ID_VS a obo:IAO_0020000,
+        owl:NamedIndividual ;
+    co:PMD_0000006 "kleine Ipsen"^^xsd:string .
+
+:Furnace1_QuenchingChamber a owl:NamedIndividual,
+        :Chamber ;
+    obo:BFO_0000051 :QuenchingOil .
+
+:Furnace2 a owl:NamedIndividual,
+        co:PMD_0000655 ;
+    obo:BFO_0000051 :Furnace2_HeatingChamber ;
+    obo:RO_0000085 :CoolingFunction2,
+        :HeatingFunction2,
+        :HoldingFunction2 .
+
+:Furnace2_HeatingChamber a owl:NamedIndividual,
+        :Chamber ;
+    obo:BFO_0000051 :HK_Atmosphere .
+
+:Furnace2_ID_VS a obo:IAO_0020000,
+        owl:NamedIndividual ;
+    co:PMD_0000006 "Nabertherm Anlassofen"^^xsd:string .
+
+:HTO_0000001 a owl:Class ;
+    rdfs:label "H T O_0000001" .
+
+:HTO_0000004 a owl:Class ;
+    rdfs:label "H T O_0000004" .
+
+:HTO_0000005 a owl:Class ;
+    rdfs:label "H T O_0000005" .
+
+:HTO_0000006 a owl:Class ;
+    rdfs:label "H T O_0000006" .
+
+:HTO_0000011 a owl:Class ;
+    rdfs:label "H T O_0000011" .
+
+:HTO_0000014 a owl:Class ;
+    rdfs:label "H T O_0000014" .
+
+:HTO_0000027 a owl:Class ;
+    rdfs:label "H T O_0000027" .
+
+:HeatingRate1DevSpec1 a owl:NamedIndividual,
+        co:PMD_0060006 ;
+    obo:BFO_0000051 :HeatingRate1SpecDatum1 ;
+    obo:IAO_0000136 :HeatingRate1 .
+
+:HeatingRate1SpecDatum1 a owl:NamedIndividual,
+        co:PMD_0060009 ;
+    co:PMD_0060000 :SVS_15_K-PER-MIN .
+
+:PT500 a owl:NamedIndividual,
+        co:PMD_0000602 ;
+    obo:BFO_0000051 :TC_HeatingChamber,
+        :TC_QuenchingChamber ;
+    obo:RO_0000087 :MeasurementDevRole .
+
+:PT500_VS a obo:IAO_0020000,
+        owl:NamedIndividual ;
+    co:PMD_0000006 "ProTherm500"^^xsd:string .
+
+:QOil_Temp a owl:NamedIndividual,
+        co:PMD_0000967 ;
+    obo:IAO_0000417 :measured_QOil_Temp .
+
+:QuenchedBearingWorkpiece1 a owl:NamedIndividual,
+        co:PMD_0020096 ;
+    obo:OBI_0000295 :HeatingProcess4 .
+
+:QuenchingOil a owl:NamedIndividual,
+        :Medium ;
+    obo:RO_0000085 :QuenchingFunction1 ;
+    obo:RO_0000086 :QOil_Temp .
+
+:TC_HeatingChamber a owl:NamedIndividual,
+        co:PMD_0000983 ;
+    obo:RO_0000085 :TempMeasureFct .
+
+:TC_QuenchingChamber a owl:NamedIndividual,
+        co:PMD_0000983 ;
+    obo:RO_0000085 :TempMeasureFct .
+
+:TargetPressure1DevSpec a owl:NamedIndividual,
+        co:PMD_0060006 ;
+    obo:BFO_0000051 :TargetPressure1SpecDatum ;
+    obo:IAO_0000136 :TargetPressure .
+
+:TargetPressure1SpecDatum a owl:NamedIndividual,
+        co:PMD_0060009 ;
+    co:PMD_0060000 :SVS_0_MilliBAR .
+
+:TargetTemp1DevSpec a owl:NamedIndividual,
+        co:PMD_0060006 ;
+    obo:BFO_0000051 :TargetTemp1SpecDatum ;
+    obo:IAO_0000136 :TargetTemp1 .
+
+:TargetTemp1SpecDatum a owl:NamedIndividual,
+        co:PMD_0060009 ;
+    co:PMD_0060000 :SVS_850_DEG_C .
+
+:TemperingRecipe1 a owl:NamedIndividual,
+        co:PMD_0060008 ;
+    obo:BFO_0000051 :CoolingRecipe2,
+        :HeatingRecipe4,
+        :HoldingRecipe2 .
+
+:cooling a owl:Class ;
+    rdfs:label "cooling" .
+
+:hardening a owl:Class ;
+    rdfs:label "hardening" .
+
+:holding a owl:Class ;
+    rdfs:label "holding" .
+
+:quenching a owl:Class ;
+    rdfs:label "quenching" .
+
+:tempering a owl:Class ;
+    rdfs:label "tempering" .
+
+co:PMD_0000602 a owl:Class ;
+    rdfs:label "P M D_0000602" .
+
+co:PMD_0000603 a owl:Class ;
+    rdfs:label "P M D_0000603" .
+
+co:PMD_0000896 a owl:Class ;
+    rdfs:label "P M D_0000896" .
+
+co:PMD_0000971 a owl:Class ;
+    rdfs:label "P M D_0000971" .
+
+:CoolingFunction1 a owl:NamedIndividual,
+        co:PMD_0000055 .
+
+:CoolingFunction2 a owl:NamedIndividual,
+        co:PMD_0000055 .
+
+:CoolingRecipe1 a owl:NamedIndividual,
+        co:PMD_0060008 ;
+    obo:RO_0000058 :CoolingProcess1 .
+
+:CoolingRecipe2 a owl:NamedIndividual,
+        co:PMD_0060008 ;
+    obo:RO_0000058 :CoolingProcess2 .
+
+:Furnace1 a owl:NamedIndividual,
+        co:PMD_0000655 ;
+    obo:BFO_0000051 :Furnace1_HeatingChamber,
+        :Furnace1_QuenchingChamber ;
+    obo:RO_0000085 :CoolingFunction1,
+        :HeatingFunction1,
+        :HoldingFunction1 .
+
+:HK_Atmosphere a owl:NamedIndividual,
+        :Medium ;
+    obo:RO_0000086 :Atmosphere_Pressure,
+        :Atmosphere_Temp .
+
+:HTO_0000012 a owl:Class ;
+    rdfs:label "H T O_0000012" .
+
+:HardeningRecipe1 a owl:NamedIndividual,
+        co:PMD_0060008 ;
+    obo:BFO_0000051 :CoolingRecipe1,
+        :HeatingRecipe1,
+        :HeatingRecipe2,
+        :QuenchingRecipe1,
+        :SoakingRecipe1,
+        :SoakingRecipe2,
+        :SoakingRecipe3 ;
+    obo:IAO_0000136 :BearingWorkpiece1 .
+
+:HeatingFunction2 a owl:NamedIndividual,
+        co:PMD_0000054 .
+
+:HeatingRecipe1 a owl:NamedIndividual,
+        :HTO_0000004 ;
+    obo:BFO_0000051 :HeatingRate1DevSpec1,
+        :TargetPressure1DevSpec,
+        :TargetTemp1DevSpec ;
+    obo:RO_0000058 :HeatingProcess1 .
+
+:HeatingRecipe2 a owl:NamedIndividual,
+        :HTO_0000014 ;
+    obo:RO_0000058 :HeatingProcess2 .
+
+:HeatingRecipe4 a owl:NamedIndividual,
+        co:PMD_0060008 ;
+    obo:RO_0000058 :HeatingProcess4 .
+
+:HoldingFunction2 a owl:NamedIndividual,
+        :HTO_0000012 .
+
+:HoldingRecipe2 a owl:NamedIndividual,
+        co:PMD_0060008 ;
+    obo:RO_0000058 :HoldingProcess2 .
+
+:MeasurementDevRole a owl:NamedIndividual,
+        co:PMD_0000603 .
+
+:Medium a owl:Class ;
+    rdfs:label "Medium" .
+
+:QuenchingFunction1 a owl:NamedIndividual,
+        :HTO_0000001 .
+
+:QuenchingRecipe1 a owl:NamedIndividual,
+        co:PMD_0060008 ;
+    obo:RO_0000058 :QuenchingProcess1 .
+
+:SVS_0_MilliBAR a obo:OBI_0001931,
+        owl:NamedIndividual ;
+    obo:IAO_0000003 qudt:MilliBAR ;
+    obo:OBI_0001937 "0"^^xsd:int ;
+    co:PMD_0060001 :TargetPressure .
+
+:SVS_15_K-PER-MIN a obo:OBI_0001931,
+        owl:NamedIndividual ;
+    obo:IAO_0000003 qudt:K-PER-MIN ;
+    obo:OBI_0001937 "15"^^xsd:int ;
+    co:PMD_0060001 :HeatingRate1 .
+
+:SVS_850_DEG_C a obo:OBI_0001931,
+        owl:NamedIndividual ;
+    obo:IAO_0000003 qudt:DEG_C ;
+    obo:OBI_0001937 "850"^^xsd:int ;
+    co:PMD_0060001 :TargetTemp1 .
+
+:SoakingRecipe1 a owl:NamedIndividual,
+        :HTO_0000015 ;
+    obo:RO_0000058 :SoakingProcess1 .
+
+:SoakingRecipe2 a owl:NamedIndividual,
+        :HTO_0000015 ;
+    obo:RO_0000058 :SoakingProcess2 .
+
+:SoakingRecipe3 a owl:NamedIndividual,
+        :HTO_0000015 ;
+    obo:RO_0000058 :SoakingProcess3 .
+
+:measured_Atmo_Pressure a obo:IAO_0000109,
+        owl:NamedIndividual .
+
+:measured_Atmo_Temp a obo:IAO_0000109,
+        owl:NamedIndividual .
+
+:measured_QOil_Temp a obo:IAO_0000109,
+        owl:NamedIndividual .
+
+co:PMD_0000054 a owl:Class ;
+    rdfs:label "P M D_0000054" .
+
+co:PMD_0000055 a owl:Class ;
+    rdfs:label "P M D_0000055" .
+
+co:PMD_0000655 a owl:Class ;
+    rdfs:label "P M D_0000655" .
+
+co:PMD_0000967 a owl:Class ;
+    rdfs:label "P M D_0000967" .
+
+co:PMD_0000983 a owl:Class ;
+    rdfs:label "P M D_0000983" .
+
+obo:IAO_0000003 a owl:Class,
+        owl:ObjectProperty ;
+    rdfs:label "I A O_0000003",
+        "i a o_0000003" .
+
+obo:IAO_0000109 a owl:Class ;
+    rdfs:label "I A O_0000109" .
+
+obo:OBI_0001931 a owl:Class ;
+    rdfs:label "O B I_0001931" .
+
+:AustenitizingTemperature a owl:NamedIndividual,
+        :HTO_0000011 .
+
+:Chamber a owl:Class ;
+    rdfs:label "Chamber" .
+
+:CoolingProcess1 a owl:NamedIndividual,
+        :soaking ;
+    obo:BFO_0000055 :CoolingFunction1 ;
+    obo:BFO_0000063 :SoakingProcess3 ;
+    obo:RO_0000057 :HotBearingWorkpiece1 ;
+    obo:STATO_0000102 :CoolingRecipe1 .
+
+:CoolingProcess2 a owl:NamedIndividual,
+        :cooling ;
+    obo:BFO_0000055 :CoolingFunction2 ;
+    obo:RO_0000057 :HotBearingWorkpiece2 ;
+    obo:STATO_0000102 :CoolingRecipe2 .
+
+:HTO_0000015 a owl:Class ;
+    rdfs:label "H T O_0000015" .
+
+:HeatingFunction1 a owl:NamedIndividual,
+        co:PMD_0000054 .
+
+:HeatingProcess1 a owl:NamedIndividual,
+        :heating ;
+    obo:BFO_0000055 :HeatingFunction1 ;
+    obo:BFO_0000063 :SoakingProcess1 ;
+    obo:RO_0000057 :Furnace1,
+        :HotBearingWorkpiece1 ;
+    obo:STATO_0000102 :HeatingRecipe1 ;
+    co:PMD_0000009 :HeatingRate1,
+        :TargetPressure,
+        :TargetTemp1 .
+
+:HeatingProcess2 a owl:NamedIndividual,
+        :heating ;
+    obo:BFO_0000055 :HeatingFunction1 ;
+    obo:BFO_0000063 :SoakingProcess2 ;
+    obo:RO_0000057 :HotBearingWorkpiece1 ;
+    obo:STATO_0000102 :HeatingRecipe2 .
+
+:HeatingRate1 a owl:NamedIndividual,
+        :HTO_0000005 ;
+    co:PMD_0060000 :SVS_15_K-PER-MIN .
+
+:HoldingProcess2 a owl:NamedIndividual,
+        :holding ;
+    obo:BFO_0000055 :HoldingFunction2 ;
+    obo:BFO_0000063 :CoolingProcess2 ;
+    obo:RO_0000057 :HotBearingWorkpiece2 ;
+    obo:STATO_0000102 :HoldingRecipe2 .
+
+:HotBearingWorkpiece2 a owl:NamedIndividual,
+        co:PMD_0020096 .
+
+:SoakingProcess1 a owl:NamedIndividual,
+        :soaking ;
+    obo:BFO_0000055 :AustenitizingTemperature,
+        :HoldingFunction1 ;
+    obo:BFO_0000063 :HeatingProcess2 ;
+    obo:RO_0000057 :HotBearingWorkpiece1 ;
+    obo:STATO_0000102 :SoakingRecipe1 .
+
+:SoakingProcess2 a owl:NamedIndividual,
+        :soaking ;
+    obo:BFO_0000055 :HoldingFunction1 ;
+    obo:BFO_0000063 :CoolingProcess1 ;
+    obo:RO_0000057 :HotBearingWorkpiece1 ;
+    obo:STATO_0000102 :SoakingRecipe2 .
+
+:SoakingProcess3 a owl:NamedIndividual,
+        :soaking ;
+    obo:BFO_0000055 :HoldingFunction1 ;
+    obo:BFO_0000063 :QuenchingProcess1 ;
+    obo:RO_0000057 :HotBearingWorkpiece1 ;
+    obo:STATO_0000102 :SoakingRecipe3 .
+
+:TargetPressure a owl:NamedIndividual,
+        :HTO_0000027 ;
+    co:PMD_0060000 :SVS_0_MilliBAR .
+
+:TargetTemp1 a owl:NamedIndividual,
+        :HTO_0000006 ;
+    co:PMD_0060000 :SVS_850_DEG_C .
+
+:TempMeasureFct a owl:NamedIndividual,
+        co:PMD_0000971 .
+
+:heating a owl:Class ;
+    rdfs:label "heating" .
+
+co:PMD_0060006 a owl:Class ;
+    rdfs:label "P M D_0060006" .
+
+co:PMD_0060009 a owl:Class ;
+    rdfs:label "P M D_0060009" .
+
+:HeatingProcess4 a owl:NamedIndividual,
+        :heating ;
+    obo:BFO_0000055 :HeatingFunction2 ;
+    obo:BFO_0000063 :HoldingProcess2 ;
+    obo:RO_0000057 :HotBearingWorkpiece2 ;
+    obo:STATO_0000102 :HeatingRecipe4 .
+
+:HoldingFunction1 a owl:NamedIndividual,
+        :HTO_0000012 .
+
+:QuenchingProcess1 a owl:NamedIndividual,
+        :quenching ;
+    obo:BFO_0000055 :QuenchingFunction1 ;
+    obo:BFO_0000063 :HeatingProcess4 ;
+    obo:RO_0002234 :QuenchedBearingWorkpiece1 ;
+    obo:STATO_0000102 :QuenchingRecipe1 .
+
+:soaking a owl:Class ;
+    rdfs:label "soaking" .
+
+co:PMD_0020096 a owl:Class ;
+    rdfs:label "P M D_0020096" .
+
+obo:IAO_0020000 a owl:Class ;
+    rdfs:label "I A O_0020000" .
+
+:HotBearingWorkpiece1 a owl:NamedIndividual,
+        co:PMD_0020096 ;
+    obo:OBI_0000295 :QuenchingProcess1 ;
+    obo:RO_0000091 :AustenitizingTemperature .
+
+co:PMD_0060008 a owl:Class ;
+    rdfs:label "P M D_0060008" .
+
