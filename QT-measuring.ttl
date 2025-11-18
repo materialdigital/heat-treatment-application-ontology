@@ -28,7 +28,8 @@ dcterms:title a owl:AnnotationProperty .
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:title "Heat Treatment Ontology"@en ;
     owl:imports obo:,
-        co: ;
+        co: ,
+        :;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
 :Furnace1_ID a obo:IAO_0020000,
