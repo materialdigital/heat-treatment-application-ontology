@@ -470,8 +470,11 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 
 ###  https://w3id.org/pmd/hto/HTO_0000013
 <https://w3id.org/pmd/hto/HTO_0000013> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ,
-                                                       [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0060008>
+                                       rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0060008>
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty obo:BFO_0000051 ;
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000004>
+                                                                              ]
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty obo:BFO_0000051 ;
                                                                                 owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000014>
@@ -482,32 +485,10 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                                                               ]
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                owl:onClass <https://w3id.org/pmd/hto/HTO_0000004>
-                                                                              ]
-                                                                              [ rdf:type owl:Restriction ;
-                                                                                owl:onProperty obo:BFO_0000051 ;
-                                                                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                owl:onClass <https://w3id.org/pmd/hto/HTO_0000016>
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000016>
                                                                               ]
                                                                             ) ;
                                                          rdf:type owl:Class
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:BFO_0000051 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000004>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:BFO_0000051 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000014>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:BFO_0000051 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000015>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:BFO_0000051 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000016>
                                                        ] ;
                                        rdfs:comment "add target temperature in axioms, combine it with austenitisation temperature" ;
                                        rdfs:label "hardening recipe"@en .
