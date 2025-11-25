@@ -380,18 +380,11 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ,
                                                        [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000003>
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000002>
                                                                               ]
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                                                                owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/pmd/hto/HTO_0000002>
-                                                                                                                          [ rdf:type owl:Restriction ;
-                                                                                                                            owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                                                                                            owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000006>
-                                                                                                                          ]
-                                                                                                                        ) ;
-                                                                                                     rdf:type owl:Class
-                                                                                                   ]
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000003>
                                                                               ]
                                                                             ) ;
                                                          rdf:type owl:Class
