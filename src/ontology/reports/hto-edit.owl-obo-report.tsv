@@ -106,10 +106,15 @@ WARN	missing_definition	fluid	IAO:0000115
 WARN	missing_definition	furnace atmosphere	IAO:0000115	
 WARN	missing_definition	heat treatment elementals	IAO:0000115	
 WARN	missing_definition	quenching function	IAO:0000115	
+WARN	missing_definition	target temperature specification	IAO:0000115	
+WARN	missing_definition	heating rate specification	IAO:0000115	
 WARN	missing_definition	heating recipe	IAO:0000115	
 WARN	missing_definition	temperature change rate	IAO:0000115	
 WARN	missing_definition	target temperature	IAO:0000115	
 WARN	missing_definition	melting temperature	IAO:0000115	
+WARN	missing_definition	duration specification	IAO:0000115	
+WARN	missing_definition	duration	IAO:0000115	
+WARN	missing_definition	temperature unit	IAO:0000115	
 WARN	missing_definition	austenitizing temperature	IAO:0000115	
 WARN	missing_definition	holding function	IAO:0000115	
 WARN	missing_definition	hardening recipe	IAO:0000115	
@@ -124,6 +129,10 @@ WARN	missing_definition	QT recipe	IAO:0000115
 WARN	missing_definition	quenching and tempering	IAO:0000115	
 WARN	missing_definition	tempering recipe	IAO:0000115	
 WARN	missing_definition	carburizing	IAO:0000115	
+WARN	missing_definition	mass flow controller	IAO:0000115	
+WARN	missing_definition	flow measuring function	IAO:0000115	
+WARN	missing_definition	heating rate	IAO:0000115	
+WARN	missing_definition	cooling rate	IAO:0000115	
 WARN	missing_definition	hardening	IAO:0000115	
 WARN	missing_definition	Ofenkammer mit einer Heizung.	IAO:0000115	
 WARN	missing_definition	Heating Time	IAO:0000115	

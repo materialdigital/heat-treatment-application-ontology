@@ -11,7 +11,7 @@
 @base <https://w3id.org/pmd/hto/hto-base.ttl> .
 
 <https://w3id.org/pmd/hto/hto-base.ttl> rdf:type owl:Ontology ;
-                                         owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-11-19/hto-base.ttl> ;
+                                         owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-11-25/hto-base.ttl> ;
                                          dc:type obo:IAO_8000001 ;
                                          terms:contributor "Jannis Grundmann" ;
                                          terms:creator <https://orcid.org/0000-0002-9014-2920> ,
@@ -20,7 +20,7 @@
                                          terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                          terms:license <https://creativecommons.org/licenses/unspecified> ;
                                          terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                         owl:versionInfo "2025-11-19" .
+                                         owl:versionInfo "2025-11-25" .
 
 #################################################################
 #    Annotation properties
@@ -82,8 +82,32 @@ obo:BFO_0000051 rdf:type owl:ObjectProperty .
 obo:BFO_0000197 rdf:type owl:ObjectProperty .
 
 
+###  http://purl.obolibrary.org/obo/IAO_0000039
+obo:IAO_0000039 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000136
+obo:IAO_0000136 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000085
+obo:RO_0000085 rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/pmd/co/PMD_0000009
 <https://w3id.org/pmd/co/PMD_0000009> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/pmd/co/PMD_0020127
+<https://w3id.org/pmd/co/PMD_0020127> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/OBI_0002135
+obo:OBI_0002135 rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -112,6 +136,10 @@ obo:BFO_0000145 rdf:type owl:Class .
 
 ###  http://purl.obolibrary.org/obo/BFO_0000202
 obo:BFO_0000202 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000003
+obo:IAO_0000003 rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000005
@@ -154,8 +182,16 @@ obo:IAO_0000109 rdf:type owl:Class .
 <https://w3id.org/pmd/co/PMD_0000833> rdf:type owl:Class .
 
 
+###  https://w3id.org/pmd/co/PMD_0000847
+<https://w3id.org/pmd/co/PMD_0000847> rdf:type owl:Class .
+
+
 ###  https://w3id.org/pmd/co/PMD_0000896
 <https://w3id.org/pmd/co/PMD_0000896> rdf:type owl:Class .
+
+
+###  https://w3id.org/pmd/co/PMD_0000967
+<https://w3id.org/pmd/co/PMD_0000967> rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/co/PMD_0060006
@@ -424,9 +460,48 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                        skos:example "The function of a oil bath to quench steel after austenitisation so the material transforms into martensite."@en .
 
 
+###  https://w3id.org/pmd/hto/HTO_0000002
+<https://w3id.org/pmd/hto/HTO_0000002> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:IAO_0000005 ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000039 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000010>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000136 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000967>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:OBI_0002135 ;
+                                                         owl:someValuesFrom xsd:float
+                                                       ] ;
+                                       rdfs:label "target temperature specification"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000003
+<https://w3id.org/pmd/hto/HTO_0000003> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060006> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000136 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000005>
+                                                       ] ;
+                                       rdfs:label "heating rate specification"@en .
+
+
 ###  https://w3id.org/pmd/hto/HTO_0000004
 <https://w3id.org/pmd/hto/HTO_0000004> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ,
+                                                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty obo:BFO_0000051 ;
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000002>
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty obo:BFO_0000051 ;
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000003>
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ] ;
                                        rdfs:label "heating recipe"@en .
 
 
@@ -434,12 +509,17 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 <https://w3id.org/pmd/hto/HTO_0000005> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
                                        rdfs:label "temperature change rate"@en ;
+                                       skos:definition "A process attribute defining the change of temperature per time unit within a process."@en ;
                                        skos:prefLabel "temperature change rate" .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000006
 <https://w3id.org/pmd/hto/HTO_0000006> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0020127> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000967>
+                                                       ] ;
                                        rdfs:label "target temperature"@en ;
                                        skos:definition "Process characteristic defining the temperature that is to be reached within a process that involves a defined change of temperature."@en ;
                                        skos:prefLabel "target temperature"@en .
@@ -450,6 +530,28 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                        rdfs:subClassOf obo:BFO_0000016 ;
                                        rdfs:label "melting temperature"@en ;
                                        skos:definition "disposition of a material at which a phase transformation between liquid and solid state takes place" .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000008
+<https://w3id.org/pmd/hto/HTO_0000008> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060006> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000136 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000009>
+                                                       ] ;
+                                       rdfs:label "duration specification"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000009
+<https://w3id.org/pmd/hto/HTO_0000009> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:BFO_0000202 ;
+                                       rdfs:label "duration"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000010
+<https://w3id.org/pmd/hto/HTO_0000010> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:IAO_0000003 ;
+                                       rdfs:label "temperature unit"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000011
@@ -496,13 +598,35 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 
 ###  https://w3id.org/pmd/hto/HTO_0000014
 <https://w3id.org/pmd/hto/HTO_0000014> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ,
+                                                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty obo:BFO_0000051 ;
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000002>
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty obo:BFO_0000051 ;
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000008>
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ] ;
                                        rdfs:label "holding recipe"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000015
 <https://w3id.org/pmd/hto/HTO_0000015> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ,
+                                                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty obo:BFO_0000051 ;
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000002>
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty obo:BFO_0000051 ;
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000008>
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ] ;
                                        rdfs:label "soaking recipe"@en .
 
 
@@ -586,10 +710,44 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 
 ###  https://w3id.org/pmd/hto/HTO_0000027
 <https://w3id.org/pmd/hto/HTO_0000027> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0020127> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000896>
+                                                       ] ;
                                        obo:IAO_0000115 "A process attribute. Describes the pressure set point for a given process."@en ;
                                        rdfs:label "target pressure"@en ;
                                        skos:prefLabel "target pressure"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000028
+<https://w3id.org/pmd/hto/HTO_0000028> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:RO_0000085 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000029>
+                                                       ] ;
+                                       rdfs:label "mass flow controller"@en ;
+                                       skos:definition "Device that has the function to control the flow of fluid media to a defined mass flow. It consists of a mass flow meter and a proportional valve."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000029
+<https://w3id.org/pmd/hto/HTO_0000029> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000847> ;
+                                       rdfs:label "flow measuring function"@en ;
+                                       skos:definition "A subfunction of measuring performed to determine the flow of fluids." .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000030
+<https://w3id.org/pmd/hto/HTO_0000030> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000005> ;
+                                       rdfs:label "heating rate"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000031
+<https://w3id.org/pmd/hto/HTO_0000031> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000005> ;
+                                       rdfs:label "cooling rate"@en .
 
 
 ###  https://w3id.org/pmd/hto/Hardening

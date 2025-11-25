@@ -44,10 +44,15 @@ Declaration(Class(<https://w3id.org/pmd/hto/FurnaceAtmosphere>))
 Declaration(Class(<https://w3id.org/pmd/hto/FurnaceCooling>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000000>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000001>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000002>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000003>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000004>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000005>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000006>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000007>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000008>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000009>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000010>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000011>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000012>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000013>))
@@ -63,6 +68,10 @@ Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000022>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000023>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000025>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000027>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000028>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000029>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000030>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000031>))
 Declaration(Class(<https://w3id.org/pmd/hto/Hardening>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingChamber>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingTime>))
@@ -99,6 +108,7 @@ Declaration(Class(<https://w3id.org/pmd/hto/heating>))
 Declaration(Class(<https://w3id.org/pmd/hto/holding>))
 Declaration(Class(<https://w3id.org/pmd/hto/quenching>))
 Declaration(Class(<https://w3id.org/pmd/hto/soaking>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000197>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0001937>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000114>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
@@ -364,14 +374,30 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/hto/HTO_0000001> "The function of a oil bath to quench steel after austenitisation so the material transforms into martensite."@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000001> <https://w3id.org/pmd/co/PMD_0000055>)
 
+# Class: <https://w3id.org/pmd/hto/HTO_0000002> (target temperature specification)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000002> "target temperature specification"@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000002> <http://purl.obolibrary.org/obo/IAO_0000005>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000039> <https://w3id.org/pmd/hto/HTO_0000010>))
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/co/PMD_0000967>))
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000002> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0002135> xsd:float))
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000003> (heating rate specification)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000003> "heating rate specification"@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000003> <https://w3id.org/pmd/co/PMD_0060006>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/hto/HTO_0000005>))
+
 # Class: <https://w3id.org/pmd/hto/HTO_0000004> (heating recipe)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000004> "heating recipe"@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000004> <https://w3id.org/pmd/co/PMD_0060008>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000004> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/HTO_0000002>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/HTO_0000003>)))
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000005> (temperature change rate)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000005> "temperature change rate"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000005> "A process attribute defining the change of temperature per time unit within a process."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/hto/HTO_0000005> "temperature change rate")
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000005> <https://w3id.org/pmd/co/PMD_0000008>)
 
@@ -381,12 +407,29 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000006> "target te
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000006> "Process characteristic defining the temperature that is to be reached within a process that involves a defined change of temperature."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/hto/HTO_0000006> "target temperature"@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000006> <https://w3id.org/pmd/co/PMD_0000008>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000006> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020127> <https://w3id.org/pmd/co/PMD_0000967>))
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000007> (melting temperature)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000007> "melting temperature"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000007> "disposition of a material at which a phase transformation between liquid and solid state takes place")
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000007> <http://purl.obolibrary.org/obo/BFO_0000016>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000008> (duration specification)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000008> "duration specification"@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000008> <https://w3id.org/pmd/co/PMD_0060006>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000008> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/hto/HTO_0000009>))
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000009> (duration)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000009> "duration"@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000009> <http://purl.obolibrary.org/obo/BFO_0000202>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000010> (temperature unit)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000010> "temperature unit"@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000010> <http://purl.obolibrary.org/obo/IAO_0000003>)
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000011> (austenitizing temperature)
 
@@ -412,11 +455,13 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000013> ObjectIntersectionOf(<https://
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000014> "holding recipe"@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000014> <https://w3id.org/pmd/co/PMD_0060008>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000014> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/HTO_0000002>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/HTO_0000008>)))
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000015> (soaking recipe)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000015> "soaking recipe"@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000015> <https://w3id.org/pmd/co/PMD_0060008>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000015> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/HTO_0000002>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/HTO_0000008>)))
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000016> (quenching recipe)
 
@@ -470,6 +515,30 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.o
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000027> "target pressure"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/hto/HTO_0000027> "target pressure"@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000027> <https://w3id.org/pmd/co/PMD_0000008>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000027> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020127> <https://w3id.org/pmd/co/PMD_0000896>))
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000028> (mass flow controller)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000028> "mass flow controller"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000028> "Device that has the function to control the flow of fluid media to a defined mass flow. It consists of a mass flow meter and a proportional valve."@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000028> <https://w3id.org/pmd/co/PMD_0000602>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000028> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/hto/HTO_0000029>))
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000029> (flow measuring function)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000029> "flow measuring function"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000029> "A subfunction of measuring performed to determine the flow of fluids.")
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000029> <https://w3id.org/pmd/co/PMD_0000847>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000030> (heating rate)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000030> "heating rate"@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000030> <https://w3id.org/pmd/hto/HTO_0000005>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000031> (cooling rate)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000031> "cooling rate"@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000031> <https://w3id.org/pmd/hto/HTO_0000005>)
 
 # Class: <https://w3id.org/pmd/hto/Hardening> (hardening)
 

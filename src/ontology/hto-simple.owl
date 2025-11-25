@@ -10,7 +10,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto/hto-simple.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-11-19/hto-simple.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-11-25/hto-simple.owl"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
@@ -18,7 +18,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2025-11-19</owl:versionInfo>
+        <owl:versionInfo>2025-11-25</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -178,6 +178,7 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <obo:IAO_0000112 xml:lang="en">my body has part my brain (continuant parthood, two material entities)</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)</obo:IAO_0000112>
@@ -195,10 +196,32 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000197 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000197">
-        <rdfs:label xml:lang="en">inheres in</rdfs:label>
-        <skos:definition xml:lang="en">b inheres in c =Def b is a specifically dependent continuant &amp; c is an independent continuant that is not a spatial region &amp; b specifically depends on c</skos:definition>
-        <skos:example xml:lang="en">A shape inheres in a shaped object; a mass inheres in a material entity</skos:example>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000197"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000039 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000039">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="en">has measurement unit label</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136">
+        <obo:IAO_0000112 xml:lang="en">This document is about information artifacts and their representations</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A (currently) primitive relation that relates an information artifact to an entity.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of &quot;mentions&quot; relation. Weaken the is_about relationship to be primitive. 
+
+We will try to build it back up by elaborating the various subproperties that are more precisely defined.
+
+Some currently missing phenomena that should be considered &quot;about&quot; are predications - &quot;The only person who knows the answer is sitting beside me&quot; , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic.</obo:IAO_0000116>
+        <obo:IAO_0000119 xml:lang="en">Smith, Ceusters, Ruttenberg, 2000 years of philosophy</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">is about</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -238,6 +261,22 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <rdfs:seeAlso xml:lang="en">has process attribute from OEO https://openenergyplatform.org/ontology/oeo/OEO_00000500</rdfs:seeAlso>
         <skos:definition xml:lang="en">A relation between a process and a process attribute that depends on it.</skos:definition>
         <skos:example xml:lang="en">Tensile testing process has process attribute tensile rate</skos:example>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0020127 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0020127">
+        <rdfs:comment xml:lang="en">Despite has characteristic from RO does not have any domain constraints, it is still not possible to directly connect an instance of a process with an instance of a SDC. 
+
+First, SDC is dependent on a IC. As RO does not have &quot;bearer of&quot; object property, the &quot;has characteristic&quot; implies that the domain should be an IC. 
+
+Second, characteristic of is a functional property. Thus, two triples SDC_1 characteristc of IC_1 and SDC_2  characteristc of Process_1 (where IC_1 participates in Process_1), cannot exist simultaneously. 
+An example of such case can be &quot;Temperature of during the annealing process was 1000°C&quot;. Temperature is an SDC of some participant of the annealing, however it is not clear whether it is an SDC of an oven or of a sample in the oven. If we assert triple Annealing--&gt; has characteristic --&gt; Temperature 1000°C, then the correct triple connecting temperature SDC with either oven or specimen cannot exist.</rdfs:comment>
+        <rdfs:label xml:lang="en">refers to</rdfs:label>
+        <skos:definition xml:lang="en">a relation between a process attribute and an SDC of some participant in a process</skos:definition>
+        <skos:example xml:lang="en">a relation to between a process attribute an a SDC of some participant in a process.</skos:example>
     </owl:ObjectProperty>
     
 
@@ -562,9 +601,51 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/pmd/hto/HTO_0000002 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000002">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">target temperature specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000003 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000003">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">heating rate specification</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/hto/HTO_0000004 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000004">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000002"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">heating recipe</rdfs:label>
     </owl:Class>
     
@@ -574,6 +655,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000005">
         <rdfs:label xml:lang="en">temperature change rate</rdfs:label>
+        <skos:definition xml:lang="en">A process attribute defining the change of temperature per time unit within a process.</skos:definition>
         <skos:prefLabel>temperature change rate</skos:prefLabel>
     </owl:Class>
     
@@ -594,6 +676,36 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000007">
         <rdfs:label xml:lang="en">melting temperature</rdfs:label>
         <skos:definition>disposition of a material at which a phase transformation between liquid and solid state takes place</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000008 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000008">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000009"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">duration specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000009 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000009">
+        <rdfs:label xml:lang="en">duration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000010 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000010">
+        <rdfs:label xml:lang="en">temperature unit</rdfs:label>
     </owl:Class>
     
 
@@ -654,6 +766,20 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <!-- https://w3id.org/pmd/hto/HTO_0000014 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000014">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000002"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000008"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">holding recipe</rdfs:label>
     </owl:Class>
     
@@ -662,6 +788,20 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <!-- https://w3id.org/pmd/hto/HTO_0000015 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000015">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000002"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000008"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">soaking recipe</rdfs:label>
     </owl:Class>
     
@@ -761,6 +901,48 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
         <obo:IAO_0000115 xml:lang="en">A process attribute. Describes the pressure set point for a given process.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">target pressure</rdfs:label>
         <skos:prefLabel xml:lang="en">target pressure</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000028 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000028">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000029"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">mass flow controller</rdfs:label>
+        <skos:definition xml:lang="en">Device that has the function to control the flow of fluid media to a defined mass flow. It consists of a mass flow meter and a proportional valve.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000029 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000029">
+        <rdfs:label xml:lang="en">flow measuring function</rdfs:label>
+        <skos:definition>A subfunction of measuring performed to determine the flow of fluids.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000030 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000030">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000005"/>
+        <rdfs:label xml:lang="en">heating rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000031 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000031">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000005"/>
+        <rdfs:label xml:lang="en">cooling rate</rdfs:label>
     </owl:Class>
     
 

@@ -1,8 +1,10 @@
 cls
 http://purl.obolibrary.org/obo/BFO_0000051
 http://purl.obolibrary.org/obo/BFO_0000197
+http://purl.obolibrary.org/obo/IAO_0000039
 http://purl.obolibrary.org/obo/IAO_0000114
 http://purl.obolibrary.org/obo/IAO_0000115
+http://purl.obolibrary.org/obo/IAO_0000136
 http://purl.obolibrary.org/obo/RO_0000057
 http://purl.obolibrary.org/obo/RO_0000085
 http://purl.org/dc/terms/contributor
@@ -14,6 +16,7 @@ http://www.w3.org/2004/02/skos/core#definition
 http://www.w3.org/2004/02/skos/core#example
 http://www.w3.org/2004/02/skos/core#prefLabel
 https://w3id.org/pmd/co/PMD_0000009
+https://w3id.org/pmd/co/PMD_0020127
 https://w3id.org/pmd/hto/
 https://w3id.org/pmd/hto/AccelleratedCooling
 https://w3id.org/pmd/hto/AcquisitionDate
@@ -41,10 +44,15 @@ https://w3id.org/pmd/hto/FurnaceAtmosphere
 https://w3id.org/pmd/hto/FurnaceCooling
 https://w3id.org/pmd/hto/HTO_0000000
 https://w3id.org/pmd/hto/HTO_0000001
+https://w3id.org/pmd/hto/HTO_0000002
+https://w3id.org/pmd/hto/HTO_0000003
 https://w3id.org/pmd/hto/HTO_0000004
 https://w3id.org/pmd/hto/HTO_0000005
 https://w3id.org/pmd/hto/HTO_0000006
 https://w3id.org/pmd/hto/HTO_0000007
+https://w3id.org/pmd/hto/HTO_0000008
+https://w3id.org/pmd/hto/HTO_0000009
+https://w3id.org/pmd/hto/HTO_0000010
 https://w3id.org/pmd/hto/HTO_0000011
 https://w3id.org/pmd/hto/HTO_0000012
 https://w3id.org/pmd/hto/HTO_0000013
@@ -60,6 +68,10 @@ https://w3id.org/pmd/hto/HTO_0000022
 https://w3id.org/pmd/hto/HTO_0000023
 https://w3id.org/pmd/hto/HTO_0000025
 https://w3id.org/pmd/hto/HTO_0000027
+https://w3id.org/pmd/hto/HTO_0000028
+https://w3id.org/pmd/hto/HTO_0000029
+https://w3id.org/pmd/hto/HTO_0000030
+https://w3id.org/pmd/hto/HTO_0000031
 https://w3id.org/pmd/hto/Hardening
 https://w3id.org/pmd/hto/HeatingChamber
 https://w3id.org/pmd/hto/HeatingTime
