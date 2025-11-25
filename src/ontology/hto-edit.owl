@@ -404,7 +404,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 <https://w3id.org/pmd/hto/HTO_0000006> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ,
                                                        [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0020127> ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000967>
                                                        ] ;
                                        rdfs:label "target temperature"@en ;
@@ -590,7 +590,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 <https://w3id.org/pmd/hto/HTO_0000027> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ,
                                                        [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0020127> ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000896>
                                                        ] ;
                                        <http://purl.obolibrary.org/obo/IAO_0000115> "A process attribute. Describes the pressure set point for a given process."@en ;
