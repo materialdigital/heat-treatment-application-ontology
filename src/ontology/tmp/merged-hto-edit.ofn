@@ -160,7 +160,7 @@ Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#prefLabel>))
 
 AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/description> "description")
 
-# Annotation Property: <http://purl.org/dc/terms/license> (dcterms:license)
+# Annotation Property: <http://purl.org/dc/terms/license> (license)
 
 AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/license> "license")
 

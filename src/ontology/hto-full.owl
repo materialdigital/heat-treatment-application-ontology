@@ -15,7 +15,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto/hto-full.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-11-25/hto-full.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-11-26/hto-full.owl"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
@@ -23,7 +23,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2025-11-25</owl:versionInfo>
+        <owl:versionInfo>2025-11-26</owl:versionInfo>
     </owl:Ontology>
     
 
