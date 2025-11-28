@@ -382,9 +382,10 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000002> ObjectSomeValuesFrom(<http://p
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/co/PMD_0000967>))
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000002> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0002135> xsd:float))
 
-# Class: <https://w3id.org/pmd/hto/HTO_0000003> (heating rate specification)
+# Class: <https://w3id.org/pmd/hto/HTO_0000003> (temperature change rate specification)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000003> "heating rate specification"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000003> "temperature change rate specification"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000003> "Device specification which - as part of plan specifications (e.g. recipes) - specifies the rate at which temparature is to be changed.")
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000003> <https://w3id.org/pmd/co/PMD_0060006>)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/hto/HTO_0000005>))
 
@@ -418,6 +419,7 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000007> <http://purl.obolibrary.org/ob
 # Class: <https://w3id.org/pmd/hto/HTO_0000008> (duration specification)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000008> "duration specification"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000008> "Device specification as part of a plan specification which specifies the duration of a given process.")
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000008> <https://w3id.org/pmd/co/PMD_0060006>)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000008> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/hto/HTO_0000009>))
 

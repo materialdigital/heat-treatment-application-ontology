@@ -107,7 +107,7 @@ WARN	missing_definition	furnace atmosphere	IAO:0000115
 WARN	missing_definition	heat treatment elementals	IAO:0000115	
 WARN	missing_definition	quenching function	IAO:0000115	
 WARN	missing_definition	target temperature specification	IAO:0000115	
-WARN	missing_definition	heating rate specification	IAO:0000115	
+WARN	missing_definition	temperature change rate specification	IAO:0000115	
 WARN	missing_definition	heating recipe	IAO:0000115	
 WARN	missing_definition	temperature change rate	IAO:0000115	
 WARN	missing_definition	target temperature	IAO:0000115	
