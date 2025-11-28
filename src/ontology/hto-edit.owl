@@ -52,6 +52,14 @@
 
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000197
+<http://purl.obolibrary.org/obo/BFO_0000197> rdf:type owl:ObjectProperty .
+
+
+#################################################################
 #    Data properties
 #################################################################
 
@@ -372,7 +380,8 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                                          owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000005>
                                                        ] ;
-                                       rdfs:label "heating rate specification"@en .
+                                       rdfs:label "temperature change rate specification"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "Device specification which - as part of plan specifications (e.g. recipes) - specifies the rate at which temparature is to be changed." .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000004
@@ -426,7 +435,8 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                                          owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000009>
                                                        ] ;
-                                       rdfs:label "duration specification"@en .
+                                       rdfs:label "duration specification"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "Device specification as part of a plan specification which specifies the duration of a given process." .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000009
