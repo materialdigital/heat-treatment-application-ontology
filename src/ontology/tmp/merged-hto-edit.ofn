@@ -160,7 +160,7 @@ Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#prefLabel>))
 
 AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/description> "description")
 
-# Annotation Property: <http://purl.org/dc/terms/license> (dcterms:license)
+# Annotation Property: <http://purl.org/dc/terms/license> (license)
 
 AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/license> "license")
 
@@ -184,7 +184,7 @@ AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/co/PMD_0000017> "true"^
 
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000057>)))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000655> (Ofen)
+# Class: <https://w3id.org/pmd/co/PMD_0000655> (furnace)
 
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Chamber>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))
