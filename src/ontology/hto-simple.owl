@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/pmd/hto/hto-simple.owl#"
      xml:base="https://w3id.org/pmd/hto/hto-simple.owl"
+     xmlns:co="https://w3id.org/pmd/co/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -10,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto/hto-simple.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-12-01/hto-simple.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-12-03/hto-simple.owl"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
@@ -18,7 +19,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2025-12-01</owl:versionInfo>
+        <owl:versionInfo>2025-12-03</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -161,6 +162,15 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000064 -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/pmd/co/PMD_0000064">
+        <rdfs:comment>An editor note referring to a pattern which shows the usage of this class or property.</rdfs:comment>
+        <rdfs:label xml:lang="en">pattern example</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -618,6 +628,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <!-- https://w3id.org/pmd/hto/HTO_0000003 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000003">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000032"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -684,6 +695,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <!-- https://w3id.org/pmd/hto/HTO_0000008 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000008">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000032"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -949,6 +961,22 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/pmd/hto/HTO_0000032 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000032">
+        <terms:creator>thonagel</terms:creator>
+        <rdfs:comment>Internally (within the devices&apos; logic) a process is run to reach and maintain the given setpoint.</rdfs:comment>
+        <rdfs:label xml:lang="de">Sollwert</rdfs:label>
+        <rdfs:label xml:lang="en">set point</rdfs:label>
+        <skos:definition xml:lang="en">A Set Point is a device specification that assigns a desired quantitative value to a controlled process parameter, serving as the normative reference for process execution and control.</skos:definition>
+        <skos:example>The flow rate for a mass flow controller.
+The target temperature in the furnace chamber for a given process step.
+The rotational speed of a fan.</skos:example>
+        <co:PMD_0000064>tdb</co:PMD_0000064>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/hto/Hardening -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Hardening">
@@ -1195,11 +1223,12 @@ verwendet Randschichttiefe</skos:example>
     <!-- https://w3id.org/pmd/hto/Rotation -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Rotation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000032"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:comment>seam to be a device specification pinting to a process charateristic of type speed</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
-        <rdfs:label xml:lang="en">rotation speed</rdfs:label>
-        <skos:definition xml:lang="en"> Parameter describing the intended rotational speed of a device as e.g. an fan or turbine, unit revolution per minute. </skos:definition>
+        <rdfs:label xml:lang="en">rotation speed specification</rdfs:label>
+        <skos:definition xml:lang="en">Device specification describing the intended rotational speed of a device e.g. an fan or turbine</skos:definition>
         <skos:definition xml:lang="en">rotation speed of the atmosphere agitation device </skos:definition>
     </owl:Class>
     

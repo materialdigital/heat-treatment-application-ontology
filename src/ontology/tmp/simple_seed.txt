@@ -16,6 +16,7 @@ http://www.w3.org/2004/02/skos/core#definition
 http://www.w3.org/2004/02/skos/core#example
 http://www.w3.org/2004/02/skos/core#prefLabel
 https://w3id.org/pmd/co/PMD_0000009
+https://w3id.org/pmd/co/PMD_0000064
 https://w3id.org/pmd/co/PMD_0020127
 https://w3id.org/pmd/hto/
 https://w3id.org/pmd/hto/AccelleratedCooling
@@ -72,6 +73,7 @@ https://w3id.org/pmd/hto/HTO_0000028
 https://w3id.org/pmd/hto/HTO_0000029
 https://w3id.org/pmd/hto/HTO_0000030
 https://w3id.org/pmd/hto/HTO_0000031
+https://w3id.org/pmd/hto/HTO_0000032
 https://w3id.org/pmd/hto/Hardening
 https://w3id.org/pmd/hto/HeatingChamber
 https://w3id.org/pmd/hto/HeatingTime

@@ -72,6 +72,7 @@ Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000028>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000029>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000030>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000031>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000032>))
 Declaration(Class(<https://w3id.org/pmd/hto/Hardening>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingChamber>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingTime>))
@@ -149,7 +150,7 @@ AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/co/PMD_0000017> "true"^
 
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000057>)))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000655> (furnace)
+# Class: <https://w3id.org/pmd/co/PMD_0000655> (Ofen)
 
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Chamber>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))
@@ -386,7 +387,7 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000002> DataSomeValuesFrom(<http://pur
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000003> "temperature change rate specification"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000003> "Device specification which - as part of plan specifications (e.g. recipes) - specifies the rate at which temparature is to be changed.")
-SubClassOf(<https://w3id.org/pmd/hto/HTO_0000003> <https://w3id.org/pmd/co/PMD_0060006>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000003> <https://w3id.org/pmd/hto/HTO_0000032>)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/hto/HTO_0000005>))
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000004> (heating recipe)
@@ -420,7 +421,7 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000007> <http://purl.obolibrary.org/ob
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000008> "duration specification"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000008> "Device specification as part of a plan specification which specifies the duration of a given process.")
-SubClassOf(<https://w3id.org/pmd/hto/HTO_0000008> <https://w3id.org/pmd/co/PMD_0060006>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000008> <https://w3id.org/pmd/hto/HTO_0000032>)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000008> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/hto/HTO_0000009>))
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000009> (duration)
@@ -541,6 +542,19 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000030> <https://w3id.org/pmd/hto/HTO_
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000031> "cooling rate"@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000031> <https://w3id.org/pmd/hto/HTO_0000005>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000032> (set point)
+
+AnnotationAssertion(<http://purl.org/dc/terms/creator> <https://w3id.org/pmd/hto/HTO_0000032> "thonagel")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/HTO_0000032> "Internally (within the devices' logic) a process is run to reach and maintain the given setpoint.")
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000032> "Sollwert"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000032> "set point"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000032> "A Set Point is a device specification that assigns a desired quantitative value to a controlled process parameter, serving as the normative reference for process execution and control."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/hto/HTO_0000032> "The flow rate for a mass flow controller.
+The target temperature in the furnace chamber for a given process step.
+The rotational speed of a fan.")
+AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000064> <https://w3id.org/pmd/hto/HTO_0000032> "tdb")
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000032> <https://w3id.org/pmd/co/PMD_0060006>)
 
 # Class: <https://w3id.org/pmd/hto/Hardening> (hardening)
 
@@ -723,15 +737,15 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/RecordingInterval> "rec
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/RecordingInterval> " effective data aquisition and saving interval for documentation "@en)
 SubClassOf(<https://w3id.org/pmd/hto/RecordingInterval> <http://purl.obolibrary.org/obo/BFO_0000202>)
 
-# Class: <https://w3id.org/pmd/hto/Rotation> (rotation speed)
+# Class: <https://w3id.org/pmd/hto/Rotation> (rotation speed specification)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/hto/Rotation> "needs work")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/Rotation> "seam to be a device specification pinting to a process charateristic of type speed")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/Rotation> <https://w3id.org/pmd/hto/>)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Rotation> "rotation speed"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Rotation> " Parameter describing the intended rotational speed of a device as e.g. an fan or turbine, unit revolution per minute. "@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Rotation> "rotation speed specification"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Rotation> "Device specification describing the intended rotational speed of a device e.g. an fan or turbine"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Rotation> "rotation speed of the atmosphere agitation device "@en)
-SubClassOf(<https://w3id.org/pmd/hto/Rotation> <https://w3id.org/pmd/co/PMD_0060006>)
+SubClassOf(<https://w3id.org/pmd/hto/Rotation> <https://w3id.org/pmd/hto/HTO_0000032>)
 
 # Class: <https://w3id.org/pmd/hto/SequenceDescriptor> (sequence descriptor)
 

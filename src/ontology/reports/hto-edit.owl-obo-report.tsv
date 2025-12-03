@@ -19,6 +19,8 @@ ERROR	multiple_labels	Aufkohlen	rdfs:label	Aufkohlen@de
 ERROR	multiple_labels	Aufkohlen	rdfs:label	carburizing recipe@en
 ERROR	multiple_labels	Erwärmdauer	rdfs:label	Erwärmdauer@de
 ERROR	multiple_labels	Erwärmdauer	rdfs:label	duration till target temperature@en
+ERROR	multiple_labels	set point	rdfs:label	Sollwert@de
+ERROR	multiple_labels	set point	rdfs:label	set point@en
 ERROR	multiple_labels	hardening	rdfs:label	Härten@de
 ERROR	multiple_labels	hardening	rdfs:label	hardening@en
 ERROR	multiple_labels	Ofenkammer mit einer Heizung.	rdfs:label	Heizkammer@de
@@ -75,8 +77,7 @@ WARN	annotation_whitespace	partial pressure	skos:definition	nominal pressure of 
 WARN	annotation_whitespace	partial pressure	skos:definition	nominal pressure of thermochemical heat treatment pressure during thermochemical steps @en
 WARN	annotation_whitespace	Abschreckvorlaufzeit	skos:definition	Parameter indicatin the duration right before the quenching  process @en
 WARN	annotation_whitespace	recording interval	skos:definition	 effective data aquisition and saving interval for documentation @en
-WARN	annotation_whitespace	rotation speed	skos:definition	 Parameter describing the intended rotational speed of a device as e.g. an fan or turbine, unit revolution per minute. @en
-WARN	annotation_whitespace	rotation speed	skos:definition	rotation speed of the atmosphere agitation device @en
+WARN	annotation_whitespace	rotation speed specification	skos:definition	rotation speed of the atmosphere agitation device @en
 WARN	annotation_whitespace	sequence number	skos:definition	 An identifier indicating a process-number in a Workflow represented via consecutive integers @en
 WARN	annotation_whitespace	sequence number	skos:definition	number of process step of heat treatment recipe @en
 WARN	annotation_whitespace	sequence number	skos:definition	ongoing number for labeling the process steps within a process recipe @en
@@ -133,6 +134,7 @@ WARN	missing_definition	mass flow controller	IAO:0000115
 WARN	missing_definition	flow measuring function	IAO:0000115	
 WARN	missing_definition	heating rate	IAO:0000115	
 WARN	missing_definition	cooling rate	IAO:0000115	
+WARN	missing_definition	set point	IAO:0000115	
 WARN	missing_definition	hardening	IAO:0000115	
 WARN	missing_definition	Ofenkammer mit einer Heizung.	IAO:0000115	
 WARN	missing_definition	Heating Time	IAO:0000115	
@@ -151,7 +153,7 @@ WARN	missing_definition	partial pressure	IAO:0000115
 WARN	missing_definition	Abschreckkammer	IAO:0000115	
 WARN	missing_definition	Abschreckvorlaufzeit	IAO:0000115	
 WARN	missing_definition	recording interval	IAO:0000115	
-WARN	missing_definition	rotation speed	IAO:0000115	
+WARN	missing_definition	rotation speed specification	IAO:0000115	
 WARN	missing_definition	sequence descriptor	IAO:0000115	
 WARN	missing_definition	sequence duration	IAO:0000115	
 WARN	missing_definition	sequence number	IAO:0000115	

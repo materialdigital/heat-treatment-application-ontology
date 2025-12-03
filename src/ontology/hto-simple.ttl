@@ -1,4 +1,5 @@
 @prefix : <https://w3id.org/pmd/hto/hto-simple.ttl#> .
+@prefix co: <https://w3id.org/pmd/co/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,7 +11,7 @@
 @base <https://w3id.org/pmd/hto/hto-simple.ttl> .
 
 <https://w3id.org/pmd/hto/hto-simple.ttl> rdf:type owl:Ontology ;
-                                           owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-12-01/hto-simple.ttl> ;
+                                           owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-12-03/hto-simple.ttl> ;
                                            terms:contributor "Jannis Grundmann" ;
                                            terms:creator <https://orcid.org/0000-0002-9014-2920> ,
                                                          <https://orcid.org/0000-0003-1649-6832> ,
@@ -18,7 +19,7 @@
                                            terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                            terms:license <https://creativecommons.org/licenses/unspecified> ;
                                            terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                           owl:versionInfo "2025-12-01" .
+                                           owl:versionInfo "2025-12-03" .
 
 #################################################################
 #    Annotation properties
@@ -124,6 +125,12 @@ skos:example rdf:type owl:AnnotationProperty .
 skos:prefLabel rdf:type owl:AnnotationProperty .
 
 
+###  https://w3id.org/pmd/co/PMD_0000064
+co:PMD_0000064 rdf:type owl:AnnotationProperty ;
+               rdfs:comment "An editor note referring to a pattern which shows the usage of this class or property." ;
+               rdfs:label "pattern example"@en .
+
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -190,24 +197,24 @@ obo:RO_0000085 rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/pmd/co/PMD_0000009
-<https://w3id.org/pmd/co/PMD_0000009> rdf:type owl:ObjectProperty ;
-                                      rdfs:label "has process attribute"@de ;
-                                      rdfs:seeAlso "has process attribute from OEO https://openenergyplatform.org/ontology/oeo/OEO_00000500"@en ;
-                                      skos:definition "A relation between a process and a process attribute that depends on it."@en ;
-                                      skos:example "Tensile testing process has process attribute tensile rate"@en .
+co:PMD_0000009 rdf:type owl:ObjectProperty ;
+               rdfs:label "has process attribute"@de ;
+               rdfs:seeAlso "has process attribute from OEO https://openenergyplatform.org/ontology/oeo/OEO_00000500"@en ;
+               skos:definition "A relation between a process and a process attribute that depends on it."@en ;
+               skos:example "Tensile testing process has process attribute tensile rate"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020127
-<https://w3id.org/pmd/co/PMD_0020127> rdf:type owl:ObjectProperty ;
-                                      rdfs:comment """Despite has characteristic from RO does not have any domain constraints, it is still not possible to directly connect an instance of a process with an instance of a SDC. 
+co:PMD_0020127 rdf:type owl:ObjectProperty ;
+               rdfs:comment """Despite has characteristic from RO does not have any domain constraints, it is still not possible to directly connect an instance of a process with an instance of a SDC. 
 
 First, SDC is dependent on a IC. As RO does not have \"bearer of\" object property, the \"has characteristic\" implies that the domain should be an IC. 
 
 Second, characteristic of is a functional property. Thus, two triples SDC_1 characteristc of IC_1 and SDC_2  characteristc of Process_1 (where IC_1 participates in Process_1), cannot exist simultaneously. 
 An example of such case can be \"Temperature of during the annealing process was 1000°C\". Temperature is an SDC of some participant of the annealing, however it is not clear whether it is an SDC of an oven or of a sample in the oven. If we assert triple Annealing--> has characteristic --> Temperature 1000°C, then the correct triple connecting temperature SDC with either oven or specimen cannot exist."""@en ;
-                                      rdfs:label "refers to"@en ;
-                                      skos:definition "a relation between a process attribute and an SDC of some participant in a process"@en ;
-                                      skos:example "a relation to between a process attribute an a SDC of some participant in a process."@en .
+               rdfs:label "refers to"@en ;
+               skos:definition "a relation between a process attribute and an SDC of some participant in a process"@en ;
+               skos:example "a relation to between a process attribute an a SDC of some participant in a process."@en .
 
 
 #################################################################
@@ -454,7 +461,8 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 
 ###  https://w3id.org/pmd/hto/HTO_0000003
 <https://w3id.org/pmd/hto/HTO_0000003> rdf:type owl:Class ;
-                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
+                                                       [ rdf:type owl:Restriction ;
                                                          owl:onProperty obo:IAO_0000136 ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000005>
                                                        ] ;
@@ -500,7 +508,8 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 
 ###  https://w3id.org/pmd/hto/HTO_0000008
 <https://w3id.org/pmd/hto/HTO_0000008> rdf:type owl:Class ;
-                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
+                                                       [ rdf:type owl:Restriction ;
                                                          owl:onProperty obo:IAO_0000136 ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000009>
                                                        ] ;
@@ -676,6 +685,19 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 <https://w3id.org/pmd/hto/HTO_0000031> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000005> ;
                                        rdfs:label "cooling rate"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000032
+<https://w3id.org/pmd/hto/HTO_0000032> rdf:type owl:Class ;
+                                       terms:creator "thonagel" ;
+                                       rdfs:comment "Internally (within the devices' logic) a process is run to reach and maintain the given setpoint." ;
+                                       rdfs:label "Sollwert"@de ,
+                                                  "set point"@en ;
+                                       skos:definition "A Set Point is a device specification that assigns a desired quantitative value to a controlled process parameter, serving as the normative reference for process execution and control."@en ;
+                                       skos:example """The flow rate for a mass flow controller.
+The target temperature in the furnace chamber for a given process step.
+The rotational speed of a fan.""" ;
+                                       co:PMD_0000064 "tdb" .
 
 
 ###  https://w3id.org/pmd/hto/Hardening
@@ -863,11 +885,12 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/Rotation
 <https://w3id.org/pmd/hto/Rotation> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ;
                                     obo:IAO_0000114 "needs work" ;
                                     rdfs:comment "seam to be a device specification pinting to a process charateristic of type speed" ;
                                     rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                    rdfs:label "rotation speed"@en ;
-                                    skos:definition " Parameter describing the intended rotational speed of a device as e.g. an fan or turbine, unit revolution per minute. "@en ,
+                                    rdfs:label "rotation speed specification"@en ;
+                                    skos:definition "Device specification describing the intended rotational speed of a device e.g. an fan or turbine"@en ,
                                                     "rotation speed of the atmosphere agitation device "@en .
 
 
@@ -976,7 +999,7 @@ verwendet Randschichttiefe""" .
 <https://w3id.org/pmd/hto/cooling> rdf:type owl:Class ;
                                    rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000000> ,
                                                    [ rdf:type owl:Restriction ;
-                                                     owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
+                                                     owl:onProperty co:PMD_0000009 ;
                                                      owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000005>
                                                    ] ;
                                    rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
@@ -990,7 +1013,7 @@ verwendet Randschichttiefe""" .
 <https://w3id.org/pmd/hto/heating> rdf:type owl:Class ;
                                    rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000000> ,
                                                    [ rdf:type owl:Restriction ;
-                                                     owl:onProperty <https://w3id.org/pmd/co/PMD_0000009> ;
+                                                     owl:onProperty co:PMD_0000009 ;
                                                      owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000006>
                                                    ] ;
                                    rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
