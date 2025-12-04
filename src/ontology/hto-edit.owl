@@ -246,7 +246,7 @@ can be: heating chamber / cooling chamber"""@en .
 
 ###  https://w3id.org/pmd/hto/Controlled
 <https://w3id.org/pmd/hto/Controlled> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060006> ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000033> ;
                                       rdfs:comment "definition is not enough, what is controlled?" ;
                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                       rdfs:label "controlled"@en ;
@@ -255,7 +255,7 @@ can be: heating chamber / cooling chamber"""@en .
 
 ###  https://w3id.org/pmd/hto/Convection
 <https://w3id.org/pmd/hto/Convection> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060006> ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000033> ;
                                       rdfs:comment "if its a device specification to run a heat up process by some spefiic mode of action, then pls change the definition" ;
                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                       rdfs:label "convection"@en ;
@@ -297,7 +297,7 @@ can be: heating chamber / cooling chamber"""@en .
 
 ###  https://w3id.org/pmd/hto/FanStateFast
 <https://w3id.org/pmd/hto/FanStateFast> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060006> ;
+                                        rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000033> ;
                                         <http://purl.obolibrary.org/obo/IAO_0000114> "needs work" ;
                                         rdfs:label "fan state fast"@en ;
                                         <http://www.w3.org/2004/02/skos/core#definition> "Boolean parameter representing a fast fan speed setting in contrast to the default speed setting."@en .
@@ -650,6 +650,23 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 The target temperature in the furnace chamber for a given process step.
 The rotational speed of a fan.""" ;
                                        <https://w3id.org/pmd/co/PMD_0000064> "tdb" .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000033
+<https://w3id.org/pmd/hto/HTO_0000033> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060006> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                                         owl:someValuesFrom <http://purl.obolibrary.org/obo/OBI_0001930>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                         owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000034>
+                                                       ] ;
+                                       <http://purl.org/dc/terms/creator> "thonagel" ;
+                                       rdfs:label "device operation state"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A Device Operation State is a state that inheres in a device and specifies whether a device function is currently active or inactive, typically represented in a control or output protocol as an on/off (or analogous binary) indicator."@en ,
+                                                                                        "Switches are device specifications that triggers a certain function within a device that can only assume two states (on/off)."@en .
 
 
 ###  https://w3id.org/pmd/hto/Hardening
