@@ -135,6 +135,7 @@ WARN	missing_definition	flow measuring function	IAO:0000115
 WARN	missing_definition	heating rate	IAO:0000115	
 WARN	missing_definition	cooling rate	IAO:0000115	
 WARN	missing_definition	set point	IAO:0000115	
+WARN	missing_definition	device operation state	IAO:0000115	
 WARN	missing_definition	hardening	IAO:0000115	
 WARN	missing_definition	Ofenkammer mit einer Heizung.	IAO:0000115	
 WARN	missing_definition	Heating Time	IAO:0000115	

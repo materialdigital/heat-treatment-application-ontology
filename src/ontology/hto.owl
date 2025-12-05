@@ -15,7 +15,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-12-03/hto.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-12-05/hto.owl"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
@@ -23,7 +23,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2025-12-03</owl:versionInfo>
+        <owl:versionInfo>2025-12-05</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -14183,7 +14183,7 @@ can be: heating chamber / cooling chamber</skos:definition>
     <!-- https://w3id.org/pmd/hto/Controlled -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Controlled">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060006"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000033"/>
         <rdfs:comment>definition is not enough, what is controlled?</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">controlled</rdfs:label>
@@ -14195,7 +14195,7 @@ can be: heating chamber / cooling chamber</skos:definition>
     <!-- https://w3id.org/pmd/hto/Convection -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Convection">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060006"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000033"/>
         <rdfs:comment>if its a device specification to run a heat up process by some spefiic mode of action, then pls change the definition</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">convection</rdfs:label>
@@ -14252,7 +14252,7 @@ can be: heating chamber / cooling chamber</skos:definition>
     <!-- https://w3id.org/pmd/hto/FanStateFast -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/FanStateFast">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060006"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000033"/>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
         <rdfs:label xml:lang="en">fan state fast</rdfs:label>
         <skos:definition xml:lang="en">Boolean parameter representing a fast fan speed setting in contrast to the default speed setting.</skos:definition>
@@ -14755,6 +14755,30 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
 The target temperature in the furnace chamber for a given process step.
 The rotational speed of a fan.</skos:example>
         <co:PMD_0000064>tdb</co:PMD_0000064>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000033 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000033">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060006"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:creator>thonagel</terms:creator>
+        <rdfs:label xml:lang="en">device operation state</rdfs:label>
+        <skos:definition xml:lang="en">A Device Operation State is a state that inheres in a device and specifies whether a device function is currently active or inactive, typically represented in a control or output protocol as an on/off (or analogous binary) indicator.</skos:definition>
+        <skos:definition xml:lang="en">Switches are device specifications that triggers a certain function within a device that can only assume two states (on/off).</skos:definition>
     </owl:Class>
     
 

@@ -15,7 +15,7 @@
 @base <https://w3id.org/pmd/hto/hto-full.ttl> .
 
 <https://w3id.org/pmd/hto/hto-full.ttl> rdf:type owl:Ontology ;
-                                         owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-12-03/hto-full.ttl> ;
+                                         owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-12-05/hto-full.ttl> ;
                                          terms:contributor "Jannis Grundmann" ;
                                          terms:creator <https://orcid.org/0000-0002-9014-2920> ,
                                                        <https://orcid.org/0000-0003-1649-6832> ,
@@ -23,7 +23,7 @@
                                          terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                          terms:license <https://creativecommons.org/licenses/unspecified> ;
                                          terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                         owl:versionInfo "2025-12-03" .
+                                         owl:versionInfo "2025-12-05" .
 
 #################################################################
 #    Annotation properties
@@ -10446,7 +10446,7 @@ can be: heating chamber / cooling chamber"""@en .
 
 ###  https://w3id.org/pmd/hto/Controlled
 <https://w3id.org/pmd/hto/Controlled> rdf:type owl:Class ;
-                                      rdfs:subClassOf co:PMD_0060006 ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000033> ;
                                       rdfs:comment "definition is not enough, what is controlled?" ;
                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                       rdfs:label "controlled"@en ;
@@ -10455,7 +10455,7 @@ can be: heating chamber / cooling chamber"""@en .
 
 ###  https://w3id.org/pmd/hto/Convection
 <https://w3id.org/pmd/hto/Convection> rdf:type owl:Class ;
-                                      rdfs:subClassOf co:PMD_0060006 ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000033> ;
                                       rdfs:comment "if its a device specification to run a heat up process by some spefiic mode of action, then pls change the definition" ;
                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                       rdfs:label "convection"@en ;
@@ -10497,7 +10497,7 @@ can be: heating chamber / cooling chamber"""@en .
 
 ###  https://w3id.org/pmd/hto/FanStateFast
 <https://w3id.org/pmd/hto/FanStateFast> rdf:type owl:Class ;
-                                        rdfs:subClassOf co:PMD_0060006 ;
+                                        rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000033> ;
                                         obo:IAO_0000114 "needs work" ;
                                         rdfs:label "fan state fast"@en ;
                                         skos:definition "Boolean parameter representing a fast fan speed setting in contrast to the default speed setting."@en .
@@ -10859,6 +10859,23 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 The target temperature in the furnace chamber for a given process step.
 The rotational speed of a fan.""" ;
                                        co:PMD_0000064 "tdb" .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000033
+<https://w3id.org/pmd/hto/HTO_0000033> rdf:type owl:Class ;
+                                       rdfs:subClassOf co:PMD_0060006 ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:BFO_0000051 ;
+                                                         owl:someValuesFrom obo:OBI_0001930
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000136 ;
+                                                         owl:someValuesFrom obo:BFO_0000034
+                                                       ] ;
+                                       terms:creator "thonagel" ;
+                                       rdfs:label "device operation state"@en ;
+                                       skos:definition "A Device Operation State is a state that inheres in a device and specifies whether a device function is currently active or inactive, typically represented in a control or output protocol as an on/off (or analogous binary) indicator."@en ,
+                                                       "Switches are device specifications that triggers a certain function within a device that can only assume two states (on/off)."@en .
 
 
 ###  https://w3id.org/pmd/hto/Hardening

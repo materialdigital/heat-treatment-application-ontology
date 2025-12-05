@@ -74,6 +74,7 @@ https://w3id.org/pmd/hto/HTO_0000029
 https://w3id.org/pmd/hto/HTO_0000030
 https://w3id.org/pmd/hto/HTO_0000031
 https://w3id.org/pmd/hto/HTO_0000032
+https://w3id.org/pmd/hto/HTO_0000033
 https://w3id.org/pmd/hto/Hardening
 https://w3id.org/pmd/hto/HeatingChamber
 https://w3id.org/pmd/hto/HeatingTime

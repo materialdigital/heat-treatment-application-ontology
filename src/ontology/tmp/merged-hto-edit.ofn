@@ -19,12 +19,14 @@ Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000016>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000023>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000024>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000030>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000034>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000145>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000202>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000005>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000109>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0001930>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000005>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000008>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000017>))
@@ -97,6 +99,7 @@ Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000029>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000030>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000031>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000032>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000033>))
 Declaration(Class(<https://w3id.org/pmd/hto/Hardening>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingChamber>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingTime>))
@@ -162,7 +165,7 @@ Declaration(AnnotationProperty(<https://w3id.org/pmd/co/PMD_0000064>))
 
 AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/description> "description")
 
-# Annotation Property: <http://purl.org/dc/terms/license> (license)
+# Annotation Property: <http://purl.org/dc/terms/license> (dcterms:license)
 
 AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/license> "license")
 
@@ -319,7 +322,7 @@ AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/Controlled> "definiti
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/Controlled> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Controlled> "controlled"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Controlled> "This Scope expresses that a :ValueObject is actively controlled during the process, e.g. a heating process where the temperature change is done in controlled intervals until the desired temperature is reached while an uncontrolled heating process would reach the desired temperature as fast as the furnace allows it to."@en)
-SubClassOf(<https://w3id.org/pmd/hto/Controlled> <https://w3id.org/pmd/co/PMD_0060006>)
+SubClassOf(<https://w3id.org/pmd/hto/Controlled> <https://w3id.org/pmd/hto/HTO_0000033>)
 
 # Class: <https://w3id.org/pmd/hto/Convection> (convection)
 
@@ -327,7 +330,7 @@ AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/Convection> "if its a
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/Convection> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Convection> "convection"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Convection> "konvection during heating, heating in atmosphere, not in vacuum "@en)
-SubClassOf(<https://w3id.org/pmd/hto/Convection> <https://w3id.org/pmd/co/PMD_0060006>)
+SubClassOf(<https://w3id.org/pmd/hto/Convection> <https://w3id.org/pmd/hto/HTO_0000033>)
 
 # Class: <https://w3id.org/pmd/hto/DewPoint> (dew point)
 
@@ -363,7 +366,7 @@ SubClassOf(<https://w3id.org/pmd/hto/Fan> <https://w3id.org/pmd/co/PMD_0000602>)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/hto/FanStateFast> "needs work")
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/FanStateFast> "fan state fast"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/FanStateFast> "Boolean parameter representing a fast fan speed setting in contrast to the default speed setting."@en)
-SubClassOf(<https://w3id.org/pmd/hto/FanStateFast> <https://w3id.org/pmd/co/PMD_0060006>)
+SubClassOf(<https://w3id.org/pmd/hto/FanStateFast> <https://w3id.org/pmd/hto/HTO_0000033>)
 
 # Class: <https://w3id.org/pmd/hto/FastCooling> (fast cooling)
 
@@ -591,6 +594,16 @@ The target temperature in the furnace chamber for a given process step.
 The rotational speed of a fan.")
 AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000064> <https://w3id.org/pmd/hto/HTO_0000032> "tdb")
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000032> <https://w3id.org/pmd/co/PMD_0060006>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000033> (device operation state)
+
+AnnotationAssertion(<http://purl.org/dc/terms/creator> <https://w3id.org/pmd/hto/HTO_0000033> "thonagel")
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000033> "device operation state"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000033> "A Device Operation State is a state that inheres in a device and specifies whether a device function is currently active or inactive, typically represented in a control or output protocol as an on/off (or analogous binary) indicator."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000033> "Switches are device specifications that triggers a certain function within a device that can only assume two states (on/off)."@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000033> <https://w3id.org/pmd/co/PMD_0060006>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/OBI_0001930>))
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <http://purl.obolibrary.org/obo/BFO_0000034>))
 
 # Class: <https://w3id.org/pmd/hto/Hardening> (hardening)
 
