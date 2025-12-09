@@ -52,14 +52,6 @@
 
 
 #################################################################
-#    Object Properties
-#################################################################
-
-###  http://purl.obolibrary.org/obo/BFO_0000197
-<http://purl.obolibrary.org/obo/BFO_0000197> rdf:type owl:ObjectProperty .
-
-
-#################################################################
 #    Data properties
 #################################################################
 
@@ -192,7 +184,7 @@
 <https://w3id.org/pmd/hto/ChamberPressure> rdf:type owl:Class ;
                                            owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0000896>
                                                                                       [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000197> ;
+                                                                                        owl:onProperty <http://purl.obolibrary.org/obo/RO_0000080> ;
                                                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/Chamber>
                                                                                       ]
                                                                                     ) ;
@@ -671,7 +663,11 @@ The rotational speed of a fan.""" ;
 
 ###  https://w3id.org/pmd/hto/Hardening
 <https://w3id.org/pmd/hto/Hardening> rdf:type owl:Class ;
-                                     rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000779> ;
+                                     rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000779> ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://purl.obolibrary.org/obo/STATO_0000102> ;
+                                                       owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000013>
+                                                     ] ;
                                      rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                      rdfs:label "Härten"@de ,
                                                 "hardening"@en ;
