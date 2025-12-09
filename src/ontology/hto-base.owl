@@ -12,7 +12,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto/hto-base.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-12-05/hto-base.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-12-09/hto-base.owl"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
@@ -21,7 +21,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2025-12-05</owl:versionInfo>
+        <owl:versionInfo>2025-12-09</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -126,12 +126,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000197 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000197"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000039 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000039"/>
@@ -144,9 +138,21 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0000080 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000080"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0000085 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000085"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000102 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/STATO_0000102"/>
     
 
 
@@ -455,7 +461,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000896"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
                         <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/Chamber"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -464,7 +470,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000896"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000197"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000080"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/Chamber"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1132,6 +1138,12 @@ The rotational speed of a fan.</skos:example>
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Hardening">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STATO_0000102"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Härten</rdfs:label>
         <rdfs:label xml:lang="en">hardening</rdfs:label>

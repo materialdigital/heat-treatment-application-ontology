@@ -137,11 +137,12 @@ Declaration(Class(<https://w3id.org/pmd/hto/holding>))
 Declaration(Class(<https://w3id.org/pmd/hto/quenching>))
 Declaration(Class(<https://w3id.org/pmd/hto/soaking>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000197>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000039>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000057>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000080>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000085>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/STATO_0000102>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000009>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0020127>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0001937>))
@@ -189,7 +190,7 @@ AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/co/PMD_0000017> "true"^
 
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000057>)))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000655> (furnace)
+# Class: <https://w3id.org/pmd/co/PMD_0000655> (Ofen)
 
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Chamber>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))
@@ -277,7 +278,7 @@ AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/ChamberPressure> "mea
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/ChamberPressure> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/ChamberPressure> "chamber pressure"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/ChamberPressure> "designated pressure in retort during evacuation phase pre to nitriding process or during low pressure nitriding process "@en)
-EquivalentClasses(<https://w3id.org/pmd/hto/ChamberPressure> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000896> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://w3id.org/pmd/hto/Chamber>)))
+EquivalentClasses(<https://w3id.org/pmd/hto/ChamberPressure> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000896> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000080> <https://w3id.org/pmd/hto/Chamber>)))
 
 # Class: <https://w3id.org/pmd/hto/ChamberScope> (obsolete Wärmebehandlungsofenkammer)
 
@@ -620,6 +621,7 @@ Nitrierhärten
 
 verwendet Randschichttiefe")
 SubClassOf(<https://w3id.org/pmd/hto/Hardening> <https://w3id.org/pmd/co/PMD_0000779>)
+SubClassOf(<https://w3id.org/pmd/hto/Hardening> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/STATO_0000102> <https://w3id.org/pmd/hto/HTO_0000013>))
 
 # Class: <https://w3id.org/pmd/hto/HeatingChamber> (Ofenkammer mit einer Heizung.)
 

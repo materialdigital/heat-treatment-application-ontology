@@ -15,7 +15,7 @@
 @base <https://w3id.org/pmd/hto.ttl> .
 
 <https://w3id.org/pmd/hto.ttl> rdf:type owl:Ontology ;
-                                owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-12-05/hto.ttl> ;
+                                owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-12-09/hto.ttl> ;
                                 terms:contributor "Jannis Grundmann" ;
                                 terms:creator <https://orcid.org/0000-0002-9014-2920> ,
                                               <https://orcid.org/0000-0003-1649-6832> ,
@@ -23,7 +23,7 @@
                                 terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                 terms:license <https://creativecommons.org/licenses/unspecified> ;
                                 terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                owl:versionInfo "2025-12-05" .
+                                owl:versionInfo "2025-12-09" .
 
 #################################################################
 #    Annotation properties
@@ -450,10 +450,6 @@ obo:BFO_0000185 rdf:type owl:ObjectProperty ;
                 rdfs:label "has history"@en ;
                 skos:definition "b has history c =Def c history of b"@en ;
                 skos:example "This organism has history this life"@en .
-
-
-###  http://purl.obolibrary.org/obo/BFO_0000197
-obo:BFO_0000197 rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000199
@@ -10387,7 +10383,7 @@ co:PMD_0200001 rdf:type owl:Class ;
 <https://w3id.org/pmd/hto/ChamberPressure> rdf:type owl:Class ;
                                            owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000896
                                                                                       [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty obo:BFO_0000197 ;
+                                                                                        owl:onProperty obo:RO_0000080 ;
                                                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/Chamber>
                                                                                       ]
                                                                                     ) ;
@@ -10395,7 +10391,7 @@ co:PMD_0200001 rdf:type owl:Class ;
                                                                ] ;
                                            rdfs:subClassOf co:PMD_0000896 ,
                                                            [ rdf:type owl:Restriction ;
-                                                             owl:onProperty obo:BFO_0000197 ;
+                                                             owl:onProperty obo:RO_0000080 ;
                                                              owl:someValuesFrom <https://w3id.org/pmd/hto/Chamber>
                                                            ] ;
                                            rdfs:comment "measured atmophere pressure in retort, measured using the vacuum sensor "@en ;
@@ -10880,7 +10876,11 @@ The rotational speed of a fan.""" ;
 
 ###  https://w3id.org/pmd/hto/Hardening
 <https://w3id.org/pmd/hto/Hardening> rdf:type owl:Class ;
-                                     rdfs:subClassOf co:PMD_0000779 ;
+                                     rdfs:subClassOf co:PMD_0000779 ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty obo:STATO_0000102 ;
+                                                       owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000013>
+                                                     ] ;
                                      rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                      rdfs:label "Härten"@de ,
                                                 "hardening"@en ;
