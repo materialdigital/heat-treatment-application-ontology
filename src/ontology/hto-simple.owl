@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto/hto-simple.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-12-09/hto-simple.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-12-11/hto-simple.owl"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
@@ -19,7 +19,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2025-12-09</owl:versionInfo>
+        <owl:versionInfo>2025-12-11</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -165,12 +165,29 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- https://w3id.org/pmd/co/PMD_0000060 -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/pmd/co/PMD_0000060">
+        <rdfs:comment xml:lang="en">Indicates whether the ontology element is part of the minimal profile of the ontology. Useful for modularization, simplified views, or lightweight implementations.</rdfs:comment>
+        <rdfs:label xml:lang="en">isInMinimalProfile</rdfs:label>
+        <co:PMD_0001032>https://github.com/materialdigital/core-ontology/issues/121</co:PMD_0001032>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0000064 -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/pmd/co/PMD_0000064">
         <rdfs:comment>An editor note referring to a pattern which shows the usage of this class or property.</rdfs:comment>
         <rdfs:label xml:lang="en">pattern example</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0001032 -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/pmd/co/PMD_0001032"/>
     
 
 
@@ -985,7 +1002,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
         <terms:creator>thonagel</terms:creator>
         <rdfs:comment>Internally (within the devices&apos; logic) a process is run to reach and maintain the given setpoint.</rdfs:comment>
         <rdfs:label xml:lang="de">Sollwert</rdfs:label>
-        <rdfs:label xml:lang="en">set point</rdfs:label>
+        <rdfs:label xml:lang="en">setpoint</rdfs:label>
         <skos:definition xml:lang="en">A Set Point is a device specification that assigns a desired quantitative value to a controlled process parameter, serving as the normative reference for process execution and control.</skos:definition>
         <skos:example>The flow rate for a mass flow controller.
 The target temperature in the furnace chamber for a given process step.
@@ -998,10 +1015,25 @@ The rotational speed of a fan.</skos:example>
     <!-- https://w3id.org/pmd/hto/HTO_0000033 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000033">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000034"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <terms:creator>thonagel</terms:creator>
         <rdfs:label xml:lang="en">device operation state</rdfs:label>
         <skos:definition xml:lang="en">A Device Operation State is a state that inheres in a device and specifies whether a device function is currently active or inactive, typically represented in a control or output protocol as an on/off (or analogous binary) indicator.</skos:definition>
         <skos:definition xml:lang="en">Switches are device specifications that triggers a certain function within a device that can only assume two states (on/off).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000034 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000034">
+        <rdfs:label xml:lang="en">device operation state value</rdfs:label>
+        <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
 
@@ -1475,6 +1507,34 @@ verwendet Randschichttiefe</skos:example>
         <skos:definition xml:lang="en">Process step during which temperature homogenization is achieved in the component.</skos:definition>
         <skos:definition xml:lang="de">Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird.</skos:definition>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000035 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/hto/HTO_0000035">
+        <owl:differentFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000036"/>
+        <rdfs:label xml:lang="en">ON</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000036 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/hto/HTO_0000036">
+        <rdfs:label xml:lang="en">OFF</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

@@ -19,7 +19,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000016>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000023>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000024>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000030>))
-Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000034>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000145>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000202>))
@@ -27,7 +26,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000005>))
 Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000109>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0001930>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0000005>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000008>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000017>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000054>))
@@ -42,6 +40,7 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0000833>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000847>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000896>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0000967>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0040001>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0060006>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0060008>))
 Declaration(Class(<https://w3id.org/pmd/hto/AccelleratedCooling>))
@@ -100,6 +99,7 @@ Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000030>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000031>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000032>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000033>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000034>))
 Declaration(Class(<https://w3id.org/pmd/hto/Hardening>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingChamber>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingTime>))
@@ -147,6 +147,9 @@ Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0000009>))
 Declaration(ObjectProperty(<https://w3id.org/pmd/co/PMD_0020127>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0001937>))
 Declaration(DataProperty(<http://purl.obolibrary.org/obo/OBI_0002135>))
+Declaration(DataProperty(<https://w3id.org/pmd/co/PMD_0000006>))
+Declaration(NamedIndividual(<https://w3id.org/pmd/hto/HTO_0000035>))
+Declaration(NamedIndividual(<https://w3id.org/pmd/hto/HTO_0000036>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000114>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
@@ -157,6 +160,7 @@ Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#definition>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#prefLabel>))
+Declaration(AnnotationProperty(<https://w3id.org/pmd/co/PMD_0000060>))
 Declaration(AnnotationProperty(<https://w3id.org/pmd/co/PMD_0000064>))
 ############################
 #   Annotation Properties
@@ -190,7 +194,7 @@ AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/co/PMD_0000017> "true"^
 
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000057>)))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000655> (Ofen)
+# Class: <https://w3id.org/pmd/co/PMD_0000655> (furnace)
 
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Chamber>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))
@@ -583,12 +587,12 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000030> <https://w3id.org/pmd/hto/HTO_
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000031> "cooling rate"@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000031> <https://w3id.org/pmd/hto/HTO_0000005>)
 
-# Class: <https://w3id.org/pmd/hto/HTO_0000032> (set point)
+# Class: <https://w3id.org/pmd/hto/HTO_0000032> (Sollwert)
 
 AnnotationAssertion(<http://purl.org/dc/terms/creator> <https://w3id.org/pmd/hto/HTO_0000032> "thonagel")
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/HTO_0000032> "Internally (within the devices' logic) a process is run to reach and maintain the given setpoint.")
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000032> "Sollwert"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000032> "set point"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000032> "setpoint"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000032> "A Set Point is a device specification that assigns a desired quantitative value to a controlled process parameter, serving as the normative reference for process execution and control."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/hto/HTO_0000032> "The flow rate for a mass flow controller.
 The target temperature in the furnace chamber for a given process step.
@@ -603,8 +607,15 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000033> "device op
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000033> "A Device Operation State is a state that inheres in a device and specifies whether a device function is currently active or inactive, typically represented in a control or output protocol as an on/off (or analogous binary) indicator."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000033> "Switches are device specifications that triggers a certain function within a device that can only assume two states (on/off)."@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000033> <https://w3id.org/pmd/co/PMD_0060006>)
-SubClassOf(<https://w3id.org/pmd/hto/HTO_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/OBI_0001930>))
-SubClassOf(<https://w3id.org/pmd/hto/HTO_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <http://purl.obolibrary.org/obo/BFO_0000034>))
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/HTO_0000034>))
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/co/PMD_0000602>))
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000034> (device operation state value)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000034> "device operation state value"@en)
+AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/hto/HTO_0000034> "true"^^xsd:boolean)
+EquivalentClasses(<https://w3id.org/pmd/hto/HTO_0000034> ObjectOneOf(<https://w3id.org/pmd/hto/HTO_0000035> <https://w3id.org/pmd/hto/HTO_0000036>))
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000034> <http://purl.obolibrary.org/obo/OBI_0001930>)
 
 # Class: <https://w3id.org/pmd/hto/Hardening> (hardening)
 
@@ -712,7 +723,7 @@ AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/NitridingDepth> "prop
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/NitridingDepth> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/NitridingDepth> "nitriding depth"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/NitridingDepth> " designated nitriding depth or measured nitriding depth "@en)
-SubClassOf(<https://w3id.org/pmd/hto/NitridingDepth> <https://w3id.org/pmd/co/PMD_0000005>)
+SubClassOf(<https://w3id.org/pmd/hto/NitridingDepth> <https://w3id.org/pmd/co/PMD_0040001>)
 
 # Class: <https://w3id.org/pmd/hto/NitridingPotential> (nitriding potential)
 
@@ -948,6 +959,22 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 SubClassOf(<https://w3id.org/pmd/hto/soaking> <https://w3id.org/pmd/hto/HTO_0000000>)
 
 
+############################
+#   Named Individuals
+############################
+
+# Individual: <https://w3id.org/pmd/hto/HTO_0000035> (ON)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000035> "ON"@en)
+DataPropertyAssertion(<https://w3id.org/pmd/co/PMD_0000006> <https://w3id.org/pmd/hto/HTO_0000035> "true"^^xsd:boolean)
+
+# Individual: <https://w3id.org/pmd/hto/HTO_0000036> (OFF)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000036> "OFF"@en)
+DataPropertyAssertion(<https://w3id.org/pmd/co/PMD_0000006> <https://w3id.org/pmd/hto/HTO_0000036> "false"^^xsd:boolean)
+
+
+DifferentIndividuals(<https://w3id.org/pmd/hto/HTO_0000035> <https://w3id.org/pmd/hto/HTO_0000036>)
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-9014-2920> "Henk Birkholz")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0003-1649-6832> "Thomas Hanke")
 AnnotationAssertion(rdfs:label <https://orcid.org/0009-0004-4787-4685> "Felix Thonagel")

@@ -19,8 +19,8 @@ ERROR	multiple_labels	Aufkohlen	rdfs:label	Aufkohlen@de
 ERROR	multiple_labels	Aufkohlen	rdfs:label	carburizing recipe@en
 ERROR	multiple_labels	Erwärmdauer	rdfs:label	Erwärmdauer@de
 ERROR	multiple_labels	Erwärmdauer	rdfs:label	duration till target temperature@en
-ERROR	multiple_labels	set point	rdfs:label	Sollwert@de
-ERROR	multiple_labels	set point	rdfs:label	set point@en
+ERROR	multiple_labels	Sollwert	rdfs:label	Sollwert@de
+ERROR	multiple_labels	Sollwert	rdfs:label	setpoint@en
 ERROR	multiple_labels	hardening	rdfs:label	Härten@de
 ERROR	multiple_labels	hardening	rdfs:label	hardening@en
 ERROR	multiple_labels	Ofenkammer mit einer Heizung.	rdfs:label	Heizkammer@de
@@ -134,8 +134,9 @@ WARN	missing_definition	mass flow controller	IAO:0000115
 WARN	missing_definition	flow measuring function	IAO:0000115	
 WARN	missing_definition	heating rate	IAO:0000115	
 WARN	missing_definition	cooling rate	IAO:0000115	
-WARN	missing_definition	set point	IAO:0000115	
+WARN	missing_definition	Sollwert	IAO:0000115	
 WARN	missing_definition	device operation state	IAO:0000115	
+WARN	missing_definition	device operation state value	IAO:0000115	
 WARN	missing_definition	hardening	IAO:0000115	
 WARN	missing_definition	Ofenkammer mit einer Heizung.	IAO:0000115	
 WARN	missing_definition	Heating Time	IAO:0000115	

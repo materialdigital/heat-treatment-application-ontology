@@ -15,7 +15,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-12-09/hto.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-12-11/hto.owl"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
@@ -23,7 +23,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2025-12-09</owl:versionInfo>
+        <owl:versionInfo>2025-12-11</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -14743,7 +14743,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
         <terms:creator>thonagel</terms:creator>
         <rdfs:comment>Internally (within the devices&apos; logic) a process is run to reach and maintain the given setpoint.</rdfs:comment>
         <rdfs:label xml:lang="de">Sollwert</rdfs:label>
-        <rdfs:label xml:lang="en">set point</rdfs:label>
+        <rdfs:label xml:lang="en">setpoint</rdfs:label>
         <skos:definition xml:lang="en">A Set Point is a device specification that assigns a desired quantitative value to a controlled process parameter, serving as the normative reference for process execution and control.</skos:definition>
         <skos:example>The flow rate for a mass flow controller.
 The target temperature in the furnace chamber for a given process step.
@@ -14760,19 +14760,37 @@ The rotational speed of a fan.</skos:example>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000034"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000602"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <terms:creator>thonagel</terms:creator>
         <rdfs:label xml:lang="en">device operation state</rdfs:label>
         <skos:definition xml:lang="en">A Device Operation State is a state that inheres in a device and specifies whether a device function is currently active or inactive, typically represented in a control or output protocol as an on/off (or analogous binary) indicator.</skos:definition>
         <skos:definition xml:lang="en">Switches are device specifications that triggers a certain function within a device that can only assume two states (on/off).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000034 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000034">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/pmd/hto/HTO_0000035"/>
+                    <rdf:Description rdf:about="https://w3id.org/pmd/hto/HTO_0000036"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
+        <rdfs:label xml:lang="en">device operation state value</rdfs:label>
+        <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
     </owl:Class>
     
 
@@ -14929,7 +14947,7 @@ verwendet Randschichttiefe</skos:example>
     <!-- https://w3id.org/pmd/hto/NitridingDepth -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/NitridingDepth">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000005"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0040001"/>
         <rdfs:comment>propably some thicknes quality on some special fiat continuent part, diffusion layer having nitrid or something</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">nitriding depth</rdfs:label>
@@ -15662,6 +15680,25 @@ verwendet Randschichttiefe</skos:example>
         <rdfs:label xml:lang="en">aggregate state suprasolid</rdfs:label>
         <skos:definition xml:lang="en">A state that exhibits suprafluid and solid properties.</skos:definition>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000035 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/hto/HTO_0000035">
+        <owl:differentFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000036"/>
+        <co:PMD_0000006 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000006>
+        <rdfs:label xml:lang="en">ON</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000036 -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/pmd/hto/HTO_0000036">
+        <co:PMD_0000006 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</co:PMD_0000006>
+        <rdfs:label xml:lang="en">OFF</rdfs:label>
     </owl:NamedIndividual>
     
 

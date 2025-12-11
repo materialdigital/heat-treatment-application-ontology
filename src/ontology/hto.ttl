@@ -15,7 +15,7 @@
 @base <https://w3id.org/pmd/hto.ttl> .
 
 <https://w3id.org/pmd/hto.ttl> rdf:type owl:Ontology ;
-                                owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-12-09/hto.ttl> ;
+                                owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-12-11/hto.ttl> ;
                                 terms:contributor "Jannis Grundmann" ;
                                 terms:creator <https://orcid.org/0000-0002-9014-2920> ,
                                               <https://orcid.org/0000-0003-1649-6832> ,
@@ -23,7 +23,7 @@
                                 terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                 terms:license <https://creativecommons.org/licenses/unspecified> ;
                                 terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                owl:versionInfo "2025-12-09" .
+                                owl:versionInfo "2025-12-11" .
 
 #################################################################
 #    Annotation properties
@@ -10849,7 +10849,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                        terms:creator "thonagel" ;
                                        rdfs:comment "Internally (within the devices' logic) a process is run to reach and maintain the given setpoint." ;
                                        rdfs:label "Sollwert"@de ,
-                                                  "set point"@en ;
+                                                  "setpoint"@en ;
                                        skos:definition "A Set Point is a device specification that assigns a desired quantitative value to a controlled process parameter, serving as the normative reference for process execution and control."@en ;
                                        skos:example """The flow rate for a mass flow controller.
 The target temperature in the furnace chamber for a given process step.
@@ -10862,16 +10862,28 @@ The rotational speed of a fan.""" ;
                                        rdfs:subClassOf co:PMD_0060006 ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty obo:BFO_0000051 ;
-                                                         owl:someValuesFrom obo:OBI_0001930
+                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000034>
                                                        ] ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty obo:IAO_0000136 ;
-                                                         owl:someValuesFrom obo:BFO_0000034
+                                                         owl:someValuesFrom co:PMD_0000602
                                                        ] ;
                                        terms:creator "thonagel" ;
                                        rdfs:label "device operation state"@en ;
                                        skos:definition "A Device Operation State is a state that inheres in a device and specifies whether a device function is currently active or inactive, typically represented in a control or output protocol as an on/off (or analogous binary) indicator."@en ,
                                                        "Switches are device specifications that triggers a certain function within a device that can only assume two states (on/off)."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000034
+<https://w3id.org/pmd/hto/HTO_0000034> rdf:type owl:Class ;
+                                       owl:equivalentClass [ rdf:type owl:Class ;
+                                                             owl:oneOf ( <https://w3id.org/pmd/hto/HTO_0000035>
+                                                                         <https://w3id.org/pmd/hto/HTO_0000036>
+                                                                       )
+                                                           ] ;
+                                       rdfs:subClassOf obo:OBI_0001930 ;
+                                       rdfs:label "device operation state value"@en ;
+                                       co:PMD_0000060 "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/pmd/hto/Hardening
@@ -10990,7 +11002,7 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/NitridingDepth
 <https://w3id.org/pmd/hto/NitridingDepth> rdf:type owl:Class ;
-                                          rdfs:subClassOf co:PMD_0000005 ;
+                                          rdfs:subClassOf co:PMD_0040001 ;
                                           rdfs:comment "propably some thicknes quality on some special fiat continuent part, diffusion layer having nitrid or something" ;
                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                           rdfs:label "nitriding depth"@en ;
@@ -11517,6 +11529,19 @@ co:PMD_0020125 rdf:type owl:NamedIndividual ;
                rdfs:label "aggregate state suprasolid"@en ;
                skos:definition "A state that exhibits suprafluid and solid properties."@en ;
                co:PMD_0000060 "true"^^xsd:boolean .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000035
+<https://w3id.org/pmd/hto/HTO_0000035> rdf:type owl:NamedIndividual ;
+                                       owl:differentFrom <https://w3id.org/pmd/hto/HTO_0000036> ;
+                                       co:PMD_0000006 "true"^^xsd:boolean ;
+                                       rdfs:label "ON"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000036
+<https://w3id.org/pmd/hto/HTO_0000036> rdf:type owl:NamedIndividual ;
+                                       co:PMD_0000006 "false"^^xsd:boolean ;
+                                       rdfs:label "OFF"@en .
 
 
 #################################################################
