@@ -636,7 +636,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                        <http://purl.org/dc/terms/creator> "thonagel" ;
                                        rdfs:comment "Internally (within the devices' logic) a process is run to reach and maintain the given setpoint." ;
                                        rdfs:label "Sollwert"@de ,
-                                                  "set point"@en ;
+                                                  "setpoint"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "A Set Point is a device specification that assigns a desired quantitative value to a controlled process parameter, serving as the normative reference for process execution and control."@en ;
                                        <http://www.w3.org/2004/02/skos/core#example> """The flow rate for a mass flow controller.
 The target temperature in the furnace chamber for a given process step.
@@ -649,16 +649,28 @@ The rotational speed of a fan.""" ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060006> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                                         owl:someValuesFrom <http://purl.obolibrary.org/obo/OBI_0001930>
+                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000034>
                                                        ] ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                         owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000034>
+                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000602>
                                                        ] ;
                                        <http://purl.org/dc/terms/creator> "thonagel" ;
                                        rdfs:label "device operation state"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "A Device Operation State is a state that inheres in a device and specifies whether a device function is currently active or inactive, typically represented in a control or output protocol as an on/off (or analogous binary) indicator."@en ,
                                                                                         "Switches are device specifications that triggers a certain function within a device that can only assume two states (on/off)."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000034
+<https://w3id.org/pmd/hto/HTO_0000034> rdf:type owl:Class ;
+                                       owl:equivalentClass [ rdf:type owl:Class ;
+                                                             owl:oneOf ( <https://w3id.org/pmd/hto/HTO_0000035>
+                                                                         <https://w3id.org/pmd/hto/HTO_0000036>
+                                                                       )
+                                                           ] ;
+                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001930> ;
+                                       rdfs:label "device operation state value"@en ;
+                                       <https://w3id.org/pmd/co/PMD_0000060> "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/pmd/hto/Hardening
@@ -777,7 +789,7 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/NitridingDepth
 <https://w3id.org/pmd/hto/NitridingDepth> rdf:type owl:Class ;
-                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000005> ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0040001> ;
                                           rdfs:comment "propably some thicknes quality on some special fiat continuent part, diffusion layer having nitrid or something" ;
                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                           rdfs:label "nitriding depth"@en ;
@@ -1048,6 +1060,23 @@ verwendet Randschichttiefe""" .
                                               "soaking"@en ;
                                    <http://www.w3.org/2004/02/skos/core#definition> "Process step during which temperature homogenization is achieved in the component."@en ,
                                                                                     "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/pmd/hto/HTO_0000035
+<https://w3id.org/pmd/hto/HTO_0000035> rdf:type owl:NamedIndividual ;
+                                       owl:differentFrom <https://w3id.org/pmd/hto/HTO_0000036> ;
+                                       <https://w3id.org/pmd/co/PMD_0000006> "true"^^xsd:boolean ;
+                                       rdfs:label "ON"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000036
+<https://w3id.org/pmd/hto/HTO_0000036> rdf:type owl:NamedIndividual ;
+                                       <https://w3id.org/pmd/co/PMD_0000006> "false"^^xsd:boolean ;
+                                       rdfs:label "OFF"@en .
 
 
 #################################################################
