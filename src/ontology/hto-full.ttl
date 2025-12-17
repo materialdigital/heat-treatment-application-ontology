@@ -3097,11 +3097,6 @@ Specific rates, e.g., tensile rate, cooling rate, etc. should be added as  subcl
                co:PMD_0000060 "true"^^xsd:boolean .
 
 
-###  https://w3id.org/pmd/co/PMD_0000017
-co:PMD_0000017 rdf:type owl:Class ;
-               owl:deprecated "true"^^xsd:boolean .
-
-
 ###  https://w3id.org/pmd/co/PMD_0000051
 co:PMD_0000051 rdf:type owl:Class ;
                rdfs:subClassOf [ owl:intersectionOf ( obo:BFO_0000023

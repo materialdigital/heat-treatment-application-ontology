@@ -4278,14 +4278,6 @@ Specific rates, e.g., tensile rate, cooling rate, etc. should be added as  subcl
     
 
 
-    <!-- https://w3id.org/pmd/co/PMD_0000017 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000017">
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/co/PMD_0000051 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000051">

@@ -17,9 +17,6 @@ Annotation(<http://purl.org/dc/terms/license> <https://creativecommons.org/licen
 Annotation(<http://purl.org/dc/terms/title> "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en)
 
 Declaration(Class(<https://w3id.org/pmd/co/HTO_0000039>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0000017>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0000602>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0020113>))
 Declaration(Class(<https://w3id.org/pmd/hto/AccelleratedCooling>))
 Declaration(Class(<https://w3id.org/pmd/hto/AcquisitionDate>))
 Declaration(Class(<https://w3id.org/pmd/hto/Annealing>))
@@ -158,10 +155,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/HTO_0000039> "Abstand von der Oberfläche der Nitridschicht bis zu dem Punkt, an dem die Grenzhärte des Werkstoffs 50 HV über der Kernhärte liegt."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/HTO_0000039> "Distance from the surface of the nitride layer to the point at which the boundary hardness of the material is 50 HV above the core hardness."@en)
 SubClassOf(<https://w3id.org/pmd/co/HTO_0000039> <https://w3id.org/pmd/co/PMD_0040001>)
-
-# Class: <https://w3id.org/pmd/co/PMD_0000017> (<https://w3id.org/pmd/co/PMD_0000017>)
-
-AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/co/PMD_0000017> "true"^^xsd:boolean)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000056> (melting furnace)
 
