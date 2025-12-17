@@ -15,7 +15,7 @@
 @base <https://w3id.org/pmd/hto.ttl> .
 
 <https://w3id.org/pmd/hto.ttl> rdf:type owl:Ontology ;
-                                owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-12-11/hto.ttl> ;
+                                owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-12-17/hto.ttl> ;
                                 terms:contributor "Jannis Grundmann" ;
                                 terms:creator <https://orcid.org/0000-0002-9014-2920> ,
                                               <https://orcid.org/0000-0003-1649-6832> ,
@@ -23,7 +23,7 @@
                                 terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                 terms:license <https://creativecommons.org/licenses/unspecified> ;
                                 terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                owl:versionInfo "2025-12-11" .
+                                owl:versionInfo "2025-12-17" .
 
 #################################################################
 #    Annotation properties
@@ -106,6 +106,10 @@ obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
                 rdfs:label "definition source"@en .
 
 
+###  http://purl.obolibrary.org/obo/IAO_0100001
+obo:IAO_0100001 rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/elements/1.1/source
 dc:source rdf:type owl:AnnotationProperty ;
           rdfs:label "Source" .
@@ -147,8 +151,16 @@ terms:title rdf:type owl:AnnotationProperty ;
             rdfs:label "title" .
 
 
+###  http://www.geneontology.org/formats/oboInOwl#consider
+oboInOwl:consider rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.geneontology.org/formats/oboInOwl#hasExactSynonym
 oboInOwl:hasExactSynonym rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym
+oboInOwl:hasRelatedSynonym rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#label
@@ -2984,6 +2996,17 @@ obo:UO_1000163 rdf:type owl:Class ;
 obo:UO_1000164 rdf:type owl:Class ;
                rdfs:subClassOf obo:UO_0000000 ;
                rdfs:label "mass volume percentage based unit" .
+
+
+###  https://w3id.org/pmd/co/HTO_0000039
+co:HTO_0000039 rdf:type owl:Class ;
+               rdfs:subClassOf co:PMD_0040001 ;
+               dc:source "DIN EN ISO 18203:2022-07 (https://dx.doi.org/10.31030/3344011)" ;
+               rdfs:label "Nitrierhärtetiefe"@de ,
+                          "nitriding hardness depth"@en ;
+               skos:altLabel "NHD" ;
+               skos:definition "Abstand von der Oberfläche der Nitridschicht bis zu dem Punkt, an dem die Grenzhärte des Werkstoffs 50 HV über der Kernhärte liegt."@de ,
+                               "Distance from the surface of the nitride layer to the point at which the boundary hardness of the material is 50 HV above the core hardness."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000000
@@ -10295,22 +10318,24 @@ co:PMD_0200001 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/hto/AccelleratedCooling
 <https://w3id.org/pmd/hto/AccelleratedCooling> rdf:type owl:Class ;
-                                               rdfs:subClassOf co:PMD_0000781 ;
                                                obo:IAO_0000114 "needs work" ;
                                                rdfs:comment "Achieved via convection only."@en ,
+                                                            "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent." ,
                                                             "so convection cooling is a function of a device, it could be realized in a cooling process. definatl needs a better name like acllerated convection cooling function, to be specific" ;
                                                rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                               rdfs:label "accellerated cooling"@en ;
+                                               rdfs:label "obsolete accellerated cooling"@en ;
+                                               owl:deprecated "true"^^xsd:boolean ;
                                                skos:definition "Status of the cooling method active e.g., at the end of the nitriding process"@en .
 
 
 ###  https://w3id.org/pmd/hto/AcquisitionDate
 <https://w3id.org/pmd/hto/AcquisitionDate> rdf:type owl:Class ;
-                                           rdfs:subClassOf obo:IAO_0000109 ;
                                            obo:IAO_0000114 "needs work" ;
-                                           rdfs:comment "is a temperal instant!" ;
+                                           rdfs:comment "The reason for obsoletion is that the term is not clearly defined and of uncertain relevance." ,
+                                                        "is a temperal instant!" ;
                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                           rdfs:label "acquisition date"@en ;
+                                           rdfs:label "obsolete acquisition date"@en ;
+                                           owl:deprecated "true"^^xsd:boolean ;
                                            skos:definition "The point in time a Process Node was commissioned (e.g., the purchase date, first day of use), represented in IEEE 1003 'Seconds since Epoch'. "@en .
 
 
@@ -10324,14 +10349,17 @@ co:PMD_0200001 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/hto/Atmosphere
 <https://w3id.org/pmd/hto/Atmosphere> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/hto/Medium> ;
-                                      rdfs:label "atmosphere"@en ;
+                                      oboInOwl:consider co:PMD_0020113 ;
+                                      rdfs:comment "The reason for obsoletion is that the meaning of the term is ambiguous." ;
+                                      rdfs:label "obsolete atmosphere"@en ;
+                                      owl:deprecated "true"^^xsd:boolean ;
                                       skos:definition "A surrounding influence or environment" .
 
 
 ###  https://w3id.org/pmd/hto/AtmospherePressure
 <https://w3id.org/pmd/hto/AtmospherePressure> rdf:type owl:Class ;
                                               rdfs:subClassOf co:PMD_0000896 ;
+                                              owl:disjointWith <https://w3id.org/pmd/hto/ChamberPressure> ;
                                               rdfs:comment "Effective atmosphere preasure in chamber to keep process save (must be 2-3 mbar above ambient prssure)"@en ,
                                                            "Parameter usually slightly higher than ambient pressure for open process to environment to prevent/reduce diffusion of oxygen into the furnace, e.g. by leckage, to avoid explosive or dangerous atmopheres, could be bar, mbar or Pa"@en ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
@@ -10341,9 +10369,10 @@ co:PMD_0200001 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/hto/BelowAmbientPressure
 <https://w3id.org/pmd/hto/BelowAmbientPressure> rdf:type owl:Class ;
-                                                rdfs:subClassOf obo:BFO_0000145 ;
+                                                rdfs:comment "The reason for obsoletion is that the term is not clearly defined and of uncertain relevance." ;
                                                 rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                                rdfs:label "below ambient pressure"@en ;
+                                                rdfs:label "obsolete below ambient pressure"@en ;
+                                                owl:deprecated "true"^^xsd:boolean ;
                                                 skos:definition "status of atmosphere: reduced pressure below ambient pressure "@en .
 
 
@@ -10373,7 +10402,7 @@ co:PMD_0200001 rdf:type owl:Class ;
                                    rdfs:subClassOf obo:BFO_0000024 ;
                                    obo:IAO_0000114 "needs work" ;
                                    rdfs:comment "moved to fiat object part. correct if every furnace has a chamber" ,
-                                                "unklare Zuordnung innerhalb der \"spec. dep. continuants\". Eine Kammer existiert nur als Teil eines Gerätes (Device), könnte aber selbst noch einmal als independent continuant definiert werden, da sich in der Kammer Chargen, Gestelle, Thermoelemente etc. befinden."@de ;
+                                                "unklare Zuordnung innerhalb der SDCs. Eine Kammer existiert nur als Teil eines Gerätes (Device), könnte aber selbst noch einmal als independent continuant definiert werden, da sich in der Kammer Chargen, Gestelle, Thermoelemente etc. befinden."@de ;
                                    rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                    rdfs:label "chamber"@en ;
                                    skos:definition "Systemboundary of a distinct Heattreatment Process. Typically includes medium (e.g., Helium or Vacuum)."@en .
@@ -10420,23 +10449,26 @@ can be: heating chamber / cooling chamber"""@en .
 
 ###  https://w3id.org/pmd/hto/CollectionInterfaceHint
 <https://w3id.org/pmd/hto/CollectionInterfaceHint> rdf:type owl:Class ;
-                                                   rdfs:subClassOf co:PMD_0000017 ;
+                                                   rdfs:comment "The reason for obsoletion is that the term is not clearly defined and of uncertain relevance." ;
                                                    rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                                   rdfs:label "collection interface hint"@en ;
+                                                   rdfs:label "obsolete collection interface hint"@en ;
+                                                   owl:deprecated "true"^^xsd:boolean ;
                                                    skos:definition "A label in support of identifying a network interface and/or address used by a process node to provide primary data stored in ontologies "@en .
 
 
 ###  https://w3id.org/pmd/hto/ConcentrationH2
 <https://w3id.org/pmd/hto/ConcentrationH2> rdf:type owl:Class ;
-                                           rdfs:subClassOf <https://w3id.org/pmd/hto/FurnaceAtmosphere> ;
+                                           oboInOwl:consider obo:IAO_0000005 ;
                                            rdfs:comment "Ammonia is usually intenionally induced;"@en ,
                                                         "Einzelne Werte durch auf das Molekül spezifizierte Messsonden."@de ,
                                                         "Hydrogen can be formed during decomposition of e.g. ammonia, acetylene or can be intenionally induced e.g. in forming gas." ,
                                                         "Might be calculated from model or measurement."@en ,
                                                         "Oxygen concentration in process gas composition, oxygen can be formed during decomposition of e.g. carbon monoxide or dioxide or can be intenionally induced e.g. as air, synthetic air or water or enters the furnace via leckage."@en ,
+                                                        "The reason for obsoletion is that the term is not clearly defined." ,
                                                         "Water concentration in process gas composition, if nominal water is intenionally induced; units could be e.g. mol/m³ or °C; signal could be in mA or mV or in vol.-% or °C (dew point)"@en ;
                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                           rdfs:label "concentration"@en ;
+                                           rdfs:label "obsolete concentration"@en ;
+                                           owl:deprecated "true"^^xsd:boolean ;
                                            skos:definition "Concentration in process gas composition; units could be e.g. mol/m³; signal could be in mA or mV or in vol.-%"@en .
 
 
@@ -10446,6 +10478,7 @@ can be: heating chamber / cooling chamber"""@en .
                                       rdfs:comment "definition is not enough, what is controlled?" ;
                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                       rdfs:label "controlled"@en ;
+                                      owl:deprecated "true"^^xsd:boolean ;
                                       skos:definition "This Scope expresses that a :ValueObject is actively controlled during the process, e.g. a heating process where the temperature change is done in controlled intervals until the desired temperature is reached while an uncontrolled heating process would reach the desired temperature as fast as the furnace allows it to."@en .
 
 
@@ -10455,6 +10488,7 @@ can be: heating chamber / cooling chamber"""@en .
                                       rdfs:comment "if its a device specification to run a heat up process by some spefiic mode of action, then pls change the definition" ;
                                       rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                       rdfs:label "convection"@en ;
+                                      owl:deprecated "true"^^xsd:boolean ;
                                       skos:definition "konvection during heating, heating in atmosphere, not in vacuum "@en .
 
 
@@ -10468,27 +10502,32 @@ can be: heating chamber / cooling chamber"""@en .
 
 ###  https://w3id.org/pmd/hto/DurationTillTargetTemperature
 <https://w3id.org/pmd/hto/DurationTillTargetTemperature> rdf:type owl:Class ;
-                                                         rdfs:subClassOf obo:BFO_0000202 ;
                                                          rdfs:comment "Erwärmdauer = Heizzeit + Durchwärmdauer"@de ,
-                                                                      "Maß für die tatsächliche Dauer eines Erwärmvorgangs."@de ;
+                                                                      "Maß für die tatsächliche Dauer eines Erwärmvorgangs."@de ,
+                                                                      "The reason for obsoletion is that the term is not clearly defined." ;
                                                          rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                                         rdfs:label "Erwärmdauer"@de ,
-                                                                    "duration till target temperature"@en ;
+                                                         rdfs:label "obsolete Erwärmdauer"@de ,
+                                                                    "obsolete duration till target temperature"@en ;
+                                                         owl:deprecated "true"^^xsd:boolean ;
                                                          skos:definition "Measurement representing the actual duration of a heating procedure."@en .
 
 
 ###  https://w3id.org/pmd/hto/DurationToReachTargetTemperature
 <https://w3id.org/pmd/hto/DurationToReachTargetTemperature> rdf:type owl:Class ;
-                                                            rdfs:subClassOf obo:BFO_0000202 ;
+                                                            oboInOwl:consider <https://w3id.org/pmd/hto/HTO_0000009> ;
+                                                            rdfs:comment "The reason for obsoletion is that the term is not clearly defined or of unclear importance." ;
                                                             rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                                            rdfs:label "duration to reach target temperature"@en ;
+                                                            rdfs:label "obsolete duration to reach target temperature"@en ;
+                                                            owl:deprecated "true"^^xsd:boolean ;
                                                             skos:definition "Parameter representing a derived duration of a heat up segment (in hours, minutes or seconds) "@en .
 
 
 ###  https://w3id.org/pmd/hto/Fan
 <https://w3id.org/pmd/hto/Fan> rdf:type owl:Class ;
                                rdfs:subClassOf co:PMD_0000602 ;
-                               rdfs:comment "not properly defined" .
+                               rdfs:comment "not properly defined" ;
+                               rdfs:label "fan"@en ;
+                               skos:definition "A device that creates airflow." .
 
 
 ###  https://w3id.org/pmd/hto/FanStateFast
@@ -10496,6 +10535,7 @@ can be: heating chamber / cooling chamber"""@en .
                                         rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000033> ;
                                         obo:IAO_0000114 "needs work" ;
                                         rdfs:label "fan state fast"@en ;
+                                        owl:deprecated "true"^^xsd:boolean ;
                                         skos:definition "Boolean parameter representing a fast fan speed setting in contrast to the default speed setting."@en .
 
 
@@ -10514,16 +10554,20 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 
 ###  https://w3id.org/pmd/hto/Fluid
 <https://w3id.org/pmd/hto/Fluid> rdf:type owl:Class ;
-                                 rdfs:subClassOf <https://w3id.org/pmd/hto/Medium> ;
-                                 rdfs:label "fluid"@en ;
+                                 obo:IAO_0100001 co:PMD_0020113 ;
+                                 rdfs:comment "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent." ;
+                                 rdfs:label "obsolete fluid"@en ;
+                                 owl:deprecated "true"^^xsd:boolean ;
                                  skos:definition "A substance (such as a liquid or gas) tending to flow or conform to the outline of its container" .
 
 
 ###  https://w3id.org/pmd/hto/FurnaceAtmosphere
 <https://w3id.org/pmd/hto/FurnaceAtmosphere> rdf:type owl:Class ;
-                                             rdfs:subClassOf obo:IAO_0000005 ;
+                                             oboInOwl:consider obo:IAO_0000005 ;
+                                             rdfs:comment "The reason for obsoletion is that the term is not clearly defined." ;
                                              rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                             rdfs:label "furnace atmosphere"@en ;
+                                             rdfs:label "obsolete furnace atmosphere"@en ;
+                                             owl:deprecated "true"^^xsd:boolean ;
                                              skos:definition "atmosphere type present in retort (vacuum, nitriding, neutral, carburizing)"@en .
 
 
@@ -10785,7 +10829,9 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 ###  https://w3id.org/pmd/hto/HTO_0000022
 <https://w3id.org/pmd/hto/HTO_0000022> rdf:type owl:Class ;
                                        rdfs:subClassOf co:PMD_0000779 ;
-                                       rdfs:label "quenching and tempering"@en .
+                                       rdfs:label "Vergüten"@de ,
+                                                  "quenching and tempering"@en ;
+                                       skos:altLabel "QT"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000023
@@ -10834,13 +10880,15 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 ###  https://w3id.org/pmd/hto/HTO_0000030
 <https://w3id.org/pmd/hto/HTO_0000030> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000005> ;
-                                       rdfs:label "heating rate"@en .
+                                       rdfs:label "heating rate"@en ;
+                                       skos:definition "A temperature change rate that is of positive value." .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000031
 <https://w3id.org/pmd/hto/HTO_0000031> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000005> ;
-                                       rdfs:label "cooling rate"@en .
+                                       rdfs:label "cooling rate"@en ;
+                                       skos:definition "A temperature change rate that is of negative value." .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000032
@@ -10909,7 +10957,7 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/HeatingChamber
 <https://w3id.org/pmd/hto/HeatingChamber> rdf:type owl:Class ;
-                                          rdfs:subClassOf <https://w3id.org/pmd/hto/ChamberScope> ;
+                                          rdfs:subClassOf <https://w3id.org/pmd/hto/Chamber> ;
                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                           rdfs:label "Heizkammer"@de ,
                                                      "Ofenkammer mit einer Heizung."@de ,
@@ -10919,10 +10967,12 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/HeatingTime
 <https://w3id.org/pmd/hto/HeatingTime> rdf:type owl:Class ;
-                                       rdfs:subClassOf obo:BFO_0000202 ;
+                                       oboInOwl:consider <https://w3id.org/pmd/hto/HTO_0000009> ;
+                                       rdfs:comment "The reason for obsoletion is that the term is not clearly defined or of unclear importance." ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                       rdfs:label "Erwärmdauer"@de ,
-                                                  "Heating Time"@en ;
+                                       rdfs:label "obsolete Erwärmdauer"@de ,
+                                                  "obsolete Heating Time"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
                                        skos:definition "Dauer bis zum Erreichen der Zieltemperatur im Ofen."@de ,
                                                        "Duration until the target temperature is reached in the furnace."@en .
 
@@ -10967,29 +11017,24 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/LeakageCheck
 <https://w3id.org/pmd/hto/LeakageCheck> rdf:type owl:Class ;
-                                        rdfs:subClassOf obo:BFO_0000202 ;
+                                        oboInOwl:consider <https://w3id.org/pmd/hto/HTO_0000009> ;
+                                        rdfs:comment "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent." ;
                                         rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                        rdfs:label "leakage check"@en ;
+                                        rdfs:label "obsolete leakage check"@en ;
+                                        owl:deprecated "true"^^xsd:boolean ;
                                         skos:definition "leakage test duration, where the change of pressure after evacuation is rated according to leakages present "@en ,
                                                         "stands for the dwell time during which the pressure increase is evaluated to check tighness of furnace after evacuation initially at process begin "@en .
 
 
 ###  https://w3id.org/pmd/hto/LeakageInterval
 <https://w3id.org/pmd/hto/LeakageInterval> rdf:type owl:Class ;
-                                           rdfs:subClassOf obo:BFO_0000202 ;
-                                           rdfs:comment "Stands for the measurement interval for recording sensor signals (pressure, temperature) and instrument settings (rotational speed, flow rate of MFC), unit as time stamp hh:mm:ss "@en ;
+                                           oboInOwl:consider <https://w3id.org/pmd/hto/HTO_0000009> ;
+                                           rdfs:comment "Stands for the measurement interval for recording sensor signals (pressure, temperature) and instrument settings (rotational speed, flow rate of MFC), unit as time stamp hh:mm:ss "@en ,
+                                                        "The reason for obsoletion is that the term is not clearly defined." ;
                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                           rdfs:label "leakage interval"@en ;
+                                           rdfs:label "obsolete leakage interval"@en ;
+                                           owl:deprecated "true"^^xsd:boolean ;
                                            skos:definition "effective leakage measuring duration "@en .
-
-
-###  https://w3id.org/pmd/hto/Medium
-<https://w3id.org/pmd/hto/Medium> rdf:type owl:Class ;
-                                  rdfs:subClassOf obo:BFO_0000030 ;
-                                  obo:IAO_0000114 "needs work" ;
-                                  rdfs:comment "no set to be a device specification what to use, but that is not good. medium is a special material entity that has a certain role" ;
-                                  rdfs:label "medium"@en ;
-                                  skos:definition "A surrounding or enveloping substance" .
 
 
 ###  https://w3id.org/pmd/hto/Nitriding
@@ -11002,11 +11047,13 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/NitridingDepth
 <https://w3id.org/pmd/hto/NitridingDepth> rdf:type owl:Class ;
-                                          rdfs:subClassOf co:PMD_0040001 ;
-                                          rdfs:comment "propably some thicknes quality on some special fiat continuent part, diffusion layer having nitrid or something" ;
+                                          obo:IAO_0100001 co:HTO_0000039 ;
+                                          rdfs:comment "The reason for obsoletion is that the meaning of the term is ambiguous." ,
+                                                       "propably some thicknes quality on some special fiat continuent part, diffusion layer having nitrid or something" ;
                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                          rdfs:label "nitriding depth"@en ;
-                                          skos:definition " designated nitriding depth or measured nitriding depth "@en .
+                                          rdfs:label "obsolete nitriding depth"@en ;
+                                          owl:deprecated "true"^^xsd:boolean ;
+                                          skos:definition "designated nitriding depth or measured nitriding depth"@en .
 
 
 ###  https://w3id.org/pmd/hto/NitridingPotential
@@ -11021,10 +11068,12 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/OilQuenchingDuration
 <https://w3id.org/pmd/hto/OilQuenchingDuration> rdf:type owl:Class ;
-                                                rdfs:subClassOf obo:BFO_0000202 ;
+                                                oboInOwl:consider <https://w3id.org/pmd/hto/HTO_0000009> ;
+                                                rdfs:comment "The reason for obsoletion is that the term is not clearly defined or of unclear importance." ;
                                                 rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                                rdfs:label "Abschreckdauer"@de ,
-                                                           "Oil Quenching Duration"@en ;
+                                                rdfs:label "obsolete Abschreckdauer"@de ,
+                                                           "obsolete Oil Quenching Duration"@en ;
+                                                owl:deprecated "true"^^xsd:boolean ;
                                                 skos:definition "Dwell time of the components in the quenching medium."@en ,
                                                                 "Parameter indicating the duration of the conducted quenching action "@en ,
                                                                 "Verweildauer der Bauteile im Abschreckmedium."@de .
@@ -11032,10 +11081,12 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/OverPressure
 <https://w3id.org/pmd/hto/OverPressure> rdf:type owl:Class ;
-                                        rdfs:subClassOf co:PMD_0000896 ;
                                         obo:IAO_0000114 "needs work" ;
+                                        obo:IAO_0100001 co:PMD_0000896 ;
+                                        rdfs:comment "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent." ;
                                         rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                        rdfs:label "over pressure"@en ;
+                                        rdfs:label "obsolete over pressure"@en ;
+                                        owl:deprecated "true"^^xsd:boolean ;
                                         skos:definition " Parameter also for liquid or gaseous media for quenching condition of inductive heat treatments, e.g. water pressure or nitrogen pressure in mbar or bar "@en ,
                                                         "Parameter describing a significant higher pressure than ambient pressure, e.g. during a high pressure gas quenching process step, could be mbar or bar "@en .
 
@@ -11063,7 +11114,7 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/QuenchingChamber
 <https://w3id.org/pmd/hto/QuenchingChamber> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://w3id.org/pmd/hto/ChamberScope> ;
+                                            rdfs:subClassOf <https://w3id.org/pmd/hto/Chamber> ;
                                             rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                             rdfs:label "Abschreckkammer"@de ,
                                                        "Quenching Chamber"@en ;
@@ -11073,10 +11124,12 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/QuenchingLeadtime
 <https://w3id.org/pmd/hto/QuenchingLeadtime> rdf:type owl:Class ;
-                                             rdfs:subClassOf obo:BFO_0000202 ;
+                                             oboInOwl:consider <https://w3id.org/pmd/hto/HTO_0000009> ;
+                                             rdfs:comment "The reason for obsoletion is that the term is not clearly defined or of unclear importance." ;
                                              rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                             rdfs:label "Abschreckvorlaufzeit"@de ,
-                                                        "Quenching Leadtime"@en ;
+                                             rdfs:label "obsolete Abschreckvorlaufzeit"@de ,
+                                                        "obsolete Quenching Leadtime"@en ;
+                                             owl:deprecated "true"^^xsd:boolean ;
                                              skos:definition "Dauer zwischen Verlassen der Heizkammer und Beginn der effektiven Abschreckung. Gilt für Zweikammeröfen."@de ,
                                                              "Duration between leaving the heating chamber and the start of effective quenching. Applies to two-chamber furnaces."@en ,
                                                              "Parameter indicatin the duration right before the quenching  process "@en .
@@ -11084,10 +11137,12 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/RecordingInterval
 <https://w3id.org/pmd/hto/RecordingInterval> rdf:type owl:Class ;
-                                             rdfs:subClassOf obo:BFO_0000202 ;
-                                             rdfs:comment "stands for the measurement interval for recording sensor signals (pressure, temperature) and instrument settings (rotational speed, flow rate of MFC), unit as time stamp hh:mm:ss "@en ;
+                                             oboInOwl:consider <https://w3id.org/pmd/hto/HTO_0000009> ;
+                                             rdfs:comment "The reason for obsoletion is that the term is not clearly defined." ,
+                                                          "stands for the measurement interval for recording sensor signals (pressure, temperature) and instrument settings (rotational speed, flow rate of MFC), unit as time stamp hh:mm:ss "@en ;
                                              rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                             rdfs:label "recording interval"@en ;
+                                             rdfs:label "obsolete recording interval"@en ;
+                                             owl:deprecated "true"^^xsd:boolean ;
                                              skos:definition " effective data aquisition and saving interval for documentation "@en .
 
 
@@ -11104,26 +11159,29 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/SequenceDescriptor
 <https://w3id.org/pmd/hto/SequenceDescriptor> rdf:type owl:Class ;
-                                              rdfs:subClassOf co:PMD_0000017 ;
+                                              rdfs:comment "The reason for obsoletion is that the term is not clearly defined and of uncertain relevance." ;
                                               rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                              rdfs:label "sequence descriptor"@en ;
+                                              rdfs:label "obsolete sequence descriptor"@en ;
+                                              owl:deprecated "true"^^xsd:boolean ;
                                               skos:definition "Label of a given process step within a process recipe."@en .
 
 
 ###  https://w3id.org/pmd/hto/SequenceDuration
 <https://w3id.org/pmd/hto/SequenceDuration> rdf:type owl:Class ;
-                                            rdfs:subClassOf obo:BFO_0000202 ;
-                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                            rdfs:label "sequence duration"@en ;
-                                            skos:definition "Duration of a sequence for which certain furnace settings and process parameters can be defined."@en ,
-                                                            "Duration of the current heat treatment recipe sequence."@en .
+                                            rdfs:comment "The reason for obsoletion is that the term is not clearly defined or of unclear importance." ;
+                                            rdfs:label "DEPRECATED sequence duration"@en ;
+                                            rdfs:seeAlso <https://w3id.org/pmd/hto/HTO_0000009> ;
+                                            owl:deprecated "true"^^xsd:boolean ;
+                                            skos:definition "DEPRECATED Duration of a sequence for which certain furnace settings and process parameters can be defined."@en ,
+                                                            "DEPRECATED Duration of the current heat treatment recipe sequence."@en .
 
 
 ###  https://w3id.org/pmd/hto/SequenceNumber
 <https://w3id.org/pmd/hto/SequenceNumber> rdf:type owl:Class ;
-                                          rdfs:subClassOf co:PMD_0000017 ;
+                                          rdfs:comment "The reason for obsoletion is that the term is not clearly defined and of uncertain relevance." ;
                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                          rdfs:label "sequence number"@en ;
+                                          rdfs:label "obsolete sequence number"@en ;
+                                          owl:deprecated "true"^^xsd:boolean ;
                                           skos:definition " An identifier indicating a process-number in a Workflow represented via consecutive integers "@en ,
                                                           "number of process step of heat treatment recipe "@en ,
                                                           "ongoing number for labeling the process steps within a process recipe "@en .
@@ -11142,10 +11200,12 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/SoakingDuration
 <https://w3id.org/pmd/hto/SoakingDuration> rdf:type owl:Class ;
-                                           rdfs:subClassOf obo:BFO_0000202 ;
+                                           oboInOwl:consider <https://w3id.org/pmd/hto/HTO_0000009> ;
+                                           rdfs:comment "The reason for obsoletion is that the term is not clearly defined or of unclear importance." ;
                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                           rdfs:label "Durchwärmzeit"@de ,
-                                                      "soaking duration"@en ;
+                                           rdfs:label "obsolete Durchwärmzeit"@de ,
+                                                      "obsolete soaking duration"@en ;
+                                           owl:deprecated "true"^^xsd:boolean ;
                                            skos:definition "Dauer bis zum Erreichen der homogenen Temperatur im Bauteil."@de ,
                                                            "Duration at isothermal temperatur step."@en ,
                                                            "Duration to achieve a homogenous temperature distribution in the part"@en .
@@ -11153,11 +11213,12 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/SystemTimeForDiagramGeneration
 <https://w3id.org/pmd/hto/SystemTimeForDiagramGeneration> rdf:type owl:Class ;
-                                                          rdfs:subClassOf obo:IAO_0000109 ;
                                                           obo:IAO_0000114 "needs work" ;
-                                                          rdfs:comment "usualy a diagram is created out of a process, and it exists then" ;
+                                                          rdfs:comment "The reason for obsoletion is that the term is not clearly defined and of uncertain relevance." ,
+                                                                       "usualy a diagram is created out of a process, and it exists then" ;
                                                           rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                                          rdfs:label "system time for diagram generation"@en ;
+                                                          rdfs:label "obsolete system time for diagram generation"@en ;
+                                                          owl:deprecated "true"^^xsd:boolean ;
                                                           skos:definition " Extrahierte Systemzeit für das Diagram geniert "@de ,
                                                                           "time stamp for measuring data aquisition time and diagram generation / data syncing "@en .
 
@@ -11177,12 +11238,13 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/TypeDescription
 <https://w3id.org/pmd/hto/TypeDescription> rdf:type owl:Class ;
-                                           rdfs:subClassOf co:PMD_0000017 ;
                                            obo:IAO_0000114 "marked to remove" ;
-                                           rdfs:comment "makes no sense to me, if its a decription, create a dc:decription on that individual or class" ;
+                                           rdfs:comment "The reason for obsoletion is that the term is not clearly defined and of uncertain relevance." ,
+                                                        "makes no sense to me, if its a decription, create a dc:decription on that individual or class" ;
                                            rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                           rdfs:label "Typbeschreibung"@de ,
-                                                      "Type Description"@en ;
+                                           rdfs:label "obsolete Typbeschreibung"@de ,
+                                                      "obsolete Type Description"@en ;
+                                           owl:deprecated "true"^^xsd:boolean ;
                                            skos:definition "Description for Process Node's utility, e.g. \"Rear Vacuum Furnace Oil Quenching\"."@en .
 
 
