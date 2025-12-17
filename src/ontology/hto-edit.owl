@@ -86,10 +86,6 @@
                                                                                        "Distance from the surface of the nitride layer to the point at which the boundary hardness of the material is 50 HV above the core hardness."@en .
 
 
-###  https://w3id.org/pmd/co/PMD_0000017
-<https://w3id.org/pmd/co/PMD_0000017> rdf:type owl:Class ;
-                                      owl:deprecated "true"^^xsd:boolean .
-
 
 ###  https://w3id.org/pmd/co/PMD_0000056
 <https://w3id.org/pmd/co/PMD_0000056> owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0000655>
@@ -102,10 +98,6 @@
                                                           ] .
 
 
-###  https://w3id.org/pmd/co/PMD_0000602
-<https://w3id.org/pmd/co/PMD_0000602> rdf:type owl:Class .
-
-
 ###  https://w3id.org/pmd/co/PMD_0000655
 <https://w3id.org/pmd/co/PMD_0000655> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
@@ -115,10 +107,6 @@
                                                         owl:onProperty <http://purl.obolibrary.org/obo/RO_0000085> ;
                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000054>
                                                       ] .
-
-
-###  https://w3id.org/pmd/co/PMD_0020113
-<https://w3id.org/pmd/co/PMD_0020113> rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/hto/AccelleratedCooling
