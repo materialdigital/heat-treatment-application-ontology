@@ -81,10 +81,9 @@
                                       <http://purl.org/dc/elements/1.1/source> "DIN EN ISO 18203:2022-07 (https://dx.doi.org/10.31030/3344011)" ;
                                       rdfs:label "Nitrierhärtetiefe"@de ,
                                                  "nitriding hardness depth"@en ;
-                                      <http://www.w3.org/2004/02/skos/core#altLabel> "NHD" ;
                                       <http://www.w3.org/2004/02/skos/core#definition> "Abstand von der Oberfläche der Nitridschicht bis zu dem Punkt, an dem die Grenzhärte des Werkstoffs 50 HV über der Kernhärte liegt."@de ,
-                                                                                       "Distance from the surface of the nitride layer to the point at which the boundary hardness of the material is 50 HV above the core hardness."@en .
-
+                                                                                       "Distance from the surface of the nitride layer to the point at which the boundary hardness of the material is 50 HV above the core hardness."@en ;
+                                      <https://w3id.org/pmd/co/PMD_0050117> "NHD" .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000056
