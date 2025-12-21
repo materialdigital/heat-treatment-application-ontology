@@ -25,6 +25,7 @@ https://w3id.org/pmd/co/PMD_0000009
 https://w3id.org/pmd/co/PMD_0000060
 https://w3id.org/pmd/co/PMD_0000064
 https://w3id.org/pmd/co/PMD_0020127
+https://w3id.org/pmd/co/PMD_0050117
 https://w3id.org/pmd/hto/
 https://w3id.org/pmd/hto/AccelleratedCooling
 https://w3id.org/pmd/hto/AcquisitionDate

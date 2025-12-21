@@ -13,7 +13,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto/hto-simple.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-12-17/hto-simple.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2025-12-21/hto-simple.owl"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
@@ -21,7 +21,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2025-12-17</owl:versionInfo>
+        <owl:versionInfo>2025-12-21</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -222,6 +222,17 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- https://w3id.org/pmd/co/PMD_0001032 -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/pmd/co/PMD_0001032"/>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0050117 -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/pmd/co/PMD_0050117">
+        <rdfs:label xml:lang="en">abbreviation</rdfs:label>
+        <skos:definition xml:lang="en">A textual annotation used to specify a commonly accepted abbreviation, acronym, or shortened form of a class label. This property is intended to support concise referencing of ontology classes, especially when standard abbreviations are widely used in practice.</skos:definition>
+        <skos:example xml:lang="en">&quot;DNA&quot; for &quot;Deoxyribonucleic Acid&quot;</skos:example>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    </owl:AnnotationProperty>
     
 
 

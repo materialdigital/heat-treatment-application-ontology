@@ -165,6 +165,7 @@ Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#example>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#prefLabel>))
 Declaration(AnnotationProperty(<https://w3id.org/pmd/co/PMD_0000060>))
 Declaration(AnnotationProperty(<https://w3id.org/pmd/co/PMD_0000064>))
+Declaration(AnnotationProperty(<https://w3id.org/pmd/co/PMD_0050117>))
 ############################
 #   Annotation Properties
 ############################
@@ -173,7 +174,7 @@ Declaration(AnnotationProperty(<https://w3id.org/pmd/co/PMD_0000064>))
 
 AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/description> "description")
 
-# Annotation Property: <http://purl.org/dc/terms/license> (dcterms:license)
+# Annotation Property: <http://purl.org/dc/terms/license> (license)
 
 AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/license> "license")
 
@@ -194,16 +195,16 @@ AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/title> "title")
 AnnotationAssertion(<http://purl.org/dc/elements/1.1/source> <https://w3id.org/pmd/co/HTO_0000039> "DIN EN ISO 18203:2022-07 (https://dx.doi.org/10.31030/3344011)")
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/HTO_0000039> "Nitrierhärtetiefe"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/HTO_0000039> "nitriding hardness depth"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/co/HTO_0000039> "NHD")
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/HTO_0000039> "Abstand von der Oberfläche der Nitridschicht bis zu dem Punkt, an dem die Grenzhärte des Werkstoffs 50 HV über der Kernhärte liegt."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/HTO_0000039> "Distance from the surface of the nitride layer to the point at which the boundary hardness of the material is 50 HV above the core hardness."@en)
+AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0050117> <https://w3id.org/pmd/co/HTO_0000039> "NHD")
 SubClassOf(<https://w3id.org/pmd/co/HTO_0000039> <https://w3id.org/pmd/co/PMD_0040001>)
 
 # Class: <https://w3id.org/pmd/co/PMD_0000056> (melting furnace)
 
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000057>)))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000655> (Ofen)
+# Class: <https://w3id.org/pmd/co/PMD_0000655> (furnace)
 
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Chamber>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))
