@@ -13,7 +13,7 @@
 @base <https://w3id.org/pmd/hto/hto-base.ttl> .
 
 <https://w3id.org/pmd/hto/hto-base.ttl> rdf:type owl:Ontology ;
-                                         owl:versionIRI <https://w3id.org/pmd/hto/releases/2025-12-21/hto-base.ttl> ;
+                                         owl:versionIRI <https://w3id.org/pmd/hto/releases/2026-01-08/hto-base.ttl> ;
                                          dc:type obo:IAO_8000001 ;
                                          terms:contributor "Jannis Grundmann" ;
                                          terms:creator <https://orcid.org/0000-0002-9014-2920> ,
@@ -22,7 +22,7 @@
                                          terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                          terms:license <https://creativecommons.org/licenses/unspecified> ;
                                          terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                         owl:versionInfo "2025-12-21" .
+                                         owl:versionInfo "2026-01-08" .
 
 #################################################################
 #    Annotation properties
@@ -34,6 +34,10 @@ obo:IAO_0000114 rdf:type owl:AnnotationProperty .
 
 ###  http://purl.obolibrary.org/obo/IAO_0000115
 obo:IAO_0000115 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000116
+obo:IAO_0000116 rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0100001
@@ -736,10 +740,32 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 
 ###  https://w3id.org/pmd/hto/HTO_0000022
 <https://w3id.org/pmd/hto/HTO_0000022> rdf:type owl:Class ;
-                                       rdfs:subClassOf co:PMD_0000779 ;
+                                       rdfs:subClassOf _:genid47 ;
+                                       obo:IAO_0000116 "the axiom should also include the order of the process (hardening precedes tempering)"@en ;
                                        rdfs:label "Vergüten"@de ,
                                                   "quenching and tempering"@en ;
-                                       skos:altLabel "QT"@en .
+                                       skos:altLabel "QT"@en ;
+                                       skos:definition "QT is a heat treatment process in which a hardening process is followed by a tempering process."@en ,
+                                                       "Vergüten ist ein Wärmebehandlungsverfahren bei dem auf ein Härtungsprozess ein Anlassprozess folgt."@de .
+
+_:genid47 owl:intersectionOf ( co:PMD_0000779
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom <https://w3id.org/pmd/hto/Hardening>
+                                ]
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom <https://w3id.org/pmd/hto/Tempering>
+                                ]
+                              ) ;
+           rdf:type owl:Class .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <https://w3id.org/pmd/hto/HTO_0000022> ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget _:genid47 ;
+   obo:IAO_0000116 "this axiom should also include the order of the process (hardening precedes tempering)"
+ ] .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000023

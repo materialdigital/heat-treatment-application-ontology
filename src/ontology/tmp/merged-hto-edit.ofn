@@ -150,6 +150,7 @@ Declaration(NamedIndividual(<https://w3id.org/pmd/hto/HTO_0000035>))
 Declaration(NamedIndividual(<https://w3id.org/pmd/hto/HTO_0000036>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000114>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0100001>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
@@ -573,10 +574,13 @@ EquivalentClasses(<https://w3id.org/pmd/hto/HTO_0000021> ObjectIntersectionOf(<h
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000022> (Vergüten)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://w3id.org/pmd/hto/HTO_0000022> "the axiom should also include the order of the process (hardening precedes tempering)"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000022> "Vergüten"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000022> "quenching and tempering"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/hto/HTO_0000022> "QT"@en)
-SubClassOf(<https://w3id.org/pmd/hto/HTO_0000022> <https://w3id.org/pmd/co/PMD_0000779>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000022> "QT is a heat treatment process in which a hardening process is followed by a tempering process."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000022> "Vergüten ist ein Wärmebehandlungsverfahren bei dem auf ein Härtungsprozess ein Anlassprozess folgt."@de)
+SubClassOf(Annotation(<http://purl.obolibrary.org/obo/IAO_0000116> "this axiom should also include the order of the process (hardening precedes tempering)") <https://w3id.org/pmd/hto/HTO_0000022> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000779> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Hardening>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Tempering>)))
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000023> (tempering recipe)
 
