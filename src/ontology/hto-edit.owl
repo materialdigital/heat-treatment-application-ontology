@@ -135,8 +135,10 @@
 <https://w3id.org/pmd/hto/Annealing> rdf:type owl:Class ;
                                      rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000779> ;
                                      rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                     rdfs:label "annealing"@en ;
-                                     <http://www.w3.org/2004/02/skos/core#definition> "Heat treatment process with the scope to change the properties or microstructure of a sample or part. Typically no hardening is performed with this process."@en .
+                                     rdfs:label "Glühen"@de ,
+                                                "annealing"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "Heat treatment process to form a specific microstructure or reduce residual stresses."@en ,
+                                                                                      "Wärmebehandlung um eine bestimmte Gefügeausbildung zu erzielen oder Spannungen zu reduzieren."@de .
 
 
 ###  https://w3id.org/pmd/hto/Atmosphere
@@ -370,7 +372,10 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 ###  https://w3id.org/pmd/hto/HTO_0000000
 <https://w3id.org/pmd/hto/HTO_0000000> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000833> ;
-                                       rdfs:label "heat treatment elementals"@en .
+                                       rdfs:comment "intermediate class, not to be instatialized"@en ;
+                                       rdfs:label "Grundsätzliche Wärmebehandlungsvorgänge"@de ,
+                                                  "heat treatment essentials"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "Essential processes that make up heat treatments and can be used like building blocks."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000001
@@ -575,13 +580,16 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 ###  https://w3id.org/pmd/hto/HTO_0000019
 <https://w3id.org/pmd/hto/HTO_0000019> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/hto/Hardening> ;
-                                       rdfs:label "surface hardening"@en .
+                                       rdfs:label "Oberflächenhärtung"@de ,
+                                                  "surface hardening"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "Randschichthärtung"@de .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000020
 <https://w3id.org/pmd/hto/HTO_0000020> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/hto/Hardening> ;
-                                       rdfs:label "through hardening"@en .
+                                       rdfs:label "Durchhärten"@de ,
+                                                  "through hardening"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000021
@@ -614,7 +622,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                        <http://www.w3.org/2004/02/skos/core#definition> "QT is a heat treatment process in which a hardening process is followed by a tempering process."@en ,
                                                                                         "Vergüten ist ein Wärmebehandlungsverfahren bei dem auf ein Härtungsprozess ein Anlassprozess folgt."@de .
 
-_:genid50 owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0000779>
+_:genid50 owl:intersectionOf ( <https://w3id.org/pmd/hto/HTO_0000020>
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
                                   owl:someValuesFrom <https://w3id.org/pmd/hto/Hardening>
@@ -643,7 +651,7 @@ _:genid50 owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0000779>
 
 ###  https://w3id.org/pmd/hto/HTO_0000025
 <https://w3id.org/pmd/hto/HTO_0000025> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000779> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000019> ;
                                        rdfs:label "carburizing"@en .
 
 
@@ -744,15 +752,13 @@ The rotational speed of a fan.""" ;
                                      rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                      rdfs:label "Härten"@de ,
                                                 "hardening"@en ;
-                                     <http://www.w3.org/2004/02/skos/core#definition> "Heat treatment process with the aim of achieving an increase in strength and hardness of the material."@en ,
-                                                                                      "Wärmebehandlungprozess mit dem Ziel eine Festigkeitssteigerung zu erreichen."@de ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "Heat treatment process to increase the strength and hardness of the material by cooling it so that its microstructure transforms to the hardening structure."@en ,
+                                                                                      "Wärmebehandlungprozess durch den eine Härte- und Festigkeitssteigerung erreicht wird, in dem das Material mit solcher Geschwindikeit abgekühlt wird, dass ein Härtungsgefüge enstehen kann."@de ;
                                      <http://www.w3.org/2004/02/skos/core#example> """Randschichthärten
 
 Einsatzhärten
 
-Nitrierhärten
-
-verwendet Randschichttiefe""" .
+Nitrierhärten""" .
 
 
 ###  https://w3id.org/pmd/hto/HeatingChamber
@@ -839,10 +845,14 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/Nitriding
 <https://w3id.org/pmd/hto/Nitriding> rdf:type owl:Class ;
-                                     rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000779> ;
+                                     rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000019> ;
                                      rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                     rdfs:label "nitriding"@en ;
-                                     <http://www.w3.org/2004/02/skos/core#definition> "heat treatment process with the scope to increase the nitrogen content in the surface near area of a sample or part"@en .
+                                     rdfs:label "Nitrieren"@de ,
+                                                "nitriding"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#altLabel> "Aufsticken"@de ,
+                                                                                    "Nitridieren"@de ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "Oberflächenhärtungsverfahren bei dem Stickstoff in flüssigem oder gasförmigem Zustand an eine Oberfläche gebracht wird, mit dem Ziel den Stickstoffgehalt in der Oberfläche des Materials zu erhöhen."@de ,
+                                                                                      "surface hardening process in which nitrogen in liquid or gaseous form is supplied to a material's surface with the goal to increase the nitrogen content in the surface of a sample or part."@en .
 
 
 ###  https://w3id.org/pmd/hto/NitridingDepth
@@ -1025,7 +1035,14 @@ verwendet Randschichttiefe""" .
 
 ###  https://w3id.org/pmd/hto/Tempering
 <https://w3id.org/pmd/hto/Tempering> rdf:type owl:Class ;
-                                     rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000779> ;
+                                     rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0000779>
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000062> ;
+                                                                              owl:someValuesFrom <https://w3id.org/pmd/hto/Hardening>
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ] ;
                                      <http://purl.obolibrary.org/obo/IAO_0000114> "needs work"@en ;
                                      rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                      rdfs:label "Anlassen"@de ,
