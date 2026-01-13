@@ -135,6 +135,7 @@ Declaration(Class(<https://w3id.org/pmd/hto/holding>))
 Declaration(Class(<https://w3id.org/pmd/hto/quenching>))
 Declaration(Class(<https://w3id.org/pmd/hto/soaking>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000062>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000039>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000057>))
@@ -205,7 +206,7 @@ SubClassOf(<https://w3id.org/pmd/co/HTO_0000039> <https://w3id.org/pmd/co/PMD_00
 
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000057>)))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000655> (furnace)
+# Class: <https://w3id.org/pmd/co/PMD_0000655> (Ofen)
 
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Chamber>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))
@@ -234,8 +235,10 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 # Class: <https://w3id.org/pmd/hto/Annealing> (annealing)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/Annealing> <https://w3id.org/pmd/hto/>)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Annealing> "Glühen"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Annealing> "annealing"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Annealing> "Heat treatment process with the scope to change the properties or microstructure of a sample or part. Typically no hardening is performed with this process."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Annealing> "Heat treatment process to form a specific microstructure or reduce residual stresses."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Annealing> "Wärmebehandlung um eine bestimmte Gefügeausbildung zu erzielen oder Spannungen zu reduzieren."@de)
 SubClassOf(<https://w3id.org/pmd/hto/Annealing> <https://w3id.org/pmd/co/PMD_0000779>)
 
 # Class: <https://w3id.org/pmd/hto/Atmosphere> (obsolete atmosphere)
@@ -438,9 +441,12 @@ AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/FurnaceCooling> "tr
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/FurnaceCooling> "free cooling with deactivated heating unit and no additonal cooling by e.g. agitade nitrogene -> furnace cool "@en)
 SubClassOf(<https://w3id.org/pmd/hto/FurnaceCooling> <https://w3id.org/pmd/hto/HeattreatmentMethod>)
 
-# Class: <https://w3id.org/pmd/hto/HTO_0000000> (heat treatment elementals)
+# Class: <https://w3id.org/pmd/hto/HTO_0000000> (Grundsätzliche Wärmebehandlungsvorgänge)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000000> "heat treatment elementals"@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/HTO_0000000> "intermediate class, not to be instatialized"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000000> "Grundsätzliche Wärmebehandlungsvorgänge"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000000> "heat treatment essentials"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000000> "Essential processes that make up heat treatments and can be used like building blocks."@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000000> <https://w3id.org/pmd/co/PMD_0000833>)
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000001> (quenching function)
@@ -557,13 +563,16 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000017> <https://w3id.org/pmd/co/PMD_0
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000018> "nitriding recipe"@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000018> <https://w3id.org/pmd/co/PMD_0060008>)
 
-# Class: <https://w3id.org/pmd/hto/HTO_0000019> (surface hardening)
+# Class: <https://w3id.org/pmd/hto/HTO_0000019> (Oberflächenhärtung)
 
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000019> "Oberflächenhärtung"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000019> "surface hardening"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/hto/HTO_0000019> "Randschichthärtung"@de)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000019> <https://w3id.org/pmd/hto/Hardening>)
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000020> (through hardening)
 
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000020> "Durchhärten"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000020> "through hardening"@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000020> <https://w3id.org/pmd/hto/Hardening>)
 
@@ -580,7 +589,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000022> "quenching
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/hto/HTO_0000022> "QT"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000022> "QT is a heat treatment process in which a hardening process is followed by a tempering process."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000022> "Vergüten ist ein Wärmebehandlungsverfahren bei dem auf ein Härtungsprozess ein Anlassprozess folgt."@de)
-SubClassOf(Annotation(<http://purl.obolibrary.org/obo/IAO_0000116> "this axiom should also include the order of the process (hardening precedes tempering)") <https://w3id.org/pmd/hto/HTO_0000022> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000779> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Hardening>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Tempering>)))
+SubClassOf(Annotation(<http://purl.obolibrary.org/obo/IAO_0000116> "this axiom should also include the order of the process (hardening precedes tempering)") <https://w3id.org/pmd/hto/HTO_0000022> ObjectIntersectionOf(<https://w3id.org/pmd/hto/HTO_0000020> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Hardening>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Tempering>)))
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000023> (tempering recipe)
 
@@ -591,7 +600,7 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000023> <https://w3id.org/pmd/co/PMD_0
 # Class: <https://w3id.org/pmd/hto/HTO_0000025> (carburizing)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000025> "carburizing"@en)
-SubClassOf(<https://w3id.org/pmd/hto/HTO_0000025> <https://w3id.org/pmd/co/PMD_0000779>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000025> <https://w3id.org/pmd/hto/HTO_0000019>)
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000027> (target pressure)
 
@@ -661,15 +670,13 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000034> <http://purl.obolibrary.org/ob
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/Hardening> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Hardening> "Härten"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Hardening> "hardening"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Hardening> "Heat treatment process with the aim of achieving an increase in strength and hardness of the material."@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Hardening> "Wärmebehandlungprozess mit dem Ziel eine Festigkeitssteigerung zu erreichen."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Hardening> "Heat treatment process to increase the strength and hardness of the material by cooling it so that its microstructure transforms to the hardening structure."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Hardening> "Wärmebehandlungprozess durch den eine Härte- und Festigkeitssteigerung erreicht wird, in dem das Material mit solcher Geschwindikeit abgekühlt wird, dass ein Härtungsgefüge enstehen kann."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/hto/Hardening> "Randschichthärten
 
 Einsatzhärten
 
-Nitrierhärten
-
-verwendet Randschichttiefe")
+Nitrierhärten")
 SubClassOf(<https://w3id.org/pmd/hto/Hardening> <https://w3id.org/pmd/co/PMD_0000779>)
 SubClassOf(<https://w3id.org/pmd/hto/Hardening> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/STATO_0000102> <https://w3id.org/pmd/hto/HTO_0000013>))
 
@@ -747,12 +754,16 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/LeakageInterval> "obsol
 AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/LeakageInterval> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/LeakageInterval> "effective leakage measuring duration "@en)
 
-# Class: <https://w3id.org/pmd/hto/Nitriding> (nitriding)
+# Class: <https://w3id.org/pmd/hto/Nitriding> (Nitrieren)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/Nitriding> <https://w3id.org/pmd/hto/>)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Nitriding> "Nitrieren"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Nitriding> "nitriding"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Nitriding> "heat treatment process with the scope to increase the nitrogen content in the surface near area of a sample or part"@en)
-SubClassOf(<https://w3id.org/pmd/hto/Nitriding> <https://w3id.org/pmd/co/PMD_0000779>)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/hto/Nitriding> "Aufsticken"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/hto/Nitriding> "Nitridieren"@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Nitriding> "Oberflächenhärtungsverfahren bei dem Stickstoff in flüssigem oder gasförmigem Zustand an eine Oberfläche gebracht wird, mit dem Ziel den Stickstoffgehalt in der Oberfläche des Materials zu erhöhen."@de)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Nitriding> "surface hardening process in which nitrogen in liquid or gaseous form is supplied to a material's surface with the goal to increase the nitrogen content in the surface of a sample or part."@en)
+SubClassOf(<https://w3id.org/pmd/hto/Nitriding> <https://w3id.org/pmd/hto/HTO_0000019>)
 
 # Class: <https://w3id.org/pmd/hto/NitridingDepth> (obsolete nitriding depth)
 
@@ -926,7 +937,7 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Tempering> "Ein Wärmebehandlungsprozess, um das Härtungsgefüge in die Richtung oder in ein Gleichgewichtsgefüge umzuwandeln."@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Tempering> "Tempering"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Tempering> "heat treatement process with the scope to reduce the hardness of a prior hardened sample or part"@en)
-SubClassOf(<https://w3id.org/pmd/hto/Tempering> <https://w3id.org/pmd/co/PMD_0000779>)
+SubClassOf(<https://w3id.org/pmd/hto/Tempering> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000779> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000062> <https://w3id.org/pmd/hto/Hardening>)))
 
 # Class: <https://w3id.org/pmd/hto/TypeDescription> (obsolete Type Description)
 

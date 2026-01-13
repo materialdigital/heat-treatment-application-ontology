@@ -13,7 +13,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto/hto-base.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2026-01-08/hto-base.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2026-01-13/hto-base.owl"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
@@ -22,7 +22,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2026-01-08</owl:versionInfo>
+        <owl:versionInfo>2026-01-13</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -154,6 +154,12 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000062 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000062"/>
     
 
 
@@ -387,8 +393,10 @@
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Annealing">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <rdfs:label xml:lang="de">Glühen</rdfs:label>
         <rdfs:label xml:lang="en">annealing</rdfs:label>
-        <skos:definition xml:lang="en">Heat treatment process with the scope to change the properties or microstructure of a sample or part. Typically no hardening is performed with this process.</skos:definition>
+        <skos:definition xml:lang="en">Heat treatment process to form a specific microstructure or reduce residual stresses.</skos:definition>
+        <skos:definition xml:lang="de">Wärmebehandlung um eine bestimmte Gefügeausbildung zu erzielen oder Spannungen zu reduzieren.</skos:definition>
     </owl:Class>
     
 
@@ -698,7 +706,10 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000000">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000833"/>
-        <rdfs:label xml:lang="en">heat treatment elementals</rdfs:label>
+        <rdfs:comment xml:lang="en">intermediate class, not to be instatialized</rdfs:comment>
+        <rdfs:label xml:lang="de">Grundsätzliche Wärmebehandlungsvorgänge</rdfs:label>
+        <rdfs:label xml:lang="en">heat treatment essentials</rdfs:label>
+        <skos:definition xml:lang="en">Essential processes that make up heat treatments and can be used like building blocks.</skos:definition>
     </owl:Class>
     
 
@@ -984,7 +995,9 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000019">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/Hardening"/>
+        <rdfs:label xml:lang="de">Oberflächenhärtung</rdfs:label>
         <rdfs:label xml:lang="en">surface hardening</rdfs:label>
+        <skos:altLabel xml:lang="de">Randschichthärtung</skos:altLabel>
     </owl:Class>
     
 
@@ -993,6 +1006,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000020">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/Hardening"/>
+        <rdfs:label xml:lang="de">Durchhärten</rdfs:label>
         <rdfs:label xml:lang="en">through hardening</rdfs:label>
     </owl:Class>
     
@@ -1051,7 +1065,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     </owl:Class>
     <owl:Class rdf:nodeID="genid44">
         <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000779"/>
+            <rdf:Description rdf:about="https://w3id.org/pmd/hto/HTO_0000020"/>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/Hardening"/>
@@ -1084,7 +1098,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <!-- https://w3id.org/pmd/hto/HTO_0000025 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000025">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000019"/>
         <rdfs:label xml:lang="en">carburizing</rdfs:label>
     </owl:Class>
     
@@ -1225,15 +1239,13 @@ The rotational speed of a fan.</skos:example>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Härten</rdfs:label>
         <rdfs:label xml:lang="en">hardening</rdfs:label>
-        <skos:definition xml:lang="en">Heat treatment process with the aim of achieving an increase in strength and hardness of the material.</skos:definition>
-        <skos:definition xml:lang="de">Wärmebehandlungprozess mit dem Ziel eine Festigkeitssteigerung zu erreichen.</skos:definition>
+        <skos:definition xml:lang="en">Heat treatment process to increase the strength and hardness of the material by cooling it so that its microstructure transforms to the hardening structure.</skos:definition>
+        <skos:definition xml:lang="de">Wärmebehandlungprozess durch den eine Härte- und Festigkeitssteigerung erreicht wird, in dem das Material mit solcher Geschwindikeit abgekühlt wird, dass ein Härtungsgefüge enstehen kann.</skos:definition>
         <skos:example>Randschichthärten
 
 Einsatzhärten
 
-Nitrierhärten
-
-verwendet Randschichttiefe</skos:example>
+Nitrierhärten</skos:example>
     </owl:Class>
     
 
@@ -1347,10 +1359,14 @@ verwendet Randschichttiefe</skos:example>
     <!-- https://w3id.org/pmd/hto/Nitriding -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Nitriding">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000019"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
+        <rdfs:label xml:lang="de">Nitrieren</rdfs:label>
         <rdfs:label xml:lang="en">nitriding</rdfs:label>
-        <skos:definition xml:lang="en">heat treatment process with the scope to increase the nitrogen content in the surface near area of a sample or part</skos:definition>
+        <skos:altLabel xml:lang="de">Aufsticken</skos:altLabel>
+        <skos:altLabel xml:lang="de">Nitridieren</skos:altLabel>
+        <skos:definition xml:lang="de">Oberflächenhärtungsverfahren bei dem Stickstoff in flüssigem oder gasförmigem Zustand an eine Oberfläche gebracht wird, mit dem Ziel den Stickstoffgehalt in der Oberfläche des Materials zu erhöhen.</skos:definition>
+        <skos:definition xml:lang="en">surface hardening process in which nitrogen in liquid or gaseous form is supplied to a material&apos;s surface with the goal to increase the nitrogen content in the surface of a sample or part.</skos:definition>
     </owl:Class>
     
 
@@ -1584,7 +1600,17 @@ verwendet Randschichttiefe</skos:example>
     <!-- https://w3id.org/pmd/hto/Tempering -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Tempering">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000779"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/Hardening"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <obo:IAO_0000114 xml:lang="en">needs work</obo:IAO_0000114>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Anlassen</rdfs:label>
