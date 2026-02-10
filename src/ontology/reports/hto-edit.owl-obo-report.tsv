@@ -32,8 +32,8 @@ ERROR	multiple_labels	hardening	rdfs:label	hardening@en
 ERROR	multiple_labels	Ofenkammer mit einer Heizung.	rdfs:label	Heizkammer@de
 ERROR	multiple_labels	Ofenkammer mit einer Heizung.	rdfs:label	Ofenkammer mit einer Heizung.@de
 ERROR	multiple_labels	Ofenkammer mit einer Heizung.	rdfs:label	heating chamber@en
-ERROR	multiple_labels	nitriding	rdfs:label	Nitrieren@de
-ERROR	multiple_labels	nitriding	rdfs:label	nitriding@en
+ERROR	multiple_labels	Nitrieren	rdfs:label	Nitrieren@de
+ERROR	multiple_labels	Nitrieren	rdfs:label	nitriding@en
 ERROR	multiple_labels	Abschreckkammer	rdfs:label	Abschreckkammer@de
 ERROR	multiple_labels	Abschreckkammer	rdfs:label	Quenching Chamber@en
 ERROR	multiple_labels	tempering	rdfs:label	Anlassen@de
@@ -125,7 +125,7 @@ WARN	missing_definition	hardening	IAO:0000115
 WARN	missing_definition	Ofenkammer mit einer Heizung.	IAO:0000115	
 WARN	missing_definition	hydrogene sensor signal	IAO:0000115	
 WARN	missing_definition	lambda probe signal	IAO:0000115	
-WARN	missing_definition	nitriding	IAO:0000115	
+WARN	missing_definition	Nitrieren	IAO:0000115	
 WARN	missing_definition	nitriding potential	IAO:0000115	
 WARN	missing_definition	oxygen probe signal	IAO:0000115	
 WARN	missing_definition	partial pressure	IAO:0000115	

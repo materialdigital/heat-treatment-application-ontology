@@ -206,7 +206,7 @@ SubClassOf(<https://w3id.org/pmd/co/HTO_0000039> <https://w3id.org/pmd/co/PMD_00
 
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000057>)))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000655> (Ofen)
+# Class: <https://w3id.org/pmd/co/PMD_0000655> (furnace)
 
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Chamber>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))
@@ -754,7 +754,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/LeakageInterval> "obsol
 AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/LeakageInterval> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/LeakageInterval> "effective leakage measuring duration "@en)
 
-# Class: <https://w3id.org/pmd/hto/Nitriding> (Nitrieren)
+# Class: <https://w3id.org/pmd/hto/Nitriding> (nitriding)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/Nitriding> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Nitriding> "Nitrieren"@de)

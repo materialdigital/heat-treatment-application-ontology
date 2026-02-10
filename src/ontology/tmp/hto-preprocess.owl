@@ -708,7 +708,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/LeakageInterval> "obsol
 AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/LeakageInterval> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/LeakageInterval> "effective leakage measuring duration "@en)
 
-# Class: <https://w3id.org/pmd/hto/Nitriding> (Nitrieren)
+# Class: <https://w3id.org/pmd/hto/Nitriding> (nitriding)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/Nitriding> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Nitriding> "Nitrieren"@de)
