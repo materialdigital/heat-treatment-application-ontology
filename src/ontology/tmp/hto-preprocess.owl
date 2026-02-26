@@ -74,6 +74,22 @@ Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000031>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000032>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000033>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000034>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000043>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000044>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000045>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000046>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000047>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000048>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000049>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000050>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000051>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000052>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000053>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000054>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000055>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000056>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000057>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000058>))
 Declaration(Class(<https://w3id.org/pmd/hto/Hardening>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingChamber>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingTime>))
@@ -160,7 +176,7 @@ SubClassOf(<https://w3id.org/pmd/co/HTO_0000039> <https://w3id.org/pmd/co/PMD_00
 
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000057>)))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000655> (furnace)
+# Class: <https://w3id.org/pmd/co/PMD_0000655> (Ofen)
 
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Chamber>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))
@@ -343,12 +359,14 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/DurationToReachTargetTe
 AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/DurationToReachTargetTemperature> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/DurationToReachTargetTemperature> "Parameter representing a derived duration of a heat up segment (in hours, minutes or seconds) "@en)
 
-# Class: <https://w3id.org/pmd/hto/Fan> (fan)
+# Class: <https://w3id.org/pmd/hto/Fan> (OBSOLETE fan (legacy))
 
-AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/Fan> "not properly defined")
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Fan> "fan"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Fan> "A device that creates airflow.")
-SubClassOf(<https://w3id.org/pmd/hto/Fan> <https://w3id.org/pmd/co/PMD_0000602>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <https://w3id.org/pmd/hto/Fan> <https://w3id.org/pmd/hto/HTO_0000053>)
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/Fan> "IRI not according to convention.")
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/Fan> "OBSOLETE not properly defined")
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Fan> "OBSOLETE fan (legacy)"@en)
+AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/Fan> "true"^^xsd:boolean)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Fan> "OBSOLETE A device that creates airflow.")
 
 # Class: <https://w3id.org/pmd/hto/FanStateFast> (fan state fast)
 
@@ -619,6 +637,113 @@ AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/
 EquivalentClasses(<https://w3id.org/pmd/hto/HTO_0000034> ObjectOneOf(<https://w3id.org/pmd/hto/HTO_0000035> <https://w3id.org/pmd/hto/HTO_0000036>))
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000034> <http://purl.obolibrary.org/obo/OBI_0001930>)
 
+# Class: <https://w3id.org/pmd/hto/HTO_0000043> (turbo machinery)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000043> "turbo machinery"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000043> "A device that extracts energy from or imparts energy to a continuously moving stream of fluid."@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000043> <https://w3id.org/pmd/co/PMD_0000602>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000044> (Arbeitsmaschine)
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/HTO_0000044> "the mechanical energy needed for machines to work is supplied by engines/motors")
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000044> "Arbeitsmaschine"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000044> "machinery"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000044> "A powered machine which takes up mechanical energy.")
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000044> <https://w3id.org/pmd/hto/HTO_0000043>)
+DisjointClasses(<https://w3id.org/pmd/hto/HTO_0000044> <https://w3id.org/pmd/hto/HTO_0000045>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000045> (Kraftmaschine)
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/HTO_0000045> "Engine supply the mechanical energy to power machinery.")
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000045> "Kraftmaschine"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000045> "engine"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/hto/HTO_0000045> "turbine")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000045> "A machine designed to convert one or more forms of energy into mechanical energy."@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000045> <https://w3id.org/pmd/hto/HTO_0000043>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000046> (wind turbine)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000046> "wind turbine"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000046> "An engine to convert kinetic energy of a gas (movement of air in the atmosphere, wind) into the rotation of a shaft which drives a generator."@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000046> <https://w3id.org/pmd/hto/HTO_0000055>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000047> (water turbine)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000047> "water turbine"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000047> "An engine which converts kinetic energy of water into rotational energy of a shaft connected to a generator."@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000047> <https://w3id.org/pmd/hto/HTO_0000055>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000048> (steam turbine)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000048> "steam turbine"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000048> "A machine that extracts thermal energy from pressurized steam and uses it to do mechanical work utilising a rotating output shaft."@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000048> <https://w3id.org/pmd/hto/HTO_0000055>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000049> (turbojet engine)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000049> "turbojet engine"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000049> "combination of a gas turbine and and a propelling nozzle")
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000049> <https://w3id.org/pmd/hto/HTO_0000056>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000050> (compressor)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000050> "compressor"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000050> "A machine that increases the pressure of a gas by reducing its volume."@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000050> <https://w3id.org/pmd/hto/HTO_0000044>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000051> (propeller)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000051> "propeller"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000051> "A powered machine with a rotating hub and radiating blades which exert linear thrust upon a working fluid such as water or air."@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000051> <https://w3id.org/pmd/hto/HTO_0000044>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000052> (turbopump)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000052> "turbopump"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000052> "A machine powered by a gas engine to create high throughput and high pressure flow of fluid media."@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000052> <https://w3id.org/pmd/hto/HTO_0000044>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000053> (Ventilator)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000053> "Ventilator"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000053> "fan"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000053> "A powered machine that creates airflow."@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000053> <https://w3id.org/pmd/hto/HTO_0000044>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000054> (electric generator)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000054> "electric generator"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000054> "A machine that converts mechanical energy to electrical energy."@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000054> <https://w3id.org/pmd/hto/HTO_0000044>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000055> (turbine)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000055> "turbine"@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000055> <https://w3id.org/pmd/hto/HTO_0000045>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000056> (heat engine)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000056> "heat engine"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000056> "A system that transfers thermal energy to do mechanical or electrical work.")
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000056> <https://w3id.org/pmd/hto/HTO_0000045>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000057> (electric motor)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000057> "electric motor"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000057> "An engine which transforms electric energy into mechanical energy."@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000057> <https://w3id.org/pmd/hto/HTO_0000045>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000058> (internal combustion engine)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000058> "internal combustion engine"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000058> "An engine that uses combustion to turn chemical energy into mechanical energy by the transferral of kinetic energy from pressure increase of hot gas expansion into the movement of engine parts.")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/hto/HTO_0000058> "driven parts can be:
+pistons (piston engine)
+turbine blades (gas turbine)
+rotor (Wankel engine)
+nozzle (jet engine).")
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000058> <https://w3id.org/pmd/hto/HTO_0000056>)
+
 # Class: <https://w3id.org/pmd/hto/Hardening> (hardening)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/Hardening> <https://w3id.org/pmd/hto/>)
@@ -708,7 +833,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/LeakageInterval> "obsol
 AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/LeakageInterval> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/LeakageInterval> "effective leakage measuring duration "@en)
 
-# Class: <https://w3id.org/pmd/hto/Nitriding> (nitriding)
+# Class: <https://w3id.org/pmd/hto/Nitriding> (Nitrieren)
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/Nitriding> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Nitriding> "Nitrieren"@de)
@@ -993,6 +1118,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000036> "OFF"@en)
 DataPropertyAssertion(<https://w3id.org/pmd/co/PMD_0000006> <https://w3id.org/pmd/hto/HTO_0000036> "false"^^xsd:boolean)
 
 
+DisjointClasses(<https://w3id.org/pmd/hto/HTO_0000050> <https://w3id.org/pmd/hto/HTO_0000051> <https://w3id.org/pmd/hto/HTO_0000052>)
 DifferentIndividuals(<https://w3id.org/pmd/hto/HTO_0000035> <https://w3id.org/pmd/hto/HTO_0000036>)
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-9014-2920> "Henk Birkholz")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0003-1649-6832> "Thomas Hanke")

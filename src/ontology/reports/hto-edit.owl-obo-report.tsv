@@ -27,6 +27,12 @@ ERROR	multiple_labels	Vergüten	rdfs:label	Vergüten@de
 ERROR	multiple_labels	Vergüten	rdfs:label	quenching and tempering@en
 ERROR	multiple_labels	Sollwert	rdfs:label	Sollwert@de
 ERROR	multiple_labels	Sollwert	rdfs:label	setpoint@en
+ERROR	multiple_labels	Arbeitsmaschine	rdfs:label	Arbeitsmaschine@de
+ERROR	multiple_labels	Arbeitsmaschine	rdfs:label	machinery@en
+ERROR	multiple_labels	Kraftmaschine	rdfs:label	Kraftmaschine@de
+ERROR	multiple_labels	Kraftmaschine	rdfs:label	engine@en
+ERROR	multiple_labels	Ventilator	rdfs:label	Ventilator@de
+ERROR	multiple_labels	Ventilator	rdfs:label	fan@en
 ERROR	multiple_labels	hardening	rdfs:label	Härten@de
 ERROR	multiple_labels	hardening	rdfs:label	hardening@en
 ERROR	multiple_labels	Ofenkammer mit einer Heizung.	rdfs:label	Heizkammer@de
@@ -88,7 +94,6 @@ WARN	missing_definition	Aufkohlen	IAO:0000115
 WARN	missing_definition	chamber	IAO:0000115	
 WARN	missing_definition	chamber pressure	IAO:0000115	
 WARN	missing_definition	dew point	IAO:0000115	
-WARN	missing_definition	fan	IAO:0000115	
 WARN	missing_definition	Grundsätzliche Wärmebehandlungsvorgänge	IAO:0000115	
 WARN	missing_definition	quenching function	IAO:0000115	
 WARN	missing_definition	target temperature specification	IAO:0000115	
@@ -121,6 +126,22 @@ WARN	missing_definition	cooling rate	IAO:0000115
 WARN	missing_definition	Sollwert	IAO:0000115	
 WARN	missing_definition	device operation state	IAO:0000115	
 WARN	missing_definition	device operation state value	IAO:0000115	
+WARN	missing_definition	turbo machinery	IAO:0000115	
+WARN	missing_definition	Arbeitsmaschine	IAO:0000115	
+WARN	missing_definition	Kraftmaschine	IAO:0000115	
+WARN	missing_definition	wind turbine	IAO:0000115	
+WARN	missing_definition	water turbine	IAO:0000115	
+WARN	missing_definition	steam turbine	IAO:0000115	
+WARN	missing_definition	turbojet engine	IAO:0000115	
+WARN	missing_definition	compressor	IAO:0000115	
+WARN	missing_definition	propeller	IAO:0000115	
+WARN	missing_definition	turbopump	IAO:0000115	
+WARN	missing_definition	Ventilator	IAO:0000115	
+WARN	missing_definition	electric generator	IAO:0000115	
+WARN	missing_definition	turbine	IAO:0000115	
+WARN	missing_definition	heat engine	IAO:0000115	
+WARN	missing_definition	electric motor	IAO:0000115	
+WARN	missing_definition	internal combustion engine	IAO:0000115	
 WARN	missing_definition	hardening	IAO:0000115	
 WARN	missing_definition	Ofenkammer mit einer Heizung.	IAO:0000115	
 WARN	missing_definition	hydrogene sensor signal	IAO:0000115	

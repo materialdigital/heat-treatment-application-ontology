@@ -16,7 +16,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto/hto-full.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2026-02-17/hto-full.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2026-02-26/hto-full.owl"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
@@ -24,7 +24,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2026-02-17</owl:versionInfo>
+        <owl:versionInfo>2026-02-26</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -14979,10 +14979,12 @@ can be: heating chamber / cooling chamber</skos:definition>
     <!-- https://w3id.org/pmd/hto/Fan -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Fan">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000602"/>
-        <rdfs:comment>not properly defined</rdfs:comment>
-        <rdfs:label xml:lang="en">fan</rdfs:label>
-        <skos:definition>A device that creates airflow.</skos:definition>
+        <obo:IAO_0100001 rdf:resource="https://w3id.org/pmd/hto/HTO_0000053"/>
+        <rdfs:comment>IRI not according to convention.</rdfs:comment>
+        <rdfs:comment>OBSOLETE not properly defined</rdfs:comment>
+        <rdfs:label xml:lang="en">OBSOLETE fan (legacy)</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:definition>OBSOLETE A device that creates airflow.</skos:definition>
     </owl:Class>
     
 
@@ -15572,6 +15574,177 @@ The rotational speed of a fan.</skos:example>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
         <rdfs:label xml:lang="en">device operation state value</rdfs:label>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000043 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000043">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000602"/>
+        <rdfs:label xml:lang="en">turbo machinery</rdfs:label>
+        <skos:definition xml:lang="en">A device that extracts energy from or imparts energy to a continuously moving stream of fluid.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000044 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000044">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000043"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/pmd/hto/HTO_0000045"/>
+        <rdfs:comment>the mechanical energy needed for machines to work is supplied by engines/motors</rdfs:comment>
+        <rdfs:label xml:lang="de">Arbeitsmaschine</rdfs:label>
+        <rdfs:label xml:lang="en">machinery</rdfs:label>
+        <skos:definition>A powered machine which takes up mechanical energy.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000045 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000045">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000043"/>
+        <rdfs:comment>Engine supply the mechanical energy to power machinery.</rdfs:comment>
+        <rdfs:label xml:lang="de">Kraftmaschine</rdfs:label>
+        <rdfs:label xml:lang="en">engine</rdfs:label>
+        <skos:altLabel>turbine</skos:altLabel>
+        <skos:definition xml:lang="en">A machine designed to convert one or more forms of energy into mechanical energy.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000046 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000046">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000055"/>
+        <rdfs:label xml:lang="en">wind turbine</rdfs:label>
+        <skos:definition xml:lang="en">An engine to convert kinetic energy of a gas (movement of air in the atmosphere, wind) into the rotation of a shaft which drives a generator.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000047 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000047">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000055"/>
+        <rdfs:label xml:lang="en">water turbine</rdfs:label>
+        <skos:definition xml:lang="en">An engine which converts kinetic energy of water into rotational energy of a shaft connected to a generator.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000048 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000048">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000055"/>
+        <rdfs:label xml:lang="en">steam turbine</rdfs:label>
+        <skos:definition xml:lang="en">A machine that extracts thermal energy from pressurized steam and uses it to do mechanical work utilising a rotating output shaft.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000049 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000049">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000056"/>
+        <rdfs:label xml:lang="en">turbojet engine</rdfs:label>
+        <skos:definition>combination of a gas turbine and and a propelling nozzle</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000050 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000050">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000044"/>
+        <rdfs:label xml:lang="en">compressor</rdfs:label>
+        <skos:definition xml:lang="en">A machine that increases the pressure of a gas by reducing its volume.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000051 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000051">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000044"/>
+        <rdfs:label xml:lang="en">propeller</rdfs:label>
+        <skos:definition xml:lang="en">A powered machine with a rotating hub and radiating blades which exert linear thrust upon a working fluid such as water or air.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000052 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000052">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000044"/>
+        <rdfs:label xml:lang="en">turbopump</rdfs:label>
+        <skos:definition xml:lang="en">A machine powered by a gas engine to create high throughput and high pressure flow of fluid media.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000053 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000053">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000044"/>
+        <rdfs:label xml:lang="de">Ventilator</rdfs:label>
+        <rdfs:label xml:lang="en">fan</rdfs:label>
+        <skos:definition xml:lang="en">A powered machine that creates airflow.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000054 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000054">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000044"/>
+        <rdfs:label xml:lang="en">electric generator</rdfs:label>
+        <skos:definition xml:lang="en">A machine that converts mechanical energy to electrical energy.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000055 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000055">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000045"/>
+        <rdfs:label xml:lang="en">turbine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000056 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000056">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000045"/>
+        <rdfs:label xml:lang="en">heat engine</rdfs:label>
+        <skos:definition>A system that transfers thermal energy to do mechanical or electrical work.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000057 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000057">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000045"/>
+        <rdfs:label xml:lang="en">electric motor</rdfs:label>
+        <skos:definition xml:lang="en">An engine which transforms electric energy into mechanical energy.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000058 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000058">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000056"/>
+        <rdfs:label xml:lang="en">internal combustion engine</rdfs:label>
+        <skos:definition>An engine that uses combustion to turn chemical energy into mechanical energy by the transferral of kinetic energy from pressure increase of hot gas expansion into the movement of engine parts.</skos:definition>
+        <skos:example>driven parts can be:
+pistons (piston engine)
+turbine blades (gas turbine)
+rotor (Wankel engine)
+nozzle (jet engine).</skos:example>
     </owl:Class>
     
 
@@ -16787,6 +16960,14 @@ Nitrierhärten</skos:example>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/pmd/hto/HTO_0000050"/>
+            <rdf:Description rdf:about="https://w3id.org/pmd/hto/HTO_0000051"/>
+            <rdf:Description rdf:about="https://w3id.org/pmd/hto/HTO_0000052"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020006"/>
@@ -16835,6 +17016,49 @@ Nitrierhärten</skos:example>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl:var#d">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
@@ -16957,49 +17181,6 @@ Nitrierhärten</skos:example>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
                         <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
                     </rdf:Description>
