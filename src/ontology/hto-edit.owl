@@ -313,10 +313,12 @@ can be: heating chamber / cooling chamber"""@en .
 
 ###  https://w3id.org/pmd/hto/Fan
 <https://w3id.org/pmd/hto/Fan> rdf:type owl:Class ;
-                               rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
-                               rdfs:comment "not properly defined" ;
-                               rdfs:label "fan"@en ;
-                               <http://www.w3.org/2004/02/skos/core#definition> "A device that creates airflow." .
+                               <http://purl.obolibrary.org/obo/IAO_0100001> <https://w3id.org/pmd/hto/HTO_0000053> ;
+                               rdfs:comment "IRI not according to convention." ,
+                                            "OBSOLETE not properly defined" ;
+                               rdfs:label "OBSOLETE fan (legacy)"@en ;
+                               owl:deprecated "true"^^xsd:boolean ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "OBSOLETE A device that creates airflow." .
 
 
 ###  https://w3id.org/pmd/hto/FanStateFast
@@ -740,6 +742,129 @@ The rotational speed of a fan.""" ;
                                        rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001930> ;
                                        rdfs:label "device operation state value"@en ;
                                        <https://w3id.org/pmd/co/PMD_0000060> "true"^^xsd:boolean .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000043
+<https://w3id.org/pmd/hto/HTO_0000043> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000602> ;
+                                       rdfs:label "turbo machinery"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A device that extracts energy from or imparts energy to a continuously moving stream of fluid."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000044
+<https://w3id.org/pmd/hto/HTO_0000044> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000043> ;
+                                       owl:disjointWith <https://w3id.org/pmd/hto/HTO_0000045> ;
+                                       rdfs:comment "the mechanical energy needed for machines to work is supplied by engines/motors" ;
+                                       rdfs:label "Arbeitsmaschine"@de ,
+                                                  "machinery"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A powered machine which takes up mechanical energy." .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000045
+<https://w3id.org/pmd/hto/HTO_0000045> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000043> ;
+                                       rdfs:comment "Engine supply the mechanical energy to power machinery." ;
+                                       rdfs:label "Kraftmaschine"@de ,
+                                                  "engine"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "turbine" ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A machine designed to convert one or more forms of energy into mechanical energy."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000046
+<https://w3id.org/pmd/hto/HTO_0000046> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000055> ;
+                                       rdfs:label "wind turbine"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "An engine to convert kinetic energy of a gas (movement of air in the atmosphere, wind) into the rotation of a shaft which drives a generator."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000047
+<https://w3id.org/pmd/hto/HTO_0000047> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000055> ;
+                                       rdfs:label "water turbine"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "An engine which converts kinetic energy of water into rotational energy of a shaft connected to a generator."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000048
+<https://w3id.org/pmd/hto/HTO_0000048> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000055> ;
+                                       rdfs:label "steam turbine"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A machine that extracts thermal energy from pressurized steam and uses it to do mechanical work utilising a rotating output shaft."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000049
+<https://w3id.org/pmd/hto/HTO_0000049> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000056> ;
+                                       rdfs:label "turbojet engine"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "combination of a gas turbine and and a propelling nozzle" .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000050
+<https://w3id.org/pmd/hto/HTO_0000050> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000044> ;
+                                       rdfs:label "compressor"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A machine that increases the pressure of a gas by reducing its volume."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000051
+<https://w3id.org/pmd/hto/HTO_0000051> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000044> ;
+                                       rdfs:label "propeller"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A powered machine with a rotating hub and radiating blades which exert linear thrust upon a working fluid such as water or air."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000052
+<https://w3id.org/pmd/hto/HTO_0000052> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000044> ;
+                                       rdfs:label "turbopump"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A machine powered by a gas engine to create high throughput and high pressure flow of fluid media."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000053
+<https://w3id.org/pmd/hto/HTO_0000053> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000044> ;
+                                       rdfs:label "Ventilator"@de ,
+                                                  "fan"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A powered machine that creates airflow."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000054
+<https://w3id.org/pmd/hto/HTO_0000054> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000044> ;
+                                       rdfs:label "electric generator"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A machine that converts mechanical energy to electrical energy."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000055
+<https://w3id.org/pmd/hto/HTO_0000055> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000045> ;
+                                       rdfs:label "turbine"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000056
+<https://w3id.org/pmd/hto/HTO_0000056> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000045> ;
+                                       rdfs:label "heat engine"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A system that transfers thermal energy to do mechanical or electrical work." .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000057
+<https://w3id.org/pmd/hto/HTO_0000057> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000045> ;
+                                       rdfs:label "electric motor"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "An engine which transforms electric energy into mechanical energy."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000058
+<https://w3id.org/pmd/hto/HTO_0000058> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000056> ;
+                                       rdfs:label "internal combustion engine"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "An engine that uses combustion to turn chemical energy into mechanical energy by the transferral of kinetic energy from pressure increase of hot gas expansion into the movement of engine parts." ;
+                                       <http://www.w3.org/2004/02/skos/core#example> """driven parts can be:
+pistons (piston engine)
+turbine blades (gas turbine)
+rotor (Wankel engine)
+nozzle (jet engine).""" .
 
 
 ###  https://w3id.org/pmd/hto/Hardening
@@ -1182,6 +1307,39 @@ Nitrierhärten""" .
 
 
 <https://orcid.org/0009-0004-4787-4685> rdfs:label "Felix Thonagel" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/pmd/hto/HTO_0000046>
+                <https://w3id.org/pmd/hto/HTO_0000047>
+                <https://w3id.org/pmd/hto/HTO_0000048>
+                <https://w3id.org/pmd/hto/HTO_0000049>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/pmd/hto/HTO_0000046>
+                <https://w3id.org/pmd/hto/HTO_0000047>
+                <https://w3id.org/pmd/hto/HTO_0000048>
+                <https://w3id.org/pmd/hto/HTO_0000049>
+                <https://w3id.org/pmd/hto/HTO_0000055>
+                <https://w3id.org/pmd/hto/HTO_0000056>
+                <https://w3id.org/pmd/hto/HTO_0000057>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/pmd/hto/HTO_0000050>
+                <https://w3id.org/pmd/hto/HTO_0000051>
+                <https://w3id.org/pmd/hto/HTO_0000052>
+              )
+] .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
