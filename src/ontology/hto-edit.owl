@@ -1314,27 +1314,6 @@ Nitrierhärten""" .
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <https://w3id.org/pmd/hto/HTO_0000046>
-                <https://w3id.org/pmd/hto/HTO_0000047>
-                <https://w3id.org/pmd/hto/HTO_0000048>
-                <https://w3id.org/pmd/hto/HTO_0000049>
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <https://w3id.org/pmd/hto/HTO_0000046>
-                <https://w3id.org/pmd/hto/HTO_0000047>
-                <https://w3id.org/pmd/hto/HTO_0000048>
-                <https://w3id.org/pmd/hto/HTO_0000049>
-                <https://w3id.org/pmd/hto/HTO_0000055>
-                <https://w3id.org/pmd/hto/HTO_0000056>
-                <https://w3id.org/pmd/hto/HTO_0000057>
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
   owl:members ( <https://w3id.org/pmd/hto/HTO_0000050>
                 <https://w3id.org/pmd/hto/HTO_0000051>
                 <https://w3id.org/pmd/hto/HTO_0000052>
