@@ -192,7 +192,7 @@ Declaration(AnnotationProperty(<https://w3id.org/pmd/co/PMD_0050117>))
 
 AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/description> "description")
 
-# Annotation Property: <http://purl.org/dc/terms/license> (dcterms:license)
+# Annotation Property: <http://purl.org/dc/terms/license> (license)
 
 AnnotationAssertion(rdfs:label <http://purl.org/dc/terms/license> "license")
 
