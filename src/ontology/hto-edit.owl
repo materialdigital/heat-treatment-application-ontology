@@ -108,16 +108,16 @@
                                                       ] .
 
 
-###  https://w3id.org/pmd/co/PMD_0090004
-<https://w3id.org/pmd/co/PMD_0090004> rdf:type owl:Class ;
+###  https://w3id.org/pmd/co/HTO_0000063
+<https://w3id.org/pmd/co/HTO_0000063> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000019> ;
                                       rdfs:label "Nitrocarburieren"@de ,
                                                  "nitrocarburizing"@en ;
                                       <http://www.w3.org/2004/02/skos/core#altLabel> "nitrocarburising"@en .
 
 
-###  https://w3id.org/pmd/co/PMD_0090005
-<https://w3id.org/pmd/co/PMD_0090005> rdf:type owl:Class ;
+###  https://w3id.org/pmd/co/HTO_0000064
+<https://w3id.org/pmd/co/HTO_0000064> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000019> ;
                                       rdfs:label "Carbonitrieren"@de ,
                                                  "carbonitriding"@en .
