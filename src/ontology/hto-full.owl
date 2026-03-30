@@ -4644,6 +4644,27 @@ for now.</obo:IAO_0000116>
     
 
 
+    <!-- https://w3id.org/pmd/co/HTO_0000063 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/HTO_0000063">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000019"/>
+        <rdfs:label xml:lang="de">Nitrocarburieren</rdfs:label>
+        <rdfs:label xml:lang="en">nitrocarburizing</rdfs:label>
+        <skos:altLabel xml:lang="en">nitrocarburising</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/co/HTO_0000064 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/co/HTO_0000064">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000019"/>
+        <rdfs:label xml:lang="de">Carbonitrieren</rdfs:label>
+        <rdfs:label xml:lang="en">carbonitriding</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/co/PMD_0000000 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/co/PMD_0000000">
@@ -18539,12 +18560,13 @@ European Commission: Directorate-General for Research and Innovation, Biodegrada
     <!-- https://w3id.org/pmd/hto/Annealing -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Annealing">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
-        <rdfs:label xml:lang="de">Glühen</rdfs:label>
-        <rdfs:label xml:lang="en">annealing</rdfs:label>
-        <skos:definition xml:lang="en">Heat treatment process to form a specific microstructure or reduce residual stresses.</skos:definition>
-        <skos:definition xml:lang="de">Wärmebehandlung um eine bestimmte Gefügeausbildung zu erzielen oder Spannungen zu reduzieren.</skos:definition>
+        <obo:IAO_0100001 rdf:resource="https://w3id.org/pmd/hto/HTO_0000039"/>
+        <rdfs:comment>The IRI was not according to convention.</rdfs:comment>
+        <rdfs:label xml:lang="de">OBSOLETE Glühen</rdfs:label>
+        <rdfs:label xml:lang="en">OBSOLETE annealing</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:definition xml:lang="en">OBSOLETE Heat treatment process to form a specific microstructure or reduce residual stresses.</skos:definition>
+        <skos:definition xml:lang="de">OBSOLETE Wärmebehandlung um eine bestimmte Gefügeausbildung zu erzielen oder Spannungen zu reduzieren.</skos:definition>
     </owl:Class>
     
 
@@ -19144,10 +19166,12 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <!-- https://w3id.org/pmd/hto/HTO_0000019 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000019">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/Hardening"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000040"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/pmd/hto/HTO_0000020"/>
         <rdfs:label xml:lang="de">Oberflächenhärtung</rdfs:label>
         <rdfs:label xml:lang="en">surface hardening</rdfs:label>
         <skos:altLabel xml:lang="de">Randschichthärtung</skos:altLabel>
+        <skos:definition>Hardening process where only the surface of a part and not its entire volume is hardened.</skos:definition>
     </owl:Class>
     
 
@@ -19155,9 +19179,10 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <!-- https://w3id.org/pmd/hto/HTO_0000020 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000020">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/Hardening"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000040"/>
         <rdfs:label xml:lang="de">Durchhärten</rdfs:label>
         <rdfs:label xml:lang="en">through hardening</rdfs:label>
+        <skos:definition>A hardening process where the entire cross section of a part is hardened.</skos:definition>
     </owl:Class>
     
 
@@ -19218,11 +19243,11 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
             <rdf:Description rdf:about="https://w3id.org/pmd/hto/HTO_0000020"/>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/Hardening"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000038"/>
             </owl:Restriction>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/Tempering"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000040"/>
             </owl:Restriction>
         </owl:intersectionOf>
     </owl:Class>
@@ -19245,11 +19270,34 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/pmd/hto/HTO_0000024 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000024">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000041"/>
+        <rdfs:label xml:lang="en">plasma nitriding</rdfs:label>
+        <skos:definition>A nitriding process in which nitrogen is supplied to the surface via the acceleration of ionised nitrogen.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/hto/HTO_0000025 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000025">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000019"/>
+        <rdfs:label xml:lang="de">Aufkohlen</rdfs:label>
         <rdfs:label xml:lang="en">carburizing</rdfs:label>
+        <skos:altLabel xml:lang="de">Karburieren</skos:altLabel>
+        <skos:definition>A surface hardening process in which carbon is supplied to a material&apos;s surface with the goal to increase the carbon content in the surface of a sample or part.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000026 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000026">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000041"/>
+        <rdfs:label xml:lang="en">gas nitriding</rdfs:label>
+        <skos:definition>A nitriding process where nitrogen is supplied to the surface in gaseous form.</skos:definition>
     </owl:Class>
     
 
@@ -19372,6 +19420,97 @@ The rotational speed of a fan.</skos:example>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
         <rdfs:label xml:lang="en">device operation state value</rdfs:label>
         <co:PMD_0000060 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</co:PMD_0000060>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000037 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000037">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000041"/>
+        <rdfs:label xml:lang="en">salz bath nitriding</rdfs:label>
+        <skos:definition>A nitriding process in which nitrogen is supplied to the surface by molten salt.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000038 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000038">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000779"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000040"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 xml:lang="en">needs work</obo:IAO_0000114>
+        <rdfs:label xml:lang="en">tempering</rdfs:label>
+        <skos:definition xml:lang="en">A heat treatment process to transform the hardening structure into the direction or equilibrium structure.</skos:definition>
+        <skos:definition xml:lang="de">Ein Wärmebehandlungsprozess, um das Härtungsgefüge in die Richtung oder in ein Gleichgewichtsgefüge umzuwandeln.</skos:definition>
+        <skos:definition xml:lang="en">Tempering</skos:definition>
+        <skos:definition xml:lang="en">heat treatement process with the scope to reduce the hardness of a prior hardened sample or part</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000039 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000039">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
+        <rdfs:label xml:lang="en">annealing</rdfs:label>
+        <skos:definition xml:lang="en">Heat treatment process to form a specific microstructure or reduce residual stresses.</skos:definition>
+        <skos:definition xml:lang="de">Wärmebehandlung um eine bestimmte Gefügeausbildung zu erzielen oder Spannungen zu reduzieren.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000040 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000040">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">hardening</rdfs:label>
+        <skos:definition xml:lang="en">Heat treatment process to increase the strength and hardness of the material by cooling it so that its microstructure transforms to the hardening structure.</skos:definition>
+        <skos:definition xml:lang="de">Wärmebehandlungprozess durch den eine Härte- und Festigkeitssteigerung erreicht wird, in dem das Material mit solcher Geschwindikeit abgekühlt wird, dass ein Härtungsgefüge enstehen kann.</skos:definition>
+        <skos:example xml:lang="de">Randschichthärten
+Einsatzhärten
+Nitrierhärten</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000041 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000041">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000019"/>
+        <rdfs:label xml:lang="de">Nitridieren</rdfs:label>
+        <rdfs:label xml:lang="en">nitriding</rdfs:label>
+        <skos:altLabel xml:lang="de">Aufsticken</skos:altLabel>
+        <skos:altLabel xml:lang="de">Nitrieren</skos:altLabel>
+        <skos:definition xml:lang="en">A surface hardening process in which nitrogen is supplied to a material&apos;s surface with the goal to increase the nitrogen content in the surface of a sample or part.</skos:definition>
+        <skos:definition xml:lang="de">Oberflächenhärtungsverfahren bei dem Stickstoff in flüssigem oder gasförmigem Zustand an eine Oberfläche gebracht wird, mit dem Ziel den Stickstoffgehalt in der Oberfläche des Materials zu erhöhen.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000042 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000042">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000000"/>
+        <rdfs:comment>Durchwärmen des Bauteils, sodass Temperaturhomogenität erreicht wird. Anschließend kann ein Halten auf der Zieltemperatur erfolgen.</rdfs:comment>
+        <rdfs:label xml:lang="en">soaking</rdfs:label>
+        <skos:definition xml:lang="en">Process step during which temperature homogenization is achieved in the component.</skos:definition>
+        <skos:definition xml:lang="de">Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird.</skos:definition>
     </owl:Class>
     
 
@@ -19547,26 +19686,39 @@ nozzle (jet engine).</skos:example>
     
 
 
+    <!-- https://w3id.org/pmd/hto/HTO_0000061 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000061">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000000"/>
+        <rdfs:comment xml:lang="de">Die HoldingTime ist stets mit einer vorhergehende SoakingTime verbunden.</rdfs:comment>
+        <rdfs:label xml:lang="en">holding</rdfs:label>
+        <skos:definition xml:lang="en">Process step without temperature change in the furnace after the designated temperature was homogeneously reached within the part.</skos:definition>
+        <skos:definition xml:lang="de">Prozessschritt ohne Temperaturänderung im Ofen.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000062 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000062">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0025011"/>
+        <rdfs:label xml:lang="en">quenching</rdfs:label>
+        <skos:definition xml:lang="en">Process with significantly increased cooling rate, aimed at preventing diffusion based transformations.</skos:definition>
+        <skos:definition xml:lang="de">Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/hto/Hardening -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Hardening">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STATO_0000102"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000013"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
-        <rdfs:label xml:lang="de">Härten</rdfs:label>
-        <rdfs:label xml:lang="en">hardening</rdfs:label>
-        <skos:definition xml:lang="en">Heat treatment process to increase the strength and hardness of the material by cooling it so that its microstructure transforms to the hardening structure.</skos:definition>
-        <skos:definition xml:lang="de">Wärmebehandlungprozess durch den eine Härte- und Festigkeitssteigerung erreicht wird, in dem das Material mit solcher Geschwindikeit abgekühlt wird, dass ein Härtungsgefüge enstehen kann.</skos:definition>
-        <skos:example>Randschichthärten
-
-Einsatzhärten
-
-Nitrierhärten</skos:example>
+        <obo:IAO_0100001 rdf:resource="https://w3id.org/pmd/hto/HTO_0000040"/>
+        <rdfs:comment>The IRI was not according to convention.</rdfs:comment>
+        <rdfs:label xml:lang="de">OBSOLETE Härten</rdfs:label>
+        <rdfs:label xml:lang="en">OBSOLETE hardening</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:definition xml:lang="en">OBSOLETE Heat treatment process to increase the strength and hardness of the material by cooling it so that its microstructure transforms to the hardening structure.</skos:definition>
+        <skos:definition xml:lang="de">OBSOLETE Wärmebehandlungprozess durch den eine Härte- und Festigkeitssteigerung erreicht wird, in dem das Material mit solcher Geschwindikeit abgekühlt wird, dass ein Härtungsgefüge enstehen kann.</skos:definition>
     </owl:Class>
     
 
@@ -19680,14 +19832,13 @@ Nitrierhärten</skos:example>
     <!-- https://w3id.org/pmd/hto/Nitriding -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Nitriding">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000019"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
-        <rdfs:label xml:lang="de">Nitrieren</rdfs:label>
-        <rdfs:label xml:lang="en">nitriding</rdfs:label>
-        <skos:altLabel xml:lang="de">Aufsticken</skos:altLabel>
-        <skos:altLabel xml:lang="de">Nitridieren</skos:altLabel>
-        <skos:definition xml:lang="de">Oberflächenhärtungsverfahren bei dem Stickstoff in flüssigem oder gasförmigem Zustand an eine Oberfläche gebracht wird, mit dem Ziel den Stickstoffgehalt in der Oberfläche des Materials zu erhöhen.</skos:definition>
-        <skos:definition xml:lang="en">surface hardening process in which nitrogen in liquid or gaseous form is supplied to a material&apos;s surface with the goal to increase the nitrogen content in the surface of a sample or part.</skos:definition>
+        <obo:IAO_0100001 rdf:resource="https://w3id.org/pmd/hto/HTO_0000041"/>
+        <rdfs:comment>The IRI was not according to convention.</rdfs:comment>
+        <rdfs:label xml:lang="de">OBSOLETE Nitrieren</rdfs:label>
+        <rdfs:label xml:lang="en">OBSOLETE nitriding</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:definition xml:lang="de">OBSOLETE Oberflächenhärtungsverfahren bei dem Stickstoff in flüssigem oder gasförmigem Zustand an eine Oberfläche gebracht wird, mit dem Ziel den Stickstoffgehalt in der Oberfläche des Materials zu erhöhen.</skos:definition>
+        <skos:definition xml:lang="en">OBSOLETE surface hardening process in which nitrogen in liquid, gaseous or ionic form is supplied to a material&apos;s surface with the goal to increase the nitrogen content in the surface of a sample or part.</skos:definition>
     </owl:Class>
     
 
@@ -19921,25 +20072,15 @@ Nitrierhärten</skos:example>
     <!-- https://w3id.org/pmd/hto/Tempering -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Tempering">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0000779"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/Hardening"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000114 xml:lang="en">needs work</obo:IAO_0000114>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
-        <rdfs:label xml:lang="de">Anlassen</rdfs:label>
-        <rdfs:label xml:lang="en">tempering</rdfs:label>
-        <skos:definition xml:lang="en">A heat treatment process to transform the hardening structure into the direction or equilibrium structure.</skos:definition>
-        <skos:definition xml:lang="de">Ein Wärmebehandlungsprozess, um das Härtungsgefüge in die Richtung oder in ein Gleichgewichtsgefüge umzuwandeln.</skos:definition>
-        <skos:definition xml:lang="en">Tempering</skos:definition>
-        <skos:definition xml:lang="en">heat treatement process with the scope to reduce the hardness of a prior hardened sample or part</skos:definition>
+        <obo:IAO_0100001 rdf:resource="https://w3id.org/pmd/hto/HTO_0000038"/>
+        <rdfs:comment>The IRI was not according to convention.</rdfs:comment>
+        <rdfs:label xml:lang="de">OBSOLETE Anlassen</rdfs:label>
+        <rdfs:label xml:lang="en">OBSOLETE tempering</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:definition xml:lang="en">OBSOLETE A heat treatment process to transform the hardening structure into the direction or equilibrium structure.</skos:definition>
+        <skos:definition xml:lang="de">OBSOLETE Ein Wärmebehandlungsprozess, um das Härtungsgefüge in die Richtung oder in ein Gleichgewichtsgefüge umzuwandeln.</skos:definition>
+        <skos:definition xml:lang="en">OBSOLETE Tempering</skos:definition>
+        <skos:definition xml:lang="en">OBSOLETE heat treatement process with the scope to reduce the hardness of a prior hardened sample or part</skos:definition>
     </owl:Class>
     
 
@@ -19994,18 +20135,13 @@ Nitrierhärten</skos:example>
     <!-- https://w3id.org/pmd/hto/cooling -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/cooling">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000000"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000009"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000005"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
-        <rdfs:label xml:lang="de">Abkühlprozess</rdfs:label>
-        <rdfs:label xml:lang="en">cooling</rdfs:label>
-        <skos:definition xml:lang="en">A process in which the temperature is lowered from a higher to a lower level.</skos:definition>
-        <skos:definition xml:lang="de">Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird.</skos:definition>
+        <obo:IAO_0100001 rdf:resource="https://w3id.org/pmd/co/PMD_0025011"/>
+        <rdfs:comment>THe IRI was not according to convention.</rdfs:comment>
+        <rdfs:label xml:lang="de">OBSOLETE Abkühlprozess</rdfs:label>
+        <rdfs:label xml:lang="en">OBSOLETE cooling</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:definition xml:lang="en">OBSOLETE A process in which the temperature is lowered from a higher to a lower level.</skos:definition>
+        <skos:definition xml:lang="de">OBSOLETE Ein Prozess, bei dem die Temperatur von einem höherem auf ein niedrigeres Niveau abgesenkt wird.</skos:definition>
     </owl:Class>
     
 
@@ -20013,24 +20149,13 @@ Nitrierhärten</skos:example>
     <!-- https://w3id.org/pmd/hto/heating -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/heating">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000000"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000009"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000006"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
-        <rdfs:label xml:lang="de">Erwärmen</rdfs:label>
-        <rdfs:label xml:lang="en">heating</rdfs:label>
-        <skos:definition xml:lang="en">A process in which the temperature is increased from a lower to a higher level.</skos:definition>
-        <skos:definition xml:lang="de">Ein Prozess, bei dem die Temperatur von einem niedrigem auf ein höheres Niveau gesteigert wird.</skos:definition>
+        <obo:IAO_0100001 rdf:resource="https://w3id.org/pmd/co/PMD_0025010"/>
+        <rdfs:comment>The IRI was not according to convention.</rdfs:comment>
+        <rdfs:label xml:lang="de">OBSOLETE Erwärmen</rdfs:label>
+        <rdfs:label xml:lang="en">OBSOLETE heating</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:definition xml:lang="en">OBSOLETE A process in which the temperature is increased from a lower to a higher level.</skos:definition>
+        <skos:definition xml:lang="de">OBSOLETE Ein Prozess, bei dem die Temperatur von einem niedrigem auf ein höheres Niveau gesteigert wird.</skos:definition>
     </owl:Class>
     
 
@@ -20038,13 +20163,14 @@ Nitrierhärten</skos:example>
     <!-- https://w3id.org/pmd/hto/holding -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/holding">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000000"/>
-        <rdfs:comment xml:lang="de">Die HoldingTime ist stets mit einer vorhergehende SoakingTime verbunden.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
-        <rdfs:label xml:lang="de">Halten</rdfs:label>
-        <rdfs:label xml:lang="en">holding</rdfs:label>
-        <skos:definition xml:lang="en">Process step without temperature change in the furnace after the designated temperature was homogeneously reached within the part.</skos:definition>
-        <skos:definition xml:lang="de">Prozessschritt ohne Temperaturänderung im Ofen.</skos:definition>
+        <obo:IAO_0100001 rdf:resource="https://w3id.org/pmd/hto/HTO_0000061"/>
+        <rdfs:comment xml:lang="de">OBSOLETE Die HoldingTime ist stets mit einer vorhergehende SoakingTime verbunden.</rdfs:comment>
+        <rdfs:comment>The IRI was not according to convention.</rdfs:comment>
+        <rdfs:label xml:lang="de">OBSOLETE Halten</rdfs:label>
+        <rdfs:label xml:lang="en">OBSOLETE holding</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:definition xml:lang="en">OBSOLETE Process step without temperature change in the furnace after the designated temperature was homogeneously reached within the part.</skos:definition>
+        <skos:definition xml:lang="de">OBSOLETE Prozessschritt ohne Temperaturänderung im Ofen.</skos:definition>
     </owl:Class>
     
 
@@ -20052,11 +20178,13 @@ Nitrierhärten</skos:example>
     <!-- https://w3id.org/pmd/hto/quenching -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/quenching">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/cooling"/>
-        <rdfs:label xml:lang="de">Abschrecken</rdfs:label>
-        <rdfs:label xml:lang="en">quenching</rdfs:label>
-        <skos:definition xml:lang="en">Process with significantly increased cooling rate, aimed at preventing diffusion based transformations.</skos:definition>
-        <skos:definition xml:lang="de">Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen.</skos:definition>
+        <obo:IAO_0100001 rdf:resource="https://w3id.org/pmd/hto/HTO_0000062"/>
+        <rdfs:comment>THe IRI was not according to convention.</rdfs:comment>
+        <rdfs:label xml:lang="de">OBSOLETE Abschrecken</rdfs:label>
+        <rdfs:label xml:lang="en">OBSOLETE quenching</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:definition xml:lang="en">OBSOLETE Process with significantly increased cooling rate, aimed at preventing diffusion based transformations.</skos:definition>
+        <skos:definition xml:lang="de">OBSOLETE Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen.</skos:definition>
     </owl:Class>
     
 
@@ -20064,13 +20192,14 @@ Nitrierhärten</skos:example>
     <!-- https://w3id.org/pmd/hto/soaking -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/soaking">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000000"/>
-        <rdfs:comment>Durchwärmen des Bauteils, sodass Temperaturhomogenität erreicht wird. Anschließend kann ein Halten auf der Zieltemperatur erfolgen.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
-        <rdfs:label xml:lang="de">Durchwärmen</rdfs:label>
-        <rdfs:label xml:lang="en">soaking</rdfs:label>
-        <skos:definition xml:lang="en">Process step during which temperature homogenization is achieved in the component.</skos:definition>
-        <skos:definition xml:lang="de">Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird.</skos:definition>
+        <obo:IAO_0100001 rdf:resource="https://w3id.org/pmd/hto/HTO_0000042"/>
+        <rdfs:comment>OBSOLETE Durchwärmen des Bauteils, sodass Temperaturhomogenität erreicht wird. Anschließend kann ein Halten auf der Zieltemperatur erfolgen.</rdfs:comment>
+        <rdfs:comment>The IRI was not according to convention.</rdfs:comment>
+        <rdfs:label xml:lang="de">OBSOLETE Durchwärmen</rdfs:label>
+        <rdfs:label xml:lang="en">OBSOLETE soaking</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <skos:definition xml:lang="en">OBSOLETE Process step during which temperature homogenization is achieved in the component.</skos:definition>
+        <skos:definition xml:lang="de">OBSOLETE Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird.</skos:definition>
     </owl:Class>
     
 
@@ -20749,6 +20878,14 @@ Nitrierhärten</skos:example>
             <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020202"/>
             <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020203"/>
             <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0020204"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/pmd/hto/HTO_0000024"/>
+            <rdf:Description rdf:about="https://w3id.org/pmd/hto/HTO_0000026"/>
+            <rdf:Description rdf:about="https://w3id.org/pmd/hto/HTO_0000037"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

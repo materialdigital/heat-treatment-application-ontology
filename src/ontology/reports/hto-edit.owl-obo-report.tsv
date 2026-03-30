@@ -13,8 +13,8 @@ ERROR	deprecated_class_reference	heattreatmentscope	rdfs:subClassOf	BFO:0000023
 ERROR	deprecated_class_reference	Slow Cooling	rdfs:subClassOf	https://w3id.org/pmd/hto/HeattreatmentMethod
 ERROR	deprecated_class_reference	obsolete vacuum heating pressure	rdfs:subClassOf	https://w3id.org/pmd/co/PMD_0000896
 ERROR	deprecated_class_reference	obsolete vacuum pressure	rdfs:subClassOf	https://w3id.org/pmd/co/PMD_0000896
-ERROR	multiple_labels	annealing	rdfs:label	Glühen@de
-ERROR	multiple_labels	annealing	rdfs:label	annealing@en
+ERROR	duplicate_label	Aufkohlen	rdfs:label	Aufkohlen@de
+ERROR	duplicate_label	Aufkohlen	rdfs:label	Aufkohlen@de
 ERROR	multiple_labels	Aufkohlen	rdfs:label	Aufkohlen@de
 ERROR	multiple_labels	Aufkohlen	rdfs:label	carburizing recipe@en
 ERROR	multiple_labels	Grundsätzliche Wärmebehandlungsvorgänge	rdfs:label	Grundsätzliche Wärmebehandlungsvorgänge@de
@@ -25,35 +25,23 @@ ERROR	multiple_labels	through hardening	rdfs:label	Durchhärten@de
 ERROR	multiple_labels	through hardening	rdfs:label	through hardening@en
 ERROR	multiple_labels	Vergüten	rdfs:label	Vergüten@de
 ERROR	multiple_labels	Vergüten	rdfs:label	quenching and tempering@en
+ERROR	multiple_labels	Aufkohlen	rdfs:label	Aufkohlen@de
+ERROR	multiple_labels	Aufkohlen	rdfs:label	carburizing@en
 ERROR	multiple_labels	Sollwert	rdfs:label	Sollwert@de
 ERROR	multiple_labels	Sollwert	rdfs:label	setpoint@en
+ERROR	multiple_labels	Nitridieren	rdfs:label	Nitridieren@de
+ERROR	multiple_labels	Nitridieren	rdfs:label	nitriding@en
 ERROR	multiple_labels	Arbeitsmaschine	rdfs:label	Arbeitsmaschine@de
 ERROR	multiple_labels	Arbeitsmaschine	rdfs:label	machinery@en
 ERROR	multiple_labels	Kraftmaschine	rdfs:label	Kraftmaschine@de
 ERROR	multiple_labels	Kraftmaschine	rdfs:label	engine@en
 ERROR	multiple_labels	Ventilator	rdfs:label	Ventilator@de
 ERROR	multiple_labels	Ventilator	rdfs:label	fan@en
-ERROR	multiple_labels	hardening	rdfs:label	Härten@de
-ERROR	multiple_labels	hardening	rdfs:label	hardening@en
 ERROR	multiple_labels	Ofenkammer mit einer Heizung.	rdfs:label	Heizkammer@de
 ERROR	multiple_labels	Ofenkammer mit einer Heizung.	rdfs:label	Ofenkammer mit einer Heizung.@de
 ERROR	multiple_labels	Ofenkammer mit einer Heizung.	rdfs:label	heating chamber@en
-ERROR	multiple_labels	nitriding	rdfs:label	Nitrieren@de
-ERROR	multiple_labels	nitriding	rdfs:label	nitriding@en
 ERROR	multiple_labels	Abschreckkammer	rdfs:label	Abschreckkammer@de
 ERROR	multiple_labels	Abschreckkammer	rdfs:label	Quenching Chamber@en
-ERROR	multiple_labels	tempering	rdfs:label	Anlassen@de
-ERROR	multiple_labels	tempering	rdfs:label	tempering@en
-ERROR	multiple_labels	cooling	rdfs:label	Abkühlprozess@de
-ERROR	multiple_labels	cooling	rdfs:label	cooling@en
-ERROR	multiple_labels	heating	rdfs:label	Erwärmen@de
-ERROR	multiple_labels	heating	rdfs:label	heating@en
-ERROR	multiple_labels	holding	rdfs:label	Halten@de
-ERROR	multiple_labels	holding	rdfs:label	holding@en
-ERROR	multiple_labels	Abschrecken	rdfs:label	Abschrecken@de
-ERROR	multiple_labels	Abschrecken	rdfs:label	quenching@en
-ERROR	multiple_labels	Durchwärmen	rdfs:label	Durchwärmen@de
-ERROR	multiple_labels	Durchwärmen	rdfs:label	soaking@en
 WARN	annotation_whitespace	obsolete acquisition date	skos:definition	The point in time a Process Node was commissioned (e.g., the purchase date, first day of use), represented in IEEE 1003 'Seconds since Epoch'. @en
 WARN	annotation_whitespace	atmosphere pressure	skos:definition	Parameter describing the intended atmosphere pressure inside a chamber. @en
 WARN	annotation_whitespace	obsolete below ambient pressure	skos:definition	status of atmosphere: reduced pressure below ambient pressure @en
@@ -87,7 +75,6 @@ WARN	annotation_whitespace	obsolete sequence number	skos:definition	ongoing numb
 WARN	annotation_whitespace	obsolete system time for diagram generation	skos:definition	 Extrahierte Systemzeit für das Diagram geniert @de
 WARN	annotation_whitespace	obsolete system time for diagram generation	skos:definition	time stamp for measuring data aquisition time and diagram generation / data syncing @en
 WARN	annotation_whitespace	obsolete vacuum pressure	skos:definition	 Parameter describing the intended vacuum pressure inside a chamber. @en
-WARN	missing_definition	annealing	IAO:0000115	
 WARN	missing_definition	atmosphere pressure	IAO:0000115	
 WARN	missing_definition	carbon potential	IAO:0000115	
 WARN	missing_definition	Aufkohlen	IAO:0000115	
@@ -118,7 +105,9 @@ WARN	missing_definition	through hardening	IAO:0000115
 WARN	missing_definition	QT recipe	IAO:0000115	
 WARN	missing_definition	Vergüten	IAO:0000115	
 WARN	missing_definition	tempering recipe	IAO:0000115	
-WARN	missing_definition	carburizing	IAO:0000115	
+WARN	missing_definition	plasma nitriding	IAO:0000115	
+WARN	missing_definition	Aufkohlen	IAO:0000115	
+WARN	missing_definition	gas nitriding	IAO:0000115	
 WARN	missing_definition	mass flow controller	IAO:0000115	
 WARN	missing_definition	flow measuring function	IAO:0000115	
 WARN	missing_definition	heating rate	IAO:0000115	
@@ -126,6 +115,12 @@ WARN	missing_definition	cooling rate	IAO:0000115
 WARN	missing_definition	Sollwert	IAO:0000115	
 WARN	missing_definition	device operation state	IAO:0000115	
 WARN	missing_definition	device operation state value	IAO:0000115	
+WARN	missing_definition	salz bath nitriding	IAO:0000115	
+WARN	missing_definition	tempering	IAO:0000115	
+WARN	missing_definition	annealing	IAO:0000115	
+WARN	missing_definition	hardening	IAO:0000115	
+WARN	missing_definition	Nitridieren	IAO:0000115	
+WARN	missing_definition	soaking	IAO:0000115	
 WARN	missing_definition	turbo machinery	IAO:0000115	
 WARN	missing_definition	Arbeitsmaschine	IAO:0000115	
 WARN	missing_definition	Kraftmaschine	IAO:0000115	
@@ -142,22 +137,16 @@ WARN	missing_definition	turbine	IAO:0000115
 WARN	missing_definition	heat engine	IAO:0000115	
 WARN	missing_definition	electric motor	IAO:0000115	
 WARN	missing_definition	internal combustion engine	IAO:0000115	
-WARN	missing_definition	hardening	IAO:0000115	
+WARN	missing_definition	holding	IAO:0000115	
+WARN	missing_definition	quenching	IAO:0000115	
 WARN	missing_definition	Ofenkammer mit einer Heizung.	IAO:0000115	
 WARN	missing_definition	hydrogene sensor signal	IAO:0000115	
 WARN	missing_definition	lambda probe signal	IAO:0000115	
-WARN	missing_definition	nitriding	IAO:0000115	
 WARN	missing_definition	nitriding potential	IAO:0000115	
 WARN	missing_definition	oxygen probe signal	IAO:0000115	
 WARN	missing_definition	partial pressure	IAO:0000115	
 WARN	missing_definition	Abschreckkammer	IAO:0000115	
 WARN	missing_definition	rotation speed specification	IAO:0000115	
-WARN	missing_definition	tempering	IAO:0000115	
-WARN	missing_definition	cooling	IAO:0000115	
-WARN	missing_definition	heating	IAO:0000115	
-WARN	missing_definition	holding	IAO:0000115	
-WARN	missing_definition	Abschrecken	IAO:0000115	
-WARN	missing_definition	Durchwärmen	IAO:0000115	
 WARN	missing_obsolete_label	controlled	rdfs:label	controlled@en
 WARN	missing_obsolete_label	convection	rdfs:label	convection@en
 WARN	missing_obsolete_label	fan state fast	rdfs:label	fan state fast@en
