@@ -1005,6 +1005,14 @@ nozzle (jet engine).""" .
                                                                                         "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de .
 
 
+###  https://w3id.org/pmd/hto/HTO_0000063
+<https://w3id.org/pmd/hto/HTO_0000063> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
+                                       rdfs:label "counter"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A counter is a data item that describes the position of an entity within a sequential chain of action with an integer value." ;
+                                       <http://www.w3.org/2004/02/skos/core#example> "Numbering of subprocesses in a heat treatment sequence." .
+
+
 ###  https://w3id.org/pmd/hto/Hardening
 <https://w3id.org/pmd/hto/Hardening> rdf:type owl:Class ;
                                      <http://purl.obolibrary.org/obo/IAO_0100001> <https://w3id.org/pmd/hto/HTO_0000040> ;
