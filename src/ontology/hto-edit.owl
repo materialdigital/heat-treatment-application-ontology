@@ -86,6 +86,21 @@
                                       <https://w3id.org/pmd/co/PMD_0050117> "NHD" .
 
 
+###  https://w3id.org/pmd/co/HTO_0000063
+<https://w3id.org/pmd/co/HTO_0000063> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000019> ;
+                                      rdfs:label "Nitrocarburieren"@de ,
+                                                 "nitrocarburizing"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "nitrocarburising"@en .
+
+
+###  https://w3id.org/pmd/co/HTO_0000064
+<https://w3id.org/pmd/co/HTO_0000064> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000019> ;
+                                      rdfs:label "Carbonitrieren"@de ,
+                                                 "carbonitriding"@en .
+
+
 ###  https://w3id.org/pmd/co/PMD_0000056
 <https://w3id.org/pmd/co/PMD_0000056> owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0000655>
                                                                                  [ rdf:type owl:Restriction ;
@@ -106,21 +121,6 @@
                                                         owl:onProperty <http://purl.obolibrary.org/obo/RO_0000085> ;
                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000054>
                                                       ] .
-
-
-###  https://w3id.org/pmd/co/HTO_0000063
-<https://w3id.org/pmd/co/HTO_0000063> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000019> ;
-                                      rdfs:label "Nitrocarburieren"@de ,
-                                                 "nitrocarburizing"@en ;
-                                      <http://www.w3.org/2004/02/skos/core#altLabel> "nitrocarburising"@en .
-
-
-###  https://w3id.org/pmd/co/HTO_0000064
-<https://w3id.org/pmd/co/HTO_0000064> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000019> ;
-                                      rdfs:label "Carbonitrieren"@de ,
-                                                 "carbonitriding"@en .
 
 
 ###  https://w3id.org/pmd/hto/AccelleratedCooling
@@ -1181,7 +1181,7 @@ nozzle (jet engine).""" .
                                             rdfs:subClassOf <https://w3id.org/pmd/hto/Chamber> ;
                                             rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                             rdfs:label "Abschreckkammer"@de ,
-                                                       "Quenching Chamber"@en ;
+                                                       "quenching chamber"@en ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "Chamber of a heat treatment furnace that is designed to quench objects."@en ,
                                                                                              "Kammer eines Wärmebehandlungsofens, die zum Abschrecken von Gegenständen bestimmt ist."@de .
 
