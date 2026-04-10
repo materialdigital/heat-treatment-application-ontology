@@ -407,7 +407,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 
 ###  https://w3id.org/pmd/hto/HTO_0000002
 <https://w3id.org/pmd/hto/HTO_0000002> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000005> ,
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000039> ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000010>
@@ -969,6 +969,23 @@ pistons (piston engine)
 turbine blades (gas turbine)
 rotor (Wankel engine)
 nozzle (jet engine).""" .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000059
+<https://w3id.org/pmd/hto/HTO_0000059> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000203> ;
+                                       owl:disjointWith <https://w3id.org/pmd/hto/HTO_0000060> ;
+                                       rdfs:label "start time"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A temporal instant that specifies the date(time) a process started." ;
+                                       <http://www.w3.org/2004/02/skos/core#example> "09.06.2022 17:48:47" .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000060
+<https://w3id.org/pmd/hto/HTO_0000060> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000203> ;
+                                       rdfs:label "end time"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A temporal instant that specifies the date(time) a process ended." ;
+                                       <http://www.w3.org/2004/02/skos/core#example> "09.06.2022 18:18:47" .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000061
