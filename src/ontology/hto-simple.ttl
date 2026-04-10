@@ -13,7 +13,7 @@
 @base <https://w3id.org/pmd/hto/hto-simple.ttl> .
 
 <https://w3id.org/pmd/hto/hto-simple.ttl> rdf:type owl:Ontology ;
-                                           owl:versionIRI <https://w3id.org/pmd/hto/releases/2026-03-30/hto-simple.ttl> ;
+                                           owl:versionIRI <https://w3id.org/pmd/hto/releases/2026-04-10/hto-simple.ttl> ;
                                            terms:contributor "Jannis Grundmann" ;
                                            terms:creator <https://orcid.org/0000-0002-9014-2920> ,
                                                          <https://orcid.org/0000-0003-1649-6832> ,
@@ -21,7 +21,7 @@
                                            terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                            terms:license <https://creativecommons.org/licenses/unspecified> ;
                                            terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                           owl:versionInfo "2026-03-30" .
+                                           owl:versionInfo "2026-04-10" .
 
 #################################################################
 #    Annotation properties
@@ -260,6 +260,12 @@ obo:RO_0000085 rdf:type owl:ObjectProperty ;
                obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence"@en ;
                obo:IAO_0000116 "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists."@en ;
                rdfs:label "has function"@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0000077
+co:PMD_0000077 rdf:type owl:ObjectProperty ;
+               rdfs:label "specified by value"@en ;
+               skos:definition "A relation between an entity and a value specification which is about this entity."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0020127
@@ -551,7 +557,8 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 
 ###  https://w3id.org/pmd/hto/HTO_0000002
 <https://w3id.org/pmd/hto/HTO_0000002> rdf:type owl:Class ;
-                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
+                                                       [ rdf:type owl:Restriction ;
                                                          owl:onProperty obo:IAO_0000039 ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000010>
                                                        ] ;
@@ -1053,6 +1060,21 @@ rotor (Wankel engine)
 nozzle (jet engine).""" .
 
 
+###  https://w3id.org/pmd/hto/HTO_0000059
+<https://w3id.org/pmd/hto/HTO_0000059> rdf:type owl:Class ;
+                                       owl:disjointWith <https://w3id.org/pmd/hto/HTO_0000060> ;
+                                       rdfs:label "start time"@en ;
+                                       skos:definition "A temporal instant that specifies the date(time) a process started." ;
+                                       skos:example "09.06.2022 17:48:47" .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000060
+<https://w3id.org/pmd/hto/HTO_0000060> rdf:type owl:Class ;
+                                       rdfs:label "end time"@en ;
+                                       skos:definition "A temporal instant that specifies the date(time) a process ended." ;
+                                       skos:example "09.06.2022 18:18:47" .
+
+
 ###  https://w3id.org/pmd/hto/HTO_0000061
 <https://w3id.org/pmd/hto/HTO_0000061> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000000> ;
@@ -1067,6 +1089,13 @@ nozzle (jet engine).""" .
                                        rdfs:label "quenching"@en ;
                                        skos:definition "Process with significantly increased cooling rate, aimed at preventing diffusion based transformations."@en ,
                                                        "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000063
+<https://w3id.org/pmd/hto/HTO_0000063> rdf:type owl:Class ;
+                                       rdfs:label "counter"@en ;
+                                       skos:definition "A counter is a data item that describes the position of an entity within a sequential chain of action with an integer value." ;
+                                       skos:example "Numbering of subprocesses in a heat treatment sequence." .
 
 
 ###  https://w3id.org/pmd/hto/Hardening
@@ -1238,7 +1267,7 @@ nozzle (jet engine).""" .
                                             rdfs:subClassOf <https://w3id.org/pmd/hto/Chamber> ;
                                             rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                             rdfs:label "Abschreckkammer"@de ,
-                                                       "Quenching Chamber"@en ;
+                                                       "quenching chamber"@en ;
                                             skos:definition "Chamber of a heat treatment furnace that is designed to quench objects."@en ,
                                                             "Kammer eines Wärmebehandlungsofens, die zum Abschrecken von Gegenständen bestimmt ist."@de .
 

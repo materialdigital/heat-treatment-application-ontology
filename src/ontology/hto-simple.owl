@@ -13,7 +13,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto/hto-simple.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2026-03-30/hto-simple.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2026-04-10/hto-simple.owl"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
@@ -21,7 +21,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2026-03-30</owl:versionInfo>
+        <owl:versionInfo>2026-04-10</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -350,6 +350,15 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
         <obo:IAO_0000115 xml:lang="en">a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">has function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/pmd/co/PMD_0000077 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/pmd/co/PMD_0000077">
+        <rdfs:label xml:lang="en">specified by value</rdfs:label>
+        <skos:definition xml:lang="en">A relation between an entity and a value specification which is about this entity.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -734,6 +743,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <!-- https://w3id.org/pmd/hto/HTO_0000002 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000002">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000032"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
@@ -1434,6 +1444,27 @@ nozzle (jet engine).</skos:example>
     
 
 
+    <!-- https://w3id.org/pmd/hto/HTO_0000059 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000059">
+        <owl:disjointWith rdf:resource="https://w3id.org/pmd/hto/HTO_0000060"/>
+        <rdfs:label xml:lang="en">start time</rdfs:label>
+        <skos:definition>A temporal instant that specifies the date(time) a process started.</skos:definition>
+        <skos:example>09.06.2022 17:48:47</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000060 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000060">
+        <rdfs:label xml:lang="en">end time</rdfs:label>
+        <skos:definition>A temporal instant that specifies the date(time) a process ended.</skos:definition>
+        <skos:example>09.06.2022 18:18:47</skos:example>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/hto/HTO_0000061 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000061">
@@ -1452,6 +1483,16 @@ nozzle (jet engine).</skos:example>
         <rdfs:label xml:lang="en">quenching</rdfs:label>
         <skos:definition xml:lang="en">Process with significantly increased cooling rate, aimed at preventing diffusion based transformations.</skos:definition>
         <skos:definition xml:lang="de">Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000063 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000063">
+        <rdfs:label xml:lang="en">counter</rdfs:label>
+        <skos:definition>A counter is a data item that describes the position of an entity within a sequential chain of action with an integer value.</skos:definition>
+        <skos:example>Numbering of subprocesses in a heat treatment sequence.</skos:example>
     </owl:Class>
     
 
@@ -1674,7 +1715,7 @@ nozzle (jet engine).</skos:example>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/Chamber"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Abschreckkammer</rdfs:label>
-        <rdfs:label xml:lang="en">Quenching Chamber</rdfs:label>
+        <rdfs:label xml:lang="en">quenching chamber</rdfs:label>
         <skos:definition xml:lang="en">Chamber of a heat treatment furnace that is designed to quench objects.</skos:definition>
         <skos:definition xml:lang="de">Kammer eines Wärmebehandlungsofens, die zum Abschrecken von Gegenständen bestimmt ist.</skos:definition>
     </owl:Class>

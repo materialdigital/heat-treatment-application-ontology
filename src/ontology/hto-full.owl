@@ -16,7 +16,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto/hto-full.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2026-03-30/hto-full.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2026-04-10/hto-full.owl"/>
         <terms:contributor>Jannis Grundmann</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
@@ -24,7 +24,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2026-03-30</owl:versionInfo>
+        <owl:versionInfo>2026-04-10</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -18901,7 +18901,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <!-- https://w3id.org/pmd/hto/HTO_0000002 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000005"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000032"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
@@ -19348,7 +19348,62 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <!-- https://w3id.org/pmd/hto/HTO_0000030 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000030">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/pmd/hto/HTO_0000005"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000077"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001931"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0001937"/>
+                                        <owl:someValuesFrom>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minExclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000077"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001931"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0001937"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minExclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">heating rate</rdfs:label>
         <skos:definition>A temperature change rate that is of positive value.</skos:definition>
     </owl:Class>
@@ -19358,7 +19413,62 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <!-- https://w3id.org/pmd/hto/HTO_0000031 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000031">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/pmd/hto/HTO_0000005"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000077"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001931"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0001937"/>
+                                        <owl:someValuesFrom>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:maxExclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0000077"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001931"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0001937"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:maxExclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">cooling rate</rdfs:label>
         <skos:definition>A temperature change rate that is of negative value.</skos:definition>
     </owl:Class>
@@ -19686,6 +19796,29 @@ nozzle (jet engine).</skos:example>
     
 
 
+    <!-- https://w3id.org/pmd/hto/HTO_0000059 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/pmd/hto/HTO_0000060"/>
+        <rdfs:label xml:lang="en">start time</rdfs:label>
+        <skos:definition>A temporal instant that specifies the date(time) a process started.</skos:definition>
+        <skos:example>09.06.2022 17:48:47</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000060 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000203"/>
+        <rdfs:label xml:lang="en">end time</rdfs:label>
+        <skos:definition>A temporal instant that specifies the date(time) a process ended.</skos:definition>
+        <skos:example>09.06.2022 18:18:47</skos:example>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/hto/HTO_0000061 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000061">
@@ -19705,6 +19838,17 @@ nozzle (jet engine).</skos:example>
         <rdfs:label xml:lang="en">quenching</rdfs:label>
         <skos:definition xml:lang="en">Process with significantly increased cooling rate, aimed at preventing diffusion based transformations.</skos:definition>
         <skos:definition xml:lang="de">Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000063 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000063">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:label xml:lang="en">counter</rdfs:label>
+        <skos:definition>A counter is a data item that describes the position of an entity within a sequential chain of action with an integer value.</skos:definition>
+        <skos:example>Numbering of subprocesses in a heat treatment sequence.</skos:example>
     </owl:Class>
     
 
@@ -19934,7 +20078,7 @@ nozzle (jet engine).</skos:example>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/Chamber"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Abschreckkammer</rdfs:label>
-        <rdfs:label xml:lang="en">Quenching Chamber</rdfs:label>
+        <rdfs:label xml:lang="en">quenching chamber</rdfs:label>
         <skos:definition xml:lang="en">Chamber of a heat treatment furnace that is designed to quench objects.</skos:definition>
         <skos:definition xml:lang="de">Kammer eines Wärmebehandlungsofens, die zum Abschrecken von Gegenständen bestimmt ist.</skos:definition>
     </owl:Class>

@@ -13,7 +13,7 @@
 @base <https://w3id.org/pmd/hto/hto-base.ttl> .
 
 <https://w3id.org/pmd/hto/hto-base.ttl> rdf:type owl:Ontology ;
-                                         owl:versionIRI <https://w3id.org/pmd/hto/releases/2026-03-30/hto-base.ttl> ;
+                                         owl:versionIRI <https://w3id.org/pmd/hto/releases/2026-04-10/hto-base.ttl> ;
                                          dc:type obo:IAO_8000001 ;
                                          terms:contributor "Jannis Grundmann" ;
                                          terms:creator <https://orcid.org/0000-0002-9014-2920> ,
@@ -22,7 +22,7 @@
                                          terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                          terms:license <https://creativecommons.org/licenses/unspecified> ;
                                          terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                         owl:versionInfo "2026-03-30" .
+                                         owl:versionInfo "2026-04-10" .
 
 #################################################################
 #    Annotation properties
@@ -128,6 +128,10 @@ obo:RO_0000080 rdf:type owl:ObjectProperty .
 obo:RO_0000085 rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/pmd/co/PMD_0000077
+co:PMD_0000077 rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/pmd/co/PMD_0020127
 co:PMD_0020127 rdf:type owl:ObjectProperty .
 
@@ -135,6 +139,10 @@ co:PMD_0020127 rdf:type owl:ObjectProperty .
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://purl.obolibrary.org/obo/OBI_0001937
+obo:OBI_0001937 rdf:type owl:DatatypeProperty .
+
 
 ###  http://purl.obolibrary.org/obo/OBI_0002135
 obo:OBI_0002135 rdf:type owl:DatatypeProperty .
@@ -168,12 +176,16 @@ obo:BFO_0000145 rdf:type owl:Class .
 obo:BFO_0000202 rdf:type owl:Class .
 
 
+###  http://purl.obolibrary.org/obo/BFO_0000203
+obo:BFO_0000203 rdf:type owl:Class .
+
+
 ###  http://purl.obolibrary.org/obo/IAO_0000003
 obo:IAO_0000003 rdf:type owl:Class .
 
 
-###  http://purl.obolibrary.org/obo/IAO_0000005
-obo:IAO_0000005 rdf:type owl:Class .
+###  http://purl.obolibrary.org/obo/IAO_0000027
+obo:IAO_0000027 rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000109
@@ -182,6 +194,10 @@ obo:IAO_0000109 rdf:type owl:Class .
 
 ###  http://purl.obolibrary.org/obo/OBI_0001930
 obo:OBI_0001930 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0001931
+obo:OBI_0001931 rdf:type owl:Class .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000008
@@ -521,7 +537,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 
 ###  https://w3id.org/pmd/hto/HTO_0000002
 <https://w3id.org/pmd/hto/HTO_0000002> rdf:type owl:Class ;
-                                       rdfs:subClassOf obo:IAO_0000005 ,
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty obo:IAO_0000039 ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000010>
@@ -848,14 +864,86 @@ _:genid47 owl:intersectionOf ( <https://w3id.org/pmd/hto/HTO_0000020>
 
 ###  https://w3id.org/pmd/hto/HTO_0000030
 <https://w3id.org/pmd/hto/HTO_0000030> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000005> ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/hto/HTO_0000005>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty co:PMD_0000077 ;
+                                                                                    owl:someValuesFrom [ owl:intersectionOf ( obo:OBI_0001931
+                                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                                owl:onProperty obo:OBI_0001937 ;
+                                                                                                                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                                     owl:onDatatype xsd:double ;
+                                                                                                                                                     owl:withRestrictions ( [ xsd:minExclusive "0.0"^^xsd:double
+                                                                                                                                                                            ]
+                                                                                                                                                                          )
+                                                                                                                                                   ]
+                                                                                                                              ]
+                                                                                                                            ) ;
+                                                                                                         rdf:type owl:Class
+                                                                                                       ]
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000005> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty co:PMD_0000077 ;
+                                                         owl:someValuesFrom [ owl:intersectionOf ( obo:OBI_0001931
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty obo:OBI_0001937 ;
+                                                                                                     owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                          owl:onDatatype xsd:double ;
+                                                                                                                          owl:withRestrictions ( [ xsd:minExclusive "0.0"^^xsd:double
+                                                                                                                                                 ]
+                                                                                                                                               )
+                                                                                                                        ]
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ]
+                                                       ] ;
                                        rdfs:label "heating rate"@en ;
                                        skos:definition "A temperature change rate that is of positive value." .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000031
 <https://w3id.org/pmd/hto/HTO_0000031> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000005> ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/hto/HTO_0000005>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty co:PMD_0000077 ;
+                                                                                    owl:someValuesFrom [ owl:intersectionOf ( obo:OBI_0001931
+                                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                                owl:onProperty obo:OBI_0001937 ;
+                                                                                                                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                                     owl:onDatatype xsd:double ;
+                                                                                                                                                     owl:withRestrictions ( [ xsd:maxExclusive "0.0"^^xsd:double
+                                                                                                                                                                            ]
+                                                                                                                                                                          )
+                                                                                                                                                   ]
+                                                                                                                              ]
+                                                                                                                            ) ;
+                                                                                                         rdf:type owl:Class
+                                                                                                       ]
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000005> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty co:PMD_0000077 ;
+                                                         owl:someValuesFrom [ owl:intersectionOf ( obo:OBI_0001931
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty obo:OBI_0001937 ;
+                                                                                                     owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                          owl:onDatatype xsd:double ;
+                                                                                                                          owl:withRestrictions ( [ xsd:maxExclusive "0.0"^^xsd:double
+                                                                                                                                                 ]
+                                                                                                                                               )
+                                                                                                                        ]
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ]
+                                                       ] ;
                                        rdfs:label "cooling rate"@en ;
                                        skos:definition "A temperature change rate that is of negative value." .
 
@@ -1095,6 +1183,23 @@ rotor (Wankel engine)
 nozzle (jet engine).""" .
 
 
+###  https://w3id.org/pmd/hto/HTO_0000059
+<https://w3id.org/pmd/hto/HTO_0000059> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:BFO_0000203 ;
+                                       owl:disjointWith <https://w3id.org/pmd/hto/HTO_0000060> ;
+                                       rdfs:label "start time"@en ;
+                                       skos:definition "A temporal instant that specifies the date(time) a process started." ;
+                                       skos:example "09.06.2022 17:48:47" .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000060
+<https://w3id.org/pmd/hto/HTO_0000060> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:BFO_0000203 ;
+                                       rdfs:label "end time"@en ;
+                                       skos:definition "A temporal instant that specifies the date(time) a process ended." ;
+                                       skos:example "09.06.2022 18:18:47" .
+
+
 ###  https://w3id.org/pmd/hto/HTO_0000061
 <https://w3id.org/pmd/hto/HTO_0000061> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000000> ;
@@ -1110,6 +1215,14 @@ nozzle (jet engine).""" .
                                        rdfs:label "quenching"@en ;
                                        skos:definition "Process with significantly increased cooling rate, aimed at preventing diffusion based transformations."@en ,
                                                        "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000063
+<https://w3id.org/pmd/hto/HTO_0000063> rdf:type owl:Class ;
+                                       rdfs:subClassOf obo:IAO_0000027 ;
+                                       rdfs:label "counter"@en ;
+                                       skos:definition "A counter is a data item that describes the position of an entity within a sequential chain of action with an integer value." ;
+                                       skos:example "Numbering of subprocesses in a heat treatment sequence." .
 
 
 ###  https://w3id.org/pmd/hto/Hardening
@@ -1288,7 +1401,7 @@ nozzle (jet engine).""" .
                                             rdfs:subClassOf <https://w3id.org/pmd/hto/Chamber> ;
                                             rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                             rdfs:label "Abschreckkammer"@de ,
-                                                       "Quenching Chamber"@en ;
+                                                       "quenching chamber"@en ;
                                             skos:definition "Chamber of a heat treatment furnace that is designed to quench objects."@en ,
                                                             "Kammer eines Wärmebehandlungsofens, die zum Abschrecken von Gegenständen bestimmt ist."@de .
 

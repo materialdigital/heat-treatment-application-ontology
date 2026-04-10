@@ -100,8 +100,11 @@ Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000055>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000056>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000057>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000058>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000059>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000060>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000061>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000062>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000063>))
 Declaration(Class(<https://w3id.org/pmd/hto/Hardening>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingChamber>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingTime>))
@@ -191,7 +194,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/HTO_0000063> "nitrocarbu
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/co/HTO_0000063> "nitrocarburising"@en)
 SubClassOf(<https://w3id.org/pmd/co/HTO_0000063> <https://w3id.org/pmd/hto/HTO_0000019>)
 
-# Class: <https://w3id.org/pmd/co/HTO_0000064> (carbonitriding)
+# Class: <https://w3id.org/pmd/co/HTO_0000064> (Carbonitrieren)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/HTO_0000064> "Carbonitrieren"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/HTO_0000064> "carbonitriding"@en)
@@ -201,7 +204,7 @@ SubClassOf(<https://w3id.org/pmd/co/HTO_0000064> <https://w3id.org/pmd/hto/HTO_0
 
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000057>)))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000655> (furnace)
+# Class: <https://w3id.org/pmd/co/PMD_0000655> (Ofen)
 
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Chamber>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))
@@ -458,7 +461,7 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000001> <https://w3id.org/pmd/co/PMD_0
 # Class: <https://w3id.org/pmd/hto/HTO_0000002> (target temperature specification)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000002> "target temperature specification"@en)
-SubClassOf(<https://w3id.org/pmd/hto/HTO_0000002> <http://purl.obolibrary.org/obo/IAO_0000005>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000002> <https://w3id.org/pmd/hto/HTO_0000032>)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000039> <https://w3id.org/pmd/hto/HTO_0000010>))
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/co/PMD_0000967>))
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000002> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0002135> xsd:float))
@@ -643,13 +646,13 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000029> <https://w3id.org/pmd/co/PMD_0
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000030> "heating rate"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000030> "A temperature change rate that is of positive value.")
-SubClassOf(<https://w3id.org/pmd/hto/HTO_0000030> <https://w3id.org/pmd/hto/HTO_0000005>)
+EquivalentClasses(<https://w3id.org/pmd/hto/HTO_0000030> ObjectIntersectionOf(<https://w3id.org/pmd/hto/HTO_0000005> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0001931> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0001937> DatatypeRestriction(xsd:double xsd:minExclusive "0.0"^^xsd:double))))))
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000031> (cooling rate)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000031> "cooling rate"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000031> "A temperature change rate that is of negative value.")
-SubClassOf(<https://w3id.org/pmd/hto/HTO_0000031> <https://w3id.org/pmd/hto/HTO_0000005>)
+EquivalentClasses(<https://w3id.org/pmd/hto/HTO_0000031> ObjectIntersectionOf(<https://w3id.org/pmd/hto/HTO_0000005> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000077> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0001931> DataSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0001937> DatatypeRestriction(xsd:double xsd:maxExclusive "0.0"^^xsd:double))))))
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000032> (Sollwert)
 
@@ -840,6 +843,21 @@ rotor (Wankel engine)
 nozzle (jet engine).")
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000058> <https://w3id.org/pmd/hto/HTO_0000056>)
 
+# Class: <https://w3id.org/pmd/hto/HTO_0000059> (start time)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000059> "start time"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000059> "A temporal instant that specifies the date(time) a process started.")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/hto/HTO_0000059> "09.06.2022 17:48:47")
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000059> <http://purl.obolibrary.org/obo/BFO_0000203>)
+DisjointClasses(<https://w3id.org/pmd/hto/HTO_0000059> <https://w3id.org/pmd/hto/HTO_0000060>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000060> (end time)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000060> "end time"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000060> "A temporal instant that specifies the date(time) a process ended.")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/hto/HTO_0000060> "09.06.2022 18:18:47")
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000060> <http://purl.obolibrary.org/obo/BFO_0000203>)
+
 # Class: <https://w3id.org/pmd/hto/HTO_0000061> (holding)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/HTO_0000061> "Die HoldingTime ist stets mit einer vorhergehende SoakingTime verbunden."@de)
@@ -854,6 +872,13 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000062> "quenching
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000062> "Process with significantly increased cooling rate, aimed at preventing diffusion based transformations."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000062> "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000062> <https://w3id.org/pmd/co/PMD_0025011>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000063> (counter)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000063> "counter"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000063> "A counter is a data item that describes the position of an entity within a sequential chain of action with an integer value.")
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/hto/HTO_0000063> "Numbering of subprocesses in a heat treatment sequence.")
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000063> <http://purl.obolibrary.org/obo/IAO_0000027>)
 
 # Class: <https://w3id.org/pmd/hto/Hardening> (OBSOLETE Härten)
 
@@ -1014,7 +1039,7 @@ SubClassOf(<https://w3id.org/pmd/hto/PartialPressure> <http://purl.obolibrary.or
 
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/QuenchingChamber> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/QuenchingChamber> "Abschreckkammer"@de)
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/QuenchingChamber> "Quenching Chamber"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/QuenchingChamber> "quenching chamber"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/QuenchingChamber> "Chamber of a heat treatment furnace that is designed to quench objects."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/QuenchingChamber> "Kammer eines Wärmebehandlungsofens, die zum Abschrecken von Gegenständen bestimmt ist."@de)
 SubClassOf(<https://w3id.org/pmd/hto/QuenchingChamber> <https://w3id.org/pmd/hto/Chamber>)
