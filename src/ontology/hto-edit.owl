@@ -467,15 +467,17 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                                          owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000967>
                                                        ] ;
                                        rdfs:label "target temperature"@en ;
-                                       <http://www.w3.org/2004/02/skos/core#definition> "Process characteristic defining the temperature that is to be reached within a process that involves a defined change of temperature."@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "Process characteristic defining the temperature that is to be reached/held within a process that involves a defined change of temperature."@en ;
                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "target temperature"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000007
 <https://w3id.org/pmd/hto/HTO_0000007> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
-                                       rdfs:label "melting temperature"@en ;
-                                       <http://www.w3.org/2004/02/skos/core#definition> "disposition of a material at which a phase transformation between liquid and solid state takes place" .
+                                       <http://purl.obolibrary.org/obo/IAO_0100001> <https://w3id.org/pmd/co/PMD_0000851> ;
+                                       rdfs:comment "an equivalent term was adopted from a different ontology" ;
+                                       rdfs:label "OBSOLETE melting temperature"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "OBSOLETE disposition of a material at which a phase transformation between liquid and solid state takes place" .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000008
@@ -503,9 +505,9 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 
 ###  https://w3id.org/pmd/hto/HTO_0000011
 <https://w3id.org/pmd/hto/HTO_0000011> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020167> ;
                                        rdfs:comment "needs more work; austenitic phase can be reached from at least two temperatures for any given material (from liquid or from ferrite)" ;
-                                       rdfs:label "austenitizing temperature"@en ;
+                                       rdfs:label "austenitizing point"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "disposition of material which marks the phase change to austenite" .
 
 
@@ -1051,6 +1053,22 @@ nozzle (jet engine).""" .
                                        <http://www.w3.org/2004/02/skos/core#example> "Numbering of subprocesses in a heat treatment sequence." .
 
 
+###  https://w3id.org/pmd/hto/HTO_0000064
+<https://w3id.org/pmd/hto/HTO_0000064> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ;
+                                       rdfs:label "flow rate"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000065
+<https://w3id.org/pmd/hto/HTO_0000065> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000064>
+                                                       ] ;
+                                       rdfs:label "flow rate specification"@en .
+
+
 ###  https://w3id.org/pmd/hto/Hardening
 <https://w3id.org/pmd/hto/Hardening> rdf:type owl:Class ;
                                      <http://purl.obolibrary.org/obo/IAO_0100001> <https://w3id.org/pmd/hto/HTO_0000040> ;
@@ -1258,12 +1276,16 @@ nozzle (jet engine).""" .
 
 ###  https://w3id.org/pmd/hto/Rotation
 <https://w3id.org/pmd/hto/Rotation> rdf:type owl:Class ;
-                                    rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ;
+                                    rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                      owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000043>
+                                                    ] ;
                                     <http://purl.obolibrary.org/obo/IAO_0000114> "needs work" ;
                                     rdfs:comment "seam to be a device specification pinting to a process charateristic of type speed" ;
                                     rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                     rdfs:label "rotation speed specification"@en ;
-                                    <http://www.w3.org/2004/02/skos/core#definition> "Device specification describing the intended rotational speed of a device e.g. an fan or turbine"@en ,
+                                    <http://www.w3.org/2004/02/skos/core#definition> "A set point describing the intended rotational speed of a device e.g. an fan or turbine."@en ,
                                                                                      "rotation speed of the atmosphere agitation device "@en .
 
 
