@@ -725,14 +725,52 @@ _:genid50 owl:intersectionOf ( <https://w3id.org/pmd/hto/HTO_0000020>
 
 ###  https://w3id.org/pmd/hto/HTO_0000030
 <https://w3id.org/pmd/hto/HTO_0000030> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000005> ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/hto/HTO_0000005>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
+                                                                                    owl:someValuesFrom [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/OBI_0001931>
+                                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/OBI_0001937> ;
+                                                                                                                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                                     owl:onDatatype xsd:double ;
+                                                                                                                                                     owl:withRestrictions ( [ xsd:minExclusive "0.0"^^xsd:double
+                                                                                                                                                                            ]
+                                                                                                                                                                          )
+                                                                                                                                                   ]
+                                                                                                                              ]
+                                                                                                                            ) ;
+                                                                                                         rdf:type owl:Class
+                                                                                                       ]
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
                                        rdfs:label "heating rate"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "A temperature change rate that is of positive value." .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000031
 <https://w3id.org/pmd/hto/HTO_0000031> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000005> ;
+                                       owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/pmd/hto/HTO_0000005>
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <https://w3id.org/pmd/co/PMD_0000077> ;
+                                                                                    owl:someValuesFrom [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/OBI_0001931>
+                                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/OBI_0001937> ;
+                                                                                                                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                                                                                     owl:onDatatype xsd:double ;
+                                                                                                                                                     owl:withRestrictions ( [ xsd:maxExclusive "0.0"^^xsd:double
+                                                                                                                                                                            ]
+                                                                                                                                                                          )
+                                                                                                                                                   ]
+                                                                                                                              ]
+                                                                                                                            ) ;
+                                                                                                         rdf:type owl:Class
+                                                                                                       ]
+                                                                                  ]
+                                                                                ) ;
+                                                             rdf:type owl:Class
+                                                           ] ;
                                        rdfs:label "cooling rate"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "A temperature change rate that is of negative value." .
 
