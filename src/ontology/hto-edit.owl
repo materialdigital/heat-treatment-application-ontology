@@ -508,7 +508,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020167> ;
                                        rdfs:comment "needs more work; austenitic phase can be reached from at least two temperatures for any given material (from liquid or from ferrite)" ;
                                        rdfs:label "austenitizing point"@en ;
-                                       <http://www.w3.org/2004/02/skos/core#definition> "disposition of material which marks the phase change to austenite" .
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A realizable entity of a material which marks the phase change to austenite (γ-iron)." .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000012
