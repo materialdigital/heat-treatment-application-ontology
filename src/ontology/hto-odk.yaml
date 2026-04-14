@@ -20,9 +20,9 @@ import_group:
   products:
     - id: pmdco
       module_type: mirror
-      mirror_from: https://materialdigital.github.io/core-ontology/ontology.owl
+      mirror_from: https://w3id.org/pmd/co/3.0.0
       base_iris:
-        - https://w3id.org/pmd/co/
+        - https://w3id.org/pmd/co/3.0.0
 
 namespaces:
   - https://w3id.org/pmd/hto/
