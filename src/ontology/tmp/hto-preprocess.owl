@@ -105,6 +105,8 @@ Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000060>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000061>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000062>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000063>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000064>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000065>))
 Declaration(Class(<https://w3id.org/pmd/hto/Hardening>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingChamber>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingTime>))
@@ -489,16 +491,18 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000005> <https://w3id.org/pmd/co/PMD_0
 # Class: <https://w3id.org/pmd/hto/HTO_0000006> (target temperature)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000006> "target temperature"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000006> "Process characteristic defining the temperature that is to be reached within a process that involves a defined change of temperature."@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000006> "Process characteristic defining the temperature that is to be reached/held within a process that involves a defined change of temperature."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#prefLabel> <https://w3id.org/pmd/hto/HTO_0000006> "target temperature"@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000006> <https://w3id.org/pmd/co/PMD_0000008>)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000006> ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0020127> <https://w3id.org/pmd/co/PMD_0000967>))
 
-# Class: <https://w3id.org/pmd/hto/HTO_0000007> (melting temperature)
+# Class: <https://w3id.org/pmd/hto/HTO_0000007> (OBSOLETE melting temperature)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000007> "melting temperature"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000007> "disposition of a material at which a phase transformation between liquid and solid state takes place")
-SubClassOf(<https://w3id.org/pmd/hto/HTO_0000007> <http://purl.obolibrary.org/obo/BFO_0000016>)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <https://w3id.org/pmd/hto/HTO_0000007> <https://w3id.org/pmd/co/PMD_0000851>)
+AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/HTO_0000007> "an equivalent term was adopted from a different ontology")
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000007> "OBSOLETE melting temperature"@en)
+AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/HTO_0000007> "true"^^xsd:boolean)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000007> "OBSOLETE disposition of a material at which a phase transformation between liquid and solid state takes place")
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000008> (duration specification)
 
@@ -517,12 +521,12 @@ SubClassOf(<https://w3id.org/pmd/hto/HTO_0000009> <http://purl.obolibrary.org/ob
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000010> "temperature unit"@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000010> <http://purl.obolibrary.org/obo/IAO_0000003>)
 
-# Class: <https://w3id.org/pmd/hto/HTO_0000011> (austenitizing temperature)
+# Class: <https://w3id.org/pmd/hto/HTO_0000011> (austenitizing point)
 
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/HTO_0000011> "needs more work; austenitic phase can be reached from at least two temperatures for any given material (from liquid or from ferrite)")
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000011> "austenitizing temperature"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000011> "disposition of material which marks the phase change to austenite")
-SubClassOf(<https://w3id.org/pmd/hto/HTO_0000011> <http://purl.obolibrary.org/obo/BFO_0000016>)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000011> "austenitizing point"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000011> "A realizable entity of a material which marks the phase change to austenite (γ-iron).")
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000011> <https://w3id.org/pmd/co/PMD_0020167>)
 
 # Class: <https://w3id.org/pmd/hto/HTO_0000012> (holding function)
 
@@ -880,6 +884,17 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/hto/HTO_0000063> "Numbering of subprocesses in a heat treatment sequence.")
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000063> <http://purl.obolibrary.org/obo/IAO_0000027>)
 
+# Class: <https://w3id.org/pmd/hto/HTO_0000064> (flow rate)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000064> "flow rate"@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000064> <https://w3id.org/pmd/co/PMD_0000008>)
+
+# Class: <https://w3id.org/pmd/hto/HTO_0000065> (flow rate specification)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000065> "flow rate specification"@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000065> <https://w3id.org/pmd/hto/HTO_0000032>)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000065> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/hto/HTO_0000064>))
+
 # Class: <https://w3id.org/pmd/hto/Hardening> (OBSOLETE Härten)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <https://w3id.org/pmd/hto/Hardening> <https://w3id.org/pmd/hto/HTO_0000040>)
@@ -1072,9 +1087,10 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.o
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/Rotation> "seam to be a device specification pinting to a process charateristic of type speed")
 AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/pmd/hto/Rotation> <https://w3id.org/pmd/hto/>)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/Rotation> "rotation speed specification"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Rotation> "Device specification describing the intended rotational speed of a device e.g. an fan or turbine"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Rotation> "A set point describing the intended rotational speed of a device e.g. an fan or turbine."@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/Rotation> "rotation speed of the atmosphere agitation device "@en)
 SubClassOf(<https://w3id.org/pmd/hto/Rotation> <https://w3id.org/pmd/hto/HTO_0000032>)
+SubClassOf(<https://w3id.org/pmd/hto/Rotation> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://w3id.org/pmd/hto/HTO_0000043>))
 
 # Class: <https://w3id.org/pmd/hto/SequenceDescriptor> (obsolete sequence descriptor)
 

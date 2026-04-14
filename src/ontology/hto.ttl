@@ -16,7 +16,7 @@
 @base <https://w3id.org/pmd/hto.ttl> .
 
 <https://w3id.org/pmd/hto.ttl> rdf:type owl:Ontology ;
-                                owl:versionIRI <https://w3id.org/pmd/hto/releases/2026-04-10/hto.ttl> ;
+                                owl:versionIRI <https://w3id.org/pmd/hto/releases/2026-04-14/hto.ttl> ;
                                 terms:contributor "Jannis Grundmann" ;
                                 terms:creator <https://orcid.org/0000-0002-9014-2920> ,
                                               <https://orcid.org/0000-0003-1649-6832> ,
@@ -24,7 +24,7 @@
                                 terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                 terms:license <https://creativecommons.org/licenses/unspecified> ;
                                 terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                owl:versionInfo "2026-04-10" .
+                                owl:versionInfo "2026-04-14" .
 
 #################################################################
 #    Annotation properties
@@ -13904,15 +13904,17 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                                          owl:someValuesFrom co:PMD_0000967
                                                        ] ;
                                        rdfs:label "target temperature"@en ;
-                                       skos:definition "Process characteristic defining the temperature that is to be reached within a process that involves a defined change of temperature."@en ;
+                                       skos:definition "Process characteristic defining the temperature that is to be reached/held within a process that involves a defined change of temperature."@en ;
                                        skos:prefLabel "target temperature"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000007
 <https://w3id.org/pmd/hto/HTO_0000007> rdf:type owl:Class ;
-                                       rdfs:subClassOf obo:BFO_0000016 ;
-                                       rdfs:label "melting temperature"@en ;
-                                       skos:definition "disposition of a material at which a phase transformation between liquid and solid state takes place" .
+                                       obo:IAO_0100001 co:PMD_0000851 ;
+                                       rdfs:comment "an equivalent term was adopted from a different ontology" ;
+                                       rdfs:label "OBSOLETE melting temperature"@en ;
+                                       owl:deprecated "true"^^xsd:boolean ;
+                                       skos:definition "OBSOLETE disposition of a material at which a phase transformation between liquid and solid state takes place" .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000008
@@ -13940,10 +13942,10 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 
 ###  https://w3id.org/pmd/hto/HTO_0000011
 <https://w3id.org/pmd/hto/HTO_0000011> rdf:type owl:Class ;
-                                       rdfs:subClassOf obo:BFO_0000016 ;
+                                       rdfs:subClassOf co:PMD_0020167 ;
                                        rdfs:comment "needs more work; austenitic phase can be reached from at least two temperatures for any given material (from liquid or from ferrite)" ;
-                                       rdfs:label "austenitizing temperature"@en ;
-                                       skos:definition "disposition of material which marks the phase change to austenite" .
+                                       rdfs:label "austenitizing point"@en ;
+                                       skos:definition "A realizable entity of a material which marks the phase change to austenite (γ-iron)." .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000012
@@ -14532,6 +14534,22 @@ nozzle (jet engine).""" .
                                        skos:example "Numbering of subprocesses in a heat treatment sequence." .
 
 
+###  https://w3id.org/pmd/hto/HTO_0000064
+<https://w3id.org/pmd/hto/HTO_0000064> rdf:type owl:Class ;
+                                       rdfs:subClassOf co:PMD_0000008 ;
+                                       rdfs:label "flow rate"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000065
+<https://w3id.org/pmd/hto/HTO_0000065> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000136 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000064>
+                                                       ] ;
+                                       rdfs:label "flow rate specification"@en .
+
+
 ###  https://w3id.org/pmd/hto/Hardening
 <https://w3id.org/pmd/hto/Hardening> rdf:type owl:Class ;
                                      obo:IAO_0100001 <https://w3id.org/pmd/hto/HTO_0000040> ;
@@ -14739,12 +14757,16 @@ nozzle (jet engine).""" .
 
 ###  https://w3id.org/pmd/hto/Rotation
 <https://w3id.org/pmd/hto/Rotation> rdf:type owl:Class ;
-                                    rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ;
+                                    rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty obo:IAO_0000136 ;
+                                                      owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000043>
+                                                    ] ;
                                     obo:IAO_0000114 "needs work" ;
                                     rdfs:comment "seam to be a device specification pinting to a process charateristic of type speed" ;
                                     rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                     rdfs:label "rotation speed specification"@en ;
-                                    skos:definition "Device specification describing the intended rotational speed of a device e.g. an fan or turbine"@en ,
+                                    skos:definition "A set point describing the intended rotational speed of a device e.g. an fan or turbine."@en ,
                                                     "rotation speed of the atmosphere agitation device "@en .
 
 

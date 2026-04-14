@@ -116,6 +116,8 @@ https://w3id.org/pmd/hto/HTO_0000060
 https://w3id.org/pmd/hto/HTO_0000061
 https://w3id.org/pmd/hto/HTO_0000062
 https://w3id.org/pmd/hto/HTO_0000063
+https://w3id.org/pmd/hto/HTO_0000064
+https://w3id.org/pmd/hto/HTO_0000065
 https://w3id.org/pmd/hto/Hardening
 https://w3id.org/pmd/hto/HeatingChamber
 https://w3id.org/pmd/hto/HeatingTime

@@ -88,11 +88,10 @@ WARN	missing_definition	temperature change rate specification	IAO:0000115
 WARN	missing_definition	heating recipe	IAO:0000115	
 WARN	missing_definition	temperature change rate	IAO:0000115	
 WARN	missing_definition	target temperature	IAO:0000115	
-WARN	missing_definition	melting temperature	IAO:0000115	
 WARN	missing_definition	duration specification	IAO:0000115	
 WARN	missing_definition	duration	IAO:0000115	
 WARN	missing_definition	temperature unit	IAO:0000115	
-WARN	missing_definition	austenitizing temperature	IAO:0000115	
+WARN	missing_definition	austenitizing point	IAO:0000115	
 WARN	missing_definition	holding function	IAO:0000115	
 WARN	missing_definition	hardening recipe	IAO:0000115	
 WARN	missing_definition	holding recipe	IAO:0000115	
@@ -142,6 +141,8 @@ WARN	missing_definition	end time	IAO:0000115
 WARN	missing_definition	holding	IAO:0000115	
 WARN	missing_definition	quenching	IAO:0000115	
 WARN	missing_definition	counter	IAO:0000115	
+WARN	missing_definition	flow rate	IAO:0000115	
+WARN	missing_definition	flow rate specification	IAO:0000115	
 WARN	missing_definition	Ofenkammer mit einer Heizung.	IAO:0000115	
 WARN	missing_definition	hydrogene sensor signal	IAO:0000115	
 WARN	missing_definition	lambda probe signal	IAO:0000115	
