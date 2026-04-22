@@ -8,7 +8,7 @@
 
 <https://w3id.org/pmd/hto> rdf:type owl:Ontology ;
                             owl:imports <https://w3id.org/pmd/hto/imports/pmdco_import.owl> ;
-                            <http://purl.org/dc/terms/contributor> "Jannis Grundmann" ;
+                            <http://purl.org/dc/terms/contributor> "Divya Gosula" ;
                             <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-9014-2920> ,
                                                                <https://orcid.org/0000-0003-1649-6832> ,
                                                                <https://orcid.org/0009-0004-4787-4685> ;
@@ -199,6 +199,7 @@
 ###  https://w3id.org/pmd/hto/Carburizing
 <https://w3id.org/pmd/hto/Carburizing> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ;
+                                       <http://purl.obolibrary.org/obo/IAO_0000116> "needs work" ;
                                        rdfs:comment "Potentiell ableitbar mit bestimmten Fluss-Schwellenwerten"@de ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                        rdfs:label "Aufkohlen"@de ,
@@ -420,6 +421,8 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                                          owl:onProperty <http://purl.obolibrary.org/obo/OBI_0002135> ;
                                                          owl:someValuesFrom xsd:float
                                                        ] ;
+                                       <http://purl.obolibrary.org/obo/IAO_0000116> """needs work
+maybe delete (bc target temp is already present)""" ;
                                        rdfs:label "target temperature specification"@en .
 
 
@@ -461,11 +464,12 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 
 ###  https://w3id.org/pmd/hto/HTO_0000006
 <https://w3id.org/pmd/hto/HTO_0000006> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ,
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <https://w3id.org/pmd/co/PMD_0020127> ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000967>
                                                        ] ;
+                                       <http://purl.obolibrary.org/obo/IAO_0000116> "needs work" ;
                                        rdfs:label "target temperature"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "Process characteristic defining the temperature that is to be reached/held within a process that involves a defined change of temperature."@en ;
                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "target temperature"@en .
@@ -697,12 +701,13 @@ _:genid50 owl:intersectionOf ( <https://w3id.org/pmd/hto/HTO_0000020>
 
 ###  https://w3id.org/pmd/hto/HTO_0000027
 <https://w3id.org/pmd/hto/HTO_0000027> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000008> ,
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <https://w3id.org/pmd/co/PMD_0020127> ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000896>
                                                        ] ;
                                        <http://purl.obolibrary.org/obo/IAO_0000115> "A process attribute. Describes the pressure set point for a given process."@en ;
+                                       <http://purl.obolibrary.org/obo/IAO_0000116> "needs work" ;
                                        rdfs:label "target pressure"@en ;
                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "target pressure"@en .
 
@@ -1067,6 +1072,47 @@ nozzle (jet engine).""" .
                                                          owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000064>
                                                        ] ;
                                        rdfs:label "flow rate specification"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000066
+<https://w3id.org/pmd/hto/HTO_0000066> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000000> ;
+                                       <http://purl.obolibrary.org/obo/IAO_0000116> "needs work" ;
+                                       rdfs:label "evacuation"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "A heat treatment essential that creates a vacuum. Removing atmoshpere and decreasing pressure."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000067
+<https://w3id.org/pmd/hto/HTO_0000067> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000781> ;
+                                       <http://purl.obolibrary.org/obo/IAO_0000116> "A heat treatment function to decrease a volumes pressure to vacuum, removing possibly present gases and fluids." ;
+                                       rdfs:label "evacuation function"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000068
+<https://w3id.org/pmd/hto/HTO_0000068> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020113> ;
+                                       <http://purl.obolibrary.org/obo/IAO_0000116> "needs work" ;
+                                       rdfs:label "quenchant"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000069
+<https://w3id.org/pmd/hto/HTO_0000069> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020114> ;
+                                       rdfs:label "quenchant role"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000070
+<https://w3id.org/pmd/hto/HTO_0000070> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020114> ;
+                                       rdfs:label "coolant role"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000071
+<https://w3id.org/pmd/hto/HTO_0000071> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020113> ;
+                                       <http://purl.obolibrary.org/obo/IAO_0000116> "needs work" ;
+                                       rdfs:label "coolant"@en .
 
 
 ###  https://w3id.org/pmd/hto/Hardening
