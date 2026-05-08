@@ -406,26 +406,6 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                        <http://www.w3.org/2004/02/skos/core#example> "The function of a oil bath to quench steel after austenitisation so the material transforms into martensite."@en .
 
 
-###  https://w3id.org/pmd/hto/HTO_0000002
-<https://w3id.org/pmd/hto/HTO_0000002> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000039> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000010>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000967>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://purl.obolibrary.org/obo/OBI_0002135> ;
-                                                         owl:someValuesFrom xsd:float
-                                                       ] ;
-                                       <http://purl.obolibrary.org/obo/IAO_0000116> """needs work
-maybe delete (bc target temp is already present)""" ;
-                                       rdfs:label "target temperature specification"@en .
-
-
 ###  https://w3id.org/pmd/hto/HTO_0000003
 <https://w3id.org/pmd/hto/HTO_0000003> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
@@ -433,8 +413,8 @@ maybe delete (bc target temp is already present)""" ;
                                                          owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000005>
                                                        ] ;
-                                       rdfs:label "temperature change rate specification"@en ;
-                                       <http://www.w3.org/2004/02/skos/core#definition> "Device specification which - as part of plan specifications (e.g. recipes) - specifies the rate at which temparature is to be changed." .
+                                       <http://purl.obolibrary.org/obo/IAO_0000115> "A setpoint which - as part of plan specifications (e.g. recipes) - specifies the rate at which temparature is to be changed." ;
+                                       rdfs:label "temperature change rate specification"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000004
@@ -442,11 +422,11 @@ maybe delete (bc target temp is already present)""" ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ,
                                                        [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000002>
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000003>
                                                                               ]
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000003>
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000006>
                                                                               ]
                                                                             ) ;
                                                          rdf:type owl:Class
@@ -466,13 +446,21 @@ maybe delete (bc target temp is already present)""" ;
 <https://w3id.org/pmd/hto/HTO_0000006> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
                                                        [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0020127> ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000039> ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000010>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000967>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/OBI_0002135> ;
+                                                         owl:someValuesFrom xsd:float
                                                        ] ;
+                                       <http://purl.obolibrary.org/obo/IAO_0000115> "A setpoint defining the temperature that is to be reached/held within a process that involves a defined temperature."@en ;
                                        <http://purl.obolibrary.org/obo/IAO_0000116> "needs work" ;
-                                       rdfs:label "target temperature"@en ;
-                                       <http://www.w3.org/2004/02/skos/core#definition> "Process characteristic defining the temperature that is to be reached/held within a process that involves a defined change of temperature."@en ;
-                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "target temperature"@en .
+                                       <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "target temperature specification"@en ;
+                                       rdfs:label "target temperature"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000007
@@ -491,8 +479,8 @@ maybe delete (bc target temp is already present)""" ;
                                                          owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000009>
                                                        ] ;
-                                       rdfs:label "duration specification"@en ;
-                                       <http://www.w3.org/2004/02/skos/core#definition> "Device specification as part of a plan specification which specifies the duration of a given process." .
+                                       <http://purl.obolibrary.org/obo/IAO_0000115> "Device specification as part of a plan specification which specifies the duration of a given process." ;
+                                       rdfs:label "duration specification"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000009
@@ -554,7 +542,7 @@ maybe delete (bc target temp is already present)""" ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ,
                                                        [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000002>
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000006>
                                                                               ]
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
@@ -571,7 +559,7 @@ maybe delete (bc target temp is already present)""" ;
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060008> ,
                                                        [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000002>
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000006>
                                                                               ]
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
@@ -641,7 +629,7 @@ maybe delete (bc target temp is already present)""" ;
 
 ###  https://w3id.org/pmd/hto/HTO_0000022
 <https://w3id.org/pmd/hto/HTO_0000022> rdf:type owl:Class ;
-                                       rdfs:subClassOf _:genid50 ;
+                                       rdfs:subClassOf _:genid49 ;
                                        <http://purl.obolibrary.org/obo/IAO_0000116> "the axiom should also include the order of the process (hardening precedes tempering)"@en ;
                                        rdfs:label "Vergüten"@de ,
                                                   "quenching and tempering"@en ;
@@ -649,7 +637,7 @@ maybe delete (bc target temp is already present)""" ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "QT is a heat treatment process in which a hardening process is followed by a tempering process."@en ,
                                                                                         "Vergüten ist ein Wärmebehandlungsverfahren bei dem auf ein Härtungsprozess ein Anlassprozess folgt."@de .
 
-_:genid50 owl:intersectionOf ( <https://w3id.org/pmd/hto/HTO_0000020>
+_:genid49 owl:intersectionOf ( <https://w3id.org/pmd/hto/HTO_0000020>
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
                                   owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000038>
@@ -664,7 +652,7 @@ _:genid50 owl:intersectionOf ( <https://w3id.org/pmd/hto/HTO_0000020>
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <https://w3id.org/pmd/hto/HTO_0000022> ;
    owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget _:genid50 ;
+   owl:annotatedTarget _:genid49 ;
    <http://purl.obolibrary.org/obo/IAO_0000116> "this axiom should also include the order of the process (hardening precedes tempering)"
  ] .
 
@@ -703,13 +691,12 @@ _:genid50 owl:intersectionOf ( <https://w3id.org/pmd/hto/HTO_0000020>
 <https://w3id.org/pmd/hto/HTO_0000027> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
                                                        [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/pmd/co/PMD_0020127> ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000896>
                                                        ] ;
-                                       <http://purl.obolibrary.org/obo/IAO_0000115> "A process attribute. Describes the pressure set point for a given process."@en ;
+                                       <http://purl.obolibrary.org/obo/IAO_0000115> "A setpoint describing the pressure that is to be reached/held within a process that involves a defined pressure." ;
                                        <http://purl.obolibrary.org/obo/IAO_0000116> "needs work" ;
-                                       rdfs:label "target pressure"@en ;
-                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "target pressure"@en .
+                                       rdfs:label "target pressure"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000028
@@ -1328,11 +1315,10 @@ nozzle (jet engine).""" .
                                                       owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000043>
                                                     ] ;
                                     <http://purl.obolibrary.org/obo/IAO_0000114> "needs work" ;
+                                    <http://purl.obolibrary.org/obo/IAO_0000115> "A setpoint describing the intended rotational speed of a device e.g. an fan or turbine."@en ;
                                     rdfs:comment "seam to be a device specification pinting to a process charateristic of type speed" ;
                                     rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                    rdfs:label "rotation speed specification"@en ;
-                                    <http://www.w3.org/2004/02/skos/core#definition> "A set point describing the intended rotational speed of a device e.g. an fan or turbine."@en ,
-                                                                                     "rotation speed of the atmosphere agitation device "@en .
+                                    rdfs:label "rotation speed specification"@en .
 
 
 ###  https://w3id.org/pmd/hto/SequenceDescriptor
