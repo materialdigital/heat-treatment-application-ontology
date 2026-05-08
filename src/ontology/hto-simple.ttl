@@ -13,15 +13,15 @@
 @base <https://w3id.org/pmd/hto/hto-simple.ttl> .
 
 <https://w3id.org/pmd/hto/hto-simple.ttl> rdf:type owl:Ontology ;
-                                           owl:versionIRI <https://w3id.org/pmd/hto/releases/2026-04-14/hto-simple.ttl> ;
-                                           terms:contributor "Jannis Grundmann" ;
+                                           owl:versionIRI <https://w3id.org/pmd/hto/releases/2026-05-08/hto-simple.ttl> ;
+                                           terms:contributor "Divya Gosula" ;
                                            terms:creator <https://orcid.org/0000-0002-9014-2920> ,
                                                          <https://orcid.org/0000-0003-1649-6832> ,
                                                          <https://orcid.org/0009-0004-4787-4685> ;
                                            terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                            terms:license <https://creativecommons.org/licenses/unspecified> ;
                                            terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                           owl:versionInfo "2026-04-14" .
+                                           owl:versionInfo "2026-05-08" .
 
 #################################################################
 #    Annotation properties
@@ -268,19 +268,6 @@ co:PMD_0000077 rdf:type owl:ObjectProperty ;
                skos:definition "A relation between an entity and a value specification which is about this entity."@en .
 
 
-###  https://w3id.org/pmd/co/PMD_0020127
-co:PMD_0020127 rdf:type owl:ObjectProperty ;
-               rdfs:comment """Despite has characteristic from RO does not have any domain constraints, it is still not possible to directly connect an instance of a process with an instance of a SDC. 
-
-First, SDC is dependent on a IC. As RO does not have \"bearer of\" object property, the \"has characteristic\" implies that the domain should be an IC. 
-
-Second, characteristic of is a functional property. Thus, two triples SDC_1 characteristc of IC_1 and SDC_2  characteristc of Process_1 (where IC_1 participates in Process_1), cannot exist simultaneously. 
-An example of such case can be \"Temperature of during the annealing process was 1000°C\". Temperature is an SDC of some participant of the annealing, however it is not clear whether it is an SDC of an oven or of a sample in the oven. If we assert triple Annealing--> has characteristic --> Temperature 1000°C, then the correct triple connecting temperature SDC with either oven or specimen cannot exist."""@en ;
-               rdfs:label "refers to"@en ;
-               skos:definition "a relation between a process attribute and an SDC of some participant in a process"@en ;
-               skos:example "a relation to between a process attribute an a SDC of some participant in a process."@en .
-
-
 #################################################################
 #    Classes
 #################################################################
@@ -358,6 +345,7 @@ An example of such case can be \"Temperature of during the annealing process was
 
 ###  https://w3id.org/pmd/hto/Carburizing
 <https://w3id.org/pmd/hto/Carburizing> rdf:type owl:Class ;
+                                       obo:IAO_0000116 "needs work" ;
                                        rdfs:comment "Potentiell ableitbar mit bestimmten Fluss-Schwellenwerten"@de ;
                                        rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
                                        rdfs:label "Aufkohlen"@de ,
@@ -555,16 +543,6 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                        skos:example "The function of a oil bath to quench steel after austenitisation so the material transforms into martensite."@en .
 
 
-###  https://w3id.org/pmd/hto/HTO_0000002
-<https://w3id.org/pmd/hto/HTO_0000002> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty obo:IAO_0000039 ;
-                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000010>
-                                                       ] ;
-                                       rdfs:label "target temperature specification"@en .
-
-
 ###  https://w3id.org/pmd/hto/HTO_0000003
 <https://w3id.org/pmd/hto/HTO_0000003> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
@@ -572,19 +550,19 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                                          owl:onProperty obo:IAO_0000136 ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000005>
                                                        ] ;
-                                       rdfs:label "temperature change rate specification"@en ;
-                                       skos:definition "Device specification which - as part of plan specifications (e.g. recipes) - specifies the rate at which temparature is to be changed." .
+                                       obo:IAO_0000115 "A setpoint which - as part of plan specifications (e.g. recipes) - specifies the rate at which temparature is to be changed." ;
+                                       rdfs:label "temperature change rate specification"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000004
 <https://w3id.org/pmd/hto/HTO_0000004> rdf:type owl:Class ;
                                        rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000002>
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000003>
                                                                               ]
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000003>
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000006>
                                                                               ]
                                                                             ) ;
                                                          rdf:type owl:Class
@@ -601,9 +579,15 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 
 ###  https://w3id.org/pmd/hto/HTO_0000006
 <https://w3id.org/pmd/hto/HTO_0000006> rdf:type owl:Class ;
-                                       rdfs:label "target temperature"@en ;
-                                       skos:definition "Process characteristic defining the temperature that is to be reached/held within a process that involves a defined change of temperature."@en ;
-                                       skos:prefLabel "target temperature"@en .
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty obo:IAO_0000039 ;
+                                                         owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000010>
+                                                       ] ;
+                                       obo:IAO_0000115 "A setpoint defining the temperature that is to be reached/held within a process that involves a defined temperature."@en ;
+                                       obo:IAO_0000116 "needs work" ;
+                                       oboInOwl:hasRelatedSynonym "target temperature specification"@en ;
+                                       rdfs:label "target temperature"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000007
@@ -622,8 +606,8 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
                                                          owl:onProperty obo:IAO_0000136 ;
                                                          owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000009>
                                                        ] ;
-                                       rdfs:label "duration specification"@en ;
-                                       skos:definition "Device specification as part of a plan specification which specifies the duration of a given process." .
+                                       obo:IAO_0000115 "Device specification as part of a plan specification which specifies the duration of a given process." ;
+                                       rdfs:label "duration specification"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000009
@@ -676,7 +660,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 <https://w3id.org/pmd/hto/HTO_0000014> rdf:type owl:Class ;
                                        rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000002>
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000006>
                                                                               ]
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty obo:BFO_0000051 ;
@@ -692,7 +676,7 @@ Auch erhöhte Gaskühlung durch ventilation."""@de ,
 <https://w3id.org/pmd/hto/HTO_0000015> rdf:type owl:Class ;
                                        rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty obo:BFO_0000051 ;
-                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000002>
+                                                                                owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000006>
                                                                               ]
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty obo:BFO_0000051 ;
@@ -812,9 +796,10 @@ _:genid26 owl:intersectionOf ( <https://w3id.org/pmd/hto/HTO_0000020>
 
 ###  https://w3id.org/pmd/hto/HTO_0000027
 <https://w3id.org/pmd/hto/HTO_0000027> rdf:type owl:Class ;
-                                       obo:IAO_0000115 "A process attribute. Describes the pressure set point for a given process."@en ;
-                                       rdfs:label "target pressure"@en ;
-                                       skos:prefLabel "target pressure"@en .
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000032> ;
+                                       obo:IAO_0000115 "A setpoint describing the pressure that is to be reached/held within a process that involves a defined pressure." ;
+                                       obo:IAO_0000116 "needs work" ;
+                                       rdfs:label "target pressure"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000028
@@ -1116,6 +1101,42 @@ nozzle (jet engine).""" .
                                        rdfs:label "flow rate specification"@en .
 
 
+###  https://w3id.org/pmd/hto/HTO_0000066
+<https://w3id.org/pmd/hto/HTO_0000066> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000000> ;
+                                       obo:IAO_0000116 "needs work" ;
+                                       rdfs:label "evacuation"@en ;
+                                       skos:definition "A heat treatment essential that creates a vacuum. Removing atmoshpere and decreasing pressure."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000067
+<https://w3id.org/pmd/hto/HTO_0000067> rdf:type owl:Class ;
+                                       obo:IAO_0000116 "A heat treatment function to decrease a volumes pressure to vacuum, removing possibly present gases and fluids." ;
+                                       rdfs:label "evacuation function"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000068
+<https://w3id.org/pmd/hto/HTO_0000068> rdf:type owl:Class ;
+                                       obo:IAO_0000116 "needs work" ;
+                                       rdfs:label "quenchant"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000069
+<https://w3id.org/pmd/hto/HTO_0000069> rdf:type owl:Class ;
+                                       rdfs:label "quenchant role"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000070
+<https://w3id.org/pmd/hto/HTO_0000070> rdf:type owl:Class ;
+                                       rdfs:label "coolant role"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000071
+<https://w3id.org/pmd/hto/HTO_0000071> rdf:type owl:Class ;
+                                       obo:IAO_0000116 "needs work" ;
+                                       rdfs:label "coolant"@en .
+
+
 ###  https://w3id.org/pmd/hto/Hardening
 <https://w3id.org/pmd/hto/Hardening> rdf:type owl:Class ;
                                      obo:IAO_0100001 <https://w3id.org/pmd/hto/HTO_0000040> ;
@@ -1322,11 +1343,10 @@ nozzle (jet engine).""" .
                                                       owl:someValuesFrom <https://w3id.org/pmd/hto/HTO_0000043>
                                                     ] ;
                                     obo:IAO_0000114 "needs work" ;
+                                    obo:IAO_0000115 "A setpoint describing the intended rotational speed of a device e.g. an fan or turbine."@en ;
                                     rdfs:comment "seam to be a device specification pinting to a process charateristic of type speed" ;
                                     rdfs:isDefinedBy <https://w3id.org/pmd/hto/> ;
-                                    rdfs:label "rotation speed specification"@en ;
-                                    skos:definition "A set point describing the intended rotational speed of a device e.g. an fan or turbine."@en ,
-                                                    "rotation speed of the atmosphere agitation device "@en .
+                                    rdfs:label "rotation speed specification"@en .
 
 
 ###  https://w3id.org/pmd/hto/SequenceDescriptor

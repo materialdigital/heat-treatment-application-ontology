@@ -25,7 +25,6 @@ http://www.w3.org/2004/02/skos/core#prefLabel
 https://w3id.org/pmd/co/PMD_0000060
 https://w3id.org/pmd/co/PMD_0000064
 https://w3id.org/pmd/co/PMD_0000077
-https://w3id.org/pmd/co/PMD_0020127
 https://w3id.org/pmd/co/PMD_0050117
 https://w3id.org/pmd/hto/
 https://w3id.org/pmd/hto/AccelleratedCooling
@@ -54,7 +53,6 @@ https://w3id.org/pmd/hto/FurnaceAtmosphere
 https://w3id.org/pmd/hto/FurnaceCooling
 https://w3id.org/pmd/hto/HTO_0000000
 https://w3id.org/pmd/hto/HTO_0000001
-https://w3id.org/pmd/hto/HTO_0000002
 https://w3id.org/pmd/hto/HTO_0000003
 https://w3id.org/pmd/hto/HTO_0000004
 https://w3id.org/pmd/hto/HTO_0000005
@@ -118,6 +116,12 @@ https://w3id.org/pmd/hto/HTO_0000062
 https://w3id.org/pmd/hto/HTO_0000063
 https://w3id.org/pmd/hto/HTO_0000064
 https://w3id.org/pmd/hto/HTO_0000065
+https://w3id.org/pmd/hto/HTO_0000066
+https://w3id.org/pmd/hto/HTO_0000067
+https://w3id.org/pmd/hto/HTO_0000068
+https://w3id.org/pmd/hto/HTO_0000069
+https://w3id.org/pmd/hto/HTO_0000070
+https://w3id.org/pmd/hto/HTO_0000071
 https://w3id.org/pmd/hto/Hardening
 https://w3id.org/pmd/hto/HeatingChamber
 https://w3id.org/pmd/hto/HeatingTime

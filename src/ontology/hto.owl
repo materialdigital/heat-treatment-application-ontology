@@ -16,15 +16,15 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2026-04-14/hto.owl"/>
-        <terms:contributor>Jannis Grundmann</terms:contributor>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2026-05-08/hto.owl"/>
+        <terms:contributor>Divya Gosula</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
         <terms:creator rdf:resource="https://orcid.org/0009-0004-4787-4685"/>
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2026-04-14</owl:versionInfo>
+        <owl:versionInfo>2026-05-08</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -18626,6 +18626,7 @@ European Commission: Directorate-General for Research and Innovation, Biodegrada
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Carburizing">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060008"/>
+        <obo:IAO_0000116>needs work</obo:IAO_0000116>
         <rdfs:comment xml:lang="de">Potentiell ableitbar mit bestimmten Fluss-Schwellenwerten</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="de">Aufkohlen</rdfs:label>
@@ -18898,33 +18899,6 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/pmd/hto/HTO_0000002 -->
-
-    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000002">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000032"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000010"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000967"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0002135"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">target temperature specification</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/pmd/hto/HTO_0000003 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000003">
@@ -18935,8 +18909,8 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000005"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115>A setpoint which - as part of plan specifications (e.g. recipes) - specifies the rate at which temparature is to be changed.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">temperature change rate specification</rdfs:label>
-        <skos:definition>Device specification which - as part of plan specifications (e.g. recipes) - specifies the rate at which temparature is to be changed.</skos:definition>
     </owl:Class>
     
 
@@ -18950,11 +18924,11 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000002"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000003"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000003"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000006"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -18978,16 +18952,29 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <!-- https://w3id.org/pmd/hto/HTO_0000006 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000006">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000032"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0020127"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000967"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0002135"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A setpoint defining the temperature that is to be reached/held within a process that involves a defined temperature.</obo:IAO_0000115>
+        <obo:IAO_0000116>needs work</obo:IAO_0000116>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">target temperature specification</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">target temperature</rdfs:label>
-        <skos:definition xml:lang="en">Process characteristic defining the temperature that is to be reached/held within a process that involves a defined change of temperature.</skos:definition>
-        <skos:prefLabel xml:lang="en">target temperature</skos:prefLabel>
     </owl:Class>
     
 
@@ -19014,8 +19001,8 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000009"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115>Device specification as part of a plan specification which specifies the duration of a given process.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">duration specification</rdfs:label>
-        <skos:definition>Device specification as part of a plan specification which specifies the duration of a given process.</skos:definition>
     </owl:Class>
     
 
@@ -19101,7 +19088,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000002"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000006"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -19124,7 +19111,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000002"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000006"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -19232,7 +19219,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <!-- https://w3id.org/pmd/hto/HTO_0000022 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000022">
-        <rdfs:subClassOf rdf:nodeID="genid1445"/>
+        <rdfs:subClassOf rdf:nodeID="genid1444"/>
         <obo:IAO_0000116 xml:lang="en">the axiom should also include the order of the process (hardening precedes tempering)</obo:IAO_0000116>
         <rdfs:label xml:lang="de">Vergüten</rdfs:label>
         <rdfs:label xml:lang="en">quenching and tempering</rdfs:label>
@@ -19240,7 +19227,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
         <skos:definition xml:lang="en">QT is a heat treatment process in which a hardening process is followed by a tempering process.</skos:definition>
         <skos:definition xml:lang="de">Vergüten ist ein Wärmebehandlungsverfahren bei dem auf ein Härtungsprozess ein Anlassprozess folgt.</skos:definition>
     </owl:Class>
-    <owl:Class rdf:nodeID="genid1445">
+    <owl:Class rdf:nodeID="genid1444">
         <owl:intersectionOf rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/pmd/hto/HTO_0000020"/>
             <owl:Restriction>
@@ -19256,7 +19243,7 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://w3id.org/pmd/hto/HTO_0000022"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid1445"/>
+        <owl:annotatedTarget rdf:nodeID="genid1444"/>
         <obo:IAO_0000116>this axiom should also include the order of the process (hardening precedes tempering)</obo:IAO_0000116>
     </owl:Axiom>
     
@@ -19307,16 +19294,16 @@ Auch erhöhte Gaskühlung durch ventilation.</rdfs:comment>
     <!-- https://w3id.org/pmd/hto/HTO_0000027 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000027">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000008"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000032"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/pmd/co/PMD_0020127"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/co/PMD_0000896"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A process attribute. Describes the pressure set point for a given process.</obo:IAO_0000115>
+        <obo:IAO_0000115>A setpoint describing the pressure that is to be reached/held within a process that involves a defined pressure.</obo:IAO_0000115>
+        <obo:IAO_0000116>needs work</obo:IAO_0000116>
         <rdfs:label xml:lang="en">target pressure</rdfs:label>
-        <skos:prefLabel xml:lang="en">target pressure</skos:prefLabel>
     </owl:Class>
     
 
@@ -19880,6 +19867,65 @@ nozzle (jet engine).</skos:example>
     
 
 
+    <!-- https://w3id.org/pmd/hto/HTO_0000066 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000066">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000000"/>
+        <obo:IAO_0000116>needs work</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">evacuation</rdfs:label>
+        <skos:definition xml:lang="en">A heat treatment essential that creates a vacuum. Removing atmoshpere and decreasing pressure.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000067 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000067">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000781"/>
+        <obo:IAO_0000116>A heat treatment function to decrease a volumes pressure to vacuum, removing possibly present gases and fluids.</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">evacuation function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000068 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000068">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020113"/>
+        <obo:IAO_0000116>needs work</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">quenchant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000069 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000069">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020114"/>
+        <rdfs:label xml:lang="en">quenchant role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000070 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000070">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020114"/>
+        <rdfs:label xml:lang="en">coolant role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000071 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000071">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020113"/>
+        <obo:IAO_0000116>needs work</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">coolant</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/pmd/hto/Hardening -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/Hardening">
@@ -20153,11 +20199,10 @@ nozzle (jet engine).</skos:example>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000114>needs work</obo:IAO_0000114>
+        <obo:IAO_0000115 xml:lang="en">A setpoint describing the intended rotational speed of a device e.g. an fan or turbine.</obo:IAO_0000115>
         <rdfs:comment>seam to be a device specification pinting to a process charateristic of type speed</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/hto/"/>
         <rdfs:label xml:lang="en">rotation speed specification</rdfs:label>
-        <skos:definition xml:lang="en">A set point describing the intended rotational speed of a device e.g. an fan or turbine.</skos:definition>
-        <skos:definition xml:lang="en">rotation speed of the atmosphere agitation device </skos:definition>
     </owl:Class>
     
 

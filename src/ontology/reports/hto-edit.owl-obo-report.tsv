@@ -68,7 +68,6 @@ WARN	annotation_whitespace	partial pressure	skos:definition	nominal pressure of 
 WARN	annotation_whitespace	partial pressure	skos:definition	nominal pressure of thermochemical heat treatment pressure during thermochemical steps @en
 WARN	annotation_whitespace	obsolete Abschreckvorlaufzeit	skos:definition	Parameter indicatin the duration right before the quenching  process @en
 WARN	annotation_whitespace	obsolete recording interval	skos:definition	 effective data aquisition and saving interval for documentation @en
-WARN	annotation_whitespace	rotation speed specification	skos:definition	rotation speed of the atmosphere agitation device @en
 WARN	annotation_whitespace	obsolete sequence number	skos:definition	 An identifier indicating a process-number in a Workflow represented via consecutive integers @en
 WARN	annotation_whitespace	obsolete sequence number	skos:definition	number of process step of heat treatment recipe @en
 WARN	annotation_whitespace	obsolete sequence number	skos:definition	ongoing number for labeling the process steps within a process recipe @en
@@ -83,12 +82,8 @@ WARN	missing_definition	chamber pressure	IAO:0000115
 WARN	missing_definition	dew point	IAO:0000115	
 WARN	missing_definition	Grundsätzliche Wärmebehandlungsvorgänge	IAO:0000115	
 WARN	missing_definition	quenching function	IAO:0000115	
-WARN	missing_definition	target temperature specification	IAO:0000115	
-WARN	missing_definition	temperature change rate specification	IAO:0000115	
 WARN	missing_definition	heating recipe	IAO:0000115	
 WARN	missing_definition	temperature change rate	IAO:0000115	
-WARN	missing_definition	target temperature	IAO:0000115	
-WARN	missing_definition	duration specification	IAO:0000115	
 WARN	missing_definition	duration	IAO:0000115	
 WARN	missing_definition	temperature unit	IAO:0000115	
 WARN	missing_definition	austenitizing point	IAO:0000115	
@@ -143,6 +138,12 @@ WARN	missing_definition	quenching	IAO:0000115
 WARN	missing_definition	counter	IAO:0000115	
 WARN	missing_definition	flow rate	IAO:0000115	
 WARN	missing_definition	flow rate specification	IAO:0000115	
+WARN	missing_definition	evacuation	IAO:0000115	
+WARN	missing_definition	evacuation function	IAO:0000115	
+WARN	missing_definition	quenchant	IAO:0000115	
+WARN	missing_definition	quenchant role	IAO:0000115	
+WARN	missing_definition	coolant role	IAO:0000115	
+WARN	missing_definition	coolant	IAO:0000115	
 WARN	missing_definition	Ofenkammer mit einer Heizung.	IAO:0000115	
 WARN	missing_definition	hydrogene sensor signal	IAO:0000115	
 WARN	missing_definition	lambda probe signal	IAO:0000115	
@@ -150,7 +151,6 @@ WARN	missing_definition	nitriding potential	IAO:0000115
 WARN	missing_definition	oxygen probe signal	IAO:0000115	
 WARN	missing_definition	partial pressure	IAO:0000115	
 WARN	missing_definition	Abschreckkammer	IAO:0000115	
-WARN	missing_definition	rotation speed specification	IAO:0000115	
 WARN	missing_obsolete_label	controlled	rdfs:label	controlled@en
 WARN	missing_obsolete_label	convection	rdfs:label	convection@en
 WARN	missing_obsolete_label	fan state fast	rdfs:label	fan state fast@en
