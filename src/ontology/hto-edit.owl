@@ -123,6 +123,14 @@
                                                       ] .
 
 
+###  https://w3id.org/pmd/co/PMD_0025010
+<https://w3id.org/pmd/co/PMD_0025010> rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000000> .
+
+
+###  https://w3id.org/pmd/co/PMD_0025011
+<https://w3id.org/pmd/co/PMD_0025011> rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000000> .
+
+
 ###  https://w3id.org/pmd/hto/AccelleratedCooling
 <https://w3id.org/pmd/hto/AccelleratedCooling> rdf:type owl:Class ;
                                                <http://purl.obolibrary.org/obo/IAO_0000114> "needs work" ;
@@ -815,7 +823,8 @@ The rotational speed of a fan.""" ;
 ###  https://w3id.org/pmd/hto/HTO_0000037
 <https://w3id.org/pmd/hto/HTO_0000037> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000041> ;
-                                       rdfs:label "salz bath nitriding"@en ;
+                                       rdfs:label "Salzbadnitrieren"@de ,
+                                                  "salt bath nitriding"@en ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "A nitriding process in which nitrogen is supplied to the surface by molten salt." .
 
 
@@ -1100,6 +1109,13 @@ nozzle (jet engine).""" .
                                        rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0020113> ;
                                        <http://purl.obolibrary.org/obo/IAO_0000116> "needs work" ;
                                        rdfs:label "coolant"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000072
+<https://w3id.org/pmd/hto/HTO_0000072> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000019> ;
+                                       rdfs:label "case hardening"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "Surface hardening process comprised of carburising, hardening and tempering of case hardnening steels."@en .
 
 
 ###  https://w3id.org/pmd/hto/Hardening
