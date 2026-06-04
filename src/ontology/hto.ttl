@@ -16,7 +16,7 @@
 @base <https://w3id.org/pmd/hto.ttl> .
 
 <https://w3id.org/pmd/hto.ttl> rdf:type owl:Ontology ;
-                                owl:versionIRI <https://w3id.org/pmd/hto/releases/2026-05-08/hto.ttl> ;
+                                owl:versionIRI <https://w3id.org/pmd/hto/releases/2026-06-04/hto.ttl> ;
                                 terms:contributor "Divya Gosula" ;
                                 terms:creator <https://orcid.org/0000-0002-9014-2920> ,
                                               <https://orcid.org/0000-0003-1649-6832> ,
@@ -24,7 +24,7 @@
                                 terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                                 terms:license <https://creativecommons.org/licenses/unspecified> ;
                                 terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                                owl:versionInfo "2026-05-08" .
+                                owl:versionInfo "2026-06-04" .
 
 #################################################################
 #    Annotation properties
@@ -11324,14 +11324,16 @@ co:PMD_0025009 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/co/PMD_0025010
 co:PMD_0025010 rdf:type owl:Class ;
-               rdfs:subClassOf co:PMD_0000549 ;
+               rdfs:subClassOf co:PMD_0000549 ,
+                               <https://w3id.org/pmd/hto/HTO_0000000> ;
                rdfs:label "heating"@en ;
                skos:definition "Heating is a change of temperature which corresponds to the increase of temperature in the system or object."@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0025011
 co:PMD_0025011 rdf:type owl:Class ;
-               rdfs:subClassOf co:PMD_0000549 ;
+               rdfs:subClassOf co:PMD_0000549 ,
+                               <https://w3id.org/pmd/hto/HTO_0000000> ;
                rdfs:label "cooling"@en ;
                skos:definition "Cooling is a change of temperature which corresponds to the decrease of temperature in the system or object."@en .
 
@@ -12701,7 +12703,8 @@ co:PMD_0050118 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/co/PMD_0050119
 co:PMD_0050119 rdf:type owl:Class ;
-               rdfs:subClassOf co:PMD_0050101 ,
+               rdfs:subClassOf co:PMD_0000002 ,
+                               co:PMD_0050101 ,
                                co:PMD_0050118 ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty obo:OBI_0000312 ;
@@ -14295,7 +14298,8 @@ The rotational speed of a fan.""" ;
 ###  https://w3id.org/pmd/hto/HTO_0000037
 <https://w3id.org/pmd/hto/HTO_0000037> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000041> ;
-                                       rdfs:label "salz bath nitriding"@en ;
+                                       rdfs:label "Salzbadnitrieren"@de ,
+                                                  "salt bath nitriding"@en ;
                                        skos:definition "A nitriding process in which nitrogen is supplied to the surface by molten salt." .
 
 
@@ -14581,6 +14585,13 @@ nozzle (jet engine).""" .
                                        rdfs:subClassOf co:PMD_0020113 ;
                                        obo:IAO_0000116 "needs work" ;
                                        rdfs:label "coolant"@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000072
+<https://w3id.org/pmd/hto/HTO_0000072> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/pmd/hto/HTO_0000019> ;
+                                       rdfs:label "case hardening"@en ;
+                                       skos:definition "Surface hardening process comprised of carburising, hardening and tempering of case hardnening steels."@en .
 
 
 ###  https://w3id.org/pmd/hto/Hardening

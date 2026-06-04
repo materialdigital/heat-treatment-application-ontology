@@ -13,7 +13,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto/hto-base.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2026-05-08/hto-base.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/releases/2026-06-04/hto-base.owl"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:contributor>Divya Gosula</terms:contributor>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
@@ -22,7 +22,7 @@
         <terms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/unspecified"/>
         <terms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</terms:title>
-        <owl:versionInfo>2026-05-08</owl:versionInfo>
+        <owl:versionInfo>2026-06-04</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1394,7 +1394,8 @@ The rotational speed of a fan.</skos:example>
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000037">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000041"/>
-        <rdfs:label xml:lang="en">salz bath nitriding</rdfs:label>
+        <rdfs:label xml:lang="de">Salzbadnitrieren</rdfs:label>
+        <rdfs:label xml:lang="en">salt bath nitriding</rdfs:label>
         <skos:definition>A nitriding process in which nitrogen is supplied to the surface by molten salt.</skos:definition>
     </owl:Class>
     
@@ -1788,6 +1789,16 @@ nozzle (jet engine).</skos:example>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0020113"/>
         <obo:IAO_0000116>needs work</obo:IAO_0000116>
         <rdfs:label xml:lang="en">coolant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000072 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000072">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000019"/>
+        <rdfs:label xml:lang="en">case hardening</rdfs:label>
+        <skos:definition xml:lang="en">Surface hardening process comprised of carburising, hardening and tempering of case hardnening steels.</skos:definition>
     </owl:Class>
     
 

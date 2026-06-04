@@ -44,6 +44,7 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0000967>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020113>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020114>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020167>))
+Declaration(Class(<https://w3id.org/pmd/co/PMD_0025010>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0025011>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0040001>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0060006>))
@@ -141,6 +142,7 @@ Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000068>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000069>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000070>))
 Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000071>))
+Declaration(Class(<https://w3id.org/pmd/hto/HTO_0000072>))
 Declaration(Class(<https://w3id.org/pmd/hto/Hardening>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingChamber>))
 Declaration(Class(<https://w3id.org/pmd/hto/HeatingTime>))
@@ -249,7 +251,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/HTO_0000063> "nitrocarbu
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#altLabel> <https://w3id.org/pmd/co/HTO_0000063> "nitrocarburising"@en)
 SubClassOf(<https://w3id.org/pmd/co/HTO_0000063> <https://w3id.org/pmd/hto/HTO_0000019>)
 
-# Class: <https://w3id.org/pmd/co/HTO_0000064> (carbonitriding)
+# Class: <https://w3id.org/pmd/co/HTO_0000064> (Carbonitrieren)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/HTO_0000064> "Carbonitrieren"@de)
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/HTO_0000064> "carbonitriding"@en)
@@ -259,10 +261,18 @@ SubClassOf(<https://w3id.org/pmd/co/HTO_0000064> <https://w3id.org/pmd/hto/HTO_0
 
 EquivalentClasses(<https://w3id.org/pmd/co/PMD_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000057>)))
 
-# Class: <https://w3id.org/pmd/co/PMD_0000655> (furnace)
+# Class: <https://w3id.org/pmd/co/PMD_0000655> (Ofen)
 
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/pmd/hto/Chamber>))
 SubClassOf(<https://w3id.org/pmd/co/PMD_0000655> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000085> <https://w3id.org/pmd/co/PMD_0000054>))
+
+# Class: <https://w3id.org/pmd/co/PMD_0025010> (heating)
+
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025010> <https://w3id.org/pmd/hto/HTO_0000000>)
+
+# Class: <https://w3id.org/pmd/co/PMD_0025011> (cooling)
+
+SubClassOf(<https://w3id.org/pmd/co/PMD_0025011> <https://w3id.org/pmd/hto/HTO_0000000>)
 
 # Class: <https://w3id.org/pmd/hto/AccelleratedCooling> (obsolete accellerated cooling)
 
@@ -737,9 +747,10 @@ AnnotationAssertion(<https://w3id.org/pmd/co/PMD_0000060> <https://w3id.org/pmd/
 EquivalentClasses(<https://w3id.org/pmd/hto/HTO_0000034> ObjectOneOf(<https://w3id.org/pmd/hto/HTO_0000035> <https://w3id.org/pmd/hto/HTO_0000036>))
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000034> <http://purl.obolibrary.org/obo/OBI_0001930>)
 
-# Class: <https://w3id.org/pmd/hto/HTO_0000037> (salz bath nitriding)
+# Class: <https://w3id.org/pmd/hto/HTO_0000037> (salt bath nitriding)
 
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000037> "salz bath nitriding"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000037> "Salzbadnitrieren"@de)
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000037> "salt bath nitriding"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000037> "A nitriding process in which nitrogen is supplied to the surface by molten salt.")
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000037> <https://w3id.org/pmd/hto/HTO_0000041>)
 
@@ -979,6 +990,12 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <https://w3id.o
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000071> "coolant"@en)
 SubClassOf(<https://w3id.org/pmd/hto/HTO_0000071> <https://w3id.org/pmd/co/PMD_0020113>)
 
+# Class: <https://w3id.org/pmd/hto/HTO_0000072> (case hardening)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/HTO_0000072> "case hardening"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/HTO_0000072> "Surface hardening process comprised of carburising, hardening and tempering of case hardnening steels."@en)
+SubClassOf(<https://w3id.org/pmd/hto/HTO_0000072> <https://w3id.org/pmd/hto/HTO_0000019>)
+
 # Class: <https://w3id.org/pmd/hto/Hardening> (OBSOLETE Härten)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <https://w3id.org/pmd/hto/Hardening> <https://w3id.org/pmd/hto/HTO_0000040>)
@@ -1063,7 +1080,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/LeakageInterval> "obsol
 AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/LeakageInterval> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/LeakageInterval> "effective leakage measuring duration "@en)
 
-# Class: <https://w3id.org/pmd/hto/Nitriding> (OBSOLETE nitriding)
+# Class: <https://w3id.org/pmd/hto/Nitriding> (OBSOLETE Nitrieren)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <https://w3id.org/pmd/hto/Nitriding> <https://w3id.org/pmd/hto/HTO_0000041>)
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/Nitriding> "The IRI was not according to convention.")
