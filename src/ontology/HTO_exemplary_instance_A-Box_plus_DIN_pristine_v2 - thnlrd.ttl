@@ -18,7 +18,7 @@
 @base <https://w3id.org/pmd/hto#> .
 
 <https://w3id.org/pmd/hto> rdf:type owl:Ontology ;
-                            owl:imports <https://w3id.org/pmd/hto/imports/pmdco_import.owl> ; #this import only works properly, when this file is placed in the ./git/hto/src/ontology folder, so protege recognizes the import folder's contents
+                            owl:imports <https://w3id.org/pmd/hto/imports/pmdco_import.owl> ;
                             dcterms:contributor "Divya Gosula" ;
                             dcterms:creator <https://orcid.org/0000-0002-9014-2920> ,
                                             <https://orcid.org/0000-0003-1649-6832> ,
@@ -264,25 +264,20 @@ csvw:Table rdf:type owl:Class .
 
 ###  https://w3id.org/pmd/co/HTO_0000063
 co:HTO_0000063 rdf:type owl:Class ;
-               owl:equivalentClass hto:HTO_0000074 ;
-               rdfs:subClassOf hto:HTO_0000019 ;
-               dcterms:isReplacedBy hto:HTO_0000074 ;
-               rdfs:label "Nitrocarburieren"@de ,
-                          "nitrocarburizing"@en ;
-               owl:deprecated "true"^^xsd:boolean ;
-               skos:altLabel "nitrocarburising"@en ;
-               skos:editorialNote "Re-IRIed to hto:HTO_0000074 per DIN audit namespace fix (2026-06-09). Misnamespaced under pmd/co/ (should be pmd/hto/); collided with <https://w3id.org/pmd/hto/HTO_0000063> (counter). Definition is congruent with DIN EN ISO 4885 §3.144."@en .
+               obo:IAO_0100001 hto:HTO_0000074 ;
+               rdfs:comment "wrong IRI namespace" ;
+               rdfs:label "OBSOLETE Nitrocarburieren"@de ,
+                          "OBSOLETE nitrocarburizing"@en ;
+               owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/pmd/co/HTO_0000064
 co:HTO_0000064 rdf:type owl:Class ;
-               owl:equivalentClass hto:HTO_0000075 ;
-               rdfs:subClassOf hto:HTO_0000019 ;
-               dcterms:isReplacedBy hto:HTO_0000075 ;
-               rdfs:label "Carbonitrieren"@de ,
-                          "carbonitriding"@en ;
-               owl:deprecated "true"^^xsd:boolean ;
-               skos:editorialNote "Re-IRIed to hto:HTO_0000075 per DIN audit namespace fix (2026-06-09). Misnamespaced under pmd/co/ (should be pmd/hto/); collided with <https://w3id.org/pmd/hto/HTO_0000064> (flow rate). Definition is congruent with DIN EN ISO 4885 §3.35."@en .
+               obo:IAO_0100001 hto:HTO_0000075 ;
+               rdfs:comment "wrong IRI namespace" ;
+               rdfs:label "OBSOLETE Carbonitrieren"@de ,
+                          "OBSOLETE carbonitriding"@en ;
+               owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000056
