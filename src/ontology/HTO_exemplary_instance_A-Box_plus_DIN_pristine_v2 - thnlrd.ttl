@@ -715,6 +715,7 @@ hto:HTO_0000009 rdf:type owl:Class ;
 hto:HTO_0000010 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000003 ;
                 dc:source "DIN EN ISO 4885:2018 (generic, °C usage throughout)" ;
+                rdfs:comment "working variable, used for testing only" ;
                 rdfs:label "temperature unit"@en .
 
 
@@ -7986,6 +7987,7 @@ pmde:ffe2df4bf7824480b85cb9352a78c370 rdf:type owl:NamedIndividual ,
                                                                         co:PMD_0060009 ;
                                                                obo:IAO_0000136 <https://w3id.org/pmd/entity/15789c71bad64a24bbe717e04245def9> ;
                                                                obo:OBI_0001938 <https://w3id.org/pmd/entity/70dad8ed70b94b19a978e3d8591a0917> ;
+                                                               obo:IAO_0000116 "All these 'settings' should be moved to their respective 'setpoint' subclass. (thnlrd)" ;
                                                                rdfs:label "Charge 3466_quenchingrecipe_durationsetting"@en .
 
 
