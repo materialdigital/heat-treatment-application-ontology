@@ -1031,7 +1031,7 @@ AnnotationAssertion(rdfs:label <https://w3id.org/pmd/hto/LeakageInterval> "obsol
 AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/LeakageInterval> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/LeakageInterval> "effective leakage measuring duration "@en)
 
-# Class: <https://w3id.org/pmd/hto/Nitriding> (OBSOLETE nitriding)
+# Class: <https://w3id.org/pmd/hto/Nitriding> (OBSOLETE Nitrieren)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <https://w3id.org/pmd/hto/Nitriding> <https://w3id.org/pmd/hto/HTO_0000041>)
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/Nitriding> "The IRI was not according to convention.")
@@ -1203,7 +1203,7 @@ AnnotationAssertion(owl:deprecated <https://w3id.org/pmd/hto/SystemTimeForDiagra
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/SystemTimeForDiagramGeneration> " Extrahierte Systemzeit für das Diagram geniert "@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/hto/SystemTimeForDiagramGeneration> "time stamp for measuring data aquisition time and diagram generation / data syncing "@en)
 
-# Class: <https://w3id.org/pmd/hto/Tempering> (OBSOLETE tempering)
+# Class: <https://w3id.org/pmd/hto/Tempering> (OBSOLETE Anlassen)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <https://w3id.org/pmd/hto/Tempering> <https://w3id.org/pmd/hto/HTO_0000038>)
 AnnotationAssertion(rdfs:comment <https://w3id.org/pmd/hto/Tempering> "The IRI was not according to convention.")
