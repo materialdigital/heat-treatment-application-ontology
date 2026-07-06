@@ -294,7 +294,7 @@ co:PMD_0000056 owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000655
 ###  https://w3id.org/pmd/co/PMD_0000655
 co:PMD_0000655 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty obo:BFO_0000051 ;
-                                 owl:someValuesFrom hto:Chamber
+                                 owl:someValuesFrom hto:HTO_0000109
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty obo:RO_0000085 ;
@@ -352,19 +352,6 @@ hto:Atmosphere rdf:type owl:Class ;
                skos:definition "A surrounding influence or environment" .
 
 
-###  https://w3id.org/pmd/hto/AtmospherePressure
-hto:AtmospherePressure rdf:type owl:Class ;
-                       rdfs:subClassOf co:PMD_0000896 ;
-                       owl:disjointWith hto:ChamberPressure ;
-                       dc:source "DIN 17022-4:1998, §7.3" ,
-                                 "DIN EN ISO 4885:2018, §3.165 (Ofenatmosphäre, related quality)" ;
-                       rdfs:comment "Effective atmosphere preasure in chamber to keep process save (must be 2-3 mbar above ambient pressure)"@en ,
-                                    "Parameter usually slightly higher than ambient pressure for open process to environment to prevent/reduce diffusion of oxygen into the furnace, e.g. by leakage, to avoid explosive or dangerous atmopheres, could be bar, mbar or Pa."@en ;
-                       rdfs:isDefinedBy hto: ;
-                       rdfs:label "atmosphere pressure"@en ;
-                       skos:definition "Parameter describing the pressure inside a chamber."@en .
-
-
 ###  https://w3id.org/pmd/hto/BelowAmbientPressure
 hto:BelowAmbientPressure rdf:type owl:Class ;
                          rdfs:comment "The reason for obsoletion is that the term is not clearly defined and of uncertain relevance." ;
@@ -372,19 +359,6 @@ hto:BelowAmbientPressure rdf:type owl:Class ;
                          rdfs:label "obsolete below ambient pressure"@en ;
                          owl:deprecated "true"^^xsd:boolean ;
                          skos:definition "status of atmosphere: reduced pressure below ambient pressure "@en .
-
-
-###  https://w3id.org/pmd/hto/CarbonPotential
-hto:CarbonPotential rdf:type owl:Class ;
-                    rdfs:subClassOf obo:BFO_0000145 ;
-                    dc:source "DIN EN ISO 4885:2018, §3.33 (Kohlenstoffpegel — contrast Anm.1)" ,
-                              "DIN EN ISO 683-3:2022, §A.4 (carburising atmosphere control)" ;
-                    rdfs:comment "Nitrocarburieren mit Kohlenstoffträger, aus Messwerten abgeleitet KC"@de ,
-                                 "See standard DIN 1310"@en ;
-                    rdfs:isDefinedBy hto: ;
-                    rdfs:label "carbon potential"@en ;
-                    skos:definition "Carbon content of a specimen of pure iron in equilibrium with a carbourizing medium under specific conditions."@en ;
-                    skos:editorialNote "DIN audit (2026-06-09): DIN EN ISO 4885 §3.33 names the operational quantity 'Kohlenstoffpegel' (carbon level), with §3.33 Anm.1 contrasting it explicitly with the 'thermodynamisches Kohlenstoffpotenzial'. 4885 treats the two as NOT synonymous. hto:CarbonPotential is retained as the thermodynamic-potential quality; the new sibling hto:HTO_0000076 (CarbonLevel) carries the §3.33 operational definition. See hto:HTO_0000076 below for the sibling class."@en .
 
 
 ###  https://w3id.org/pmd/hto/Carburizing
@@ -398,36 +372,6 @@ hto:Carburizing rdf:type owl:Class ;
                            "carburizing recipe"@en ;
                 skos:definition "Heattreatment recipe outlining the steps and parameters needed to perform a carburizing process."@en ,
                                 "Wärmebehandlungsrezept, in dem die Schritte und Parameter für die Durchführung eines Aufkohlungsprozesses beschrieben werden."@de .
-
-
-###  https://w3id.org/pmd/hto/Chamber
-hto:Chamber rdf:type owl:Class ;
-            rdfs:subClassOf obo:BFO_0000024 ;
-            obo:IAO_0000114 "needs work" ;
-            dc:source "DIN 17022-1:1994, §7 (generic multi-chamber furnace construction)" ;
-            rdfs:comment "unklare Zuordnung innerhalb der SDCs. Eine Kammer existiert nur als Teil eines Gerätes (Device), könnte aber selbst noch einmal als independent continuant definiert werden, da sich in der Kammer Chargen, Gestelle, Thermoelemente etc. befinden."@de ,
-                         "moved to fiat object part. correct if every furnace has a chamber" ;
-            rdfs:isDefinedBy hto: ;
-            rdfs:label "chamber"@en ;
-            skos:definition "Systemboundary of a distinct Heattreatment Process. Includes a fluid that has the role of medium role (e.g., Helium or Vacuum)."@en .
-
-
-###  https://w3id.org/pmd/hto/ChamberPressure
-hto:ChamberPressure rdf:type owl:Class ;
-                    owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000896
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty obo:RO_0000080 ;
-                                                                 owl:someValuesFrom hto:Chamber
-                                                               ]
-                                                             ) ;
-                                          rdf:type owl:Class
-                                        ] ;
-                    dc:source "DIN 17022-1:1994, §7 (chamber/Ofen-Konstruktion)" ,
-                              "DIN 17022-4:1998, §7.3 (Ofendruck)" ;
-                    rdfs:comment "measured atmophere pressure in retort, measured using the vacuum sensor "@en ;
-                    rdfs:isDefinedBy hto: ;
-                    rdfs:label "chamber pressure"@en ;
-                    skos:definition "designated pressure in retort during evacuation phase pre to nitriding process or during low pressure nitriding process "@en .
 
 
 ###  https://w3id.org/pmd/hto/ChamberScope
@@ -471,26 +415,6 @@ hto:ConcentrationH2 rdf:type owl:Class ;
                     rdfs:label "obsolete concentration"@en ;
                     owl:deprecated "true"^^xsd:boolean ;
                     skos:definition "Concentration in process gas composition; units could be e.g. mol/m³; signal could be in mA or mV or in vol.-%"@en .
-
-
-###  https://w3id.org/pmd/hto/Controlled
-hto:Controlled rdf:type owl:Class ;
-               rdfs:subClassOf hto:HTO_0000033 ;
-               rdfs:comment "definition is not enough, what is controlled?" ;
-               rdfs:isDefinedBy hto: ;
-               rdfs:label "controlled"@en ;
-               owl:deprecated "true"^^xsd:boolean ;
-               skos:definition "This Scope expresses that a :ValueObject is actively controlled during the process, e.g. a heating process where the temperature change is done in controlled intervals until the desired temperature is reached while an uncontrolled heating process would reach the desired temperature as fast as the furnace allows it to."@en .
-
-
-###  https://w3id.org/pmd/hto/Convection
-hto:Convection rdf:type owl:Class ;
-               rdfs:subClassOf hto:HTO_0000033 ;
-               rdfs:comment "if its a device specification to run a heat up process by some spefiic mode of action, then pls change the definition" ;
-               rdfs:isDefinedBy hto: ;
-               rdfs:label "convection"@en ;
-               owl:deprecated "true"^^xsd:boolean ;
-               skos:definition "konvection during heating, heating in atmosphere, not in vacuum "@en .
 
 
 ###  https://w3id.org/pmd/hto/DewPoint
@@ -539,15 +463,6 @@ hto:Fan rdf:type owl:Class ;
         rdfs:label "OBSOLETE fan (legacy)"@en ;
         owl:deprecated "true"^^xsd:boolean ;
         skos:definition "OBSOLETE A device that creates airflow." .
-
-
-###  https://w3id.org/pmd/hto/FanStateFast
-hto:FanStateFast rdf:type owl:Class ;
-                 rdfs:subClassOf hto:HTO_0000033 ;
-                 obo:IAO_0000114 "needs work" ;
-                 rdfs:label "fan state fast"@en ;
-                 owl:deprecated "true"^^xsd:boolean ;
-                 skos:definition "Boolean parameter representing a fast fan speed setting in contrast to the default speed setting."@en .
 
 
 ###  https://w3id.org/pmd/hto/FastCooling
@@ -897,7 +812,7 @@ hto:HTO_0000021 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/hto/HTO_0000022
 hto:HTO_0000022 rdf:type owl:Class ;
-                rdfs:subClassOf _:genid50 ,
+                rdfs:subClassOf _:genid46 ,
                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                          owl:onProperty obo:BFO_0000117 ;
                                                          owl:someValuesFrom hto:HTO_0000038
@@ -931,7 +846,7 @@ hto:HTO_0000022 rdf:type owl:Class ;
                 skos:definition "Hardening (3.167) of a workpiece, followed by tempering, in order to produce a condition characterised by a good combination of hardness and toughness."@en ,
                                 "Härtung (3.167) eines Werkstückes mit anschließendem Anlassen, um einen Zustand zu erzeugen, der durch eine gute Kombination von Härte und Zähigkeit gekennzeichnet ist."@de .
 
-_:genid50 owl:intersectionOf ( hto:HTO_0000020
+_:genid46 owl:intersectionOf ( hto:HTO_0000020
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000051 ;
                                   owl:someValuesFrom hto:HTO_0000038
@@ -946,7 +861,7 @@ _:genid50 owl:intersectionOf ( hto:HTO_0000020
 [ rdf:type owl:Axiom ;
    owl:annotatedSource hto:HTO_0000022 ;
    owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget _:genid50 ;
+   owl:annotatedTarget _:genid46 ;
    obo:IAO_0000116 "this axiom should also include the order of the process (hardening precedes tempering)"
  ] .
 
@@ -1961,6 +1876,126 @@ hto:HTO_0000108 rdf:type owl:Class ;
                 skos:prefLabel "Mx"@en .
 
 
+###  https://w3id.org/pmd/hto/HTO_0000109
+hto:HTO_0000109 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000024 ;
+                obo:IAO_0000114 "needs work" ;
+                dc:source "DIN 17022-1:1994, §7 (generic multi-chamber furnace construction)" ;
+                rdfs:comment "unklare Zuordnung innerhalb der SDCs. Eine Kammer existiert nur als Teil eines Gerätes (Device), könnte aber selbst noch einmal als independent continuant definiert werden, da sich in der Kammer Chargen, Gestelle, Thermoelemente etc. befinden."@de ,
+                             "moved to fiat object part. correct if every furnace has a chamber" ;
+                rdfs:isDefinedBy hto: ;
+                rdfs:label "chamber"@en ;
+                skos:definition "Systemboundary of a distinct Heattreatment Process. Includes a fluid that has the role of medium role (e.g., Helium or Vacuum)."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000110
+hto:HTO_0000110 rdf:type owl:Class ;
+                rdfs:subClassOf hto:HTO_0000109 ;
+                dc:source "DIN 17022-1:1994, §7 (Ofen-Konstruktion)" ,
+                          "DIN 17022-4:1998, §10" ;
+                rdfs:isDefinedBy hto: ;
+                rdfs:label "Heizkammer"@de ,
+                           "Ofenkammer mit einer Heizung."@de ,
+                           "heating chamber"@en ;
+                skos:definition "Distinguishable chamber of a heat treatment furnace with a heater."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000111
+hto:HTO_0000111 rdf:type owl:Class ;
+                rdfs:subClassOf hto:HTO_0000109 ;
+                dc:source "DIN 17022-1:1994, §7.2 (Abschreckeinrichtung)" ,
+                          "DIN 17022-4:1998, §10.3 (Fassungsverhältnis ≥ 6× Chargengewicht)" ;
+                rdfs:isDefinedBy hto: ;
+                rdfs:label "Abschreckkammer"@de ,
+                           "quenching chamber"@en ;
+                skos:definition "Chamber of a heat treatment furnace that is designed to quench objects."@en ,
+                                "Kammer eines Wärmebehandlungsofens, die zum Abschrecken von Gegenständen bestimmt ist."@de .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000112
+hto:HTO_0000112 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000145 ;
+                dc:source "DIN EN ISO 4885:2018, §3.33 (Kohlenstoffpegel — contrast Anm.1)" ,
+                          "DIN EN ISO 683-3:2022, §A.4 (carburising atmosphere control)" ;
+                rdfs:comment "Nitrocarburieren mit Kohlenstoffträger, aus Messwerten abgeleitet KC"@de ,
+                             "See standard DIN 1310"@en ;
+                rdfs:isDefinedBy hto: ;
+                rdfs:label "carbon potential"@en ;
+                skos:definition "Carbon content of a specimen of pure iron in equilibrium with a carbourizing medium under specific conditions."@en ;
+                skos:editorialNote "DIN audit (2026-06-09): DIN EN ISO 4885 §3.33 names the operational quantity 'Kohlenstoffpegel' (carbon level), with §3.33 Anm.1 contrasting it explicitly with the 'thermodynamisches Kohlenstoffpotenzial'. 4885 treats the two as NOT synonymous. hto:CarbonPotential is retained as the thermodynamic-potential quality; the new sibling hto:HTO_0000076 (CarbonLevel) carries the §3.33 operational definition. See hto:HTO_0000076 below for the sibling class."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000113
+hto:HTO_0000113 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000145 ;
+                dc:source "DIN 17022-4:1998, §7.3 eq.3 (K_N = p_{NH3} / p_{H2}^{1.5})" ;
+                rdfs:comment "The nitriding potential is a key indicator how intensive the nitriding process is, the higher the value the stronger the nitriding conditions, unit is bar^-3/2"@en ;
+                rdfs:isDefinedBy hto: ;
+                rdfs:label "nitriding potential"@en ;
+                skos:definition "calculated nitriding potential, generated out of H2 / NH3 atmosphere content measurement"@en ,
+                                "nitriding potential of atmosphere calculated from H2 probe signal and ammonia flow rate "@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000114
+hto:HTO_0000114 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000145 ;
+                dc:source "DIN 17022-4:1998, §7.3 eq.3 (p_NH3, p_H2 in K_N formula)" ;
+                rdfs:isDefinedBy hto: ;
+                rdfs:label "partial pressure"@en ;
+                skos:definition " Paramenter describing the intended pressure inside a chamber targeted in a factor relative to one bar (using a vakuum cooling or an atmosphere flow). The complement to vacuum-heating as it allows for active vacuum pump during atmosphere flow. Should be set to zero, if vacuum-heating is true. "@en ,
+                                "Describing the intended pressure inside a chamber targeted in a factor relative to one bar (using a vakuum cooling or an atmosphere flow)."@en ,
+                                "Parameter describing the amount of a specific gas species in a mixture, could be mbar "@en ,
+                                "The complement to vacuum-heating as it allows for active vacuum pump during atmosphere flow. Should be set to zero, if vacuum-heating is true."@en ,
+                                "nominal pressure of a specific atmosphere component thermochemical steps "@en ,
+                                "nominal pressure of thermochemical heat treatment pressure during thermochemical steps "@en ;
+                skos:editorialNote "DIN audit (2026-06-09): DIN EN ISO 4885 has no §3 entry for partial pressure; this is upstream physical-chemistry vocabulary, not DIN-terminology-native. Operational usage in DIN 17022-4 §7.3 (p_NH3, p_H2 in K_N formula) is the only DIN anchor."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000115
+hto:HTO_0000115 rdf:type owl:Class ;
+                rdfs:subClassOf co:PMD_0000896 ;
+                owl:disjointWith hto:HTO_0000116 ;
+                dc:source "DIN 17022-4:1998, §7.3" ,
+                          "DIN EN ISO 4885:2018, §3.165 (Ofenatmosphäre, related quality)" ;
+                rdfs:comment "Effective atmosphere preasure in chamber to keep process save (must be 2-3 mbar above ambient pressure)"@en ,
+                             "Parameter usually slightly higher than ambient pressure for open process to environment to prevent/reduce diffusion of oxygen into the furnace, e.g. by leakage, to avoid explosive or dangerous atmopheres, could be bar, mbar or Pa."@en ;
+                rdfs:isDefinedBy hto: ;
+                rdfs:label "atmosphere pressure"@en ;
+                skos:definition "Parameter describing the pressure inside a chamber."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000116
+hto:HTO_0000116 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000896
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty obo:RO_0000080 ;
+                                                             owl:someValuesFrom hto:HTO_0000109
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                dc:source "DIN 17022-1:1994, §7 (chamber/Ofen-Konstruktion)" ,
+                          "DIN 17022-4:1998, §7.3 (Ofendruck)" ;
+                rdfs:comment "measured atmophere pressure in retort, measured using the vacuum sensor "@en ;
+                rdfs:isDefinedBy hto: ;
+                rdfs:label "chamber pressure"@en ;
+                skos:definition "designated pressure in retort during evacuation phase pre to nitriding process or during low pressure nitriding process "@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000117
+hto:HTO_0000117 rdf:type owl:Class ;
+                rdfs:subClassOf hto:HTO_0000032 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:IAO_0000136 ;
+                                  owl:someValuesFrom hto:HTO_0000043
+                                ] ;
+                obo:IAO_0000114 "needs work" ;
+                obo:IAO_0000115 "A setpoint describing the intended rotational speed of a device e.g. an fan or turbine."@en ;
+                rdfs:comment "seam to be a device specification pinting to a process charateristic of type speed" ;
+                rdfs:isDefinedBy hto: ;
+                rdfs:label "rotation speed specification"@en .
+
+
 ###  https://w3id.org/pmd/hto/Hardening
 hto:Hardening rdf:type owl:Class ;
               obo:IAO_0100001 hto:HTO_0000040 ;
@@ -1970,18 +2005,6 @@ hto:Hardening rdf:type owl:Class ;
               owl:deprecated "true"^^xsd:boolean ;
               skos:definition "OBSOLETE Heat treatment process to increase the strength and hardness of the material by cooling it so that its microstructure transforms to the hardening structure."@en ,
                               "OBSOLETE Wärmebehandlungprozess durch den eine Härte- und Festigkeitssteigerung erreicht wird, in dem das Material mit solcher Geschwindikeit abgekühlt wird, dass ein Härtungsgefüge enstehen kann."@de .
-
-
-###  https://w3id.org/pmd/hto/HeatingChamber
-hto:HeatingChamber rdf:type owl:Class ;
-                   rdfs:subClassOf hto:Chamber ;
-                   dc:source "DIN 17022-1:1994, §7 (Ofen-Konstruktion)" ,
-                             "DIN 17022-4:1998, §10" ;
-                   rdfs:isDefinedBy hto: ;
-                   rdfs:label "Heizkammer"@de ,
-                              "Ofenkammer mit einer Heizung."@de ,
-                              "heating chamber"@en ;
-                   skos:definition "Distinguishable chamber of a heat treatment furnace with a heater."@en .
 
 
 ###  https://w3id.org/pmd/hto/HeatingTime
@@ -2087,17 +2110,6 @@ hto:NitridingDepth rdf:type owl:Class ;
                    skos:definition "designated nitriding depth or measured nitriding depth"@en .
 
 
-###  https://w3id.org/pmd/hto/NitridingPotential
-hto:NitridingPotential rdf:type owl:Class ;
-                       rdfs:subClassOf obo:BFO_0000145 ;
-                       dc:source "DIN 17022-4:1998, §7.3 eq.3 (K_N = p_{NH3} / p_{H2}^{1.5})" ;
-                       rdfs:comment "The nitriding potential is a key indicator how intensive the nitriding process is, the higher the value the stronger the nitriding conditions, unit is bar^-3/2"@en ;
-                       rdfs:isDefinedBy hto: ;
-                       rdfs:label "nitriding potential"@en ;
-                       skos:definition "calculated nitriding potential, generated out of H2 / NH3 atmosphere content measurement"@en ,
-                                       "nitriding potential of atmosphere calculated from H2 probe signal and ammonia flow rate "@en .
-
-
 ###  https://w3id.org/pmd/hto/OilQuenchingDuration
 hto:OilQuenchingDuration rdf:type owl:Class ;
                          <http://www.geneontology.org/formats/oboInOwl#consider> hto:HTO_0000009 ;
@@ -2139,33 +2151,6 @@ hto:OxygenProbeSignal rdf:type owl:Class ;
  ] .
 
 
-###  https://w3id.org/pmd/hto/PartialPressure
-hto:PartialPressure rdf:type owl:Class ;
-                    rdfs:subClassOf obo:BFO_0000145 ;
-                    dc:source "DIN 17022-4:1998, §7.3 eq.3 (p_NH3, p_H2 in K_N formula)" ;
-                    rdfs:isDefinedBy hto: ;
-                    rdfs:label "partial pressure"@en ;
-                    skos:definition " Paramenter describing the intended pressure inside a chamber targeted in a factor relative to one bar (using a vakuum cooling or an atmosphere flow). The complement to vacuum-heating as it allows for active vacuum pump during atmosphere flow. Should be set to zero, if vacuum-heating is true. "@en ,
-                                    "Describing the intended pressure inside a chamber targeted in a factor relative to one bar (using a vakuum cooling or an atmosphere flow)."@en ,
-                                    "Parameter describing the amount of a specific gas species in a mixture, could be mbar "@en ,
-                                    "The complement to vacuum-heating as it allows for active vacuum pump during atmosphere flow. Should be set to zero, if vacuum-heating is true."@en ,
-                                    "nominal pressure of a specific atmosphere component thermochemical steps "@en ,
-                                    "nominal pressure of thermochemical heat treatment pressure during thermochemical steps "@en ;
-                    skos:editorialNote "DIN audit (2026-06-09): DIN EN ISO 4885 has no §3 entry for partial pressure; this is upstream physical-chemistry vocabulary, not DIN-terminology-native. Operational usage in DIN 17022-4 §7.3 (p_NH3, p_H2 in K_N formula) is the only DIN anchor."@en .
-
-
-###  https://w3id.org/pmd/hto/QuenchingChamber
-hto:QuenchingChamber rdf:type owl:Class ;
-                     rdfs:subClassOf hto:Chamber ;
-                     dc:source "DIN 17022-1:1994, §7.2 (Abschreckeinrichtung)" ,
-                               "DIN 17022-4:1998, §10.3 (Fassungsverhältnis ≥ 6× Chargengewicht)" ;
-                     rdfs:isDefinedBy hto: ;
-                     rdfs:label "Abschreckkammer"@de ,
-                                "quenching chamber"@en ;
-                     skos:definition "Chamber of a heat treatment furnace that is designed to quench objects."@en ,
-                                     "Kammer eines Wärmebehandlungsofens, die zum Abschrecken von Gegenständen bestimmt ist."@de .
-
-
 ###  https://w3id.org/pmd/hto/QuenchingLeadtime
 hto:QuenchingLeadtime rdf:type owl:Class ;
                       <http://www.geneontology.org/formats/oboInOwl#consider> hto:HTO_0000009 ;
@@ -2188,20 +2173,6 @@ hto:RecordingInterval rdf:type owl:Class ;
                       rdfs:label "obsolete recording interval"@en ;
                       owl:deprecated "true"^^xsd:boolean ;
                       skos:definition " effective data aquisition and saving interval for documentation "@en .
-
-
-###  https://w3id.org/pmd/hto/Rotation
-hto:Rotation rdf:type owl:Class ;
-             rdfs:subClassOf hto:HTO_0000032 ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty obo:IAO_0000136 ;
-                               owl:someValuesFrom hto:HTO_0000043
-                             ] ;
-             obo:IAO_0000114 "needs work" ;
-             obo:IAO_0000115 "A setpoint describing the intended rotational speed of a device e.g. an fan or turbine."@en ;
-             rdfs:comment "seam to be a device specification pinting to a process charateristic of type speed" ;
-             rdfs:isDefinedBy hto: ;
-             rdfs:label "rotation speed specification"@en .
 
 
 ###  https://w3id.org/pmd/hto/SequenceDescriptor
@@ -2293,32 +2264,6 @@ hto:TypeDescription rdf:type owl:Class ;
                                "obsolete Type Description"@en ;
                     owl:deprecated "true"^^xsd:boolean ;
                     skos:definition "Description for Process Node's utility, e.g. \"Rear Vacuum Furnace Oil Quenching\"."@en .
-
-
-###  https://w3id.org/pmd/hto/VacuumHeatingPressure
-hto:VacuumHeatingPressure rdf:type owl:Class ;
-                          rdfs:subClassOf co:PMD_0000896 ;
-                          obo:IAO_0000114 "needs work" ;
-                          rdfs:comment "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent." ,
-                                       "should be defined as pressur that inheres in a vacum heating pump. Add vacuum heating pump to devices" ;
-                          rdfs:isDefinedBy hto: ;
-                          rdfs:label "obsolete vacuum heating pressure"@en ;
-                          owl:deprecated "true"^^xsd:boolean ;
-                          skos:definition "OBSOLETE. Pressure of the vaccum heating pump."@en .
-
-
-###  https://w3id.org/pmd/hto/VacuumPressure
-hto:VacuumPressure rdf:type owl:Class ;
-                   rdfs:subClassOf co:PMD_0000896 ;
-                   rdfs:comment " in retort measured value of vakuum sensor "@en ,
-                                " pre-set gas pressure at vacuum sequence "@en ,
-                                "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent." ,
-                                "should be defined in conjuntion to some device or role" ;
-                   rdfs:isDefinedBy hto: ;
-                   rdfs:label "obsolete vacuum pressure"@en ;
-                   owl:deprecated "true"^^xsd:boolean ;
-                   skos:definition " Parameter describing the intended vacuum pressure inside a chamber. "@en ,
-                                   "OBSOLETE. Paramenter describing the measured pressure inside a chamber; units could be mbar, bar"@en .
 
 
 ###  https://w3id.org/pmd/hto/cooling
@@ -2576,7 +2521,7 @@ pmde:a38faf4698674edda5a810fb6a761451 rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/pmd/entity/a3add8415c694f30ae43fb99ca22e5c3
 pmde:a3add8415c694f30ae43fb99ca22e5c3 rdf:type owl:NamedIndividual ,
-                                               hto:HeatingChamber ;
+                                               hto:HTO_0000110 ;
                                       obo:BFO_0000051 <https://w3id.org/pmd/entity/7b7a15434eff4c8b80a849d458491e00> ;
                                       obo:IAO_0000235 <https://w3id.org/pmd/entity/024635ccaecb4e7c9eef809602cc76e0> ;
                                       rdfs:label "Charge 3471_heatingchamber"@en .
@@ -2877,7 +2822,7 @@ pmde:ac779a61bb2a41e8aa2fed052884fae4 rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/pmd/entity/acb2d7a8dc774433a0921e2f6ccb90b6
 pmde:acb2d7a8dc774433a0921e2f6ccb90b6 rdf:type owl:NamedIndividual ,
-                                               hto:QuenchingChamber ;
+                                               hto:HTO_0000111 ;
                                       obo:BFO_0000051 <https://w3id.org/pmd/entity/031c080967d947f3b56a9a30cb5aa732> ;
                                       obo:IAO_0000235 <https://w3id.org/pmd/entity/0552dd807a3a416ca66d0965356c9e61> ;
                                       rdfs:label "Charge 3470_quenchingchamber"@en .
@@ -4618,7 +4563,7 @@ pmde:de3261c00cdd4081a10dcf8045d903c7 rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/pmd/entity/de579e6368ec49449fc3412522320be5
 pmde:de579e6368ec49449fc3412522320be5 rdf:type owl:NamedIndividual ,
-                                               hto:QuenchingChamber ;
+                                               hto:HTO_0000111 ;
                                       obo:BFO_0000051 <https://w3id.org/pmd/entity/7dbdd68d62c242f18c6f194e324e80e9> ;
                                       obo:IAO_0000235 <https://w3id.org/pmd/entity/092aad0599d846d099d889d5e3036dbd> ;
                                       rdfs:label "Charge 3466_quenchingchamber"@en .
@@ -4940,7 +4885,7 @@ pmde:e6a576dc051643728dad7b1c4c50dac0 rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/pmd/entity/e6acc39adcc84a068c2bb9d87a0e8017
 pmde:e6acc39adcc84a068c2bb9d87a0e8017 rdf:type owl:NamedIndividual ,
-                                               hto:HeatingChamber ;
+                                               hto:HTO_0000110 ;
                                       obo:BFO_0000051 pmde:befa2cfed71b4372baf25d00b4b7cb6f ;
                                       obo:IAO_0000235 pmde:a6337fd65a8e40b4a3ebba4f90b82829 ;
                                       rdfs:label "Charge 3467_heatingchamber"@en .
@@ -6671,7 +6616,7 @@ pmde:ffe2df4bf7824480b85cb9352a78c370 rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/pmd/entity/1017434a104e40219e834096bb4c74be
 <https://w3id.org/pmd/entity/1017434a104e40219e834096bb4c74be> rdf:type owl:NamedIndividual ,
-                                                                        hto:QuenchingChamber ;
+                                                                        hto:HTO_0000111 ;
                                                                obo:BFO_0000051 <https://w3id.org/pmd/entity/88523064548f409cb0de496f408efb00> ;
                                                                obo:IAO_0000235 pmde:ec75aa61913749518f57910a6229446f ;
                                                                rdfs:label "Charge 3471_quenchingchamber"@en .
@@ -7676,7 +7621,7 @@ pmde:ffe2df4bf7824480b85cb9352a78c370 rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/pmd/entity/3075f864dd6b4135b2c8c612fbd9c6eb
 <https://w3id.org/pmd/entity/3075f864dd6b4135b2c8c612fbd9c6eb> rdf:type owl:NamedIndividual ,
-                                                                        hto:HeatingChamber ;
+                                                                        hto:HTO_0000110 ;
                                                                obo:BFO_0000051 pmde:ecf6bc27b8e2428cba448a38ba15ce55 ;
                                                                obo:IAO_0000235 <https://w3id.org/pmd/entity/32a10b4ebfe9476bab706aaf620c7797> ;
                                                                rdfs:label "Charge 3469_heatingchamber"@en .
@@ -8212,7 +8157,7 @@ pmde:ffe2df4bf7824480b85cb9352a78c370 rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/pmd/entity/4059f85801f6440aa369d88b9dc51933
 <https://w3id.org/pmd/entity/4059f85801f6440aa369d88b9dc51933> rdf:type owl:NamedIndividual ,
-                                                                        hto:HeatingChamber ;
+                                                                        hto:HTO_0000110 ;
                                                                obo:BFO_0000051 <https://w3id.org/pmd/entity/84ae090521ae4642b1eeff7dd1732f7e> ;
                                                                obo:IAO_0000235 <https://w3id.org/pmd/entity/4054ccaef4ff4211b6086c9e124b7709> ;
                                                                rdfs:label "Charge 3470_heatingchamber"@en .
@@ -8428,7 +8373,7 @@ pmde:ffe2df4bf7824480b85cb9352a78c370 rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/pmd/entity/47c08e5c64b84eba8eed500eeb38c2f9
 <https://w3id.org/pmd/entity/47c08e5c64b84eba8eed500eeb38c2f9> rdf:type owl:NamedIndividual ,
-                                                                        hto:QuenchingChamber ;
+                                                                        hto:HTO_0000111 ;
                                                                obo:BFO_0000051 <https://w3id.org/pmd/entity/06d62fc952d64a45a89e66c6bab73647> ;
                                                                obo:IAO_0000235 <https://w3id.org/pmd/entity/7a6db23c2868405193b4162cf81f661e> ;
                                                                rdfs:label "Charge 3468_quenchingchamber"@en .
@@ -8798,7 +8743,7 @@ pmde:ffe2df4bf7824480b85cb9352a78c370 rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/pmd/entity/505026a41d5942338e0fd50219fb3338
 <https://w3id.org/pmd/entity/505026a41d5942338e0fd50219fb3338> rdf:type owl:NamedIndividual ,
-                                                                        hto:QuenchingChamber ;
+                                                                        hto:HTO_0000111 ;
                                                                obo:BFO_0000051 <https://w3id.org/pmd/entity/1a7a4fdd369f4c5fb99f20beab3c22c9> ;
                                                                obo:IAO_0000235 pmde:e6a576dc051643728dad7b1c4c50dac0 ;
                                                                rdfs:label "Charge 3469_quenchingchamber"@en .
@@ -9033,7 +8978,7 @@ pmde:ffe2df4bf7824480b85cb9352a78c370 rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/pmd/entity/57596c7f7f6247fd9cd63643bc05baed
 <https://w3id.org/pmd/entity/57596c7f7f6247fd9cd63643bc05baed> rdf:type owl:NamedIndividual ,
-                                                                        hto:HeatingChamber ;
+                                                                        hto:HTO_0000110 ;
                                                                obo:BFO_0000051 pmde:ab0a6626be8f41e5bc9e73a8db028a80 ;
                                                                obo:IAO_0000235 pmde:dffa90f1e4ae4452a8504bf68a547f8c ;
                                                                rdfs:label "Charge 3468_heatingchamber"@en .
@@ -9130,7 +9075,7 @@ pmde:ffe2df4bf7824480b85cb9352a78c370 rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/pmd/entity/6a0c051dc22f4ed3b726c1a6b0c73e22
 <https://w3id.org/pmd/entity/6a0c051dc22f4ed3b726c1a6b0c73e22> rdf:type owl:NamedIndividual ,
-                                                                        hto:HeatingChamber ;
+                                                                        hto:HTO_0000110 ;
                                                                obo:BFO_0000051 <https://w3id.org/pmd/entity/2b45ab58bc4d4291b585297d95c78d37> ;
                                                                obo:IAO_0000235 <https://w3id.org/pmd/entity/095456af4ea243c8a1c3295285527eb0> ;
                                                                rdfs:label "Charge 3466_heatingchamber"@en .
@@ -10437,7 +10382,7 @@ pmde:ffe2df4bf7824480b85cb9352a78c370 rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/pmd/entity/8138f4845dc5400fa186e10aad6659b0
 <https://w3id.org/pmd/entity/8138f4845dc5400fa186e10aad6659b0> rdf:type owl:NamedIndividual ,
-                                                                        hto:QuenchingChamber ;
+                                                                        hto:HTO_0000111 ;
                                                                obo:BFO_0000051 <https://w3id.org/pmd/entity/5a0836c407d241c0b8aed7f130af299f> ;
                                                                obo:IAO_0000235 <https://w3id.org/pmd/entity/2ff45a4f7fcf459ab213271d45752d1b> ;
                                                                rdfs:label "Charge 3467_quenchingchamber"@en .
