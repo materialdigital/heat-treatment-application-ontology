@@ -311,62 +311,6 @@ hto:Carburizing rdf:type owl:Class ;
                                 "Wärmebehandlungsrezept, in dem die Schritte und Parameter für die Durchführung eines Aufkohlungsprozesses beschrieben werden."@de .
 
 
-###  https://w3id.org/pmd/hto/ChamberScope
-hto:ChamberScope rdf:type owl:Class ;
-                 rdfs:subClassOf obo:BFO_0000023 ;
-                 obo:IAO_0000114 "needs work" ;
-                 rdfs:comment "Sollte mit Unit-Volume (m^3) verbunden sein"@de ,
-                              "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent." ,
-                              "competly dont get that one" ;
-                 rdfs:isDefinedBy hto: ;
-                 rdfs:label "obsolete Wärmebehandlungsofenkammer"@de ,
-                            "obsolete chamberscope"@en ;
-                 owl:deprecated "true"^^xsd:boolean ;
-                 skos:definition "Funktionale Ofenkammer."@de ,
-                                 "OBSOLETE. Functional furnace chamber."@en ,
-                                 """OBSOLETE. Position of the batch in a multi-chamber furnace
-A specialization of hasProcessNodeComponent representing distinguishable heat treatment chambers of a furnaces.
-can be: heating chamber / cooling chamber"""@en .
-
-
-###  https://w3id.org/pmd/hto/DewPoint
-hto:DewPoint rdf:type owl:Class ;
-             rdfs:subClassOf obo:IAO_0000109 ;
-             dc:source "DIN EN ISO 683-3:2022, §A.4 Anm. (Taupunkt as carburising atmosphere control variable)" ;
-             rdfs:isDefinedBy hto: ;
-             rdfs:label "dew point"@en ;
-             skos:definition "dew point of the atmosphere, measured during process or calculated from lambda / oxygen probe signal "@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource hto:DewPoint ;
-   owl:annotatedProperty dc:source ;
-   owl:annotatedTarget "DIN EN ISO 683-3:2022, §A.4 Anm. (Taupunkt as carburising atmosphere control variable)" ;
-   obo:IAO_0000116 "the source given (DIN EN ISO 683-3) does not contain info about dew points (thoni)"
- ] .
-
-
-###  https://w3id.org/pmd/hto/FastCooling
-hto:FastCooling rdf:type owl:Class ;
-                rdfs:subClassOf hto:HeattreatmentMethod ;
-                rdfs:comment "Anlagenbedingt."@de ,
-                             """Schnellkühlung kann z.B. durch erhöhten Kühlwasserdurchfluss erfolgen.
-Auch erhöhte Gaskühlung durch ventilation."""@de ,
-                             "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent." ;
-                rdfs:label "fast cooling"@en ;
-                owl:deprecated "true"^^xsd:boolean ;
-                skos:definition "Schnellkühlung"@de ,
-                                "Stark beschleunigte Abkühlung ohne Abschreckmedium."@de .
-
-
-###  https://w3id.org/pmd/hto/FurnaceCooling
-hto:FurnaceCooling rdf:type owl:Class ;
-                   rdfs:subClassOf hto:HeattreatmentMethod ;
-                   rdfs:isDefinedBy hto: ;
-                   rdfs:label "furnace cooling"@en ;
-                   owl:deprecated "true"^^xsd:boolean ;
-                   skos:definition "free cooling with deactivated heating unit and no additonal cooling by e.g. agitade nitrogene -> furnace cool "@en .
-
-
 ###  https://w3id.org/pmd/hto/HTO_0000000
 hto:HTO_0000000 rdf:type owl:Class ;
                 rdfs:subClassOf co:PMD_0000833 ;
@@ -475,7 +419,8 @@ hto:HTO_0000009 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000202 ;
                 dc:source "DIN 17022-1:1994, Bild 1 (Verweildauer/Erwärm-/Anwärm-/Durchwärm-/Haltedauer)" ,
                           "DIN EN ISO 683-2:2018, Tab.11 (Anlassdauer / Aust.-dauer)" ;
-                rdfs:label "duration"@en .
+                rdfs:label "duration"@en ;
+                skos:definition "a temporal interval that describes the temporal extent of a process which is demarcated by the distance of two temporal instants"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000010
@@ -664,7 +609,7 @@ hto:HTO_0000021 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/hto/HTO_0000022
 hto:HTO_0000022 rdf:type owl:Class ;
-                rdfs:subClassOf _:genid46 ,
+                rdfs:subClassOf _:genid45 ,
                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                          owl:onProperty obo:BFO_0000117 ;
                                                          owl:someValuesFrom hto:HTO_0000038
@@ -698,7 +643,7 @@ hto:HTO_0000022 rdf:type owl:Class ;
                 skos:definition "Hardening (3.167) of a workpiece, followed by tempering, in order to produce a condition characterised by a good combination of hardness and toughness."@en ,
                                 "Härtung (3.167) eines Werkstückes mit anschließendem Anlassen, um einen Zustand zu erzeugen, der durch eine gute Kombination von Härte und Zähigkeit gekennzeichnet ist."@de .
 
-_:genid46 owl:intersectionOf ( hto:HTO_0000020
+_:genid45 owl:intersectionOf ( hto:HTO_0000020
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000051 ;
                                   owl:someValuesFrom hto:HTO_0000038
@@ -713,7 +658,7 @@ _:genid46 owl:intersectionOf ( hto:HTO_0000020
 [ rdf:type owl:Axiom ;
    owl:annotatedSource hto:HTO_0000022 ;
    owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget _:genid46 ;
+   owl:annotatedTarget _:genid45 ;
    obo:IAO_0000116 "this axiom should also include the order of the process (hardening precedes tempering)"
  ] .
 
@@ -1794,7 +1739,7 @@ hto:HTO_0000114 rdf:type owl:Class ;
                 rdfs:label "Partialdruck"@de ,
                            "partial pressure"@en ;
                 skos:definition "Realtional quality describing the contribution from a single gas species to the total pressure in a gas mixture."@en ,
-                                "Relationale Eigschenschaft, die den Beitrag eines Gases zum Gesamtdruck in einem Gasgemisch beschreibt."@de ;
+                                "Relationale Eigenschaft die den Beitrag eines Gases zum Gesamtdruck in einem Gasgemisch beschreibt."@de ;
                 skos:editorialNote "DIN audit (2026-06-09): DIN EN ISO 4885 has no §3 entry for partial pressure; this is upstream physical-chemistry vocabulary, not DIN-terminology-native. Operational usage in DIN 17022-4 §7.3 (p_NH3, p_H2 in K_N formula) is the only DIN anchor."@en .
 
 
@@ -1843,79 +1788,64 @@ hto:HTO_0000117 rdf:type owl:Class ;
                 rdfs:label "rotation speed specification"@en .
 
 
-###  https://w3id.org/pmd/hto/HeattreatmentMethod
-hto:HeattreatmentMethod rdf:type owl:Class ;
-                        rdfs:subClassOf obo:BFO_0000023 ;
-                        obo:IAO_0000114 "needs work" ;
-                        rdfs:comment "The reason for obsoletion is that the term is not clearly defined and usage has been inconsistent." ,
-                                     "all childs are only categories of processes and definatly not roles! what makes a fats cooling? al colling process with some process charateristic on temperature with 100K/min?" ;
-                        owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://w3id.org/pmd/hto/HeattreatmentScope
-hto:HeattreatmentScope rdf:type owl:Class ;
-                       rdfs:subClassOf obo:BFO_0000023 ;
-                       obo:IAO_0000114 "needs work" ;
-                       rdfs:comment "childs are processes that realize a certain goal as realizabale" ;
-                       rdfs:isDefinedBy hto: ;
-                       rdfs:label "heattreatmentscope"@en ;
-                       owl:deprecated "true"^^xsd:boolean ;
-                       skos:definition "This class specifices the scope of the specific heattreatment process."@en .
-
-
-###  https://w3id.org/pmd/hto/HydrogeneSensorSignal
-hto:HydrogeneSensorSignal rdf:type owl:Class ;
-                          rdfs:subClassOf obo:IAO_0000109 ;
-                          dc:source "DIN 17022-4:1998, §7.3 (H2 atmosphere monitoring, p_H2 in K_N formula)" ;
-                          rdfs:comment "nominal pre-set value of control system for hydrogen probe "@en ;
-                          rdfs:isDefinedBy hto: ;
-                          rdfs:label "hydrogene sensor signal"@en ;
-                          skos:definition "measured hydrogen value of  hydrogen probe measured in milli volt "@en .
-
-
-###  https://w3id.org/pmd/hto/LambdaProbeSignal
-hto:LambdaProbeSignal rdf:type owl:Class ;
-                      rdfs:subClassOf obo:IAO_0000109 ;
-                      dc:source "DIN EN ISO 683-3:2022, §A.4 Anm. (atmosphere-control umbrella; lambda probe is industry-vendor term for the O2 probe class)" ;
-                      rdfs:isDefinedBy hto: ;
-                      rdfs:label "lambda probe signal"@en ;
-                      skos:definition "measured lambda probe signal in exhaust gas "@en ,
-                                      "measured signal of the lambda-probe in millivolt, representing the atmospheres redox-potential "@en ;
-                      skos:editorialNote "DIN audit (2026-06-09): 'Lambdasonde' is not explicitly named in DIN 683-3 §A.4 (it uses the generic 'Sauerstoffsonde'); the lambda probe is a specific O2-probe variant used for burner stoichiometry in fuel-fired furnaces. Provenance is operational / inferred, not direct."@en .
+###  https://w3id.org/pmd/hto/HTO_0000118
+hto:HTO_0000118 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000109 ;
+                dc:source "DIN EN ISO 683-3:2022, §A.4 Anm. (Taupunkt as carburising atmosphere control variable)" ;
+                rdfs:isDefinedBy hto: ;
+                rdfs:label "dew point"@en ;
+                skos:definition "dew point of the atmosphere, measured during process or calculated from lambda / oxygen probe signal "@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource hto:LambdaProbeSignal ;
+   owl:annotatedSource hto:HTO_0000118 ;
+   owl:annotatedProperty dc:source ;
+   owl:annotatedTarget "DIN EN ISO 683-3:2022, §A.4 Anm. (Taupunkt as carburising atmosphere control variable)" ;
+   obo:IAO_0000116 "the source given (DIN EN ISO 683-3) does not contain info about dew points (thoni)"
+ ] .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000119
+hto:HTO_0000119 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000109 ;
+                dc:source "DIN 17022-4:1998, §7.3 (H2 atmosphere monitoring, p_H2 in K_N formula)" ;
+                rdfs:comment "nominal pre-set value of control system for hydrogen probe "@en ;
+                rdfs:isDefinedBy hto: ;
+                rdfs:label "hydrogene sensor signal"@en ;
+                skos:definition "measured hydrogen value of  hydrogen probe measured in milli volt "@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000120
+hto:HTO_0000120 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000109 ;
+                dc:source "DIN EN ISO 683-3:2022, §A.4 Anm. (atmosphere-control umbrella; lambda probe is industry-vendor term for the O2 probe class)" ;
+                rdfs:isDefinedBy hto: ;
+                rdfs:label "lambda probe signal"@en ;
+                skos:definition "measured lambda probe signal in exhaust gas "@en ,
+                                "measured signal of the lambda-probe in millivolt, representing the atmospheres redox-potential "@en ;
+                skos:editorialNote "DIN audit (2026-06-09): 'Lambdasonde' is not explicitly named in DIN 683-3 §A.4 (it uses the generic 'Sauerstoffsonde'); the lambda probe is a specific O2-probe variant used for burner stoichiometry in fuel-fired furnaces. Provenance is operational / inferred, not direct."@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource hto:HTO_0000120 ;
    owl:annotatedProperty dc:source ;
    owl:annotatedTarget "DIN EN ISO 683-3:2022, §A.4 Anm. (atmosphere-control umbrella; lambda probe is industry-vendor term for the O2 probe class)" ;
    obo:IAO_0000116 "the source given (DIN EN ISO 683-3) does not contain info about lambda probes or oxygen (thoni)"
  ] .
 
 
-###  https://w3id.org/pmd/hto/OxygenProbeSignal
-hto:OxygenProbeSignal rdf:type owl:Class ;
-                      rdfs:subClassOf obo:IAO_0000109 ;
-                      dc:source "DIN EN ISO 683-3:2022, §A.4 Anm. (Sauerstoffsonde / O2 probe for Cp atmosphere control)" ;
-                      rdfs:isDefinedBy hto: ;
-                      rdfs:label "oxygen probe signal"@en ;
-                      skos:definition " measured oxygen probe signal in retort atmosphere "@en .
+###  https://w3id.org/pmd/hto/HTO_0000121
+hto:HTO_0000121 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000109 ;
+                dc:source "DIN EN ISO 683-3:2022, §A.4 Anm. (Sauerstoffsonde / O2 probe for Cp atmosphere control)" ;
+                rdfs:isDefinedBy hto: ;
+                rdfs:label "oxygen probe signal"@en ;
+                skos:definition " measured oxygen probe signal in retort atmosphere "@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource hto:OxygenProbeSignal ;
+   owl:annotatedSource hto:HTO_0000121 ;
    owl:annotatedProperty dc:source ;
    owl:annotatedTarget "DIN EN ISO 683-3:2022, §A.4 Anm. (Sauerstoffsonde / O2 probe for Cp atmosphere control)" ;
    obo:IAO_0000116 "the source given (DIN EN ISO 683-3) does not contain info about oxygen probes (thoni)"
  ] .
-
-
-###  https://w3id.org/pmd/hto/SlowCooling
-hto:SlowCooling rdf:type owl:Class ;
-                rdfs:subClassOf hto:HeattreatmentMethod ;
-                rdfs:isDefinedBy hto: ;
-                rdfs:label "Langsame Gleichgewichtsnahabkühlung"@de ,
-                           "Slow Cooling"@en ;
-                owl:deprecated "true"^^xsd:boolean ;
-                skos:definition "Langsame Abkühlung unter gleichgewichtsnahen Bedingungen, um ein gleichgewichtsnahes Gefüge zu erzeugen."@de ,
-                                "Slow cooling with equilibrium near conditions, to foster an equilibrium near micro structure."@en .
 
 
 #################################################################
