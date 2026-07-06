@@ -290,7 +290,8 @@ co:PMD_0025010 rdfs:subClassOf hto:HTO_0000000 ;
                rdfs:label "Erwärmen"@de ;
                skos:altLabel "Aufheizen" ;
                skos:comment "Das Erwärmen kann kontinuierlich, nicht kontinuierlich oder allmählich in einem Schritt oder in mehreren Schritten erfolgen."@de ,
-                            "Heating may be continuous, non-continuos or gradually in one or more steps." .
+                            "Heating may be continuous, non-continuos or gradually in one or more steps." ;
+               skos:definition "Essential heat treatment process where an increase in temperature takes place." .
 
 
 ###  https://w3id.org/pmd/co/PMD_0025011
@@ -320,8 +321,8 @@ hto:HTO_0000000 rdf:type owl:Class ;
                           "DIN EN ISO 4885:2018, §3.207 (thermochemische Behandlung)" ,
                           "DIN EN ISO 4885:2018, §3.8 (Glühen)" ;
                 rdfs:comment "intermediate class/grouping term, not to be instatialized"@en ;
-                rdfs:label "Grundsätzliche Wärmebehandlungsvorgänge"@de ,
-                           "heat treatment essentials"@en ;
+                rdfs:label "Grundsätzlicher Wärmebehandlungsvorgang"@de ,
+                           "essential heat treatment process"@en ;
                 skos:definition "Essential processes that make up heat treatments and can be used like building blocks."@en .
 
 
@@ -935,8 +936,8 @@ hto:HTO_0000042 rdf:type owl:Class ;
                 rdfs:label "Durchwärmen"@de ,
                            "equalization"@en ;
                 skos:altLabel "soaking"@en ;
-                skos:definition "Process step during which temperature homogenization is achieved in the component."@en ,
-                                "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de ;
+                skos:definition "Grundsätzlicher Wärmebehandlungsvorgang, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de ,
+                                "essential heat treatment process step during which temperature homogenization is achieved in the component."@en ;
                 skos:editorialNote """In practice, the English terms 'equalization' and 'soaking' are synonymous. The standard DIN EN ISO 4885 is ambiguous about the distinction between 'Halten' (§3.185) and 'Durchwärmen' (3.80), and also translates 'soaking' as 'Halten'. The diagram for '§3.80 Durchwärmen' shows the two processes in sequence, whereas the annotation for 'Halten' states that the discrete location within an object must be specified. However, I deem this unnecessary, since 'Halten'/'holding' refers to the process that follows the soaking step and ensures a homogeneous temperature distribution regardless of the location.
 
 (thnlrd)""" .
@@ -1093,9 +1094,9 @@ hto:HTO_0000061 rdf:type owl:Class ;
                 rdfs:comment "Die HoldingTime ist stets mit einer vorhergehende SoakingTime verbunden."@de ;
                 rdfs:label "Halten"@de ,
                            "holding"@en ;
-                skos:definition "Process step without temperature change in the furnace after the designated temperature was homogeneously reached within the part."@en ,
-                                """Prozessschritt ohne Temperaturänderung im Ofen.
-Teil einer Zeit-Temperatur-Folge, bei dem die Temperatur konstant gehalten wird"""@de .
+                skos:definition """Grundsätzlicher Wärmebehandlungsvorgang ohne Temperaturänderung im Ofen.
+Teil einer Zeit-Temperatur-Folge, bei dem die Temperatur konstant gehalten wird"""@de ,
+                                "essential heat treatment process step without temperature change in the furnace after the designated temperature was homogeneously reached within the part."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000062
@@ -1104,17 +1105,17 @@ hto:HTO_0000062 rdf:type owl:Class ;
                 dc:source "DIN EN ISO 4885:2018, §3.168" ;
                 rdfs:label "Abschrecken"@de ,
                            "quenching"@en ;
-                skos:definition "Behandlung, bei der ein Werkstück mit größerer Geschwindigkeit als an ruhender Luft abgekühlt (3.45) wird."@de ,
-                                "Process with significantly increased cooling rate, aimed at preventing diffusion based transformations."@en ,
-                                "Prozess mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de ,
-                                "Treatment in which a workpiece is cooled (3.45) at a higher rate than in still air."@en .
+                skos:definition "Grundsätzlicher Wärmebehandlungsvorgang mit stark erhöhter Abkühlgeschwindigkeit, mit dem Ziel der Verhinderung diffusionsgesteuerter Umwandlungen."@de ,
+                                "Grundsätzlicher Wärmebehandlungsvorgang, bei dem ein Werkstück mit größerer Geschwindigkeit als an ruhender Luft abgekühlt (3.45) wird."@de ,
+                                "essential heat treatment process in which a workpiece is cooled (3.45) at a higher rate than in still air."@en ,
+                                "essential heat treatment process with significantly increased cooling rate, aimed at preventing diffusion based transformations."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000063
 hto:HTO_0000063 rdf:type owl:Class ;
                 rdfs:subClassOf obo:IAO_0000027 ;
                 rdfs:label "counter"@en ;
-                skos:definition "A counter is a data item that describes the position of an entity within a sequential chain of action with an integer value." ;
+                skos:definition "A data item that describes the position of an entity within a sequential chain of action with an integer value." ;
                 skos:example "Numbering of subprocesses in a heat treatment sequence." .
 
 
@@ -1143,7 +1144,7 @@ hto:HTO_0000066 rdf:type owl:Class ;
                 rdfs:subClassOf hto:HTO_0000000 ;
                 dc:source "DIN 17022-4:1998, §7.3 (Plasmanitrieren — Ofendruck < 10 mbar via evacuation, operational)" ;
                 rdfs:label "evacuation"@en ;
-                skos:definition "A heat treatment essential that creates a vacuum. Removing atmoshpere and decreasing pressure."@en .
+                skos:definition "essential heat treatment process that creates a vacuum. Removing atmoshpere and decreasing pressure."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000067
@@ -1168,13 +1169,15 @@ hto:HTO_0000068 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/hto/HTO_0000069
 hto:HTO_0000069 rdf:type owl:Class ;
                 rdfs:subClassOf co:PMD_0020114 ;
-                rdfs:label "quenchant role"@en .
+                rdfs:label "quenchant role"@en ;
+                skos:definition "A medium role of a fluid to serve as an intermediary for the transmission of thermal energy from an object to the fluid in a capacity that exeeds the transmission from static air."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000070
 hto:HTO_0000070 rdf:type owl:Class ;
                 rdfs:subClassOf co:PMD_0020114 ;
-                rdfs:label "coolant role"@en .
+                rdfs:label "coolant role"@en ;
+                skos:definition "A medium role of a fluid to serve as an intermediary for the transmission of thermal energy from an object to the fluid."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000071
@@ -1257,8 +1260,8 @@ hto:HTO_0000077 rdf:type owl:Class ;
                           "DIN EN ISO 4885:2018, §3.12" ;
                 rdfs:label "Austenit"@de ,
                            "austenite"@en ;
-                skos:definition "Feste Lösung eines oder mehrerer Elemente im γ-Eisen (3.91)."@de ,
-                                "Solid solution of one or more elements in γ-iron (3.91)."@en ;
+                skos:definition "Microstructure that is a solid solution of one or more elements in γ-iron (3.91)."@en ,
+                                "Mikrogefüge, das eine feste Lösung eines oder mehrerer Elemente im γ-Eisen (3.91) ist."@de ;
                 skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.12 + Tabelle 1. Parent BFO_0000040 (material entity) selected as the closest BFO anchor for a phase as a material-bearer; some HTO maintainers may prefer to re-anchor under a PMDco material-phase class once one is added upstream."@en ,
                                    "All term definitions copied from DIN 4885 should be rid of the internal reference number e.g. \"3.91\" (thnlrd)" .
 
@@ -1270,8 +1273,8 @@ hto:HTO_0000078 rdf:type owl:Class ;
                           "DIN EN ISO 4885:2018, §3.137" ;
                 rdfs:label "Martensit"@de ,
                            "martensite"@en ;
-                skos:definition "Phase (3.156) formed in carbon-bearing steels by cooling (3.45) of austenite (3.12), where the high cooling rate prevents sufficient carbon atoms from diffusing out of the crystal structure to form cementite (3.39) (Fe3C)."@en ,
-                                "Phase (3.156), die in kohlenstoffhaltigen Stählen durch Abkühlen (3.45) des Austenits (3.12) gebildet wird, wobei die hohe Geschwindigkeit des Abkühlens verhindert, dass ausreichend Kohlenstoffatome aus der Kristallstruktur diffundieren können, um Zementit (3.39) (Fe3C) zu bilden."@de ;
+                skos:definition "Gefüge/Phase (3.156), die in kohlenstoffhaltigen Stählen durch Abkühlen (3.45) des Austenits (3.12) gebildet wird, wobei die hohe Geschwindigkeit des Abkühlens verhindert, dass ausreichend Kohlenstoffatome aus der Kristallstruktur diffundieren können, um Zementit (3.39) (Fe3C) zu bilden."@de ,
+                                "Microstructure/phase (3.156) formed in carbon-bearing steels by cooling (3.45) of austenite (3.12), where the high cooling rate prevents sufficient carbon atoms from diffusing out of the crystal structure to form cementite (3.39) (Fe3C)."@en ;
                 skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.137 + Tabelle 1."@en .
 
 
@@ -1294,8 +1297,8 @@ hto:HTO_0000080 rdf:type owl:Class ;
                           "DIN EN ISO 4885:2018, §3.85" ;
                 rdfs:label "Ferrit"@de ,
                            "ferrite"@en ;
-                skos:definition "Eisen oder Stahl mit kubisch-raumzentrierter Gitterstruktur."@de ,
-                                "Iron or steel with a body-centred cubic lattice structure."@en ;
+                skos:definition "Gefüge von Eisen oder Stahl mit kubisch-raumzentrierter Gitterstruktur."@de ,
+                                "Microstructure of iron or steel with a body-centred cubic lattice structure."@en ;
                 skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.85 + Tabelle 1."@en .
 
 
@@ -1318,8 +1321,8 @@ hto:HTO_0000082 rdf:type owl:Class ;
                           "DIN EN ISO 4885:2018, §3.39" ;
                 rdfs:label "Zementit"@de ,
                            "cementite"@en ;
-                skos:definition "Carbid des Eisens, mit der Zusammensetzung Fe3C."@de ,
-                                "Iron carbide with composition Fe3C."@en ;
+                skos:definition "Microstructure composed of iron carbide with composition Fe3C."@en ,
+                                "Mokrogefüge, das das Carbid des Eisens, mit der Zusammensetzung Fe3C ist."@de ;
                 skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.39 + Tabelle 1."@en .
 
 
@@ -1420,16 +1423,13 @@ hto:HTO_0000089 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/hto/HTO_0000090
 hto:HTO_0000090 rdf:type owl:Class ;
-                rdfs:subClassOf co:PMD_0040001 ;
-                dc:source "DIN EN ISO 4885:2018, §3.74 (Einhärtungstiefe nach Randschichthärten — industry-vendor SHD shorthand)" ;
-                rdfs:label "Oberflächenhärtungstiefe"@de ,
-                           "surface hardening depth (generic)"@en ;
-                skos:altLabel "Randschichthärtungstiefe"@de ,
-                              "Rht"@de ,
-                              "SHD"@en ;
-                skos:definition "Generic depth term for surface hardening; in industrial practice referred to as Surface Hardening Depth (SHD); in DIN normation usually narrowed to Rht (§3.74) or CHD (§3.72)."@en ,
-                                "Generischer Tiefenbegriff für Randschichthärtungen, in der industriellen Praxis als 'Surface Hardening Depth' (SHD) verwendet; nach DIN-Normierung in der Regel präzisiert zu Rht (§3.74) oder CHD (§3.72)."@de ;
-                skos:editorialNote "DIN audit addition (2026-06-09): generic SHD anchor — DIN EN ISO 4885 §3.74 is the closest formal anchor; the term SHD itself is industry-vendor-shorthand subsuming Rht/CHD. Kept distinct so the A-Box can reference SHD when the specific Rht/CHD distinction is not (yet) made."@en .
+                obo:IAO_0100001 hto:HTO_0000088 ;
+                rdfs:comment "unnecessary grouping term" ;
+                rdfs:label "OBSOLETE Oberflächenhärtungstiefe"@de ,
+                           "OBSOLETE surface hardening depth (generic)"@en ;
+                owl:deprecated "true"^^xsd:boolean ;
+                skos:definition "OBSOLETE Generic depth term for surface hardening; in industrial practice referred to as Surface Hardening Depth (SHD); in DIN normation usually narrowed to Rht (§3.74) or CHD (§3.72)."@en ,
+                                "OBSOLETE Generischer Tiefenbegriff für Randschichthärtungen, in der industriellen Praxis als 'Surface Hardening Depth' (SHD) verwendet; nach DIN-Normierung in der Regel präzisiert zu Rht (§3.74) oder CHD (§3.72)."@de .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000091
