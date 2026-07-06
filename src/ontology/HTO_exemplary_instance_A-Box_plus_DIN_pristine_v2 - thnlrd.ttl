@@ -19,12 +19,12 @@
 
 <https://w3id.org/pmd/hto> rdf:type owl:Ontology ;
                             owl:imports <https://w3id.org/pmd/hto/imports/pmdco_import.owl> ;
-                            dcterms:contributor "Divya Gosula" ;
+                            dcterms:contributor <https://orcid.org/0000-0003-1649-6832> ;
                             dcterms:creator <https://orcid.org/0000-0002-9014-2920> ,
-                                            <https://orcid.org/0000-0003-1649-6832> ,
-                                            <https://orcid.org/0009-0004-4787-4685> ;
+                                            <https://orcid.org/0009-0004-4787-4685> ,
+                                            "Divya Gosula" ;
                             dcterms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
-                            dcterms:license <https://creativecommons.org/licenses/unspecified> ;
+                            dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                             dcterms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en .
 
 #################################################################
@@ -288,6 +288,7 @@ co:PMD_0000655 rdfs:subClassOf [ rdf:type owl:Restriction ;
 co:PMD_0025010 rdfs:subClassOf hto:HTO_0000000 ;
                dc:source "DIN EN ISO 4885:2018, §3.109 (thnlrd)" ;
                rdfs:label "Erwärmen"@de ;
+               skos:altLabel "Aufheizen" ;
                skos:comment "Das Erwärmen kann kontinuierlich, nicht kontinuierlich oder allmählich in einem Schritt oder in mehreren Schritten erfolgen."@de ,
                             "Heating may be continuous, non-continuos or gradually in one or more steps." .
 
@@ -301,14 +302,14 @@ co:PMD_0025011 rdfs:subClassOf hto:HTO_0000000 ;
 ###  https://w3id.org/pmd/hto/Carburizing
 hto:Carburizing rdf:type owl:Class ;
                 rdfs:subClassOf co:PMD_0060008 ;
-                obo:IAO_0000116 "needs work" ;
                 dc:source "DIN 17022-3:2025-11, §6" ;
                 rdfs:comment "Potentiell ableitbar mit bestimmten Fluss-Schwellenwerten"@de ;
                 rdfs:isDefinedBy hto: ;
                 rdfs:label "Aufkohlungsrezept"@de ,
                            "carburizing recipe"@en ;
                 skos:definition "Heattreatment recipe outlining the steps and parameters needed to perform a carburizing process."@en ,
-                                "Wärmebehandlungsrezept, in dem die Schritte und Parameter für die Durchführung eines Aufkohlungsprozesses beschrieben werden."@de .
+                                "Wärmebehandlungsrezept, in dem die Schritte und Parameter für die Durchführung eines Aufkohlungsprozesses beschrieben werden."@de ;
+                skos:editorialNote "needs work" .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000000
@@ -342,10 +343,10 @@ hto:HTO_0000003 rdf:type owl:Class ;
                                   owl:onProperty obo:IAO_0000136 ;
                                   owl:someValuesFrom hto:HTO_0000005
                                 ] ;
-                obo:IAO_0000115 "A setpoint which - as part of plan specifications (e.g. recipes) - specifies the rate at which temparature is to be changed." ;
                 dc:source "DIN 17022-1:1994, §3.1.1" ,
                           "DIN 17022-1:1994, §5.2.2" ;
-                rdfs:label "temperature change rate specification"@en .
+                rdfs:label "temperature change rate specification"@en ;
+                skos:definition "A setpoint which - as part of plan specifications (e.g. recipes) - specifies the rate at which temparature is to be changed." .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000004
@@ -374,8 +375,7 @@ hto:HTO_0000005 rdf:type owl:Class ;
                 dc:source "DIN 17022-1:1994, §3.1.1" ,
                           "DIN 17022-1:1994, §5.2.2 (incl. kritische Abkühlgeschwindigkeit K_k)" ;
                 rdfs:label "temperature change rate"@en ;
-                skos:definition "A process attribute defining the change of temperature per time unit within a process."@en ;
-                skos:prefLabel "temperature change rate" .
+                skos:definition "A process attribute defining the change of temperature per time unit within a process."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000006
@@ -393,11 +393,11 @@ hto:HTO_0000006 rdf:type owl:Class ;
                                   owl:onProperty obo:OBI_0002135 ;
                                   owl:someValuesFrom xsd:float
                                 ] ;
-                obo:IAO_0000115 "A setpoint defining the temperature that is to be reached/held within a process that involves a defined temperature."@en ;
-                obo:IAO_0000116 "needs work" ;
                 dc:source "DIN 17022-1:1994, §5 (generic process-target temperature)" ;
                 <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "target temperature specification"@en ;
-                rdfs:label "target temperature"@en .
+                rdfs:label "target temperature"@en ;
+                skos:definition "A setpoint defining the temperature that is to be reached/held within a process that involves a defined temperature."@en ;
+                skos:editorialNote "needs work" .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000008
@@ -407,11 +407,11 @@ hto:HTO_0000008 rdf:type owl:Class ;
                                   owl:onProperty obo:IAO_0000136 ;
                                   owl:someValuesFrom hto:HTO_0000009
                                 ] ;
-                obo:IAO_0000115 "Device specification as part of a plan specification which specifies the duration of a given process." ;
                 dc:source "DIN 17022-1:1994, Bild 1 (Verweildauer / Erwärm-/Anwärm-/Durchwärm-/Haltedauer)" ,
                           "DIN 17022-1:1994, §5.2.1" ,
                           "DIN EN ISO 683-2:2018, Tab.11 Fn d, f" ;
-                rdfs:label "duration specification"@en .
+                rdfs:label "duration specification"@en ;
+                skos:definition "Device specification as part of a plan specification which specifies the duration of a given process." .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000009
@@ -449,7 +449,7 @@ hto:HTO_0000012 rdf:type owl:Class ;
                 dc:source "DIN 17022-1:1994, Bild 1" ,
                           "DIN EN ISO 4885:2018, §3.185" ;
                 rdfs:label "holding function"@en ;
-                skos:definition "A holding function is a (realizable) function that, when realized, enables a system or device to hold the thermal energy of a material, typically to facilitate diffusion and phase transformation processes within the material."@en ;
+                skos:definition "A heat treatment function that, enables a system or device to hold the thermal energy of a material, typically to facilitate diffusion and phase transformation processes within the material."@en ;
                 skos:example "function of a furnace to hold its temperature at a specified temperature" .
 
 
@@ -632,7 +632,6 @@ hto:HTO_0000022 rdf:type owl:Class ;
                                                      ) ;
                                   rdf:type owl:Class
                                 ] ;
-                obo:IAO_0000116 "the axiom should also include the order of the process (hardening precedes tempering)"@en ;
                 dc:source "DIN 17022-1:1994, §3.3" ,
                           "DIN EN ISO 4885:2018, §3.169" ,
                           "DIN EN ISO 683-2:2018, Tab.1 Zeile 5 (+QT)" ;
@@ -705,9 +704,9 @@ hto:HTO_0000026 rdf:type owl:Class ;
                 rdfs:subClassOf hto:HTO_0000041 ;
                 dc:source "DIN 17022-4:1998, §7.3" ,
                           "DIN EN ISO 4885:2018, §3.143 (inline)" ;
-                rdfs:label "gas nitriding"@en ;
-                skos:definition "Gasnitrieren"@de ,
-                                "A nitriding process where nitrogen is supplied to the surface in gaseous form." .
+                rdfs:label "Gasnitrieren"@de ,
+                           "gas nitriding"@en ;
+                skos:definition "A nitriding process where nitrogen is supplied to the surface in gaseous form." .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000027
@@ -717,10 +716,10 @@ hto:HTO_0000027 rdf:type owl:Class ;
                                   owl:onProperty obo:IAO_0000136 ;
                                   owl:someValuesFrom co:PMD_0000896
                                 ] ;
-                obo:IAO_0000115 "A setpoint describing the pressure that is to be reached/held within a process that involves a defined pressure." ;
-                obo:IAO_0000116 "needs work" ;
                 dc:source "DIN 17022-4:1998, §7.3 (Ofendruck < 10 mbar, Plasmanitrieren)" ;
-                rdfs:label "target pressure"@en .
+                rdfs:label "target pressure"@en ;
+                skos:definition "A setpoint describing the pressure that is to be reached/held within a process that involves a defined pressure." ;
+                skos:editorialNote "needs work" .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000028
@@ -740,7 +739,7 @@ hto:HTO_0000029 rdf:type owl:Class ;
                 rdfs:subClassOf co:PMD_0000847 ;
                 dc:source "DIN 17022-4:1998, §7.3 (atmosphere flow measurement)" ;
                 rdfs:label "flow measuring function"@en ;
-                skos:definition "A subfunction of measuring performed to determine the flow of fluids." .
+                skos:definition "A measuring function performed to determine the flow of fluids."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000030
@@ -802,13 +801,13 @@ hto:HTO_0000031 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/hto/HTO_0000032
 hto:HTO_0000032 rdf:type owl:Class ;
                 rdfs:subClassOf co:PMD_0060009 ;
-                obo:IAO_0000115 "Ein Sollwert ist ein Spezifikationswert, der einem geregelten Prozessparameter einen gewünschten quantitativen Wert zuweist und als normgebende Referenz für die Prozessausführung und -steuerung dient."@de ;
                 dc:source "DIN 17022-1:1994, §5 (Sollwert / Solltemperatur, procedural usage)" ;
                 dcterms:creator "thonagel" ;
                 rdfs:comment "Internally (within the devices' logic) a process is run to reach and maintain the given setpoint." ;
                 rdfs:label "Sollwert"@de ,
                            "setpoint"@en ;
-                skos:definition "A Set Point is a specification datum that assigns a desired quantitative value to a controlled process parameter, serving as the normative reference for process execution and control."@en ;
+                skos:definition "A Set Point is a specification datum that assigns a desired quantitative value to a controlled process parameter, serving as the normative reference for process execution and control."@en ,
+                                "Ein Sollwert ist ein Spezifikationswert, der einem geregelten Prozessparameter einen gewünschten quantitativen Wert zuweist und als normgebende Referenz für die Prozessausführung und -steuerung dient."@de ;
                 skos:editorialNote "DIN audit (2026-06-09): DIN EN ISO 4885 does not enumerate 'Sollwert' as a §3 lemma; PMDco owns the generic 'setpoint' concept upstream. The DIN procedural anchor is DIN 17022-1 §5 (Sollwert / Solltemperatur operational usage). Provenance is therefore procedural rather than terminological."@en ;
                 skos:example """The flow rate for a mass flow controller.
 The target temperature in the furnace chamber for a given process step.
@@ -841,8 +840,8 @@ hto:HTO_0000034 rdf:type owl:Class ;
                                                 )
                                     ] ;
                 rdfs:subClassOf obo:OBI_0001930 ;
-                obo:IAO_0000115 "A categorical value specification defining the on/off state of some device."@en ;
                 rdfs:label "device operation state value"@en ;
+                skos:definition "A categorical value specification defining the on/off state of some device."@en ;
                 co:PMD_0000060 "true"^^xsd:boolean .
 
 
@@ -866,12 +865,11 @@ hto:HTO_0000038 rdf:type owl:Class ;
                                                      ) ;
                                   rdf:type owl:Class
                                 ] ;
-                obo:IAO_0000114 "needs work"@en ;
                 dc:source "DIN 17022-1:1994, §3.2" ,
                           "DIN EN ISO 4885:2018, §3.203" ;
-                rdfs:label "tempering"@en ;
-                skos:definition "Anlassen"@de ,
-                                "Heat treatment (3.108) of a steel product, generally carried out following hardening (3.167) or another heat treatment to achieve the required levels of properties, consisting of heating (3.109) to specific temperatures (< A1) and holding at these temperatures once or several times, followed by appropriate cooling (3.45)"@en ,
+                rdfs:label "Anlassen"@de ,
+                           "tempering"@en ;
+                skos:definition "Heat treatment (3.108) of a steel product, generally carried out following hardening (3.167) or another heat treatment to achieve the required levels of properties, consisting of heating (3.109) to specific temperatures (< A1) and holding at these temperatures once or several times, followed by appropriate cooling (3.45)"@en ,
                                 "Wärmebehandlung (3.108) eines Eisenerzeugnisses, die im Allgemeinen nach einem Härten (3.167) oder einer anderen Wärmebehandlung zum Erreichen geforderter Stufen für Eigenschaften durchgeführt wird, bestehend aus Erwärmen (3.109) auf bestimmte Temperaturen (< A1) und einmaliges oder mehrmaliges Halten und anschließendem zweckentsprechendem Abkühlen (3.45)"@de .
 
 
@@ -879,14 +877,13 @@ hto:HTO_0000038 rdf:type owl:Class ;
 hto:HTO_0000039 rdf:type owl:Class ;
                 rdfs:subClassOf co:PMD_0000779 ;
                 dc:source "DIN EN ISO 4885:2018, §3.8" ;
-                rdfs:label "annealing"@en ;
+                rdfs:label "Glühen"@de ,
+                           "annealing"@en ;
                 skos:definition "Heat treatment (3.108), consisting of heating (3.109) and soaking (3.185) at a suitable temperature followed by cooling (3.45), such that an equilibrium-near microstructure is reached at room temperature."@en ,
                                 "Heat treatment process to form a specific microstructure or reduce residual stresses."@en ,
                                 "Wärmebehandlung (3.108), bestehend aus Erwärmen (3.109) und Halten (3.185) auf einer geeigneten Temperatur sowie Abkühlen (3.45), so dass sich bei Raumtemperatur ein dem Gleichgewicht angenäherter Gefügezustand einstellt."@de ,
                                 "Wärmebehandlung um eine bestimmte Gefügeausbildung zu erzielen oder Spannungen zu reduzieren."@de ;
-                skos:editorialNote "DIN audit fix (2026-06-09): hto-edit.owl HTO_0000039 currently has only an @en label 'annealing' and no DE label. DIN EN ISO 4885 §3.8 lemma is 'Glühen'. The DE label is added via skos:prefLabel. NB: 4885 §3.8 Anm.1 organises Glühen as a parent of named children (Blankglühen, Normalglühen, Weichglühen, zwischenkritisches Glühen, isothermes Umwandeln, etc.); subclasses HTO_0000093..HTO_0000102 below populate this Glühen-family per DIN 683-7 §6.2.1 granularity contract."@en ;
-                skos:prefLabel "Glühen"@de ,
-                               "annealing"@en .
+                skos:editorialNote "DIN audit fix (2026-06-09): hto-edit.owl HTO_0000039 currently has only an @en label 'annealing' and no DE label. DIN EN ISO 4885 §3.8 lemma is 'Glühen'. The DE label is added via skos:prefLabel. NB: 4885 §3.8 Anm.1 organises Glühen as a parent of named children (Blankglühen, Normalglühen, Weichglühen, zwischenkritisches Glühen, isothermes Umwandeln, etc.); subclasses HTO_0000093..HTO_0000102 below populate this Glühen-family per DIN 683-7 §6.2.1 granularity contract."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000040
@@ -898,9 +895,9 @@ hto:HTO_0000040 rdf:type owl:Class ;
                                 ] ;
                 dc:source "DIN 17022-1:1994, §3.1" ,
                           "DIN EN ISO 4885:2018, §3.167" ;
-                rdfs:label "hardening"@en ;
+                rdfs:label "Härtung"@de ,
+                           "hardening"@en ;
                 skos:definition "Heat treatment process to increase the strength and hardness of the material by cooling it so that its microstructure transforms to the hardening structure."@en ,
-                                "Härtung"@de ,
                                 "Prozess zur Härtung eines zuvor austenitisierten (3.14) Werkstückes, durch Abkühlen (3.45) unter Bedingungen erreicht, die geeignet sind, den Austenit (3.12) nahezu vollständig in Martensit (3.137) und gegebenenfalls Bainit (3.17) umzuwandeln."@de ,
                                 "Wärmebehandlungprozess durch den eine Härte- und Festigkeitssteigerung erreicht wird, in dem das Material mit solcher Geschwindikeit abgekühlt wird, dass ein Härtungsgefüge enstehen kann."@de ;
                 skos:example """Randschichthärten
@@ -932,9 +929,6 @@ hto:HTO_0000041 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/hto/HTO_0000042
 hto:HTO_0000042 rdf:type owl:Class ;
                 rdfs:subClassOf hto:HTO_0000000 ;
-                obo:IAO_0000116 """In practice, the English terms 'equalization' and 'soaking' are synonymous. The standard DIN EN ISO 4885 is ambiguous about the distinction between 'Halten' (§3.185) and 'Durchwärmen' (3.80), and also translates 'soaking' as 'Halten'. The diagram for '§3.80 Durchwärmen' shows the two processes in sequence, whereas the annotation for 'Halten' states that the specific part of the object in question must be specified. However, I deem this unnecessary, since 'Halten'/'holding' refers to the process that follows the soaking step and ensures a homogeneous temperature distribution.
-
-(thnlrd)""" ;
                 dc:source "DIN 17022-1:1994, Bild 1 (Durchwärmdauer)" ,
                           "DIN EN ISO 4885:2018, §3.80 (thnlrd)" ;
                 rdfs:comment "Durchwärmen des Bauteils, sodass Temperaturhomogenität erreicht wird. Anschließend kann ein Halten auf der Zieltemperatur erfolgen." ;
@@ -942,7 +936,10 @@ hto:HTO_0000042 rdf:type owl:Class ;
                            "equalization"@en ;
                 skos:altLabel "soaking"@en ;
                 skos:definition "Process step during which temperature homogenization is achieved in the component."@en ,
-                                "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de .
+                                "Prozesschritt, während dessen die Temperaturhomogenisierung im Bauteil erreicht wird."@de ;
+                skos:editorialNote """In practice, the English terms 'equalization' and 'soaking' are synonymous. The standard DIN EN ISO 4885 is ambiguous about the distinction between 'Halten' (§3.185) and 'Durchwärmen' (3.80), and also translates 'soaking' as 'Halten'. The diagram for '§3.80 Durchwärmen' shows the two processes in sequence, whereas the annotation for 'Halten' states that the discrete location within an object must be specified. However, I deem this unnecessary, since 'Halten'/'holding' refers to the process that follows the soaking step and ensures a homogeneous temperature distribution regardless of the location.
+
+(thnlrd)""" .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000043
@@ -1053,7 +1050,8 @@ hto:HTO_0000056 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/hto/HTO_0000057
 hto:HTO_0000057 rdf:type owl:Class ;
                 rdfs:subClassOf hto:HTO_0000045 ;
-                rdfs:label "electric motor"@en ;
+                rdfs:label "Elektromotor"@de ,
+                           "electric motor"@en ;
                 skos:definition "An engine which transforms electric energy into mechanical energy."@en .
 
 
@@ -1123,7 +1121,8 @@ hto:HTO_0000063 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/hto/HTO_0000064
 hto:HTO_0000064 rdf:type owl:Class ;
                 rdfs:subClassOf co:PMD_0000008 ;
-                rdfs:label "flow rate"@en .
+                rdfs:label "flow rate"@en ;
+                skos:definition "a process attribute quantifying the volume of a continuous substance that traverses a designated spatial boundary per unit of duration."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000065
@@ -1133,16 +1132,15 @@ hto:HTO_0000065 rdf:type owl:Class ;
                                   owl:onProperty obo:IAO_0000136 ;
                                   owl:someValuesFrom hto:HTO_0000064
                                 ] ;
-                obo:IAO_0000115 "Setpoint definintion the flow rate of some fluid."@en ,
-                                "Sollwert einer Durchflussrate für Fluide."@de ;
                 dc:source "DIN 17022-4:1998, §7.3 (atmosphere flow control)" ;
-                rdfs:label "flow rate specification"@en .
+                rdfs:label "flow rate specification"@en ;
+                skos:definition "Setpoint defining the flow rate of some fluid."@en ,
+                                "Sollwert einer Durchflussrate für Fluide."@de .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000066
 hto:HTO_0000066 rdf:type owl:Class ;
                 rdfs:subClassOf hto:HTO_0000000 ;
-                obo:IAO_0000116 "needs work" ;
                 dc:source "DIN 17022-4:1998, §7.3 (Plasmanitrieren — Ofendruck < 10 mbar via evacuation, operational)" ;
                 rdfs:label "evacuation"@en ;
                 skos:definition "A heat treatment essential that creates a vacuum. Removing atmoshpere and decreasing pressure."@en .
@@ -1151,20 +1149,20 @@ hto:HTO_0000066 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/hto/HTO_0000067
 hto:HTO_0000067 rdf:type owl:Class ;
                 rdfs:subClassOf co:PMD_0000781 ;
-                obo:IAO_0000116 "A heat treatment function to decrease a volumes pressure to vacuum, removing possibly present gases and fluids." ;
                 dc:source "DIN 17022-4:1998, §7.3" ;
-                rdfs:label "evacuation function"@en .
+                rdfs:label "evacuation function"@en ;
+                skos:definition "A heat treatment function to decrease a volume's pressure to vacuum, removing possibly present gases and fluids."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000068
 hto:HTO_0000068 rdf:type owl:Class ;
                 rdfs:subClassOf co:PMD_0020113 ;
-                obo:IAO_0000116 "needs work" ;
                 dc:source "DIN 17022-1:1994, Tab.2" ,
                           "DIN EN ISO 4885:2018, §3.170" ,
                           "DIN EN ISO 683-2:2018, Tab.11 Fn e" ;
                 rdfs:label "Abschreckmittel"@de ,
-                           "quenchant"@en .
+                           "quenchant"@en ;
+                skos:editorialNote "needs work" .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000069
@@ -1182,8 +1180,8 @@ hto:HTO_0000070 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/hto/HTO_0000071
 hto:HTO_0000071 rdf:type owl:Class ;
                 rdfs:subClassOf co:PMD_0020113 ;
-                obo:IAO_0000116 "needs work" ;
-                rdfs:label "coolant"@en .
+                rdfs:label "coolant"@en ;
+                skos:editorialNote "needs work" .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000072
@@ -1212,9 +1210,7 @@ DIN EN ISO 18203:2022-07 (https://dx.doi.org/10.31030/3344011)""" ;
                               "effective case depth after nitriding"@en ;
                 skos:definition "Distance from the surface of a nitrided or nitrocarburised workpiece to the point at which the hardness equals a defined boundary value."@en ,
                                 "Senkrechter Abstand von der Oberfläche eines nitrierten oder nitrocarburierten Werkstückes bis zu dem Punkt, an dem die Härte einem Grenzwert entspricht."@de ;
-                skos:editorialNote "DIN audit re-IRI (2026-06-09): the legacy class <https://w3id.org/pmd/co/HTO_0000039> was misnamespaced under pmd/co/ (should have been pmd/hto/), and the local ID HTO_0000039 collided with <https://w3id.org/pmd/hto/HTO_0000039> (annealing). Re-IRIed to hto:HTO_0000073 (next free above HTO_0000072 case hardening). owl:equivalentClass preserves A-Box / external compatibility; the legacy IRI is marked owl:deprecated below."@en ;
-                skos:prefLabel "Nitrierhärtetiefe"@de ,
-                               "nitriding hardness depth"@en .
+                skos:editorialNote "DIN audit re-IRI (2026-06-09): the legacy class <https://w3id.org/pmd/co/HTO_0000039> was misnamespaced under pmd/co/ (should have been pmd/hto/), and the local ID HTO_0000039 collided with <https://w3id.org/pmd/hto/HTO_0000039> (annealing). Re-IRIed to hto:HTO_0000073 (next free above HTO_0000072 case hardening). owl:equivalentClass preserves A-Box / external compatibility; the legacy IRI is marked owl:deprecated below."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000074
@@ -1227,9 +1223,7 @@ hto:HTO_0000074 rdf:type owl:Class ;
                 skos:altLabel "nitrocarburising"@en ;
                 skos:definition "Thermochemical treatment (3.207) to produce a hard surface layer containing nitrides and nitrocarbides, forming a compound layer and an underlying diffusion layer."@en ,
                                 "Thermochemische Behandlung (3.207) zur Herstellung einer harten Randschicht, die Nitride und Nitrocarbide enthält, zur Bildung einer Verbindungsschicht und einer darunter liegenden Diffusionsschicht."@de ;
-                skos:editorialNote "DIN audit re-IRI (2026-06-09): the legacy class <https://w3id.org/pmd/co/HTO_0000063> was misnamespaced under pmd/co/ (should have been pmd/hto/), and the local ID HTO_0000063 collided with <https://w3id.org/pmd/hto/HTO_0000063> (counter). Re-IRIed to hto:HTO_0000074. NB: DIN EN ISO 4885 §3.144 Anm.2 records disjointness with Carbonitrieren (HTO_0000075) — the two are NOT synonyms in DIN despite industry colloquial conflation."@en ;
-                skos:prefLabel "Nitrocarburieren"@de ,
-                               "nitrocarburizing"@en .
+                skos:editorialNote "DIN audit re-IRI (2026-06-09): the legacy class <https://w3id.org/pmd/co/HTO_0000063> was misnamespaced under pmd/co/ (should have been pmd/hto/), and the local ID HTO_0000063 collided with <https://w3id.org/pmd/hto/HTO_0000063> (counter). Re-IRIed to hto:HTO_0000074. NB: DIN EN ISO 4885 §3.144 Anm.2 records disjointness with Carbonitrieren (HTO_0000075) — the two are NOT synonyms in DIN despite industry colloquial conflation."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000075
@@ -1259,16 +1253,14 @@ hto:HTO_0000076 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/hto/HTO_0000077
 hto:HTO_0000077 rdf:type owl:Class ;
                 rdfs:subClassOf co:PMD_0000857 ;
-                obo:IAO_0000116 "All term definitions copied from DIN 4885 should be rid of the internal reference number e.g. \"3.91\" (thnlrd)" ;
                 dc:source "DIN EN ISO 4885:2018, Tabelle 1 (Fe-C-Phasen)" ,
                           "DIN EN ISO 4885:2018, §3.12" ;
                 rdfs:label "Austenit"@de ,
                            "austenite"@en ;
                 skos:definition "Feste Lösung eines oder mehrerer Elemente im γ-Eisen (3.91)."@de ,
                                 "Solid solution of one or more elements in γ-iron (3.91)."@en ;
-                skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.12 + Tabelle 1. Parent BFO_0000040 (material entity) selected as the closest BFO anchor for a phase as a material-bearer; some HTO maintainers may prefer to re-anchor under a PMDco material-phase class once one is added upstream."@en ;
-                skos:prefLabel "Austenit"@de ,
-                               "austenite"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.12 + Tabelle 1. Parent BFO_0000040 (material entity) selected as the closest BFO anchor for a phase as a material-bearer; some HTO maintainers may prefer to re-anchor under a PMDco material-phase class once one is added upstream."@en ,
+                                   "All term definitions copied from DIN 4885 should be rid of the internal reference number e.g. \"3.91\" (thnlrd)" .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000078
@@ -1280,9 +1272,7 @@ hto:HTO_0000078 rdf:type owl:Class ;
                            "martensite"@en ;
                 skos:definition "Phase (3.156) formed in carbon-bearing steels by cooling (3.45) of austenite (3.12), where the high cooling rate prevents sufficient carbon atoms from diffusing out of the crystal structure to form cementite (3.39) (Fe3C)."@en ,
                                 "Phase (3.156), die in kohlenstoffhaltigen Stählen durch Abkühlen (3.45) des Austenits (3.12) gebildet wird, wobei die hohe Geschwindigkeit des Abkühlens verhindert, dass ausreichend Kohlenstoffatome aus der Kristallstruktur diffundieren können, um Zementit (3.39) (Fe3C) zu bilden."@de ;
-                skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.137 + Tabelle 1."@en ;
-                skos:prefLabel "Martensit"@de ,
-                               "martensite"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.137 + Tabelle 1."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000079
@@ -1294,9 +1284,7 @@ hto:HTO_0000079 rdf:type owl:Class ;
                            "bainite"@en ;
                 skos:definition "Microstructure resulting from a transformation of austenite (3.12) at temperatures above the martensite (3.137) start temperature (Ms) and outside the range of pearlite (3.155), consisting of ferrite laths with carbides arranged either within (lower bainite) or between (upper bainite) the ferrite laths."@en ,
                                 "Mikrogefüge, das aus einer Umwandlung von Austenit (3.12) resultiert bei Temperaturen über die Starttemperatur (Ms) von Martensit (3.137) und außerhalb des Bereichs von Perlit (3.155), der aus Ferritlatten und Carbiden besteht, die entweder innerhalb der Ferritlatten (untere Bainite) oder zwischen den Ferritlatten angeordnet sind (obere Bainite)."@de ;
-                skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.17 + Tabelle 1."@en ;
-                skos:prefLabel "Bainit"@de ,
-                               "bainite"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.17 + Tabelle 1."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000080
@@ -1308,9 +1296,7 @@ hto:HTO_0000080 rdf:type owl:Class ;
                            "ferrite"@en ;
                 skos:definition "Eisen oder Stahl mit kubisch-raumzentrierter Gitterstruktur."@de ,
                                 "Iron or steel with a body-centred cubic lattice structure."@en ;
-                skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.85 + Tabelle 1."@en ;
-                skos:prefLabel "Ferrit"@de ,
-                               "ferrite"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.85 + Tabelle 1."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000081
@@ -1322,9 +1308,7 @@ hto:HTO_0000081 rdf:type owl:Class ;
                            "pearlite"@en ;
                 skos:definition "Aus Ferrit- (3.85) und Zementit- (3.39) Lamellen bestehender Gefügebestandteil, der durch die eutektoidische Austenitumwandlung (3.56) und der gleichzeitig ablaufenden Transformation in Ferrit und Zementit gebildet wird."@de ,
                                 "Microstructure constituent consisting of ferrite (3.85) and cementite (3.39) lamellae, formed by the eutectoidic transformation of austenite (3.56) and the concomitant transformation into ferrite and cementite."@en ;
-                skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.155 + Tabelle 1."@en ;
-                skos:prefLabel "Perlit"@de ,
-                               "pearlite"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.155 + Tabelle 1."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000082
@@ -1336,9 +1320,7 @@ hto:HTO_0000082 rdf:type owl:Class ;
                            "cementite"@en ;
                 skos:definition "Carbid des Eisens, mit der Zusammensetzung Fe3C."@de ,
                                 "Iron carbide with composition Fe3C."@en ;
-                skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.39 + Tabelle 1."@en ;
-                skos:prefLabel "Zementit"@de ,
-                               "cementite"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.39 + Tabelle 1."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000083
@@ -1351,8 +1333,7 @@ hto:HTO_0000083 rdf:type owl:Class ;
                               "Ms"@de ;
                 skos:definition "Temperatur, bei der die Umwandlung von Austenit in Martensit (3.137) beim Abkühlen (3.45) beginnt."@de ,
                                 "Temperature at which the transformation of austenite into martensite (3.137) begins upon cooling (3.45)."@en ;
-                skos:editorialNote "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1 (Bei Stählen können im Wesentlichen folgende Umwandlungstemperaturen unterschieden werden)."@en ;
-                skos:prefLabel "Ms"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1 (Bei Stählen können im Wesentlichen folgende Umwandlungstemperaturen unterschieden werden)."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000084
@@ -1365,8 +1346,7 @@ hto:HTO_0000084 rdf:type owl:Class ;
                               "Mf"@de ;
                 skos:definition "Temperatur, bei der die Umwandlung von Austenit in Martensit beim Abkühlen annähernd vollständig ist."@de ,
                                 "Temperature at which the transformation of austenite into martensite is approximately complete upon cooling."@en ;
-                skos:editorialNote "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1."@en ;
-                skos:prefLabel "Mf"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000085
@@ -1375,11 +1355,11 @@ hto:HTO_0000085 rdf:type owl:Class ;
                 dc:source "DIN EN ISO 4885:2018, §3.213 Anm.1" ;
                 rdfs:label "A1 transformation temperature"@en ,
                            "A1-Temperatur"@de ;
-                skos:altLabel "A_1"@en ;
+                skos:altLabel "A1"@en ,
+                              "A_1"@en ;
                 skos:definition "Equilibrium temperature defining the lower limit of austenite (3.12) existence."@en ,
                                 "Gleichgewichts-Temperatur, die die untere Grenze der Existenz von Austenit (3.12) festlegt."@de ;
-                skos:editorialNote "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1."@en ;
-                skos:prefLabel "A1"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000086
@@ -1388,11 +1368,11 @@ hto:HTO_0000086 rdf:type owl:Class ;
                 dc:source "DIN EN ISO 4885:2018, §3.213 Anm.1" ;
                 rdfs:label "A3 transformation temperature"@en ,
                            "A3-Temperatur"@de ;
-                skos:altLabel "A_3"@en ;
+                skos:altLabel "A3"@en ,
+                              "A_3"@en ;
                 skos:definition "Equilibrium temperature defining the upper limit of ferrite (3.85) existence."@en ,
                                 "Gleichgewichts-Temperatur, die die obere Grenze der Existenz von Ferrit (3.85) festlegt."@de ;
-                skos:editorialNote "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1."@en ;
-                skos:prefLabel "A3"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000087
@@ -1402,11 +1382,11 @@ hto:HTO_0000087 rdf:type owl:Class ;
                 rdfs:label "Am transformation temperature"@en ,
                            "Am-Temperatur"@de ;
                 skos:altLabel "A_m"@en ,
-                              "Acm"@en ;
+                              "Acm"@en ,
+                              "Am"@en ;
                 skos:definition "Equilibrium temperature defining the upper limit of cementite (3.39) existence in a hypereutectoid steel (3.117)."@en ,
                                 "Gleichgewichts-Temperatur, die die obere Grenze der Existenz von Zementit (3.39) in einem übereutektoidischen Stahl (3.117) festlegt."@de ;
-                skos:editorialNote "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1. 4885 names this 'Am'; the 'Acm' altLabel is the IIW/ASM-standard naming retained for industry compatibility."@en ;
-                skos:prefLabel "Am"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1. 4885 names this 'Am'; the 'Acm' altLabel is the IIW/ASM-standard naming retained for industry compatibility."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000088
@@ -1416,12 +1396,12 @@ hto:HTO_0000088 rdf:type owl:Class ;
                           "ISO 18203:2016, §3.5 (modifiziert)" ;
                 rdfs:label "Einhärtungstiefe nach Randschichthärten"@de ,
                            "surface hardening depth"@en ;
-                skos:altLabel "SHD"@en ;
+                skos:altLabel "Randschichthärtungstiefe"@de ,
+                              "Rht"@de ,
+                              "SHD"@en ;
                 skos:definition "Abstand von der Oberfläche bis zu dem Punkt, an dem die Vickers-Härte (HV) 80 % des für die Oberflächenhärte geforderten Mindestwertes für das entsprechende Werkstück beträgt."@de ,
                                 "Distance from the surface to the point at which the Vickers hardness (HV) equals 80% of the minimum required surface hardness for the workpiece."@en ;
-                skos:editorialNote "DIN audit addition (2026-06-09): surface hardening depth (Rht) from DIN EN ISO 4885 §3.74 (sourced from ISO 18203:2016 §3.5 modified). Distinct from CHD (HTO_0000089) which is the depth measure for Einsatzhärten."@en ;
-                skos:prefLabel "Einhärtungstiefe nach Randschichthärten"@de ,
-                               "Rht"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): surface hardening depth (Rht) from DIN EN ISO 4885 §3.74 (sourced from ISO 18203:2016 §3.5 modified). Distinct from CHD (HTO_0000089) which is the depth measure for Einsatzhärten."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000089
@@ -1429,14 +1409,13 @@ hto:HTO_0000089 rdf:type owl:Class ;
                 rdfs:subClassOf co:PMD_0040001 ;
                 dc:source "DIN EN ISO 4885:2018, §3.72" ,
                           "ISO 18203:2016, §3.1 (modifiziert)" ;
-                rdfs:label "Einsatzhärtungs-Härtetiefe"@de ,
+                rdfs:label "Einsatzhärtungstiefe"@de ,
                            "case hardening depth"@en ;
-                skos:altLabel "Einsatzhärtungstiefe"@de ;
+                skos:altLabel "CHD"@en ,
+                              "Einsatzhärtungs-Härtetiefe"@de ;
                 skos:definition "Abstand von der Oberfläche eines Werkstückes bis zu einem die Dicke der gehärteten (3.167) Schicht festlegenden Punkt."@de ,
                                 "Distance from the surface of a workpiece to a point defining the thickness of the hardened (3.167) case."@en ;
-                skos:editorialNote "DIN audit addition (2026-06-09): case hardening depth (CHD) from DIN EN ISO 4885 §3.72 (sourced from ISO 18203:2016 §3.1 modified). IMPORTANT: CHD is the depth MEASURE; do NOT confuse with hto:HTO_0000072 'case hardening' which is the PROCESS (Einsatzhärten)."@en ;
-                skos:prefLabel "CHD"@en ,
-                               "Einsatzhärtungs-Härtetiefe"@de .
+                skos:editorialNote "DIN audit addition (2026-06-09): case hardening depth (CHD) from DIN EN ISO 4885 §3.72 (sourced from ISO 18203:2016 §3.1 modified). IMPORTANT: CHD is the depth MEASURE; do NOT confuse with hto:HTO_0000072 'case hardening' which is the PROCESS (Einsatzhärten)."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000090
@@ -1445,11 +1424,12 @@ hto:HTO_0000090 rdf:type owl:Class ;
                 dc:source "DIN EN ISO 4885:2018, §3.74 (Einhärtungstiefe nach Randschichthärten — industry-vendor SHD shorthand)" ;
                 rdfs:label "Oberflächenhärtungstiefe"@de ,
                            "surface hardening depth (generic)"@en ;
-                skos:altLabel "Randschichthärtungstiefe"@de ;
+                skos:altLabel "Randschichthärtungstiefe"@de ,
+                              "Rht"@de ,
+                              "SHD"@en ;
                 skos:definition "Generic depth term for surface hardening; in industrial practice referred to as Surface Hardening Depth (SHD); in DIN normation usually narrowed to Rht (§3.74) or CHD (§3.72)."@en ,
                                 "Generischer Tiefenbegriff für Randschichthärtungen, in der industriellen Praxis als 'Surface Hardening Depth' (SHD) verwendet; nach DIN-Normierung in der Regel präzisiert zu Rht (§3.74) oder CHD (§3.72)."@de ;
-                skos:editorialNote "DIN audit addition (2026-06-09): generic SHD anchor — DIN EN ISO 4885 §3.74 is the closest formal anchor; the term SHD itself is industry-vendor-shorthand subsuming Rht/CHD. Kept distinct so the A-Box can reference SHD when the specific Rht/CHD distinction is not (yet) made."@en ;
-                skos:prefLabel "SHD"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): generic SHD anchor — DIN EN ISO 4885 §3.74 is the closest formal anchor; the term SHD itself is industry-vendor-shorthand subsuming Rht/CHD. Kept distinct so the A-Box can reference SHD when the specific Rht/CHD distinction is not (yet) made."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000091
@@ -1476,11 +1456,9 @@ hto:HTO_0000092 rdf:type owl:Class ;
                            "Stirnabschreckversuch"@de ;
                 skos:altLabel "Jominy test"@en ,
                               "Jominy-Versuch"@de ;
-                skos:definition "Genormtes Prüfverfahren zur Beurteilung der Härtbarkeit (3.103)."@de ,
-                                "Standardised test method for assessing hardenability (3.103)."@en ;
-                skos:editorialNote "DIN audit addition (2026-06-09): test method from DIN EN ISO 4885 §3.128. Reinforcing standards: ISO 642 (test procedure)."@en ;
-                skos:prefLabel "Jominy end-quench test"@en ,
-                               "Stirnabschreckversuch"@de .
+                skos:definition "Assay that is a standardised test method for assessing hardenability (3.103)."@en ,
+                                "Ein Assay bzw. genormtes Prüfverfahren zur Beurteilung der Härtbarkeit (3.103)."@de ;
+                skos:editorialNote "DIN audit addition (2026-06-09): test method from DIN EN ISO 4885 §3.128. Reinforcing standards: ISO 642 (test procedure)."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000093
@@ -1597,7 +1575,6 @@ hto:HTO_0000101 rdf:type owl:Class ;
 ###  https://w3id.org/pmd/hto/HTO_0000102
 hto:HTO_0000102 rdf:type owl:Class ;
                 rdfs:subClassOf hto:HTO_0000039 ;
-                obo:IAO_0000116 "deviating from the standard here because 'full annealing' ist supposed to fully transform the microstructure into austenite (hence the name) whereas comparable annealing procedures do not fully transform the material even though they are within the same T-range (normalizing, intercritical annealing). Additional info and explanation provided by TWaldenmaier. (thnlrd)" ;
                 dc:source "DIN EN ISO 4885:2018, §3.8 Anm.1" ,
                           "DIN EN ISO 4885:2018, §3.89" ;
                 rdfs:label "full annealing"@en ,
@@ -1605,7 +1582,8 @@ hto:HTO_0000102 rdf:type owl:Class ;
                 skos:altLabel "kritisches Glühen"@de ;
                 skos:definition "Annealing (3.8) to achieve a spheroidal microstructure (see 3.190), which involves complete austenitisation (3.14) to a temperature above A3 (for hypoeutectoid steels) or above A1 (for hypereutectoid steels), followed by slow cooling (3.45), to achieve a microstructure close to thermodynamic equilibrium."@en ,
                                 "Glühen (3.8) zur Erzielung von kugeligem Gefüge (siehe 3.190), was ein vollständiges Austenitisieren (3.14) auf eine Temperatur oberhalb von A3 (bei hypoeutektoiden Stählen) bzw. oberhalb von A1 (bei hypereutektoiden Stählen) beinhaltet, gefolgt von einer langsamen Abkühlung (3.45), um eine Mikrostruktur zu erzielen, die dem thermodynamischen Gleichgewicht nahekommt."@de ;
-                skos:editorialNote "DIN audit addition (2026-06-09): Glühen-family subclass from DIN EN ISO 4885 §3.89 (Full annealing — listed inline in §3.8 Anm.1 as a named Glühen child). Definition is paraphrased per 4885 conventions; the §3.89 verbatim entry uses generic 'Wärmebehandlung'."@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): Glühen-family subclass from DIN EN ISO 4885 §3.89 (Full annealing — listed inline in §3.8 Anm.1 as a named Glühen child). Definition is paraphrased per 4885 conventions; the §3.89 verbatim entry uses generic 'Wärmebehandlung'."@en ,
+                                   "deviating from the standard here because 'full annealing' ist supposed to fully transform the microstructure into austenite (hence the name) whereas comparable annealing procedures do not fully transform the material even though they are within the same T-range (normalizing, intercritical annealing). Additional info and explanation provided by TWaldenmaier. (thnlrd)" .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000103
@@ -1641,9 +1619,7 @@ hto:HTO_0000105 rdf:type owl:Class ;
                            "patenting"@en ;
                 skos:definition "Heat treatment (3.108) consisting of austenitising (3.14) followed by suitable cooling (3.45) to produce a microstructure favourable for subsequent drawing or roll-drawing of wire or strip."@en ,
                                 "Wärmebehandlung (3.108), bestehend aus Austenitisieren (3.14) und anschließendem geeigneten Abkühlen (3.45), um ein für das nachfolgende Ziehen oder Ziehwalzen von Draht oder Band günstiges Gefüge zu erreichen."@de ;
-                skos:editorialNote "DIN audit addition (2026-06-09): process from DIN EN ISO 4885 §3.154."@en ;
-                skos:prefLabel "Patentieren"@de ,
-                               "patenting"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): process from DIN EN ISO 4885 §3.154."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000107
@@ -1663,11 +1639,11 @@ hto:HTO_0000108 rdf:type owl:Class ;
                 dc:source "DIN EN ISO 4885:2018, §3.213 Anm.1" ;
                 rdfs:label "Mx transformation temperature"@en ,
                            "Mx-Temperatur"@de ;
-                skos:altLabel "M_x"@en ;
+                skos:altLabel "M_x"@en ,
+                              "Mx"@en ;
                 skos:definition "Temperatur, bei der beim Abkühlen x % Volumenanteil Austenit in Martensit umgewandelt wurden."@de ,
                                 "Temperature at which, upon cooling, x % volume fraction of austenite has transformed into martensite."@en ;
-                skos:editorialNote "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1 (parametric x ∈ (0,100))."@en ;
-                skos:prefLabel "Mx"@en .
+                skos:editorialNote "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1 (parametric x ∈ (0,100))."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000109
@@ -1743,19 +1719,6 @@ hto:HTO_0000114 rdf:type owl:Class ;
                 skos:editorialNote "DIN audit (2026-06-09): DIN EN ISO 4885 has no §3 entry for partial pressure; this is upstream physical-chemistry vocabulary, not DIN-terminology-native. Operational usage in DIN 17022-4 §7.3 (p_NH3, p_H2 in K_N formula) is the only DIN anchor."@en .
 
 
-###  https://w3id.org/pmd/hto/HTO_0000115
-hto:HTO_0000115 rdf:type owl:Class ;
-                rdfs:subClassOf co:PMD_0000896 ;
-                owl:disjointWith hto:HTO_0000116 ;
-                dc:source "DIN 17022-4:1998, §7.3" ,
-                          "DIN EN ISO 4885:2018, §3.165 (Ofenatmosphäre, related quality)" ;
-                rdfs:comment "Effective atmosphere preasure in chamber to keep process save (must be 2-3 mbar above ambient pressure)"@en ,
-                             "Parameter usually slightly higher than ambient pressure for open process to environment to prevent/reduce diffusion of oxygen into the furnace, e.g. by leakage, to avoid explosive or dangerous atmopheres, could be bar, mbar or Pa."@en ;
-                rdfs:isDefinedBy hto: ;
-                rdfs:label "atmosphere pressure"@en ;
-                skos:definition "Parameter describing the pressure inside a chamber."@en .
-
-
 ###  https://w3id.org/pmd/hto/HTO_0000116
 hto:HTO_0000116 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( co:PMD_0000896
@@ -1767,11 +1730,14 @@ hto:HTO_0000116 rdf:type owl:Class ;
                                       rdf:type owl:Class
                                     ] ;
                 dc:source "DIN 17022-1:1994, §7 (chamber/Ofen-Konstruktion)" ,
-                          "DIN 17022-4:1998, §7.3 (Ofendruck)" ;
-                rdfs:comment "measured atmophere pressure in retort, measured using the vacuum sensor "@en ;
+                          "DIN 17022-4:1998, §7.3" ,
+                          "DIN 17022-4:1998, §7.3 (Ofendruck)" ,
+                          "DIN EN ISO 4885:2018, §3.165 (Ofenatmosphäre, related quality)" ;
+                rdfs:comment "Effective atmosphere pressure in chamber to keep process save must be 2-3 mbar above ambient pressure."@en ;
                 rdfs:isDefinedBy hto: ;
                 rdfs:label "chamber pressure"@en ;
-                skos:definition "designated pressure in retort during evacuation phase pre to nitriding process or during low pressure nitriding process "@en .
+                skos:altLabel "atmosphere pressure"@en ;
+                skos:definition "A pressure which inheres within the confines (atmosphere) of an oven chamber."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000117
@@ -1781,11 +1747,11 @@ hto:HTO_0000117 rdf:type owl:Class ;
                                   owl:onProperty obo:IAO_0000136 ;
                                   owl:someValuesFrom hto:HTO_0000043
                                 ] ;
-                obo:IAO_0000114 "needs work" ;
-                obo:IAO_0000115 "A setpoint describing the intended rotational speed of a device e.g. an fan or turbine."@en ;
                 rdfs:comment "seam to be a device specification pinting to a process charateristic of type speed" ;
                 rdfs:isDefinedBy hto: ;
-                rdfs:label "rotation speed specification"@en .
+                rdfs:label "rotation speed specification"@en ;
+                skos:definition "A setpoint describing the intended rotational speed of a device e.g. an fan or turbine."@en ;
+                skos:editorialNote "needs work" .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000118
@@ -1800,7 +1766,7 @@ hto:HTO_0000118 rdf:type owl:Class ;
    owl:annotatedSource hto:HTO_0000118 ;
    owl:annotatedProperty dc:source ;
    owl:annotatedTarget "DIN EN ISO 683-3:2022, §A.4 Anm. (Taupunkt as carburising atmosphere control variable)" ;
-   obo:IAO_0000116 "the source given (DIN EN ISO 683-3) does not contain info about dew points (thoni)"
+   skos:editorialNote "the source given (DIN EN ISO 683-3) does not contain info about dew points (thoni)"
  ] .
 
 
@@ -1820,15 +1786,14 @@ hto:HTO_0000120 rdf:type owl:Class ;
                 dc:source "DIN EN ISO 683-3:2022, §A.4 Anm. (atmosphere-control umbrella; lambda probe is industry-vendor term for the O2 probe class)" ;
                 rdfs:isDefinedBy hto: ;
                 rdfs:label "lambda probe signal"@en ;
-                skos:definition "measured lambda probe signal in exhaust gas "@en ,
-                                "measured signal of the lambda-probe in millivolt, representing the atmospheres redox-potential "@en ;
+                skos:definition "measured lambda probe signal in exhaust gas "@en ;
                 skos:editorialNote "DIN audit (2026-06-09): 'Lambdasonde' is not explicitly named in DIN 683-3 §A.4 (it uses the generic 'Sauerstoffsonde'); the lambda probe is a specific O2-probe variant used for burner stoichiometry in fuel-fired furnaces. Provenance is operational / inferred, not direct."@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource hto:HTO_0000120 ;
    owl:annotatedProperty dc:source ;
    owl:annotatedTarget "DIN EN ISO 683-3:2022, §A.4 Anm. (atmosphere-control umbrella; lambda probe is industry-vendor term for the O2 probe class)" ;
-   obo:IAO_0000116 "the source given (DIN EN ISO 683-3) does not contain info about lambda probes or oxygen (thoni)"
+   skos:editorialNote "the source given (DIN EN ISO 683-3) does not contain info about lambda probes or oxygen (thnlrd)"
  ] .
 
 
@@ -1838,13 +1803,13 @@ hto:HTO_0000121 rdf:type owl:Class ;
                 dc:source "DIN EN ISO 683-3:2022, §A.4 Anm. (Sauerstoffsonde / O2 probe for Cp atmosphere control)" ;
                 rdfs:isDefinedBy hto: ;
                 rdfs:label "oxygen probe signal"@en ;
-                skos:definition " measured oxygen probe signal in retort atmosphere "@en .
+                skos:definition "A measurement datum generated by an electrochemical or optical sensor, representing the specific concentration of elemental oxygen within a sampled medium."@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource hto:HTO_0000121 ;
    owl:annotatedProperty dc:source ;
    owl:annotatedTarget "DIN EN ISO 683-3:2022, §A.4 Anm. (Sauerstoffsonde / O2 probe for Cp atmosphere control)" ;
-   obo:IAO_0000116 "the source given (DIN EN ISO 683-3) does not contain info about oxygen probes (thoni)"
+   skos:editorialNote "the source given (DIN EN ISO 683-3) does not contain info about oxygen probes (thnlrd)"
  ] .
 
 
@@ -7457,8 +7422,8 @@ pmde:ffe2df4bf7824480b85cb9352a78c370 rdf:type owl:NamedIndividual ,
                                                                         co:PMD_0060009 ;
                                                                obo:IAO_0000136 <https://w3id.org/pmd/entity/15789c71bad64a24bbe717e04245def9> ;
                                                                obo:OBI_0001938 <https://w3id.org/pmd/entity/70dad8ed70b94b19a978e3d8591a0917> ;
-                                                               obo:IAO_0000116 "All these 'settings' should be moved to their respective 'setpoint' subclass. (thnlrd)" ;
-                                                               rdfs:label "Charge 3466_quenchingrecipe_durationsetting"@en .
+                                                               rdfs:label "Charge 3466_quenchingrecipe_durationsetting"@en ;
+                                                               skos:editorialNote "All these 'settings' should be moved to their respective 'setpoint' subclass. (thnlrd)" .
 
 
 ###  https://w3id.org/pmd/entity/4a9726e90cea4260bbab2cd9d9ca8d9c
@@ -10686,6 +10651,9 @@ hto:HTO_0000036 rdf:type owl:NamedIndividual ;
                 co:PMD_0000006 "false"^^xsd:boolean ;
                 rdfs:label "OFF"@en .
 
+
+[ rdfs:label "CC BY 4.0"
+] .
 
 #################################################################
 #    Annotations
