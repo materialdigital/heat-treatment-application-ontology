@@ -1306,11 +1306,9 @@ hto:HTO_0000076 rdf:type owl:Class ;
                 rdfs:label "Kohlenstoffpegel"@de ,
                            "carbon level"@en ;
                 skos:altLabel "C-Pegel"@de ;
-                skos:definition "Carbon content (mass-fraction in %) that an austenitised pure-iron sample assumes in equilibrium with the carburising agent at a specified temperature."@en ,
-                                "Kohlenstoffgehalt als Massenanteil in %, den eine austenitisierte Probe aus Reineisen bei bestimmter Temperatur im Gleichgewicht mit dem Aufkohlungsmittel annimmt."@de ;
-                skos:editorialNote "DIN audit addition (2026-06-09): DIN EN ISO 4885 §3.33 Anm.1 explicitly contrasts 'Kohlenstoffpegel' (operationally defined) with 'Kohlenstoffpotenzial' (thermodynamic) — the two are NOT synonymous. HTO's existing Carbon Potential carries the thermodynamic reading; this new class carries the §3.33 operational definition."@en ;
-                skos:prefLabel "Kohlenstoffpegel"@de ,
-                               "carbon level"@en .
+                skos:definition "Relational quality describing the carbon content (mass-fraction in %) that an austenitised pure-iron sample assumes in equilibrium with the carburising agent at a specified temperature."@en ,
+                                "Relationale Eigenschaft, die beschreibt, welchen Kohlenstoffgehalt (als Massenanteil in %), den eine austenitisierte Probe aus Reineisen bei bestimmter Temperatur im Gleichgewicht mit dem Aufkohlungsmittel annimmt."@de ;
+                skos:editorialNote "DIN audit addition (2026-06-09): DIN EN ISO 4885 §3.33 Anm.1 explicitly contrasts 'Kohlenstoffpegel' (operationally defined) with 'Kohlenstoffpotenzial' (thermodynamic) — the two are NOT synonymous. HTO's existing Carbon Potential carries the thermodynamic reading; this new class carries the §3.33 operational definition."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000077
@@ -1515,11 +1513,9 @@ hto:HTO_0000091 rdf:type owl:Class ;
                 dc:source "DIN EN ISO 4885:2018, §3.103" ;
                 rdfs:label "Härtbarkeit"@de ,
                            "hardenability"@en ;
-                skos:definition "Ability of steels to transform into martensite (3.137) and/or bainite (3.17)."@en ,
-                                "Fähigkeit von Stählen, zu Martensit (3.137) und/oder Bainit (3.17) umzuwandeln."@de ;
-                skos:editorialNote "DIN audit addition (2026-06-09): material quality from DIN EN ISO 4885 §3.103. The §3.103 Anm.1 notes that Härtbarkeit is frequently quantified via the Stirnabschreckversuch (HTO_0000092)."@en ;
-                skos:prefLabel "Härtbarkeit"@de ,
-                               "hardenability"@en .
+                skos:definition "Relational quality describing the ability of steels to transform into martensite (3.137) and/or bainite (3.17)."@en ,
+                                "Relationale Eigschenschaft, die die Fähigkeit von Stählen beschreibt, zu Martensit (3.137) und/oder Bainit (3.17) umzuwandeln."@de ;
+                skos:editorialNote "DIN audit addition (2026-06-09): material quality from DIN EN ISO 4885 §3.103. The §3.103 Anm.1 notes that Härtbarkeit is frequently quantified via the Stirnabschreckversuch (HTO_0000092)."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000092
@@ -1748,9 +1744,9 @@ hto:HTO_0000110 rdf:type owl:Class ;
                           "DIN 17022-4:1998, §10" ;
                 rdfs:isDefinedBy hto: ;
                 rdfs:label "Heizkammer"@de ,
-                           "Ofenkammer mit einer Heizung."@de ,
                            "heating chamber"@en ;
-                skos:definition "Distinguishable chamber of a heat treatment furnace with a heater."@en .
+                skos:definition "Distinguishable chamber of a heat treatment furnace with a heater."@en ,
+                                "Ofenkammer mit einer Heizung"@de .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000111
@@ -1773,7 +1769,8 @@ hto:HTO_0000112 rdf:type owl:Class ;
                 rdfs:comment "Nitrocarburieren mit Kohlenstoffträger, aus Messwerten abgeleitet KC"@de ,
                              "See standard DIN 1310"@en ;
                 rdfs:isDefinedBy hto: ;
-                rdfs:label "carbon potential"@en ;
+                rdfs:label "Kohlenstoffpotential"@de ,
+                           "carbon potential"@en ;
                 skos:definition "Carbon content of a specimen of pure iron in equilibrium with a carbourizing medium under specific conditions."@en ;
                 skos:editorialNote "DIN audit (2026-06-09): DIN EN ISO 4885 §3.33 names the operational quantity 'Kohlenstoffpegel' (carbon level), with §3.33 Anm.1 contrasting it explicitly with the 'thermodynamisches Kohlenstoffpotenzial'. 4885 treats the two as NOT synonymous. hto:CarbonPotential is retained as the thermodynamic-potential quality; the new sibling hto:HTO_0000076 (CarbonLevel) carries the §3.33 operational definition. See hto:HTO_0000076 below for the sibling class."@en .
 
@@ -1784,9 +1781,9 @@ hto:HTO_0000113 rdf:type owl:Class ;
                 dc:source "DIN 17022-4:1998, §7.3 eq.3 (K_N = p_{NH3} / p_{H2}^{1.5})" ;
                 rdfs:comment "The nitriding potential is a key indicator how intensive the nitriding process is, the higher the value the stronger the nitriding conditions, unit is bar^-3/2"@en ;
                 rdfs:isDefinedBy hto: ;
-                rdfs:label "nitriding potential"@en ;
-                skos:definition "calculated nitriding potential, generated out of H2 / NH3 atmosphere content measurement"@en ,
-                                "nitriding potential of atmosphere calculated from H2 probe signal and ammonia flow rate "@en .
+                rdfs:label "Nitrierkennzahl"@de ,
+                           "nitrogen potential"@en ;
+                skos:definition "A relational quality describing the intensity of a nitriding atmosphere by relating the partial pressures of ammonia and hydrogen gas."@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000114
@@ -1794,13 +1791,10 @@ hto:HTO_0000114 rdf:type owl:Class ;
                 rdfs:subClassOf obo:BFO_0000145 ;
                 dc:source "DIN 17022-4:1998, §7.3 eq.3 (p_NH3, p_H2 in K_N formula)" ;
                 rdfs:isDefinedBy hto: ;
-                rdfs:label "partial pressure"@en ;
-                skos:definition " Paramenter describing the intended pressure inside a chamber targeted in a factor relative to one bar (using a vakuum cooling or an atmosphere flow). The complement to vacuum-heating as it allows for active vacuum pump during atmosphere flow. Should be set to zero, if vacuum-heating is true. "@en ,
-                                "Describing the intended pressure inside a chamber targeted in a factor relative to one bar (using a vakuum cooling or an atmosphere flow)."@en ,
-                                "Parameter describing the amount of a specific gas species in a mixture, could be mbar "@en ,
-                                "The complement to vacuum-heating as it allows for active vacuum pump during atmosphere flow. Should be set to zero, if vacuum-heating is true."@en ,
-                                "nominal pressure of a specific atmosphere component thermochemical steps "@en ,
-                                "nominal pressure of thermochemical heat treatment pressure during thermochemical steps "@en ;
+                rdfs:label "Partialdruck"@de ,
+                           "partial pressure"@en ;
+                skos:definition "Realtional quality describing the contribution from a single gas species to the total pressure in a gas mixture."@en ,
+                                "Relationale Eigschenschaft, die den Beitrag eines Gases zum Gesamtdruck in einem Gasgemisch beschreibt."@de ;
                 skos:editorialNote "DIN audit (2026-06-09): DIN EN ISO 4885 has no §3 entry for partial pressure; this is upstream physical-chemistry vocabulary, not DIN-terminology-native. Operational usage in DIN 17022-4 §7.3 (p_NH3, p_H2 in K_N formula) is the only DIN anchor."@en .
 
 
