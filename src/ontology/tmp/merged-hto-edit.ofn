@@ -1838,7 +1838,7 @@ Nitrierhärten"@de)
 SubClassOf(hto:HTO_0000040 co:PMD_0000779)
 SubClassOf(hto:HTO_0000040 ObjectSomeValuesFrom(obo:RO_0000059 hto:HTO_0000013))
 
-# Class: hto:HTO_0000041 (Nitrieren)
+# Class: hto:HTO_0000041 (nitriding)
 
 AnnotationAssertion(dc:source hto:HTO_0000041 "DIN EN ISO 4885:2018, §3.143")
 AnnotationAssertion(rdfs:comment hto:HTO_0000041 "DIN parameter coupling (DIN EN ISO 683-5 Tab.7 ANMERKUNG verbatim): 'Die Anlasstemperatur sollte nicht weniger als 50 °C über der Nitriertemperatur liegen.' OWL 2 DL cannot directly express the cross-class arithmetic constraint Anlass-T(Vergüten preceding) >= Nitrier-T(this Nitrieren) + 50 degC; recommended downstream encoding is SHACL (constraint language) or SWRL (rule extension). This rdfs:comment is the pristine v2 deliverable for this constraint."@en)
@@ -2120,7 +2120,7 @@ AnnotationAssertion(skos:definition hto:HTO_0000074 "Thermochemische Behandlung 
 AnnotationAssertion(skos:editorialNote hto:HTO_0000074 "DIN audit re-IRI (2026-06-09): the legacy class <https://w3id.org/pmd/co/HTO_0000063> was misnamespaced under pmd/co/ (should have been pmd/hto/), and the local ID HTO_0000063 collided with <https://w3id.org/pmd/hto/HTO_0000063> (counter). Re-IRIed to hto:HTO_0000074. NB: DIN EN ISO 4885 §3.144 Anm.2 records disjointness with Carbonitrieren (HTO_0000075) — the two are NOT synonyms in DIN despite industry colloquial conflation."@en)
 SubClassOf(hto:HTO_0000074 hto:HTO_0000019)
 
-# Class: hto:HTO_0000075 (Carbonitrieren)
+# Class: hto:HTO_0000075 (carbonitriding)
 
 AnnotationAssertion(dc:source hto:HTO_0000075 "DIN EN ISO 4885:2018, §3.35")
 AnnotationAssertion(rdfs:label hto:HTO_0000075 "Carbonitrieren"@de)

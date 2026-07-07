@@ -25,8 +25,8 @@ ERROR	multiple_labels	Glühen	rdfs:label	Glühen@de
 ERROR	multiple_labels	Glühen	rdfs:label	annealing@en
 ERROR	multiple_labels	Härtung	rdfs:label	Härtung@de
 ERROR	multiple_labels	Härtung	rdfs:label	hardening@en
-ERROR	multiple_labels	nitriding	rdfs:label	Nitrieren@de
-ERROR	multiple_labels	nitriding	rdfs:label	nitriding@en
+ERROR	multiple_labels	Nitrieren	rdfs:label	Nitrieren@de
+ERROR	multiple_labels	Nitrieren	rdfs:label	nitriding@en
 ERROR	multiple_labels	equalization	rdfs:label	Durchwärmen@de
 ERROR	multiple_labels	equalization	rdfs:label	equalization@en
 ERROR	multiple_labels	turbo machinery	rdfs:label	Strömungsmaschine@de
@@ -51,8 +51,8 @@ ERROR	multiple_labels	nitriding hardness depth	rdfs:label	Nitrierhärtetiefe@de
 ERROR	multiple_labels	nitriding hardness depth	rdfs:label	nitriding hardness depth@en
 ERROR	multiple_labels	Nitrocarburieren	rdfs:label	Nitrocarburieren@de
 ERROR	multiple_labels	Nitrocarburieren	rdfs:label	nitrocarburizing@en
-ERROR	multiple_labels	carbonitriding	rdfs:label	Carbonitrieren@de
-ERROR	multiple_labels	carbonitriding	rdfs:label	carbonitriding@en
+ERROR	multiple_labels	Carbonitrieren	rdfs:label	Carbonitrieren@de
+ERROR	multiple_labels	Carbonitrieren	rdfs:label	carbonitriding@en
 ERROR	multiple_labels	carbon level	rdfs:label	Kohlenstoffpegel@de
 ERROR	multiple_labels	carbon level	rdfs:label	carbon level@en
 ERROR	multiple_labels	austenite	rdfs:label	Austenit@de
@@ -77,8 +77,8 @@ ERROR	multiple_labels	A3 transformation temperature	rdfs:label	A3 transformation
 ERROR	multiple_labels	A3 transformation temperature	rdfs:label	A3-Temperatur@de
 ERROR	multiple_labels	Am transformation temperature	rdfs:label	Am transformation temperature@en
 ERROR	multiple_labels	Am transformation temperature	rdfs:label	Am-Temperatur@de
-ERROR	multiple_labels	surface hardening depth	rdfs:label	Einhärtungstiefe nach Randschichthärten@de
-ERROR	multiple_labels	surface hardening depth	rdfs:label	surface hardening depth@en
+ERROR	multiple_labels	Einhärtungstiefe nach Randschichthärten	rdfs:label	Einhärtungstiefe nach Randschichthärten@de
+ERROR	multiple_labels	Einhärtungstiefe nach Randschichthärten	rdfs:label	surface hardening depth@en
 ERROR	multiple_labels	case hardening depth	rdfs:label	Einsatzhärtungstiefe@de
 ERROR	multiple_labels	case hardening depth	rdfs:label	case hardening depth@en
 ERROR	multiple_labels	hardenability	rdfs:label	Härtbarkeit@de
@@ -167,7 +167,7 @@ WARN	missing_definition	salt bath nitriding	IAO:0000115
 WARN	missing_definition	Anlassen	IAO:0000115	
 WARN	missing_definition	Glühen	IAO:0000115	
 WARN	missing_definition	Härtung	IAO:0000115	
-WARN	missing_definition	nitriding	IAO:0000115	
+WARN	missing_definition	Nitrieren	IAO:0000115	
 WARN	missing_definition	equalization	IAO:0000115	
 WARN	missing_definition	turbo machinery	IAO:0000115	
 WARN	missing_definition	Arbeitsmaschine	IAO:0000115	
@@ -201,7 +201,7 @@ WARN	missing_definition	coolant	IAO:0000115
 WARN	missing_definition	case hardening	IAO:0000115	
 WARN	missing_definition	nitriding hardness depth	IAO:0000115	
 WARN	missing_definition	Nitrocarburieren	IAO:0000115	
-WARN	missing_definition	carbonitriding	IAO:0000115	
+WARN	missing_definition	Carbonitrieren	IAO:0000115	
 WARN	missing_definition	carbon level	IAO:0000115	
 WARN	missing_definition	austenite	IAO:0000115	
 WARN	missing_definition	Martensit	IAO:0000115	
@@ -214,7 +214,7 @@ WARN	missing_definition	martensite finish temperature	IAO:0000115
 WARN	missing_definition	A1-Temperatur	IAO:0000115	
 WARN	missing_definition	A3 transformation temperature	IAO:0000115	
 WARN	missing_definition	Am transformation temperature	IAO:0000115	
-WARN	missing_definition	surface hardening depth	IAO:0000115	
+WARN	missing_definition	Einhärtungstiefe nach Randschichthärten	IAO:0000115	
 WARN	missing_definition	case hardening depth	IAO:0000115	
 WARN	missing_definition	hardenability	IAO:0000115	
 WARN	missing_definition	Stirnabschreckversuch	IAO:0000115	
