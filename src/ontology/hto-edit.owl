@@ -284,19 +284,6 @@ co:PMD_0025011 rdfs:subClassOf hto:HTO_0000000 ;
                skos:definition "entweder kontinuierliche, nicht kontinuierliche, stufenweise, allmähliche oder unterbrochene Senkung (oder Behandlung zur Senkung) der Temperatur eines heißen Werkstückes"@de .
 
 
-###  https://w3id.org/pmd/hto/Carburizing
-hto:Carburizing rdf:type owl:Class ;
-                rdfs:subClassOf co:PMD_0060008 ;
-                dc:source "DIN 17022-3:2025-11, §6" ;
-                rdfs:comment "Potentiell ableitbar mit bestimmten Fluss-Schwellenwerten"@de ;
-                rdfs:isDefinedBy hto: ;
-                rdfs:label "Aufkohlungsrezept"@de ,
-                           "carburizing recipe"@en ;
-                skos:definition "Heattreatment recipe outlining the steps and parameters needed to perform a carburizing process."@en ,
-                                "Wärmebehandlungsrezept, in dem die Schritte und Parameter für die Durchführung eines Aufkohlungsprozesses beschrieben werden."@de ;
-                skos:editorialNote "needs work" .
-
-
 ###  https://w3id.org/pmd/hto/HTO_0000000
 hto:HTO_0000000 rdf:type owl:Class ;
                 rdfs:subClassOf co:PMD_0000833 ;
@@ -819,11 +806,6 @@ hto:HTO_0000033 rdf:type owl:Class ;
 
 ###  https://w3id.org/pmd/hto/HTO_0000034
 hto:HTO_0000034 rdf:type owl:Class ;
-                owl:equivalentClass [ rdf:type owl:Class ;
-                                      owl:oneOf ( hto:HTO_0000035
-                                                  hto:HTO_0000036
-                                                )
-                                    ] ;
                 rdfs:subClassOf obo:OBI_0001930 ;
                 rdfs:label "device operation state value"@en ;
                 skos:definition "A categorical value specification defining the on/off state of some device."@en ;
@@ -1797,6 +1779,19 @@ hto:HTO_0000121 rdf:type owl:Class ;
  ] .
 
 
+###  https://w3id.org/pmd/hto/HTO_0000122
+hto:HTO_0000122 rdf:type owl:Class ;
+                rdfs:subClassOf co:PMD_0060008 ;
+                dc:source "DIN 17022-3:2025-11, §6" ;
+                rdfs:comment "Potentiell ableitbar mit bestimmten Fluss-Schwellenwerten"@de ;
+                rdfs:isDefinedBy hto: ;
+                rdfs:label "Aufkohlungsrezept"@de ,
+                           "carburizing recipe"@en ;
+                skos:definition "Heattreatment recipe outlining the steps and parameters needed to perform a carburizing process."@en ,
+                                "Wärmebehandlungsrezept, in dem die Schritte und Parameter für die Durchführung eines Aufkohlungsprozesses beschrieben werden."@de ;
+                skos:editorialNote "needs work" .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -1826,14 +1821,16 @@ unit:SEC rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000035
-hto:HTO_0000035 rdf:type owl:NamedIndividual ;
+hto:HTO_0000035 rdf:type owl:NamedIndividual ,
+                         hto:HTO_0000034 ;
                 owl:differentFrom hto:HTO_0000036 ;
                 co:PMD_0000006 "true"^^xsd:boolean ;
                 rdfs:label "ON"@en .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000036
-hto:HTO_0000036 rdf:type owl:NamedIndividual ;
+hto:HTO_0000036 rdf:type owl:NamedIndividual ,
+                         hto:HTO_0000034 ;
                 co:PMD_0000006 "false"^^xsd:boolean ;
                 rdfs:label "OFF"@en .
 
