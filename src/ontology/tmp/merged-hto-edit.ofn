@@ -2120,7 +2120,7 @@ AnnotationAssertion(skos:definition hto:HTO_0000074 "Thermochemische Behandlung 
 AnnotationAssertion(skos:editorialNote hto:HTO_0000074 "DIN audit re-IRI (2026-06-09): the legacy class <https://w3id.org/pmd/co/HTO_0000063> was misnamespaced under pmd/co/ (should have been pmd/hto/), and the local ID HTO_0000063 collided with <https://w3id.org/pmd/hto/HTO_0000063> (counter). Re-IRIed to hto:HTO_0000074. NB: DIN EN ISO 4885 §3.144 Anm.2 records disjointness with Carbonitrieren (HTO_0000075) — the two are NOT synonyms in DIN despite industry colloquial conflation."@en)
 SubClassOf(hto:HTO_0000074 hto:HTO_0000019)
 
-# Class: hto:HTO_0000075 (carbonitriding)
+# Class: hto:HTO_0000075 (Carbonitrieren)
 
 AnnotationAssertion(dc:source hto:HTO_0000075 "DIN EN ISO 4885:2018, §3.35")
 AnnotationAssertion(rdfs:label hto:HTO_0000075 "Carbonitrieren"@de)
@@ -2270,7 +2270,7 @@ AnnotationAssertion(skos:definition hto:HTO_0000087 "Gleichgewichts-Temperatur, 
 AnnotationAssertion(skos:editorialNote hto:HTO_0000087 "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1. 4885 names this 'Am'; the 'Acm' altLabel is the IIW/ASM-standard naming retained for industry compatibility."@en)
 SubClassOf(hto:HTO_0000087 co:PMD_0020167)
 
-# Class: hto:HTO_0000088 (Einhärtungstiefe nach Randschichthärten)
+# Class: hto:HTO_0000088 (surface hardening depth)
 
 AnnotationAssertion(dc:source hto:HTO_0000088 "DIN EN ISO 4885:2018, §3.74")
 AnnotationAssertion(dc:source hto:HTO_0000088 "ISO 18203:2016, §3.5 (modifiziert)")

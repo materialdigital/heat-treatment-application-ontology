@@ -51,8 +51,8 @@ ERROR	multiple_labels	nitriding hardness depth	rdfs:label	Nitrierhärtetiefe@de
 ERROR	multiple_labels	nitriding hardness depth	rdfs:label	nitriding hardness depth@en
 ERROR	multiple_labels	Nitrocarburieren	rdfs:label	Nitrocarburieren@de
 ERROR	multiple_labels	Nitrocarburieren	rdfs:label	nitrocarburizing@en
-ERROR	multiple_labels	Carbonitrieren	rdfs:label	Carbonitrieren@de
-ERROR	multiple_labels	Carbonitrieren	rdfs:label	carbonitriding@en
+ERROR	multiple_labels	carbonitriding	rdfs:label	Carbonitrieren@de
+ERROR	multiple_labels	carbonitriding	rdfs:label	carbonitriding@en
 ERROR	multiple_labels	carbon level	rdfs:label	Kohlenstoffpegel@de
 ERROR	multiple_labels	carbon level	rdfs:label	carbon level@en
 ERROR	multiple_labels	austenite	rdfs:label	Austenit@de
@@ -201,7 +201,7 @@ WARN	missing_definition	coolant	IAO:0000115
 WARN	missing_definition	case hardening	IAO:0000115	
 WARN	missing_definition	nitriding hardness depth	IAO:0000115	
 WARN	missing_definition	Nitrocarburieren	IAO:0000115	
-WARN	missing_definition	Carbonitrieren	IAO:0000115	
+WARN	missing_definition	carbonitriding	IAO:0000115	
 WARN	missing_definition	carbon level	IAO:0000115	
 WARN	missing_definition	austenite	IAO:0000115	
 WARN	missing_definition	Martensit	IAO:0000115	
