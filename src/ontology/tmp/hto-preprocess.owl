@@ -1376,7 +1376,7 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 
 EquivalentClasses(co:PMD_0000056 ObjectIntersectionOf(co:PMD_0000655 ObjectSomeValuesFrom(obo:RO_0000085 co:PMD_0000057)))
 
-# Class: co:PMD_0000655 (furnace)
+# Class: co:PMD_0000655 (Ofen)
 
 SubClassOf(co:PMD_0000655 ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000109))
 SubClassOf(co:PMD_0000655 ObjectSomeValuesFrom(obo:RO_0000085 co:PMD_0000054))

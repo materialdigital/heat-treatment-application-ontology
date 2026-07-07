@@ -1430,7 +1430,7 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 
 EquivalentClasses(co:PMD_0000056 ObjectIntersectionOf(co:PMD_0000655 ObjectSomeValuesFrom(obo:RO_0000085 co:PMD_0000057)))
 
-# Class: co:PMD_0000655 (furnace)
+# Class: co:PMD_0000655 (Ofen)
 
 SubClassOf(co:PMD_0000655 ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000109))
 SubClassOf(co:PMD_0000655 ObjectSomeValuesFrom(obo:RO_0000085 co:PMD_0000054))
@@ -1838,7 +1838,7 @@ Nitrierhärten"@de)
 SubClassOf(hto:HTO_0000040 co:PMD_0000779)
 SubClassOf(hto:HTO_0000040 ObjectSomeValuesFrom(obo:RO_0000059 hto:HTO_0000013))
 
-# Class: hto:HTO_0000041 (nitriding)
+# Class: hto:HTO_0000041 (Nitrieren)
 
 AnnotationAssertion(dc:source hto:HTO_0000041 "DIN EN ISO 4885:2018, §3.143")
 AnnotationAssertion(rdfs:comment hto:HTO_0000041 "DIN parameter coupling (DIN EN ISO 683-5 Tab.7 ANMERKUNG verbatim): 'Die Anlasstemperatur sollte nicht weniger als 50 °C über der Nitriertemperatur liegen.' OWL 2 DL cannot directly express the cross-class arithmetic constraint Anlass-T(Vergüten preceding) >= Nitrier-T(this Nitrieren) + 50 degC; recommended downstream encoding is SHACL (constraint language) or SWRL (rule extension). This rdfs:comment is the pristine v2 deliverable for this constraint."@en)
@@ -2270,7 +2270,7 @@ AnnotationAssertion(skos:definition hto:HTO_0000087 "Gleichgewichts-Temperatur, 
 AnnotationAssertion(skos:editorialNote hto:HTO_0000087 "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1. 4885 names this 'Am'; the 'Acm' altLabel is the IIW/ASM-standard naming retained for industry compatibility."@en)
 SubClassOf(hto:HTO_0000087 co:PMD_0020167)
 
-# Class: hto:HTO_0000088 (surface hardening depth)
+# Class: hto:HTO_0000088 (Einhärtungstiefe nach Randschichthärten)
 
 AnnotationAssertion(dc:source hto:HTO_0000088 "DIN EN ISO 4885:2018, §3.74")
 AnnotationAssertion(dc:source hto:HTO_0000088 "ISO 18203:2016, §3.5 (modifiziert)")

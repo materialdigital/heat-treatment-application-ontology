@@ -25,8 +25,8 @@ ERROR	multiple_labels	Glühen	rdfs:label	Glühen@de
 ERROR	multiple_labels	Glühen	rdfs:label	annealing@en
 ERROR	multiple_labels	Härtung	rdfs:label	Härtung@de
 ERROR	multiple_labels	Härtung	rdfs:label	hardening@en
-ERROR	multiple_labels	Nitrieren	rdfs:label	Nitrieren@de
-ERROR	multiple_labels	Nitrieren	rdfs:label	nitriding@en
+ERROR	multiple_labels	nitriding	rdfs:label	Nitrieren@de
+ERROR	multiple_labels	nitriding	rdfs:label	nitriding@en
 ERROR	multiple_labels	equalization	rdfs:label	Durchwärmen@de
 ERROR	multiple_labels	equalization	rdfs:label	equalization@en
 ERROR	multiple_labels	turbo machinery	rdfs:label	Strömungsmaschine@de
@@ -167,7 +167,7 @@ WARN	missing_definition	salt bath nitriding	IAO:0000115
 WARN	missing_definition	Anlassen	IAO:0000115	
 WARN	missing_definition	Glühen	IAO:0000115	
 WARN	missing_definition	Härtung	IAO:0000115	
-WARN	missing_definition	Nitrieren	IAO:0000115	
+WARN	missing_definition	nitriding	IAO:0000115	
 WARN	missing_definition	equalization	IAO:0000115	
 WARN	missing_definition	turbo machinery	IAO:0000115	
 WARN	missing_definition	Arbeitsmaschine	IAO:0000115	
