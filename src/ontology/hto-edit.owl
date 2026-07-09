@@ -22,12 +22,11 @@ Import(<https://w3id.org/pmd/hto/imports/pmdco_import.owl>)
 Annotation(dcterms:contributor <https://orcid.org/0000-0003-1649-6832>)
 Annotation(dcterms:creator <https://orcid.org/0000-0002-9014-2920>)
 Annotation(dcterms:creator <https://orcid.org/0009-0004-4787-4685>)
-
 Annotation(dcterms:creator "Divya Gosula")
-Annotation(<http://usefulinc.com/ns/doap#repository> <https://github.com/materialdigital/heat-treatment-application-ontology>)
 Annotation(dcterms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en)
 Annotation(dcterms:license <https://creativecommons.org/licenses/by/4.0/>)
 Annotation(dcterms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en)
+Annotation(<http://usefulinc.com/ns/doap#repository> <https://github.com/materialdigital/heat-treatment-application-ontology>)
 
 Declaration(Class(hto:HTO_0000000))
 Declaration(Class(hto:HTO_0000001))
@@ -503,7 +502,7 @@ AnnotationAssertion(skos:definition hto:HTO_0000025 "A surface hardening process
 AnnotationAssertion(skos:definition hto:HTO_0000025 "Thermochemical treatment (3.207) to enrich the surface of an austenitised workpiece with carbon, which is then present in solid solution in austenite (3.12)."@en)
 AnnotationAssertion(skos:definition hto:HTO_0000025 "Thermochemische Behandlung (3.207) zum Anreichern der Oberfläche eines austenitisierten Werkstückes mit Kohlenstoff, der dann im Austenit (3.12) in fester Lösung vorliegt."@de)
 AnnotationAssertion(skos:editorialNote hto:HTO_0000025 "DIN audit fix (2026-06-09): hto-edit.owl's existing rdfs:comment/skos:definition treats Aufkohlen as a 'surface hardening process'; DIN EN ISO 4885 §3.36 defines it as 'thermochemische Behandlung zum Anreichern der Oberfläche eines austenitisierten Werkstückes mit Kohlenstoff'. Hardening only follows IF quenching is subsequently applied (cf. §3.37 Einsatzhärten = Aufkohlen + Härten). Original rdfs:label preserved; the §3.36 verbatim definition is added via skos:definition as the canonical anchor."@en)
-SubClassOf(hto:HTO_0000025 hto:HTO_0000019)
+SubClassOf(hto:HTO_0000025 co:PMD_0000779)
 
 # Class: hto:HTO_0000026 (Gasnitrieren)
 
@@ -647,7 +646,7 @@ AnnotationAssertion(skos:definition hto:HTO_0000041 "Thermochemical treatment (3
 AnnotationAssertion(skos:definition hto:HTO_0000041 "Thermochemische Behandlung (3.207) zur Herstellung der harten Randschichten an Werkstücken, die Nitride enthalten."@de)
 AnnotationAssertion(skos:editorialNote hto:HTO_0000041 "DIN audit fix (2026-06-09): DIN EN ISO 4885 §3.143 lemma is 'Nitrieren'; DIN 17022-4, DIN 17022-5, and DIN EN ISO 683-5 all use 'Nitrieren' exclusively. The hto-edit.owl DE label 'Nitridieren' is a non-DIN morphological variant. The canonical 'Nitrieren' is hoisted to skos:prefLabel; the legacy 'Nitridieren' is demoted to skos:hiddenLabel."@en)
 AnnotationAssertion(skos:hiddenLabel hto:HTO_0000041 "Nitridieren"@de)
-SubClassOf(hto:HTO_0000041 hto:HTO_0000019)
+SubClassOf(hto:HTO_0000041 co:PMD_0000779)
 SubClassOf(hto:HTO_0000041 ObjectSomeValuesFrom(obo:BFO_0000062 hto:HTO_0000022))
 
 # Class: hto:HTO_0000042 (equalization)
@@ -879,6 +878,7 @@ SubClassOf(hto:HTO_0000071 co:PMD_0020113)
 
 # Class: hto:HTO_0000072 (case hardening)
 
+AnnotationAssertion(obo:IAO_0000116 hto:HTO_0000072 "this is really not connected to the phenomenon of case hardening found in mangos"@en)
 AnnotationAssertion(dcterms:source hto:HTO_0000072 "DIN EN ISO 4885:2018, §3.37 (Einsatzhärten = Aufkohlen + Härten)")
 AnnotationAssertion(rdfs:label hto:HTO_0000072 "Einsatzhärten"@de)
 AnnotationAssertion(rdfs:label hto:HTO_0000072 "case hardening"@en)
@@ -914,7 +914,7 @@ AnnotationAssertion(skos:altLabel hto:HTO_0000074 "nitrocarburising"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000074 "Thermochemical treatment (3.207) to produce a hard surface layer containing nitrides and nitrocarbides, forming a compound layer and an underlying diffusion layer."@en)
 AnnotationAssertion(skos:definition hto:HTO_0000074 "Thermochemische Behandlung (3.207) zur Herstellung einer harten Randschicht, die Nitride und Nitrocarbide enthält, zur Bildung einer Verbindungsschicht und einer darunter liegenden Diffusionsschicht."@de)
 AnnotationAssertion(skos:editorialNote hto:HTO_0000074 "DIN audit re-IRI (2026-06-09): the legacy class <https://w3id.org/pmd/co/HTO_0000063> was misnamespaced under pmd/co/ (should have been pmd/hto/), and the local ID HTO_0000063 collided with <https://w3id.org/pmd/hto/HTO_0000063> (counter). Re-IRIed to hto:HTO_0000074. NB: DIN EN ISO 4885 §3.144 Anm.2 records disjointness with Carbonitrieren (HTO_0000075) — the two are NOT synonyms in DIN despite industry colloquial conflation."@en)
-SubClassOf(hto:HTO_0000074 hto:HTO_0000019)
+SubClassOf(hto:HTO_0000074 co:PMD_0000779)
 
 # Class: hto:HTO_0000075 (carbonitriding)
 
@@ -924,7 +924,7 @@ AnnotationAssertion(rdfs:label hto:HTO_0000075 "carbonitriding"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000075 "Thermochemical treatment (3.207) to enrich the surface layer with carbon and nitrogen; carbonitriding is a carburising process (3.36)."@en)
 AnnotationAssertion(skos:definition hto:HTO_0000075 "Thermochemische Behandlung (3.207), um die Randschicht mit Kohlenstoff und Stickstoff anzureichern; Carbonitrieren ist ein Aufkohlungsprozess (3.36)."@de)
 AnnotationAssertion(skos:editorialNote hto:HTO_0000075 "DIN audit re-IRI (2026-06-09): the legacy class <https://w3id.org/pmd/co/HTO_0000064> was misnamespaced under pmd/co/ (should have been pmd/hto/), and the local ID HTO_0000064 collided with <https://w3id.org/pmd/hto/HTO_0000064> (flow rate). Re-IRIed to hto:HTO_0000075. NB: §3.144 Anm.2 disjointness with Nitrocarburieren (HTO_0000074)."@en)
-SubClassOf(hto:HTO_0000075 hto:HTO_0000019)
+SubClassOf(hto:HTO_0000075 co:PMD_0000779)
 
 # Class: hto:HTO_0000076 (carbon level)
 
@@ -1462,6 +1462,5 @@ DifferentIndividuals(hto:HTO_0000035 hto:HTO_0000036)
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-9014-2920> "Henk Birkholz")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0003-1649-6832> "Thomas Hanke")
 AnnotationAssertion(rdfs:label <https://orcid.org/0009-0004-4787-4685> "Felix Thonagel")
-
 AnnotationAssertion(rdfs:label _:genid2147483648 "CC BY 4.0")
 )
