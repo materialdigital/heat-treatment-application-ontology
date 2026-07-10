@@ -284,6 +284,7 @@ SubClassOf(hto:HTO_0000001 co:PMD_0000055)
 # Class: hto:HTO_0000002 (hardening recipe)
 
 AnnotationAssertion(rdfs:label hto:HTO_0000002 "hardening recipe"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000002 "A hardeing recipe describing the steps and conditions for carrying out a hardening process.")
 SubClassOf(hto:HTO_0000002 co:PMD_0060008)
 
 # Class: hto:HTO_0000003 (temperature change rate specification)
@@ -376,7 +377,7 @@ AnnotationAssertion(dcterms:source hto:HTO_0000013 "DIN EN ISO 683-2:2018, Tab.1
 AnnotationAssertion(dcterms:source hto:HTO_0000013 "DIN EN ISO 683-3:2022, Tab.8")
 AnnotationAssertion(rdfs:comment hto:HTO_0000013 "add target temperature in axioms, combine it with austenitisation temperature")
 AnnotationAssertion(rdfs:label hto:HTO_0000013 "hardening heat treatment recipe"@en)
-AnnotationAssertion(skos:definition hto:HTO_0000013 "A heat treatment recipe describing the steps and conditions for carrying out a hardening process."@en)
+AnnotationAssertion(skos:definition hto:HTO_0000013 "A heat treatment recipe describing the steps and conditions for carrying out a hardening heat treatment process."@en)
 AnnotationAssertion(skos:definition hto:HTO_0000013 "Wärmebehandlungsrezept mit dem Schritte und Parameter für die Durchführung eines Härtungsprozesses beschrieben werden."@de)
 SubClassOf(hto:HTO_0000013 ObjectIntersectionOf(hto:HTO_0000002 ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000004) ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000014) ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000015) ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000016)))
 
@@ -638,7 +639,7 @@ Nitrierhärten"@de)
 SubClassOf(hto:HTO_0000040 co:PMD_0000779)
 SubClassOf(hto:HTO_0000040 ObjectSomeValuesFrom(obo:RO_0000059 hto:HTO_0000013))
 
-# Class: hto:HTO_0000041 (nitriding)
+# Class: hto:HTO_0000041 (Nitrieren)
 
 AnnotationAssertion(dcterms:source hto:HTO_0000041 "DIN EN ISO 4885:2018, §3.143")
 AnnotationAssertion(rdfs:comment hto:HTO_0000041 "DIN parameter coupling (DIN EN ISO 683-5 Tab.7 ANMERKUNG verbatim): 'Die Anlasstemperatur sollte nicht weniger als 50 °C über der Nitriertemperatur liegen.' OWL 2 DL cannot directly express the cross-class arithmetic constraint Anlass-T(Vergüten preceding) >= Nitrier-T(this Nitrieren) + 50 degC; recommended downstream encoding is SHACL (constraint language) or SWRL (rule extension). This rdfs:comment is the pristine v2 deliverable for this constraint."@en)
@@ -921,7 +922,7 @@ AnnotationAssertion(skos:definition hto:HTO_0000074 "Thermochemische Behandlung 
 AnnotationAssertion(skos:editorialNote hto:HTO_0000074 "DIN audit re-IRI (2026-06-09): the legacy class <https://w3id.org/pmd/co/HTO_0000063> was misnamespaced under pmd/co/ (should have been pmd/hto/), and the local ID HTO_0000063 collided with <https://w3id.org/pmd/hto/HTO_0000063> (counter). Re-IRIed to hto:HTO_0000074. NB: DIN EN ISO 4885 §3.144 Anm.2 records disjointness with Carbonitrieren (HTO_0000075) — the two are NOT synonyms in DIN despite industry colloquial conflation."@en)
 SubClassOf(hto:HTO_0000074 co:PMD_0000779)
 
-# Class: hto:HTO_0000075 (Carbonitrieren)
+# Class: hto:HTO_0000075 (carbonitriding)
 
 AnnotationAssertion(dcterms:source hto:HTO_0000075 "DIN EN ISO 4885:2018, §3.35")
 AnnotationAssertion(rdfs:label hto:HTO_0000075 "Carbonitrieren"@de)
@@ -1467,5 +1468,5 @@ DifferentIndividuals(hto:HTO_0000035 hto:HTO_0000036)
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-9014-2920> "Henk Birkholz")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0003-1649-6832> "Thomas Hanke")
 AnnotationAssertion(rdfs:label <https://orcid.org/0009-0004-4787-4685> "Felix Thonagel")
-AnnotationAssertion(rdfs:label _:genid2147563903 "CC BY 4.0")
+AnnotationAssertion(rdfs:label _:genid2147483648 "CC BY 4.0")
 )
