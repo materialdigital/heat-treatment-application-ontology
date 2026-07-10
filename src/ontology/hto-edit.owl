@@ -30,6 +30,7 @@ Annotation(<http://usefulinc.com/ns/doap#repository> <https://github.com/materia
 
 Declaration(Class(hto:HTO_0000000))
 Declaration(Class(hto:HTO_0000001))
+Declaration(Class(hto:HTO_0000002))
 Declaration(Class(hto:HTO_0000003))
 Declaration(Class(hto:HTO_0000004))
 Declaration(Class(hto:HTO_0000005))
@@ -234,10 +235,10 @@ EquivalentClasses(co:PMD_0000056 ObjectIntersectionOf(co:PMD_0000655 ObjectSomeV
 
 # Class: co:PMD_0000103 (hardening)
 
-EquivalentClasses(co:PMD_0000103 ObjectIntersectionOf(co:PMD_0000833 ObjectSomeValuesFrom(obo:RO_0000059 hto:HTO_0000013)))
+EquivalentClasses(co:PMD_0000103 ObjectIntersectionOf(co:PMD_0000833 ObjectSomeValuesFrom(obo:RO_0000059 hto:HTO_0000002)))
 SubClassOf(co:PMD_0000103 ObjectSomeValuesFrom(obo:BFO_0000055 co:PMD_0010013))
 
-# Class: co:PMD_0000655 (Ofen)
+# Class: co:PMD_0000655 (furnace)
 
 SubClassOf(co:PMD_0000655 ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000109))
 SubClassOf(co:PMD_0000655 ObjectSomeValuesFrom(obo:RO_0000085 co:PMD_0000054))
@@ -258,7 +259,7 @@ AnnotationAssertion(dcterms:source co:PMD_0025011 "DIN EN ISO 4885:2018, §3.45"
 AnnotationAssertion(skos:definition co:PMD_0025011 "entweder kontinuierliche, nicht kontinuierliche, stufenweise, allmähliche oder unterbrochene Senkung (oder Behandlung zur Senkung) der Temperatur eines heißen Werkstückes"@de)
 SubClassOf(co:PMD_0025011 hto:HTO_0000000)
 
-# Class: hto:HTO_0000000 (essential heat treatment process)
+# Class: hto:HTO_0000000 (heat treatment operation)
 
 AnnotationAssertion(dcterms:source hto:HTO_0000000 "DIN EN ISO 4885:2018, §3 (generic upper-level HT-process taxonomy)")
 AnnotationAssertion(dcterms:source hto:HTO_0000000 "DIN EN ISO 4885:2018, §3.167 (Härtung)")
@@ -266,8 +267,7 @@ AnnotationAssertion(dcterms:source hto:HTO_0000000 "DIN EN ISO 4885:2018, §3.20
 AnnotationAssertion(dcterms:source hto:HTO_0000000 "DIN EN ISO 4885:2018, §3.8 (Glühen)")
 AnnotationAssertion(rdfs:comment hto:HTO_0000000 "intermediate class/grouping term, not to be instatialized"@en)
 AnnotationAssertion(rdfs:label hto:HTO_0000000 "Grundsätzlicher Wärmebehandlungsvorgang"@de)
-AnnotationAssertion(rdfs:label hto:HTO_0000000 "essential heat treatment process"@en)
-AnnotationAssertion(skos:altLabel hto:HTO_0000000 "heat treatment operation")
+AnnotationAssertion(rdfs:label hto:HTO_0000000 "heat treatment operation"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000000 "Essential processes that make up heat treatments and can be used like building blocks."@en)
 SubClassOf(hto:HTO_0000000 obo:COB_0000035)
 
@@ -280,6 +280,11 @@ AnnotationAssertion(skos:definition hto:HTO_0000001 "A quenching function is a (
 AnnotationAssertion(skos:definition hto:HTO_0000001 "Eine Abschreckfunktion ist eine (realisierbare) Funktion, die es einem System ermöglicht die Temperatur eines Material schnell genug abzusenken, sodass Diffusionsprozesse behindert und dadurch metastabile Materialzustände erzeugt werden."@de)
 AnnotationAssertion(skos:example hto:HTO_0000001 "The function of a oil bath to quench steel after austenitisation so the material transforms into martensite."@en)
 SubClassOf(hto:HTO_0000001 co:PMD_0000055)
+
+# Class: hto:HTO_0000002 (hardening recipe)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000002 "hardening recipe"@en)
+SubClassOf(hto:HTO_0000002 co:PMD_0060008)
 
 # Class: hto:HTO_0000003 (temperature change rate specification)
 
@@ -364,16 +369,16 @@ AnnotationAssertion(skos:definition hto:HTO_0000012 "A heat treatment function t
 AnnotationAssertion(skos:example hto:HTO_0000012 "function of a furnace to hold its temperature at a specified temperature")
 SubClassOf(hto:HTO_0000012 co:PMD_0000781)
 
-# Class: hto:HTO_0000013 (hardening recipe)
+# Class: hto:HTO_0000013 (hardening heat treatment recipe)
 
 AnnotationAssertion(dcterms:source hto:HTO_0000013 "DIN 17022-1:1994, §3.1")
 AnnotationAssertion(dcterms:source hto:HTO_0000013 "DIN EN ISO 683-2:2018, Tab.11")
 AnnotationAssertion(dcterms:source hto:HTO_0000013 "DIN EN ISO 683-3:2022, Tab.8")
 AnnotationAssertion(rdfs:comment hto:HTO_0000013 "add target temperature in axioms, combine it with austenitisation temperature")
-AnnotationAssertion(rdfs:label hto:HTO_0000013 "hardening recipe"@en)
+AnnotationAssertion(rdfs:label hto:HTO_0000013 "hardening heat treatment recipe"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000013 "A heat treatment recipe describing the steps and conditions for carrying out a hardening process."@en)
 AnnotationAssertion(skos:definition hto:HTO_0000013 "Wärmebehandlungsrezept mit dem Schritte und Parameter für die Durchführung eines Härtungsprozesses beschrieben werden."@de)
-SubClassOf(hto:HTO_0000013 ObjectIntersectionOf(co:PMD_0060008 ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000004) ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000014) ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000015) ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000016)))
+SubClassOf(hto:HTO_0000013 ObjectIntersectionOf(hto:HTO_0000002 ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000004) ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000014) ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000015) ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000016)))
 
 # Class: hto:HTO_0000014 (holding recipe)
 
@@ -916,7 +921,7 @@ AnnotationAssertion(skos:definition hto:HTO_0000074 "Thermochemische Behandlung 
 AnnotationAssertion(skos:editorialNote hto:HTO_0000074 "DIN audit re-IRI (2026-06-09): the legacy class <https://w3id.org/pmd/co/HTO_0000063> was misnamespaced under pmd/co/ (should have been pmd/hto/), and the local ID HTO_0000063 collided with <https://w3id.org/pmd/hto/HTO_0000063> (counter). Re-IRIed to hto:HTO_0000074. NB: DIN EN ISO 4885 §3.144 Anm.2 records disjointness with Carbonitrieren (HTO_0000075) — the two are NOT synonyms in DIN despite industry colloquial conflation."@en)
 SubClassOf(hto:HTO_0000074 co:PMD_0000779)
 
-# Class: hto:HTO_0000075 (carbonitriding)
+# Class: hto:HTO_0000075 (Carbonitrieren)
 
 AnnotationAssertion(dcterms:source hto:HTO_0000075 "DIN EN ISO 4885:2018, §3.35")
 AnnotationAssertion(rdfs:label hto:HTO_0000075 "Carbonitrieren"@de)
@@ -1066,7 +1071,7 @@ AnnotationAssertion(skos:definition hto:HTO_0000087 "Gleichgewichts-Temperatur, 
 AnnotationAssertion(skos:editorialNote hto:HTO_0000087 "DIN audit addition (2026-06-09): transition temperature from DIN EN ISO 4885 §3.213 Anm.1. 4885 names this 'Am'; the 'Acm' altLabel is the IIW/ASM-standard naming retained for industry compatibility."@en)
 SubClassOf(hto:HTO_0000087 co:PMD_0020167)
 
-# Class: hto:HTO_0000088 (Einhärtungstiefe nach Randschichthärten)
+# Class: hto:HTO_0000088 (surface hardening depth)
 
 AnnotationAssertion(dcterms:source hto:HTO_0000088 "DIN EN ISO 4885:2018, §3.74")
 AnnotationAssertion(dcterms:source hto:HTO_0000088 "ISO 18203:2016, §3.5 (modifiziert)")
@@ -1462,5 +1467,5 @@ DifferentIndividuals(hto:HTO_0000035 hto:HTO_0000036)
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-9014-2920> "Henk Birkholz")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0003-1649-6832> "Thomas Hanke")
 AnnotationAssertion(rdfs:label <https://orcid.org/0009-0004-4787-4685> "Felix Thonagel")
-AnnotationAssertion(rdfs:label _:genid2147483648 "CC BY 4.0")
+AnnotationAssertion(rdfs:label _:genid2147563903 "CC BY 4.0")
 )
