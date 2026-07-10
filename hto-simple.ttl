@@ -5,6 +5,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix terms: <http://purl.org/dc/terms/> .
@@ -12,25 +13,22 @@
 @base <https://w3id.org/pmd/hto/> .
 
 <https://w3id.org/pmd/hto/> rdf:type owl:Ontology ;
-                             owl:versionIRI <https://w3id.org/pmd/hto/3.0.0rc1> ;
-                             terms:bibliographicCitation "PMD Heat Treatment Ontology. Version 3.0.0rc1, https://w3id.org/pmd/hto/" ;
+                             owl:versionIRI <https://w3id.org/pmd/hto/3.0.0> ;
+                             terms:bibliographicCitation "PMD Heat Treatment Ontology. Version 3.0.0, https://w3id.org/pmd/hto/" ;
                              terms:contributor <https://orcid.org/0000-0003-1649-6832> ;
-                             terms:created "2026-07-08" ;
+                             terms:created "2026-07-10" ;
                              terms:creator <https://orcid.org/0000-0002-9014-2920> ,
                                            <https://orcid.org/0009-0004-4787-4685> ,
                                            "Divya Gosula" ;
                              terms:description "This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications."@en ;
                              terms:license <https://creativecommons.org/licenses/by/4.0/> ;
                              terms:title "Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module"@en ;
-                             owl:versionInfo "3.0.0rc1" .
+                             doap:repository <https://github.com/materialdigital/heat-treatment-application-ontology> ;
+                             owl:versionInfo "3.0.0" .
 
 #################################################################
 #    Annotation properties
 #################################################################
-
-###  http://purl.obolibrary.org/obo/IAO_0000112
-obo:IAO_0000112 rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.obolibrary.org/obo/IAO_0000114
 obo:IAO_0000114 rdf:type owl:AnnotationProperty .
@@ -43,23 +41,12 @@ obo:IAO_0000115 rdf:type owl:AnnotationProperty .
 ###  http://purl.obolibrary.org/obo/IAO_0000116
 obo:IAO_0000116 rdf:type owl:AnnotationProperty ;
                 obo:IAO_0000115 "An administrative note intended for its editor. It may not be included in the publication version of the ontology, so it should contain nothing necessary for end users to understand the ontology."@en ;
-                obo:IAO_0000119 "GROUP:OBI:<http://purl.obofoundry.org/obo/obi>"@en ;
                 rdfs:label "editor note"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000119
-obo:IAO_0000119 rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000233
-obo:IAO_0000233 rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0100001
 obo:IAO_0100001 rdf:type owl:AnnotationProperty ;
                 obo:IAO_0000115 "Use on obsolete terms, relating the term to another term that can be used as a substitute"@en ;
-                obo:IAO_0000119 "Person:Alan Ruttenberg"@en ;
-                rdfs:comment "Add as annotation triples in the granting ontology"@en ;
                 rdfs:label "term replaced by"@en .
 
 
@@ -103,6 +90,10 @@ terms:title rdf:type owl:AnnotationProperty ;
             rdfs:label "title" .
 
 
+###  http://usefulinc.com/ns/doap#repository
+doap:repository rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.geneontology.org/formats/oboInOwl#consider
 oboInOwl:consider rdf:type owl:AnnotationProperty .
 
@@ -141,21 +132,12 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/pmd/co/PMD_0000060
 co:PMD_0000060 rdf:type owl:AnnotationProperty ;
-               rdfs:comment "Indicates whether the ontology element is part of the minimal profile of the ontology. Useful for modularization, simplified views, or lightweight implementations."@en ;
-               rdfs:label "isInMinimalProfile"@en ;
-               co:PMD_0001032 "https://github.com/materialdigital/core-ontology/issues/121" ;
-               rdfs:range xsd:boolean .
+               rdfs:label "isInMinimalProfile"@en .
 
 
 ###  https://w3id.org/pmd/co/PMD_0000064
 co:PMD_0000064 rdf:type owl:AnnotationProperty ;
-               rdfs:comment "An editor note referring to a pattern which shows the usage of this class or property."@en ;
-               rdfs:label "pattern example"@en ;
-               rdfs:subPropertyOf obo:IAO_0000116 .
-
-
-###  https://w3id.org/pmd/co/PMD_0001032
-co:PMD_0001032 rdf:type owl:AnnotationProperty .
+               rdfs:label "pattern example"@en .
 
 
 #################################################################
@@ -166,9 +148,6 @@ co:PMD_0001032 rdf:type owl:AnnotationProperty .
 obo:BFO_0000050 rdf:type owl:ObjectProperty ;
                 owl:inverseOf obo:BFO_0000051 ;
                 rdf:type owl:TransitiveProperty ;
-                obo:IAO_0000112 "my brain is part of my body (continuant parthood, two material entities)"@en ,
-                                "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)"@en ,
-                                "this day is part of this year (occurrent parthood)"@en ;
                 obo:IAO_0000115 "a core relation that holds between a part and its whole"@en ;
                 obo:IAO_0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other."@en ,
                                 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en ,
@@ -182,9 +161,6 @@ A continuant cannot be part of an occurrent: use 'participates in'. An occurrent
 obo:BFO_0000051 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:BFO_0000051 ;
                 rdf:type owl:TransitiveProperty ;
-                obo:IAO_0000112 "my body has part my brain (continuant parthood, two material entities)"@en ,
-                                "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)"@en ,
-                                "this year has part this day (occurrent parthood)"@en ;
                 obo:IAO_0000115 "a core relation that holds between a whole and its part"@en ;
                 obo:IAO_0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."@en ,
                                 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en ,
@@ -271,14 +247,12 @@ obo:IAO_0000039 rdf:type owl:ObjectProperty ;
 
 ###  http://purl.obolibrary.org/obo/IAO_0000136
 obo:IAO_0000136 rdf:type owl:ObjectProperty ;
-                obo:IAO_0000112 "This document is about information artifacts and their representations"@en ;
                 obo:IAO_0000115 "A (currently) primitive relation that relates an information artifact to an entity."@en ;
                 obo:IAO_0000116 """7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of \"mentions\" relation. Weaken the is_about relationship to be primitive. 
 
 We will try to build it back up by elaborating the various subproperties that are more precisely defined.
 
 Some currently missing phenomena that should be considered \"about\" are predications - \"The only person who knows the answer is sitting beside me\" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."""@en ;
-                obo:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
                 rdfs:label "is about"@en .
 
 
@@ -286,29 +260,24 @@ Some currently missing phenomena that should be considered \"about\" are predica
 obo:IAO_0000219 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:IAO_0000136 ;
                 owl:inverseOf obo:IAO_0000235 ;
-                obo:IAO_0000112 "A person's name denotes the person. A variable name in a computer program denotes some piece of memory. Lexically equivalent strings can denote different things, for instance \"Alan\" can denote different people. In each case of use, there is a case of the denotation relation obtaining, between \"Alan\" and the person that is being named."@en ;
                 obo:IAO_0000115 "A primitive, instance-level, relation obtaining between an information content entity and some portion of reality. Denotation is what happens when someone creates an information content entity E in order to specifically refer to something. The only relation between E and the thing is that E can be used to 'pick out' the thing. This relation connects those two together. Freedictionary.com sense 3: To signify directly; refer to specifically"@en ;
                 obo:IAO_0000116 """2009-11-10 Alan Ruttenberg. Old definition said the following to emphasize the generic nature of this relation. We no longer have 'specifically denotes', which would have been primitive, so make this relation primitive.
 g denotes r =def 
 r is a portion of reality
 there is some c that is a concretization of g 
 every c that is a concretization of g specifically denotes r"""@en ;
-                obo:IAO_0000119 "Conversations with Barry Smith, Werner Ceusters, Bjoern Peters, Michel Dumontier, Melanie Courtot, James Malone, Bill Hogan"@en ;
-                rdfs:comment ""@en ;
                 rdfs:label "denotes"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000235
 obo:IAO_0000235 rdf:type owl:ObjectProperty ;
                 obo:IAO_0000115 "inverse of the relation 'denotes'"@en ;
-                obo:IAO_0000233 <https://github.com/information-artifact-ontology/IAO/issues/206> ;
                 rdfs:label "denoted by"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000293
 obo:OBI_0000293 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:RO_0000057 ;
-                obo:IAO_0000112 "see is_input_of example_of_usage"@en ;
                 obo:IAO_0000115 "The inverse property of is specified input of" ;
                 obo:IAO_0000116 "8/17/09: specified inputs of one process are not necessarily specified inputs of a larger process that it is part of. This is in contrast to how 'has participant' works." ;
                 rdfs:label "has specified input"@en .
@@ -332,15 +301,12 @@ obo:OBI_0000312 rdf:type owl:ObjectProperty ;
 obo:OBI_0001938 rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf obo:BFO_0000051 ;
                 obo:IAO_0000115 "A relation between an information content entity and a value specification that specifies its value."@en ;
-                obo:IAO_0000119 "OBI" ;
                 rdfs:label "has value specification" .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000053
 obo:RO_0000053 rdf:type owl:ObjectProperty ,
                         owl:InverseFunctionalProperty ;
-               obo:IAO_0000112 "this apple is bearer of this red color"@en ,
-                               "this vase is bearer of this fragility"@en ;
                obo:IAO_0000115 "Inverse of characteristic_of"@en ;
                obo:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
                rdfs:label "has characteristic"@en .
@@ -351,9 +317,6 @@ obo:RO_0000057 rdf:type owl:ObjectProperty ;
                owl:propertyChainAxiom ( obo:BFO_0000051
                                         obo:RO_0000057
                                       ) ;
-               obo:IAO_0000112 "this blood coagulation has participant this blood clot"@en ,
-                               "this investigation has participant this investigator"@en ,
-                               "this process has participant this input material (or this output material)"@en ;
                obo:IAO_0000115 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en ;
                obo:IAO_0000116 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time."@en ;
                rdfs:label "has participant"@en .
@@ -361,8 +324,6 @@ obo:RO_0000057 rdf:type owl:ObjectProperty ;
 
 ###  http://purl.obolibrary.org/obo/RO_0000059
 obo:RO_0000059 rdf:type owl:ObjectProperty ;
-               obo:IAO_0000112 "A journal article is an information artifact that inheres in some number of printed journals. For each copy of the printed journal there is some quality that carries the journal article, such as a pattern of ink. The quality (a specifically dependent continuant) concretizes the journal article (a generically dependent continuant), and both depend on that copy of the printed journal (an independent continuant)."@en ,
-                               "An investigator reads a protocol and forms a plan to carry out an assay. The plan is a realizable entity (a specifically dependent continuant) that concretizes the protocol (a generically dependent continuant), and both depend on the investigator (an independent continuant). The plan is then realized by the assay (a process)."@en ;
                obo:IAO_0000115 "A relationship between a specifically dependent continuant and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant also depends on that same independent continuant. Multiple specifically dependent continuants can concretize the same generically dependent continuant."@en ,
                                "A relationship between a specifically dependent continuant or process and a generically dependent continuant, in which the generically dependent continuant depends on some independent continuant in virtue of the fact that the specifically dependent continuant or process also depends on that same independent continuant. Multiple specifically dependent continuants or processes can concretize the same generically dependent continuant."@en ;
                rdfs:label "concretizes"@en .
@@ -371,17 +332,14 @@ obo:RO_0000059 rdf:type owl:ObjectProperty ;
 ###  http://purl.obolibrary.org/obo/RO_0000080
 obo:RO_0000080 rdf:type owl:ObjectProperty ;
                owl:inverseOf obo:RO_0000086 ;
-               obo:IAO_0000112 "this red color is a quality of this apple"@en ;
                obo:IAO_0000115 "a relation between a quality and an independent continuant (the bearer), in which the quality specifically depends on the bearer for its existence"@en ;
                obo:IAO_0000116 "A quality inheres in its bearer at all times for which the quality exists."@en ;
-               rdfs:comment "This relation is modeled after the BFO relation of the same name which was in BFO2, but is used in a more restricted sense - specifically, we model this relation as functional (inherited from characteristic-of). Note that this relation is now removed from BFO2020." ;
                rdfs:label "quality of"@en .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000085
 obo:RO_0000085 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:RO_0000053 ;
-               obo:IAO_0000112 "this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)"@en ;
                obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence"@en ;
                obo:IAO_0000116 "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists."@en ;
                rdfs:label "has function"@en .
@@ -390,7 +348,6 @@ obo:RO_0000085 rdf:type owl:ObjectProperty ;
 ###  http://purl.obolibrary.org/obo/RO_0000086
 obo:RO_0000086 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:RO_0000053 ;
-               obo:IAO_0000112 "this apple has quality this red color"@en ;
                obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence"@en ;
                obo:IAO_0000116 "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist."@en ;
                rdfs:label "has quality"@en .
@@ -399,7 +356,6 @@ obo:RO_0000086 rdf:type owl:ObjectProperty ;
 ###  http://purl.obolibrary.org/obo/RO_0000087
 obo:RO_0000087 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:RO_0000053 ;
-               obo:IAO_0000112 "this person has role this investigator role (more colloquially: this person has this role of investigator)"@en ;
                obo:IAO_0000115 "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"@en ;
                obo:IAO_0000116 "A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists."@en ;
                rdfs:label "has role"@en .
@@ -407,8 +363,6 @@ obo:RO_0000087 rdf:type owl:ObjectProperty ;
 
 ###  http://purl.obolibrary.org/obo/RO_0001000
 obo:RO_0001000 rdf:type owl:ObjectProperty ;
-               obo:IAO_0000112 "this cell derives from this parent cell (cell division)"@en ,
-                               "this nucleus derives from this parent nucleus (nuclear division)"@en ;
                obo:IAO_0000115 "a relation between two distinct material entities, the new entity and the old entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity"@en ;
                obo:IAO_0000116 "This is a very general relation. More specific relations are preferred when applicable, such as 'directly develops from'."@en ;
                rdfs:label "derives from"@en .
@@ -418,7 +372,6 @@ obo:RO_0001000 rdf:type owl:ObjectProperty ;
 obo:RO_0002224 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf obo:BFO_0000051 ;
                rdf:type owl:TransitiveProperty ;
-               obo:IAO_0000112 "Every insulin receptor signaling pathway starts with the binding of a ligand to the insulin receptor" ;
                obo:IAO_0000115 "x starts with y if and only if x has part y and the time point at which x starts is equivalent to the time point at which y starts. Formally: α(y) = α(x) ∧ ω(y) < ω(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." ;
                rdfs:label "starts with"@en .
 
@@ -433,7 +386,6 @@ obo:RO_0002230 rdf:type owl:ObjectProperty ;
 
 ###  http://purl.obolibrary.org/obo/RO_0009006
 obo:RO_0009006 rdf:type owl:ObjectProperty ;
-               obo:IAO_0000112 "A mass measurement assay measures an material's mass characteristic. A radioactivity detection assay measures the amount of radiation (alpha, beta or gamma ray emmissions) coming from a material."@en ;
                obo:IAO_0000115 "A relation between an assay and a characteristic, in which the assay generates a data item which is a measure of a characteristic."@en ;
                rdfs:label "assay measures characteristic"@en .
 
@@ -464,8 +416,7 @@ co:PMD_0000077 rdf:type owl:ObjectProperty ;
                           "DIN EN ISO 4885:2018, §3.8 (Glühen)" ;
              rdfs:comment "intermediate class/grouping term, not to be instatialized"@en ;
              rdfs:label "Grundsätzlicher Wärmebehandlungsvorgang"@de ,
-                        "essential heat treatment process"@en ;
-             skos:altLabel "heat treatment operation" ;
+                        "heat treatment operation"@en ;
              skos:definition "Essential processes that make up heat treatments and can be used like building blocks."@en .
 
 
@@ -477,6 +428,12 @@ co:PMD_0000077 rdf:type owl:ObjectProperty ;
              skos:definition "A quenching function is a (realizable) function that, when realized, enables a system to lower the temparature of a material fast enough, that it hinders diffusion processes and thus produces metastable material states."@en ,
                              "Eine Abschreckfunktion ist eine (realisierbare) Funktion, die es einem System ermöglicht die Temperatur eines Material schnell genug abzusenken, sodass Diffusionsprozesse behindert und dadurch metastabile Materialzustände erzeugt werden."@de ;
              skos:example "The function of a oil bath to quench steel after austenitisation so the material transforms into martensite."@en .
+
+
+###  https://w3id.org/pmd/hto/HTO_0000002
+:HTO_0000002 rdf:type owl:Class ;
+             rdfs:label "hardening recipe"@en ;
+             skos:definition "A hardeing recipe describing the steps and conditions for carrying out a hardening process." .
 
 
 ###  https://w3id.org/pmd/hto/HTO_0000003
@@ -584,28 +541,32 @@ co:PMD_0000077 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/pmd/hto/HTO_0000013
 :HTO_0000013 rdf:type owl:Class ;
-             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                               owl:onProperty obo:BFO_0000051 ;
-                               owl:someValuesFrom :HTO_0000004
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty obo:BFO_0000051 ;
-                               owl:someValuesFrom :HTO_0000014
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty obo:BFO_0000051 ;
-                               owl:someValuesFrom :HTO_0000015
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty obo:BFO_0000051 ;
-                               owl:someValuesFrom :HTO_0000016
+             rdfs:subClassOf [ owl:intersectionOf ( :HTO_0000002
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty obo:BFO_0000051 ;
+                                                      owl:someValuesFrom :HTO_0000004
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty obo:BFO_0000051 ;
+                                                      owl:someValuesFrom :HTO_0000014
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty obo:BFO_0000051 ;
+                                                      owl:someValuesFrom :HTO_0000015
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty obo:BFO_0000051 ;
+                                                      owl:someValuesFrom :HTO_0000016
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
                              ] ;
              terms:source "DIN 17022-1:1994, §3.1" ,
                           "DIN EN ISO 683-2:2018, Tab.11" ,
                           "DIN EN ISO 683-3:2022, Tab.8" ;
              rdfs:comment "add target temperature in axioms, combine it with austenitisation temperature" ;
-             rdfs:label "hardening recipe"@en ;
-             skos:definition "A heat treatment recipe describing the steps and conditions for carrying out a hardening process."@en ,
+             rdfs:label "hardening heat treatment recipe"@en ;
+             skos:definition "A heat treatment recipe describing the steps and conditions for carrying out a hardening heat treatment process."@en ,
                              "Wärmebehandlungsrezept mit dem Schritte und Parameter für die Durchführung eines Härtungsprozesses beschrieben werden."@de .
 
 
@@ -723,7 +684,7 @@ co:PMD_0000077 rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/pmd/hto/HTO_0000022
 :HTO_0000022 rdf:type owl:Class ;
-             rdfs:subClassOf _:genid27 ,
+             rdfs:subClassOf _:genid33 ,
                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                       owl:onProperty obo:BFO_0000117 ;
                                                       owl:someValuesFrom :HTO_0000038
@@ -756,7 +717,7 @@ co:PMD_0000077 rdf:type owl:ObjectProperty ;
              skos:definition "Hardening (3.167) of a workpiece, followed by tempering, in order to produce a condition characterised by a good combination of hardness and toughness."@en ,
                              "Härtung (3.167) eines Werkstückes mit anschließendem Anlassen, um einen Zustand zu erzeugen, der durch eine gute Kombination von Härte und Zähigkeit gekennzeichnet ist."@de .
 
-_:genid27 owl:intersectionOf ( :HTO_0000020
+_:genid33 owl:intersectionOf ( :HTO_0000020
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty obo:BFO_0000051 ;
                                   owl:someValuesFrom :HTO_0000038
@@ -771,7 +732,7 @@ _:genid27 owl:intersectionOf ( :HTO_0000020
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :HTO_0000022 ;
    owl:annotatedProperty rdfs:subClassOf ;
-   owl:annotatedTarget _:genid27 ;
+   owl:annotatedTarget _:genid33 ;
    obo:IAO_0000116 "this axiom should also include the order of the process (hardening precedes tempering)"
  ] .
 
@@ -801,7 +762,6 @@ _:genid27 owl:intersectionOf ( :HTO_0000020
 
 ###  https://w3id.org/pmd/hto/HTO_0000025
 :HTO_0000025 rdf:type owl:Class ;
-             rdfs:subClassOf :HTO_0000019 ;
              terms:source "DIN EN ISO 4885:2018, §3.36" ;
              rdfs:label "Aufkohlen"@de ,
                         "carburizing"@en ;
@@ -959,8 +919,7 @@ Nitrierhärten"""@de .
 
 ###  https://w3id.org/pmd/hto/HTO_0000041
 :HTO_0000041 rdf:type owl:Class ;
-             rdfs:subClassOf :HTO_0000019 ,
-                             [ rdf:type owl:Restriction ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty obo:BFO_0000062 ;
                                owl:someValuesFrom :HTO_0000022
                              ] ;
@@ -1230,6 +1189,7 @@ Teil einer Zeit-Temperatur-Folge, bei dem die Temperatur konstant gehalten wird"
 ###  https://w3id.org/pmd/hto/HTO_0000072
 :HTO_0000072 rdf:type owl:Class ;
              rdfs:subClassOf :HTO_0000019 ;
+             obo:IAO_0000116 "this is really not connected to the phenomenon of case hardening found in mangos"@en ;
              terms:source "DIN EN ISO 4885:2018, §3.37 (Einsatzhärten = Aufkohlen + Härten)" ;
              rdfs:label "Einsatzhärten"@de ,
                         "case hardening"@en ;
@@ -1257,7 +1217,6 @@ DIN EN ISO 18203:2022-07 (https://dx.doi.org/10.31030/3344011)""" ;
 
 ###  https://w3id.org/pmd/hto/HTO_0000074
 :HTO_0000074 rdf:type owl:Class ;
-             rdfs:subClassOf :HTO_0000019 ;
              terms:source "DIN 17022-4:1998, §4.2" ,
                           "DIN EN ISO 4885:2018, §3.144" ;
              rdfs:label "Nitrocarburieren"@de ,
@@ -1270,7 +1229,6 @@ DIN EN ISO 18203:2022-07 (https://dx.doi.org/10.31030/3344011)""" ;
 
 ###  https://w3id.org/pmd/hto/HTO_0000075
 :HTO_0000075 rdf:type owl:Class ;
-             rdfs:subClassOf :HTO_0000019 ;
              terms:source "DIN EN ISO 4885:2018, §3.35" ;
              rdfs:label "Carbonitrieren"@de ,
                         "carbonitriding"@en ;

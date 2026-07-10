@@ -10,6 +10,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:csvw="http://www.w3.org/ns/csvw#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
      xmlns:nfdi="https://nfdi.fiz-karlsruhe.de/ontology/"
      xmlns:pmde="https://w3id.org/pmd/entity/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -19,18 +20,19 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/pmd/hto/">
-        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/3.0.0rc1"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/pmd/hto/3.0.0"/>
         <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
-        <dcterms:bibliographicCitation>PMD Heat Treatment Ontology. Version 3.0.0rc1, https://w3id.org/pmd/hto/</dcterms:bibliographicCitation>
+        <dcterms:bibliographicCitation>PMD Heat Treatment Ontology. Version 3.0.0, https://w3id.org/pmd/hto/</dcterms:bibliographicCitation>
         <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-1649-6832"/>
-        <dcterms:created>2026-07-08</dcterms:created>
+        <dcterms:created>2026-07-10</dcterms:created>
         <dcterms:creator rdf:resource="https://orcid.org/0000-0002-9014-2920"/>
         <dcterms:creator rdf:resource="https://orcid.org/0009-0004-4787-4685"/>
         <dcterms:creator>Divya Gosula</dcterms:creator>
         <dcterms:description xml:lang="en">This ontology module is part of the Platform Material Digital Application Ontology (PMDao) and covers concepts related to heat treatment processes, parameters, and materials. It is designed to facilitate data integration, sharing, and analysis in the field of materials science and engineering, particularly focusing on heat treatment applications.</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dcterms:title xml:lang="en">Platform Material Digital Application Ontology (PMDao) - Heat Treatment Module</dcterms:title>
-        <owl:versionInfo>3.0.0rc1</owl:versionInfo>
+        <doap:repository rdf:resource="https://github.com/materialdigital/heat-treatment-application-ontology"/>
+        <owl:versionInfo>3.0.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -115,6 +117,12 @@
     <!-- http://purl.org/dc/terms/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#repository -->
+
+    <owl:AnnotationProperty rdf:about="http://usefulinc.com/ns/doap#repository"/>
     
 
 
@@ -222,6 +230,12 @@
     <!-- http://purl.obolibrary.org/obo/OBI_0000312 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000312"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000059 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000059"/>
     
 
 
@@ -485,8 +499,7 @@
         <dcterms:source>DIN EN ISO 4885:2018, §3.8 (Glühen)</dcterms:source>
         <rdfs:comment xml:lang="en">intermediate class/grouping term, not to be instatialized</rdfs:comment>
         <rdfs:label xml:lang="de">Grundsätzlicher Wärmebehandlungsvorgang</rdfs:label>
-        <rdfs:label xml:lang="en">essential heat treatment process</rdfs:label>
-        <skos:altLabel>heat treatment operation</skos:altLabel>
+        <rdfs:label xml:lang="en">heat treatment operation</rdfs:label>
         <skos:definition xml:lang="en">Essential processes that make up heat treatments and can be used like building blocks.</skos:definition>
     </owl:Class>
     
@@ -502,6 +515,16 @@
         <skos:definition xml:lang="en">A quenching function is a (realizable) function that, when realized, enables a system to lower the temparature of a material fast enough, that it hinders diffusion processes and thus produces metastable material states.</skos:definition>
         <skos:definition xml:lang="de">Eine Abschreckfunktion ist eine (realisierbare) Funktion, die es einem System ermöglicht die Temperatur eines Material schnell genug abzusenken, sodass Diffusionsprozesse behindert und dadurch metastabile Materialzustände erzeugt werden.</skos:definition>
         <skos:example xml:lang="en">The function of a oil bath to quench steel after austenitisation so the material transforms into martensite.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/pmd/hto/HTO_0000002 -->
+
+    <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000002">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0060008"/>
+        <rdfs:label xml:lang="en">hardening recipe</rdfs:label>
+        <skos:definition>A hardeing recipe describing the steps and conditions for carrying out a hardening process.</skos:definition>
     </owl:Class>
     
 
@@ -669,7 +692,7 @@
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/pmd/co/PMD_0060008"/>
+                    <rdf:Description rdf:about="https://w3id.org/pmd/hto/HTO_0000002"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                         <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000004"/>
@@ -693,8 +716,8 @@
         <dcterms:source>DIN EN ISO 683-2:2018, Tab.11</dcterms:source>
         <dcterms:source>DIN EN ISO 683-3:2022, Tab.8</dcterms:source>
         <rdfs:comment>add target temperature in axioms, combine it with austenitisation temperature</rdfs:comment>
-        <rdfs:label xml:lang="en">hardening recipe</rdfs:label>
-        <skos:definition xml:lang="en">A heat treatment recipe describing the steps and conditions for carrying out a hardening process.</skos:definition>
+        <rdfs:label xml:lang="en">hardening heat treatment recipe</rdfs:label>
+        <skos:definition xml:lang="en">A heat treatment recipe describing the steps and conditions for carrying out a hardening heat treatment process.</skos:definition>
         <skos:definition xml:lang="de">Wärmebehandlungsrezept mit dem Schritte und Parameter für die Durchführung eines Härtungsprozesses beschrieben werden.</skos:definition>
     </owl:Class>
     
@@ -967,7 +990,7 @@
     <!-- https://w3id.org/pmd/hto/HTO_0000025 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000025">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000019"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
         <dcterms:source>DIN EN ISO 4885:2018, §3.36</dcterms:source>
         <rdfs:label xml:lang="de">Aufkohlen</rdfs:label>
         <rdfs:label xml:lang="en">carburizing</rdfs:label>
@@ -1286,6 +1309,12 @@ The rotational speed of a fan.</skos:example>
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000040">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000103"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/pmd/hto/HTO_0000013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dcterms:source>DIN 17022-1:1994, §3.1</dcterms:source>
         <dcterms:source>DIN EN ISO 4885:2018, §3.167</dcterms:source>
         <rdfs:label xml:lang="de">Härtung durch Wärmebehandlung</rdfs:label>
@@ -1304,7 +1333,7 @@ Nitrierhärten</skos:example>
     <!-- https://w3id.org/pmd/hto/HTO_0000041 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000041">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000019"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
@@ -1682,6 +1711,7 @@ Teil einer Zeit-Temperatur-Folge, bei dem die Temperatur konstant gehalten wird<
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000072">
         <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000019"/>
+        <obo:IAO_0000116 xml:lang="en">this is really not connected to the phenomenon of case hardening found in mangos</obo:IAO_0000116>
         <dcterms:source>DIN EN ISO 4885:2018, §3.37 (Einsatzhärten = Aufkohlen + Härten)</dcterms:source>
         <rdfs:label xml:lang="de">Einsatzhärten</rdfs:label>
         <rdfs:label xml:lang="en">case hardening</rdfs:label>
@@ -1716,7 +1746,7 @@ DIN EN ISO 18203:2022-07 (https://dx.doi.org/10.31030/3344011)</dcterms:source>
     <!-- https://w3id.org/pmd/hto/HTO_0000074 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000074">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000019"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
         <dcterms:source>DIN 17022-4:1998, §4.2</dcterms:source>
         <dcterms:source>DIN EN ISO 4885:2018, §3.144</dcterms:source>
         <rdfs:label xml:lang="de">Nitrocarburieren</rdfs:label>
@@ -1732,7 +1762,7 @@ DIN EN ISO 18203:2022-07 (https://dx.doi.org/10.31030/3344011)</dcterms:source>
     <!-- https://w3id.org/pmd/hto/HTO_0000075 -->
 
     <owl:Class rdf:about="https://w3id.org/pmd/hto/HTO_0000075">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/hto/HTO_0000019"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/pmd/co/PMD_0000779"/>
         <dcterms:source>DIN EN ISO 4885:2018, §3.35</dcterms:source>
         <rdfs:label xml:lang="de">Carbonitrieren</rdfs:label>
         <rdfs:label xml:lang="en">carbonitriding</rdfs:label>

@@ -1,5 +1,5 @@
-VERSION=3.0.0rc1
-PRIOR_VERSION=3.0.0rc1
+VERSION=3.0.0
+PRIOR_VERSION=3.0.0
 ONTBASE=https://w3id.org/pmd/hto/
 ANNOTATE_ONTOLOGY_VERSION="annotate -V $ONTBASE$VERSION/\$@ --annotation owl:versionInfo $VERSION"
 
