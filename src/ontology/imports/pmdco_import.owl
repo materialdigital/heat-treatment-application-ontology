@@ -103,7 +103,6 @@ Declaration(Class(<https://w3id.org/pmd/co/PMD_0020150>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020151>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020161>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020167>))
-Declaration(Class(<https://w3id.org/pmd/co/PMD_0020216>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020227>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020228>))
 Declaration(Class(<https://w3id.org/pmd/co/PMD_0020229>))
@@ -1686,12 +1685,6 @@ AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#example> <https://w3id.org/pmd/co/PMD_0020167> "ɑ-Ɣ transformation in iron at 910 °C"@en)
 SubClassOf(<https://w3id.org/pmd/co/PMD_0020167> <https://w3id.org/pmd/co/PMD_0000882>)
 
-# Class: <https://w3id.org/pmd/co/PMD_0020216> (DEPRECATED order scale value)
-
-AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020216> "DEPRECATED order scale value"@en)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020216> "DEPRECATED Mögliche Werte der charakteristischen Länge, über die strukturelle Zusammenhänge in einem Material bestehen bleiben"@de)
-AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020216> "DEPRECATED possible values of characteristic length over which structural correlations persist in a material"@en)
-
 # Class: <https://w3id.org/pmd/co/PMD_0020227> (solute role)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <https://w3id.org/pmd/co/PMD_0020227> <http://purl.obolibrary.org/obo/IAO_0000122>)
@@ -2089,28 +2082,24 @@ ClassAssertion(<http://qudt.org/schema/qudt/Unit> <http://qudt.org/vocab/unit/PE
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020217> "DEPRECATED short range order"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020217> "DEPRECATED periodic arrangement of structural features up to a few entities"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020217> "DEPRECATED periodische Anordnung von Strukturmerkmalen bis hin zu wenigen Einheiten"@de)
-ClassAssertion(<https://w3id.org/pmd/co/PMD_0020216> <https://w3id.org/pmd/co/PMD_0020217>)
 
 # Individual: <https://w3id.org/pmd/co/PMD_0020218> (DEPRECATED medium range order)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020218> "DEPRECATED medium range order"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020218> "DEPRECATED periodic arrangement of structural features of many entities"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020218> "DEPRECATED periodische Anordnung struktureller Merkmale vieler Entitäten"@de)
-ClassAssertion(<https://w3id.org/pmd/co/PMD_0020216> <https://w3id.org/pmd/co/PMD_0020218>)
 
 # Individual: <https://w3id.org/pmd/co/PMD_0020219> (DEPRECATED long range order)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020219> "DEPRECATED long range order"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020219> "DEPRECATED periodic arrangement of structural features of virtually all entities"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020219> "DEPRECATED periodische Anordnung struktureller Merkmale praktisch aller Entitäten"@de)
-ClassAssertion(<https://w3id.org/pmd/co/PMD_0020216> <https://w3id.org/pmd/co/PMD_0020219>)
 
 # Individual: <https://w3id.org/pmd/co/PMD_0020242> (DEPRECATED no range order)
 
 AnnotationAssertion(rdfs:label <https://w3id.org/pmd/co/PMD_0020242> "DEPRECATED no range order"@en)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020242> "DEPRECATED keine periodische Anordnung struktureller Merkmale von Entitäten"@de)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#definition> <https://w3id.org/pmd/co/PMD_0020242> "DEPRECATED no periodic arrangement of structural features of entites"@en)
-ClassAssertion(<https://w3id.org/pmd/co/PMD_0020216> <https://w3id.org/pmd/co/PMD_0020242>)
 
 # Individual: <https://w3id.org/pmd/co/PMD_0020368> (avogadro number)
 
@@ -2132,8 +2121,8 @@ SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000055> <http://purl.obolibrary.org/obo/RO_0000059>) <http://purl.obolibrary.org/obo/STATO_0000102>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002230> <http://purl.obolibrary.org/obo/RO_0002234>) <http://purl.obolibrary.org/obo/RO_0002234>)
 SubObjectPropertyOf(ObjectPropertyChain(<https://w3id.org/pmd/co/PMD_0025999> <http://purl.obolibrary.org/obo/BFO_0000050>) <https://w3id.org/pmd/co/PMD_0025999>)
-DLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000053> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(<http://purl.obolibrary.org/obo/BFO_0000016> Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000091> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
-DLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000053> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(<http://purl.obolibrary.org/obo/BFO_0000019> Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000086> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
-DLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000053> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(<http://purl.obolibrary.org/obo/BFO_0000023> Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000087> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
-DLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000053> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)) ClassAtom(<http://purl.obolibrary.org/obo/BFO_0000034> Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000085> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
+DLSafeRule(Body(ClassAtom(<http://purl.obolibrary.org/obo/BFO_0000016> Variable(<urn:swrl:var#d>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000053> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000091> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
+DLSafeRule(Body(ClassAtom(<http://purl.obolibrary.org/obo/BFO_0000019> Variable(<urn:swrl:var#d>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000053> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000086> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
+DLSafeRule(Body(ClassAtom(<http://purl.obolibrary.org/obo/BFO_0000023> Variable(<urn:swrl:var#d>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000053> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000087> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
+DLSafeRule(Body(ClassAtom(<http://purl.obolibrary.org/obo/BFO_0000034> Variable(<urn:swrl:var#d>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000053> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0000085> Variable(<urn:swrl:var#e>) Variable(<urn:swrl:var#d>))))
 )

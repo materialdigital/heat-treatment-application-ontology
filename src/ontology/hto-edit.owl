@@ -115,7 +115,6 @@ Declaration(Class(hto:HTO_0000086))
 Declaration(Class(hto:HTO_0000087))
 Declaration(Class(hto:HTO_0000088))
 Declaration(Class(hto:HTO_0000089))
-Declaration(Class(hto:HTO_0000090))
 Declaration(Class(hto:HTO_0000091))
 Declaration(Class(hto:HTO_0000092))
 Declaration(Class(hto:HTO_0000093))
@@ -1104,16 +1103,6 @@ AnnotationAssertion(skos:definition hto:HTO_0000089 "Abstand von der Oberfläche
 AnnotationAssertion(skos:definition hto:HTO_0000089 "Distance from the surface of a workpiece to a point defining the thickness of the hardened (3.167) case."@en)
 AnnotationAssertion(skos:editorialNote hto:HTO_0000089 "DIN audit addition (2026-06-09): case hardening depth (CHD) from DIN EN ISO 4885 §3.72 (sourced from ISO 18203:2016 §3.1 modified). IMPORTANT: CHD is the depth MEASURE; do NOT confuse with hto:HTO_0000072 'case hardening' which is the PROCESS (Einsatzhärten)."@en)
 SubClassOf(hto:HTO_0000089 co:PMD_0040001)
-
-# Class: hto:HTO_0000090 (OBSOLETE Oberflächenhärtungstiefe)
-
-AnnotationAssertion(obo:IAO_0100001 hto:HTO_0000090 hto:HTO_0000088)
-AnnotationAssertion(rdfs:comment hto:HTO_0000090 "unnecessary grouping term")
-AnnotationAssertion(rdfs:label hto:HTO_0000090 "OBSOLETE Oberflächenhärtungstiefe"@de)
-AnnotationAssertion(rdfs:label hto:HTO_0000090 "OBSOLETE surface hardening depth (generic)"@en)
-AnnotationAssertion(owl:deprecated hto:HTO_0000090 "true"^^xsd:boolean)
-AnnotationAssertion(skos:definition hto:HTO_0000090 "OBSOLETE Generic depth term for surface hardening; in industrial practice referred to as Surface Hardening Depth (SHD); in DIN normation usually narrowed to Rht (§3.74) or CHD (§3.72)."@en)
-AnnotationAssertion(skos:definition hto:HTO_0000090 "OBSOLETE Generischer Tiefenbegriff für Randschichthärtungen, in der industriellen Praxis als 'Surface Hardening Depth' (SHD) verwendet; nach DIN-Normierung in der Regel präzisiert zu Rht (§3.74) oder CHD (§3.72)."@de)
 
 # Class: hto:HTO_0000091 (hardenability)
 
