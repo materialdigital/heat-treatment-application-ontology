@@ -150,6 +150,7 @@ Declaration(Class(hto:HTO_0000121))
 Declaration(Class(hto:HTO_0000122))
 Declaration(Class(hto:HTO_0000123))
 Declaration(Class(hto:HTO_0000124))
+Declaration(Class(hto:HTO_0000128))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(obo:BFO_0000055))
@@ -1466,6 +1467,14 @@ AnnotationAssertion(rdfs:label hto:HTO_0000124 "annealing recipe"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000124 "A heat treatment recipe describing the steps and parameters for carrying out an annealing process."@en)
 SubClassOf(hto:HTO_0000124 co:PMD_0060008)
 
+# Class: hto:HTO_0000128 (fluid flow)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000128 "fluid flow"@en)
+AnnotationAssertion(skos:altLabel hto:HTO_0000128 "gas flow"@en)
+AnnotationAssertion(skos:altLabel hto:HTO_0000128 "liquid flow")
+AnnotationAssertion(skos:definition hto:HTO_0000128 "A continuous transport of a liquid or gas."@en)
+SubClassOf(hto:HTO_0000128 ObjectIntersectionOf(co:PMD_0020246 ObjectSomeValuesFrom(obo:RO_0000057 co:PMD_0020113) ObjectSomeValuesFrom(co:PMD_0000009 hto:HTO_0000064)))
+
 
 ############################
 #   Named Individuals
@@ -1490,5 +1499,5 @@ DifferentIndividuals(hto:HTO_0000035 hto:HTO_0000036)
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-9014-2920> "Henk Birkholz")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0003-1649-6832> "Thomas Hanke")
 AnnotationAssertion(rdfs:label <https://orcid.org/0009-0004-4787-4685> "Felix Thonagel")
-AnnotationAssertion(rdfs:label _:genid2147483648 "CC BY 4.0")
+AnnotationAssertion(rdfs:label _:genid2147483649 "CC BY 4.0")
 )
