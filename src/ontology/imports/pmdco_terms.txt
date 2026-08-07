@@ -34,3 +34,4 @@ https://w3id.org/pmd/co/PMD_0000060
 https://w3id.org/pmd/co/PMD_0000064
 https://w3id.org/pmd/co/PMD_0000077
 https://w3id.org/pmd/co/PMD_0000791
+https://w3id.org/pmd/co/PMD_0020246
