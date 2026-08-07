@@ -150,6 +150,11 @@ Declaration(Class(hto:HTO_0000122))
 Declaration(Class(hto:HTO_0000123))
 Declaration(Class(hto:HTO_0000124))
 Declaration(Class(hto:HTO_0000128))
+Declaration(Class(hto:HTO_0000129))
+Declaration(Class(hto:HTO_0000130))
+Declaration(Class(hto:HTO_0000131))
+Declaration(Class(hto:HTO_0000132))
+Declaration(Class(hto:HTO_0000133))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(obo:BFO_0000055))
@@ -1464,6 +1469,38 @@ AnnotationAssertion(skos:altLabel hto:HTO_0000128 "liquid flow")
 AnnotationAssertion(skos:definition hto:HTO_0000128 "A continuous transport of a liquid or gas."@en)
 SubClassOf(hto:HTO_0000128 ObjectIntersectionOf(co:PMD_0020246 ObjectSomeValuesFrom(obo:RO_0000057 co:PMD_0020113) ObjectSomeValuesFrom(co:PMD_0000009 hto:HTO_0000064)))
 
+# Class: hto:HTO_0000129 (gas quenching)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000129 "gas quenching"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000129 "A quenching process which uses gas as a quenching medium."@en)
+SubClassOf(hto:HTO_0000129 hto:HTO_0000062)
+
+# Class: hto:HTO_0000130 (nozzle field gas quenching)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000130 "nozzle field gas quenching"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000130 "A gas quenching which uses a field of arranged nozzles which output the quenching gas towards the part."@en)
+SubClassOf(hto:HTO_0000130 hto:HTO_0000129)
+DisjointClasses(hto:HTO_0000130 hto:HTO_0000131)
+
+# Class: hto:HTO_0000131 (high pressure gas quenching)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000131 "high pressure gas quenching"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000131 "a gas quenching process where the furnace chamber is pressurised with gas which is rapidly moved in the chamber by fans."@en)
+SubClassOf(hto:HTO_0000131 hto:HTO_0000129)
+SubClassOf(hto:HTO_0000131 ObjectSomeValuesFrom(obo:RO_0000057 ObjectIntersectionOf(hto:HTO_0000109 ObjectSomeValuesFrom(obo:RO_0000086 co:PMD_0000896))))
+
+# Class: hto:HTO_0000132 (oil quenching)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000132 "oil quenching"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000132 "A quenching process which uses oil as a quenching medium."@en)
+SubClassOf(hto:HTO_0000132 hto:HTO_0000062)
+
+# Class: hto:HTO_0000133 (salt bath quenching)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000133 "salt bath quenching"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000133 "A quenching process which uses molten salt as a quenching medium."@en)
+SubClassOf(hto:HTO_0000133 hto:HTO_0000062)
+
 
 ############################
 #   Named Individuals
@@ -1484,9 +1521,10 @@ DataPropertyAssertion(co:PMD_0000006 hto:HTO_0000036 "false"^^xsd:boolean)
 
 DisjointClasses(hto:HTO_0000024 hto:HTO_0000026 hto:HTO_0000037)
 DisjointClasses(hto:HTO_0000050 hto:HTO_0000051 hto:HTO_0000052)
+DisjointClasses(hto:HTO_0000129 hto:HTO_0000132 hto:HTO_0000133)
 DifferentIndividuals(hto:HTO_0000035 hto:HTO_0000036)
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0002-9014-2920> "Henk Birkholz")
 AnnotationAssertion(rdfs:label <https://orcid.org/0000-0003-1649-6832> "Thomas Hanke")
 AnnotationAssertion(rdfs:label <https://orcid.org/0009-0004-4787-4685> "Felix Thonagel")
-AnnotationAssertion(rdfs:label _:genid2147483649 "CC BY 4.0")
+AnnotationAssertion(rdfs:label _:genid2147483650 "CC BY 4.0")
 )
