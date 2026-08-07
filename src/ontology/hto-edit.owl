@@ -140,6 +140,7 @@ Declaration(Class(hto:HTO_0000111))
 Declaration(Class(hto:HTO_0000112))
 Declaration(Class(hto:HTO_0000113))
 Declaration(Class(hto:HTO_0000114))
+Declaration(Class(hto:HTO_0000115))
 Declaration(Class(hto:HTO_0000116))
 Declaration(Class(hto:HTO_0000117))
 Declaration(Class(hto:HTO_0000118))
@@ -147,6 +148,8 @@ Declaration(Class(hto:HTO_0000119))
 Declaration(Class(hto:HTO_0000120))
 Declaration(Class(hto:HTO_0000121))
 Declaration(Class(hto:HTO_0000122))
+Declaration(Class(hto:HTO_0000123))
+Declaration(Class(hto:HTO_0000124))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(obo:BFO_0000055))
@@ -862,7 +865,7 @@ AnnotationAssertion(dcterms:source hto:HTO_0000068 "DIN EN ISO 683-2:2018, Tab.1
 AnnotationAssertion(rdfs:label hto:HTO_0000068 "Abschreckmittel"@de)
 AnnotationAssertion(rdfs:label hto:HTO_0000068 "quenchant"@en)
 AnnotationAssertion(skos:editorialNote hto:HTO_0000068 "needs work")
-SubClassOf(hto:HTO_0000068 co:PMD_0020113)
+EquivalentClasses(hto:HTO_0000068 ObjectIntersectionOf(co:PMD_0020113 ObjectSomeValuesFrom(obo:RO_0000087 hto:HTO_0000069)))
 
 # Class: hto:HTO_0000069 (quenchant role)
 
@@ -880,7 +883,7 @@ SubClassOf(hto:HTO_0000070 co:PMD_0020114)
 
 AnnotationAssertion(rdfs:label hto:HTO_0000071 "coolant"@en)
 AnnotationAssertion(skos:editorialNote hto:HTO_0000071 "needs work")
-SubClassOf(hto:HTO_0000071 co:PMD_0020113)
+EquivalentClasses(hto:HTO_0000071 ObjectIntersectionOf(co:PMD_0020113 ObjectSomeValuesFrom(obo:RO_0000087 hto:HTO_0000070)))
 
 # Class: hto:HTO_0000072 (case hardening)
 
@@ -1375,6 +1378,12 @@ AnnotationAssertion(skos:definition hto:HTO_0000114 "Relationale Eigenschaft die
 AnnotationAssertion(skos:editorialNote hto:HTO_0000114 "DIN audit (2026-06-09): DIN EN ISO 4885 has no §3 entry for partial pressure; this is upstream physical-chemistry vocabulary, not DIN-terminology-native. Operational usage in DIN 17022-4 §7.3 (p_NH3, p_H2 in K_N formula) is the only DIN anchor."@en)
 SubClassOf(hto:HTO_0000114 obo:BFO_0000145)
 
+# Class: hto:HTO_0000115 (nitrocarburizing recipe)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000115 "nitrocarburizing recipe"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000115 "A heat treatment recipe describing the steps and parameters for carrying out a nitrocarburizing process."@en)
+SubClassOf(hto:HTO_0000115 co:PMD_0060008)
+
 # Class: hto:HTO_0000116 (chamber pressure)
 
 AnnotationAssertion(dcterms:source hto:HTO_0000116 "DIN 17022-1:1994, §7 (chamber/Ofen-Konstruktion)")
@@ -1441,8 +1450,19 @@ AnnotationAssertion(rdfs:label hto:HTO_0000122 "Aufkohlungsrezept"@de)
 AnnotationAssertion(rdfs:label hto:HTO_0000122 "carburizing recipe"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000122 "Heattreatment recipe outlining the steps and parameters needed to perform a carburizing process."@en)
 AnnotationAssertion(skos:definition hto:HTO_0000122 "Wärmebehandlungsrezept, in dem die Schritte und Parameter für die Durchführung eines Aufkohlungsprozesses beschrieben werden."@de)
-AnnotationAssertion(skos:editorialNote hto:HTO_0000122 "needs work")
 SubClassOf(hto:HTO_0000122 co:PMD_0060008)
+
+# Class: hto:HTO_0000123 (carbonitriding recipe)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000123 "carbonitriding recipe"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000123 "A heat treatment recipe describing the steps and parameters for carrying out a carbonitriding process."@en)
+SubClassOf(hto:HTO_0000123 co:PMD_0060008)
+
+# Class: hto:HTO_0000124 (annealing recipe)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000124 "annealing recipe"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000124 "A heat treatment recipe describing the steps and parameters for carrying out an annealing process."@en)
+SubClassOf(hto:HTO_0000124 co:PMD_0060008)
 
 
 ############################
