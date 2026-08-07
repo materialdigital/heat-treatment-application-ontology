@@ -255,12 +255,14 @@ AnnotationAssertion(skos:comment co:PMD_0025010 "Das Erwärmen kann kontinuierli
 AnnotationAssertion(skos:comment co:PMD_0025010 "Heating may be continuous, non-continuos or gradually in one or more steps.")
 AnnotationAssertion(skos:definition co:PMD_0025010 "Essential heat treatment process where an increase in temperature takes place.")
 SubClassOf(co:PMD_0025010 hto:HTO_0000000)
+SubClassOf(co:PMD_0025010 ObjectSomeValuesFrom(co:PMD_0000009 hto:HTO_0000030))
 
 # Class: co:PMD_0025011 (cooling)
 
 AnnotationAssertion(dcterms:source co:PMD_0025011 "DIN EN ISO 4885:2018, §3.45")
 AnnotationAssertion(skos:definition co:PMD_0025011 "entweder kontinuierliche, nicht kontinuierliche, stufenweise, allmähliche oder unterbrochene Senkung (oder Behandlung zur Senkung) der Temperatur eines heißen Werkstückes"@de)
 SubClassOf(co:PMD_0025011 hto:HTO_0000000)
+SubClassOf(co:PMD_0025011 ObjectSomeValuesFrom(co:PMD_0000009 hto:HTO_0000031))
 
 # Class: hto:HTO_0000000 (heat treatment operation)
 
