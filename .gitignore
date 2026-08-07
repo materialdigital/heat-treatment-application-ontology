@@ -70,3 +70,5 @@ src/patterns/all_pattern_terms.txt
 /src/ontology/tmp
 /src/ontology/reports
 src/ontology/hto.ttl
+src/ontology/update_odk.sh
+src/ontology/catalog**.xml
