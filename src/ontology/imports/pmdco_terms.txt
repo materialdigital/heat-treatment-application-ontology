@@ -35,3 +35,7 @@ https://w3id.org/pmd/co/PMD_0000064
 https://w3id.org/pmd/co/PMD_0000077
 https://w3id.org/pmd/co/PMD_0000791
 https://w3id.org/pmd/co/PMD_0020246
+https://w3id.org/pmd/co/PMD_0000965 #surface layer (fiat object part)
+https://w3id.org/pmd/co/PMD_0020308 #surface property
+https://w3id.org/pmd/co/PMD_0000538 #bulk
+https://w3id.org/pmd/co/PMD_0000773 #hardness

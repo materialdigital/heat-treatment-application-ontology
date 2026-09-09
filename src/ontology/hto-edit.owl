@@ -155,6 +155,10 @@ Declaration(Class(hto:HTO_0000130))
 Declaration(Class(hto:HTO_0000131))
 Declaration(Class(hto:HTO_0000132))
 Declaration(Class(hto:HTO_0000133))
+Declaration(Class(hto:HTO_0000134))
+Declaration(Class(hto:HTO_0000135))
+Declaration(Class(hto:HTO_0000136))
+Declaration(Class(hto:HTO_0000137))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(obo:BFO_0000055))
@@ -1500,6 +1504,28 @@ SubClassOf(hto:HTO_0000132 hto:HTO_0000062)
 AnnotationAssertion(rdfs:label hto:HTO_0000133 "salt bath quenching"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000133 "quenching process which uses molten salt as a quenching medium"@en)
 SubClassOf(hto:HTO_0000133 hto:HTO_0000062)
+
+# Class: hto:HTO_0000134 (carbon content)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000134 "carbon content"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000134 "chemical property which refers to the carbon content in some material entity"@en)
+SubClassOf(hto:HTO_0000134 co:PMD_0020259)
+
+# Class: hto:HTO_0000135 (surface carbon content)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000135 "surface carbon content"@en)
+SubClassOf(hto:HTO_0000135 ObjectIntersectionOf(hto:HTO_0000134 ObjectSomeValuesFrom(obo:RO_0000052 co:PMD_0000965)))
+
+# Class: hto:HTO_0000136 (bulk carbon content)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000136 "bulk carbon content"@en)
+SubClassOf(hto:HTO_0000136 ObjectIntersectionOf(hto:HTO_0000134 ObjectSomeValuesFrom(obo:RO_0000052 co:PMD_0000538)))
+
+# Class: hto:HTO_0000137 (surface hardness)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000137 "surface hardness"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000137 "hardness at the surface of some object"@en)
+SubClassOf(hto:HTO_0000137 ObjectIntersectionOf(co:PMD_0000773 ObjectSomeValuesFrom(obo:RO_0000052 co:PMD_0000965)))
 
 
 ############################
