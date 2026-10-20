@@ -72,3 +72,4 @@ src/patterns/all_pattern_terms.txt
 src/ontology/hto.ttl
 src/ontology/update_odk.sh
 src/ontology/catalog**.xml
+src/ontology/HTO_exemplary_instance_A-Box_plus_DIN_pristine_v2 - thnlrd (2).ttl
