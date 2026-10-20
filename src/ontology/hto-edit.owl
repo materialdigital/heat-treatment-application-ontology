@@ -250,7 +250,7 @@ EquivalentClasses(co:PMD_0000056 ObjectIntersectionOf(co:PMD_0000655 ObjectSomeV
 EquivalentClasses(co:PMD_0000103 ObjectIntersectionOf(co:PMD_0000833 ObjectSomeValuesFrom(obo:RO_0000059 hto:HTO_0000002)))
 SubClassOf(co:PMD_0000103 ObjectSomeValuesFrom(obo:BFO_0000055 co:PMD_0010013))
 
-# Class: co:PMD_0000655 (furnace)
+# Class: co:PMD_0000655 (Ofen)
 
 SubClassOf(co:PMD_0000655 ObjectSomeValuesFrom(obo:BFO_0000051 hto:HTO_0000109))
 SubClassOf(co:PMD_0000655 ObjectSomeValuesFrom(obo:RO_0000085 co:PMD_0000054))
@@ -936,7 +936,7 @@ AnnotationAssertion(skos:definition hto:HTO_0000074 "Thermochemische Behandlung 
 AnnotationAssertion(skos:editorialNote hto:HTO_0000074 "DIN audit re-IRI (2026-06-09): the legacy class <https://w3id.org/pmd/co/HTO_0000063> was misnamespaced under pmd/co/ (should have been pmd/hto/), and the local ID HTO_0000063 collided with <https://w3id.org/pmd/hto/HTO_0000063> (counter). Re-IRIed to hto:HTO_0000074. NB: DIN EN ISO 4885 §3.144 Anm.2 records disjointness with Carbonitrieren (HTO_0000075) — the two are NOT synonyms in DIN despite industry colloquial conflation."@en)
 SubClassOf(hto:HTO_0000074 co:PMD_0000779)
 
-# Class: hto:HTO_0000075 (carbonitriding)
+# Class: hto:HTO_0000075 (Carbonitrieren)
 
 AnnotationAssertion(dcterms:source hto:HTO_0000075 "DIN EN ISO 4885:2018, §3.35")
 AnnotationAssertion(rdfs:label hto:HTO_0000075 "Carbonitrieren"@de)
@@ -968,6 +968,7 @@ AnnotationAssertion(skos:definition hto:HTO_0000077 "Microstructure that is a so
 AnnotationAssertion(skos:definition hto:HTO_0000077 "Mikrogefüge, das eine feste Lösung eines oder mehrerer Elemente im γ-Eisen (3.91) ist"@de)
 AnnotationAssertion(skos:editorialNote hto:HTO_0000077 "All term definitions copied from DIN 4885 should be rid of the internal reference number e.g. \"3.91\" (thnlrd)")
 AnnotationAssertion(skos:editorialNote hto:HTO_0000077 "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.12 + Tabelle 1. Parent BFO_0000040 (material entity) selected as the closest BFO anchor for a phase as a material-bearer; some HTO maintainers may prefer to re-anchor under a PMDco material-phase class once one is added upstream."@en)
+AnnotationAssertion(co:PMD_0001032 hto:HTO_0000077 "https://github.com/materialdigital/core-ontology/issues/445")
 SubClassOf(hto:HTO_0000077 co:PMD_0000857)
 
 # Class: hto:HTO_0000078 (Martensit)
@@ -979,6 +980,7 @@ AnnotationAssertion(rdfs:label hto:HTO_0000078 "martensite"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000078 "Gefüge/Phase (3.156), die in kohlenstoffhaltigen Stählen durch Abkühlen (3.45) des Austenits (3.12) gebildet wird, wobei die hohe Geschwindigkeit des Abkühlens verhindert, dass ausreichend Kohlenstoffatome aus der Kristallstruktur diffundieren können, um Zementit (3.39) (Fe3C) zu bilden"@de)
 AnnotationAssertion(skos:definition hto:HTO_0000078 "Microstructure/phase (3.156) formed in carbon-bearing steels by cooling (3.45) of austenite (3.12), where the high cooling rate prevents sufficient carbon atoms from diffusing out of the crystal structure to form cementite (3.39) (Fe3C)"@en)
 AnnotationAssertion(skos:editorialNote hto:HTO_0000078 "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.137 + Tabelle 1."@en)
+AnnotationAssertion(co:PMD_0001032 hto:HTO_0000078 "https://github.com/materialdigital/core-ontology/issues/445")
 SubClassOf(hto:HTO_0000078 co:PMD_0000857)
 
 # Class: hto:HTO_0000079 (Bainit)
@@ -990,6 +992,7 @@ AnnotationAssertion(rdfs:label hto:HTO_0000079 "bainite"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000079 "Microstructure resulting from a transformation of austenite (3.12) at temperatures above the martensite (3.137) start temperature (Ms) and outside the range of pearlite (3.155), consisting of ferrite laths with carbides arranged either within (lower bainite) or between (upper bainite) the ferrite laths"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000079 "Mikrogefüge, das aus einer Umwandlung von Austenit (3.12) resultiert bei Temperaturen über die Starttemperatur (Ms) von Martensit (3.137) und außerhalb des Bereichs von Perlit (3.155), der aus Ferritlatten und Carbiden besteht, die entweder innerhalb der Ferritlatten (untere Bainite) oder zwischen den Ferritlatten angeordnet sind (obere Bainite)"@de)
 AnnotationAssertion(skos:editorialNote hto:HTO_0000079 "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.17 + Tabelle 1."@en)
+AnnotationAssertion(co:PMD_0001032 hto:HTO_0000079 "https://github.com/materialdigital/core-ontology/issues/445")
 SubClassOf(hto:HTO_0000079 co:PMD_0000857)
 
 # Class: hto:HTO_0000080 (Ferrit)
@@ -1001,6 +1004,7 @@ AnnotationAssertion(rdfs:label hto:HTO_0000080 "ferrite"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000080 "Gefüge von Eisen oder Stahl mit kubisch-raumzentrierter Gitterstruktur"@de)
 AnnotationAssertion(skos:definition hto:HTO_0000080 "Microstructure of iron or steel with a body-centred cubic lattice structure"@en)
 AnnotationAssertion(skos:editorialNote hto:HTO_0000080 "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.85 + Tabelle 1."@en)
+AnnotationAssertion(co:PMD_0001032 hto:HTO_0000080 "https://github.com/materialdigital/core-ontology/issues/445")
 SubClassOf(hto:HTO_0000080 co:PMD_0000857)
 
 # Class: hto:HTO_0000081 (Perlit)
@@ -1012,6 +1016,7 @@ AnnotationAssertion(rdfs:label hto:HTO_0000081 "pearlite"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000081 "Aus Ferrit- (3.85) und Zementit- (3.39) Lamellen bestehender Gefügebestandteil, der durch die eutektoidische Austenitumwandlung (3.56) und der gleichzeitig ablaufenden Transformation in Ferrit und Zementit gebildet wird"@de)
 AnnotationAssertion(skos:definition hto:HTO_0000081 "Microstructure constituent consisting of ferrite (3.85) and cementite (3.39) lamellae, formed by the eutectoidic transformation of austenite (3.56) and the concomitant transformation into ferrite and cementite"@en)
 AnnotationAssertion(skos:editorialNote hto:HTO_0000081 "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.155 + Tabelle 1."@en)
+AnnotationAssertion(co:PMD_0001032 hto:HTO_0000081 "https://github.com/materialdigital/core-ontology/issues/445")
 SubClassOf(hto:HTO_0000081 co:PMD_0000857)
 
 # Class: hto:HTO_0000082 (cementite)
@@ -1023,6 +1028,7 @@ AnnotationAssertion(rdfs:label hto:HTO_0000082 "cementite"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000082 "Microstructure composed of iron carbide with composition Fe3C"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000082 "Mokrogefüge, das das Carbid des Eisens, mit der Zusammensetzung Fe3C ist"@de)
 AnnotationAssertion(skos:editorialNote hto:HTO_0000082 "DIN audit addition (2026-06-09): Fe-C phase from DIN EN ISO 4885 §3.39 + Tabelle 1."@en)
+AnnotationAssertion(co:PMD_0001032 hto:HTO_0000082 "https://github.com/materialdigital/core-ontology/issues/445")
 SubClassOf(hto:HTO_0000082 co:PMD_0000857)
 
 # Class: hto:HTO_0000083 (martensite start temperature)
