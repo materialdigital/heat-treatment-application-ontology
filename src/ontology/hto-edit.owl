@@ -165,6 +165,7 @@ Declaration(Class(hto:HTO_0000135))
 Declaration(Class(hto:HTO_0000136))
 Declaration(Class(hto:HTO_0000137))
 Declaration(Class(hto:HTO_0000139))
+Declaration(Class(hto:HTO_0000140))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(obo:BFO_0000055))
@@ -1582,6 +1583,15 @@ SubClassOf(hto:HTO_0000137 ObjectIntersectionOf(co:PMD_0000773 ObjectSomeValuesF
 AnnotationAssertion(rdfs:label hto:HTO_0000139 "induction hardening recipe"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000139 "heat treatment hardening recipe in which the heating step is realized by electromagnetic induction, producing a selectively austenitised surface layer that is subsequently quenched to form martensite"@en)
 SubClassOf(hto:HTO_0000139 hto:HTO_0000013)
+
+# Class: hto:HTO_0000140 (homogenization)
+
+AnnotationAssertion(dcterms:source hto:HTO_0000140 "DIN EN ISO 4885:2018, §3.133")
+AnnotationAssertion(rdfs:label hto:HTO_0000140 "Homogenisierung"@de)
+AnnotationAssertion(rdfs:label hto:HTO_0000140 "homogenization"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000140 "Behandlung zur Vergleichmäßigung einer heterogenen Verteilung der chemischen Zusammensetzung von Eisenwerkstoffen durch ein längeres Glühen (3.8) bei hohen Temperaturen."@de)
+AnnotationAssertion(skos:definition hto:HTO_0000140 "Treatment to homogenize a heterogeneous distribution of the chemical composition of iron materials through prolonged annealing (3.8) at high temperatures"@en)
+SubClassOf(hto:HTO_0000140 hto:HTO_0000039)
 
 
 ############################
