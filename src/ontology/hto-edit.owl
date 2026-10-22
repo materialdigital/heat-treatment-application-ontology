@@ -35,6 +35,7 @@ Declaration(Class(hto:HTO_0000003))
 Declaration(Class(hto:HTO_0000004))
 Declaration(Class(hto:HTO_0000005))
 Declaration(Class(hto:HTO_0000006))
+Declaration(Class(hto:HTO_0000007))
 Declaration(Class(hto:HTO_0000008))
 Declaration(Class(hto:HTO_0000009))
 Declaration(Class(hto:HTO_0000010))
@@ -115,6 +116,7 @@ Declaration(Class(hto:HTO_0000086))
 Declaration(Class(hto:HTO_0000087))
 Declaration(Class(hto:HTO_0000088))
 Declaration(Class(hto:HTO_0000089))
+Declaration(Class(hto:HTO_0000090))
 Declaration(Class(hto:HTO_0000091))
 Declaration(Class(hto:HTO_0000092))
 Declaration(Class(hto:HTO_0000093))
@@ -149,6 +151,9 @@ Declaration(Class(hto:HTO_0000121))
 Declaration(Class(hto:HTO_0000122))
 Declaration(Class(hto:HTO_0000123))
 Declaration(Class(hto:HTO_0000124))
+Declaration(Class(hto:HTO_0000125))
+Declaration(Class(hto:HTO_0000126))
+Declaration(Class(hto:HTO_0000127))
 Declaration(Class(hto:HTO_0000128))
 Declaration(Class(hto:HTO_0000129))
 Declaration(Class(hto:HTO_0000130))
@@ -159,6 +164,7 @@ Declaration(Class(hto:HTO_0000134))
 Declaration(Class(hto:HTO_0000135))
 Declaration(Class(hto:HTO_0000136))
 Declaration(Class(hto:HTO_0000137))
+Declaration(Class(hto:HTO_0000139))
 Declaration(ObjectProperty(obo:BFO_0000050))
 Declaration(ObjectProperty(obo:BFO_0000051))
 Declaration(ObjectProperty(obo:BFO_0000055))
@@ -338,6 +344,14 @@ SubClassOf(hto:HTO_0000006 hto:HTO_0000032)
 SubClassOf(hto:HTO_0000006 ObjectSomeValuesFrom(obo:IAO_0000039 hto:HTO_0000010))
 SubClassOf(hto:HTO_0000006 ObjectSomeValuesFrom(obo:IAO_0000136 co:PMD_0000967))
 SubClassOf(hto:HTO_0000006 DataSomeValuesFrom(obo:OBI_0002135 xsd:float))
+
+# Class: hto:HTO_0000007 (induction hardening)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000007 "Induktionshärten"@de)
+AnnotationAssertion(rdfs:label hto:HTO_0000007 "induction hardening"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000007 "surface hardening that uses inductive heating/eddy currents as the heat source"@en)
+SubClassOf(hto:HTO_0000007 hto:HTO_0000019)
+SubClassOf(hto:HTO_0000007 ObjectSomeValuesFrom(obo:BFO_0000055 hto:HTO_0000127))
 
 # Class: hto:HTO_0000008 (duration specification)
 
@@ -1119,6 +1133,13 @@ AnnotationAssertion(skos:definition hto:HTO_0000089 "Distance from the surface o
 AnnotationAssertion(skos:editorialNote hto:HTO_0000089 "DIN audit addition (2026-06-09): case hardening depth (CHD) from DIN EN ISO 4885 §3.72 (sourced from ISO 18203:2016 §3.1 modified). IMPORTANT: CHD is the depth MEASURE; do NOT confuse with hto:HTO_0000072 'case hardening' which is the PROCESS (Einsatzhärten)."@en)
 SubClassOf(hto:HTO_0000089 co:PMD_0040001)
 
+# Class: hto:HTO_0000090 (flame hardening)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000090 "Flammhärten"@de)
+AnnotationAssertion(rdfs:label hto:HTO_0000090 "flame hardening"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000090 "surface hardening where the energy source is a single flame or a set of flames directed directly at the part's surface"@en)
+SubClassOf(hto:HTO_0000090 hto:HTO_0000019)
+
 # Class: hto:HTO_0000091 (hardenability)
 
 AnnotationAssertion(dcterms:source hto:HTO_0000091 "DIN EN ISO 4885:2018, §3.103")
@@ -1471,6 +1492,29 @@ AnnotationAssertion(rdfs:label hto:HTO_0000124 "annealing recipe"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000124 "heat treatment recipe describing the steps and parameters for carrying out an annealing process"@en)
 SubClassOf(hto:HTO_0000124 co:PMD_0060008)
 
+# Class: hto:HTO_0000125 (laser hardening)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000125 "Laserstrahlhärten"@de)
+AnnotationAssertion(rdfs:label hto:HTO_0000125 "laser hardening"@en)
+AnnotationAssertion(skos:altLabel hto:HTO_0000125 "Laserhärten"@de)
+AnnotationAssertion(skos:altLabel hto:HTO_0000125 "laser beam hardening"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000125 "surface hardening where the energy source is a focused laser beam"@en)
+SubClassOf(hto:HTO_0000125 hto:HTO_0000019)
+
+# Class: hto:HTO_0000126 (Elektronenstrahlhärten)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000126 "Elektronenstrahlhärten"@de)
+AnnotationAssertion(rdfs:label hto:HTO_0000126 "electron beam hardening"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000126 "surface hardening where the energy source is a focused electron beam"@en)
+SubClassOf(hto:HTO_0000126 hto:HTO_0000019)
+
+# Class: hto:HTO_0000127 (induction heating function)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000127 "induction heating function"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000127 "Heizfunktion, die es dem Inhaber ermöglicht Werkstücke mithilfe von Wirbelströmen zu erhitzen"@de)
+AnnotationAssertion(skos:definition hto:HTO_0000127 "heating function that enables a system to heat a material by inducing eddy currents via an alternating electromagnetic field, with Joule (and hysteresis) heating concentrated in a surface layer due to the skin effect"@en)
+SubClassOf(hto:HTO_0000127 co:PMD_0000054)
+
 # Class: hto:HTO_0000128 (fluid flow)
 
 AnnotationAssertion(rdfs:label hto:HTO_0000128 "fluid flow"@en)
@@ -1533,6 +1577,12 @@ AnnotationAssertion(rdfs:label hto:HTO_0000137 "surface hardness"@en)
 AnnotationAssertion(skos:definition hto:HTO_0000137 "hardness at the surface of some object"@en)
 SubClassOf(hto:HTO_0000137 ObjectIntersectionOf(co:PMD_0000773 ObjectSomeValuesFrom(obo:RO_0000052 co:PMD_0000965)))
 
+# Class: hto:HTO_0000139 (induction hardening recipe)
+
+AnnotationAssertion(rdfs:label hto:HTO_0000139 "induction hardening recipe"@en)
+AnnotationAssertion(skos:definition hto:HTO_0000139 "heat treatment hardening recipe in which the heating step is realized by electromagnetic induction, producing a selectively austenitised surface layer that is subsequently quenched to form martensite"@en)
+SubClassOf(hto:HTO_0000139 hto:HTO_0000013)
+
 
 ############################
 #   Named Individuals
@@ -1551,6 +1601,7 @@ ClassAssertion(hto:HTO_0000034 hto:HTO_0000036)
 DataPropertyAssertion(co:PMD_0000006 hto:HTO_0000036 "false"^^xsd:boolean)
 
 
+DisjointClasses(hto:HTO_0000007 hto:HTO_0000072 hto:HTO_0000090 hto:HTO_0000125 hto:HTO_0000126)
 DisjointClasses(hto:HTO_0000024 hto:HTO_0000026 hto:HTO_0000037)
 DisjointClasses(hto:HTO_0000050 hto:HTO_0000051 hto:HTO_0000052)
 DisjointClasses(hto:HTO_0000129 hto:HTO_0000132 hto:HTO_0000133)
